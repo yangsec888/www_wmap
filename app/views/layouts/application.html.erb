@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=11" />
-  <title>CyberSecurity</title>
+  <title>Web Mapper Demo</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'rails.validations', 'rails.validations.custom', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +26,6 @@
     <div class="row">
       <div class="col-sm-2 col-md-6 col-lg-6">
        <img src="/images/logo_transparent.png" alt="Web Mapper Demo" height="70" width="180">
-       <img src="/images/test6.png" alt="IDM" height="70" width="180">
       </div>
       <div class="col-sm-4 col-md-6 col-lg-6" style="margin-top: 20px; padding-left: 160px;" >
           <div class="form-inline">	  
@@ -47,64 +46,12 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a href="/user_tool/whoami">Who Am I</a></li>
-                  <li><a href="/user_tool/ad_computer_search">Computer Search</a></li>
-                  <li><a href="/user_tool/go_contact_download">Contact Sheet Download</a></li>
+                  <li><a href="/user_tool/search">Domain Search</a></li>
+                  <li><a href="/user_tool/download">Report Download</a></li>
                 </ul>
               </li>
 
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                  Policy <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="/before_signin/policy">CyberSecurity Policy</a></li>
-                  <li><a href="/policy_manager/policy_manager_search">Cybersecurity Policy Consent Upload</a></li>
-                  <!--<li class="disabled"><a href="/search/mta_search">MTA Policy Consent Upload</a></li>-->
-                </ul>
-              <li class='divider-vertical'></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                  Support <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="/before_signin/support_faq">FAQ</a></li>
-                  <li><a href="/before_signin/support_contact">Contact</a></li>
-                </ul>
-              </li>
-              <li class='divider-vertical'></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                Certification <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li class='disabled'><a href="#">Onboarding</a></li>
-                  <li class='disabled'><a href="#">Internal Transfer</a></li>
-                  <li class='disabled'><a href="#">Leave of Absent</a></li>
-                  <li><a href="/certification/offboard_search">Offboarding</a></li>
-                  <li><a href="/certification/recert_index">Recertification</a></li>
-                </ul>
-              </li>
-              <li class='divider-vertical'></li>
-              <li class="disabled"><a href="#">Reporting</a></li>
-              <li class='divider-vertical'></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                  Admin <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="/policy_manager/">Policy Manager</a></li>
-                  <li><a href="/go_admin/go_list">Employee Directory</a></li>
-                  <li><a href="/building_access/list">Building Access</a></li>
-                  <li><a href="/ad_user/ad_user_search">AD User Search</a></li>
-                  <!-- <li><a href="/department_tool/index">AD Department</a></li> -->
-                  <li><a href="/ad_delta/delta_map">AD Delta</a></li>
-                  <li><a href="/users">IDM User</a></li>
-                  <li><a href="/map_editor/index">IDM System Map</a></li>
-                  <li><a href="/uploads/new">IDM Update</a></li>
-                  <li><a href="/recert_manager/index">Recert Manager</a></li>
-              <!--    <li class="disabled"><a href="/mta_manager/list">MTA Manager</a></li> -->
-                </ul>
-              </li>
+
 <!-- add sign_in, sign_oout, and sign_up links to the layout template, Yang 12/17/2015
               <li class="nav navbar-default"><a href="/users/sign_in">Login</a></li> -->
               <% if user_signed_in? %>
