@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105010828) do
+ActiveRecord::Schema.define(version: 20171214211509) do
+
+  create_table "documents", force: :cascade do |t|
+    t.integer  "uid",        limit: 4
+    t.string   "name",       limit: 255
+    t.string   "attachment", limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "seeds", force: :cascade do |t|
+    t.integer  "uid",         limit: 4
+    t.text     "hosts",       limit: 65535
+    t.text     "ips",         limit: 65535
+    t.text     "cidrs",       limit: 65535
+    t.string   "entity_name", limit: 255
+    t.boolean  "verified"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

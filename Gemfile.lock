@@ -64,6 +64,9 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    devise_ldap_authenticatable (0.8.5)
+      devise (>= 3.4.1)
+      net-ldap (>= 0.6.0, <= 0.11)
     dnsruby (1.60.0)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -101,6 +104,7 @@ GEM
     minitest (5.10.1)
     multi_json (1.12.1)
     mysql2 (0.4.5)
+    net-ldap (0.11)
     net-ping (2.0.1)
     netaddr (1.5.1)
     nokogiri (1.7.0)
@@ -190,6 +194,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  devise_ldap_authenticatable
   dnsruby
   geoip
   httpclient
@@ -202,6 +207,7 @@ DEPENDENCIES
   open_uri_redirections
   parallel
   rails (= 4.2.5.2)
+  responders
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   turbolinks
@@ -211,3 +217,6 @@ DEPENDENCIES
   web-console (~> 2.0)
   whois
   wmap
+
+BUNDLED WITH
+   1.14.6

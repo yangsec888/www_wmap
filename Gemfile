@@ -4,6 +4,8 @@ gem 'jquery-turbolinks'
 gem 'bootstrap'
 gem 'bootstrap_form'
 gem 'devise'
+gem "devise_ldap_authenticatable"
+gem 'responders'
 gem 'wmap'
 gem 'netaddr'
 gem 'parallel'
@@ -63,8 +65,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-
-
-
-

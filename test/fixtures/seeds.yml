@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uid: 1
+  hosts: MyText
+  ips: MyText
+  cidrs: MyText
+  entity_name: MyString
+  verified: false
+
+two:
+  uid: 1
+  hosts: MyText
+  ips: MyText
+  cidrs: MyText
+  entity_name: MyString
+  verified: false

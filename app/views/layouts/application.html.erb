@@ -1,79 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=11" />
-  <title>Web Mapper Demo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-</head>
-<html lang="en">
-
-<body style="background: url(http://www.cmbchina.com/images/bg.gif) 50% 0% no-repeat rgb(255, 255, 255);">
-<meta charset="UTF-8">
-
-<title>Web Mapper Demo App</title>
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css">
-
-<div class="container">
-  <hr style="border-top: 3px solid #BB1515;border-bottom: 7px solid #F2F2F2;margin-top: 2px;margin-bottom: 0px;">
-    <div class="row">
-      <div class="col-sm-2 col-md-6 col-lg-6">
-       <img src="/images/logo_transparent.png" alt="Web Mapper Demo" height="70" width="180">
-      </div>
-      <div class="col-sm-4 col-md-6 col-lg-6" style="margin-top: 20px; padding-left: 160px;" >
-          <div class="form-inline">	  
-		  
-          <!-- /input-group -->
-          </div>
-      </div><!-- /.col-lg-6 -->
-    </div>
-
-    <div role="navigation" class="navbar navbar-default">
-      <div class="collapse navbar-collapse">
-          <ul class="nav nav-tabs">
-              <li ><a href="/home/page">Home</a></li>
-              <li class='divider-vertical'></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                User Tool <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="/user_tool/whoami">Who Am I</a></li>
-                  <li><a href="/user_tool/search">Domain Search</a></li>
-                  <li><a href="/user_tool/download">Report Download</a></li>
-                </ul>
-              </li>
-
-
-<!-- add sign_in, sign_oout, and sign_up links to the layout template, Yang 12/17/2015
-              <li class="nav navbar-default"><a href="/users/sign_in">Login</a></li> -->
-              <% if user_signed_in? %>
-                <li>
-                <%= link_to('Sign Off', destroy_user_session_path, :method => :delete) %>
-                </li>
-              <% else %>
-                <li>
-                <%= link_to('Sign In', new_user_session_path)  %>
-                </li>
-              <% end %>
-<!-- end -->
-          </ul>
-      </div>
-    </div>
-    <hr style="border-top: 1px solid #BB1515;border-bottom: 7px solid #F2F2F2;margin-top: 2px;margin-bottom: 0px;">
-    <div>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+ <!-- 	<% flash.each do |key, value| %>
+  	 <div class="alert alert-info alert-dismissible fade in"><%= value %></div>
+  	<% end %>
+-->
+  <% unless flash.blank? %>
+<div class='row'>
+  <div class='col-sm-12'>
+    <div id='flash'>
       <% flash.each do |key, value| %>
-       <div class="alert-temp alert alert-info alert fade in alert-<%= key %>"><%= value %></div>
-       <% end %>
+        <div class='flash alert-temp alert alert-dismissible fade in alert-<%= key == 'notice' ? 'info' : 'danger' %>'>
+          <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+            <span aria-hidden='true'>&times;</span>
+          </button>
+          <%= value %>
+        </div>
+      <% end %>
     </div>
-        <%= yield %>
-        <!-- Collection of nav links, forms, and other content for toggling -->
-</body>
+  </div>
+</div>
+<% end %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to image_tag('owasp_logo.png', size: "190x60"), 'https://www.owasp.org/', id: "logo" %>
+        <%= link_to image_tag('cyber_quiz.png', size: "150x60"), root_path, id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Docs",  documents_index_path %></li>
+            <li><%= link_to "Admin", users_path%></li>
+            <% if user_signed_in? %>
+              <li><%= link_to('Logoff', destroy_user_session_path, :method => :delete) %></li>
+            <% else %>
+              <li><%= link_to('Logon', new_user_session_path)  %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
 </html>
