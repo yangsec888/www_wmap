@@ -12,47 +12,45 @@
     <![endif]-->
   </head>
   <body>
- <!-- 	<% flash.each do |key, value| %>
-  	 <div class="alert alert-info alert-dismissible fade in"><%= value %></div>
-  	<% end %>
--->
-  <% unless flash.blank? %>
-<div class='row'>
-  <div class='col-sm-12'>
-    <div id='flash'>
-      <% flash.each do |key, value| %>
-        <div class='flash alert-temp alert alert-dismissible fade in alert-<%= key == 'notice' ? 'info' : 'danger' %>'>
-          <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-            <span aria-hidden='true'>&times;</span>
-          </button>
-          <%= value %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</div>
-<% end %>
-    <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="wrapper">
+      <meta charset="utf-8">
+      <title>OWASP Web Mapper Project</title>
       <div class="container">
-        <%= link_to image_tag('owasp_logo.png', size: "190x60"), 'https://www.owasp.org/', id: "logo" %>
-        <%= link_to image_tag('cyber_quiz.png', size: "150x60"), root_path, id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Docs",  documents_index_path %></li>
-            <li><%= link_to "Admin", users_path%></li>
-            <% if user_signed_in? %>
-              <li><%= link_to('Logoff', destroy_user_session_path, :method => :delete) %></li>
-            <% else %>
-              <li><%= link_to('Logon', new_user_session_path)  %></li>
-            <% end %>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="container">
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-    </div>
-  </body>
-</html>
+          <% unless flash.blank? %>
+            <div class='row'>
+              <div class='col-sm-12'>
+                <div id='flash'>
+                  <% flash.each do |key, value| %>
+                    <div class='flash alert-temp alert alert-dismissible fade in alert-<%= key == 'notice' ? 'info' : 'danger' %>'>
+                      <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                      </button>
+                      <%= value %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+         <% end %>
+        <header class="navbar navbar-fixed-top navbar-inverse">
+          <div class="container">
+            <%= link_to image_tag('owasp_logo.png', size: "190x60"), 'https://www.owasp.org/', id: "logo" %>
+            <nav>
+              <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "Home", root_path %></li>
+                <li><%= link_to "Docs",  documents_index_path %></li>
+                <li><%= link_to "Admin", users_path%></li>
+                <% if user_signed_in? %>
+                  <li><%= link_to('Logoff', destroy_user_session_path, :method => :delete) %></li>
+                <% else %>
+                  <li><%= link_to('Logon', new_user_session_path)  %></li>
+                <% end %>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <div class="container">
+          <%= yield %>
+        </div>
+
+        <%= render 'layouts/footer' %>

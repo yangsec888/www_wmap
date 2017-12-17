@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   devise_scope :user do
     get 'users/list' => 'users#index'
     get 'users/report' => 'users#report'
-    get 'users/:id' => 'users#show'
+    #get 'users/:id' => 'users#show'
     delete '/users/sign_out' => 'devise/sessions#destroy'
   end
   resources :users
