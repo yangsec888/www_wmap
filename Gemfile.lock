@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.5.2)
       actionpack (= 4.2.5.2)
@@ -126,6 +127,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.5.2)
       sprockets-rails
+    rails-assets-tether (1.4.3)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.8)
@@ -207,6 +209,7 @@ DEPENDENCIES
   open_uri_redirections
   parallel
   rails (= 4.2.5.2)
+  rails-assets-tether (>= 1.1.0)!
   responders
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

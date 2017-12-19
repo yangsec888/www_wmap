@@ -1,0 +1,21 @@
+<table class="table">
+  <tr>
+    <td>
+      <div class="tab-content col-md-9 col-lg-09">
+        <% data = String.new %>
+        <% File.new(@file, 'w+') unless File.exist?(@file) %>
+        <% seeds = File.open(@file, 'r+') %>
+        <% seeds.each_line { |line| data +=line }; seeds.close %>
+        <h4>Please save your discovery seed file after the modification </h4>
+
+        <p>
+          <%= form_tag "/seed/create" do %>
+          <%= text_area_tag :file_tag, data, rows: 22, cols: 90 %>
+          <%= hidden_field_tag :uid_tag, @uid %>
+          <button class="btn btn-default" type="submit">Save</button>
+          <% end %>
+        </P>
+      </div>
+    </td>
+  </tr>
+</table>

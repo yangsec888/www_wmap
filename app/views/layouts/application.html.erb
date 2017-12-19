@@ -34,12 +34,14 @@
          <% end %>
         <header class="navbar navbar-fixed-top navbar-inverse">
           <div class="container">
-            <%= link_to image_tag('owasp_logo.png', size: "190x60"), 'https://www.owasp.org/', id: "logo" %>
+            <%= link_to image_tag('owasp_logo.png', size: "150x60"), 'https://www.owasp.org/index.php/OWASP_Web_Mapper_Project', id: "logo" %>
             <nav>
               <ul class="nav navbar-nav navbar-right">
                 <li><%= link_to "Home", root_path %></li>
-                <li><%= link_to "Docs",  documents_index_path %></li>
-                <li><%= link_to "Admin", users_path%></li>
+                <li><%= link_to "Documents",  documents_index_path %></li>
+                <li><%= link_to "My Domain(s)",  domains_start_path %></li>
+                <li><%= link_to "My Network Block(s)",  cidrs_start_path %></li>
+                <li><%= link_to "Discovery Seed", seed_start_path%></li>
                 <% if user_signed_in? %>
                   <li><%= link_to('Logoff', destroy_user_session_path, :method => :delete) %></li>
                 <% else %>
@@ -51,6 +53,12 @@
         </header>
         <div class="container">
           <%= yield %>
+          <%= render 'layouts/footer' %>
         </div>
 
-        <%= render 'layouts/footer' %>
+      </body>
+<% if false %>
+      <%= debug(params)if Rails.env.development? %>
+      <%= params.inspect if Rails.env.development? %>
+<% end %>
+    </html>

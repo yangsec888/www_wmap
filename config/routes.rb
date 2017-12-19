@@ -21,7 +21,23 @@ Rails.application.routes.draw do
   resources :seed
 
   get 'seed/start'
+  post 'seed/start'
+  post 'seed/create'
 
+
+  ################################
+  resources :domains
+
+  get 'domains/start'
+  post 'domains/start'
+  post 'domains/create'
+
+################################
+  resources :cidrs
+
+  get 'cidrs/start'
+  post 'cidrs/start'
+  post 'cidrs/create'
 
   ################################
   resources :documents
