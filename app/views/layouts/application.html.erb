@@ -3,9 +3,10 @@
   <head>
     <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all',
-                                              'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'favicon.ico' %>
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
       </script>
@@ -16,49 +17,63 @@
       <meta charset="utf-8">
       <title>OWASP Web Mapper Project</title>
       <div class="container">
-          <% unless flash.blank? %>
-            <div class='row'>
-              <div class='col-sm-12'>
-                <div id='flash'>
-                  <% flash.each do |key, value| %>
-                    <div class='flash alert-temp alert alert-dismissible fade in alert-<%= key == 'notice' ? 'info' : 'danger' %>'>
-                      <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                        <span aria-hidden='true'>&times;</span>
-                      </button>
-                      <%= value %>
-                    </div>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-         <% end %>
-        <header class="navbar navbar-fixed-top navbar-inverse">
-          <div class="container">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css">
+        <hr style="border-top: 1px solid blue; border-bottom: 7px solid #F2F2F2;margin-top: 2px;margin-bottom: 0px;">
+        <div class="row">
+          <div class="col-sm-2 col-md-6 col-lg-6">
             <%= link_to image_tag('owasp_logo.png', size: "150x60"), 'https://www.owasp.org/index.php/OWASP_Web_Mapper_Project', id: "logo" %>
-            <nav>
-              <ul class="nav navbar-nav navbar-right">
-                <li><%= link_to "Home", root_path %></li>
-                <li><%= link_to "Documents",  documents_index_path %></li>
-                <li><%= link_to "My Domain(s)",  domains_start_path %></li>
-                <li><%= link_to "My Network Block(s)",  cidrs_start_path %></li>
-                <li><%= link_to "Discovery Seed", seed_start_path%></li>
-                <% if user_signed_in? %>
-                  <li><%= link_to('Logoff', destroy_user_session_path, :method => :delete) %></li>
-                <% else %>
-                  <li><%= link_to('Logon', new_user_session_path)  %></li>
-                <% end %>
-              </ul>
-            </nav>
           </div>
-        </header>
-        <div class="container">
-          <%= yield %>
-          <%= render 'layouts/footer' %>
         </div>
 
-      </body>
-<% if false %>
-      <%= debug(params)if Rails.env.development? %>
-      <%= params.inspect if Rails.env.development? %>
-<% end %>
-    </html>
+        <div role="navigation" class="navbar navbar-default">
+          <div class="collapse navbar-collapse">
+            <ul class="nav nav-tabs">
+              <li><%= link_to "Home", root_path %></li>
+              <li class='divider-vertical'></li>
+              <li class="dropdown"><%= link_to "Documents",  documents_index_path %></li>
+              <li class='divider-vertical'></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  My Public Registrations
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "My Domain(s)",  domains_start_path %></li>
+                  <li class='divider-vertical'></li>
+
+                  <li><%= link_to "My Host(s)",  hosts_start_path %></li>
+                  <li><%= link_to "My Network Block(s)",  cidrs_start_path %></li>
+                </ul>
+              </li>
+
+              <li class='divider-vertical'></li>
+              <li class="dropdown"><%= link_to "Discovery Seed", seed_start_path%></li>
+              <li class='divider-vertical'></li>
+              <% if user_signed_in? %>
+                <li><%= link_to('Logoff', destroy_user_session_path, :method => :delete) %></li>
+              <% else %>
+                <li><%= link_to('Logon', new_user_session_path)  %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+
+        <hr style="border-top: 1px solid #C4D7ED; border-bottom: 7px solid #F2F2F2;margin-top: 2px;margin-bottom: 0px;">
+        <div id="root_notice">
+          <% flash.each do |key, value| %>
+            <div class="alert-temp alert alert-info alert fade in alert-<%= key %>"><%= value %></div>
+          <% end %>
+        </div>
+
+        <%= yield %>
+        <p></p>
+        <%= render 'layouts/footer' %>
+        <% if false %>
+          <%= debug(params)if Rails.env.development? %>
+          <%= params.inspect if Rails.env.development? %>
+        <% end %>
+
+    </div>
+
+  </body>
+</html>

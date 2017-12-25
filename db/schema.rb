@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219195527) do
+ActiveRecord::Schema.define(version: 20171220222058) do
 
   create_table "cidrs", force: :cascade do |t|
     t.string   "owed_cidr",  limit: 255
@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(version: 20171219195527) do
     t.integer  "user_id",     limit: 4
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+  end
+
+  create_table "hosts", force: :cascade do |t|
+    t.string   "host_name",  limit: 255
+    t.string   "ip",         limit: 255
+    t.integer  "uid",        limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "seeds", force: :cascade do |t|

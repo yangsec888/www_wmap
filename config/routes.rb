@@ -32,12 +32,20 @@ Rails.application.routes.draw do
   post 'domains/start'
   post 'domains/create'
 
-################################
+ ################################
   resources :cidrs
 
   get 'cidrs/start'
   post 'cidrs/start'
   post 'cidrs/create'
+
+ ################################
+
+  resources :hosts
+
+  get 'hosts/start'
+  post 'hosts/start'
+  post 'hosts/create'
 
   ################################
   resources :documents

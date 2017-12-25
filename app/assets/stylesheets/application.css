@@ -75,11 +75,11 @@ margin:0 auto; /* center your carousel if other than 100% */
 }
 
  .navbar-default {
-   background: -webkit-gradient(linear, 0 0, 0 100%, from(#8A0F0F), to(#BB1515));
+   background: -webkit-gradient(linear, 0 0, 0 100%, from(grey), to(#C4D7ED));
    background: -ms-linear-gradient(#8A0F0F 0%,#D10909 100%);
    height:5px;
    border: 0;
-   border-color: #FFFFFF;
+   border-color: blue;
  }
 .navbar {min-height:45px !important;}
  .navbar .divider-vertical{height:20px;margin-top:10px;margin-left: 5px;border-right:1px solid #8A0F0F;padding-left:0px;}
