@@ -10,10 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
- *= require rails_bootstrap_forms
+
+
+
  */
+
  html{
    height: 100%;
  }
@@ -140,7 +141,7 @@ th a.current.desc {
   border-color: #FFFFFF;
 }
 .navbar {min-height:45px !important;}
-.navbar .divider-vertical{height:20px;margin-top:10px;margin-left: 5px;border-right:1px solid #FFFFFF;padding-left:0px;}
+.navbar .divider-vertical{height:20px;margin-top:10px;margin-left: 5px;border-right:1px solid #8A0F0F;padding-left:0px;}
 /* title */
 .navbar-default .navbar-brand {
     color: #FFFFFF;
@@ -180,7 +181,7 @@ th a.current.desc {
 }
 .navbar-default .nav-tabs > li > a:hover,
 .navbar-default .nav-tabs > li > a:focus {
-   color: #000000;
+   color: #FF0000;
    background-color: #FFFFFF;
 }
 .navbar-default .nav-tabs > .active > a,
@@ -229,4 +230,18 @@ th a.current.desc {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #333;
     }
+}
+#nav-tabs li {
+  padding: 2px;
+  display: inline;
+}
+.rails-bootstrap-forms-date-select select,
+.rails-bootstrap-forms-time-select select,
+.rails-bootstrap-forms-datetime-select select {
+  display: inline-block;
+  width: auto;
+}
+
+.rails-bootstrap-forms-error-summary {
+  margin-top: 10px;
 }

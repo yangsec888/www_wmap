@@ -30,8 +30,9 @@ $(document).ready(function(){
   window.setTimeout(fadeAlert,5000);
   window.setTimeout(removeAlert,5000);
 
-});
-
-$(function ()
-  { $("[data-toggle='popover']").popover({html:true});
+  // Popover Management
+  $(function (){
+    $("[data-toggle='popover']").popover({html:true});
   });
+
+});
