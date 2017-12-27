@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get 'seed/start'
   post 'seed/start'
   post 'seed/create'
+  post 'seed/dis_test'
 
 
   ################################

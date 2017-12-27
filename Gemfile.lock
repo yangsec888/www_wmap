@@ -213,6 +213,7 @@ DEPENDENCIES
   responders
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  sprockets-rails
   turbolinks
   twitter-bootstrap-rails
   tzinfo-data

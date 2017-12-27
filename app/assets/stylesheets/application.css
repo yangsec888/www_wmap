@@ -140,7 +140,7 @@ th a.current.desc {
   border-color: #FFFFFF;
 }
 .navbar {min-height:45px !important;}
-.navbar .divider-vertical{height:20px;margin-top:10px;margin-left: 5px;border-right:1px solid #FFFFFF;padding-left:0px;}
+.navbar .divider-vertical{height:20px;margin-top:10px;margin-left: 0px;border-right:1px solid #FFFFFF;padding-left:0px;}
 /* title */
 .navbar-default .navbar-brand {
     color: #FFFFFF;

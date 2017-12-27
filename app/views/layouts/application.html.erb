@@ -26,7 +26,7 @@
         </div>
       </div>
 
-      <div class="navbar navbar-default">
+      <div role="navigation" class="navbar navbar-default">
         <div class="collapse navbar-collapse">
           <ul class="nav nav-tabs pull-left">
             <li ><a href="/home/page">Home</a></li>
@@ -62,10 +62,12 @@
         <% end %>
       </div>
 
-
       <%= yield %>
+
       <p></p>
+
       <%= render 'layouts/footer' %>
+
       <% if false %>
         <%= debug(params)if Rails.env.development? %>
         <%= params.inspect if Rails.env.development? %>
