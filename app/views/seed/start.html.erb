@@ -3,6 +3,7 @@
     <td>
       <div class="tab-content col-md-9 col-lg-09">
         <% data = String.new %>
+        <% Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir) %>
         <% File.new(@file, 'w+') unless File.exist?(@file) %>
         <% seeds = File.open(@file, 'r+') %>
         <% seeds.each_line { |line| data +=line }; seeds.close %>

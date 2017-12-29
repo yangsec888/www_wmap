@@ -2,18 +2,20 @@ class HostsController < ApplicationController
   before_action :authenticate_user!
 
     def start
-      @file = Rails.root.join('uploads', 'hosts', current_user.id.to_s)
+      @dir =  Rails.root.join('uploads', current_user.id.to_s)
+      @file = Rails.root.join('uploads', current_user.id.to_s, 'hosts')
       @uid = current_user.id
     end
 
     def show
-      @file = Rails.root.join('uploads', 'hosts', current_user.id.to_s)
+      @dir =  Rails.root.join('uploads', current_user.id.to_s)
+      @file = Rails.root.join('uploads', current_user.id.to_s, 'hosts')
       @uid = current_user.id
     end
 
     def create
       file_content = params[:file_tag]
-      f = Rails.root.join('uploads', 'hosts', params[:uid_tag])
+      f = Rails.root.join('uploads', params[:uid_tag], 'hosts')
       file = File.open(f, 'w+')
       file.write(file_content)
       file.close
