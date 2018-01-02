@@ -32,6 +32,7 @@ class SeedController < ApplicationController
   end
 
   def dis_test
+    @uid = current_user.id.to_s
     dir = Rails.root.join('uploads', current_user.id.to_s)
     file = Rails.root.join('uploads', current_user.id.to_s, 'seed')
     cmd = "wmap" + " " + file.to_s + " " + dir.to_s
