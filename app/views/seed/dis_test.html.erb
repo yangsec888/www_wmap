@@ -1,22 +1,11 @@
+<div class="row">
+  <h3>You're ready to go!</h3>
+</div>
+
 <table class="table">
   <tr>
     <td>
-      <div class="tab-content col-md-9 col-lg-09">
-        <% data = String.new %>
-        <% file_hosts =  Rails.root.join('uploads', @uid, 'hosts') %>
-        <% File.new(file_hosts, 'w+') unless File.exist?(file_hosts) %>
-        <% hosts = File.open(file_hosts, 'r+') %>
-        <% hosts.each_line { |line| data +=line }; hosts.close %>
-        <h4>Here are known hosts under your watch. Please save file after the modification </h4>
-
-        <p>
-          <%= form_tag "/hosts/create" do %>
-          <%= text_area_tag :file_tag, data, rows: 22, cols: 90 %>
-          <%= hidden_field_tag :uid_tag, @uid %>
-          <button class="btn btn-default" type="submit">Save</button>
-          <% end %>
-        </P>
-      </div>
+      <%= button_to "Discover", action: "dis_test" %>
     </td>
   </tr>
 </table>

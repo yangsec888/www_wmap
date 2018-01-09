@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  site: MyString
+  user_id: 1
+  ip: MyString
+  port: 1
+  url: MyString
+  code: 1
+  redirection: MyString
+  md5: MyString
+  server: MyString
+  timestamp: 2018-01-08 15:55:06
+  status: MyString
+
+two:
+  site: MyString
+  user_id: 1
+  ip: MyString
+  port: 1
+  url: MyString
+  code: 1
+  redirection: MyString
+  md5: MyString
+  server: MyString
+  timestamp: 2018-01-08 15:55:06
+  status: MyString

@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-9 col-lg-9">
+    <h3>Discovered Site(s): </h3>
+  </div>
+</div>
+<p><p>
+
+<div class="table-responsive">
+  <table class="table table-hover" style="boarder: 1">
+    <% line_cnt=0 %>
+    <% File.open(@file,'r').each_line do |line| %>
+      <% line_cnt += 1 %>
+      <% next if line_cnt == 1 or %>
+      <% if line_cnt ==2 %>
+      <thead>
+        <tr> <% line.gsub("#","").split(",").map do |header| %>
+          <th class="col-lg-2"><%= header.strip %></th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+      <% end %>
+      <tr>
+        <% line.split(",").map do |x| %>
+          <td><%= x %> </td>
+        <% end %>
+      </tr>
+
+    <% end %>
+    </tbody>
+  </table>
+</div>

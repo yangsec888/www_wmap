@@ -19,7 +19,7 @@ class CidrsController < ApplicationController
       file = File.open(f, 'w+')
       file.write(file_content)
       file.close
-      redirect_to cidrs_start_path, notice: "The cidrs file is saved!"
+      redirect_to seed_dis_test_path, notice: "The cidrs file is saved!"
 
     end
 

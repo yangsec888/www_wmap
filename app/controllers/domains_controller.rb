@@ -19,7 +19,7 @@ class DomainsController < ApplicationController
       file = File.open(f, 'w+')
       file.write(file_content)
       file.close
-      redirect_to domains_start_path, notice: "The domains file is saved!"
+      redirect_to cidrs_start_path, notice: "The domains file is saved!"
 
     end
 

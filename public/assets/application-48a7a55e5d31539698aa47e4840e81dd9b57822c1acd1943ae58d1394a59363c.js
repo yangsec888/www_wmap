@@ -19118,6 +19118,10 @@ var Popover = (function ($) {
 
 
 }).call(this);
+(function() {
+
+
+}).call(this);
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -19150,8 +19154,11 @@ $(document).ready(function(){
   window.setTimeout(fadeAlert,5000);
   window.setTimeout(removeAlert,5000);
 
-});
-
-$(function ()
-  { $("[data-toggle='popover']").popover({html:true});
+  // Popover Management
+  $(function (){
+    $("[data-toggle='popover']").popover({html:true});
   });
+
+
+  $('.dropdown-toggle').dropdown();
+});

@@ -17,6 +17,7 @@
     <![endif]-->
   </head>
   <body>
+    <div class="wrapper">
     <div class="container">
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css">
       <hr style="border-top: 1px solid black; border-bottom: 7px solid #F2F2F2;margin-top: 2px;margin-bottom: 0px;">
@@ -32,18 +33,27 @@
           <ul class="nav nav-tabs pull-left">
             <li ><a href="/home/page">Home</a></li>
             <li class='divider-vertical'></li>
+            <li ><a href="/seed/start">Seed</a></li>
+            <li class='divider-vertical'></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Discovery<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/hosts/start">My Host(s)</a></li>
+                <li><a href="/sites/show">My Site(s)</a></li>
+              </ul>
+            </li>
+            <li class='divider-vertical'></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 My Public Registrations<span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                 <li><a href="/domains/start">My Domain(s)</a></li>
-                <li><a href="/hosts/start">My Host(s)</a></li>
                 <li><a href="/cidrs/start">My Network Block(s)</a></li>
               </ul>
             </li>
-            <li class='divider-vertical'></li>
-            <li ><a href="/seed/start">Discovery Seed</a></li>
             <li class='divider-vertical'></li>
             <li ><a href="/documents/wmap/index" target="_blank">Documents</a></li>
             <li class='divider-vertical'></li>
@@ -73,7 +83,9 @@
         <%= debug(params)if Rails.env.development? %>
         <%= params.inspect if Rails.env.development? %>
       <% end %>
+      
     </div>
+  </div>
 
   </body>
 </html>

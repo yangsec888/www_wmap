@@ -28,7 +28,7 @@ class SeedController < ApplicationController
     file = File.open(f, 'w+')
     file.write(file_content)
     file.close
-    redirect_to seed_start_path, notice: "The seed file is saved!"
+    redirect_to domains_start_path, notice: "The seed file is saved!"
   end
 
   def dis_test
