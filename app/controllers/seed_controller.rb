@@ -38,10 +38,12 @@ class SeedController < ApplicationController
     file = Rails.root.join('uploads', current_user.id.to_s, 'seed')
     cmd = "wmap" + " " + file.to_s + " " + s_dir
     puts "Execute command in the background: #{cmd}"
-    if system(cmd)
-      puts "Discovery successful!"
-    else
-      puts "Discovery failed!"
+    Spawnling.new do
+      if system(cmd)
+        puts "Discovery successful!"
+      else
+        puts "Discovery failed!"
+      end
     end
   end
 

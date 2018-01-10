@@ -16,6 +16,7 @@ gem 'open_uri_redirections'
 gem 'dnsruby'
 gem 'geoip'
 gem 'twitter-bootstrap-rails'
+gem 'spawnling', '~>2.1'
 ###############################################################################
 
 
