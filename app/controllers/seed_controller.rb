@@ -28,20 +28,26 @@ class SeedController < ApplicationController
     file = File.open(f, 'w+')
     file.write(file_content)
     file.close
-    redirect_to domains_start_path, notice: "The seed file is saved!"
+    redirect_to domains_start_url, notice: "The seed file is saved!"
   end
 
-  def dis_test
+  def discovery
     @uid = current_user.id.to_s
     dir = Rails.root.join('uploads', current_user.id.to_s)
+    s_dir = dir.to_s + "/"
     file = Rails.root.join('uploads', current_user.id.to_s, 'seed')
-    cmd = "wmap" + " " + file.to_s + " " + dir.to_s
+    cmd = "wmap" + " " + file.to_s + " " + s_dir
+    puts "Execute command in the background: #{cmd}"
     if system(cmd)
       puts "Discovery successful!"
     else
       puts "Discovery failed!"
     end
+  end
 
+  def distest
+    @uid = current_user.id.to_s
+    puts "You're hitting distest controller"
   end
 
 

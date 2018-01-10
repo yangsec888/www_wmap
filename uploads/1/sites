@@ -1,4 +1,4 @@
-# Local site store created by class Wmap::SiteTracker method save_sites_to_file! at: 2018-01-08 15:10:58 -0500
-# Website,Primary IP,Port,Hosting Status,Server,Response Code,Site MD5 Finger-print,Site Redirection,Timestamp
-http://www.lcbhome.com/,192.241.251.242,80,int_hosted,Apache/2.4.7 (Ubuntu),302,3aa61bd04f83caddba4881d39c929b87,https://www.lcbhome.com/,2018-01-08 15:10:58 -0500
-https://www.lcbhome.com/,192.241.251.242,443,int_hosted,Apache/2.4.7 (Ubuntu),200,b76b2ad3196719c35439aea863b372b0,,2018-01-08 15:10:58 -0500
+# Local site store created by class Wmap::SiteTracker method save_sites_to_file! at: 2018-01-10 14:42:59 -0500
+# Website,Primary IP,Port,Hosting Status,Server,Response Code,MD5 Finger-print,Redirection,Timestamp
+http://www.lcbhome.com/,192.241.251.242,80,int_hosted,Apache/2.4.7 (Ubuntu),302,3aa61bd04f83caddba4881d39c929b87,https://www.lcbhome.com/,2018-01-10 14:42:59 -0500
+https://www.lcbhome.com/,192.241.251.242,443,int_hosted,Apache/2.4.7 (Ubuntu),200,b76b2ad3196719c35439aea863b372b0,,2018-01-10 14:42:59 -0500

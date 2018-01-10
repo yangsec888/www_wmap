@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :sites
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   devise_scope :user do
     get 'users/list' => 'users#index'
@@ -19,12 +18,12 @@ Rails.application.routes.draw do
   get 'home/about'
 
   ################################
-  resources :seed
 
-  get 'seed/start'
   post 'seed/start'
   post 'seed/create'
-  post 'seed/dis_test'
+  post 'seed/discovery'
+  get 'seed/distest' 
+  resources :seed
 
 
   ################################
@@ -53,6 +52,9 @@ Rails.application.routes.draw do
   resources :documents
 
   get 'documents/index'
+
+  ################################
+  resources :sites
 
 
   # The priority is based upon order of creation: first created -> highest priority.
