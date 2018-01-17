@@ -42,6 +42,7 @@
               <ul class="dropdown-menu">
                 <li><a href="/hosts/start">My Host(s)</a></li>
                 <li><a href="/sites/show">My Site(s)</a></li>
+                <li><a href="/logs/list">Discovery Logs</a></li>
               </ul>
             </li>
             <li class='divider-vertical'></li>
@@ -83,7 +84,7 @@
         <%= debug(params)if Rails.env.development? %>
         <%= params.inspect if Rails.env.development? %>
       <% end %>
-      
+
     </div>
   </div>
 

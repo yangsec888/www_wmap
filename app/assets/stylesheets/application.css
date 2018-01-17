@@ -30,7 +30,7 @@ body {
 
  .container {
 background-color: #FFFFFF;
-width: 950px !important;
+width: auto !important;
 height:100%;
 margin: 0px auto;
 padding-right:24px;

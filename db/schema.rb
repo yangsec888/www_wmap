@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180108205506) do
+ActiveRecord::Schema.define(version: 20180117205603) do
 
   create_table "cidrs", force: :cascade do |t|
     t.string   "owed_cidr",  limit: 255
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(version: 20180108205506) do
     t.string   "host_name",  limit: 255
     t.string   "ip",         limit: 255
     t.integer  "uid",        limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "logs", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.string   "file_name",  limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end

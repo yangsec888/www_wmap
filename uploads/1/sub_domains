@@ -1,2 +1,4 @@
-# Local domains file created by class Wmap::DomainTracker::SubDomain method save_sub_domains_to_file! at: 2018-01-10 16:39:45 -0500
+# Local domains file created by class Wmap::DomainTracker::SubDomain method save_sub_domains_to_file! at: 2018-01-16 11:51:24 -0500
 # domain name, free zone transfer detected?
+ebank.cmbchina.com, no
+office.cmbchina.com, no

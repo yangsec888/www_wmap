@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   post 'seed/start'
   post 'seed/create'
   post 'seed/discovery'
-  get 'seed/distest' 
+  get 'seed/distest'
   resources :seed
 
 
@@ -56,6 +56,11 @@ Rails.application.routes.draw do
   ################################
   resources :sites
 
+  ################################
+
+  get 'logs/list'
+  post 'logs/download'
+  resources :logs
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
