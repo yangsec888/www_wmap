@@ -13,8 +13,9 @@
           <%= form_tag "/hosts/create" do %>
           <%= text_area_tag :file_tag, data, rows: 22, cols: 90 %>
           <%= hidden_field_tag :uid_tag, @uid %>
-          <button class="btn btn-default" type="submit">Save</button>
           <% end %>
+          <button class="btn btn-default" type="submit">Save</button>
+
         </P>
       </div>
     </td>

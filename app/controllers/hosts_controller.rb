@@ -18,6 +18,7 @@ class HostsController < ApplicationController
       f = Rails.root.join('uploads', params[:uid_tag], 'hosts')
       file = File.open(f, 'w+')
       file.write(file_content)
+      file.write("\n")
       file.close
       redirect_to hosts_start_path, notice: "The hosts file is saved!"
 

@@ -18,6 +18,7 @@ class CidrsController < ApplicationController
       f = Rails.root.join('uploads',  params[:uid_tag], 'cidrs')
       file = File.open(f, 'w+')
       file.write(file_content)
+      file.write("\n")
       file.close
       redirect_to seed_distest_path, :notice => "The cidrs file is saved!"
 

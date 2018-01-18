@@ -27,6 +27,7 @@ class SeedController < ApplicationController
     f = Rails.root.join('uploads', params[:uid_tag], 'seed')
     file = File.open(f, 'w+')
     file.write(file_content)
+    file.write("\n")
     file.close
     redirect_to domains_start_url, notice: "The seed file is saved!"
   end

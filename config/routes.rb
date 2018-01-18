@@ -54,6 +54,8 @@ Rails.application.routes.draw do
   get 'documents/index'
 
   ################################
+
+  post 'sites/download'
   resources :sites
 
   ################################

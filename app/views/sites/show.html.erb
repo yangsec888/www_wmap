@@ -1,12 +1,18 @@
 <div class="row">
   <div class="col-md-9 col-lg-9">
     <h3>Discovered Site(s): </h3>
+    <br>
+    <%= form_tag(controller: "sites", action: "download", method: "post") do %>
+      <%= hidden_field_tag(:file_path,@file) %>
+      <%= submit_tag("Download") %>
+    <% end %>
   </div>
 </div>
-<p><p>
 
 <div class="table-responsive">
   <table class="table table-hover" style="boarder: 1">
+    <% Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir) %>
+    <% File.new(@file, 'w+') unless File.exist?(@file) %>
     <% line_cnt=0 %>
     <% File.open(@file,'r').each_line do |line| %>
       <% line_cnt += 1 %>

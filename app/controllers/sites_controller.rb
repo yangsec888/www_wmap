@@ -7,6 +7,9 @@ class SitesController < ApplicationController
     @uid = current_user.id
   end
 
+  def download
+    send_file params[:file_path]
+  end
 
 
 end
