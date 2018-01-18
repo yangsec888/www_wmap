@@ -9,7 +9,7 @@ WMAP Demo App uses a number of open source projects to work properly:
 
 * [Ruby on Rails] - A web-application framework that includes everything!
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [wmap] - Web Mapper gem of course
+* [wmap](https://github.com/yangsec888/wmap) - Web Mapper gem of course
 * [devise] - Rails app authentication and user session management solution
 
 WMAP Demo App is open source with a [www_wmap] project on GitHub.
