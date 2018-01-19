@@ -45,8 +45,11 @@ Rails.application.configure do
   # config.force_ssl = true
 
   # Use the lowest log level to ensure availability of diagnostic information
-  # when problems arise.
+  # when problems arise
   config.log_level = :debug
+
+  # Direct logging to Heroku console
+  config.logger = Logger.new(STDOUT)
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
