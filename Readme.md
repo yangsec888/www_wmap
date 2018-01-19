@@ -42,16 +42,33 @@ First of all, you need to register a [GitHub](https://github.com) account and a 
  5. Login you Heroku account, Create a new app, choose GitHub as Deployment method in the Deploy tab of apps in the Heroku Dashboard, press 'Connect to GitHub' button.
  6. You will need to use GitHub credential to connect this app to GitHub to enable code diffs and deploy.
  7. After successful connection, you can see your Github username in repository selections before repo-name field. You need to put your repository name in Github, then 'search' and 'connect' your github project.
- 8. Because the web app is built on top of the MySQL sever which is optional for Heroku account, we need to enable it in Heroku.  In the Resources tab of apps in the Heroku Dashboard, search for 'ClearDB MySQL' in 'Add-ons' and provision. You will need to add your payment information for the verification purpose only (the free plan is sufficient for us).  [cleardb installation reference.](https://devcenter.heroku.com/articles/cleardb)
- 9. After the add-on cleardb MySQL component is successfully installed, we need to configure MySQL add-on in the Settings tab. Add below two links to Buildpacks.
+ 8. Because the web app is built on top of the MySQL sever which is optional for Heroku account, we need to enable it in Heroku.  In the Resources tab of apps in the Heroku Dashboard, search for 'ClearDB MySQL' in 'Add-ons' and provision. You will need to add your credit card payment information for the verification purpose only (the free plan is sufficient for us).  [cleardb installation reference.](https://devcenter.heroku.com/articles/cleardb)
+ 9. After the add-on cleardb MySQL component is successfully installed, we need to configure MySQL add-on in the Settings tab. Add below link to Buildpacks.
   * https://github.com/heroku/heroku-buildpack-ruby
-  * https://github.com/gunpowderlabs/buildpack-ruby-rake-deploy-tasks
 10. In Config Variables
 * Change "CLEARDB_DATABASE_URL" value from "mysql://xyz" to "mysql2://xyz"
 * Add [key]DEPLOY_TASKS => [value]db:migrate db:seed
 * Add [key]DATABASE_URL => [value] same value as CLEARDB_DATABASE_URL
-11. Once the MySQL database add-on is enable, the database will be automatically created for you. However, you still need to create the tables for the app. Under menu 'More' in the upper right corner, choose 'Run console', enter Heroku 'bash' environment, run command 'rake db:migrate'
-12. Finally, Go back to Deploy tab,  and click Deploy Branch "master" in manually at the bottom. Once deploy, you can open your Online Quiz App to examine. *Congratulations!*
+11. Once the MySQL database add-on is enable, the database will be automatically created for you. However, you still need to create the tables for the app. Under menu 'More' in the upper right corner, choose 'Run console', enter Heroku 'bash' environment, run command:
+$ rake db:create
+$ rake db:migrate
+12. Since the demo webapp need to send email confirmation during the new user registration process, we would need the following Heroku add-on as well:
+$ heroku addons:create sendgrid:starter --app YOUR-APP-NAME
+13. Obtain Heroku SENDGRID credentials:
+$ heroku config:get SENDGRID_USERNAME
+$ heroku config:get SENDGRID_PASSWORD
+14. Then we need to save the email credentils into file "config/initializers/setup_mail.rb"
+      ActionMailer::Base.delivery_method = :smtp
+      ActionMailer::Base.smtp_settings = {
+      :address              =>  'smtp.sendgrid.net',
+      :port                 =>  '587',
+      :authentication       =>  :plain,
+      :user_name            =>  'username@heroku.com',
+      :password             =>  'password',
+      :domain               =>  'heroku.com',
+      :enable_starttls_auto  =>  true
+      }
+15. Finally, Go back to Deploy tab,  and click Deploy Branch "master" in manually at the bottom. Once deploy, you can open your Demo Wmap Portal app. *Congratulations!*
 
 ### Usage
 Under the home page, click on "Start" button to start. Follow the on-screen instructions, in order to launch a successfully WMAP discovery. The discovery result should be tracked under the "Discovery" menu tab.

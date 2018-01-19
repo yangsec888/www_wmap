@@ -50,5 +50,3 @@ test:
 production:
   <<: *default
   database: www_wmap_production
-  username: www_wmap
-  password: <%= ENV['WWW_WMAP_DATABASE_PASSWORD'] %>
