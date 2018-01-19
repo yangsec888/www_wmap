@@ -33,35 +33,38 @@ $ rails server
 
 It would be also easy to deploy the application to cloud. Here are the example based on [Heroku](https://www.heroku.com) and [GitHub](https://github.com). You can use your favorite repository and web hosting service. For the benefit of the most users, we will do it using the web dashboard for those non technical sophisticate users.  But if you are a IT specialist, it is your call to fly in CLI mode.
 
-Our Example:
+Heroku Deployment Example:
 First of all, you need to register a [GitHub](https://github.com) account and a [Heroku](https://www.heroku.com) account first.
  1. Login you GitHub account, start a project, enter Repository name and Description (optional).
- 2. Choose import code from another repository, enter Your old repository’s clone URL with "https://github.com/yangsec888/www_wmap.git" which is the web URL of Online Quiz on the GitHub. You can also visit it on the GitHub and see the URL via "Clone or Download" button.
- 3. Click begin import and wait until GitHub showing "Importing complete! Your new repository XXX/YYY is ready." For now you already have stored the source codes on your own GitHub.
- 4. Next, we are going to deploy it on the Heroku. It is quite easy and straightforward since we can connect Heroku with GitHub.
- 5. Login you Heroku account, create a new app, choose GitHub as Deployment method in the Deploy tab of apps in the Heroku Dashboard.
+ 2. Choose import code from another repository, enter the clone URL with "https://github.com/yangsec888/www_wmap.git" which is the url of this project the GitHub. You can also visit it on the GitHub and see the URL via "Clone or Download" button.
+ 3. Click begin import and wait until GitHub showing "Importing complete! Your new repository XXX/YYY is ready."  Now you have a copy of the project source codes under your own GitHub account.
+ 4. Next, you will deploy it into Heroku. It is quite easy and straightforward since Heroku deployment process can be linked to your GitHub account.
+ 5. Login you Heroku account, Create a new app, choose GitHub as Deployment method in the Deploy tab of apps in the Heroku Dashboard, press 'Connect to GitHub' button.
  6. You will need to use GitHub credential to connect this app to GitHub to enable code diffs and deploy.
- 7. After successful connection, you can see your Github username in repository selections before repo-name which you need to put your repository name in Github, then search and connect the right project.
- 8. Before we manually deploy it using master branch, we need to add ClearDB MySQL Database on our App. In the Resources tab of apps in the Heroku Dashboard, search ClearDB MySQL in Add-ons and provision. You will need to add your payment information but the free plan is sufficient for us.  [cleardb installation reference.](https://devcenter.heroku.com/articles/cleardb)
- 9. After add on  cleardb is successfully installed, we need to do some settings in the Settings tab. Add below two links to Buildpacks.
+ 7. After successful connection, you can see your Github username in repository selections before repo-name field. You need to put your repository name in Github, then 'search' and 'connect' your github project.
+ 8. Because the web app is built on top of the MySQL sever which is optional for Heroku account, we need to enable it in Heroku.  In the Resources tab of apps in the Heroku Dashboard, search for 'ClearDB MySQL' in 'Add-ons' and provision. You will need to add your payment information for the verification purpose only (the free plan is sufficient for us).  [cleardb installation reference.](https://devcenter.heroku.com/articles/cleardb)
+ 9. After the add-on cleardb MySQL component is successfully installed, we need to configure MySQL add-on in the Settings tab. Add below two links to Buildpacks.
   * https://github.com/heroku/heroku-buildpack-ruby
   * https://github.com/gunpowderlabs/buildpack-ruby-rake-deploy-tasks
 10. In Config Variables
 * Change "CLEARDB_DATABASE_URL" value from "mysql://xyz" to "mysql2://xyz"
 * Add [key]DEPLOY_TASKS => [value]db:migrate db:seed
 * Add [key]DATABASE_URL => [value] same value as CLEARDB_DATABASE_URL
-11. Finally, Go back to Deploy tab and click Deploy Branch "master" in manually at the bottom. Once deploy, you can open your Online Quiz App to examine. *Congratulations!*
+11. Once the MySQL database add-on is enable, the database will be automatically created for you. However, you still need to create the tables for the app. Under menu 'More' in the upper right corner, choose 'Run console', enter Heroku 'bash' environment, run command 'rake db:migrate'
+12. Finally, Go back to Deploy tab,  and click Deploy Branch "master" in manually at the bottom. Once deploy, you can open your Online Quiz App to examine. *Congratulations!*
 
 ### Usage
 Under the home page, click on "Start" button to start. Follow the on-screen instructions, in order to launch a successfully WMAP discovery. The discovery result should be tracked under the "Discovery" menu tab.
 
 ### Todos
 
- - Write MORE (unit, deployment) tests
+ - Write protection code :)
+ - Write more features (refer to wmap bin utilities)
+ - Write (unit, deployment) tests
  - Enhance Performance
  - Fix Bugs!
 
-License
+### License
 ----
 https://creativecommons.org/licenses/
 
