@@ -12,7 +12,9 @@ class SeedController < ApplicationController
 
   def start
     @dir =  Rails.root.join('uploads', current_user.id.to_s)
+    Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
     @file = Rails.root.join('uploads', current_user.id.to_s, 'seed')
+    File.new(@file, 'w+') unless File.exist?(@file) 
     @uid = current_user.id
   end
 
