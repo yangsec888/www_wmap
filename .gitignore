@@ -13,4 +13,4 @@
 /tmp
 
 # Ignore upload files which are user specific
-/uploads
+/uploads/*
