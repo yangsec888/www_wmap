@@ -17,6 +17,8 @@ gem 'dnsruby'
 gem 'geoip'
 gem 'twitter-bootstrap-rails'
 gem 'spawnling', '~>2.1'
+gem 'popper_js', '~> 1.12.9'
+
 ###############################################################################
 
 

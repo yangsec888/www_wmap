@@ -3,9 +3,9 @@
 The web app is developed under Ruby on Rails framework, in order to showcase the basic usage of the wmap library. To explore further and utilize the full power of wmap library, please refer to the Documents section.
 
 
-### Tech
+### Technology Stacks
 
-WMAP Demo App uses a number of open source projects to work properly:
+WMAP Demo App depends on a number of open source projects to work properly:
 
 * [Ruby on Rails] - A web-application framework that includes everything!
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
@@ -29,7 +29,11 @@ $ rake db:migration
 $ rails server
 ```
 
-### Free Cloud Deployment
+### Live Demo
+
+* [Demo Wmap Portal](https://demo-wmap-portal.herokuapp.com/)
+
+### Free Cloud Deployment (Optional)
 
 It would be also easy to deploy the application to cloud. Here are the example based on [Heroku](https://www.heroku.com) and [GitHub](https://github.com). You can use your favorite repository and web hosting service. For the benefit of the most users, we will do it using the web dashboard for those non technical sophisticate users.  But if you are a IT specialist, it is your call to fly in CLI mode.
 
@@ -57,17 +61,7 @@ $ heroku addons:create sendgrid:starter --app YOUR-APP-NAME
 13. Obtain Heroku SENDGRID credentials:
 $ heroku config:get SENDGRID_USERNAME
 $ heroku config:get SENDGRID_PASSWORD
-14. Then we need to save the email credentils into file "config/initializers/setup_mail.rb"
-      ActionMailer::Base.delivery_method = :smtp
-      ActionMailer::Base.smtp_settings = {
-      :address              =>  'smtp.sendgrid.net',
-      :port                 =>  '587',
-      :authentication       =>  :plain,
-      :user_name            =>  'username@heroku.com',
-      :password             =>  'password',
-      :domain               =>  'heroku.com',
-      :enable_starttls_auto  =>  true
-      }
+14. Then we need to save the above 2 Vars under "Settings", click on "Reveal Config Vars"
 15. Finally, Go back to Deploy tab,  and click Deploy Branch "master" in manually at the bottom. Once deploy, you can open your Demo Wmap Portal app. *Congratulations!*
 
 ### Usage
