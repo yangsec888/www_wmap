@@ -18,7 +18,7 @@ class DomainsController < ApplicationController
       f = Rails.root.join('uploads', params[:uid_tag], 'domains')
       file = File.open(f, 'w+')
       file.write(file_content)
-      file.write("\n")
+      #file.write("\n")
       file.close
       redirect_to cidrs_start_path, notice: "The domains file is saved!"
 

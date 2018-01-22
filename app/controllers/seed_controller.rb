@@ -14,7 +14,7 @@ class SeedController < ApplicationController
     @dir =  Rails.root.join('uploads', current_user.id.to_s)
     Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
     @file = Rails.root.join('uploads', current_user.id.to_s, 'seed')
-    File.new(@file, 'w+') unless File.exist?(@file) 
+    File.new(@file, 'w+') unless File.exist?(@file)
     @uid = current_user.id
   end
 
@@ -29,7 +29,7 @@ class SeedController < ApplicationController
     f = Rails.root.join('uploads', params[:uid_tag], 'seed')
     file = File.open(f, 'w+')
     file.write(file_content)
-    file.write("\n")
+    #file.write("\n")
     file.close
     redirect_to domains_start_url, notice: "The seed file is saved!"
   end
