@@ -31,7 +31,7 @@ $ rails server
 
 ### Live Demo
 
-* [Demo Wmap Portal](https://demo-wmap-portal.herokuapp.com/)
+* [Demo Wmap Portal](https://demo-wmap-portal.herokuapp.com/) See this demo app in the action :)
 
 ### Free Cloud Deployment (Optional)
 
