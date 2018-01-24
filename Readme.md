@@ -31,7 +31,7 @@ $ rails server
 
 ### Live Demo
 
-* [Demo Wmap Portal](https://demo-wmap-portal.herokuapp.com/) See this demo app in the action :)
+* [Demo Wmap Portal](https://demo-wmap-portal.herokuapp.com/) See this demo app in the action. Please wait after the click as it takes 15 seconds to wake up the application in Heroku land. 
 
 ### Free Cloud Deployment (Optional)
 

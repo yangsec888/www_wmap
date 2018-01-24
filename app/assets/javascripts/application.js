@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require popper
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap

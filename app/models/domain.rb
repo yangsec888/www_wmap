@@ -1,2 +1,2 @@
-class Domain < ActiveRecord::Base
+class Domain < ApplicationRecord
 end

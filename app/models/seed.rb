@@ -1,2 +1,2 @@
-class Seed < ActiveRecord::Base
+class Seed < ApplicationRecord
 end

@@ -1,2 +1,2 @@
-class Host < ActiveRecord::Base
+class Host < ApplicationRecord
 end

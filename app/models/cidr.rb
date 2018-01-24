@@ -1,2 +1,2 @@
-class Cidr < ActiveRecord::Base
+class Cidr < ApplicationRecord
 end
