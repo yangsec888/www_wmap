@@ -1,4 +1,15 @@
-if Rails.env.production?
+if Rails.env.development?
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address              =>  'smtp.gmail.com',
+    :port                 =>  587,
+    :authentication       =>  :plain,
+    :user_name            =>  'test77959',
+    :password             =>  'test77959',
+    :domain               =>  'gmail.com',
+    :enable_starttls_auto  =>  true
+  }
+elsif Rails.env.production?
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     :address              =>  'smtp.sendgrid.net',

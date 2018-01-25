@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/sinatra/sinatra.git
+  revision: e0ba389c7bf30a27b1be4ea0a82f19abebc20bc6
+  specs:
+    rack-protection (2.0.0)
+      rack
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -71,6 +83,7 @@ GEM
     coffee-script-source (1.12.2)
     commonjs (0.2.7)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
     crass (1.0.3)
     devise (4.4.1)
       bcrypt (~> 3.0)
@@ -124,6 +137,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.1)
     multi_json (1.13.1)
+    mustermann (1.0.1)
     mysql2 (0.4.10)
     net-ldap (0.11)
     net-ping (2.0.2)
@@ -174,6 +188,7 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
+    redis (4.0.1)
     ref (2.0.0)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -197,7 +212,11 @@ GEM
     selenium-webdriver (3.8.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
-    spawnling (2.1.6)
+    sidekiq (5.0.5)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.4, < 5)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -275,7 +294,8 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   selenium-webdriver
-  spawnling (~> 2.1)
+  sidekiq
+  sinatra!
   spring
   spring-watcher-listen (~> 2.0.0)
   therubyracer

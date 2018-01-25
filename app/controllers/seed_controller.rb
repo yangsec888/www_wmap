@@ -35,19 +35,8 @@ class SeedController < ApplicationController
   end
 
   def discovery
-    @uid = current_user.id.to_s
-    dir = Rails.root.join('uploads', current_user.id.to_s)
-    s_dir = dir.to_s + "/"
-    file = Rails.root.join('uploads', current_user.id.to_s, 'seed')
-    cmd = "wmap" + " " + file.to_s + " " + s_dir
-    puts "Execute command in the background: #{cmd}"
-    Spawnling.new do
-      if system(cmd)
-        puts "Discovery successful!"
-      else
-        puts "Discovery failed!"
-      end
-    end
+    puts "starting the sidekiq on the discovery job"
+    DiscoveryWorker.perform_async(current_user.id)
   end
 
   def distest

@@ -17,7 +17,7 @@ WMAP Demo App is open source with a [www_wmap] project on GitHub.
 
 ### Local Installation
 
-WMAP Demo App requires [Ruby on Rails](http://rubyonrails.org) v4.2+ and [Mysql](https://www.mysql.com/) database to run.
+WMAP Demo App requires [Ruby on Rails](http://rubyonrails.org) v5.1.4 and [Mysql](https://www.mysql.com/) database to run.
 
 Install the environment dependencies, and ensure the database server is running. For example, in our Linux / Mac laptop,
 
@@ -31,7 +31,7 @@ $ rails server
 
 ### Live Demo
 
-* [Demo Wmap Portal](https://demo-wmap-portal.herokuapp.com/) See this demo app in the action. Please wait after the click as it takes 15 seconds to wake up the application in Heroku land. 
+* [Demo Wmap Portal](https://demo-wmap-portal.herokuapp.com/) See this demo app in the action. Please wait after the click as it takes 15 seconds to wake up the application in Heroku land.
 
 ### Free Cloud Deployment (Optional)
 

@@ -7,8 +7,11 @@ Rails.application.routes.draw do
     delete '/users/sign_out' => 'devise/sessions#destroy'
   end
   resources :users
-
   ###############################
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+  ###############################
+
   root 'home#page'
 
   get 'home/page'

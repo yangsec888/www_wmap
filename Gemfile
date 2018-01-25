@@ -52,7 +52,8 @@ gem 'net-ping'
 gem 'open_uri_redirections'
 gem 'dnsruby'
 gem 'geoip'
-gem 'spawnling', '~>2.1'  # easy fork of wmap utility
+gem 'sidekiq' #move discovery job to background
+gem 'sinatra', github: 'sinatra/sinatra' #require for sidekiq web
 ###############################################################################
 
 
