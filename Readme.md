@@ -46,23 +46,28 @@ First of all, you need to register a [GitHub](https://github.com) account and a 
  5. Login you Heroku account, Create a new app, choose GitHub as Deployment method in the Deploy tab of apps in the Heroku Dashboard, press 'Connect to GitHub' button.
  6. You will need to use GitHub credential to connect this app to GitHub to enable code diffs and deploy.
  7. After successful connection, you can see your Github username in repository selections before repo-name field. You need to put your repository name in Github, then 'search' and 'connect' your github project.
- 8. Because the web app is built on top of the MySQL sever which is optional for Heroku account, we need to enable it in Heroku.  In the Resources tab of apps in the Heroku Dashboard, search for 'ClearDB MySQL' in 'Add-ons' and provision. You will need to add your credit card payment information for the verification purpose only (the free plan is sufficient for us).  [cleardb installation reference.](https://devcenter.heroku.com/articles/cleardb)
- 9. After the add-on cleardb MySQL component is successfully installed, we need to configure MySQL add-on in the Settings tab. Add below link to Buildpacks.
-  * https://github.com/heroku/heroku-buildpack-ruby
-10. In Config Variables
-* Change "CLEARDB_DATABASE_URL" value from "mysql://xyz" to "mysql2://xyz"
-* Add [key]DEPLOY_TASKS => [value]db:migrate db:seed
-* Add [key]DATABASE_URL => [value] same value as CLEARDB_DATABASE_URL
-11. Once the MySQL database add-on is enable, the database will be automatically created for you. However, you still need to create the tables for the app. Under menu 'More' in the upper right corner, choose 'Run console', enter Heroku 'bash' environment, run command:
-$ rake db:create
-$ rake db:migrate
-12. Since the demo webapp need to send email confirmation during the new user registration process, we would need the following Heroku add-on as well:
-$ heroku addons:create sendgrid:starter --app YOUR-APP-NAME
-13. Obtain Heroku SENDGRID credentials:
-$ heroku config:get SENDGRID_USERNAME
-$ heroku config:get SENDGRID_PASSWORD
-14. Then we need to save the above 2 Vars under "Settings", click on "Reveal Config Vars"
-15. Finally, Go back to Deploy tab,  and click Deploy Branch "master" in manually at the bottom. Once deploy, you can open your Demo Wmap Portal app. *Congratulations!*
+ 8. Because the web app is built on top of the MySQL sever which is optional for Heroku account, we need to enable it in Heroku.  
+ * In the Resources tab of apps in the Heroku Dashboard, search for 'ClearDB MySQL' in 'Add-ons' and provision. You will need to add your credit card payment information for the verification purpose only (the free plan is sufficient for us).  [cleardb installation reference.](https://devcenter.heroku.com/articles/cleardb)
+ * After the add-on cleardb MySQL component is successfully installed, we need to configure MySQL add-on in the Settings tab. Add below link to Buildpacks:
+  (https://github.com/heroku/heroku-buildpack-ruby)
+ * Back to Heroku dashboard, under Settings tab,  choose Config Variables
+ * Change "CLEARDB_DATABASE_URL" value from "mysql://xyz" to "mysql2://xyz"
+ * Add [key]DEPLOY_TASKS => [value]db:migrate db:seed
+ * Add [key]DATABASE_URL => [value] same value as CLEARDB_DATABASE_URL
+ 9. Once the MySQL database add-on is enable, the database will be automatically created for you. However, you still need to create the tables for the app. Under menu 'More' in the upper right corner, choose 'Run console', enter Heroku 'bash' environment, run command:
+  $ rake db:create
+  $ rake db:migrate
+ 10. Since the demo webapp need to send email confirmation during the new user registration process, we would need the following Heroku add-on as well:
+  $ heroku addons:create sendgrid:starter --app YOUR-APP-NAME
+  * Obtain Heroku SENDGRID credentials:
+  $ heroku config:get SENDGRID_USERNAME
+  $ heroku config:get SENDGRID_PASSWORD
+  * Then we need to save the above 2 Vars under "Settings", click on "Reveal Config Vars"
+11. The discovery is an IO and network resource intensive job. It will be kick-off as a background process. We'll need Sidekiq and Redis solution in order to better manage it. Under Heroku, Redis could be plugged in as a service:
+  $ heroku addons:create redistogo --app YOUR-APP-NAME
+  * Save the above var under Settings directly from heroku console
+  $ heroku config:set REDIS_PROVIDER=REDISTOGO_URL --app YOUR-APP-NAME
+12. Finally, Go back to Deploy tab,  and click Deploy Branch "master" in manually at the bottom. Once deploy, you can open your Demo Wmap Portal app. *Congratulations!*
 
 ### Usage
 Under the home page, click on "Start" button to start. Follow the on-screen instructions, in order to launch a successfully WMAP discovery. The discovery result should be tracked under the "Discovery" menu tab.
