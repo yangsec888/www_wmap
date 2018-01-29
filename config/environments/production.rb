@@ -67,7 +67,15 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   # Production deployment to Heroku
-  config.action_mailer.default_url_options = { host: "https://demo-wmap-portal.herokuapp.com/" }
+  config.action_mailer.default_url_options = { host: "http://wmap.io/" }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'localhost',
+    port:                 25,
+    domain:               'quiz.cmbnylab.com',
+    openssl_verify_mode:  'none'
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
