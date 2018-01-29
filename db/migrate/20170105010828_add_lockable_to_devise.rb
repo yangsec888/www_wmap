@@ -1,4 +1,4 @@
-class AddLockableToDevise < ActiveRecord::Migration
+class AddLockableToDevise < ActiveRecord::Migration[5.1]
   def change
     add_column :users, :failed_attempts, :integer, default: 0
     add_column :users, :unlock_token, :string # Only if unlock strategy :email or :both

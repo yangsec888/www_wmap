@@ -49,4 +49,6 @@ test:
 #
 production:
   <<: *default
+  username: <%=ENV['DBUSER']%>
+  password: <%=ENV['DBPASS']%>
   database: www_wmap_production

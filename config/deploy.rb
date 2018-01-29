@@ -1,5 +1,5 @@
 # Change these
-server 'wmap.io', port: 80, roles: [:web, :app, :db], primary: true
+server "wmap.io", port: 80, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'https://github.com/yangsec888/www_wmap.git'
 set :application,     'www_wmap'

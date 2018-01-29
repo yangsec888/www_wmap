@@ -1,4 +1,4 @@
-class AddConfirmableToDeviseV1 < ActiveRecord::Migration
+class AddConfirmableToDeviseV1 < ActiveRecord::Migration[5.1]
 # https://github.com/plataformatec/devise/wiki/How-To%3a-Add-%3aconfirmable-to-Users
   def up
     add_column :users, :confirmation_token, :string
@@ -21,5 +21,5 @@ class AddConfirmableToDeviseV1 < ActiveRecord::Migration
     remove_columns :users, :confirmation_token, :confirmed_at, :confirmation_sent_at
     # remove_columns :users, :unconfirmed_email # Only if using reconfirmable
   end
-  
+
 end

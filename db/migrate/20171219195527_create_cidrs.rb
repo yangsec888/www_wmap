@@ -1,4 +1,4 @@
-class CreateCidrs < ActiveRecord::Migration
+class CreateCidrs < ActiveRecord::Migration[5.1]
   def change
     create_table :cidrs do |t|
       t.string :owed_cidr

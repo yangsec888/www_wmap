@@ -1,4 +1,4 @@
-class CreateSeeds < ActiveRecord::Migration
+class CreateSeeds < ActiveRecord::Migration[5.1]
   def change
     create_table :seeds do |t|
       t.integer :uid
