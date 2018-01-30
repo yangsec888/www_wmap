@@ -1,0 +1,264 @@
+=== puma startup: 2018-01-30 10:11:34 -0500 ===
+[56837] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517325094700-56837
+[56837] - Worker 0 (pid: 56852) booted, phase: 0
+[56837] - Gracefully shutting down workers...
+[56837] === puma shutdown: 2018-01-30 10:12:07 -0500 ===
+[56837] - Goodbye!
+Exiting
+=== puma startup: 2018-01-30 10:12:18 -0500 ===
+[56904] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517325138397-56904
+[56904] - Worker 0 (pid: 56923) booted, phase: 0
+Started GET "/home/page" for ::1 at 2018-01-30 10:12:19 -0500
+  [1m[35m (14.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (4.9ms)
+Completed 401 Unauthorized in 907ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ylee/www_wmap/app/assets/images
+  /Users/ylee/www_wmap/app/assets/javascripts
+  /Users/ylee/www_wmap/app/assets/stylesheets
+  /Users/ylee/www_wmap/vendor/assets/javascripts
+  /Users/ylee/www_wmap/vendor/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/bootstrap_form-2.7.0/app/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-4.0.0/app/assets/fonts
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-4.0.0/app/assets/javascripts
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-4.0.0/app/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-4.0.0/vendor/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actioncable-5.1.4/lib/assets/compiled
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionview-5.1.4/lib/assets/compiled
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /Users/ylee/www_wmap/#{Rails.root}/app/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/popper_js-1.12.9/assets/javascripts
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/bootstrap-4.0.0/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/bootstrap-4.0.0/assets/javascripts):
+     7:     <meta charset="utf-8">
+     8:     <title><%= full_title(yield(:title)) %></title>
+     9:     <%= csrf_meta_tags %>
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    12:     <%= csrf_meta_tags %>
+    13:     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__3959845236507651446_70217234198280'
+[56904] - Gracefully shutting down workers...
+[56904] === puma shutdown: 2018-01-30 10:13:08 -0500 ===
+[56904] - Goodbye!
+Exiting
+=== puma startup: 2018-01-30 10:13:20 -0500 ===
+[57015] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517325200411-57015
+[57015] - Worker 0 (pid: 57031) booted, phase: 0
+Started GET "/home/page" for ::1 at 2018-01-30 10:13:22 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (4.5ms)
+Completed 401 Unauthorized in 910ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery.turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ylee/www_wmap/app/assets/images
+  /Users/ylee/www_wmap/app/assets/javascripts
+  /Users/ylee/www_wmap/app/assets/stylesheets
+  /Users/ylee/www_wmap/vendor/assets/javascripts
+  /Users/ylee/www_wmap/vendor/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/bootstrap_form-2.7.0/app/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-4.0.0/app/assets/fonts
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-4.0.0/app/assets/javascripts
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-4.0.0/app/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-4.0.0/vendor/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actioncable-5.1.4/lib/assets/compiled
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionview-5.1.4/lib/assets/compiled
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /Users/ylee/www_wmap/#{Rails.root}/app/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/popper_js-1.12.9/assets/javascripts
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/bootstrap-4.0.0/assets/stylesheets
+  /Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/bootstrap-4.0.0/assets/javascripts):
+     7:     <meta charset="utf-8">
+     8:     <title><%= full_title(yield(:title)) %></title>
+     9:     <%= csrf_meta_tags %>
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    12:     <%= csrf_meta_tags %>
+    13:     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  
+app/assets/javascripts/application.js:14
+app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__2500009735286465646_70272224146260'
+[57015] - Gracefully shutting down workers...
+[57015] === puma shutdown: 2018-01-30 10:13:50 -0500 ===
+[57015] - Goodbye!
+Exiting
+=== puma startup: 2018-01-30 10:14:01 -0500 ===
+[57100] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517325241963-57100
+[57100] - Worker 0 (pid: 57119) booted, phase: 0
+[57100] - Gracefully shutting down workers...
+[57100] === puma shutdown: 2018-01-30 10:14:14 -0500 ===
+[57100] - Goodbye!
+Exiting
+=== puma startup: 2018-01-30 10:14:21 -0500 ===
+[57140] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517325261665-57140
+[57140] - Worker 0 (pid: 57159) booted, phase: 0
+Started GET "/home/page" for ::1 at 2018-01-30 10:14:25 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 1448ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/home/page" for ::1 at 2018-01-30 10:14:27 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for ::1 at 2018-01-30 10:14:30 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l3idl4TyAcis9f7O6r03FegN9X14gPllUa1tHV8paOmOVrxq+iBouDjWbMgwAc0WmXj/PcjFYvpwdYAY/yKB6A==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for ::1 at 2018-01-30 10:14:30 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/sessions/new.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for ::1 at 2018-01-30 10:14:32 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77QIRlDKukNpW3mBsH9O/+ONkkvCMS6r89FaBspizX/2mim7LhjTM/1464dqw7T8kviYC3J0tTTSCbcDamkkfg==", "user"=>{"email"=>"yli8@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'yli8@yahoo.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-01-30 15:14:33', `last_sign_in_at` = '2018-01-25 21:17:07', `sign_in_count` = 37, `updated_at` = '2018-01-30 15:14:33' WHERE `users`.`id` = 1[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/page
+Completed 302 Found in 208ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/home/page" for ::1 at 2018-01-30 10:14:33 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/start" for ::1 at 2018-01-30 10:14:34 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WXk0rYL5osOF2v5Zxze5vidy8ojM+/UzLa8Ti0YK4rlygo/hHSMhPYYs63KZl793UtVk2FoXPVJFt3u/95tUzQ==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 79ms (Views: 70.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/create" for ::1 at 2018-01-30 10:22:49 -0500
+Processing by SeedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l5hHzXGDZ7gt8rNpWfAJTPbMeqDUu9Kew4qbXiZCPVC8Y/yB7lnkRi4EpkIHUA+Fg2vs8EJXGv+rkvNql9OLJA==", "file_tag"=>"ny.cmbchina.com\r\nmail.ny.cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/domains/start
+Completed 302 Found in 13ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/start" for ::1 at 2018-01-30 10:22:49 -0500
+Processing by DomainsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/show.html.erb within layouts/application
+  Rendered domains/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 80ms (Views: 71.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/create" for ::1 at 2018-01-30 10:22:51 -0500
+Processing by DomainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LAzboIPdsNvJvFyvB0yJQMnkmISMGx8XKoA8dl+6Az8H92DsHAczJcpKSYRZ7I+JvEMO1Br313ZCmFRC7iu1Sw==", "file_tag"=>"cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/cidrs/start
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cidrs/start" for ::1 at 2018-01-30 10:22:51 -0500
+Processing by CidrsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/show.html.erb within layouts/application
+  Rendered cidrs/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 78ms (Views: 70.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/create" for ::1 at 2018-01-30 10:22:52 -0500
+Processing by CidrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEf83Ma+qJViTQNnNFTlp7NPG2oCNwDkcfhprnqcP+a/vEeQWWQra2G7Fkxq9ONuxuiNOpTbyIUZ4AGayw2Jkg==", "file_tag"=>"209.48.82.224/27\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/seed/distest
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/distest" for ::1 at 2018-01-30 10:22:52 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 68.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/discovery" for ::1 at 2018-01-30 10:22:54 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"w9NVZrEfMrQU/dv8Vq8/BvcDjUn4QJEKHNdO0rdAavXoKO4qLsWxShcLztcIDznPgqQbGW6sWWt0zybmBtHcgQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+starting the sidekiq on the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 85ms (Views: 68.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sidekiq" for ::1 at 2018-01-30 10:35:16 -0500
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2018-01-30 10:35:16 -0500
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2018-01-30 10:35:16 -0500
+Started GET "/sidekiq/javascripts/dashboard.js" for ::1 at 2018-01-30 10:35:16 -0500
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2018-01-30 10:35:16 -0500
+Started GET "/sidekiq/images/status.png" for ::1 at 2018-01-30 10:35:17 -0500
+Started GET "/sites/show" for ::1 at 2018-01-30 10:35:23 -0500
+Processing by SitesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/show.html.erb within layouts/application
+  Rendered sites/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 94ms (Views: 85.8ms | ActiveRecord: 0.3ms)
+
+
+[57140] ! Terminating timed out worker: 57159
+[57140] ! Out-of-sync worker list, no 57159 worker
+[57140] - Worker 0 (pid: 66671) booted, phase: 0
+[57140] ! Terminating timed out worker: 66671
+[57140] ! Out-of-sync worker list, no 66671 worker
+[57140] - Worker 0 (pid: 66712) booted, phase: 0

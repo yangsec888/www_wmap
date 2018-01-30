@@ -48,7 +48,7 @@ Rails.application.configure do
   # when problems arise
   config.log_level = :debug
 
-  # Direct logging to Heroku console
+  # Direct logging to console
   config.logger = Logger.new(STDOUT)
 
   # Prepend all log lines with the following tags.
@@ -66,14 +66,14 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  # Production deployment to Heroku
+  # Production deployment to the cloud
   config.action_mailer.default_url_options = { host: "http://wmap.io/" }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'localhost',
     port:                 25,
-    domain:               'quiz.cmbnylab.com',
+    domain:               'wmap.io',
     openssl_verify_mode:  'none'
   }
 
