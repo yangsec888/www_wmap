@@ -233,6 +233,8 @@ GEM
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
       redis (>= 3.3.4, < 5)
+    sidekiq-batch (0.1.4)
+      sidekiq (>= 3)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -316,6 +318,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   selenium-webdriver
   sidekiq
+  sidekiq-batch
   sinatra!
   spring
   spring-watcher-listen (~> 2.0.0)

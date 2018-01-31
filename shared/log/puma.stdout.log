@@ -493,3 +493,293 @@ You're hitting distest controller
 Completed 200 OK in 422ms (Views: 367.2ms | ActiveRecord: 4.5ms)
 
 
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-01-31 09:08:43 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"EO0R9sSNLo2rSWaN29orsHnwnAuoV2pLuaIfqHBNijsobhuBcDLVL6Snnk71HhMFjynn9ApK7jZk4zNgpm/hFg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+starting the sidekiq on the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 111ms (Views: 96.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:21:22 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 124ms (Views: 121.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2018-01-31 09:35:32 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 103ms (Views: 100.4ms | ActiveRecord: 0.3ms)
+
+
+[86405] - Gracefully shutting down workers...
+[86405] === puma shutdown: 2018-01-31 09:35:56 -0500 ===
+[86405] - Goodbye!
+Exiting
+=== puma startup: 2018-01-31 09:36:13 -0500 ===
+[92029] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517409373550-92029
+[92029] - Worker 0 (pid: 92048) booted, phase: 0
+Started POST "/seed/start" for 127.0.0.1 at 2018-01-31 09:36:40 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tguWAHjDD6a5LDHFYOl0oQyGRgFkkISR3bTL9cB8pUqOiJx3zHz0BLbCyQZOLUwU+l89/saNAOwA9ec9Fl7OZw==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 400ms (Views: 345.5ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/seed/create" for 127.0.0.1 at 2018-01-31 09:36:47 -0500
+Processing by SeedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jd+hvniTaUwajxPXgLZtIRzIxUMpGsVwvQEe1+ftuhkdXKvJzCyS7hVh6xSuclWU6hG+vIsHQQ1gQDIfMc/RNA==", "file_tag"=>"ny.cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/domains/start
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/start" for 127.0.0.1 at 2018-01-31 09:36:47 -0500
+Processing by DomainsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/show.html.erb within layouts/application
+  Rendered domains/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 120ms (Views: 109.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/domains/create" for 127.0.0.1 at 2018-01-31 09:36:52 -0500
+Processing by DomainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jI6j/meH9rinYnmibV/R+ZA0RRcIXgsWQb0S19xbuNC0DamJ0zgNGqiMgWFDm+lMZu0+6KpDj2uc/D4fCnnT/Q==", "file_tag"=>"cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/cidrs/start
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/cidrs/start" for 127.0.0.1 at 2018-01-31 09:36:52 -0500
+Processing by CidrsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/show.html.erb within layouts/application
+  Rendered cidrs/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 88ms (Views: 79.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/create" for 127.0.0.1 at 2018-01-31 09:36:54 -0500
+Processing by CidrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"79o5PiOziRE/WTSrAdVEdv2LNyOQDuxMw+1S24Cd1rHXWTNJlwxyszC3zGgvEXzDC1JM3DITaDEerH4TVr+9nA==", "file_tag"=>"209.48.82.224/27\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/seed/distest
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2018-01-31 09:36:54 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 84ms (Views: 75.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-01-31 09:36:57 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"t5NvbWN4asKZnjdiHwxF+oh4deQzv/Kx/LMhxYCwudaPEGUa18eRYJZwz6ExyH1PfqEOG5Gidswh8g0NVpLS+w=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+starting the sidekiq on the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 71.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-01-31 09:42:29 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"t5NvbWN4asKZnjdiHwxF+oh4deQzv/Kx/LMhxYCwudaPEGUa18eRYJZwz6ExyH1PfqEOG5Gidswh8g0NVpLS+w=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+starting the sidekiq on the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 73.3ms | ActiveRecord: 0.3ms)
+
+
+[92048] ! Detected parent died, dying
+=== puma startup: 2018-01-31 10:50:44 -0500 ===
+[98450] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517413844022-98450
+[98450] - Worker 0 (pid: 98465) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2018-01-31 10:51:46 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 420ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 10:51:47 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 97ms (Views: 94.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2018-01-31 10:51:49 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ioh6Mssj8UyWwxKUjzo5ZCKHLQZdKaG9AW7f6eSVNTNVfNEXwPy3KFL8PMwk0t2uig5OG6vWEa8aKh1Ab+3mPw==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-01-31 10:51:49 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.4ms)
+  Rendered users/sessions/new.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 143ms (Views: 140.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-01-31 10:52:02 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OKUY2RLlEDE59ZnSbqdBCp41HUuqdEoa+VuoJpoiM83nUbP8GTpWVf3Kt4rFT6XANrx+VlyL+gjiH2qPEVrgwQ==", "user"=>{"email"=>"yli8@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'yli8@yahoo.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-01-31 15:52:02', `last_sign_in_at` = '2018-01-31 12:25:39', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 39, `updated_at` = '2018-01-31 15:52:02' WHERE `users`.`id` = 1[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 218ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 10:52:02 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2018-01-31 10:52:04 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jp/sH/8/HFrjGw/IAy4BwgkNXTVG7Y5yINBJfbko2acbkKhoidbQ4ZdacMOMcO6uX9CrbXbxq/NFrLw8IsEEEg==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 79ms (Views: 70.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/create" for 127.0.0.1 at 2018-01-31 10:52:06 -0500
+Processing by SeedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P9PY017ATMYz6kZXSvdr39AgTkXMd41CwLk5vdgEataq3JykKCmAfUerOVzFqYSzhv24HfxrqMOlxcz8Q+23Yw==", "file_tag"=>"ny.cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/domains/start
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/start" for 127.0.0.1 at 2018-01-31 10:52:06 -0500
+Processing by DomainsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/show.html.erb within layouts/application
+  Rendered domains/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 67.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/create" for 127.0.0.1 at 2018-01-31 10:52:07 -0500
+Processing by DomainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u11bf2MMds4/zLSa2sNAbGBcH14UBcJty1Tk069AjbAuUh8IFeW6dUuNy5FVna8ANoHpBiQZ5+yuKBGSNKlQBQ==", "file_tag"=>"cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/cidrs/start
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cidrs/start" for 127.0.0.1 at 2018-01-31 10:52:07 -0500
+Processing by CidrsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/show.html.erb within layouts/application
+  Rendered cidrs/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 67.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/create" for 127.0.0.1 at 2018-01-31 10:52:08 -0500
+Processing by CidrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dOprsPxnF9+0j3ZuGpkua0ozXDJOveM/RondAE7eex/h5S/Hio7bZMDOCWWVx8EHHO6qan6hxr4j9ShB1Temqg==", "file_tag"=>"209.48.82.224/27\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/seed/distest
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2018-01-31 10:52:08 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 66.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-01-31 10:52:09 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"O5NA5FdoAHTi+tkWIOp/ZZ0KB+zPmGNvg7zO2ri4d8aunASTIYHMz5a7ph2vtJAJy9fxtP+ERu7mwDubI1Gqcw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+starting the sidekiq on the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 85ms (Views: 73.5ms | ActiveRecord: 0.3ms)
+
+
+[98450] - Worker 0 (pid: 99731) booted, phase: 0
+[99731] ! Detected parent died, dying
+=== puma startup: 2018-01-31 11:06:11 -0500 ===
+[99769] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517414771883-99769
+[99769] - Worker 0 (pid: 99788) booted, phase: 0
+Started GET "/seed/distest" for 127.0.0.1 at 2018-01-31 11:06:59 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 426ms (Views: 376.5ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-01-31 11:07:12 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"bJe4FnFrZPoPZYOpODIB0olNVnhswep/N76P3DXG0c75mPxhB4KoQXsk/KK3bO6+35CgIFzdz/5Swnqdri8Mew=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+starting the sidekiq on the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 135ms (Views: 119.0ms | ActiveRecord: 0.3ms)
+
+
+[99769] - Gracefully shutting down workers...
+[99769] === puma shutdown: 2018-01-31 11:21:53 -0500 ===
+[99769] - Goodbye!
+Exiting

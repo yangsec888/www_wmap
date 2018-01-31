@@ -74,6 +74,7 @@ gem 'open_uri_redirections'
 gem 'dnsruby'
 gem 'geoip'
 gem 'sidekiq' #move discovery job to background
+#gem 'sidekiq-batch'
 gem 'sinatra', github: 'sinatra/sinatra' #require for sidekiq web
 ###############################################################################
 
