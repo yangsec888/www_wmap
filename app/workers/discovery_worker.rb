@@ -11,13 +11,14 @@ class DiscoveryWorker
     #my_url= Rails.application.routes.url_helpers.users_path
     if system(cmd)
       logger.info "Discovery successful!"
+      end_time=Time.now.to_s
+      receiver=User.find(uid).email
+      logger.info "Sending out email notice to: #{receiver}"
+      UserMailer.discovery_completion_notice(receiver, start_time, end_time).deliver_later
     else
       logger.info "Discovery failed!"
       logger.debug "Here's some information related to failed discovery: #{}"
     end
-    end_time=Time.now.to_s
-    receiver=User.find(uid).email
-    UserMailer.discovery_completion_notice(receiver, start_time, end_time).deliver_later
   end
 
 end
