@@ -1,0 +1,6 @@
+# Logfile created on 2018-02-05 18:13:22 -0500 by logger.rb/56504
+2018-02-05T23:13:25.914Z 19429 TID-ovnzw1lzs INFO: Running in ruby 2.2.6p396 (2016-11-15 revision 56800) [x86_64-darwin16]
+2018-02-05T23:13:25.914Z 19429 TID-ovnzw1lzs INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2018-02-05T23:13:25.914Z 19429 TID-ovnzw1lzs INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2018-02-05T23:13:25.914Z 19429 TID-ovnzw1lzs INFO: Booting Sidekiq 5.0.5 with redis options {:id=>"Sidekiq-server-PID-19429", :url=>nil}
+2018-02-05T23:13:25.919Z 19429 TID-ovnzw1lzs INFO: Starting processing, hit Ctrl-C to stop
