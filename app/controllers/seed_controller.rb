@@ -35,6 +35,8 @@ class SeedController < ApplicationController
   end
 
   def discovery
+    #puts "Sending test email: "
+    #UserMailer.discovery_completion_notice("yli8@yahoo.com", "yesterday", "today").deliver_later
     puts "starting the sidekiq on the discovery job"
     DiscoveryWorker.perform_async(current_user.id)
   end

@@ -9,7 +9,7 @@ class DiscoveryWorker
     receiver=User.find(params['sid']).email
     UserMailer.discovery_completion_notice(receiver, end_time).deliver_later
   end
-=end 
+=end
   def perform(uid)
     start_time=Time.now.to_s
     dir = Rails.root.join('uploads', uid.to_s)
@@ -25,7 +25,7 @@ class DiscoveryWorker
       UserMailer.discovery_completion_notice(receiver, start_time, end_time).deliver_later
     else
       logger.info "Discovery failed!"
-      logger.debug "Here's some information related to failed discovery: #{__class__}, #{__method__}"
+      logger.debug "Here's some information related to failed discovery: #{self.class.name}, #{__method__}"
     end
   end
 

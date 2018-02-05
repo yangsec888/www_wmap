@@ -67,7 +67,7 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   # Production deployment to the cloud
-  config.action_mailer.default_url_options = { host: "http://wmap.io/" }
+  config.action_mailer.default_url_options = { host: "wmap.io" }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {

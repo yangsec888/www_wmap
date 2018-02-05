@@ -783,3 +783,1393 @@ Completed 200 OK in 135ms (Views: 119.0ms | ActiveRecord: 0.3ms)
 [99769] === puma shutdown: 2018-01-31 11:21:53 -0500 ===
 [99769] - Goodbye!
 Exiting
+=== puma startup: 2018-02-02 08:37:53 -0500 ===
+[49398] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517578673467-49398
+[49398] - Worker 0 (pid: 49418) booted, phase: 0
+[49398] - Gracefully shutting down workers...
+[49398] === puma shutdown: 2018-02-02 08:39:03 -0500 ===
+[49398] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 08:39:12 -0500 ===
+[49526] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517578752852-49526
+[49526] - Worker 0 (pid: 49547) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2018-02-02 08:39:13 -0500
+  [1m[35m (14.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 498ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-02 08:39:14 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 95ms (Views: 92.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2018-02-02 08:39:16 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AJq4uLG7d07KKfOoigWWWzTqSe3TonUTxhWdyTTsxG1JQEN7uR++f7aRkYxYF8lnl9EPq1a2lhN85x+WfsNNKg==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-02-02 08:39:16 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (28.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 137ms (Views: 133.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-02-02 08:39:41 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"94dpWxusl4XDjRPyw9qzbrid3i3DHtpcdhiu8sUCRem+XZKYEwhetL81cdYRyOxSG6aYa0YKOVzM6iytjy3Mrg==", "user"=>{"email"=>"yli8@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'yli8@yahoo.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-02-02 13:39:41', `last_sign_in_at` = '2018-01-31 15:52:02', `sign_in_count` = 40, `updated_at` = '2018-02-02 13:39:41' WHERE `users`.`id` = 1[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 219ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-02 08:39:41 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 94ms (Views: 92.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2018-02-02 08:39:43 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O39KaSWkbgZdhrp/VIKrfJpHUSaLc+LTKdZtiCaRw7S0fVy6CRIgS6N38BvmwEZHr/SOdphw7WORXYxQiL/vRg==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 83ms (Views: 71.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/seed/create" for 127.0.0.1 at 2018-02-02 08:39:44 -0500
+Processing by SeedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hhTI93leCq4zhtToYEdxTLIj4KCR3t+Vkq/hid419cUJFt4kVehE4813nozSBZx3h5A/8ILd0CUqJABRcBvZNw==", "file_tag"=>"ny.cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/domains/start
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/start" for 127.0.0.1 at 2018-02-02 08:39:44 -0500
+Processing by DomainsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/show.html.erb within layouts/application
+  Rendered domains/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 68.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/create" for 127.0.0.1 at 2018-02-02 08:39:45 -0500
+Processing by DomainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45P1pjx8k9GWBordSyfnnaZFB906BN2/P9SL8HmeT35skeN1EMrdnGj3wLn5ZQqmk/bYjSkH0g+HX2oo17BjjA==", "file_tag"=>"cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/cidrs/start
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cidrs/start" for 127.0.0.1 at 2018-02-02 08:39:45 -0500
+Processing by CidrsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/show.html.erb within layouts/application
+  Rendered cidrs/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 67.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/create" for 127.0.0.1 at 2018-02-02 08:39:46 -0500
+Processing by CidrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0tA+gtc6fbGQtQZfmAeEs3lm5OwN1FP4UzcjhfVJ/i1d0ihR+4wz/G5ETDsqRWmITNU7vB7XXEjrvMJdW2fS3w==", "file_tag"=>"209.48.82.224/27\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/seed/distest
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2018-02-02 08:39:46 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 67.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 08:39:48 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"1gjQuyUs7VF/zWS/1+2xqZ+Hj92kxZ6bGLPa42cgjIhZCsZoCZqjHIE8Lttlr1ySqjRQjbfGkSugODs7yQ6geg=="}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+starting the sidekiq on the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 60.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/sites/show" for 127.0.0.1 at 2018-02-02 09:09:25 -0500
+Processing by SitesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/show.html.erb within layouts/application
+  Rendered sites/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 82ms (Views: 73.0ms | ActiveRecord: 0.6ms)
+
+
+[49526] - Gracefully shutting down workers...
+[49526] === puma shutdown: 2018-02-02 09:26:48 -0500 ===
+[49526] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 09:26:54 -0500 ===
+[53554] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517581614240-53554
+[53554] - Worker 0 (pid: 53573) booted, phase: 0
+Started GET "/seed/distest" for 127.0.0.1 at 2018-02-02 09:26:57 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 423ms (Views: 371.6ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 09:26:59 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"oRlWABB79oy/9kaDKWR7uPk1RtFzDr4DA3WXin7a8+QuG0DTPM24wUEHDOebJpaDzIaZgWANsbO7/nZS0PTfFg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+starting the sidekiq on the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 124ms (Views: 109.6ms | ActiveRecord: 0.4ms)
+
+
+[53554] - Gracefully shutting down workers...
+[53554] === puma shutdown: 2018-02-02 10:01:05 -0500 ===
+[53554] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 10:01:11 -0500 ===
+[56300] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517583671343-56300
+[56300] - Worker 0 (pid: 56320) booted, phase: 0
+Started GET "/home/page" for 127.0.0.1 at 2018-02-02 10:01:15 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 429ms (Views: 408.6ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2018-02-02 10:01:17 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cY2S9cyaHn2AijmiPRUcyWM9PNGbaS3Ad9L02+Z66Yn+j4Qm4CxQMH57c8aPV/HyVo7jgYhqInDPWRUDSFTFew==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 100ms (Views: 90.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/create" for 127.0.0.1 at 2018-02-02 10:01:28 -0500
+Processing by SeedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wx7NhopnCoXOQNTBUTfSEK3jpzHVBz5Tvw6PqUTCTgFMHNtVptFEyDCxnqXjdT8rmFB4YcYEMeMHhW5x6uxi8w==", "file_tag"=>"ny.cmbchina.com\r\nmail.cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/domains/start
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/start" for 127.0.0.1 at 2018-02-02 10:01:28 -0500
+Processing by DomainsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/show.html.erb within layouts/application
+  Rendered domains/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 81ms (Views: 73.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/domains/create" for 127.0.0.1 at 2018-02-02 10:01:30 -0500
+Processing by DomainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9MT8l79TcO2tcHgb1d0fmzjJjqToVPYmxwzktWBSKd57xupEk+U+oFOBMn9nn/KgDXpR9PtX+ZZ/hwVtznwFLA==", "file_tag"=>"cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/cidrs/start
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cidrs/start" for 127.0.0.1 at 2018-02-02 10:01:30 -0500
+Processing by CidrsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/show.html.erb within layouts/application
+  Rendered cidrs/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 79ms (Views: 71.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/create" for 127.0.0.1 at 2018-02-02 10:01:31 -0500
+Processing by CidrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5BDKN565csvqs0RiFp8bX1IsxqgFR8pKcUAhgjyNlYprEtzksg88hhRCDgak3fZkZ58Z+BZExfrJy8BakqO5eA==", "file_tag"=>"209.48.82.224/27\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/seed/distest
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2018-02-02 10:01:31 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 68.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 10:01:32 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"OA2AWtgsQ897JDM4iWT1f//BNI41C6dAa6zx1S7s9/e3D5aJ9JoNgoXVeVw7JhhEynLr3iYIqPDTJxANgMLbBQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Sending test email: 
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: d4528f74-8473-4b36-9ebc-f4261a914894) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+starting the sidekiq on the discovery job
+[ActiveJob] [ActionMailer::DeliveryJob] [d4528f74-8473-4b36-9ebc-f4261a914894] Performing ActionMailer::DeliveryJob (Job ID: d4528f74-8473-4b36-9ebc-f4261a914894) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [d4528f74-8473-4b36-9ebc-f4261a914894] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [d4528f74-8473-4b36-9ebc-f4261a914894]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [d4528f74-8473-4b36-9ebc-f4261a914894]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (0.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [d4528f74-8473-4b36-9ebc-f4261a914894] UserMailer#discovery_completion_notice: processed outbound mail in 285.2ms
+[ActiveJob] [ActionMailer::DeliveryJob] [d4528f74-8473-4b36-9ebc-f4261a914894] Sent mail to yli8@yahoo.com (1070.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [d4528f74-8473-4b36-9ebc-f4261a914894] Date: Fri, 02 Feb 2018 10:01:33 -0500
+From: yang.li@owasp.org
+To: yli8@yahoo.com
+Message-ID: <5a747d4da3e39_dc003ffb6ea0577c93990@Yangs-MacBook-Pro.local.mail>
+Subject: Your Discovery Is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Completion time: today</li>
+    <li>My Discovery Result: http://wmap.io/sites/show </li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [d4528f74-8473-4b36-9ebc-f4261a914894] Error performing ActionMailer::DeliveryJob (Job ID: d4528f74-8473-4b36-9ebc-f4261a914894) from Async(mailers) in 1362.85ms: EOFError (end of file reached):
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:153:in `read_nonblock'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:153:in `rbuf_fill'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:134:in `readuntil'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:144:in `readline'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:945:in `recv_response'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:555:in `block in do_start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:955:in `critical'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:555:in `do_start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:520:in `start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:2160:in `do_delivery'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `block in deliver'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:558:in `block in deliver_mail'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:556:in `deliver_mail'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `deliver'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:96:in `block in deliver_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/delivery_job.rb:14:in `perform'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:37:in `block in perform_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/i18n-0.9.3/lib/i18n.rb:268:in `with_locale'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:24:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `block in tag_logger'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `tag_logger'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:33:in `perform_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:22:in `block in execute'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:26:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:68:in `block in wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:67:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:20:in `execute'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1880ms (Views: 60.5ms | ActiveRecord: 0.3ms)
+
+
+[56300] - Gracefully shutting down workers...
+[56300] === puma shutdown: 2018-02-02 10:40:45 -0500 ===
+[56300] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 10:41:01 -0500 ===
+[59549] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517586061421-59549
+[59549] - Worker 0 (pid: 59568) booted, phase: 0
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 10:41:07 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"OA2AWtgsQ897JDM4iWT1f//BNI41C6dAa6zx1S7s9/e3D5aJ9JoNgoXVeVw7JhhEynLr3iYIqPDTJxANgMLbBQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Sending test email: 
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 60fc9bc4-d885-4a87-90a1-9d87b8b56081) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+starting the sidekiq on the discovery job
+[ActiveJob] [ActionMailer::DeliveryJob] [60fc9bc4-d885-4a87-90a1-9d87b8b56081] Performing ActionMailer::DeliveryJob (Job ID: 60fc9bc4-d885-4a87-90a1-9d87b8b56081) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [60fc9bc4-d885-4a87-90a1-9d87b8b56081] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [60fc9bc4-d885-4a87-90a1-9d87b8b56081]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [60fc9bc4-d885-4a87-90a1-9d87b8b56081]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (1.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [60fc9bc4-d885-4a87-90a1-9d87b8b56081] UserMailer#discovery_completion_notice: processed outbound mail in 285.3ms
+[ActiveJob] [ActionMailer::DeliveryJob] [60fc9bc4-d885-4a87-90a1-9d87b8b56081] Sent mail to yli8@yahoo.com (125.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [60fc9bc4-d885-4a87-90a1-9d87b8b56081] Date: Fri, 02 Feb 2018 10:41:07 -0500
+From: yang.li@owasp.org
+To: yli8@yahoo.com
+Message-ID: <5a748693a49f0_e8b03fea258a30dc9543f@Yangs-MacBook-Pro.local.mail>
+Subject: Your Discovery Is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Completion time: today</li>
+    <li>My Discovery Result: http://wmap.io/sites/show </li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [60fc9bc4-d885-4a87-90a1-9d87b8b56081] Performed ActionMailer::DeliveryJob (Job ID: 60fc9bc4-d885-4a87-90a1-9d87b8b56081) from Async(mailers) in 418.97ms
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1082ms (Views: 364.8ms | ActiveRecord: 5.3ms)
+
+
+[59549] ! Terminating timed out worker: 59568
+[59549] ! Out-of-sync worker list, no 59568 worker
+[59549] - Worker 0 (pid: 61530) booted, phase: 0
+[59549] - Gracefully shutting down workers...
+[59549] === puma shutdown: 2018-02-02 11:16:32 -0500 ===
+[59549] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 11:16:39 -0500 ===
+[62079] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517588199406-62079
+[62079] - Worker 0 (pid: 62098) booted, phase: 0
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 11:18:00 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"OA2AWtgsQ897JDM4iWT1f//BNI41C6dAa6zx1S7s9/e3D5aJ9JoNgoXVeVw7JhhEynLr3iYIqPDTJxANgMLbBQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Sending test email: 
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: cb8f96af-3a74-44f5-be69-93ee0c9ef1fc) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+starting the sidekiq on the discovery job
+[ActiveJob] [ActionMailer::DeliveryJob] [cb8f96af-3a74-44f5-be69-93ee0c9ef1fc] Performing ActionMailer::DeliveryJob (Job ID: cb8f96af-3a74-44f5-be69-93ee0c9ef1fc) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [cb8f96af-3a74-44f5-be69-93ee0c9ef1fc] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [cb8f96af-3a74-44f5-be69-93ee0c9ef1fc]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [cb8f96af-3a74-44f5-be69-93ee0c9ef1fc]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (1.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [cb8f96af-3a74-44f5-be69-93ee0c9ef1fc] UserMailer#discovery_completion_notice: processed outbound mail in 277.6ms
+[ActiveJob] [ActionMailer::DeliveryJob] [cb8f96af-3a74-44f5-be69-93ee0c9ef1fc] Sent mail to yli8@yahoo.com (121.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [cb8f96af-3a74-44f5-be69-93ee0c9ef1fc] Date: Fri, 02 Feb 2018 11:18:01 -0500
+From: yang.li@owasp.org
+To: yli8@yahoo.com
+Message-ID: <5a748f39208dc_f2923fdb8e45e6c0716f5@Yangs-MacBook-Pro.local.mail>
+Subject: Your Discovery Is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Completion time: today</li>
+    <li>My Discovery Result: http://wmap.io/sites/show </li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [cb8f96af-3a74-44f5-be69-93ee0c9ef1fc] Performed ActionMailer::DeliveryJob (Job ID: cb8f96af-3a74-44f5-be69-93ee0c9ef1fc) from Async(mailers) in 406.07ms
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 1028ms (Views: 349.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2018-02-02 12:20:54 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 129ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2018-02-02 12:20:54 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 110ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+[62079] ! Terminating timed out worker: 62098
+[62079] - Worker 0 (pid: 68345) booted, phase: 0
+[62079] - Gracefully shutting down workers...
+[62079] === puma shutdown: 2018-02-02 13:12:58 -0500 ===
+[62079] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 13:13:05 -0500 ===
+[70872] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517595185930-70872
+[70872] - Worker 0 (pid: 70891) booted, phase: 0
+Started POST "/seed/start" for 127.0.0.1 at 2018-02-02 13:13:31 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gmOYtOiDwNWPC45i4/mjzaYB+5941xalk9qh8kTig4prv9kf8envpttgMtTW0E3hszqntUQ2GRh3SHSGFYlvOw==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-02-02 13:13:31 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 447ms (Views: 417.4ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-02-02 13:13:38 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eicr1K6YPag6g3csNcKUrZku4NlCIi6O68+IYgq2dzeT+2p/t/IS227oy5oA63qBjBW8837DITMPXV0WW92bhg==", "user"=>{"email"=>"yli8@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'yli8@yahoo.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-02-02 18:13:38', `last_sign_in_at` = '2018-02-02 13:39:41', `sign_in_count` = 41, `updated_at` = '2018-02-02 18:13:38' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/home/page
+Completed 302 Found in 221ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2018-02-02 13:13:38 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 102ms (Views: 99.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2018-02-02 13:13:40 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujp+oK6uN1c26R1q1MjN6B6ws22grpiSIC1HrD42Ft50vb8AXTvr0TloZJgyGmI5ETmi/85bbkwUMQWIlYZ9TQ==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 74.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/seed/create" for 127.0.0.1 at 2018-02-02 13:13:47 -0500
+Processing by SeedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QrRid892ZR0r2BFf6ZKdFFxkJS03K8lBwvywLTki8d+MM6PXPOO5myRZaK0PQDLFU+00v1neP5/24PIJkpKaTA==", "file_tag"=>"ny.cmbchina.com", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/domains/start
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/start" for 127.0.0.1 at 2018-02-02 13:13:47 -0500
+Processing by DomainsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/show.html.erb within layouts/application
+  Rendered domains/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 73.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/create" for 127.0.0.1 at 2018-02-02 13:13:49 -0500
+Processing by DomainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"siRjqFBq9RYPexxzvdHJLqbf4yuXXdKzyvZh0W0+lp18o6IIo/8pkAD6ZYFbA2b/qVbyufmoJG3+6iP1xo79Dg==", "file_tag"=>"cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/cidrs/start
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cidrs/start" for 127.0.0.1 at 2018-02-02 13:13:49 -0500
+Processing by CidrsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/show.html.erb within layouts/application
+  Rendered cidrs/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 69.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/create" for 127.0.0.1 at 2018-02-02 13:13:50 -0500
+Processing by CidrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bZZXATMP92r8vAlvhkC/XnyQBv513HHdkEKTj7FGjAWjEZahwJor7PM9cJ1gkhCPcxkXbBsphwOkXtGrGvbnlg==", "file_tag"=>"209.48.82.224/27\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/seed/distest
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2018-02-02 13:13:50 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 69.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 13:13:52 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"VJ99XYEZ2LtnuegAeefj4y3bJTrDWob2iiTJs0Tg9rCaGLz9cowEPWg4kfKfNUwyIlI0qK2vcCi+OIuX71CdIw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Sending test email: 
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: fe2c74ed-59e6-4273-b31f-75ba7714c7f0) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+starting the sidekiq on the discovery job
+[ActiveJob] [ActionMailer::DeliveryJob] [fe2c74ed-59e6-4273-b31f-75ba7714c7f0] Performing ActionMailer::DeliveryJob (Job ID: fe2c74ed-59e6-4273-b31f-75ba7714c7f0) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [fe2c74ed-59e6-4273-b31f-75ba7714c7f0] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [fe2c74ed-59e6-4273-b31f-75ba7714c7f0]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [fe2c74ed-59e6-4273-b31f-75ba7714c7f0]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (0.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [fe2c74ed-59e6-4273-b31f-75ba7714c7f0] UserMailer#discovery_completion_notice: processed outbound mail in 299.3ms
+[ActiveJob] [ActionMailer::DeliveryJob] [fe2c74ed-59e6-4273-b31f-75ba7714c7f0] Sent mail to yli8@yahoo.com (1082.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [fe2c74ed-59e6-4273-b31f-75ba7714c7f0] Date: Fri, 02 Feb 2018 13:13:52 -0500
+From: yang.li@owasp.org
+To: yli8@yahoo.com
+Message-ID: <5a74aa60ca2a2_114eb3feede9f12c897925@Yangs-MacBook-Pro.local.mail>
+Subject: Your Discovery Is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Completion time: today</li>
+    <li>My Discovery Result: http://wmap.io/sites/show </li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [fe2c74ed-59e6-4273-b31f-75ba7714c7f0] Error performing ActionMailer::DeliveryJob (Job ID: fe2c74ed-59e6-4273-b31f-75ba7714c7f0) from Async(mailers) in 1382.95ms: EOFError (end of file reached):
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:153:in `read_nonblock'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:153:in `rbuf_fill'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:134:in `readuntil'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:144:in `readline'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:945:in `recv_response'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:555:in `block in do_start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:955:in `critical'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:555:in `do_start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:520:in `start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:2160:in `do_delivery'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `block in deliver'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:558:in `block in deliver_mail'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:556:in `deliver_mail'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `deliver'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:96:in `block in deliver_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/delivery_job.rb:14:in `perform'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:37:in `block in perform_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/i18n-0.9.3/lib/i18n.rb:268:in `with_locale'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:24:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `block in tag_logger'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `tag_logger'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:33:in `perform_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:22:in `block in execute'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:26:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:68:in `block in wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:67:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:20:in `execute'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 1711ms (Views: 76.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sites/show" for 127.0.0.1 at 2018-02-02 14:07:35 -0500
+Processing by SitesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/show.html.erb within layouts/application
+  Rendered sites/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 87ms (Views: 77.9ms | ActiveRecord: 0.3ms)
+
+
+[70872] - Gracefully shutting down workers...
+[70872] === puma shutdown: 2018-02-02 14:08:42 -0500 ===
+[70872] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 14:08:49 -0500 ===
+[75372] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517598529912-75372
+[75372] - Worker 0 (pid: 75387) booted, phase: 0
+Started POST "/seed/start" for 127.0.0.1 at 2018-02-02 14:09:00 -0500
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujp+oK6uN1c26R1q1MjN6B6ws22grpiSIC1HrD42Ft50vb8AXTvr0TloZJgyGmI5ETmi/85bbkwUMQWIlYZ9TQ==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 387ms (Views: 335.1ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/seed/create" for 127.0.0.1 at 2018-02-02 14:09:09 -0500
+Processing by SeedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CQu4vtJhKI2LCAE+0F/Op78z/pdPEIEDN+1yxVAKBITHjHkeIfT0C4SJeMw2jWF2sLrvBSHld90D8TDh+7pvFw==", "file_tag"=>"mail.ny.cmbchina.com", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/domains/start
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/start" for 127.0.0.1 at 2018-02-02 14:09:09 -0500
+Processing by DomainsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/show.html.erb within layouts/application
+  Rendered domains/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 117ms (Views: 108.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/create" for 127.0.0.1 at 2018-02-02 14:09:11 -0500
+Processing by DomainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y1M0h1TSJLpQ/JmJBhZt+08IyUm2Kwdsz866bCV/3N2t1PUnp0f4PF994HvgxMIqQIHY29je8bL70vhIjs+3Tg==", "file_tag"=>"cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/cidrs/start
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cidrs/start" for 127.0.0.1 at 2018-02-02 14:09:11 -0500
+Processing by CidrsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/show.html.erb within layouts/application
+  Rendered cidrs/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 79ms (Views: 71.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/create" for 127.0.0.1 at 2018-02-02 14:09:12 -0500
+Processing by CidrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0HkvhxGuuFvx4qV0QTDYdxSvgEtuqRPy9k109Zd1dxQe/u4n4jtk3f5j3Ian4nemGyaR2QBc5SzCUTbRPMUchw==", "file_tag"=>"209.48.82.224/27\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/seed/distest
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2018-02-02 14:09:12 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 80ms (Views: 72.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 14:09:14 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"cCu4k2vgh34c4CC5RW5+L9Wa23PQXaGFYpirJBgYF1G+rHkzmHVb+BNhWUujvNH+2hPK4b6oV1tWhOkAs6h8wg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Sending test email: 
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+starting the sidekiq on the discovery job
+[ActiveJob] [ActionMailer::DeliveryJob] [dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea] Performing ActionMailer::DeliveryJob (Job ID: dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea] UserMailer#discovery_completion_notice: processed outbound mail in 278.8ms
+[ActiveJob] [ActionMailer::DeliveryJob] [dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea] Sent mail to yli8@yahoo.com (1086.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea] Date: Fri, 02 Feb 2018 14:09:15 -0500
+From: yang.li@owasp.org
+To: yli8@yahoo.com
+Message-ID: <5a74b75b4817c_1267b3feeb63dace0737b8@Yangs-MacBook-Pro.local.mail>
+Subject: Your Discovery Is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Completion time: today</li>
+    <li>My Discovery Result: http://wmap.io/sites/show </li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea] Error performing ActionMailer::DeliveryJob (Job ID: dbff7bd8-9fa7-4821-9e66-13d4dc2ddaea) from Async(mailers) in 1372.44ms: EOFError (end of file reached):
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:153:in `read_nonblock'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:153:in `rbuf_fill'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:134:in `readuntil'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:144:in `readline'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:945:in `recv_response'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:555:in `block in do_start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:955:in `critical'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:555:in `do_start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:520:in `start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:2160:in `do_delivery'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `block in deliver'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:558:in `block in deliver_mail'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:556:in `deliver_mail'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `deliver'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:96:in `block in deliver_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/delivery_job.rb:14:in `perform'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:37:in `block in perform_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/i18n-0.9.3/lib/i18n.rb:268:in `with_locale'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:24:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `block in tag_logger'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `tag_logger'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:33:in `perform_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:22:in `block in execute'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:26:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:68:in `block in wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:67:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:20:in `execute'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1670ms (Views: 67.4ms | ActiveRecord: 0.4ms)
+
+
+[75372] - Gracefully shutting down workers...
+[75372] === puma shutdown: 2018-02-02 14:21:27 -0500 ===
+[75372] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 14:21:33 -0500 ===
+[76481] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517599293543-76481
+[76481] - Worker 0 (pid: 76500) booted, phase: 0
+Started POST "/cidrs/create" for 127.0.0.1 at 2018-02-02 14:21:44 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CidrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0HkvhxGuuFvx4qV0QTDYdxSvgEtuqRPy9k109Zd1dxQe/u4n4jtk3f5j3Ian4nemGyaR2QBc5SzCUTbRPMUchw==", "file_tag"=>"209.48.82.224/27\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/seed/distest
+Completed 302 Found in 51ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2018-02-02 14:21:44 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 377ms (Views: 367.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 14:21:46 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"ny51wVZuhlrJq9R985vqRTjO0+kWopVK1FbVQO0PVg5RqbRhpfta3MYqrY8VSUWUN0fCe3hXY5TgSpdkRr89nQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Sending test email: 
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 4e281158-c27c-4ccc-bd3a-d31fc6e34878) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+starting the sidekiq on the discovery job
+[ActiveJob] [ActionMailer::DeliveryJob] [4e281158-c27c-4ccc-bd3a-d31fc6e34878] Performing ActionMailer::DeliveryJob (Job ID: 4e281158-c27c-4ccc-bd3a-d31fc6e34878) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [4e281158-c27c-4ccc-bd3a-d31fc6e34878] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [4e281158-c27c-4ccc-bd3a-d31fc6e34878]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [4e281158-c27c-4ccc-bd3a-d31fc6e34878]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [4e281158-c27c-4ccc-bd3a-d31fc6e34878] UserMailer#discovery_completion_notice: processed outbound mail in 268.2ms
+[ActiveJob] [ActionMailer::DeliveryJob] [4e281158-c27c-4ccc-bd3a-d31fc6e34878] Sent mail to yli8@yahoo.com (1076.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [4e281158-c27c-4ccc-bd3a-d31fc6e34878] Date: Fri, 02 Feb 2018 14:21:47 -0500
+From: yang.li@owasp.org
+To: yli8@yahoo.com
+Message-ID: <5a74ba4b52e9a_12ad43ff20fa010b82938f@Yangs-MacBook-Pro.local.mail>
+Subject: Your Discovery Is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Completion time: today</li>
+    <li>My Discovery Result: http://wmap.io/sites/show </li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [4e281158-c27c-4ccc-bd3a-d31fc6e34878] Error performing ActionMailer::DeliveryJob (Job ID: 4e281158-c27c-4ccc-bd3a-d31fc6e34878) from Async(mailers) in 1352.13ms: EOFError (end of file reached):
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:153:in `read_nonblock'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:153:in `rbuf_fill'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:134:in `readuntil'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/protocol.rb:144:in `readline'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:945:in `recv_response'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:555:in `block in do_start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:955:in `critical'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:555:in `do_start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/2.2.0/net/smtp.rb:520:in `start'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:2160:in `do_delivery'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `block in deliver'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:558:in `block in deliver_mail'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:556:in `deliver_mail'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/mail-2.7.0/lib/mail/message.rb:260:in `deliver'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:96:in `block in deliver_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/actionmailer-5.1.4/lib/action_mailer/delivery_job.rb:14:in `perform'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:37:in `block in perform_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/i18n-0.9.3/lib/i18n.rb:268:in `with_locale'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:24:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `block in tag_logger'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `tag_logger'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:33:in `perform_now'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:22:in `block in execute'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:26:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:68:in `block in wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:67:in `wrap'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/execution.rb:20:in `execute'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/activejob-5.1.4/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `call'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/ylee/.rbenv/versions/2.2.6/lib/ruby/gems/2.2.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 1706ms (Views: 73.4ms | ActiveRecord: 0.3ms)
+
+
+[76481] - Gracefully shutting down workers...
+[76481] === puma shutdown: 2018-02-02 14:26:25 -0500 ===
+[76481] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 14:26:31 -0500 ===
+[76935] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517599591300-76935
+[76935] - Worker 0 (pid: 76954) booted, phase: 0
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 14:26:56 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"ny51wVZuhlrJq9R985vqRTjO0+kWopVK1FbVQO0PVg5RqbRhpfta3MYqrY8VSUWUN0fCe3hXY5TgSpdkRr89nQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Sending test email: 
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: b3dbd9be-e3de-4292-a2e4-f0ebe90611af) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+starting the sidekiq on the discovery job
+[ActiveJob] [ActionMailer::DeliveryJob] [b3dbd9be-e3de-4292-a2e4-f0ebe90611af] Performing ActionMailer::DeliveryJob (Job ID: b3dbd9be-e3de-4292-a2e4-f0ebe90611af) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [b3dbd9be-e3de-4292-a2e4-f0ebe90611af] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [b3dbd9be-e3de-4292-a2e4-f0ebe90611af]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [b3dbd9be-e3de-4292-a2e4-f0ebe90611af]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (1.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [b3dbd9be-e3de-4292-a2e4-f0ebe90611af] UserMailer#discovery_completion_notice: processed outbound mail in 291.9ms
+[ActiveJob] [ActionMailer::DeliveryJob] [b3dbd9be-e3de-4292-a2e4-f0ebe90611af] Sent mail to yli8@yahoo.com (130.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [b3dbd9be-e3de-4292-a2e4-f0ebe90611af] Date: Fri, 02 Feb 2018 14:26:57 -0500
+From: yang.li@owasp.org
+To: yli8@yahoo.com
+Message-ID: <5a74bb8142610_12c9a3ff9b48654a0685b9@Yangs-MacBook-Pro.local.mail>
+Subject: Your Discovery Is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Completion time: today</li>
+    <li>My Discovery Result: http://wmap.io/sites/show </li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [b3dbd9be-e3de-4292-a2e4-f0ebe90611af] Performed ActionMailer::DeliveryJob (Job ID: b3dbd9be-e3de-4292-a2e4-f0ebe90611af) from Async(mailers) in 431.85ms
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1096ms (Views: 366.7ms | ActiveRecord: 5.5ms)
+
+
+[76935] - Gracefully shutting down workers...
+[76935] === puma shutdown: 2018-02-02 14:46:40 -0500 ===
+[76935] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 14:46:46 -0500 ===
+[78619] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517600806501-78619
+[78619] - Worker 0 (pid: 78638) booted, phase: 0
+[78619] - Gracefully shutting down workers...
+[78619] === puma shutdown: 2018-02-02 14:59:31 -0500 ===
+[78619] - Goodbye!
+Exiting
+=== puma startup: 2018-02-02 14:59:37 -0500 ===
+[79668] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517601577285-79668
+[79668] - Worker 0 (pid: 79687) booted, phase: 0
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 14:59:45 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"ny51wVZuhlrJq9R985vqRTjO0+kWopVK1FbVQO0PVg5RqbRhpfta3MYqrY8VSUWUN0fCe3hXY5TgSpdkRr89nQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Sending test email: 
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 8882db97-cd00-47db-971b-5e7438afcb18) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+starting the sidekiq on the discovery job
+[ActiveJob] [ActionMailer::DeliveryJob] [8882db97-cd00-47db-971b-5e7438afcb18] Performing ActionMailer::DeliveryJob (Job ID: 8882db97-cd00-47db-971b-5e7438afcb18) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [8882db97-cd00-47db-971b-5e7438afcb18] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [8882db97-cd00-47db-971b-5e7438afcb18]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [8882db97-cd00-47db-971b-5e7438afcb18]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (1.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [8882db97-cd00-47db-971b-5e7438afcb18] UserMailer#discovery_completion_notice: processed outbound mail in 275.9ms
+[ActiveJob] [ActionMailer::DeliveryJob] [8882db97-cd00-47db-971b-5e7438afcb18] Sent mail to yli8@yahoo.com (7937.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [8882db97-cd00-47db-971b-5e7438afcb18] Date: Fri, 02 Feb 2018 14:59:46 -0500
+From: yang.li@owasp.org
+To: yli8@yahoo.com
+Message-ID: <5a74c3326bb4c_137473ff88f1ee6d85764f@Yangs-MacBook-Pro.local.mail>
+Subject: Your Discovery Is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Completion time: today</li>
+    <li>My Discovery Result: http://wmap.io/sites/show </li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [8882db97-cd00-47db-971b-5e7438afcb18] Performed ActionMailer::DeliveryJob (Job ID: 8882db97-cd00-47db-971b-5e7438afcb18) from Async(mailers) in 8220.57ms
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 8863ms (Views: 348.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/sites/show" for 127.0.0.1 at 2018-02-02 15:31:28 -0500
+Processing by SitesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/show.html.erb within layouts/application
+  Rendered sites/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 117ms (Views: 107.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-02 15:31:32 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"ny51wVZuhlrJq9R985vqRTjO0+kWopVK1FbVQO0PVg5RqbRhpfta3MYqrY8VSUWUN0fCe3hXY5TgSpdkRr89nQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Sending test email: 
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: cd901567-6e95-4b2c-8308-2a2a21329a08) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+starting the sidekiq on the discovery job
+[ActiveJob] [ActionMailer::DeliveryJob] [cd901567-6e95-4b2c-8308-2a2a21329a08] Performing ActionMailer::DeliveryJob (Job ID: cd901567-6e95-4b2c-8308-2a2a21329a08) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "yesterday", "today"
+You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [cd901567-6e95-4b2c-8308-2a2a21329a08] You're hitting mailer controller...
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [cd901567-6e95-4b2c-8308-2a2a21329a08]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [cd901567-6e95-4b2c-8308-2a2a21329a08]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [cd901567-6e95-4b2c-8308-2a2a21329a08] UserMailer#discovery_completion_notice: processed outbound mail in 35.8ms
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 123ms (Views: 105.2ms | ActiveRecord: 0.3ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [cd901567-6e95-4b2c-8308-2a2a21329a08] Sent mail to yli8@yahoo.com (6258.0ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [cd901567-6e95-4b2c-8308-2a2a21329a08] Date: Fri, 02 Feb 2018 15:31:32 -0500
+From: yang.li@owasp.org
+To: yli8@yahoo.com
+Message-ID: <5a74caa480689_137473ff88f1ee6d8577d1@Yangs-MacBook-Pro.local.mail>
+Subject: Your Discovery Is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Completion time: today</li>
+    <li>My Discovery Result: http://wmap.io/sites/show </li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [cd901567-6e95-4b2c-8308-2a2a21329a08] Performed ActionMailer::DeliveryJob (Job ID: cd901567-6e95-4b2c-8308-2a2a21329a08) from Async(mailers) in 6295.03ms
+[79668] ! Terminating timed out worker: 79687
+[79668] ! Out-of-sync worker list, no 79687 worker
+[79668] - Worker 0 (pid: 92098) booted, phase: 0
+[79668] ! Terminating timed out worker: 92098
+[79668] ! Out-of-sync worker list, no 92098 worker
+[79668] - Worker 0 (pid: 92276) booted, phase: 0
+[79668] ! Terminating timed out worker: 92276
+[79668] ! Out-of-sync worker list, no 92276 worker
+[79668] - Worker 0 (pid: 92349) booted, phase: 0
+[79668] ! Terminating timed out worker: 92349
+[79668] ! Out-of-sync worker list, no 92349 worker
+[79668] - Worker 0 (pid: 92384) booted, phase: 0
+[79668] ! Terminating timed out worker: 92384
+[79668] ! Out-of-sync worker list, no 92384 worker
+[79668] - Worker 0 (pid: 92482) booted, phase: 0
+[79668] ! Terminating timed out worker: 92482
+[79668] ! Out-of-sync worker list, no 92482 worker
+[79668] - Worker 0 (pid: 92576) booted, phase: 0
+[79668] ! Terminating timed out worker: 92576
+[79668] - Worker 0 (pid: 92608) booted, phase: 0
+[79668] ! Terminating timed out worker: 92608
+[79668] ! Out-of-sync worker list, no 92608 worker
+[79668] - Worker 0 (pid: 92684) booted, phase: 0
+[79668] ! Terminating timed out worker: 92684
+[79668] ! Out-of-sync worker list, no 92684 worker
+[79668] - Worker 0 (pid: 92743) booted, phase: 0
+[79668] ! Terminating timed out worker: 92743
+[79668] ! Out-of-sync worker list, no 92743 worker
+[79668] - Worker 0 (pid: 93054) booted, phase: 0
+[79668] ! Terminating timed out worker: 93054
+[79668] ! Out-of-sync worker list, no 93054 worker
+[79668] - Worker 0 (pid: 93161) booted, phase: 0
+[79668] ! Terminating timed out worker: 93161
+[79668] ! Out-of-sync worker list, no 93161 worker
+[79668] - Worker 0 (pid: 94584) booted, phase: 0
+[79668] ! Terminating timed out worker: 94584
+[79668] ! Out-of-sync worker list, no 94584 worker
+[79668] - Worker 0 (pid: 97844) booted, phase: 0
+[79668] ! Terminating timed out worker: 97844
+[79668] ! Out-of-sync worker list, no 97844 worker
+[79668] - Worker 0 (pid: 97928) booted, phase: 0
+[79668] ! Terminating timed out worker: 97928
+[79668] ! Out-of-sync worker list, no 97928 worker
+[79668] - Worker 0 (pid: 98012) booted, phase: 0
+[79668] ! Terminating timed out worker: 98012
+[79668] ! Out-of-sync worker list, no 98012 worker
+[79668] - Worker 0 (pid: 98082) booted, phase: 0
+[79668] ! Terminating timed out worker: 98082
+[79668] ! Out-of-sync worker list, no 98082 worker
+[79668] - Worker 0 (pid: 98196) booted, phase: 0
+[79668] ! Terminating timed out worker: 98196
+[79668] ! Out-of-sync worker list, no 98196 worker
+[79668] - Worker 0 (pid: 1570) booted, phase: 0
+[79668] ! Terminating timed out worker: 1570
+[79668] ! Out-of-sync worker list, no 1570 worker
+[79668] - Worker 0 (pid: 1716) booted, phase: 0
+[79668] ! Terminating timed out worker: 1716
+[79668] ! Out-of-sync worker list, no 1716 worker
+[79668] - Worker 0 (pid: 1798) booted, phase: 0
+[79668] ! Terminating timed out worker: 1798
+[79668] ! Out-of-sync worker list, no 1798 worker
+[79668] - Worker 0 (pid: 1873) booted, phase: 0
+[79668] ! Terminating timed out worker: 1873
+[79668] ! Out-of-sync worker list, no 1873 worker
+[79668] - Worker 0 (pid: 1955) booted, phase: 0
+[79668] ! Terminating timed out worker: 1955
+[79668] ! Out-of-sync worker list, no 1955 worker
+[79668] - Worker 0 (pid: 2025) booted, phase: 0
+[79668] ! Terminating timed out worker: 2025
+[79668] ! Out-of-sync worker list, no 2025 worker
+[79668] - Worker 0 (pid: 2114) booted, phase: 0
+[79668] - Gracefully shutting down workers...
+[79668] === puma shutdown: 2018-02-05 16:31:51 -0500 ===
+[79668] - Goodbye!
+Exiting
+=== puma startup: 2018-02-05 16:31:59 -0500 ===
+[13987] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517866319348-13987
+[13987] - Worker 0 (pid: 14011) booted, phase: 0
+[13987] - Gracefully shutting down workers...
+[13987] === puma shutdown: 2018-02-05 16:32:01 -0500 ===
+[13987] - Goodbye!
+Exiting
+=== puma startup: 2018-02-05 16:32:20 -0500 ===
+[14058] * Starting control server on unix:///var/folders/pt/hq1gdjp16v53xz9k9pp3w8n80000gn/T/puma-status-1517866340091-14058
+[14058] - Worker 0 (pid: 14077) booted, phase: 0
+[14058] ! Terminating timed out worker: 14077
+[14058] ! Out-of-sync worker list, no 14077 worker
+[14058] - Worker 0 (pid: 16222) booted, phase: 0
+[14058] ! Terminating timed out worker: 16222
+[14058] ! Out-of-sync worker list, no 16222 worker
+[14058] - Worker 0 (pid: 18703) booted, phase: 0
+[14058] ! Terminating timed out worker: 18703
+[14058] ! Out-of-sync worker list, no 18703 worker
+[14058] - Worker 0 (pid: 18774) booted, phase: 0
