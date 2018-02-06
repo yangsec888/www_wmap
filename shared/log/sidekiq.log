@@ -4,3 +4,7 @@
 2018-02-05T23:13:25.914Z 19429 TID-ovnzw1lzs INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
 2018-02-05T23:13:25.914Z 19429 TID-ovnzw1lzs INFO: Booting Sidekiq 5.0.5 with redis options {:id=>"Sidekiq-server-PID-19429", :url=>nil}
 2018-02-05T23:13:25.919Z 19429 TID-ovnzw1lzs INFO: Starting processing, hit Ctrl-C to stop
+2018-02-06T13:20:14.339Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: start
+2018-02-06T13:29:31.469Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: Discovery successful!
+2018-02-06T13:29:31.532Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: Sending out email notice to: yli8@yahoo.com
+2018-02-06T13:29:32.240Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: done: 557.901 sec

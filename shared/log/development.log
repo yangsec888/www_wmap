@@ -4181,3 +4181,361 @@ puma (3.11.2) lib/puma/server.rb:438:in `process_client'
 puma (3.11.2) lib/puma/server.rb:302:in `block in run'
 puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
 puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sites/show" for 127.0.0.1 at 2018-02-05 18:42:03 -0500
+Processing by SitesController#show as HTML
+  Parameters: {"id"=>"show"}
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-02-05 18:42:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 412ms (Views: 384.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2018-02-05 18:42:06 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 95ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/css/fonts/Lato-Light.ttf" for 127.0.0.1 at 2018-02-05 18:42:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/documents/css/fonts/Lato-Light.ttf"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/home/page" for 127.0.0.1 at 2018-02-05 18:55:33 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2018-02-05 18:55:35 -0500
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2018-02-05 18:56:18 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2018-02-05 18:56:59 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2018-02-05 18:57:01 -0500
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2018-02-05 18:58:52 -0500
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2018-02-05 19:00:47 -0500
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2018-02-05 19:05:45 -0500
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 84ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2018-02-05 19:06:14 -0500
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 74.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2018-02-06 08:18:44 -0500
+  [1m[35m (9.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 437ms (Views: 419.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2018-02-06 08:19:32 -0500
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 100ms (Views: 98.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2018-02-06 08:19:47 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 125ms (Views: 122.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2018-02-06 08:19:49 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c0spU5kd0W4LWHIycR3Y1/XUHnaBOGtMUn1awDEGTELj3SFp3MAbYe9RrJMW1BZLnByzxDHuKZYj8iD256h7jQ==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-02-06 08:19:49 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/sessions/new.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 124ms (Views: 89.8ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-02-06 08:19:54 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9/wUVyyMrUHftW5vueI9c0NHTXiy9PfrHAH+b6sSqnhnahxtaVFnTju8sM7eK/PvKo/gygIitTFtjoRZfbydtw==", "user"=>{"email"=>"yli8@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'yli8@yahoo.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.1ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-02-06 13:19:54', `last_sign_in_at` = '2018-02-02 18:13:38', `sign_in_count` = 42, `updated_at` = '2018-02-06 13:19:54' WHERE `users`.`id` = 1[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/sites/show
+Completed 302 Found in 239ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/sites/show" for 127.0.0.1 at 2018-02-06 08:19:55 -0500
+Processing by SitesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/show.html.erb within layouts/application
+  Rendered sites/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 73.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2018-02-06 08:19:58 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2018-02-06 08:20:00 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AKm/AN3/891ZcPaglqBK6HZNobSkzJEPB8fCCtJO6ITys2VsqXtQwLemD4ske3ReBms2ENaypnFNwQbKtpvzKQ==", "commit"=>"Get Started"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 83ms (Views: 74.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/seed/create" for 127.0.0.1 at 2018-02-06 08:20:09 -0500
+Processing by SeedController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eVmNA4Qz6202N1DSpks7T/iJLwReBiaddoOV1cTcC2aLQ1dv8LdIcNjhqfkUkAX5iK+4oCx4EeM8hVEVoAkQyw==", "file_tag"=>"mail.ny.cmbchina.com\r\nny.cmbchina.com", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/domains/start
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/start" for 127.0.0.1 at 2018-02-06 08:20:09 -0500
+Processing by DomainsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/show.html.erb within layouts/application
+  Rendered domains/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 78ms (Views: 69.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/create" for 127.0.0.1 at 2018-02-06 08:20:11 -0500
+Processing by DomainsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+10ro6xJtS2cZ6kIKlgPi/IqSKa94qiI/O18SnP9lTIJR/HP2M0WMHKxUCOYgzE9ggzfAs+cn/a267iKFyiOnw==", "file_tag"=>"cmbchina.com\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/cidrs/start
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cidrs/start" for 127.0.0.1 at 2018-02-06 08:20:11 -0500
+Processing by CidrsController#show as HTML
+  Parameters: {"id"=>"start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/show.html.erb within layouts/application
+  Rendered cidrs/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 69.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/create" for 127.0.0.1 at 2018-02-06 08:20:12 -0500
+Processing by CidrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hf44uo5l+D9lKiK96I7brzOnWSIUcCGUdqLIQE4CTIDv5OLW+uFbIov825ZaVeUZQ4HOhmYOFuo8pAyAKtdXLQ==", "file_tag"=>"209.48.82.224/27\r\n", "uid_tag"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/seed/distest
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2018-02-06 08:20:12 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 69.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2018-02-06 08:20:14 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"l/88YxEBl9/JvaXpWG+Shr7bLiQnaHaFL5IV1q6HLw5l5eYPZYU0widrXMLqtKwwzv25gFUWQftllNEWylI0ow=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 105ms (Views: 76.9ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: f9ae6f2f-8fc8-453c-b338-01c316221924) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "2018-02-06 08:20:14 -0500", "2018-02-06 08:29:31 -0500"
+[ActiveJob] [ActionMailer::DeliveryJob] [f9ae6f2f-8fc8-453c-b338-01c316221924] Performing ActionMailer::DeliveryJob (Job ID: f9ae6f2f-8fc8-453c-b338-01c316221924) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yli8@yahoo.com", "2018-02-06 08:20:14 -0500", "2018-02-06 08:29:31 -0500"
+[ActiveJob] [ActionMailer::DeliveryJob] [f9ae6f2f-8fc8-453c-b338-01c316221924] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [f9ae6f2f-8fc8-453c-b338-01c316221924]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [f9ae6f2f-8fc8-453c-b338-01c316221924]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (1.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f9ae6f2f-8fc8-453c-b338-01c316221924] UserMailer#discovery_completion_notice: processed outbound mail in 367.3ms
+[ActiveJob] [ActionMailer::DeliveryJob] [f9ae6f2f-8fc8-453c-b338-01c316221924] Sent mail to yli8@yahoo.com (1664.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f9ae6f2f-8fc8-453c-b338-01c316221924] Date: Tue, 06 Feb 2018 08:29:32 -0500
+From: yang.li@owasp.org
+To: yli8@yahoo.com
+Message-ID: <5a79adbcaaba6_4be53fd5f4611afc72e2@Yangs-MacBook-Pro.local.mail>
+Subject: Your WMAP Discovery is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Completion time: 2018-02-06 08:29:31 -0500</li>
+    <li>My Discovery Result: <a href='http://wmap.io/sites/show'>http://wmap.io/sites/show </a></li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [f9ae6f2f-8fc8-453c-b338-01c316221924] Performed ActionMailer::DeliveryJob (Job ID: f9ae6f2f-8fc8-453c-b338-01c316221924) from Async(mailers) in 2046.93ms
+Started GET "/sites/show" for 127.0.0.1 at 2018-02-06 09:27:48 -0500
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SitesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 55ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/sites/show" for 127.0.0.1 at 2018-02-06 09:27:48 -0500
+Processing by SitesController#show as HTML
+  Parameters: {"id"=>"show"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-02-06 09:27:48 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 361ms (Views: 359.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2018-02-06 09:27:56 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O592hFJp2olWFApkFEwFPbsuy8qnZJw70UlrooRsDx7mbaNFogQqVCPZsL3O922kWi0Sl4HHjujYNF3vVFM2AQ==", "user"=>{"email"=>"yli8@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'yli8@yahoo.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.1ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-02-06 14:27:56', `last_sign_in_at` = '2018-02-06 13:19:54', `sign_in_count` = 43, `updated_at` = '2018-02-06 14:27:56' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/sites/show
+Completed 302 Found in 205ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/sites/show" for 127.0.0.1 at 2018-02-06 09:27:56 -0500
+Processing by SitesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/show.html.erb within layouts/application
+  Rendered sites/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 113ms (Views: 106.1ms | ActiveRecord: 0.3ms)
+
+
