@@ -8,3 +8,7 @@
 2018-02-06T13:29:31.469Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: Discovery successful!
 2018-02-06T13:29:31.532Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: Sending out email notice to: yli8@yahoo.com
 2018-02-06T13:29:32.240Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: done: 557.901 sec
+2018-02-08T23:18:02.623Z 19429 TID-ovo10cjvs DiscoveryWorker JID-85cd773847eef2f53223fdd1 INFO: start
+2018-02-08T23:18:04.307Z 19429 TID-ovo10cjvs DiscoveryWorker JID-85cd773847eef2f53223fdd1 INFO: Discovery successful!
+2018-02-08T23:18:04.369Z 19429 TID-ovo10cjvs DiscoveryWorker JID-85cd773847eef2f53223fdd1 INFO: Sending out email notice to: yli8@yahoo.com
+2018-02-08T23:18:04.425Z 19429 TID-ovo10cjvs DiscoveryWorker JID-85cd773847eef2f53223fdd1 INFO: done: 1.802 sec

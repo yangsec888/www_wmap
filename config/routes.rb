@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
   ################################
 
+  get 'seed/start'
   post 'seed/start'
   post 'seed/create'
   post 'seed/discovery'
@@ -30,18 +31,18 @@ Rails.application.routes.draw do
 
 
   ################################
-  resources :domains
 
   get 'domains/start'
   post 'domains/start'
   post 'domains/create'
+  resources :domains
 
  ################################
-  resources :cidrs
 
   get 'cidrs/start'
   post 'cidrs/start'
   post 'cidrs/create'
+  resources :cidrs
 
  ################################
 

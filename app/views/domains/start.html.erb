@@ -1,3 +1,22 @@
+<div class="row">
+  <div class="col-md-9 col-lg-9">
+    <h4> Please save your domain file  </h4>
+  </div>
+  <div id="hint" class="col-md-9 col-lg-9" style="margin-top: 20px;">
+    <button type="button" class="btn btn-default" title="Domain Instructions"
+      data-container="body" data-toggle="popover" data-placement="right"
+      data-content="Domain Format: <br>
+      <ul><li> One entry per line  </li>
+          <li> Comment line start with special char # </li>
+          <li> Your registered domain name only </li>
+          <li> No subdomain such as: www.mydomain.com </li>
+          <li> No protocol prefix such as: http://mydomain.com </li>
+      </ul>
+          "><span class="glyphicon glyphicon-question-sign"></span>Domain Format</button>
+  </div>
+</div>
+
+
 <table class="table">
   <tr>
     <td>
@@ -7,9 +26,6 @@
         <% File.new(@file, 'w+') unless File.exist?(@file) %>
         <% domains = File.open(@file, 'r+') %>
         <% domains.each_line { |line| data +=line }; domains.close %>
-        <h4>Please save your known domain file after the modification </h4>
-
-        <p>
           <%= form_tag "/domains/create" do %>
           <%= text_area_tag :file_tag, data, rows: 22, cols: 90 %>
           <%= hidden_field_tag :uid_tag, @uid %>
