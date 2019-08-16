@@ -1,0 +1,21 @@
+<h4> Domain Search:  &nbsp <%= params[:keyword] %></h4>
+<div class="row"></div>
+
+<h5>Search Results: </h5>
+<div class="list-group">
+    <ul>
+    <% index=0; for domain in @domains; next if domain.nil?; index+=1 %>
+        <%= index %>. &nbsp<u><%= link_to domain.name, domains_search_path(keyword: domain.name), method: "get", target: "_blank" %></u>
+        <br />
+    <% end %>
+    </ul>
+
+  <table>
+    <% if @domains.size == 0 %>
+    <tr><td> Can't find your interest here? Consider using a less restrict search string. Or contact the <a href='mailto:yang.li@owasp.org'>maintainer</a> directly. </td></tr>
+    <% elsif @domains.size >= 10 %>
+    <tr><td>Maximum <b>10</b> records retrieval quota exceed. Can't find your interest here? Consider using a more restrict search string.</td></tr>
+    <% end %>
+  </table>
+
+</div>

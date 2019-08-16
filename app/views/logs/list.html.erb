@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-9 col-lg-9">
-    <h3>My Discovery Logs: </h3>
+    <h4> Discovery Logs: </h4>
   </div>
 </div>
 <p><p>
@@ -10,10 +10,10 @@
     <% @log_files.map do |file| %>
     <% file_name = file.split("/").last %>
       <tr>
-        <td><%=file_name %></td>
+        <td><%= link_to file_name, logs_show_path(id: file_name) %></td>
         <td>
           <%= form_tag(controller: "logs", action: "download", method: "post") do %>
-            <%= hidden_field_tag(:file_path,file) %>
+            <%= hidden_field_tag(:file_name,file_name) %>
             <%= submit_tag("Download") %>
           <% end %>
         </td>

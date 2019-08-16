@@ -1,0 +1,27 @@
+# local admin user for the application
+# You can change the credentials here. But don't distribute it or use this account unless absolutably necessary
+#
+# We use Devise database_authenticatable module to support this service account
+# Refer to the document below for further explaination
+#   https://github.com/plataformatec/devise/blob/master/lib/devise/models/database_authenticatable.rb
+#
+default: &default
+  username: admin
+  password: admin123    # minimum 8 chars
+  email: yang.li@owasp.org
+  department: 1
+  role: 0
+
+# Development environment
+development:
+  <<: *default
+
+# Test environment
+test:
+  <<: *default
+
+# Production environment
+production:
+  <<: *default
+  username: admin
+  password: 3^l2k3k!IKW1$

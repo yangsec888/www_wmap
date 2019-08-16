@@ -1,0 +1,19 @@
+
+<h4>Please select the domain portfolio for update</h4>
+
+<div>
+  <%= render "division_list" %>
+  <div class="tab-content col-md-9 col-lg-9">
+     <div>
+        <% if !@upload.errors.empty? %>
+           <div class = "alert alert-warning">
+                 <% @upload.errors.full_messages.each do |msg| %>
+                    <strong>Warning!</strong> <%= msg %>
+                 <% end %>
+           </div>
+        <% end %>
+     </div>
+  </div>
+</div>
+
+<div class="row"></div>

@@ -1,27 +1,64 @@
+#--
+# www_wmap
+#
+# A  Ruby application for enterprise web application asset tracking
+#
+# Developed by Sam (Yang) Li, <yang.li@owasp.org>.
+#
+#++
+
 class CidrsController < ApplicationController
   before_action :authenticate_user!
 
-    def start
-      @dir = Rails.root.join('uploads', current_user.id.to_s)
-      @file = Rails.root.join('uploads', current_user.id.to_s, 'cidrs')
+    def edit
+      @dir = Rails.root.join('shared', 'data')
+      @file = Rails.root.join('shared', 'data', 'cidrs')
       @uid = current_user.id
     end
 
     def show
-      @dir = Rails.root.join('uploads', current_user.id.to_s)
-      @file = Rails.root.join('uploads', current_user.id.to_s, 'cidrs')
-      @uid = current_user.id
+      @file = Rails.root.join('shared', 'data', 'cidrs')
+      File.new(@file, File::CREAT|File::TRUNC|File::RDWR, 0644) unless File.exist?(@file)
+      @cidrs = Hash.new
+      row=0
+      file=File.open(@file,'r')
+      file.each_line do |line|
+        row += 1
+        next if row <= 2
+        entry=line.split(',')
+        @cidrs[row]=entry
+      end
     end
 
-    def create
-      file_content = params[:file_tag]
-      f = Rails.root.join('uploads',  params[:uid_tag], 'cidrs')
-      file = File.open(f, 'w+')
-      file.write(file_content)
-      #file.write("\n")
+    def load_file
+      data = ''
+      @file = Rails.root.join('shared', 'data', 'cidrs')
+      file = File.open(@file, 'r')
+      file.each_line { |line| data += line }
       file.close
-      redirect_to seed_distest_path, :notice => "The cidrs file is saved!"
+      render plain: data
+    end
 
+    def save_file
+      if platinum_user_and_above?
+        @file = Rails.root.join('shared', 'data', 'cidrs')
+        file = File.open(@file, 'r')
+        @restore = ''
+        file.each_line { |line| @restore += line }
+        file.close
+        file = File.open(@file, 'w+')
+        file.write(params[:file_content])
+        file.close
+        YAML.load_file(@file)
+        render json: { message: 'Saving successed.' }
+      else
+          render json: { message: 'Access deined. ' }
+      end
+    rescue Psych::SyntaxError
+      file = File.open(@file, 'w+')
+      file.write(@restore)
+      file.close
+      render json: { message: 'Saving failed, please check your file again.' }
     end
 
 end

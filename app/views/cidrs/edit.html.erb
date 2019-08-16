@@ -1,0 +1,80 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    var cidrs_editor = CodeMirror(document.getElementById("cidrsTextArea"), {
+      mode: "null",
+      lineNumbers: true,
+      extraKeys: {
+        "Ctrl-Space": "autocomplete"
+      },
+      value: ""
+    });
+    var cidrs_value =  $.ajax({
+      url: "load_file",
+      type: "GET",
+      dataType: 'text',
+      data: {
+        "path": ""
+      },
+      success: function(response) {
+        //console.log(response);
+        //alert("Success: " + response['message'])
+        cidrs_editor.getDoc().setValue(response);
+      },
+      error: function(response) {
+        //console.log(response);
+        alert("Error: " + response['message'])
+      }
+    });
+    $('#save_cidrs_button').click(function() {
+      $.ajax({
+        url: "save_file",
+        type: "POST",
+        dataType: 'json',
+        data: {
+          "file_path": "",
+          "file_content": cidrs_editor.getDoc().getValue()
+        },
+        success: function(response) {
+          //console.log(response);
+          if  (response['message']=="Access Denied.") {
+            alert("Access Denied.")
+          } else {
+            alert("Success: " + response['message'])
+          }
+        },
+        error: function(response) {
+          //console.log(response);
+          alert("Error:" + response['message'])
+        }
+      });
+    });
+  });
+</script>
+
+<h4>  Network Registration </h4>
+<br />
+
+<div class=" col-md-9 col-lg-9">
+  <% data = String.new %>
+  <% Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir) %>
+  <% File.new(@file, 'w+') unless File.exist?(@file) %>
+  <p>
+  </br>
+  <button class="btn btn-primary" id="save_cidrs_button" type="submit">Save</button>
+  <button type="button" class="pull-right btn btn-default" title="CIDR Instructions"
+    data-container="body" data-toggle="popover" data-placement="right"
+    data-content="CIDR Format: <br>
+    <ul><li> One entry per line  </li>
+        <li> Comment line start with special char # </li>
+        <li> Your assigned <a href='https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing'>CIDR blocks</a> only </li>
+        <li> CIDR block example: 8.8.8.8/24 </li>
+        <li> Ask your network administrator if you don't know </li>
+        <li> Or leave it blank </li>
+    </ul>
+        "><span class="glyphicon glyphicon-question-sign"></span>CIDR Format</button>
+  <div class ="CodeMirror" id="cidrsTextArea">
+  </div>
+
+</div>
+
+<div class="row"></div>

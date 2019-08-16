@@ -1,0 +1,25 @@
+<h4>  Network Registration </h4>
+<br />
+
+
+<%= button_to "Edit", cidrs_edit_path, class: "btn btn-primary" %>
+<br />
+<table class="table table-bordered table-striped">
+   <thead>
+      <tr>
+         <th>Network CIDR </th>
+         <th>CIDR RIPE Reference Text </th>
+         <th>CIDR Netname </th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @cidrs.each do |key,cidr| %>
+         <tr>
+            <td><%= cidr[0] %></td>
+            <td><%= cidr[1] %></td>
+            <td><%= cidr[2] %></td>
+         </tr>
+      <% end %>
+   </tbody>
+</table>

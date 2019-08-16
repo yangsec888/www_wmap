@@ -1,0 +1,25 @@
+
+<%= render "division_list" %>
+<div class=" col-md-9 col-lg-9">
+  <br />
+  <% if !@upload.errors.empty? %>
+    <div class = "alert alert-warning">
+      <% @upload.errors.full_messages.each do |msg| %>
+        <strong>Warning!</strong> <%= msg %>
+      <% end %>
+    </div>
+  <% end %>
+  <% if !flash[:notice].blank? %>
+    <div>
+      <%= button_to "Update Database", { :controller => "uploads", :action => "update"}, :method => :post, params: {:file => @file_name, :file_type => @file_type}, class: "btn btn-primary"  %>
+    </div>
+    <br />
+  <% end %>
+  <div class="table-responsive">
+    <%= render "form" %>
+  </div>
+</div>
+
+
+
+<div class="row"></div>

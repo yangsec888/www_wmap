@@ -6,8 +6,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Basic gems for Rails 5.1.4
-gem 'rails', '~> 5.1.4'
+# Basic gems for Rails 5.2
+gem 'rails', '~> 5.2.1.1'
 gem 'puma', '~> 3.7'
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -21,6 +21,12 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Excel spreadsheet support
+gem 'rubyXL', '=3.3.33'
+# file upload
+gem 'carrierwave', '~> 0.10.0'
+# report upload
+gem 'sequel'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -41,13 +47,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 ################################################################################
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+gem 'mini_racer', platforms: :ruby
 #gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
 
 ################################################################################
 # www_wmap related gem
@@ -55,10 +60,15 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'bootstrap'
 gem 'bootstrap_form'
+gem 'will_paginate'
+# logon form input validations
+gem 'client_side_validations'
+##  Support  LDAP authentication
 gem 'devise'
 gem "devise_ldap_authenticatable"
+gem 'server-generated-popups'
 gem 'responders'
-gem 'wmap'
+gem 'wmap', '= 2.5.4'
 gem 'netaddr'
 gem 'parallel'
 gem 'whois'
@@ -69,7 +79,7 @@ gem 'dnsruby'
 gem 'geoip'
 gem 'sidekiq' #move discovery job to background
 gem 'sidekiq-batch'
-gem 'sinatra', github: 'sinatra/sinatra' #require for sidekiq web
+gem 'sinatra', '= 2.0.4' #require for sidekiq web
 ###############################################################################
 
 

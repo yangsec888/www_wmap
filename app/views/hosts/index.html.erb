@@ -1,0 +1,22 @@
+<h4>  Host Records </h4>
+<br />
+
+<%= button_to "Edit", hosts_edit_path, class: "btn btn-primary" %>
+<br />
+<table class="table table-bordered table-striped">
+   <thead>
+      <tr>
+         <th>Host Name </th>
+         <th>IP Address </th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @hosts.each do |key,host| %>
+         <tr>
+            <td><%= host[0] %></td>
+            <td><%= host[1] %></td>
+         </tr>
+      <% end %>
+   </tbody>
+</table>

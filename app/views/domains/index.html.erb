@@ -1,0 +1,22 @@
+<h4>  Domain Registration </h4>
+<br />
+
+<%= button_to "Edit", domains_edit_path, class: "btn btn-primary" %>
+<br />
+<table class="table table-bordered table-striped">
+   <thead>
+      <tr>
+         <th>Domain Name </th>
+         <th>Free Zone Transferable? </th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @domains.each do |key,domain| %>
+         <tr>
+            <td><%= domain[0] %></td>
+            <td><%= domain[1] %></td>
+         </tr>
+      <% end %>
+   </tbody>
+</table>

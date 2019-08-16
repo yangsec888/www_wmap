@@ -1,0 +1,26 @@
+
+<h4>  Divisional Domain Portfolio Report </h4>
+<br />
+
+<table class="table table-bordered table-striped">
+   <thead>
+      <tr>
+         <th>Name</th>
+         <th>Division</th>
+         <th>Download Link</th>
+         <th>Action </th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @reports.each do |report| %>
+         <% @report=report %>
+         <tr>
+            <td><%= link_to report.title, domains_show_path(division: report.division), target: "_blank" %></td>
+            <td><%= report.division %></td>
+            <td><%= link_to image_tag("excel.png", class: "clickable-img", size: "35x35"), reports_download_path(:division => report.division), data: { turbolinks: false } %></td>
+            <td><%= render 'mini_edit' unless report.title.nil? %></td>
+         </tr>
+      <% end %>
+   </tbody>
+</table>

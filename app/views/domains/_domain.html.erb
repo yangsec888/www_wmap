@@ -1,0 +1,41 @@
+<%# Implementation based on this technique: https://github.com/colorfulfool/rails-popup %>
+<% remote = request.xhr? %>
+<h4>Domain Update</h4>
+
+<br />
+<span class="red-star">*
+</span>Indicates required field
+<%= hidden_field_tag :domain, @domain%>
+<%= form_tag(controller: "domains", action: "update", remote: remote, method: "post") do  %>
+  <table class="table table-striped" style="border: 1">
+      <tr>
+        <td>Domain: </td>
+        <td><%=@domain.name %></td>
+
+        <td>Imprint:
+            <span class="red-star">*</span>
+        </td>
+        <td ><%= text_field_tag :imprint, nil, class: 'form-control', required: false, value: @domain.imprint %>
+      </tr>
+      <tr>
+        <td>Divsion: </td>
+        <td><%= select(:division, nil, @divisions, {:selected => @domain.division, :include_blank =>false},
+              {class: "form-control", required: false}) %>
+        </td>
+
+        <td>Keep, Release, Redirect?</td>
+        <td ><%= text_field_tag :keep, nil, class: 'form-control', required: false, value: @domain.keep %> </td>
+      </tr>
+      <tr>
+        <td>Current Redirect</td>
+        <td ><%= text_field_tag :current_redirect, nil, class: 'form-control', required: false, value: @domain.current_redirect %> </td>
+
+        <td>New Redirect</td>
+        <td ><%= text_field_tag :new_redirect, nil, class: 'form-control', required: false, value: @domain.new_redirect %> </td>
+      </tr>
+      <%= hidden_field_tag :name, params[:name] %>
+  </table>
+  <p>&nbsp;&nbsp;<button class="btn btn-default btn-sm" type="submit" data-disable-with="Please wait...">Submit</button>
+      &nbsp;&nbsp;<input type="button" onclick="window.parent.location = window.parent.location.href;" value="Back" class="btn btn-default btn-sm">
+  </p>
+<% end %>

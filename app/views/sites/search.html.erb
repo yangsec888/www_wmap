@@ -1,0 +1,21 @@
+<h4> Site Search:  &nbsp <%= params[:keyword] %></h4>
+<div class="row"></div>
+
+<h5>Search Results: </h5>
+<div class="list-group">
+    <ul>
+    <% index=0; for site in @sites; next if site.nil?; index+=1 %>
+        <%= index %>. &nbsp<u><%= link_to site.site, sites_show_path(id: site.id), target: "_blank" %></u>
+        <br />
+    <% end %>
+    </ul>
+
+  <table>
+    <% if @sites.size == 0 %>
+    <tr><td> Can't find your interest here? Consider using a less restrict search string. Or contact the <a href='mailto:itsecurity@penguinrandomhouse.com'>maintainer</a> directly. </td></tr>
+    <% elsif @sites.size >= 10 %>
+    <tr><td>Maximum <b>10</b> records retrieval quota exceed. Can't find your interest here? Consider using a more restrict search string.</td></tr>
+    <% end %>
+  </table>
+
+</div>

@@ -1,10 +1,19 @@
+#--
+# www_wmap
+#
+# A  Ruby application for enterprise web application asset tracking
+#
+# Developed by Sam Li, <sli@penguinrandomhouse.com>. 2018-2020
+#
+#++
+
 Rails.application.routes.draw do
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   devise_scope :user do
     get 'users/list' => 'users#index'
     get 'users/report' => 'users#report'
-    #get 'users/:id' => 'users#show'
-    delete '/users/sign_out' => 'devise/sessions#destroy'
+    get 'users/:id' => 'users#show'
+    delete '/users/logout' => 'devise/sessions#destroy'
   end
   resources :users
   ###############################
@@ -24,33 +33,44 @@ Rails.application.routes.draw do
 
   get 'seed/start'
   post 'seed/start'
-  post 'seed/create'
+  get 'seed/load_file'
+  post 'seed/save_file'
   post 'seed/discovery'
   get 'seed/distest'
-  resources :seed
-
 
   ################################
 
-  get 'domains/start'
-  post 'domains/start'
-  post 'domains/create'
-  resources :domains
+  get 'domains/index'
+  get 'domains/show'
+  get 'domains/show_all'
+  get 'domains/edit'
+  post 'domains/edit_domain'
+  post 'domains/save_domain'
+  post 'domains/edit'
+  post 'domains/update'
+  delete 'domains/destroy'
+  get 'domains/load_file'
+  post 'domains/save_file'
+  #get 'domains/import'
+  get 'domains/search'
+  get 'domains/search_list'
+  post 'domains/search_list'
+  post 'domains/save_import'
 
  ################################
 
-  get 'cidrs/start'
-  post 'cidrs/start'
-  post 'cidrs/create'
-  resources :cidrs
+  get 'cidrs/show'
+  post 'cidrs/edit'
+  get 'cidrs/load_file'
+  post 'cidrs/save_file'
 
  ################################
 
-  resources :hosts
 
-  get 'hosts/start'
-  post 'hosts/start'
-  post 'hosts/create'
+  get 'hosts/index'
+  post 'hosts/edit'
+  get 'hosts/load_file'
+  post 'hosts/save_file'
 
   ################################
   resources :documents
@@ -58,16 +78,59 @@ Rails.application.routes.draw do
   get 'documents/index'
 
   ################################
+  get 'support/faq'
+  get 'support/contact'
 
+  ################################
+
+  get 'sites/index'
+  get 'sites/show'
+  #get 'sites/search'
+  get 'sites/import'
+  post 'sites/search'
+  post 'sites/save'
   post 'sites/download'
-  resources :sites
 
   ################################
 
   get 'logs/list'
+  get 'logs/show'
   post 'logs/download'
-  resources :logs
+  #resources :logs
 
+
+  # Yml Settings Controller
+  get 'yml_settings/index'
+  get 'yml_settings/load_file'
+  post 'yml_settings/save_file'
+
+################################
+  get 'reports/index'
+  get 'reports/new'
+  get 'reports/division'
+  get 'reports/download'
+  get 'reports/download_all'
+  resources :reports
+
+################################
+  resources :uploads, only: [:new, :create, :destroy]
+  get '/uploads/dt'
+  get '/uploads/division_1'
+  get '/uploads/division_2'
+  get '/uploads/division_3'
+  ###
+  #get "uploads/index"
+  post "uploads/update"
+  get "uploads/refresh"
+  get "uploads/create"
+  get "uploads/alert_uploads"
+
+################################
+  get 'domain_map/show'
+  post 'domain_map/show'
+
+
+  #post "uploads/division"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

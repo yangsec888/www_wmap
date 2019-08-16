@@ -1,11 +1,23 @@
+#--
+# www_wmap
+#
+# A  Ruby application for enterprise web application asset tracking
+#
+# Developed by Sam (Yang) Li, <yang.li@owasp.org>.
+#
+#++
+
 class UsersController < ApplicationController
-  
-  #before_action :authenticate_user!
-  #before_action :admin_only
+
+  before_action :authenticate_user!
+  before_action :admin_only
   #helper_method :sort_column, :sort_direction
 
   def index
     @users = User.order(sort_column + " " + sort_direction)
+    dept=Hash.new; @users.map {|a| dept[a.department]=true unless dept.key?(a.department) }
+    @department_list=Array.new; dept.each {|key,val| @department_list.push(key) unless key.nil? }
+    @department_list.sort!
     filtering_params(params).each do |key, value|
       next if value.nil?
       @users = @users.public_send(key, value) if value.present?
@@ -16,7 +28,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     unless current_user.admin?
       unless @user == current_user
-        redirect_to :back, :alert => "Access denied."
+        redirect_back :fallback_location => root_path, :alert => "Access denied."
       end
     end
   end
@@ -40,7 +52,7 @@ class UsersController < ApplicationController
       index
       wb = RubyXL::Workbook.new
       download = wb.worksheets[0]
-      download.sheet_name = 'IDM User Report'
+      download.sheet_name = 'User Report'
       # set the header row
       download.add_cell(0,0, "Name")
       download.add_cell(0,1, "Email")
@@ -55,23 +67,19 @@ class UsersController < ApplicationController
           download.add_cell(my_row,1, aa['email'])
           download.add_cell(my_row,2, aa['department'])
           download.add_cell(my_row,3, aa['role'])
-          unless aa['equinix_id'].nil?
-            download.add_cell(my_row,5, "Yes")
-          end
       end
-      send_data wb.stream.string, filename: "IDM_User.xlsx", disposition: 'attachment'
+      send_data wb.stream.string, filename: "Wmap_User.xlsx", disposition: 'attachment'
       wb = nil
 
   end
-
-  private
-
 
   def destroy
     user = User.find(params[:id])
     user.destroy
     redirect_to users_path, :notice => "User deleted."
   end
+
+private
 
   def filtering_params(params)
     params.slice(:department)

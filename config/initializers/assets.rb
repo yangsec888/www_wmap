@@ -9,3 +9,5 @@ Rails.application.config.assets.paths << '#{Rails.root}/app/assets/stylesheets'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( jstree.min.js jstree.min.css codemirror.css yaml.js yml_settings.js popup.js )
+Rails.application.config.assets.precompile += %w( hosts.js )

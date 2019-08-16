@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  attachment: MyString
+  file_type: MyString
+  switch_tag: MyString
+
+two:
+  name: MyString
+  attachment: MyString
+  file_type: MyString
+  switch_tag: MyString

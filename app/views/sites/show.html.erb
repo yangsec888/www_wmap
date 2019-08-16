@@ -1,38 +1,44 @@
-<div class="row">
-  <div class="col-md-9 col-lg-9">
-    <h3>Discovered Site(s): </h3>
-    <br>
-    <%= form_tag(controller: "sites", action: "download", method: "post") do %>
-      <%= hidden_field_tag(:file_path,@file) %>
-      <%= submit_tag("Download") %>
-    <% end %>
-  </div>
-</div>
 
-<div class="table-responsive">
-  <table class="table table-hover" style="boarder: 1">
-    <% Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir) %>
-    <% File.new(@file, 'w+') unless File.exist?(@file) %>
-    <% line_cnt=0 %>
-    <% File.open(@file,'r').each_line do |line| %>
-      <% line_cnt += 1 %>
-      <% next if line_cnt == 1 or %>
-      <% if line_cnt ==2 %>
-      <thead>
-        <tr> <% line.gsub("#","").split(",").map do |header| %>
-          <th class="col-lg-2"><%= header.strip %></th>
-          <% end %>
-        </tr>
-      </thead>
-      <tbody>
-      <% end %>
+<h4>Website Details</h4>
+
+<br />
+  <table class="table table-striped" style="border: 1">
       <tr>
-        <% line.split(",").map do |x| %>
-          <td><%= x %> </td>
-        <% end %>
+        <td>Site:
+        </td>
+        <td><%=@site.site %></td>
+        <td>IP:
+        </td>
+        <td><%=@site.ip %></td>
       </tr>
-
-    <% end %>
-    </tbody>
+      <tr>
+        <td>Port: </td>
+        <td><%= @site.port %></td>
+        <td>Response Code:
+        </td>
+        <td><%=@site.code %></td>
+      </tr>
+      <tr>
+        <td>Redirection:
+        </td>
+        <td><%=@site.redirection %></td>
+        <td>MD5 Signature: </td>
+        <td> <%= @site.md5 %> </td>
+      </tr>
+      <tr>
+        <td>Server:
+        </td>
+        <td><%=@site.server %></td>
+        <td>Hosting Status: </td>
+        <td> <%= @site.status %> </td>
+      </tr>
+      <tr>
+        <td>Update:
+        </td>
+        <td><%=@site.updated_at %></td>
+        <td></td>
+        <td></td>
+      </tr>
   </table>
-</div>
+  <p>
+  </p>

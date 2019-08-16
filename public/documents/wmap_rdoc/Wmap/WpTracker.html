@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Wmap::WpTracker - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="../Object.html">Object</a>
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="Utils.html">Wmap::Utils</a>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-add">#add</a>
+    
+    <li ><a href="#method-i-is_wp-3F">#is_wp?</a>
+    
+    <li ><a href="#method-i-load_from_file">#load_from_file</a>
+    
+    <li ><a href="#method-i-open_url">#open_url</a>
+    
+    <li ><a href="#method-i-read_url">#read_url</a>
+    
+    <li ><a href="#method-i-refresh">#refresh</a>
+    
+    <li ><a href="#method-i-save-21">#save!</a>
+    
+    <li ><a href="#method-i-save_to_file-21">#save_to_file!</a>
+    
+    <li ><a href="#method-i-wp_css-3F">#wp_css?</a>
+    
+    <li ><a href="#method-i-wp_login-3F">#wp_login?</a>
+    
+    <li ><a href="#method-i-wp_meta-3F">#wp_meta?</a>
+    
+    <li ><a href="#method-i-wp_readme-3F">#wp_readme?</a>
+    
+    <li ><a href="#method-i-wp_rpc-3F">#wp_rpc?</a>
+    
+    <li ><a href="#method-i-wp_ver">#wp_ver</a>
+    
+    <li ><a href="#method-i-wp_ver_login">#wp_ver_login</a>
+    
+    <li ><a href="#method-i-wp_ver_meta">#wp_ver_meta</a>
+    
+    <li ><a href="#method-i-wp_ver_readme">#wp_ver_readme</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Wmap::WpTracker">
+  <h1 id="class-Wmap::WpTracker" class="class">
+    class Wmap::WpTracker
+  </h1>
+
+  <section class="description">
+    
+<p>Main class to automatically track the site inventory</p>
+
+  </section>
+
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="Max_http_timeout">Max_http_timeout
+        
+        <dd><p>set hard stop limit of http time-out to 8 seconds, in order to avoid severe
+performance penalty for certain &#39;weird&#39; site(s)</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-data_dir" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">data_dir</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>include Singleton</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-http_timeout" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">http_timeout</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>include Singleton</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-known_wp_sites" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">known_wp_sites</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-max_parallel" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">max_parallel</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>include Singleton</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-sites_wp" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">sites_wp</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>include Singleton</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-verbose" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">verbose</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>include Singleton</p>
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(params = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>WordPress checker instance default variables</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 27</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">params</span> = {})
+            <span class="ruby-ivar">@verbose</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:verbose</span>, <span class="ruby-keyword">false</span>)
+            <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../data/&#39;</span>)
+            <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
+<span class="ruby-identifier">wp_sites</span>=<span class="ruby-ivar">@data_dir</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;wp_sites&#39;</span>
+<span class="ruby-ivar">@file_wps</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:sites_wp</span>, <span class="ruby-identifier">wp_sites</span>)
+            <span class="ruby-ivar">@http_timeout</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:http_timeout</span>, <span class="ruby-value">5000</span>)
+            <span class="ruby-ivar">@max_parallel</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:max_parallel</span>, <span class="ruby-value">40</span>)
+            <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
+            <span class="ruby-ivar">@log_file</span>=<span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;wp_checker.log&quot;</span>
+<span class="ruby-ivar">@known_wp_sites</span>=<span class="ruby-identifier">load_from_file</span>(<span class="ruby-ivar">@file_wps</span>)
+    <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-add" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add</span><span
+            class="method-args">(url, use_cache=true)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>&#39;setter&#39; to add wordpress entry to the cache one at a time</p>
+          
+          
+
+          
+          <div class="method-source-code" id="add-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 98</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">use_cache</span>=<span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">begin</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Add entry to the local cache table: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+  <span class="ruby-identifier">site</span>=<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>)
+                    <span class="ruby-keyword">if</span> <span class="ruby-identifier">use_cache</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@known_wp_sites</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">site</span>)
+                            <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Site is already exist. Skipping: #{site}&quot;</span>
+                    <span class="ruby-keyword">else</span>
+                            <span class="ruby-identifier">record</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_wp?</span>(<span class="ruby-identifier">site</span>)
+      <span class="ruby-identifier">record</span>[<span class="ruby-identifier">site</span>]=<span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">record</span>[<span class="ruby-identifier">site</span>]=<span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+                            <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Entry loaded: #{record}&quot;</span>
+                    <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@known_wp_sites</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">record</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">record</span>
+            <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+                    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+            <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-is_wp-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">is_wp?</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>logic to determin if it&#39;s a wordpress site</p>
+          
+          
+
+          
+          <div class="method-source-code" id="is_wp-3F-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">is_wp?</span>(<span class="ruby-identifier">url</span>)
+              <span class="ruby-comment">#begin</span>
+                      <span class="ruby-identifier">site</span>=<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>)
+                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">wp_readme?</span>(<span class="ruby-identifier">site</span>)
+                              <span class="ruby-identifier">found</span>=<span class="ruby-keyword">true</span>
+                      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">wp_css?</span>(<span class="ruby-identifier">site</span>)
+                              <span class="ruby-identifier">found</span>=<span class="ruby-keyword">true</span>
+                      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">wp_meta?</span>(<span class="ruby-identifier">site</span>)
+                              <span class="ruby-identifier">found</span>=<span class="ruby-keyword">true</span>
+                      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">wp_login?</span>(<span class="ruby-identifier">site</span>)
+                              <span class="ruby-identifier">found</span>=<span class="ruby-keyword">true</span>
+                      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">wp_rpc?</span>(<span class="ruby-identifier">site</span>)
+                              <span class="ruby-identifier">found</span>=<span class="ruby-keyword">true</span>
+                      <span class="ruby-keyword">else</span>
+                              <span class="ruby-identifier">found</span>=<span class="ruby-keyword">false</span>
+                      <span class="ruby-keyword">end</span>
+                      <span class="ruby-keyword">return</span> <span class="ruby-identifier">found</span>
+              <span class="ruby-comment">#rescue =&gt; ee</span>
+              <span class="ruby-comment">#     puts &quot;Exception on method #{__method__}: #{ee}: #{url}&quot; if @verbose</span>
+              <span class="ruby-comment">#end</span>
+      <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-load_from_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_from_file</span><span
+            class="method-args">(file=@file_stores, lc=true)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>&#39;setter&#39; to load the known wordpress sites into an instance
+variable</p>
+          
+          
+
+          
+          <div class="method-source-code" id="load_from_file-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">load_from_file</span> (<span class="ruby-identifier">file</span>=<span class="ruby-ivar">@file_stores</span>, <span class="ruby-identifier">lc</span>=<span class="ruby-keyword">true</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Loading trusted file: #{file}&quot;</span>  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-identifier">known_wp_sites</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+                <span class="ruby-identifier">f_wp_sites</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-string">&#39;r&#39;</span>)
+                <span class="ruby-identifier">f_wp_sites</span>.<span class="ruby-identifier">each_line</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Processing line: #{line}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                        <span class="ruby-identifier">line</span>=<span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp</span>.<span class="ruby-identifier">strip</span>
+                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">nil?</span>
+                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">empty?</span>
+                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\s*#/</span>
+                        <span class="ruby-identifier">line</span>=<span class="ruby-identifier">line</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">lc</span><span class="ruby-operator">==</span><span class="ruby-keyword">true</span>
+                        <span class="ruby-identifier">entry</span>=<span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;,&#39;</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">known_wp_sites</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">entry</span>[<span class="ruby-value">0</span>])
+                                <span class="ruby-keyword">next</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">entry</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/yes/i</span>
+                                        <span class="ruby-identifier">known_wp_sites</span>[<span class="ruby-identifier">entry</span>[<span class="ruby-value">0</span>]]=<span class="ruby-keyword">true</span>
+                                <span class="ruby-keyword">else</span>
+                                        <span class="ruby-identifier">known_wp_sites</span>[<span class="ruby-identifier">entry</span>[<span class="ruby-value">0</span>]]=<span class="ruby-keyword">false</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">f_wp_sites</span>.<span class="ruby-identifier">close</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">known_wp_sites</span>
+        <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-open_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">open_url</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Wrapper for the OpenURI open method - create an open_uri object and return
+the reference upon success</p>
+          
+          
+
+          
+          <div class="method-source-code" id="open_url-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 188</span>
+      <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">open_url</span>(<span class="ruby-identifier">url</span>)
+              <span class="ruby-comment">#url_object = nil</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Open url #{url} by creating an open_uri object. Return the reference upon success.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/http\:/i</span>
+                      <span class="ruby-comment"># patch for allow the &#39;un-safe&#39; URL redirection i.e. https://www.example.com -&gt; http://www.example.com</span>
+                      <span class="ruby-identifier">url_object</span> = <span class="ruby-identifier">open</span>(<span class="ruby-identifier">url</span>, <span class="ruby-value">:allow_redirections</span><span class="ruby-operator">=&gt;</span><span class="ruby-value">:safe</span>, <span class="ruby-value">:read_timeout</span><span class="ruby-operator">=&gt;</span><span class="ruby-constant">Max_http_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000</span>)
+              <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/https\:/i</span>
+                      <span class="ruby-identifier">url_object</span> = <span class="ruby-identifier">open</span>(<span class="ruby-identifier">url</span>,<span class="ruby-value">:ssl_verify_mode</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-value">:allow_redirections</span> <span class="ruby-operator">=&gt;</span><span class="ruby-value">:safe</span>, <span class="ruby-value">:read_timeout</span><span class="ruby-operator">=&gt;</span><span class="ruby-constant">Max_http_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000</span>)
+              <span class="ruby-keyword">else</span>
+                      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid URL format - please specify the protocol prefix http(s) in the URL: #{url}&quot;</span>
+              <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">return</span> <span class="ruby-identifier">url_object</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-read_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read_url</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Wrapper to use OpenURI method &#39;read&#39; to return url body contents</p>
+          
+          
+
+          
+          <div class="method-source-code" id="read_url-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 174</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">read_url</span>(<span class="ruby-identifier">url</span>)
+<span class="ruby-keyword">begin</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Wrapper to return the OpenURI object for url: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                    <span class="ruby-identifier">url_object</span>=<span class="ruby-identifier">open_url</span>(<span class="ruby-identifier">url</span>)
+                    <span class="ruby-identifier">html_body</span>=<span class="ruby-identifier">url_object</span>.<span class="ruby-identifier">read</span>
+  <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">html_body</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">doc</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-refresh" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">refresh</span><span
+            class="method-args">(num=@max_parallel,use_cache=true)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>add wordpress site entries (from a sitetracker list)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="refresh-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 144</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">refresh</span> (<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>,<span class="ruby-identifier">use_cache</span>=<span class="ruby-keyword">true</span>)
+<span class="ruby-comment">#begin</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Add entries to the local cache table from site tracker: &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                    <span class="ruby-identifier">results</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+                    <span class="ruby-identifier">wps</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">SiteTracker</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">known_sites</span>.<span class="ruby-identifier">keys</span>
+                    <span class="ruby-keyword">if</span> <span class="ruby-identifier">wps</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                            <span class="ruby-constant">Parallel</span>.<span class="ruby-identifier">map</span>(<span class="ruby-identifier">wps</span>, <span class="ruby-value">:in_processes</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">num</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                                    <span class="ruby-identifier">add</span>(<span class="ruby-identifier">target</span>,<span class="ruby-identifier">use_cache</span>)
+                            }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">process</span><span class="ruby-operator">|</span>
+                                    <span class="ruby-keyword">if</span> <span class="ruby-identifier">process</span>.<span class="ruby-identifier">nil?</span>
+                                            <span class="ruby-keyword">next</span>
+                                    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">process</span>.<span class="ruby-identifier">empty?</span>
+                                            <span class="ruby-comment">#do nothing</span>
+                                    <span class="ruby-keyword">else</span>
+                                            <span class="ruby-identifier">results</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">process</span>)
+                                    <span class="ruby-keyword">end</span>
+                            <span class="ruby-keyword">end</span>
+                            <span class="ruby-ivar">@known_wp_sites</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">results</span>)
+                            <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Done loading entries.&quot;</span>
+                            <span class="ruby-keyword">return</span> <span class="ruby-identifier">results</span>
+                    <span class="ruby-keyword">else</span>
+                            <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Error: no entry is loaded. Please check your list and try again.&quot;</span>
+                    <span class="ruby-keyword">end</span>
+                    <span class="ruby-keyword">return</span> <span class="ruby-identifier">results</span>
+            <span class="ruby-comment">#rescue =&gt; ee</span>
+            <span class="ruby-comment">#     puts &quot;Exception on method #{__method__}: #{ee}&quot; if @verbose</span>
+            <span class="ruby-comment">#end</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-save-21" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">save!</span><span
+            class="method-args">(file_wps=@file_wps, wps=@known_wp_sites)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="WpTracker.html#method-i-save_to_file-21">save_to_file!</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-save_to_file-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_to_file!</span><span
+            class="method-args">(file_wps=@file_wps, wps=@known_wp_sites)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Save the current hash table into a file</p>
+          
+          
+
+          
+          <div class="method-source-code" id="save_to_file-21-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">save_to_file!</span>(<span class="ruby-identifier">file_wps</span>=<span class="ruby-ivar">@file_wps</span>, <span class="ruby-identifier">wps</span>=<span class="ruby-ivar">@known_wp_sites</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Saving the current wordpress site table from memory to file: #{file_wps} ...&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-identifier">timestamp</span>=<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+                <span class="ruby-identifier">f</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file_wps</span>, <span class="ruby-string">&#39;w&#39;</span>)
+                <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;# Local wps file created by class #{self.class} method #{__method__} at: #{timestamp}\n&quot;</span>
+                <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;# domain name, free zone transfer detected?\n&quot;</span>
+                <span class="ruby-identifier">wps</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">wps</span>[<span class="ruby-identifier">key</span>]
+                                <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;#{key}, yes\n&quot;</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;#{key}, no\n&quot;</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;WordPress site cache table is successfully saved: #{file_wps}&quot;</span>
+        <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="WpTracker.html#method-i-save-21">save!</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-wp_css-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wp_css?</span><span
+            class="method-args">(site)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Wordpress detection checkpoint - install.css</p>
+          
+          
+
+          
+          <div class="method-source-code" id="wp_css-3F-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_css?</span>(<span class="ruby-identifier">site</span>)
+  <span class="ruby-identifier">css_url</span>=<span class="ruby-identifier">site</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;wp-admin/css/install.css&quot;</span>
+  <span class="ruby-identifier">k</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">UrlChecker</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">response_code</span>(<span class="ruby-identifier">css_url</span>) <span class="ruby-operator">==</span> <span class="ruby-value">200</span>
+    <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">parser</span> = <span class="ruby-constant">CssParser</span><span class="ruby-operator">::</span><span class="ruby-constant">Parser</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">load_uri!</span>(<span class="ruby-identifier">css_url</span>)
+    <span class="ruby-identifier">rule</span> = <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">find_by_selector</span>(<span class="ruby-string">&#39;#logo a&#39;</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">rule</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">rule</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/wordpress/i</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-wp_login-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wp_login?</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Wordpress detection checkpoint - wp-login</p>
+          
+          
+
+          
+          <div class="method-source-code" id="wp_login-3F-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_login?</span>(<span class="ruby-identifier">url</span>)
+              <span class="ruby-identifier">site</span>=<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>)
+              <span class="ruby-identifier">login_url</span>=<span class="ruby-identifier">site</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;wp-login.php&quot;</span>
+  <span class="ruby-identifier">k</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">UrlChecker</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">response_code</span>(<span class="ruby-identifier">login_url</span>) <span class="ruby-operator">==</span> <span class="ruby-value">200</span>
+    <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">doc</span>=<span class="ruby-identifier">read_url</span>(<span class="ruby-identifier">login_url</span>)
+    <span class="ruby-identifier">links</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">&#39;link&#39;</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">links</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/login.min.css/i</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-wp_meta-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wp_meta?</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Wordpress detection checkpoint - meta generator</p>
+          
+          
+
+          
+          <div class="method-source-code" id="wp_meta-3F-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_meta?</span>(<span class="ruby-identifier">url</span>)
+              <span class="ruby-identifier">site</span>=<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">k</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">UrlChecker</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">response_code</span>(<span class="ruby-identifier">site</span>) <span class="ruby-operator">==</span> <span class="ruby-value">200</span>
+    <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">doc</span>=<span class="ruby-identifier">read_url</span>(<span class="ruby-identifier">site</span>)
+    <span class="ruby-identifier">meta</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">&#39;meta&#39;</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">meta</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/wordpress/i</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-wp_readme-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wp_readme?</span><span
+            class="method-args">(site)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Wordpress detection checkpoint - readme.html</p>
+          
+          
+
+          
+          <div class="method-source-code" id="wp_readme-3F-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_readme?</span>(<span class="ruby-identifier">site</span>)
+  <span class="ruby-identifier">readme_url</span>=<span class="ruby-identifier">site</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;readme.html&quot;</span>
+  <span class="ruby-identifier">k</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">UrlChecker</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">response_code</span>(<span class="ruby-identifier">readme_url</span>) <span class="ruby-operator">==</span> <span class="ruby-value">200</span>
+    <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">doc</span>=<span class="ruby-identifier">read_url</span>(<span class="ruby-identifier">readme_url</span>)
+    <span class="ruby-identifier">title</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">&#39;title&#39;</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">title</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/wordpress/i</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-wp_rpc-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wp_rpc?</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Wordpress detection checkpoint - xml-rpc</p>
+          
+          
+
+          
+          <div class="method-source-code" id="wp_rpc-3F-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_rpc?</span>(<span class="ruby-identifier">url</span>)
+              <span class="ruby-identifier">site</span>=<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>)
+              <span class="ruby-identifier">rpc_url</span>=<span class="ruby-identifier">site</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;xmlrpc.php&quot;</span>
+  <span class="ruby-identifier">k</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">UrlChecker</span>.<span class="ruby-identifier">new</span>
+              <span class="ruby-comment">#puts &quot;res code&quot;, k.response_code(rpc_url)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">response_code</span>(<span class="ruby-identifier">rpc_url</span>) <span class="ruby-operator">==</span> <span class="ruby-value">405</span> <span class="ruby-comment"># method not allowed</span>
+    <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-wp_ver" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wp_ver</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Extract the WordPress version</p>
+          
+          
+
+          
+          <div class="method-source-code" id="wp_ver-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 291</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_ver</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">wp_ver_readme</span>(<span class="ruby-identifier">url</span>).<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">wp_ver_readme</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">wp_ver_meta</span>(<span class="ruby-identifier">url</span>).<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">wp_ver_meta</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">wp_ver_login</span>(<span class="ruby-identifier">url</span>,<span class="ruby-string">&quot;login.min.css&quot;</span>).<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">wp_ver_login</span>(<span class="ruby-identifier">url</span>,<span class="ruby-string">&quot;login.min.css&quot;</span>)
+        <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">wp_ver_login</span>(<span class="ruby-identifier">url</span>,<span class="ruby-string">&quot;buttons.min.css&quot;</span>).<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">wp_ver_login</span>(<span class="ruby-identifier">url</span>,<span class="ruby-string">&quot;buttons.min.css&quot;</span>)
+        <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">wp_ver_login</span>(<span class="ruby-identifier">url</span>,<span class="ruby-string">&quot;wp-admin.min.css&quot;</span>).<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">wp_ver_login</span>(<span class="ruby-identifier">url</span>,<span class="ruby-string">&quot;wp-admin.min.css&quot;</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-wp_ver_login" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wp_ver_login</span><span
+            class="method-args">(url,pattern)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Identify wordpress version through the login page</p>
+          
+          
+
+          
+          <div class="method-source-code" id="wp_ver_login-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_ver_login</span>(<span class="ruby-identifier">url</span>,<span class="ruby-identifier">pattern</span>)
+              <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Check for #{pattern}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+              <span class="ruby-identifier">site</span>=<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>)
+              <span class="ruby-identifier">login_url</span>=<span class="ruby-identifier">site</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;wp-login.php&quot;</span>
+  <span class="ruby-identifier">k</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">UrlChecker</span>.<span class="ruby-identifier">new</span>
+              <span class="ruby-comment">#puts &quot;Res code: #{k.response_code(login_url)}&quot; if @verbose</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">response_code</span>(<span class="ruby-identifier">login_url</span>) <span class="ruby-operator">==</span> <span class="ruby-value">200</span>
+    <span class="ruby-identifier">doc</span>=<span class="ruby-identifier">read_url</span>(<span class="ruby-identifier">login_url</span>)
+                      <span class="ruby-comment">#puts doc.inspect</span>
+    <span class="ruby-identifier">links</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">&#39;link&#39;</span>)
+                      <span class="ruby-comment">#puts links.inspect if @verbose</span>
+                      <span class="ruby-identifier">links</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tag</span><span class="ruby-operator">|</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">pattern</span>)
+                                      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                                      <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+              <span class="ruby-keyword">return</span> <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\d+\.]+\d+/</span>).<span class="ruby-identifier">first</span>
+            <span class="ruby-keyword">end</span>
+                      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-wp_ver_meta" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wp_ver_meta</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Identify wordpress version through the meta link</p>
+          
+          
+
+          
+          <div class="method-source-code" id="wp_ver_meta-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 332</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_ver_meta</span>(<span class="ruby-identifier">url</span>)
+              <span class="ruby-identifier">site</span>=<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">k</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">UrlChecker</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">response_code</span>(<span class="ruby-identifier">site</span>) <span class="ruby-operator">==</span> <span class="ruby-value">200</span>
+    <span class="ruby-identifier">doc</span>=<span class="ruby-identifier">read_url</span>(<span class="ruby-identifier">site</span>)
+                      <span class="ruby-comment">#puts doc.inspect</span>
+    <span class="ruby-identifier">meta</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">&#39;meta&#39;</span>)
+                      <span class="ruby-comment">#puts meta.inspect</span>
+                      <span class="ruby-identifier">meta</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tag</span><span class="ruby-operator">|</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/wordpress/i</span>
+                                      <span class="ruby-comment">#puts tag.to_s</span>
+                                      <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+              <span class="ruby-keyword">return</span> <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\d+\.]+\d+/</span>).<span class="ruby-identifier">first</span>
+            <span class="ruby-keyword">end</span>
+                      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-wp_ver_readme" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wp_ver_readme</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Wordpress version detection via - readme.html</p>
+          
+          
+
+          
+          <div class="method-source-code" id="wp_ver_readme-source">
+            <pre><span class="ruby-comment"># File lib/wmap/wp_tracker.rb, line 353</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_ver_readme</span>(<span class="ruby-identifier">url</span>)
+              <span class="ruby-identifier">site</span>=<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">readme_url</span>=<span class="ruby-identifier">site</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;readme.html&quot;</span>
+  <span class="ruby-identifier">k</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">UrlChecker</span>.<span class="ruby-identifier">new</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Res code: #{k.response_code(readme_url)}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">response_code</span>(<span class="ruby-identifier">readme_url</span>) <span class="ruby-operator">==</span> <span class="ruby-value">200</span>
+    <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">doc</span>=<span class="ruby-identifier">read_url</span>(<span class="ruby-identifier">readme_url</span>)
+                      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">doc</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+    <span class="ruby-identifier">logo</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">&#39;h1#logo&#39;</span>)[<span class="ruby-value">0</span>]
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">logo</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                      <span class="ruby-keyword">return</span> <span class="ruby-identifier">logo</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\d+\.]+\d+/</span>).<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">k</span>=<span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

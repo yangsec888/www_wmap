@@ -1,0 +1,69 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    var domains_editor = CodeMirror(document.getElementById("domainsImportTextArea"), {
+      mode: "null",
+      lineNumbers: true,
+      extraKeys: {
+        "Ctrl-Space": "autocomplete"
+      },
+      value: ""
+    });
+
+    $('#save_domains_button').click(function() {
+      $.ajax({
+        url: "save_import",
+        type: "POST",
+        dataType: 'json',
+        data: {
+          "file_path": "",
+          "file_content": domains_editor.getDoc().getValue()
+        },
+        success: function(response) {
+          //console.log(response);
+          if  (response['message']=="Access Denied.") {
+            alert("Access Denied.")
+          } else if (response['message']=="Error exceeding import limit of 10 entries.") {
+            alert("Error Import Limit - please contact the administrator for help!")
+          } else {
+            alert("Success: " + response['message']);
+            window.location = "/domains/start"
+          }
+
+        },
+        error: function(response) {
+          //console.log(response);
+          alert("Error:" + response['message'])
+        }
+      });
+    });
+  });
+</script>
+
+<div class="row">
+
+  <div class=" col-md-9 col-lg-9">
+    <% data = String.new %>
+    <% Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir) %>
+    <% File.new(@file, 'w+') unless File.exist?(@file) %>
+    <p>
+    <h4>Please enter the domains to be imported below:</h4>
+    <button type="button" class="pull-right btn btn-default" title="Import Instructions"
+      data-container="body" data-toggle="popover" data-placement="right"
+      data-content="Domains Import Format: <br>
+      <ul><li>  domain only  </li>
+          <li> Maximum 10 domains per import </li>
+          <li> One entry per line </li>
+          <li> The entry can be duplicate </li>
+          <li> The entry can be already in system (and will be ignored)  </li>
+      </ul>
+          "><span class="glyphicon glyphicon-question-sign"></span>Domains Format</button>
+  </div>
+</div>
+
+<div class=" col-md-9 col-lg-9">
+    <div class ="CodeMirror" id="domainsImportTextArea"></div>
+    <p>
+    <button class="btn btn-primary" id="save_domains_button" type="submit">Save</button>
+    </br>
+</div>
+<div class="row"></div>

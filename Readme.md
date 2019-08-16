@@ -1,23 +1,36 @@
-# WMAP Demo App
+[<img src='/wmap_logo.jpg' width='350' height='350'>](https://github.com/yangsec888/wmap)
+=====================
 
-The web app is developed under Ruby on Rails framework, in order to showcase the basic usage of the wmap library. To explore further and utilize the full power of wmap library, please refer to the Documents section.
+- [Wmap Web Portal](#wmap-web-portal)
+- [Technology Stacks](#technology-stacks)
+- [Local Installation](#local-installation)
+- [Production Instance Setup](#production-instance-setup)
+- [Usage](#usage)
+- [To Dos](#to-dos)
+
+---
+
+### Wmap Web Portal
+
+The web app is based on the OWASP Wmap App. It's developed to help keep track of web application asset. To further explore the full power of OWASP Wmap library, please refer to the <a href="https://github.com/yangsec888/wmap" target="_blank"> WMAP </a> Got repository.
 
 
 ### Technology Stacks
 
-WMAP Demo App depends on a number of open source projects to work properly:
+WMAP Web Portal depends on a number of open source projects to work properly:
 
-* [Ruby on Rails] - A web-application framework that includes everything!
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [devise] - Rails app authentication and user session management solution
-* [wmap](https://github.com/yangsec888/wmap) - Web Mapper gem of course
+* [Ruby on Rails 5.x](https://rubyonrails.org/) - A web-application framework that includes everything.
+* [Devise](https://github.com/plataformatec/devise/wiki) - Rails authentication and user session management solution.
+* [Twitter Bootstrap](https://getbootstrap.com/) - A great UI boilerplate for modern web apps.
+* [jQuery](https://jquery.com/) - Great JavaScript library for JavaScript integration.
+* [CodeMirror](https://codemirror.net/) - CodeMirror is a versatile text editor implemented in JavaScript.
+* [jstree](https://www.jstree.com/) -  jsTree is a JavaScript based tree UI implementation.
+* [wmap](https://github.com/yangsec888/wmap) - Backend Web Mapper gem for the heavy lifting.
 
-
-WMAP Demo App is open source with a [www_wmap] project on GitHub.
 
 ### Local Installation
 
-WMAP Demo App requires [Ruby on Rails](http://rubyonrails.org) v5.1.4 and [Mysql](https://www.mysql.com/) database to run.
+WMAP App requires [Ruby on Rails](http://rubyonrails.org) v5.2.1 and [MariaDB](https://www.mysql.com/) database to run properly.
 
 Install the environment dependencies, and ensure the database server is running. For example, in our Linux / Mac laptop,
 
@@ -29,32 +42,17 @@ $ rake db:migration
 $ rails server
 ```
 
-### Live Demo
-
-* [Demo Wmap Portal](http://wmap.io/) See this demo app in the action.
+### Production Instance Setup
+The application is deployed into production instance at [wmap](https://wmap.io/). The running environment setup can be found [here](Setup.md)
 
 
 ### Usage
 Under the home page, click on "Start" button to start. Follow the on-screen instructions, in order to launch a successfully WMAP discovery. The discovery result should be tracked under the "Discovery" menu tab.
 
-### Todos
+### To Dos
 
- - Write protection code :)
- - Write more features (refer to wmap bin utilities)
- - Write (unit, deployment) tests
- - Enhance Performance
- - Fix Bugs!
-
-### License
-----
-https://creativecommons.org/licenses/
-
-**Free Software**
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-   [wmap]: <https://github.com/yangsec888/wmap>
-   [www_wmap]: <https://github.com/yangsec888/www_wmap>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [Ruby on Rails]: <http://rubyonrails.org>
-   [devise]: <https://github.com/plataformatec/devise>
+ - Package this up into a docker container
+ - Write defensible code :)
+ - Write (integration, deployment) tests
+ - Enhance performance (squeeze the next bit out of cpu / network IO )
+ - Fix bugs!

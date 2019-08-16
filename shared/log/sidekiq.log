@@ -1,14 +1,1827 @@
-# Logfile created on 2018-02-05 18:13:22 -0500 by logger.rb/56504
-2018-02-05T23:13:25.914Z 19429 TID-ovnzw1lzs INFO: Running in ruby 2.2.6p396 (2016-11-15 revision 56800) [x86_64-darwin16]
-2018-02-05T23:13:25.914Z 19429 TID-ovnzw1lzs INFO: See LICENSE and the LGPL-3.0 for licensing details.
-2018-02-05T23:13:25.914Z 19429 TID-ovnzw1lzs INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
-2018-02-05T23:13:25.914Z 19429 TID-ovnzw1lzs INFO: Booting Sidekiq 5.0.5 with redis options {:id=>"Sidekiq-server-PID-19429", :url=>nil}
-2018-02-05T23:13:25.919Z 19429 TID-ovnzw1lzs INFO: Starting processing, hit Ctrl-C to stop
-2018-02-06T13:20:14.339Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: start
-2018-02-06T13:29:31.469Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: Discovery successful!
-2018-02-06T13:29:31.532Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: Sending out email notice to: yli8@yahoo.com
-2018-02-06T13:29:32.240Z 19429 TID-ovo10cjvs DiscoveryWorker JID-03b810913166e466d854eb83 INFO: done: 557.901 sec
-2018-02-08T23:18:02.623Z 19429 TID-ovo10cjvs DiscoveryWorker JID-85cd773847eef2f53223fdd1 INFO: start
-2018-02-08T23:18:04.307Z 19429 TID-ovo10cjvs DiscoveryWorker JID-85cd773847eef2f53223fdd1 INFO: Discovery successful!
-2018-02-08T23:18:04.369Z 19429 TID-ovo10cjvs DiscoveryWorker JID-85cd773847eef2f53223fdd1 INFO: Sending out email notice to: yli8@yahoo.com
-2018-02-08T23:18:04.425Z 19429 TID-ovo10cjvs DiscoveryWorker JID-85cd773847eef2f53223fdd1 INFO: done: 1.802 sec
+# Logfile created on 2019-05-20 15:08:05 -0400 by logger.rb/61378
+2019-05-20T19:08:12.606Z 32893 TID-ox4n8y4b1 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin17]
+2019-05-20T19:08:12.606Z 32893 TID-ox4n8y4b1 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2019-05-20T19:08:12.607Z 32893 TID-ox4n8y4b1 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2019-05-20T19:08:12.607Z 32893 TID-ox4n8y4b1 INFO: Booting Sidekiq 5.2.5 with redis options {:id=>"Sidekiq-server-PID-32893", :url=>nil}
+2019-05-20T19:08:12.609Z 32893 TID-ox4n8y4b1 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2019-05-20T19:08:12.609Z 32893 TID-ox4n8y4b1 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2019-05-20T19:08:12.610Z 32893 TID-ox4n8y4b1 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00007fe14712ba58>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=PrhWmap::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>false, :concurrency=>5}, :daemon=>true, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"nymit056325.us.randomhouse.com:32893:67c5a4f52a7a"}
+2019-05-20T19:08:12.619Z 32893 TID-ox4ncz6m9 UpdateWorker JID-1bd70c083c0d3dc4dbb489de INFO: start
+Start parsing Excel workbook file: /Users/sli/www_wmap/uploads/DomainPortfolio-division_1.xlsx
+Parsing workbook row: 1
+Parsing workbook row: 2
+Parsing workbook row: 3
+Parsing workbook row: 4
+Parsing workbook row: 5
+Parsing workbook row: 6
+Parsing workbook row: 7
+Parsing workbook row: 8
+Parsing workbook row: 9
+Parsing workbook row: 10
+Parsing workbook row: 11
+Parsing workbook row: 12
+Parsing workbook row: 13
+Parsing workbook row: 14
+Parsing workbook row: 15
+Parsing workbook row: 16
+Parsing workbook row: 17
+Parsing workbook row: 18
+Parsing workbook row: 19
+Parsing workbook row: 20
+Parsing workbook row: 21
+Parsing workbook row: 22
+Parsing workbook row: 23
+Parsing workbook row: 24
+Parsing workbook row: 25
+Parsing workbook row: 26
+Parsing workbook row: 27
+Parsing workbook row: 28
+Parsing workbook row: 29
+Parsing workbook row: 30
+Parsing workbook row: 31
+Parsing workbook row: 32
+Parsing workbook row: 33
+Parsing workbook row: 34
+Parsing workbook row: 35
+Parsing workbook row: 36
+Parsing workbook row: 37
+Parsing workbook row: 38
+Parsing workbook row: 39
+Parsing workbook row: 40
+Parsing workbook row: 41
+Parsing workbook row: 42
+Parsing workbook row: 43
+Parsing workbook row: 44
+Parsing workbook row: 45
+Parsing workbook row: 46
+Parsing workbook row: 47
+Parsing workbook row: 48
+Parsing workbook row: 49
+Parsing workbook row: 50
+Parsing workbook row: 51
+Parsing workbook row: 52
+Porfolio data structure: {1=>{"Domain Name"=>"assassinscreed2walkthrough.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 2=>{"Domain Name"=>"battlefield2cheats.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 3=>{"Domain Name"=>"brady-guides.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 4=>{"Domain Name"=>"bradygames.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.primagames.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 5=>{"Domain Name"=>"bradygames.xxx", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 6=>{"Domain Name"=>"commandandconquercheats.com", "Imprint"=>"DK Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 7=>{"Domain Name"=>"completeidiot.biz", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 8=>{"Domain Name"=>"completeidiot.net", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 9=>{"Domain Name"=>"completeidiot.org", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 10=>{"Domain Name"=>"completeidiotguides.biz", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 11=>{"Domain Name"=>"completeidiotsguide.xxx", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 12=>{"Domain Name"=>"cuttheclutterbook.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/books/539016/cut-the-clutter-by-cynthia-ewer/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 13=>{"Domain Name"=>"cuttheclutterdropthepounds.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/books/592760/lose-the-clutter-lose-the-weight-by-peter-walsh-bestselling-author-and-host-of-oprah-winfreys-extreme-clutter/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 14=>{"Domain Name"=>"daocacademy.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 15=>{"Domain Name"=>"dkinthekitchen.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 16=>{"Domain Name"=>"dkmapresidents.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 17=>{"Domain Name"=>"dragonagewalkthrough.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 18=>{"Domain Name"=>"fasttrackguides.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 19=>{"Domain Name"=>"fasttrackguides.net", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 20=>{"Domain Name"=>"fasttrackguides.org", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 21=>{"Domain Name"=>"fasttracksweeps.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://crownpublishing.com/archives/imprint/broadway-books", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 22=>{"Domain Name"=>"gameofthronesmini.com", "Imprint"=>"DK Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 23=>{"Domain Name"=>"halo3odststrategy.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 24=>{"Domain Name"=>"haloreachgamecheats.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 25=>{"Domain Name"=>"idiotguides.biz", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 26=>{"Domain Name"=>"maddenseasonpass.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 27=>{"Domain Name"=>"primabooks.biz", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 28=>{"Domain Name"=>"primabooks.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 29=>{"Domain Name"=>"primadarksiders2strategy.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 30=>{"Domain Name"=>"primagames.biz", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 31=>{"Domain Name"=>"primagames.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 32=>{"Domain Name"=>"primagames.net", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 33=>{"Domain Name"=>"primagames.org", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 34=>{"Domain Name"=>"primagamesdev.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 35=>{"Domain Name"=>"primagamesinapp.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 36=>{"Domain Name"=>"primagamessucks.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 37=>{"Domain Name"=>"primagamestest.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 38=>{"Domain Name"=>"primapub.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 39=>{"Domain Name"=>"primapublishing.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 40=>{"Domain Name"=>"roughguides.net", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 41=>{"Domain Name"=>"sims3wa.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 42=>{"Domain Name"=>"stormoperatives.biz", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 43=>{"Domain Name"=>"stormoperatives.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 44=>{"Domain Name"=>"stormoperatives.net", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 45=>{"Domain Name"=>"stormoperatives.org", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 46=>{"Domain Name"=>"stormoperatives.us", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 47=>{"Domain Name"=>"streetfightertips.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 48=>{"Domain Name"=>"undertaker25yearsofdestruction.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 49=>{"Domain Name"=>"verticalgardeningbook.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 50=>{"Domain Name"=>"worldsgreatestpartygame.net", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 51=>{"Domain Name"=>"wwebookoftop10s.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}}
+Update domain table ...
+Update domain record: ["assassinscreed2walkthrough.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: assassinscreed2walkthrough.com
+Update domain record: ["battlefield2cheats.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: battlefield2cheats.com
+Update domain record: ["brady-guides.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: brady-guides.com
+Update domain record: ["bradygames.com", "Prima Games", "DK", "", "https://www.primagames.com/", "", "", "", "", ""]
+Domain update complete with: bradygames.com
+Update domain record: ["bradygames.xxx", "DK", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: bradygames.xxx
+Update domain record: ["commandandconquercheats.com", "DK Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: commandandconquercheats.com
+Update domain record: ["completeidiot.biz", "DK", "DK", "", "https://www.dk.com/us", "", "", "", "", ""]
+Domain update complete with: completeidiot.biz
+Update domain record: ["completeidiot.net", "DK", "DK", "", "https://www.dk.com/us", "", "", "", "", ""]
+Domain update complete with: completeidiot.net
+Update domain record: ["completeidiot.org", "DK", "DK", "", "https://www.dk.com/us", "", "", "", "", ""]
+Domain update complete with: completeidiot.org
+Update domain record: ["completeidiotguides.biz", "DK", "DK", "", "https://www.dk.com/us", "", "", "", "", ""]
+Domain update complete with: completeidiotguides.biz
+Update domain record: ["completeidiotsguide.xxx", "DK", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: completeidiotsguide.xxx
+Update domain record: ["cuttheclutterbook.com", "DK", "DK", "", "https://www.penguinrandomhouse.com/books/539016/cut-the-clutter-by-cynthia-ewer/", "", "", "", "", ""]
+Domain update complete with: cuttheclutterbook.com
+Update domain record: ["cuttheclutterdropthepounds.com", "DK", "DK", "", "https://www.penguinrandomhouse.com/books/592760/lose-the-clutter-lose-the-weight-by-peter-walsh-bestselling-author-and-host-of-oprah-winfreys-extreme-clutter/", "", "", "", "", ""]
+Domain update complete with: cuttheclutterdropthepounds.com
+Update domain record: ["daocacademy.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: daocacademy.com
+Update domain record: ["dkinthekitchen.com", "DK", "DK", "", "http://www.penguin.com/", "", "", "", "", ""]
+Domain update complete with: dkinthekitchen.com
+Update domain record: ["dkmapresidents.com", "DK", "DK", "", "https://www.penguinrandomhouse.com/", "", "", "", "", ""]
+Domain update complete with: dkmapresidents.com
+Update domain record: ["dragonagewalkthrough.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: dragonagewalkthrough.com
+Update domain record: ["fasttrackguides.com", "DK", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: fasttrackguides.com
+Update domain record: ["fasttrackguides.net", "DK", "DK", "", "https://www.penguinrandomhouse.com/", "", "", "", "", ""]
+Domain update complete with: fasttrackguides.net
+Update domain record: ["fasttrackguides.org", "DK", "DK", "", "https://www.penguinrandomhouse.com/", "", "", "", "", ""]
+Domain update complete with: fasttrackguides.org
+Update domain record: ["fasttracksweeps.com", "DK", "DK", "", "http://crownpublishing.com/archives/imprint/broadway-books", "", "", "", "", ""]
+Domain update complete with: fasttracksweeps.com
+Update domain record: ["gameofthronesmini.com", "DK Games", "DK", "", "https://www.penguinrandomhouse.com/", "", "", "", "", ""]
+Domain update complete with: gameofthronesmini.com
+Update domain record: ["halo3odststrategy.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: halo3odststrategy.com
+Update domain record: ["haloreachgamecheats.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: haloreachgamecheats.com
+Update domain record: ["idiotguides.biz", "DK", "DK", "", "https://www.dk.com/us", "", "", "", "", ""]
+Domain update complete with: idiotguides.biz
+Update domain record: ["maddenseasonpass.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: maddenseasonpass.com
+Update domain record: ["primabooks.biz", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primabooks.biz
+Update domain record: ["primabooks.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primabooks.com
+Update domain record: ["primadarksiders2strategy.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primadarksiders2strategy.com
+Update domain record: ["primagames.biz", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primagames.biz
+Update domain record: ["primagames.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primagames.com
+Update domain record: ["primagames.net", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primagames.net
+Update domain record: ["primagames.org", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primagames.org
+Update domain record: ["primagamesdev.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primagamesdev.com
+Update domain record: ["primagamesinapp.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primagamesinapp.com
+Update domain record: ["primagamessucks.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primagamessucks.com
+Update domain record: ["primagamestest.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primagamestest.com
+Update domain record: ["primapub.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primapub.com
+Update domain record: ["primapublishing.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: primapublishing.com
+Update domain record: ["roughguides.net", "DK", "DK", "", "http://www.penguin.com/", "", "", "", "", ""]
+Domain update complete with: roughguides.net
+Update domain record: ["sims3wa.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: sims3wa.com
+Update domain record: ["stormoperatives.biz", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: stormoperatives.biz
+Update domain record: ["stormoperatives.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: stormoperatives.com
+Update domain record: ["stormoperatives.net", "Prima Games", "DK", "", "http://www.penguin.com/", "", "", "", "", ""]
+Domain update complete with: stormoperatives.net
+Update domain record: ["stormoperatives.org", "Prima Games", "DK", "", "http://www.penguin.com/", "", "", "", "", ""]
+Domain update complete with: stormoperatives.org
+Update domain record: ["stormoperatives.us", "Prima Games", "DK", "", "http://www.penguin.com/", "", "", "", "", ""]
+Domain update complete with: stormoperatives.us
+Update domain record: ["streetfightertips.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: streetfightertips.com
+Update domain record: ["undertaker25yearsofdestruction.com", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: undertaker25yearsofdestruction.com
+Update domain record: ["verticalgardeningbook.com", "DK", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: verticalgardeningbook.com
+Update domain record: ["worldsgreatestpartygame.net", "Prima Games", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: worldsgreatestpartygame.net
+Update domain record: ["wwebookoftop10s.com", "DK", "DK", "", "", "", "", "", "", ""]
+Domain update complete with: wwebookoftop10s.com
+Domain is already exist. Skipping: assassinscreed2walkthrough.com
+Domain is already exist. Skipping: battlefield2cheats.com
+Domain is already exist. Skipping: brady-guides.com
+Domain is already exist. Skipping: bradygames.com
+Domain is already exist. Skipping: bradygames.xxx
+Domain is already exist. Skipping: commandandconquercheats.com
+Domain is already exist. Skipping: completeidiot.biz
+Domain is already exist. Skipping: completeidiot.net
+Domain is already exist. Skipping: completeidiot.org
+Domain is already exist. Skipping: completeidiotguides.biz
+Domain is already exist. Skipping: completeidiotsguide.xxx
+Domain is already exist. Skipping: cuttheclutterbook.com
+Domain is already exist. Skipping: cuttheclutterdropthepounds.com
+Domain is already exist. Skipping: daocacademy.com
+Domain is already exist. Skipping: dkinthekitchen.com
+Domain is already exist. Skipping: dkmapresidents.com
+Domain is already exist. Skipping: dragonagewalkthrough.com
+Domain is already exist. Skipping: fasttrackguides.com
+Domain is already exist. Skipping: fasttrackguides.net
+Domain is already exist. Skipping: fasttrackguides.org
+Domain is already exist. Skipping: fasttracksweeps.com
+Domain is already exist. Skipping: gameofthronesmini.com
+Domain is already exist. Skipping: halo3odststrategy.com
+Domain is already exist. Skipping: haloreachgamecheats.com
+Domain is already exist. Skipping: idiotguides.biz
+Domain is already exist. Skipping: maddenseasonpass.com
+Domain is already exist. Skipping: primabooks.biz
+Domain is already exist. Skipping: primabooks.com
+Domain is already exist. Skipping: primadarksiders2strategy.com
+Domain is already exist. Skipping: primagames.biz
+Domain is already exist. Skipping: primagames.com
+Domain is already exist. Skipping: primagames.net
+Domain is already exist. Skipping: primagames.org
+Domain is already exist. Skipping: primagamesdev.com
+Domain is already exist. Skipping: primagamesinapp.com
+Domain is already exist. Skipping: primagamessucks.com
+Domain is already exist. Skipping: primagamestest.com
+Domain is already exist. Skipping: primapub.com
+Domain is already exist. Skipping: primapublishing.com
+Domain is already exist. Skipping: roughguides.net
+Domain is already exist. Skipping: sims3wa.com
+Domain is already exist. Skipping: stormoperatives.biz
+Domain is already exist. Skipping: stormoperatives.com
+Domain is already exist. Skipping: stormoperatives.net
+Domain is already exist. Skipping: stormoperatives.org
+Domain is already exist. Skipping: stormoperatives.us
+Domain is already exist. Skipping: streetfightertips.com
+Domain is already exist. Skipping: undertaker25yearsofdestruction.com
+Domain is already exist. Skipping: verticalgardeningbook.com
+Domain is already exist. Skipping: worldsgreatestpartygame.net
+Domain is already exist. Skipping: wwebookoftop10s.com
+Domain cache table is successfully saved: /Users/sli/wmap/lib/wmap/../../data/domains
+Upate the zone transferable flag in the domain table. 
+assassinscreed2walkthrough.com is not transferable
+Update the transferable flag: false
+battlefield2cheats.com is not transferable
+Update the transferable flag: false
+brady-guides.com is not transferable
+Update the transferable flag: false
+bradygames.com is not transferable
+Update the transferable flag: false
+bradygames.xxx is not transferable
+Update the transferable flag: false
+commandandconquercheats.com is not transferable
+Update the transferable flag: false
+completeidiot.biz is not transferable
+Update the transferable flag: false
+completeidiot.net is not transferable
+Update the transferable flag: false
+completeidiot.org is not transferable
+Update the transferable flag: false
+completeidiotguides.biz is not transferable
+Update the transferable flag: false
+completeidiotsguide.xxx is not transferable
+Update the transferable flag: false
+cuttheclutterbook.com is not transferable
+Update the transferable flag: false
+cuttheclutterdropthepounds.com is not transferable
+Update the transferable flag: false
+daocacademy.com is not transferable
+Update the transferable flag: false
+dkinthekitchen.com is not transferable
+Update the transferable flag: false
+dkmapresidents.com is not transferable
+Update the transferable flag: false
+dragonagewalkthrough.com is not transferable
+Update the transferable flag: false
+fasttrackguides.com is not transferable
+Update the transferable flag: false
+fasttrackguides.net is not transferable
+Update the transferable flag: false
+fasttrackguides.org is not transferable
+Update the transferable flag: false
+fasttracksweeps.com is not transferable
+Update the transferable flag: false
+gameofthronesmini.com is not transferable
+Update the transferable flag: false
+halo3odststrategy.com is not transferable
+Update the transferable flag: false
+haloreachgamecheats.com is not transferable
+Update the transferable flag: false
+idiotguides.biz is not transferable
+Update the transferable flag: false
+maddenseasonpass.com is not transferable
+Update the transferable flag: false
+primabooks.biz is not transferable
+Update the transferable flag: false
+primabooks.com is not transferable
+Update the transferable flag: false
+primadarksiders2strategy.com is not transferable
+Update the transferable flag: false
+primagames.biz is not transferable
+Update the transferable flag: false
+primagames.com is not transferable
+Update the transferable flag: false
+primagames.net is not transferable
+Update the transferable flag: false
+primagames.org is not transferable
+Update the transferable flag: false
+primagamesdev.com is not transferable
+Update the transferable flag: false
+primagamesinapp.com is not transferable
+Update the transferable flag: false
+primagamessucks.com is not transferable
+Update the transferable flag: false
+primagamestest.com is not transferable
+Update the transferable flag: false
+primapub.com is not transferable
+Update the transferable flag: false
+primapublishing.com is not transferable
+Update the transferable flag: false
+roughguides.net is not transferable
+Update the transferable flag: false
+sims3wa.com is not transferable
+Update the transferable flag: false
+stormoperatives.biz is not transferable
+Update the transferable flag: false
+stormoperatives.com is not transferable
+Update the transferable flag: false
+stormoperatives.net is not transferable
+Update the transferable flag: false
+stormoperatives.org is not transferable
+Update the transferable flag: false
+stormoperatives.us is not transferable
+Update the transferable flag: false
+streetfightertips.com is not transferable
+Update the transferable flag: false
+undertaker25yearsofdestruction.com is not transferable
+Update the transferable flag: false
+verticalgardeningbook.com is not transferable
+Update the transferable flag: false
+worldsgreatestpartygame.net is not transferable
+Update the transferable flag: false
+wwebookoftop10s.com is not transferable
+Update the transferable flag: false
+Generating divisional domain portfolio report: {1=>{"Domain Name"=>"assassinscreed2walkthrough.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 2=>{"Domain Name"=>"battlefield2cheats.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 3=>{"Domain Name"=>"brady-guides.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 4=>{"Domain Name"=>"bradygames.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.primagames.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 5=>{"Domain Name"=>"bradygames.xxx", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 6=>{"Domain Name"=>"commandandconquercheats.com", "Imprint"=>"DK Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 7=>{"Domain Name"=>"completeidiot.biz", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 8=>{"Domain Name"=>"completeidiot.net", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 9=>{"Domain Name"=>"completeidiot.org", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 10=>{"Domain Name"=>"completeidiotguides.biz", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 11=>{"Domain Name"=>"completeidiotsguide.xxx", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 12=>{"Domain Name"=>"cuttheclutterbook.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/books/539016/cut-the-clutter-by-cynthia-ewer/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 13=>{"Domain Name"=>"cuttheclutterdropthepounds.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/books/592760/lose-the-clutter-lose-the-weight-by-peter-walsh-bestselling-author-and-host-of-oprah-winfreys-extreme-clutter/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 14=>{"Domain Name"=>"daocacademy.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 15=>{"Domain Name"=>"dkinthekitchen.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 16=>{"Domain Name"=>"dkmapresidents.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 17=>{"Domain Name"=>"dragonagewalkthrough.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 18=>{"Domain Name"=>"fasttrackguides.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 19=>{"Domain Name"=>"fasttrackguides.net", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 20=>{"Domain Name"=>"fasttrackguides.org", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 21=>{"Domain Name"=>"fasttracksweeps.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://crownpublishing.com/archives/imprint/broadway-books", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 22=>{"Domain Name"=>"gameofthronesmini.com", "Imprint"=>"DK Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 23=>{"Domain Name"=>"halo3odststrategy.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 24=>{"Domain Name"=>"haloreachgamecheats.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 25=>{"Domain Name"=>"idiotguides.biz", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 26=>{"Domain Name"=>"maddenseasonpass.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 27=>{"Domain Name"=>"primabooks.biz", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 28=>{"Domain Name"=>"primabooks.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 29=>{"Domain Name"=>"primadarksiders2strategy.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 30=>{"Domain Name"=>"primagames.biz", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 31=>{"Domain Name"=>"primagames.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 32=>{"Domain Name"=>"primagames.net", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 33=>{"Domain Name"=>"primagames.org", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 34=>{"Domain Name"=>"primagamesdev.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 35=>{"Domain Name"=>"primagamesinapp.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 36=>{"Domain Name"=>"primagamessucks.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 37=>{"Domain Name"=>"primagamestest.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 38=>{"Domain Name"=>"primapub.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 39=>{"Domain Name"=>"primapublishing.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 40=>{"Domain Name"=>"roughguides.net", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 41=>{"Domain Name"=>"sims3wa.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 42=>{"Domain Name"=>"stormoperatives.biz", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 43=>{"Domain Name"=>"stormoperatives.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 44=>{"Domain Name"=>"stormoperatives.net", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 45=>{"Domain Name"=>"stormoperatives.org", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 46=>{"Domain Name"=>"stormoperatives.us", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 47=>{"Domain Name"=>"streetfightertips.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 48=>{"Domain Name"=>"undertaker25yearsofdestruction.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 49=>{"Domain Name"=>"verticalgardeningbook.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 50=>{"Domain Name"=>"worldsgreatestpartygame.net", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}, 51=>{"Domain Name"=>"wwebookoftop10s.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}}
+Writing record into the spreadsheet: ["Domain Name", "Imprint", "Divison", "Keep, Release, Redirect?", "Current Redirect", "New Redirect", "Website", "Primary IP", "Port", "Hosting Status", "Website", "Primary IP", "Port", "Hosting Status", "Server", "Response Code", "MD5 Fingerprint", "Detected Redirection", "Timestamp", "WordPress", "WordPress Version"]
+Write to cell [0,0]: Domain Name
+Write to cell [0,1]: Imprint
+Write to cell [0,2]: Divison
+Write to cell [0,3]: Keep, Release, Redirect?
+Write to cell [0,4]: Current Redirect
+Write to cell [0,5]: New Redirect
+Write to cell [0,6]: Website
+Write to cell [0,7]: Primary IP
+Write to cell [0,8]: Port
+Write to cell [0,9]: Hosting Status
+Write to cell [0,10]: Website
+Write to cell [0,11]: Primary IP
+Write to cell [0,12]: Port
+Write to cell [0,13]: Hosting Status
+Write to cell [0,14]: Server
+Write to cell [0,15]: Response Code
+Write to cell [0,16]: MD5 Fingerprint
+Write to cell [0,17]: Detected Redirection
+Write to cell [0,18]: Timestamp
+Write to cell [0,19]: WordPress
+Write to cell [0,20]: WordPress Version
+Processing row: 1, {"Domain Name"=>"assassinscreed2walkthrough.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: assassinscreed2walkthrough.com
+Writing record into the spreadsheet: ["assassinscreed2walkthrough.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [1,0]: assassinscreed2walkthrough.com
+Write to cell [1,1]: Prima Games
+Write to cell [1,2]: DK
+Write to cell [1,3]: 
+Write to cell [1,4]: 
+Write to cell [1,5]: 
+Write to cell [1,6]: 
+Write to cell [1,7]: 
+Write to cell [1,8]: 
+Write to cell [1,9]: 
+Write to cell [1,10]: 
+Write to cell [1,11]: 
+Write to cell [1,12]: 
+Write to cell [1,13]: 
+Write to cell [1,14]: 
+Write to cell [1,15]: 
+Write to cell [1,16]: 
+Write to cell [1,17]: 
+Write to cell [1,18]: 
+Write to cell [1,19]: 
+Write to cell [1,20]: 
+Processing row: 2, {"Domain Name"=>"battlefield2cheats.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: battlefield2cheats.com
+Writing record into the spreadsheet: ["battlefield2cheats.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [2,0]: battlefield2cheats.com
+Write to cell [2,1]: Prima Games
+Write to cell [2,2]: DK
+Write to cell [2,3]: 
+Write to cell [2,4]: 
+Write to cell [2,5]: 
+Write to cell [2,6]: 
+Write to cell [2,7]: 
+Write to cell [2,8]: 
+Write to cell [2,9]: 
+Write to cell [2,10]: 
+Write to cell [2,11]: 
+Write to cell [2,12]: 
+Write to cell [2,13]: 
+Write to cell [2,14]: 
+Write to cell [2,15]: 
+Write to cell [2,16]: 
+Write to cell [2,17]: 
+Write to cell [2,18]: 
+Write to cell [2,19]: 
+Write to cell [2,20]: 
+Processing row: 3, {"Domain Name"=>"brady-guides.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: brady-guides.com
+Writing record into the spreadsheet: ["brady-guides.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [3,0]: brady-guides.com
+Write to cell [3,1]: Prima Games
+Write to cell [3,2]: DK
+Write to cell [3,3]: 
+Write to cell [3,4]: 
+Write to cell [3,5]: 
+Write to cell [3,6]: 
+Write to cell [3,7]: 
+Write to cell [3,8]: 
+Write to cell [3,9]: 
+Write to cell [3,10]: 
+Write to cell [3,11]: 
+Write to cell [3,12]: 
+Write to cell [3,13]: 
+Write to cell [3,14]: 
+Write to cell [3,15]: 
+Write to cell [3,16]: 
+Write to cell [3,17]: 
+Write to cell [3,18]: 
+Write to cell [3,19]: 
+Write to cell [3,20]: 
+Processing row: 4, {"Domain Name"=>"bradygames.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.primagames.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: bradygames.com
+Writing record into the spreadsheet: ["bradygames.com", "Prima Games", "DK", "", "https://www.primagames.com/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [4,0]: bradygames.com
+Write to cell [4,1]: Prima Games
+Write to cell [4,2]: DK
+Write to cell [4,3]: 
+Write to cell [4,4]: https://www.primagames.com/
+Write to cell [4,5]: 
+Write to cell [4,6]: 
+Write to cell [4,7]: 
+Write to cell [4,8]: 
+Write to cell [4,9]: 
+Write to cell [4,10]: 
+Write to cell [4,11]: 
+Write to cell [4,12]: 
+Write to cell [4,13]: 
+Write to cell [4,14]: 
+Write to cell [4,15]: 
+Write to cell [4,16]: 
+Write to cell [4,17]: 
+Write to cell [4,18]: 
+Write to cell [4,19]: 
+Write to cell [4,20]: 
+Processing row: 5, {"Domain Name"=>"bradygames.xxx", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: bradygames.xxx
+Writing record into the spreadsheet: ["bradygames.xxx", "DK", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [5,0]: bradygames.xxx
+Write to cell [5,1]: DK
+Write to cell [5,2]: DK
+Write to cell [5,3]: 
+Write to cell [5,4]: 
+Write to cell [5,5]: 
+Write to cell [5,6]: 
+Write to cell [5,7]: 
+Write to cell [5,8]: 
+Write to cell [5,9]: 
+Write to cell [5,10]: 
+Write to cell [5,11]: 
+Write to cell [5,12]: 
+Write to cell [5,13]: 
+Write to cell [5,14]: 
+Write to cell [5,15]: 
+Write to cell [5,16]: 
+Write to cell [5,17]: 
+Write to cell [5,18]: 
+Write to cell [5,19]: 
+Write to cell [5,20]: 
+Processing row: 6, {"Domain Name"=>"commandandconquercheats.com", "Imprint"=>"DK Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: commandandconquercheats.com
+Writing record into the spreadsheet: ["commandandconquercheats.com", "DK Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [6,0]: commandandconquercheats.com
+Write to cell [6,1]: DK Games
+Write to cell [6,2]: DK
+Write to cell [6,3]: 
+Write to cell [6,4]: 
+Write to cell [6,5]: 
+Write to cell [6,6]: 
+Write to cell [6,7]: 
+Write to cell [6,8]: 
+Write to cell [6,9]: 
+Write to cell [6,10]: 
+Write to cell [6,11]: 
+Write to cell [6,12]: 
+Write to cell [6,13]: 
+Write to cell [6,14]: 
+Write to cell [6,15]: 
+Write to cell [6,16]: 
+Write to cell [6,17]: 
+Write to cell [6,18]: 
+Write to cell [6,19]: 
+Write to cell [6,20]: 
+Processing row: 7, {"Domain Name"=>"completeidiot.biz", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: completeidiot.biz
+Writing record into the spreadsheet: ["completeidiot.biz", "DK", "DK", "", "https://www.dk.com/us", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [7,0]: completeidiot.biz
+Write to cell [7,1]: DK
+Write to cell [7,2]: DK
+Write to cell [7,3]: 
+Write to cell [7,4]: https://www.dk.com/us
+Write to cell [7,5]: 
+Write to cell [7,6]: 
+Write to cell [7,7]: 
+Write to cell [7,8]: 
+Write to cell [7,9]: 
+Write to cell [7,10]: 
+Write to cell [7,11]: 
+Write to cell [7,12]: 
+Write to cell [7,13]: 
+Write to cell [7,14]: 
+Write to cell [7,15]: 
+Write to cell [7,16]: 
+Write to cell [7,17]: 
+Write to cell [7,18]: 
+Write to cell [7,19]: 
+Write to cell [7,20]: 
+Processing row: 8, {"Domain Name"=>"completeidiot.net", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: completeidiot.net
+Writing record into the spreadsheet: ["completeidiot.net", "DK", "DK", "", "https://www.dk.com/us", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [8,0]: completeidiot.net
+Write to cell [8,1]: DK
+Write to cell [8,2]: DK
+Write to cell [8,3]: 
+Write to cell [8,4]: https://www.dk.com/us
+Write to cell [8,5]: 
+Write to cell [8,6]: 
+Write to cell [8,7]: 
+Write to cell [8,8]: 
+Write to cell [8,9]: 
+Write to cell [8,10]: 
+Write to cell [8,11]: 
+Write to cell [8,12]: 
+Write to cell [8,13]: 
+Write to cell [8,14]: 
+Write to cell [8,15]: 
+Write to cell [8,16]: 
+Write to cell [8,17]: 
+Write to cell [8,18]: 
+Write to cell [8,19]: 
+Write to cell [8,20]: 
+Processing row: 9, {"Domain Name"=>"completeidiot.org", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: completeidiot.org
+Writing record into the spreadsheet: ["completeidiot.org", "DK", "DK", "", "https://www.dk.com/us", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [9,0]: completeidiot.org
+Write to cell [9,1]: DK
+Write to cell [9,2]: DK
+Write to cell [9,3]: 
+Write to cell [9,4]: https://www.dk.com/us
+Write to cell [9,5]: 
+Write to cell [9,6]: 
+Write to cell [9,7]: 
+Write to cell [9,8]: 
+Write to cell [9,9]: 
+Write to cell [9,10]: 
+Write to cell [9,11]: 
+Write to cell [9,12]: 
+Write to cell [9,13]: 
+Write to cell [9,14]: 
+Write to cell [9,15]: 
+Write to cell [9,16]: 
+Write to cell [9,17]: 
+Write to cell [9,18]: 
+Write to cell [9,19]: 
+Write to cell [9,20]: 
+Processing row: 10, {"Domain Name"=>"completeidiotguides.biz", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: completeidiotguides.biz
+Writing record into the spreadsheet: ["completeidiotguides.biz", "DK", "DK", "", "https://www.dk.com/us", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [10,0]: completeidiotguides.biz
+Write to cell [10,1]: DK
+Write to cell [10,2]: DK
+Write to cell [10,3]: 
+Write to cell [10,4]: https://www.dk.com/us
+Write to cell [10,5]: 
+Write to cell [10,6]: 
+Write to cell [10,7]: 
+Write to cell [10,8]: 
+Write to cell [10,9]: 
+Write to cell [10,10]: 
+Write to cell [10,11]: 
+Write to cell [10,12]: 
+Write to cell [10,13]: 
+Write to cell [10,14]: 
+Write to cell [10,15]: 
+Write to cell [10,16]: 
+Write to cell [10,17]: 
+Write to cell [10,18]: 
+Write to cell [10,19]: 
+Write to cell [10,20]: 
+Processing row: 11, {"Domain Name"=>"completeidiotsguide.xxx", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: completeidiotsguide.xxx
+Writing record into the spreadsheet: ["completeidiotsguide.xxx", "DK", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [11,0]: completeidiotsguide.xxx
+Write to cell [11,1]: DK
+Write to cell [11,2]: DK
+Write to cell [11,3]: 
+Write to cell [11,4]: 
+Write to cell [11,5]: 
+Write to cell [11,6]: 
+Write to cell [11,7]: 
+Write to cell [11,8]: 
+Write to cell [11,9]: 
+Write to cell [11,10]: 
+Write to cell [11,11]: 
+Write to cell [11,12]: 
+Write to cell [11,13]: 
+Write to cell [11,14]: 
+Write to cell [11,15]: 
+Write to cell [11,16]: 
+Write to cell [11,17]: 
+Write to cell [11,18]: 
+Write to cell [11,19]: 
+Write to cell [11,20]: 
+Processing row: 12, {"Domain Name"=>"cuttheclutterbook.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/books/539016/cut-the-clutter-by-cynthia-ewer/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: cuttheclutterbook.com
+Writing record into the spreadsheet: ["cuttheclutterbook.com", "DK", "DK", "", "https://www.penguinrandomhouse.com/books/539016/cut-the-clutter-by-cynthia-ewer/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [12,0]: cuttheclutterbook.com
+Write to cell [12,1]: DK
+Write to cell [12,2]: DK
+Write to cell [12,3]: 
+Write to cell [12,4]: https://www.penguinrandomhouse.com/books/539016/cut-the-clutter-by-cynthia-ewer/
+Write to cell [12,5]: 
+Write to cell [12,6]: 
+Write to cell [12,7]: 
+Write to cell [12,8]: 
+Write to cell [12,9]: 
+Write to cell [12,10]: 
+Write to cell [12,11]: 
+Write to cell [12,12]: 
+Write to cell [12,13]: 
+Write to cell [12,14]: 
+Write to cell [12,15]: 
+Write to cell [12,16]: 
+Write to cell [12,17]: 
+Write to cell [12,18]: 
+Write to cell [12,19]: 
+Write to cell [12,20]: 
+Processing row: 13, {"Domain Name"=>"cuttheclutterdropthepounds.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/books/592760/lose-the-clutter-lose-the-weight-by-peter-walsh-bestselling-author-and-host-of-oprah-winfreys-extreme-clutter/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: cuttheclutterdropthepounds.com
+Writing record into the spreadsheet: ["cuttheclutterdropthepounds.com", "DK", "DK", "", "https://www.penguinrandomhouse.com/books/592760/lose-the-clutter-lose-the-weight-by-peter-walsh-bestselling-author-and-host-of-oprah-winfreys-extreme-clutter/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [13,0]: cuttheclutterdropthepounds.com
+Write to cell [13,1]: DK
+Write to cell [13,2]: DK
+Write to cell [13,3]: 
+Write to cell [13,4]: https://www.penguinrandomhouse.com/books/592760/lose-the-clutter-lose-the-weight-by-peter-walsh-bestselling-author-and-host-of-oprah-winfreys-extreme-clutter/
+Write to cell [13,5]: 
+Write to cell [13,6]: 
+Write to cell [13,7]: 
+Write to cell [13,8]: 
+Write to cell [13,9]: 
+Write to cell [13,10]: 
+Write to cell [13,11]: 
+Write to cell [13,12]: 
+Write to cell [13,13]: 
+Write to cell [13,14]: 
+Write to cell [13,15]: 
+Write to cell [13,16]: 
+Write to cell [13,17]: 
+Write to cell [13,18]: 
+Write to cell [13,19]: 
+Write to cell [13,20]: 
+Processing row: 14, {"Domain Name"=>"daocacademy.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: daocacademy.com
+Writing record into the spreadsheet: ["daocacademy.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [14,0]: daocacademy.com
+Write to cell [14,1]: Prima Games
+Write to cell [14,2]: DK
+Write to cell [14,3]: 
+Write to cell [14,4]: 
+Write to cell [14,5]: 
+Write to cell [14,6]: 
+Write to cell [14,7]: 
+Write to cell [14,8]: 
+Write to cell [14,9]: 
+Write to cell [14,10]: 
+Write to cell [14,11]: 
+Write to cell [14,12]: 
+Write to cell [14,13]: 
+Write to cell [14,14]: 
+Write to cell [14,15]: 
+Write to cell [14,16]: 
+Write to cell [14,17]: 
+Write to cell [14,18]: 
+Write to cell [14,19]: 
+Write to cell [14,20]: 
+Processing row: 15, {"Domain Name"=>"dkinthekitchen.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: dkinthekitchen.com
+Writing record into the spreadsheet: ["dkinthekitchen.com", "DK", "DK", "", "http://www.penguin.com/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [15,0]: dkinthekitchen.com
+Write to cell [15,1]: DK
+Write to cell [15,2]: DK
+Write to cell [15,3]: 
+Write to cell [15,4]: http://www.penguin.com/
+Write to cell [15,5]: 
+Write to cell [15,6]: 
+Write to cell [15,7]: 
+Write to cell [15,8]: 
+Write to cell [15,9]: 
+Write to cell [15,10]: 
+Write to cell [15,11]: 
+Write to cell [15,12]: 
+Write to cell [15,13]: 
+Write to cell [15,14]: 
+Write to cell [15,15]: 
+Write to cell [15,16]: 
+Write to cell [15,17]: 
+Write to cell [15,18]: 
+Write to cell [15,19]: 
+Write to cell [15,20]: 
+Processing row: 16, {"Domain Name"=>"dkmapresidents.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: dkmapresidents.com
+Writing record into the spreadsheet: ["dkmapresidents.com", "DK", "DK", "", "https://www.penguinrandomhouse.com/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [16,0]: dkmapresidents.com
+Write to cell [16,1]: DK
+Write to cell [16,2]: DK
+Write to cell [16,3]: 
+Write to cell [16,4]: https://www.penguinrandomhouse.com/
+Write to cell [16,5]: 
+Write to cell [16,6]: 
+Write to cell [16,7]: 
+Write to cell [16,8]: 
+Write to cell [16,9]: 
+Write to cell [16,10]: 
+Write to cell [16,11]: 
+Write to cell [16,12]: 
+Write to cell [16,13]: 
+Write to cell [16,14]: 
+Write to cell [16,15]: 
+Write to cell [16,16]: 
+Write to cell [16,17]: 
+Write to cell [16,18]: 
+Write to cell [16,19]: 
+Write to cell [16,20]: 
+Processing row: 17, {"Domain Name"=>"dragonagewalkthrough.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: dragonagewalkthrough.com
+Writing record into the spreadsheet: ["dragonagewalkthrough.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [17,0]: dragonagewalkthrough.com
+Write to cell [17,1]: Prima Games
+Write to cell [17,2]: DK
+Write to cell [17,3]: 
+Write to cell [17,4]: 
+Write to cell [17,5]: 
+Write to cell [17,6]: 
+Write to cell [17,7]: 
+Write to cell [17,8]: 
+Write to cell [17,9]: 
+Write to cell [17,10]: 
+Write to cell [17,11]: 
+Write to cell [17,12]: 
+Write to cell [17,13]: 
+Write to cell [17,14]: 
+Write to cell [17,15]: 
+Write to cell [17,16]: 
+Write to cell [17,17]: 
+Write to cell [17,18]: 
+Write to cell [17,19]: 
+Write to cell [17,20]: 
+Processing row: 18, {"Domain Name"=>"fasttrackguides.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: fasttrackguides.com
+Writing record into the spreadsheet: ["fasttrackguides.com", "DK", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [18,0]: fasttrackguides.com
+Write to cell [18,1]: DK
+Write to cell [18,2]: DK
+Write to cell [18,3]: 
+Write to cell [18,4]: 
+Write to cell [18,5]: 
+Write to cell [18,6]: 
+Write to cell [18,7]: 
+Write to cell [18,8]: 
+Write to cell [18,9]: 
+Write to cell [18,10]: 
+Write to cell [18,11]: 
+Write to cell [18,12]: 
+Write to cell [18,13]: 
+Write to cell [18,14]: 
+Write to cell [18,15]: 
+Write to cell [18,16]: 
+Write to cell [18,17]: 
+Write to cell [18,18]: 
+Write to cell [18,19]: 
+Write to cell [18,20]: 
+Processing row: 19, {"Domain Name"=>"fasttrackguides.net", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: fasttrackguides.net
+Writing record into the spreadsheet: ["fasttrackguides.net", "DK", "DK", "", "https://www.penguinrandomhouse.com/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [19,0]: fasttrackguides.net
+Write to cell [19,1]: DK
+Write to cell [19,2]: DK
+Write to cell [19,3]: 
+Write to cell [19,4]: https://www.penguinrandomhouse.com/
+Write to cell [19,5]: 
+Write to cell [19,6]: 
+Write to cell [19,7]: 
+Write to cell [19,8]: 
+Write to cell [19,9]: 
+Write to cell [19,10]: 
+Write to cell [19,11]: 
+Write to cell [19,12]: 
+Write to cell [19,13]: 
+Write to cell [19,14]: 
+Write to cell [19,15]: 
+Write to cell [19,16]: 
+Write to cell [19,17]: 
+Write to cell [19,18]: 
+Write to cell [19,19]: 
+Write to cell [19,20]: 
+Processing row: 20, {"Domain Name"=>"fasttrackguides.org", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: fasttrackguides.org
+Writing record into the spreadsheet: ["fasttrackguides.org", "DK", "DK", "", "https://www.penguinrandomhouse.com/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [20,0]: fasttrackguides.org
+Write to cell [20,1]: DK
+Write to cell [20,2]: DK
+Write to cell [20,3]: 
+Write to cell [20,4]: https://www.penguinrandomhouse.com/
+Write to cell [20,5]: 
+Write to cell [20,6]: 
+Write to cell [20,7]: 
+Write to cell [20,8]: 
+Write to cell [20,9]: 
+Write to cell [20,10]: 
+Write to cell [20,11]: 
+Write to cell [20,12]: 
+Write to cell [20,13]: 
+Write to cell [20,14]: 
+Write to cell [20,15]: 
+Write to cell [20,16]: 
+Write to cell [20,17]: 
+Write to cell [20,18]: 
+Write to cell [20,19]: 
+Write to cell [20,20]: 
+Processing row: 21, {"Domain Name"=>"fasttracksweeps.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://crownpublishing.com/archives/imprint/broadway-books", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: fasttracksweeps.com
+Writing record into the spreadsheet: ["fasttracksweeps.com", "DK", "DK", "", "http://crownpublishing.com/archives/imprint/broadway-books", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [21,0]: fasttracksweeps.com
+Write to cell [21,1]: DK
+Write to cell [21,2]: DK
+Write to cell [21,3]: 
+Write to cell [21,4]: http://crownpublishing.com/archives/imprint/broadway-books
+Write to cell [21,5]: 
+Write to cell [21,6]: 
+Write to cell [21,7]: 
+Write to cell [21,8]: 
+Write to cell [21,9]: 
+Write to cell [21,10]: 
+Write to cell [21,11]: 
+Write to cell [21,12]: 
+Write to cell [21,13]: 
+Write to cell [21,14]: 
+Write to cell [21,15]: 
+Write to cell [21,16]: 
+Write to cell [21,17]: 
+Write to cell [21,18]: 
+Write to cell [21,19]: 
+Write to cell [21,20]: 
+Processing row: 22, {"Domain Name"=>"gameofthronesmini.com", "Imprint"=>"DK Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.penguinrandomhouse.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: gameofthronesmini.com
+Writing record into the spreadsheet: ["gameofthronesmini.com", "DK Games", "DK", "", "https://www.penguinrandomhouse.com/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [22,0]: gameofthronesmini.com
+Write to cell [22,1]: DK Games
+Write to cell [22,2]: DK
+Write to cell [22,3]: 
+Write to cell [22,4]: https://www.penguinrandomhouse.com/
+Write to cell [22,5]: 
+Write to cell [22,6]: 
+Write to cell [22,7]: 
+Write to cell [22,8]: 
+Write to cell [22,9]: 
+Write to cell [22,10]: 
+Write to cell [22,11]: 
+Write to cell [22,12]: 
+Write to cell [22,13]: 
+Write to cell [22,14]: 
+Write to cell [22,15]: 
+Write to cell [22,16]: 
+Write to cell [22,17]: 
+Write to cell [22,18]: 
+Write to cell [22,19]: 
+Write to cell [22,20]: 
+Processing row: 23, {"Domain Name"=>"halo3odststrategy.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: halo3odststrategy.com
+Writing record into the spreadsheet: ["halo3odststrategy.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [23,0]: halo3odststrategy.com
+Write to cell [23,1]: Prima Games
+Write to cell [23,2]: DK
+Write to cell [23,3]: 
+Write to cell [23,4]: 
+Write to cell [23,5]: 
+Write to cell [23,6]: 
+Write to cell [23,7]: 
+Write to cell [23,8]: 
+Write to cell [23,9]: 
+Write to cell [23,10]: 
+Write to cell [23,11]: 
+Write to cell [23,12]: 
+Write to cell [23,13]: 
+Write to cell [23,14]: 
+Write to cell [23,15]: 
+Write to cell [23,16]: 
+Write to cell [23,17]: 
+Write to cell [23,18]: 
+Write to cell [23,19]: 
+Write to cell [23,20]: 
+Processing row: 24, {"Domain Name"=>"haloreachgamecheats.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: haloreachgamecheats.com
+Writing record into the spreadsheet: ["haloreachgamecheats.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [24,0]: haloreachgamecheats.com
+Write to cell [24,1]: Prima Games
+Write to cell [24,2]: DK
+Write to cell [24,3]: 
+Write to cell [24,4]: 
+Write to cell [24,5]: 
+Write to cell [24,6]: 
+Write to cell [24,7]: 
+Write to cell [24,8]: 
+Write to cell [24,9]: 
+Write to cell [24,10]: 
+Write to cell [24,11]: 
+Write to cell [24,12]: 
+Write to cell [24,13]: 
+Write to cell [24,14]: 
+Write to cell [24,15]: 
+Write to cell [24,16]: 
+Write to cell [24,17]: 
+Write to cell [24,18]: 
+Write to cell [24,19]: 
+Write to cell [24,20]: 
+Processing row: 25, {"Domain Name"=>"idiotguides.biz", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"https://www.dk.com/us", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: idiotguides.biz
+Writing record into the spreadsheet: ["idiotguides.biz", "DK", "DK", "", "https://www.dk.com/us", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [25,0]: idiotguides.biz
+Write to cell [25,1]: DK
+Write to cell [25,2]: DK
+Write to cell [25,3]: 
+Write to cell [25,4]: https://www.dk.com/us
+Write to cell [25,5]: 
+Write to cell [25,6]: 
+Write to cell [25,7]: 
+Write to cell [25,8]: 
+Write to cell [25,9]: 
+Write to cell [25,10]: 
+Write to cell [25,11]: 
+Write to cell [25,12]: 
+Write to cell [25,13]: 
+Write to cell [25,14]: 
+Write to cell [25,15]: 
+Write to cell [25,16]: 
+Write to cell [25,17]: 
+Write to cell [25,18]: 
+Write to cell [25,19]: 
+Write to cell [25,20]: 
+Processing row: 26, {"Domain Name"=>"maddenseasonpass.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: maddenseasonpass.com
+Writing record into the spreadsheet: ["maddenseasonpass.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [26,0]: maddenseasonpass.com
+Write to cell [26,1]: Prima Games
+Write to cell [26,2]: DK
+Write to cell [26,3]: 
+Write to cell [26,4]: 
+Write to cell [26,5]: 
+Write to cell [26,6]: 
+Write to cell [26,7]: 
+Write to cell [26,8]: 
+Write to cell [26,9]: 
+Write to cell [26,10]: 
+Write to cell [26,11]: 
+Write to cell [26,12]: 
+Write to cell [26,13]: 
+Write to cell [26,14]: 
+Write to cell [26,15]: 
+Write to cell [26,16]: 
+Write to cell [26,17]: 
+Write to cell [26,18]: 
+Write to cell [26,19]: 
+Write to cell [26,20]: 
+Processing row: 27, {"Domain Name"=>"primabooks.biz", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primabooks.biz
+Writing record into the spreadsheet: ["primabooks.biz", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [27,0]: primabooks.biz
+Write to cell [27,1]: Prima Games
+Write to cell [27,2]: DK
+Write to cell [27,3]: 
+Write to cell [27,4]: 
+Write to cell [27,5]: 
+Write to cell [27,6]: 
+Write to cell [27,7]: 
+Write to cell [27,8]: 
+Write to cell [27,9]: 
+Write to cell [27,10]: 
+Write to cell [27,11]: 
+Write to cell [27,12]: 
+Write to cell [27,13]: 
+Write to cell [27,14]: 
+Write to cell [27,15]: 
+Write to cell [27,16]: 
+Write to cell [27,17]: 
+Write to cell [27,18]: 
+Write to cell [27,19]: 
+Write to cell [27,20]: 
+Processing row: 28, {"Domain Name"=>"primabooks.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primabooks.com
+Writing record into the spreadsheet: ["primabooks.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [28,0]: primabooks.com
+Write to cell [28,1]: Prima Games
+Write to cell [28,2]: DK
+Write to cell [28,3]: 
+Write to cell [28,4]: 
+Write to cell [28,5]: 
+Write to cell [28,6]: 
+Write to cell [28,7]: 
+Write to cell [28,8]: 
+Write to cell [28,9]: 
+Write to cell [28,10]: 
+Write to cell [28,11]: 
+Write to cell [28,12]: 
+Write to cell [28,13]: 
+Write to cell [28,14]: 
+Write to cell [28,15]: 
+Write to cell [28,16]: 
+Write to cell [28,17]: 
+Write to cell [28,18]: 
+Write to cell [28,19]: 
+Write to cell [28,20]: 
+Processing row: 29, {"Domain Name"=>"primadarksiders2strategy.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primadarksiders2strategy.com
+Writing record into the spreadsheet: ["primadarksiders2strategy.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [29,0]: primadarksiders2strategy.com
+Write to cell [29,1]: Prima Games
+Write to cell [29,2]: DK
+Write to cell [29,3]: 
+Write to cell [29,4]: 
+Write to cell [29,5]: 
+Write to cell [29,6]: 
+Write to cell [29,7]: 
+Write to cell [29,8]: 
+Write to cell [29,9]: 
+Write to cell [29,10]: 
+Write to cell [29,11]: 
+Write to cell [29,12]: 
+Write to cell [29,13]: 
+Write to cell [29,14]: 
+Write to cell [29,15]: 
+Write to cell [29,16]: 
+Write to cell [29,17]: 
+Write to cell [29,18]: 
+Write to cell [29,19]: 
+Write to cell [29,20]: 
+Processing row: 30, {"Domain Name"=>"primagames.biz", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primagames.biz
+Writing record into the spreadsheet: ["primagames.biz", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [30,0]: primagames.biz
+Write to cell [30,1]: Prima Games
+Write to cell [30,2]: DK
+Write to cell [30,3]: 
+Write to cell [30,4]: 
+Write to cell [30,5]: 
+Write to cell [30,6]: 
+Write to cell [30,7]: 
+Write to cell [30,8]: 
+Write to cell [30,9]: 
+Write to cell [30,10]: 
+Write to cell [30,11]: 
+Write to cell [30,12]: 
+Write to cell [30,13]: 
+Write to cell [30,14]: 
+Write to cell [30,15]: 
+Write to cell [30,16]: 
+Write to cell [30,17]: 
+Write to cell [30,18]: 
+Write to cell [30,19]: 
+Write to cell [30,20]: 
+Processing row: 31, {"Domain Name"=>"primagames.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primagames.com
+Writing record into the spreadsheet: ["primagames.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [31,0]: primagames.com
+Write to cell [31,1]: Prima Games
+Write to cell [31,2]: DK
+Write to cell [31,3]: 
+Write to cell [31,4]: 
+Write to cell [31,5]: 
+Write to cell [31,6]: 
+Write to cell [31,7]: 
+Write to cell [31,8]: 
+Write to cell [31,9]: 
+Write to cell [31,10]: 
+Write to cell [31,11]: 
+Write to cell [31,12]: 
+Write to cell [31,13]: 
+Write to cell [31,14]: 
+Write to cell [31,15]: 
+Write to cell [31,16]: 
+Write to cell [31,17]: 
+Write to cell [31,18]: 
+Write to cell [31,19]: 
+Write to cell [31,20]: 
+Processing row: 32, {"Domain Name"=>"primagames.net", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primagames.net
+Writing record into the spreadsheet: ["primagames.net", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [32,0]: primagames.net
+Write to cell [32,1]: Prima Games
+Write to cell [32,2]: DK
+Write to cell [32,3]: 
+Write to cell [32,4]: 
+Write to cell [32,5]: 
+Write to cell [32,6]: 
+Write to cell [32,7]: 
+Write to cell [32,8]: 
+Write to cell [32,9]: 
+Write to cell [32,10]: 
+Write to cell [32,11]: 
+Write to cell [32,12]: 
+Write to cell [32,13]: 
+Write to cell [32,14]: 
+Write to cell [32,15]: 
+Write to cell [32,16]: 
+Write to cell [32,17]: 
+Write to cell [32,18]: 
+Write to cell [32,19]: 
+Write to cell [32,20]: 
+Processing row: 33, {"Domain Name"=>"primagames.org", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primagames.org
+Writing record into the spreadsheet: ["primagames.org", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [33,0]: primagames.org
+Write to cell [33,1]: Prima Games
+Write to cell [33,2]: DK
+Write to cell [33,3]: 
+Write to cell [33,4]: 
+Write to cell [33,5]: 
+Write to cell [33,6]: 
+Write to cell [33,7]: 
+Write to cell [33,8]: 
+Write to cell [33,9]: 
+Write to cell [33,10]: 
+Write to cell [33,11]: 
+Write to cell [33,12]: 
+Write to cell [33,13]: 
+Write to cell [33,14]: 
+Write to cell [33,15]: 
+Write to cell [33,16]: 
+Write to cell [33,17]: 
+Write to cell [33,18]: 
+Write to cell [33,19]: 
+Write to cell [33,20]: 
+Processing row: 34, {"Domain Name"=>"primagamesdev.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primagamesdev.com
+Writing record into the spreadsheet: ["primagamesdev.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [34,0]: primagamesdev.com
+Write to cell [34,1]: Prima Games
+Write to cell [34,2]: DK
+Write to cell [34,3]: 
+Write to cell [34,4]: 
+Write to cell [34,5]: 
+Write to cell [34,6]: 
+Write to cell [34,7]: 
+Write to cell [34,8]: 
+Write to cell [34,9]: 
+Write to cell [34,10]: 
+Write to cell [34,11]: 
+Write to cell [34,12]: 
+Write to cell [34,13]: 
+Write to cell [34,14]: 
+Write to cell [34,15]: 
+Write to cell [34,16]: 
+Write to cell [34,17]: 
+Write to cell [34,18]: 
+Write to cell [34,19]: 
+Write to cell [34,20]: 
+Processing row: 35, {"Domain Name"=>"primagamesinapp.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primagamesinapp.com
+Writing record into the spreadsheet: ["primagamesinapp.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [35,0]: primagamesinapp.com
+Write to cell [35,1]: Prima Games
+Write to cell [35,2]: DK
+Write to cell [35,3]: 
+Write to cell [35,4]: 
+Write to cell [35,5]: 
+Write to cell [35,6]: 
+Write to cell [35,7]: 
+Write to cell [35,8]: 
+Write to cell [35,9]: 
+Write to cell [35,10]: 
+Write to cell [35,11]: 
+Write to cell [35,12]: 
+Write to cell [35,13]: 
+Write to cell [35,14]: 
+Write to cell [35,15]: 
+Write to cell [35,16]: 
+Write to cell [35,17]: 
+Write to cell [35,18]: 
+Write to cell [35,19]: 
+Write to cell [35,20]: 
+Processing row: 36, {"Domain Name"=>"primagamessucks.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primagamessucks.com
+Writing record into the spreadsheet: ["primagamessucks.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [36,0]: primagamessucks.com
+Write to cell [36,1]: Prima Games
+Write to cell [36,2]: DK
+Write to cell [36,3]: 
+Write to cell [36,4]: 
+Write to cell [36,5]: 
+Write to cell [36,6]: 
+Write to cell [36,7]: 
+Write to cell [36,8]: 
+Write to cell [36,9]: 
+Write to cell [36,10]: 
+Write to cell [36,11]: 
+Write to cell [36,12]: 
+Write to cell [36,13]: 
+Write to cell [36,14]: 
+Write to cell [36,15]: 
+Write to cell [36,16]: 
+Write to cell [36,17]: 
+Write to cell [36,18]: 
+Write to cell [36,19]: 
+Write to cell [36,20]: 
+Processing row: 37, {"Domain Name"=>"primagamestest.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primagamestest.com
+Writing record into the spreadsheet: ["primagamestest.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [37,0]: primagamestest.com
+Write to cell [37,1]: Prima Games
+Write to cell [37,2]: DK
+Write to cell [37,3]: 
+Write to cell [37,4]: 
+Write to cell [37,5]: 
+Write to cell [37,6]: 
+Write to cell [37,7]: 
+Write to cell [37,8]: 
+Write to cell [37,9]: 
+Write to cell [37,10]: 
+Write to cell [37,11]: 
+Write to cell [37,12]: 
+Write to cell [37,13]: 
+Write to cell [37,14]: 
+Write to cell [37,15]: 
+Write to cell [37,16]: 
+Write to cell [37,17]: 
+Write to cell [37,18]: 
+Write to cell [37,19]: 
+Write to cell [37,20]: 
+Processing row: 38, {"Domain Name"=>"primapub.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primapub.com
+Writing record into the spreadsheet: ["primapub.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [38,0]: primapub.com
+Write to cell [38,1]: Prima Games
+Write to cell [38,2]: DK
+Write to cell [38,3]: 
+Write to cell [38,4]: 
+Write to cell [38,5]: 
+Write to cell [38,6]: 
+Write to cell [38,7]: 
+Write to cell [38,8]: 
+Write to cell [38,9]: 
+Write to cell [38,10]: 
+Write to cell [38,11]: 
+Write to cell [38,12]: 
+Write to cell [38,13]: 
+Write to cell [38,14]: 
+Write to cell [38,15]: 
+Write to cell [38,16]: 
+Write to cell [38,17]: 
+Write to cell [38,18]: 
+Write to cell [38,19]: 
+Write to cell [38,20]: 
+Processing row: 39, {"Domain Name"=>"primapublishing.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: primapublishing.com
+Writing record into the spreadsheet: ["primapublishing.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [39,0]: primapublishing.com
+Write to cell [39,1]: Prima Games
+Write to cell [39,2]: DK
+Write to cell [39,3]: 
+Write to cell [39,4]: 
+Write to cell [39,5]: 
+Write to cell [39,6]: 
+Write to cell [39,7]: 
+Write to cell [39,8]: 
+Write to cell [39,9]: 
+Write to cell [39,10]: 
+Write to cell [39,11]: 
+Write to cell [39,12]: 
+Write to cell [39,13]: 
+Write to cell [39,14]: 
+Write to cell [39,15]: 
+Write to cell [39,16]: 
+Write to cell [39,17]: 
+Write to cell [39,18]: 
+Write to cell [39,19]: 
+Write to cell [39,20]: 
+Processing row: 40, {"Domain Name"=>"roughguides.net", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: roughguides.net
+Writing record into the spreadsheet: ["roughguides.net", "DK", "DK", "", "http://www.penguin.com/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [40,0]: roughguides.net
+Write to cell [40,1]: DK
+Write to cell [40,2]: DK
+Write to cell [40,3]: 
+Write to cell [40,4]: http://www.penguin.com/
+Write to cell [40,5]: 
+Write to cell [40,6]: 
+Write to cell [40,7]: 
+Write to cell [40,8]: 
+Write to cell [40,9]: 
+Write to cell [40,10]: 
+Write to cell [40,11]: 
+Write to cell [40,12]: 
+Write to cell [40,13]: 
+Write to cell [40,14]: 
+Write to cell [40,15]: 
+Write to cell [40,16]: 
+Write to cell [40,17]: 
+Write to cell [40,18]: 
+Write to cell [40,19]: 
+Write to cell [40,20]: 
+Processing row: 41, {"Domain Name"=>"sims3wa.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: sims3wa.com
+Writing record into the spreadsheet: ["sims3wa.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [41,0]: sims3wa.com
+Write to cell [41,1]: Prima Games
+Write to cell [41,2]: DK
+Write to cell [41,3]: 
+Write to cell [41,4]: 
+Write to cell [41,5]: 
+Write to cell [41,6]: 
+Write to cell [41,7]: 
+Write to cell [41,8]: 
+Write to cell [41,9]: 
+Write to cell [41,10]: 
+Write to cell [41,11]: 
+Write to cell [41,12]: 
+Write to cell [41,13]: 
+Write to cell [41,14]: 
+Write to cell [41,15]: 
+Write to cell [41,16]: 
+Write to cell [41,17]: 
+Write to cell [41,18]: 
+Write to cell [41,19]: 
+Write to cell [41,20]: 
+Processing row: 42, {"Domain Name"=>"stormoperatives.biz", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: stormoperatives.biz
+Writing record into the spreadsheet: ["stormoperatives.biz", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [42,0]: stormoperatives.biz
+Write to cell [42,1]: Prima Games
+Write to cell [42,2]: DK
+Write to cell [42,3]: 
+Write to cell [42,4]: 
+Write to cell [42,5]: 
+Write to cell [42,6]: 
+Write to cell [42,7]: 
+Write to cell [42,8]: 
+Write to cell [42,9]: 
+Write to cell [42,10]: 
+Write to cell [42,11]: 
+Write to cell [42,12]: 
+Write to cell [42,13]: 
+Write to cell [42,14]: 
+Write to cell [42,15]: 
+Write to cell [42,16]: 
+Write to cell [42,17]: 
+Write to cell [42,18]: 
+Write to cell [42,19]: 
+Write to cell [42,20]: 
+Processing row: 43, {"Domain Name"=>"stormoperatives.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: stormoperatives.com
+Writing record into the spreadsheet: ["stormoperatives.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [43,0]: stormoperatives.com
+Write to cell [43,1]: Prima Games
+Write to cell [43,2]: DK
+Write to cell [43,3]: 
+Write to cell [43,4]: 
+Write to cell [43,5]: 
+Write to cell [43,6]: 
+Write to cell [43,7]: 
+Write to cell [43,8]: 
+Write to cell [43,9]: 
+Write to cell [43,10]: 
+Write to cell [43,11]: 
+Write to cell [43,12]: 
+Write to cell [43,13]: 
+Write to cell [43,14]: 
+Write to cell [43,15]: 
+Write to cell [43,16]: 
+Write to cell [43,17]: 
+Write to cell [43,18]: 
+Write to cell [43,19]: 
+Write to cell [43,20]: 
+Processing row: 44, {"Domain Name"=>"stormoperatives.net", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: stormoperatives.net
+Writing record into the spreadsheet: ["stormoperatives.net", "Prima Games", "DK", "", "http://www.penguin.com/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [44,0]: stormoperatives.net
+Write to cell [44,1]: Prima Games
+Write to cell [44,2]: DK
+Write to cell [44,3]: 
+Write to cell [44,4]: http://www.penguin.com/
+Write to cell [44,5]: 
+Write to cell [44,6]: 
+Write to cell [44,7]: 
+Write to cell [44,8]: 
+Write to cell [44,9]: 
+Write to cell [44,10]: 
+Write to cell [44,11]: 
+Write to cell [44,12]: 
+Write to cell [44,13]: 
+Write to cell [44,14]: 
+Write to cell [44,15]: 
+Write to cell [44,16]: 
+Write to cell [44,17]: 
+Write to cell [44,18]: 
+Write to cell [44,19]: 
+Write to cell [44,20]: 
+Processing row: 45, {"Domain Name"=>"stormoperatives.org", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: stormoperatives.org
+Writing record into the spreadsheet: ["stormoperatives.org", "Prima Games", "DK", "", "http://www.penguin.com/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [45,0]: stormoperatives.org
+Write to cell [45,1]: Prima Games
+Write to cell [45,2]: DK
+Write to cell [45,3]: 
+Write to cell [45,4]: http://www.penguin.com/
+Write to cell [45,5]: 
+Write to cell [45,6]: 
+Write to cell [45,7]: 
+Write to cell [45,8]: 
+Write to cell [45,9]: 
+Write to cell [45,10]: 
+Write to cell [45,11]: 
+Write to cell [45,12]: 
+Write to cell [45,13]: 
+Write to cell [45,14]: 
+Write to cell [45,15]: 
+Write to cell [45,16]: 
+Write to cell [45,17]: 
+Write to cell [45,18]: 
+Write to cell [45,19]: 
+Write to cell [45,20]: 
+Processing row: 46, {"Domain Name"=>"stormoperatives.us", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"http://www.penguin.com/", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: stormoperatives.us
+Writing record into the spreadsheet: ["stormoperatives.us", "Prima Games", "DK", "", "http://www.penguin.com/", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [46,0]: stormoperatives.us
+Write to cell [46,1]: Prima Games
+Write to cell [46,2]: DK
+Write to cell [46,3]: 
+Write to cell [46,4]: http://www.penguin.com/
+Write to cell [46,5]: 
+Write to cell [46,6]: 
+Write to cell [46,7]: 
+Write to cell [46,8]: 
+Write to cell [46,9]: 
+Write to cell [46,10]: 
+Write to cell [46,11]: 
+Write to cell [46,12]: 
+Write to cell [46,13]: 
+Write to cell [46,14]: 
+Write to cell [46,15]: 
+Write to cell [46,16]: 
+Write to cell [46,17]: 
+Write to cell [46,18]: 
+Write to cell [46,19]: 
+Write to cell [46,20]: 
+Processing row: 47, {"Domain Name"=>"streetfightertips.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: streetfightertips.com
+Writing record into the spreadsheet: ["streetfightertips.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [47,0]: streetfightertips.com
+Write to cell [47,1]: Prima Games
+Write to cell [47,2]: DK
+Write to cell [47,3]: 
+Write to cell [47,4]: 
+Write to cell [47,5]: 
+Write to cell [47,6]: 
+Write to cell [47,7]: 
+Write to cell [47,8]: 
+Write to cell [47,9]: 
+Write to cell [47,10]: 
+Write to cell [47,11]: 
+Write to cell [47,12]: 
+Write to cell [47,13]: 
+Write to cell [47,14]: 
+Write to cell [47,15]: 
+Write to cell [47,16]: 
+Write to cell [47,17]: 
+Write to cell [47,18]: 
+Write to cell [47,19]: 
+Write to cell [47,20]: 
+Processing row: 48, {"Domain Name"=>"undertaker25yearsofdestruction.com", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: undertaker25yearsofdestruction.com
+Writing record into the spreadsheet: ["undertaker25yearsofdestruction.com", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [48,0]: undertaker25yearsofdestruction.com
+Write to cell [48,1]: Prima Games
+Write to cell [48,2]: DK
+Write to cell [48,3]: 
+Write to cell [48,4]: 
+Write to cell [48,5]: 
+Write to cell [48,6]: 
+Write to cell [48,7]: 
+Write to cell [48,8]: 
+Write to cell [48,9]: 
+Write to cell [48,10]: 
+Write to cell [48,11]: 
+Write to cell [48,12]: 
+Write to cell [48,13]: 
+Write to cell [48,14]: 
+Write to cell [48,15]: 
+Write to cell [48,16]: 
+Write to cell [48,17]: 
+Write to cell [48,18]: 
+Write to cell [48,19]: 
+Write to cell [48,20]: 
+Processing row: 49, {"Domain Name"=>"verticalgardeningbook.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: verticalgardeningbook.com
+Writing record into the spreadsheet: ["verticalgardeningbook.com", "DK", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [49,0]: verticalgardeningbook.com
+Write to cell [49,1]: DK
+Write to cell [49,2]: DK
+Write to cell [49,3]: 
+Write to cell [49,4]: 
+Write to cell [49,5]: 
+Write to cell [49,6]: 
+Write to cell [49,7]: 
+Write to cell [49,8]: 
+Write to cell [49,9]: 
+Write to cell [49,10]: 
+Write to cell [49,11]: 
+Write to cell [49,12]: 
+Write to cell [49,13]: 
+Write to cell [49,14]: 
+Write to cell [49,15]: 
+Write to cell [49,16]: 
+Write to cell [49,17]: 
+Write to cell [49,18]: 
+Write to cell [49,19]: 
+Write to cell [49,20]: 
+Processing row: 50, {"Domain Name"=>"worldsgreatestpartygame.net", "Imprint"=>"Prima Games", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: worldsgreatestpartygame.net
+Writing record into the spreadsheet: ["worldsgreatestpartygame.net", "Prima Games", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [50,0]: worldsgreatestpartygame.net
+Write to cell [50,1]: Prima Games
+Write to cell [50,2]: DK
+Write to cell [50,3]: 
+Write to cell [50,4]: 
+Write to cell [50,5]: 
+Write to cell [50,6]: 
+Write to cell [50,7]: 
+Write to cell [50,8]: 
+Write to cell [50,9]: 
+Write to cell [50,10]: 
+Write to cell [50,11]: 
+Write to cell [50,12]: 
+Write to cell [50,13]: 
+Write to cell [50,14]: 
+Write to cell [50,15]: 
+Write to cell [50,16]: 
+Write to cell [50,17]: 
+Write to cell [50,18]: 
+Write to cell [50,19]: 
+Write to cell [50,20]: 
+Processing row: 51, {"Domain Name"=>"wwebookoftop10s.com", "Imprint"=>"DK", "Divison"=>"DK", "Keep, Release, Redirect?"=>"", "Current Redirect"=>"", "New Redirect"=>"", "Website"=>"", "Primary IP"=>"", "Port"=>"", "Hosting Status"=>""}
+Processing domain: wwebookoftop10s.com
+Writing record into the spreadsheet: ["wwebookoftop10s.com", "DK", "DK", "", "", "", "", "", "", "", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Write to cell [51,0]: wwebookoftop10s.com
+Write to cell [51,1]: DK
+Write to cell [51,2]: DK
+Write to cell [51,3]: 
+Write to cell [51,4]: 
+Write to cell [51,5]: 
+Write to cell [51,6]: 
+Write to cell [51,7]: 
+Write to cell [51,8]: 
+Write to cell [51,9]: 
+Write to cell [51,10]: 
+Write to cell [51,11]: 
+Write to cell [51,12]: 
+Write to cell [51,13]: 
+Write to cell [51,14]: 
+Write to cell [51,15]: 
+Write to cell [51,16]: 
+Write to cell [51,17]: 
+Write to cell [51,18]: 
+Write to cell [51,19]: 
+Write to cell [51,20]: 
+Upate the report table: /Users/sli/www_wmap/uploads/DomainPortfolio-division_1.xlsx, division_1 
+2019-05-20T19:08:16.646Z 32893 TID-ox4ncz6m9 UpdateWorker JID-1bd70c083c0d3dc4dbb489de INFO: done: 4.027 sec
+You're hitting mailer controller...
+2019-05-21T13:37:23.179Z 32893 TID-ox4o8hi6p ERROR: Error fetching job: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:23.181Z 32893 TID-ox4o8hi6p WARN: Redis::CannotConnectError: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:23.182Z 32893 TID-ox4o8hi6p WARN: /Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:353:in `rescue in establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:336:in `establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:104:in `block in connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:299:in `with_reconnect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:103:in `connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:372:in `ensure_connected'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:224:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:312:in `logging'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:223:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:123:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:212:in `block in call_with_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:285:in `with_socket_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:211:in `call_with_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1179:in `block in _bpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `block in synchronize'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1176:in `_bpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1221:in `brpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `block in retrieve_work'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `retrieve_work'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:89:in `get_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:99:in `fetch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:82:in `process_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:71:in `run'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2019-05-21T13:37:23.182Z 32893 TID-ox4ncyvd5 ERROR: Error fetching job: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:23.182Z 32893 TID-ox4ncyvd5 WARN: Redis::CannotConnectError: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:23.183Z 32893 TID-ox4ncyvd5 WARN: /Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:353:in `rescue in establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:336:in `establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:104:in `block in connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:299:in `with_reconnect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:103:in `connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:372:in `ensure_connected'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:224:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:312:in `logging'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:223:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:123:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:212:in `block in call_with_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:285:in `with_socket_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:211:in `call_with_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1179:in `block in _bpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `block in synchronize'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1176:in `_bpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1221:in `brpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `block in retrieve_work'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `retrieve_work'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:89:in `get_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:99:in `fetch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:82:in `process_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:71:in `run'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2019-05-21T13:37:23.181Z 32893 TID-ox4ncz6m9 ERROR: Error fetching job: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:23.183Z 32893 TID-ox4ncz6m9 WARN: Redis::CannotConnectError: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:23.183Z 32893 TID-ox4ncz6m9 WARN: /Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:353:in `rescue in establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:336:in `establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:104:in `block in connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:299:in `with_reconnect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:103:in `connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:372:in `ensure_connected'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:224:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:312:in `logging'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:223:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:123:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:212:in `block in call_with_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:285:in `with_socket_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:211:in `call_with_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1179:in `block in _bpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `block in synchronize'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1176:in `_bpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1221:in `brpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `block in retrieve_work'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `retrieve_work'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:89:in `get_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:99:in `fetch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:82:in `process_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:71:in `run'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2019-05-21T13:37:23.184Z 32893 TID-ox4n97gxh ERROR: Error fetching job: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:23.184Z 32893 TID-ox4n97gxh WARN: Redis::CannotConnectError: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:23.185Z 32893 TID-ox4n97gxh WARN: /Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:353:in `rescue in establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:336:in `establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:104:in `block in connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:299:in `with_reconnect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:103:in `connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:372:in `ensure_connected'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:224:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:312:in `logging'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:223:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:123:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:212:in `block in call_with_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:285:in `with_socket_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:211:in `call_with_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1179:in `block in _bpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `block in synchronize'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1176:in `_bpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1221:in `brpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `block in retrieve_work'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `retrieve_work'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:89:in `get_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:99:in `fetch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:82:in `process_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:71:in `run'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2019-05-21T13:37:23.184Z 32893 TID-ox4o8hiet ERROR: Error fetching job: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:23.185Z 32893 TID-ox4o8hiet WARN: Redis::CannotConnectError: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:23.185Z 32893 TID-ox4o8hiet WARN: /Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:353:in `rescue in establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:336:in `establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:104:in `block in connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:299:in `with_reconnect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:103:in `connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:372:in `ensure_connected'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:224:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:312:in `logging'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:223:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:123:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:212:in `block in call_with_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:285:in `with_socket_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:211:in `call_with_timeout'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1179:in `block in _bpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `block in synchronize'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1176:in `_bpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1221:in `brpop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `block in retrieve_work'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `retrieve_work'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:89:in `get_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:99:in `fetch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:82:in `process_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:71:in `run'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2019-05-21T13:37:24.892Z 32893 TID-ox4ncz8ip ERROR: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:24.892Z 32893 TID-ox4ncz8ip WARN: Redis::CannotConnectError: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:24.892Z 32893 TID-ox4ncz8ip WARN: /Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:353:in `rescue in establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:336:in `establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:104:in `block in connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:299:in `with_reconnect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:103:in `connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:372:in `ensure_connected'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:224:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:312:in `logging'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:223:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:123:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1949:in `block in zrangebyscore'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `block in synchronize'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:1948:in `zrangebyscore'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:20:in `block (2 levels) in enqueue_jobs'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:15:in `each'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:15:in `block in enqueue_jobs'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:14:in `enqueue_jobs'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:77:in `enqueue'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:68:in `block in start'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2019-05-21T13:37:24.893Z 32893 TID-ox4ncz8ip ERROR: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:24.893Z 32893 TID-ox4ncz8ip WARN: Redis::CannotConnectError: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:24.893Z 32893 TID-ox4ncz8ip WARN: /Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:353:in `rescue in establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:336:in `establish_connection'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:104:in `block in connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:299:in `with_reconnect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:103:in `connect'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:372:in `ensure_connected'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:224:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:312:in `logging'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:223:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis/client.rb:123:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:2617:in `block in _scan'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `block in synchronize'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:50:in `synchronize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:2616:in `_scan'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/redis-4.1.0/lib/redis.rb:2754:in `sscan'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:11:in `block in sscan'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:10:in `loop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:10:in `sscan'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:745:in `block in cleanup'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2019-05-21T13:37:25.504Z 32893 TID-ox4o8i1jx ERROR: heartbeat: Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)
+2019-05-21T13:37:28.004Z 32893 TID-ox4n8y4b1 DEBUG: Got TERM signal
+2019-05-21T13:37:28.004Z 32893 TID-ox4n8y4b1 INFO: Shutting down
+2019-05-21T13:37:28.004Z 32893 TID-ox4n8y4b1 INFO: Terminating quiet workers
+2019-05-21T13:37:29.895Z 32893 TID-ox4ncz8ip INFO: Scheduler exiting...
+2019-05-21T13:37:29.998Z 32893 TID-ox4n8y4b1 INFO: Bye!

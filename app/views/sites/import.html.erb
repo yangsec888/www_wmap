@@ -1,0 +1,67 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    var sites_editor = CodeMirror(document.getElementById("sitesTextArea"), {
+      mode: "null",
+      lineNumbers: true,
+      extraKeys: {
+        "Ctrl-Space": "autocomplete"
+      },
+      value: ""
+    });
+
+    $('#save_sites_button').click(function() {
+      $.ajax({
+        url: "save",
+        type: "POST",
+        dataType: 'json',
+        data: {
+          "file_path": "",
+          "file_content": sites_editor.getDoc().getValue()
+        },
+        success: function(response) {
+          //console.log(response);
+          if  (response['message']=="Access Denied.") {
+            alert("Access Denied.")
+          } else {
+            alert("Success: " + response['message']);
+            window.location = "/sites/show"
+          }
+
+        },
+        error: function(response) {
+          //console.log(response);
+          alert("Error:" + response['message'])
+        }
+      });
+    });
+  });
+</script>
+
+<div class="row">
+
+  <div class=" col-md-9 col-lg-9">
+    <% data = String.new %>
+    <% Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir) %>
+    <% File.new(@file, 'w+') unless File.exist?(@file) %>
+    <p>
+    <h4>Please enter the sites to be imported below:</h4>
+    <button type="button" class="pull-right btn btn-default" title="Import Instructions"
+      data-container="body" data-toggle="popover" data-placement="right"
+      data-content="Sites Import Format: <br>
+      <ul><li>  site only  </li>
+          <li> One entry per line </li>
+          <li> The entry can be an URL: https://x.x.x.x/ </li>
+          <li> The entry can be duplicate </li>
+          <li> The entry can be already in system (and will be ignored)  </li>
+      </ul>
+          "><span class="glyphicon glyphicon-question-sign"></span>sites Format</button>
+  </div>
+</div>
+
+<div class=" col-md-9 col-lg-9">
+    <div class ="CodeMirror" id="sitesTextArea"></div>
+    <p>
+    <button class="btn btn-primary" id="save_sites_button" type="submit">Save</button>
+    </br>
+</div>
+<div class="row"></div>

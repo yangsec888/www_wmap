@@ -1,0 +1,12 @@
+<h4>  Discovery Log </h4>
+<br />
+<br />Log file: <%= @file_name.to_s %>
+<div class="row"></div>
+<br />
+
+<table class="table ">
+<% @file_contents.map do |line| %>
+  <tr><%= line %></br><tr />
+<% end %>
+
+</table>

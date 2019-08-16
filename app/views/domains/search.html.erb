@@ -1,0 +1,57 @@
+<h4>  Domain Information: &nbsp <%= params[:keyword] %></h4>
+<br />
+
+<%= render "mini_edit" %>
+<br />
+<table class="table table-bordered table-striped">
+   <tbody>
+        <tr> <td>Domain</td> <td><%= @domain.name  %></td> </tr>
+        <tr> <td>Imprint</td> <td><%= @domain.imprint %></td> </tr>
+        <tr> <td>Division</td> <td><%= @domain.division %></td> </tr>
+        <tr> <td>Keep, Release, Redirect?</td> <td><%= @domain.keep %></td> </tr>
+        <tr> <td>Current Redirect</td> <td><%= @domain.current_redirect %></td> </tr>
+        <tr> <td>New Redirect</td> <td><%= @domain.new_redirect %></td> </tr>
+        <tr> <td>Last Update</td> <td><%= @domain.updated_at %></td> </tr>
+        <tr> <td>
+          <%= button_to "Full View", domain_map_show_path(keyword: params[:keyword]), class: "btn btn-info", form: {target: '_blank'} %> </td>
+          <td></td>
+        </tr>
+
+      <% if not @prime_site.nil? %>
+        <% @prime_site.each do |key,val| %>
+          <% if key == "Hosting Status" %>
+          <tr> <td><%= key %> &nbsp
+              <button type="button" class="btn btn-default" title="Hosting Status"
+                data-container="body" data-toggle="popover" data-placement="right"
+                data-content="Hosting Status: <br>
+                <ul><li> int_hosted - Hosted within one of our data centers </li>
+                    <li> ext_hosted - Hosted by one of our ISP  </li>
+                </ul>
+                    "> <span class="glyphicon glyphicon-question-sign"></span></button>
+            </td>
+            <td>  <%= val %>  </td>
+          </tr>
+          <% elsif key == "Response Code" %>
+          <tr> <td><%= key %> &nbsp
+              <button type="button" class="btn btn-default" title="Response Code"
+                data-container="body" data-toggle="popover" data-placement="right"
+                data-content="Default web page HTTP response status code. Refer to <a href='https://en.wikipedia.org/wiki/List_of_HTTP_status_codes'>this article</a> for the complete list.
+                  "> <span class="glyphicon glyphicon-question-sign"></span></button>
+            </td>
+            <td>  <%= val %>  </td>
+          </tr>
+          <% elsif key == "MD5 Fingerprint" %>
+          <tr> <td><%= key %> &nbsp
+              <button type="button" class="btn btn-default" title="MD5 Fingerprint"
+                data-container="body" data-toggle="popover" data-placement="right"
+                data-content="Default web page HTTP payload MD5 hash value. It may be used to identify unique website.
+                  "> <span class="glyphicon glyphicon-question-sign"></span></button>
+            </td>
+            <td>  <%= val %>  </td>
+          </tr>          <% else %>
+            <tr> <td><%= key %></td> <td> <%=val %> </td> </tr>
+          <% end %>
+        <% end %>
+      <% end %>
+   </tbody>
+</table>

@@ -1,5 +1,5 @@
 #---
-:verbose: false
+:verbose: true
 :pidfile: ./tmp/pids/sidekiq.pid
 :logfile: ./log/sidekiq.log
 :concurrency:  40
@@ -8,6 +8,7 @@
 staging:
   :concurrency: 5
 production:
+  :verbose: false
   :concurrency: 5
 :queues:
   - critical

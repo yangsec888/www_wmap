@@ -1,0 +1,46 @@
+
+<div class="table-responsive col-md-9 col-lg-9">
+
+    <div class="row">
+    <br />
+    <% if !@upload.errors.empty? %>
+       <div class = "alert alert-warning">
+             <% @upload.errors.full_messages.each do |msg| %>
+                <strong>Warning!</strong> <%= msg %>
+             <% end %>
+       </div>
+    <% end %>
+    </div>
+
+    <div class="row">
+      <h4>Domain Portfolio Updater</h4>
+    </div>
+
+    <table class="table">
+      <tr>
+      </tr>
+      <tr>
+        <%= form_for @upload, html: { multipart: true } do |f| %>
+        <%= f.select :file_type, options_for_select(['CK','DK','DT','KDPG'], :selected => f.object.file_type) %>
+        <%= f.hidden_field :name, :value => 'adp'%>
+        <%= f.hidden_field :switch_tag, :value => 'adp'%>
+        <td><%= f.label :attachment %></td>
+        <td><%= f.file_field :attachment %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td><button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-upload"></span> Upload</button>
+            <button type="button" class="btn btn-default" title="Report Upload Type: XLSX File Only"
+              data-container="body" data-toggle="popover" data-placement="right"
+              data-content="
+          		Latest portfolio workbooks can be downloaded from box.com. Once the latest portfolio is uploaded. You'll be able to regenerate a new report.">
+              <span class="glyphicon glyphicon-question-sign"></span> Upload Instructions</button>
+        </td>
+        <td></td>
+      </tr>
+
+    </table>
+
+</div>
+
+<div class="row"></div>

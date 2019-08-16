@@ -1,0 +1,44 @@
+<h4> Domain Portfolio - All Divisions </h4>
+<br />
+
+<b>Pages: </b><%= will_paginate @domains, previous_label: h("<"), next_label: h(">") %>
+(25 entries per page)
+<span class="text-center">
+  &nbsp &nbsp &nbsp &nbsp <b>Total</b>:  <%= @domains.count %>
+</span> &nbsp &nbsp &nbsp &nbsp
+<span class="text-center">
+  <%= link_to image_tag("excel.png", size: "35x35", class: "clickable-img", alt: "Download"), reports_download_all_path(:division => "all") %>
+</span>
+
+<table class="table table-bordered table-striped">
+   <thead>
+      <tr>
+         <th><%= sortable "name", "Domain" %></th>
+         <th><%= sortable "imprint", "Imprint" %></th>
+         <th><%= sortable "division", "Division" %></th>
+         <th><%= sortable "keep", "Keep, Redirect or Release?" %></th>
+         <th>Current Redirect</th>
+         <th>New Redirect</th>
+         <th>Last Update</th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @domains.each do |domain| %>
+         <tr>
+            <td>
+              <% unless domain.name.nil? %>
+                  <%= link_to domain.name, domains_search_path(keyword: domain.name), method: "get"  %>
+              <% end %>
+            </td>
+            <td><%= domain.imprint %></td>
+            <td><%= domain.division %></td>
+            <td><%= domain.keep %></td>
+            <td><%= domain.current_redirect %></td>
+            <td><%= domain.new_redirect %></td>
+            <td><%= domain.updated_at %></td>
+
+         </tr>
+      <% end %>
+   </tbody>
+</table>

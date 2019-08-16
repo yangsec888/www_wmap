@@ -1,0 +1,11 @@
+<div class="col-md-2 col-lg-2">
+  <button class="btn btn-default dropdown-toggle " data-toggle="dropdown" align="left">
+      Edit
+      <span class="caret"></span>
+  </button>
+    <ul class="dropdown-menu">
+        <li><%= link_to('Update', domains_edit_domain_path(name: params[:keyword]), :method => :post, :remote => true) %></li>
+        <li><%= link_to('Delete', domains_destroy_path(keyword: params[:keyword]), :method => :delete, data: {:confirm => 'Are you sure to remove the record?'} ) %></li>
+    </ul>
+</div>
+<div class="row"> </div>

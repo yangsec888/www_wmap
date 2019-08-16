@@ -1,0 +1,26 @@
+<%= render 'shared/errors', object: @upload %>
+<table class="table">
+  <tr>
+    <td><h4><%=@file_type%> Portfolio Updater</h4></td>
+    <td></td>
+  </tr>
+  <%= form_for @upload, html: { multipart: true, id: @file_type } do |f| %>
+  <%= f.hidden_field :name, :value => @file_name %>
+  <%= f.hidden_field :file_type, :value => @file_type %>
+  <%= f.hidden_field :switch_tag, :value => @file_type %>
+  <tr>
+    <td><%= f.label :attachment %></td>
+    <td><%= f.file_field :attachment %></td>
+  </tr>
+  <tr>
+    <td><button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-upload"></span> Upload</button>
+        <button type="button" class="btn btn-default" title="Report Submit Type: XLSX File"
+          data-container="body" data-toggle="popover" data-placement="right"
+          data-content="Report Generation:<br>
+          Latest portfolio workbooks can be downloaded from box.com. Once the latest portfolio is uploaded. You'll be able to regenerate a new report.">
+          <span class="glyphicon glyphicon-question-sign"></span> Upload Instruction</button>
+    </td>
+    <td></td>
+  </tr>
+  <% end %>
+</table>

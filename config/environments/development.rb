@@ -21,15 +21,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   # ActionMailer Config
   config.action_mailer.smtp_settings = {
-     address:              'smtp.gmail.com',
-     port:                 587,
-     domain:               'gmail.com',
-     user_name:            'test77959',
-     password:             'test77959',
-     authentication:       'plain',
-     enable_starttls_auto: true
+     address:              '127.0.0.1',
+     port:                 25,
+     domain:        'us.randomhouse.com',
+     enable_starttls_auto: false
   }
-
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -53,4 +49,12 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # debug CarrierWave upload
+  CarrierWave.configure do |config|
+    config.ignore_integrity_errors = false
+    config.ignore_processing_errors = false
+    config.ignore_download_errors = false
+  end
+
 end

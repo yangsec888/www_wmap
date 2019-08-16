@@ -3,34 +3,30 @@
 #
 # A  Ruby application for enterprise web application asset tracking
 #
-# Developed by Yang Li, <yang.li@owasp.org>. Creative Common License
+# Developed by Sam (Yang) Li, <yang.li@owasp.org>.
 #
 #++
 
 
-
 module ApplicationHelper
 
- def sortable(column, title = nil)
-    title ||= column.titleize
-    css_class = if column != sort_column
-                    nil
-                elsif sort_direction == 'asc'
-                    'glyphicon glyphicon-chevron-up'
-                else
-                    'glyphicon glyphicon-chevron-down'
-                end
-    direction = column == sort_column && sort_direction == 'asc' ? 'desc' : 'asc'
-    link_to "#{title} <span class='#{css_class}'></span>".html_safe, sort: column, direction: direction
- end
 
- def full_title(page_title)
-   base_title = "OWASP Web Mapper Demo" 
-	 if page_title.empty?
+  def full_title(page_title)
+    base_title = " Web Mapper Online"
+    if page_title.empty?
        base_title
-  	 else
+    else
        "#{base_title} | #{page_title}"
-  	 end
-   end
+    end
+  end
+
+private
+  def sort_column
+    User.column_names.include?(params[:sort]) ? params[:sort] : "username"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 
 end

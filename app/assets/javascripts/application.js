@@ -10,11 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require turbolinks
+//= require jquery3
 //= require jquery_ujs
+//= require popper
+//= require jquery.turbolinks
 //= require twitter/bootstrap
-//= require bootstrap
+//= require bootstrap.min
+//= require rails.validations
+//= require jstree
+//= require codemirror
+//= require yaml
+//= require popup
 //= require_tree .
 $(document).ready(function(){
 
@@ -26,8 +32,8 @@ $(document).ready(function(){
     $('.alert-temp').remove();
   }
 
-  window.setTimeout(fadeAlert,5000);
-  window.setTimeout(removeAlert,5000);
+  window.setTimeout(fadeAlert,3000);
+  window.setTimeout(removeAlert,3000);
 
   // Popover Management
   $(function (){

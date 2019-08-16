@@ -1,0 +1,75 @@
+<script type="text/jscript">
+  var domain
+  $(document).ready(function() {
+    $("#jstree_domain_map").jstree({
+      'core': {
+        'data': {
+          'url': '/domain_map/show.json?' + 'keyword=' + <%= params[:keyword].to_json.html_safe %>,
+          'dataType': 'json'
+        },
+        'themes' : {
+          "variant" : "large",
+          //"url" : "/assets/jstree.css"
+        }
+      },
+      'types': {
+              'default': {
+                  'icon': "glyphicon glyphicon-flash"
+              },
+      },
+   //    "plugins" : [ "search" ]
+      'plugins' : ["themes", "json_data", "sort", "changed", "types", "wholerow"]
+    });
+
+    // on-click show the web site in new tab
+    $('#jstree_domain_map').on('changed.jstree', function(e, data) {
+      var node = data.instance.get_node(data.selected[0]);
+      window.open(node.text, '_blank');
+    });
+
+
+  });
+</script>
+
+<div class="row"> </div>
+
+<div class="row">
+  <div class="pull-left col-sm-3 col-md-3 col-lg-3">
+    <div id="jstree_domain_map" >
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div>
+<br />
+<div class="col-sm-6 col-md-6 col-lg-6">
+  <table class="table-responsive table-bordered table-striped">
+     <thead>
+        <tr>
+           <th>Web Site </th>
+           <th>Primary IP </th>
+           <th>Web Server </th>
+           <th>Response Code</th>
+           <th>Redirection </th>
+           <th>MD5 Fingerprint </th>
+           <th>Last Update</th>
+        </tr>
+     </thead>
+     <tbody>
+        <% @sites.each do |site| %>
+           <tr>
+              <td><%= site.site %></td>
+              <td><%= site.ip %></td>
+              <td><%= site.server %></td>
+              <td><%= site.code %></td>
+              <td><%= site.redirection %></td>
+              <td><%= site.md5 %></td>
+              <td><%= site.updated_at %></td>
+
+           </tr>
+        <% end %>
+     </tbody>
+  </table>
+</div>
+
+<div class="row"> </div>
