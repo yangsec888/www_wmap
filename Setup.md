@@ -1,5 +1,5 @@
 # Setup Hosting Environment
-Setup the runtime environment in RHEL 7.4 Linux distrobution
+Setup the runtime environment in Ubuntu 18.0.4 Linux distrobution
 
 ## 1. Service Account:
 ID: ‘deploy' Service Group: ‘wheel' Password: 'MASKED'
@@ -20,29 +20,56 @@ Refer to: https://github.com/yangsec888/wmap/blob/master/README.rdoc
 
 ## 5.  Install the MariaDB database instance:
 ### 5.1 Install DB
-Refer to https://community.rackspace.com/products/f/public-cloud-forum/7374/installing-mysql-server-on-red-hat-enterprise-linux
+Refer to https://computingforgeeks.com/install-mariadb-10-on-ubuntu-18-04-and-centos-7/
 ```sh
 sudo yum install mariadb-server mariadb
 ```
 ### 5.2 Start Maria DB:
 ```sh
-sudo systemctl start mariadb.service
+sudo apt -y install mariadb-server mariadb-client
 ```
 
 ## 6. Install and Run Redis server:
-    1. sudo yum install redis
-    2. Configure redis server:  sudo /sbin/chkconfig redis on
-    3. Running the redis server: sudo service redis start
-    4. Check the redis service: redid-cli ping   * expecting ‘PONG’ for success
+Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04
+    1. Install Redis server
+    ```sh
+    sudo apt install redis-server
+    ```
+    2. Configure redis server: 
+    ```sh
+    sudo vi /etc/redis/redis.conf
+    ```
+    3. Running the redis server: 
+    ```sh
+    sudo systemctl restart redis.service
+    ```
+    
+    4. Check the redis service:
+    ```sh
+    sudo systemctl status redis
+    redid-cli ping   * expecting ‘PONG’ for success
+    ```
 
 ## 7. Install Sidekiq:
 ```sh
 gem install sidekiq --no-ri --no-rdoc
 ```
     1. Install rubygems-bundler: gem install rubygems-bundler
-    2. Configure sidekiq as service:  /usr/lib/systemd/system/sidekiq.service
-    3. Enable sidekiq service: sudo /sbin/chkconfig sidekiq on
-    4. Running the sidekick service: sudo service sidekiq start
+    2. Configure sidekiq as service: https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a
+       ```sh
+       sudo vi /lib/systemd/system/sidekiq.service
+       ```
+    3. Enable sidekiq service:
+       ```sh
+       sudo systemctl daemon-reload
+       sudo systemctl start sidekiq
+       ```
+    4. Trouble-shooting sidekiq: 
+       ```sh
+       ps uax | grep sidekiq
+       sudo systemctl status sidekiq
+       ```
+       
 ## 8. Install wmap front-end:
 ```sh
 git clone https://github.com/yangsec888/www_wmap.git
