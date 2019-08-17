@@ -38,19 +38,20 @@ Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-sec
   ```
   
   2. Configure redis server: 
-    ```sh
+  ```sh
     sudo vi /etc/redis/redis.conf
-    ```
+  ```
+  
   3. Running the redis server: 
-    ```sh
+  ```sh
     sudo systemctl restart redis.service
-    ```
+  ```
     
   4. Check the redis service:
-    ```sh
+  ```sh
     sudo systemctl status redis
     redid-cli ping   * expecting ‘PONG’ for success
-    ```
+  ```
 
 ## 7. Install Sidekiq:
 ```sh
@@ -83,9 +84,9 @@ git clone https://github.com/yangsec888/www_wmap.git
 
 ## 9. Install NGINX:
 ```sh
-sudo yum install nginx
+  sudo apt-get install nginx
 ```
-    1. Create a self-sign cert: https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes
+1. Create a self-sign cert: https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes
     2. Configure the web server: refer to /etc/nginx/conf.d/www.wmap.conf
 
 ## 10. Setup RHEL Firewall-D:
