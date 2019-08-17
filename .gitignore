@@ -12,8 +12,8 @@
 /downloads
 /downloads/.*
 
-# Ignore master key (server encryption)
-config/master.key
-
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore server log 
+/shared
