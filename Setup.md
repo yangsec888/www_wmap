@@ -54,20 +54,23 @@ Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-sec
   ```
 
 ## 7. Install Sidekiq:
-```sh
-gem install sidekiq --no-ri --no-rdoc
-```
-    1. Install rubygems-bundler: gem install rubygems-bundler
-    2. Configure sidekiq as service: https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a
+  Download sidekiq gem:
+  ```sh
+  gem install sidekiq --no-ri --no-rdoc
+  ```
+
+1. Configure sidekiq as service: https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a
        ```sh
        sudo vi /lib/systemd/system/sidekiq.service
        ```
-    3. Enable sidekiq service:
+
+2. Enable sidekiq service:
        ```sh
        sudo systemctl daemon-reload
        sudo systemctl start sidekiq
        ```
-    4. Trouble-shooting sidekiq: 
+
+3. Trouble-shooting sidekiq: 
        ```sh
        ps uax | grep sidekiq
        sudo systemctl status sidekiq
