@@ -33,9 +33,10 @@ sudo apt -y install mariadb-server mariadb-client
 Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04
 
   1. Install Redis server
-    ```sh
+  ```sh
     sudo apt install redis-server
-    ```
+  ```
+  
   2. Configure redis server: 
     ```sh
     sudo vi /etc/redis/redis.conf
