@@ -32,22 +32,22 @@ sudo apt -y install mariadb-server mariadb-client
 ## 6. Install and Run Redis server:
 Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04
 
-1. Install Redis server
+6.1. Install Redis server
   ```sh
     sudo apt install redis-server
   ```
   
-2. Configure redis server: 
+6.2. Configure redis server: 
   ```sh
     sudo vi /etc/redis/redis.conf
   ```
   
-3. Running the redis server: 
+6.3. Running the redis server: 
   ```sh
     sudo systemctl restart redis.service
   ```
     
-4. Check the redis service:
+6.4. Check the redis service:
   ```sh
     sudo systemctl status redis
     redid-cli ping   * expecting ‘PONG’ for success
@@ -59,31 +59,33 @@ Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-sec
   gem install sidekiq --no-ri --no-rdoc
   ```
 
-1. Configure sidekiq as service: https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a
-       ```sh
-       sudo vi /lib/systemd/system/sidekiq.service
-       ```
+7.1. Configure sidekiq as service: https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a
+  ```sh
+    sudo vi /lib/systemd/system/sidekiq.service
+  ```
 
-2. Enable sidekiq service:
-       ```sh
-       sudo systemctl daemon-reload
-       sudo systemctl start sidekiq
-       ```
+7.2. Enable sidekiq service:
+  ```sh
+   sudo systemctl daemon-reload
+   sudo systemctl start sidekiq
+  ```
 
-3. Trouble-shooting sidekiq: 
-       ```sh
-       ps uax | grep sidekiq
-       sudo systemctl status sidekiq
-       ```
+7.3. Trouble-shooting sidekiq: 
+  ```sh
+  ps uax | grep sidekiq
+  sudo systemctl status sidekiq
+  ```
        
 ## 8. Install wmap front-end:
 ```sh
 git clone https://github.com/yangsec888/www_wmap.git
-    1. Update the rails environment: bundle install
-    2. Create the database instance: rake db:create
-    3. Create the database table: rake db:migrate
-    4. Configure the rails environment variables: refer to ~/.bashrc
 ```
+
+8.1. Update the rails environment: bundle install
+8.2. Create the database instance: rake db:create
+8.3. Create the database table: rake db:migrate
+8.4. Configure the rails environment variables: refer to ~/.bashrc
+
 
 ## 9. Install NGINX:
 ```sh
