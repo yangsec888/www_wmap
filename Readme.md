@@ -30,9 +30,20 @@ WMAP Web Portal depends on a number of open source projects to work properly:
 
 ### Local Installation
 
-WMAP App requires [Ruby on Rails](http://rubyonrails.org) v5.2.1 and [MariaDB](https://www.mysql.com/) database to run properly.
+WMAP App requires [Ruby on Rails](http://rubyonrails.org) v5.2.x and [MariaDB](https://www.mysql.com/) v10.4.x database to run properly.
 
 Install the environment dependencies, and ensure the database server is running. For example, in our Linux / Mac laptop,
+
+#### Install MariaDB v10.4.x
+[How to Install MariaDB in Ubuntu 18.0.4] (https://linuxize.com/post/how-to-install-mariadb-on-ubuntu-18-04/)
+
+Instal the mysql client support
+```sh
+$ sudo apt-get install libmysqlclient-dev
+$ gem install mysql2 -v '0.5.2' --source 'https://rubygems.org/'
+```
+
+#### Start the Rails Server
 
 ```sh
 $ cd www_wmap
