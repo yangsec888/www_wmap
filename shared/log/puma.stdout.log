@@ -3834,3 +3834,8 @@ Completed 200 OK in 133ms (Views: 125.0ms | ActiveRecord: 1.4ms)
 [44403] ! Terminating timed out worker: 56750
 [44403] ! Out-of-sync worker list, no 56750 worker
 [44403] - Worker 0 (pid: 56814) booted, phase: 0
+=== puma startup: 2019-08-16 17:52:09 -0400 ===
+=== puma startup: 2019-08-16 17:52:09 -0400 ===
+=== puma startup: 2019-08-16 17:52:09 -0400 ===
+[44403] - Gracefully shutting down workers...
+Exiting

@@ -10,3 +10,31 @@
 === puma startup: 2019-07-02 15:52:06 -0400 ===
 === puma startup: 2019-08-15 09:50:39 -0400 ===
 === puma startup: 2019-08-15 13:54:10 -0400 ===
+=== puma startup: 2019-08-16 17:52:09 -0400 ===
+=== puma startup: 2019-08-16 17:52:09 -0400 ===
+=== puma startup: 2019-08-16 17:52:09 -0400 ===
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sinatra-2.0.4/lib/sinatra/main.rb:11:in `expand_path': No such file or directory - getcwd (Errno::ENOENT)
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/sinatra-2.0.4/lib/sinatra/main.rb:11:in `block in <class:Application>'
+	from (eval):1:in `run?'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/sinatra-2.0.4/lib/sinatra/main.rb:26:in `block in <module:Sinatra>'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/puma-3.12.0/lib/puma/cluster.rb:137:in `fork'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/puma-3.12.0/lib/puma/cluster.rb:137:in `block in spawn_workers'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/puma-3.12.0/lib/puma/cluster.rb:133:in `times'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/puma-3.12.0/lib/puma/cluster.rb:133:in `spawn_workers'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/puma-3.12.0/lib/puma/cluster.rb:211:in `check_workers'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/puma-3.12.0/lib/puma/cluster.rb:484:in `run'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/puma-3.12.0/lib/puma/launcher.rb:184:in `run'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/puma-3.12.0/lib/rack/handler/puma.rb:70:in `run'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/rack-2.0.6/lib/rack/server.rb:297:in `start'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1.1/lib/rails/commands/server/server_command.rb:53:in `start'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1.1/lib/rails/commands/server/server_command.rb:147:in `block in perform'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1.1/lib/rails/commands/server/server_command.rb:142:in `tap'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1.1/lib/rails/commands/server/server_command.rb:142:in `perform'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/thor-0.20.3/lib/thor/command.rb:27:in `run'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/thor-0.20.3/lib/thor/invocation.rb:126:in `invoke_command'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/thor-0.20.3/lib/thor.rb:387:in `dispatch'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1.1/lib/rails/command/base.rb:65:in `perform'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1.1/lib/rails/command.rb:46:in `invoke'
+	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1.1/lib/rails/commands.rb:18:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'

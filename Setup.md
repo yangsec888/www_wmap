@@ -1,8 +1,12 @@
 # Setup Hosting Environment
 Setup the runtime environment in Ubuntu 18.0.4 Linux distrobution
 
-## 1. Service Account:
-ID: ‘deploy' Service Group: ‘wheel' Password: 'MASKED'
+## 1. Service Account Setup:
+```sh
+ID: ‘deploy' Service
+Group: ‘wheel'
+Password: 'MASKED'
+```
 
 ## 2. Install RVM environment:
 Refer to https://rvm.io/
@@ -36,17 +40,17 @@ Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-sec
   ```sh
     sudo apt install redis-server
   ```
-  
-6.2. Configure redis server: 
+
+6.2. Configure redis server:
   ```sh
     sudo vi /etc/redis/redis.conf
   ```
-  
-6.3. Running the redis server: 
+
+6.3. Running the redis server:
   ```sh
     sudo systemctl restart redis.service
   ```
-    
+
 6.4. Check the redis service:
   ```sh
     sudo systemctl status redis
@@ -70,12 +74,12 @@ Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-sec
    sudo systemctl start sidekiq
   ```
 
-7.3. Trouble-shooting sidekiq: 
+7.3. Trouble-shooting sidekiq:
   ```sh
   ps uax | grep sidekiq
   sudo systemctl status sidekiq
   ```
-       
+
 ## 8. Install wmap front-end:
 ```sh
 git clone https://github.com/yangsec888/www_wmap.git
@@ -84,20 +88,39 @@ git clone https://github.com/yangsec888/www_wmap.git
 8.1. Update the rails environment: bundle install
 8.2. Create the database instance: rake db:create
 8.3. Create the database table: rake db:migrate
+8.4. Generate the application encryption key: refer to https://github.com/rails/rails/blob/master/railties/lib/rails/commands/credentials/USAGE
+```sh
+rails credentials:help
+```
+
 8.4. Configure the rails environment variables: refer to ~/.bashrc
 
 
-## 9. Install NGINX:
+## 9. Puma Application Server
+Puma is the build-in application server for Rails 5. You might want to configure it in 'config/puma.rb'
+Note:
+Generate a master key:
+```sh
+```
+
+## 10. Install NGINX:
+We'll use Nginx web server for the web server layer. It's perfect server to render static application asset. In addition, it'll be setup to proxy traffic for Rails service running in the Puma application server layer.
+
 ```sh
   sudo apt-get install nginx
 ```
-1. Create a self-sign cert: https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes
-    2. Configure the web server: refer to /etc/nginx/conf.d/www.wmap.conf
 
-## 10. Setup RHEL Firewall-D:
-    1.  Intro: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-using_firewalls
-    2. Quick start: https://www.certdepot.net/rhel7-get-started-firewalld/
+10.1. Create a self-sign cert: https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes
 
-## 11. Setup RHEL Postfix Send Only, Open Relay (smtp mail)
-    1. Intro: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/s1-email-mta
-    2. Configuration: https://benjaminrojas.net/configuring-postfix-to-send-mail-from-mac-os-x-mountain-lion/
+10.2. Configure the web server:
+refer to /etc/nginx/sites-available/www_wmap; Make sure it's tight up with your Puma application configuration.
+
+## 11. Setup RHEL Firewall-D:
+11.1.  Intro: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-using_firewalls
+
+11.2. Quick start: https://www.certdepot.net/rhel7-get-started-firewalld/
+
+## 12. Setup RHEL Postfix Send Only, Open Relay (smtp mail)
+12.1. Intro: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/s1-email-mta
+
+12.2. Configuration: https://benjaminrojas.net/configuring-postfix-to-send-mail-from-mac-os-x-mountain-lion/
