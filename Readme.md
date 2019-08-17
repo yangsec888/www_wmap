@@ -35,9 +35,9 @@ WMAP App requires [Ruby on Rails](http://rubyonrails.org) v5.2.x and [MariaDB](h
 Install the environment dependencies, and ensure the database server is running. For example, in our Linux / Mac laptop,
 
 #### Install MariaDB v10.4.x
-[How to Install MariaDB in Ubuntu 18.0.4](https://linuxize.com/post/how-to-install-mariadb-on-ubuntu-18-04/)
+* [How to Install MariaDB in Ubuntu 18.0.4](https://linuxize.com/post/how-to-install-mariadb-on-ubuntu-18-04/)
 
-Instal the mysql client support
+* Instal the mysql client support
 ```sh
 $ sudo apt-get install libmysqlclient-dev
 $ gem install mysql2 -v '0.5.2' --source 'https://rubygems.org/'
