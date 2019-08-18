@@ -58,7 +58,7 @@ The application is deployed into a demo instance at [www.wmap.io](https://www.wm
 
 
 ####  Demo Instance Setup  
-The demo instance deployment setup can be found [here](Setup.md) for your reference.
+The demo instance deployment setup can be found at [Setup.md](Setup.md) for your reference.
 
 
 ### Usage
