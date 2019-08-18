@@ -12,7 +12,7 @@
 
 ### Wmap Web Portal
 
-The web app is based on the OWASP Wmap App. It's developed to help keep track of web application asset. To further explore the full power of OWASP Wmap library, please refer to the <a href="https://github.com/yangsec888/wmap" target="_blank"> WMAP </a> Got repository.
+The web app is based on the OWASP Wmap App. It's developed to help keep track of web application asset. To further explore the full power of OWASP Wmap library, please refer to the <a href="https://github.com/yangsec888/wmap" target="_blank"> WMAP </a> Git repository.
 
 
 ### Technology Stacks
@@ -53,8 +53,12 @@ $ rake db:migration
 $ rails server
 ```
 
-### Production Instance Setup
-The application is deployed into a demo instance at [wmap](https://wmap.io/). The running environment setup can be found [here](Setup.md) for your reference.
+### Demo Instance
+The application is deployed into a demo instance at [wmap](https://wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
+
+
+### Demo Instance Deployment Setup  
+The demo instance deployment setup can be found [here](Setup.md) for your reference.
 
 
 ### Usage
