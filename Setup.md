@@ -1,11 +1,12 @@
 # Setup Hosting Environment
 Setup the runtime environment in Ubuntu 18.0.4 Linux distrobution
 
-## 1. Service Account Setup:
+## 1. Service Account Setup
+To start, we'll create a service account "deploy" for the Rails app running environment. We'll add the service account to the special group 'wheel', which is allowed to have 'sudo' access. 
 ```sh
-ID: ‘deploy' Service
-Group: ‘wheel'
-Password: 'MASKED'
+# adduser deploy
+# addgroup wheel
+# usermod -aG wheel deploy
 ```
 
 ## 2. Install RVM environment:
@@ -13,10 +14,10 @@ Refer to https://rvm.io/
 
 ## 3. Install Ruby and Ruby on Rails:
 ```sh
-[deploy@linux ~]$ rvm list
-=* ruby-2.5.1 [ x86_64 ]
-[deploy@linux ~]$ ruby -v
-ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+$ rvm list
+=* ruby-2.6.3 [ x86_64 ]
+$ ruby -v
+ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
 ```
 
 ## 4.  Install the wmap Gem:
@@ -26,84 +27,85 @@ Refer to: https://github.com/yangsec888/wmap/blob/master/README.rdoc
 ### 5.1 Install DB
 Refer to https://computingforgeeks.com/install-mariadb-10-on-ubuntu-18-04-and-centos-7/
 ```sh
-sudo yum install mariadb-server mariadb
+$ sudo apt -y install mariadb-server mariadb-client
 ```
 ### 5.2 Start Maria DB:
 ```sh
-sudo apt -y install mariadb-server mariadb-client
+$ sudo systemctl start mysql
 ```
 
 ## 6. Install and Run Redis server:
-Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04
+The app use Redis to handle the async job queue. Refer to [this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04) for detail installation instructions.
 
 ### 6.1. Install Redis server
-  ```sh
-    sudo apt install redis-server
-  ```
+```sh
+$ sudo apt install redis-server
+```
 
 ### 6.2. Configure redis server:
-  ```sh
-    sudo vi /etc/redis/redis.conf
-  ```
+```sh
+$ sudo vi /etc/redis/redis.conf
+```
 
 ### 6.3. Running the redis server:
-  ```sh
-    sudo systemctl restart redis.service
-  ```
+```sh
+$ sudo systemctl restart redis.service
+```
 
 ### 6.4. Check the redis service:
-  ```sh
-    sudo systemctl status redis
-    redid-cli ping   * expecting ‘PONG’ for success
-  ```
+```sh
+$ sudo systemctl status redis
+$ redis-cli ping    
+```
+Expecting ‘PONG’ response for success.
 
 ## 7. Install Sidekiq:
-  Download sidekiq gem:
-  ```sh
-  gem install sidekiq --no-ri --no-rdoc
-  ```
+Download sidekiq gem:
+```sh
+$ gem install sidekiq
+```
 
 ### 7.1. Configure sidekiq as service: https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a
-  ```sh
-    sudo vi /lib/systemd/system/sidekiq.service
-  ```
+```sh
+$ sudo vi /lib/systemd/system/sidekiq.service
+```
 
 ### 7.2. Enable sidekiq service:
-  ```sh
-   sudo systemctl daemon-reload
-   sudo systemctl start sidekiq
-  ```
+```sh
+$ sudo systemctl daemon-reload
+$ sudo systemctl start sidekiq
+```
 
 ### 7.3. Trouble-shooting sidekiq:
-  ```sh
-  ps uax | grep sidekiq
-  sudo systemctl status sidekiq
-  ```
+```sh
+$ ps uax | grep sidekiq
+$ sudo systemctl status sidekiq
+```
 
 ## 8. Install wmap front-end:
 ```sh
-git clone https://github.com/yangsec888/www_wmap.git
+$ git clone https://github.com/yangsec888/www_wmap.git
 ```
 
 ### 8.1. Update the rails environment:
 ```sh
-bundle install
+$ bundle install
 ```
 
 ### 8.2. Create the database instance:
 ```sh
-rake db:create
+$ rake db:create
 ```
 
 ### 8.3. Create the database table:
 ```sh
-rake db:migrate
+$ rake db:migrate
 ```
 
 ### 8.4. Generate the application encryption key:
 Refer to [this article](https://github.com/rails/rails/blob/master/railties/lib/rails/commands/credentials/USAGE) for details:
 ```sh
-rails credentials:help
+$ rails credentials:help
 ```
 
 ### 8.4. Configure the rails environment variables:
@@ -129,7 +131,7 @@ Refer to [How to Deploy a Rails App with Puma and Nginx](https://www.digitalocea
 We'll use Nginx web server for the web server layer. It's perfect server to render static application asset. In addition, it'll be setup to proxy traffic for Rails service running in the Puma application server layer.
 
 ```sh
-sudo apt-get install nginx
+$ sudo apt-get install nginx
 ```
 
 ### 10.1. Create a self-sign cert. Refer to this [link](https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes) for reference.
@@ -145,3 +147,8 @@ How to [Setup a Firewall with UFW](https://www.digitalocean.com/community/tutori
 ## 12. Setup Postfix as Send Only SMTP Server
 The App would need to send out notification email of async jobs. Such as upon successful asset discovery job. In order to do that, you would need to setup a SMTP send out only server.
 Refer to [this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-debian-10) for detail explanations and instructions.
+
+After configuring the postfix main.cf file, don't forget to refresh the postfix system:
+```sh
+$ sudo postfix reload
+```
