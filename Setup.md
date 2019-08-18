@@ -2,7 +2,7 @@
 Setup the runtime environment in Ubuntu 18.0.4 Linux distrobution
 
 ## 1. Service Account Setup
-To start, we'll create a service account "deploy" for the Rails app running environment. We'll add the service account to the special group 'wheel', which is allowed to have 'sudo' access. 
+To start, we'll create a service account "deploy" for the Rails app running environment. We'll add the service account to the special group 'wheel', which is allowed to have 'sudo' access.
 ```sh
 # adduser deploy
 # addgroup wheel
@@ -108,7 +108,7 @@ Refer to [this article](https://github.com/rails/rails/blob/master/railties/lib/
 $ rails credentials:help
 ```
 
-### 8.4. Configure the rails environment variables:
+### 8.5. Configure the rails environment variables:
 Here are the environmental variables you might need to add to environment:
 ```sh
 $ vi ~/.bashrc
@@ -126,6 +126,9 @@ export DBPASS=xxxx
 ## 9. Puma Application Server
 Puma is the build-in application server for Rails 5. You might want to configure it in 'config/puma.rb'
 Refer to [How to Deploy a Rails App with Puma and Nginx](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-puma-and-nginx-on-ubuntu-14-04) for  detail explanations.
+
+### 9.1 Puma Configuration
+Refer to [puma.rb](/config/puma.rb) for detail. 
 
 ## 10. Install NGINX:
 We'll use Nginx web server for the web server layer. It's perfect server to render static application asset. In addition, it'll be setup to proxy traffic for Rails service running in the Puma application server layer.
