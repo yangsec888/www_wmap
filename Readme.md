@@ -54,7 +54,7 @@ $ rails server
 ```
 
 ### Demo Instance
-The application is deployed into a demo instance at [wmap](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
+The application is deployed into a demo instance at [www.wmap.io](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
 
 
 ### Demo Instance Setup  

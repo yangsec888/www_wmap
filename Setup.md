@@ -65,10 +65,12 @@ Download sidekiq gem:
 $ gem install sidekiq
 ```
 
-### 7.1. Configure sidekiq as service: https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a
+### 7.1. Configure sidekiq as service:
+This [post](https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a) provides detail configuration instructions for running your sidekiq as a service.  
 ```sh
 $ sudo vi /lib/systemd/system/sidekiq.service
 ```
+You can also use our deployment [sidekiq.service](/config/sidekiq.service) under Ubuntu 18.0.4 instance for further reference. 
 
 ### 7.2. Enable sidekiq service:
 ```sh
@@ -128,7 +130,7 @@ Puma is the build-in application server for Rails 5. You might want to configure
 Refer to [How to Deploy a Rails App with Puma and Nginx](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-puma-and-nginx-on-ubuntu-14-04) for  detail explanations.
 
 ### 9.1 Puma Configuration
-Refer to [puma.rb](/config/puma.rb) for detail. 
+Refer to [puma.rb](/config/puma.rb) for detail.
 
 ## 10. Install NGINX:
 We'll use Nginx web server for the web server layer. It's perfect server to render static application asset. In addition, it'll be setup to proxy traffic for Rails service running in the Puma application server layer.
