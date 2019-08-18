@@ -54,7 +54,7 @@ $ rails server
 ```
 
 ### Production Instance Setup
-The application is deployed into production instance at [wmap](https://wmap.io/). The running environment setup can be found [here](Setup.md)
+The application is deployed into a demo instance at [wmap](https://wmap.io/). The running environment setup can be found [here](Setup.md) for your reference.
 
 
 ### Usage
@@ -63,7 +63,7 @@ Under the home page, click on "Start" button to start. Follow the on-screen inst
 ### To Dos
 
  - Package this up into a docker container
- - Write defensible code :)
  - Write (integration, deployment) tests
  - Enhance performance (squeeze the next bit out of cpu / network IO )
+ - Upgrade to Rails 6.x
  - Fix bugs!

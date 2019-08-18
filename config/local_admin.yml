@@ -24,4 +24,4 @@ test:
 production:
   <<: *default
   username: admin
-  password: 3^l2k3k!IKW1$
+  #password: 1x33kk2l56fg

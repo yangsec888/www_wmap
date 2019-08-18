@@ -73,9 +73,9 @@ Rails.application.routes.draw do
   post 'hosts/save_file'
 
   ################################
-  resources :documents
+  #resources :documents
 
-  get 'documents/index'
+  #get 'documents/index'
 
   ################################
   get 'support/faq'
