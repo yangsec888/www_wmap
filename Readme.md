@@ -4,7 +4,7 @@
 - [Wmap Web Portal](#wmap-web-portal)
 - [Technology Stacks](#technology-stacks)
 - [Local Installation](#local-installation)
-- [Production Instance Setup](#production-instance-setup)
+- [Demo Instance](#demo-instance)
 - [Usage](#usage)
 - [To Dos](#to-dos)
 
@@ -53,11 +53,11 @@ $ rake db:migration
 $ rails server
 ```
 
-### Demo Instance
+### Demo Instance 
 The application is deployed into a demo instance at [www.wmap.io](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
 
 
-### Demo Instance Setup  
+####  Demo Instance Setup  
 The demo instance deployment setup can be found [here](Setup.md) for your reference.
 
 
