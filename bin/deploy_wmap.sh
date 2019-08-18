@@ -1,8 +1,9 @@
 #!/bin/bash
 ################################################################################
 # WMAP Portal Rails App Deployment Script
-# Version 0.1,
-# Last Update: 1/29/2018
+# Version 0.3,
+# Created: 1/29/2018
+# Last Update: 08/17/2019
 # Developed by Sam (Yang) Li
 ################################################################################
 # Usage:

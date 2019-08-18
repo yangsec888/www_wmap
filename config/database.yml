@@ -1,4 +1,4 @@
-# MySQL.  Versions 5.0+ are recommended.
+# MariaDB  Versions 10+ are recommended.
 #
 # Install the MYSQL driver
 #   gem install mysql2

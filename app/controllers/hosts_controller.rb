@@ -3,7 +3,7 @@
 #
 # A  Ruby application for enterprise web application asset tracking
 #
-# Developed by Sam Li, <sli@penguinrandomhouse.com>. 2018-2020
+# Developed by Sam (Yang) Li, <yang.li@owasp.org>.
 #
 #++
 

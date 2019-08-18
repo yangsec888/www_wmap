@@ -36,22 +36,22 @@ sudo apt -y install mariadb-server mariadb-client
 ## 6. Install and Run Redis server:
 Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04
 
-6.1. Install Redis server
+### 6.1. Install Redis server
   ```sh
     sudo apt install redis-server
   ```
 
-6.2. Configure redis server:
+### 6.2. Configure redis server:
   ```sh
     sudo vi /etc/redis/redis.conf
   ```
 
-6.3. Running the redis server:
+### 6.3. Running the redis server:
   ```sh
     sudo systemctl restart redis.service
   ```
 
-6.4. Check the redis service:
+### 6.4. Check the redis service:
   ```sh
     sudo systemctl status redis
     redid-cli ping   * expecting ‘PONG’ for success
@@ -63,18 +63,18 @@ Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-sec
   gem install sidekiq --no-ri --no-rdoc
   ```
 
-7.1. Configure sidekiq as service: https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a
+### 7.1. Configure sidekiq as service: https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a
   ```sh
     sudo vi /lib/systemd/system/sidekiq.service
   ```
 
-7.2. Enable sidekiq service:
+### 7.2. Enable sidekiq service:
   ```sh
    sudo systemctl daemon-reload
    sudo systemctl start sidekiq
   ```
 
-7.3. Trouble-shooting sidekiq:
+### 7.3. Trouble-shooting sidekiq:
   ```sh
   ps uax | grep sidekiq
   sudo systemctl status sidekiq
@@ -85,85 +85,63 @@ Refer to https://www.digitalocean.com/community/tutorials/how-to-install-and-sec
 git clone https://github.com/yangsec888/www_wmap.git
 ```
 
-8.1. Update the rails environment: bundle install
-8.2. Create the database instance: rake db:create
-8.3. Create the database table: rake db:migrate
-8.4. Generate the application encryption key: refer to https://github.com/rails/rails/blob/master/railties/lib/rails/commands/credentials/USAGE
+### 8.1. Update the rails environment:
+```sh
+bundle install
+```
+
+### 8.2. Create the database instance:
+```sh
+rake db:create
+```
+
+### 8.3. Create the database table:
+```sh
+rake db:migrate
+```
+
+### 8.4. Generate the application encryption key:
+Refer to [this article](https://github.com/rails/rails/blob/master/railties/lib/rails/commands/credentials/USAGE) for details:
 ```sh
 rails credentials:help
 ```
 
-8.4. Configure the rails environment variables: refer to ~/.bashrc
+### 8.4. Configure the rails environment variables:
+Here are the environmental variables you might need to add to environment:
+```sh
+$ vi ~/.bashrc
+...
+export PATH="$PATH:$HOME/.rvm/bin"
+export RAILS_ENV=production
+export SECRET_KEY_BASE=xxxx
+export RAILS_MASTER_KEY=xxxx
 
+# Add MariaDB Connectivity credential
+export DBUSER=xxxx
+export DBPASS=xxxx
+```
 
 ## 9. Puma Application Server
 Puma is the build-in application server for Rails 5. You might want to configure it in 'config/puma.rb'
-Note:
-Generate a master key:
-```sh
-```
+Refer to [How to Deploy a Rails App with Puma and Nginx](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-puma-and-nginx-on-ubuntu-14-04) for  detail explanations.
 
 ## 10. Install NGINX:
 We'll use Nginx web server for the web server layer. It's perfect server to render static application asset. In addition, it'll be setup to proxy traffic for Rails service running in the Puma application server layer.
 
 ```sh
-  sudo apt-get install nginx
+sudo apt-get install nginx
 ```
 
-10.1. Create a self-sign cert. Refer to this [link](https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes) for reference.
+### 10.1. Create a self-sign cert. Refer to this [link](https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes) for reference.
 
-10.2. Configure the web server:
-Make sure it's tight up with your Puma application configuration. Refer to this file '/etc/nginx/sites-available/www_wmap'
-```
-upstream www_wmap {
-  server unix:///home/deploy/apps/www_wmap/shared/sockets/puma.sock;
-}
+### 10.2. Configure the web server:
+Make sure it's tight up with your Puma application configuration. Refer to [nginx.conf](/config/nginx.conf) for more details.
 
-server {
-  listen 80;
-  listen 443 ssl;
-  server_name wmstools04.us.randomhouse.com;
-  ssl_certificate /etc/ssl/certs/www_wmap.crt;
-  ssl_certificate_key /etc/ssl/private/www_wmap.key;
-  ssl_protocols TLSv1.1 TLSv1.2;
-  ssl_prefer_server_ciphers on;
-  ssl_ciphers AES256+EECDH:AES256+EDH:!aNULL;
 
-  root /home/deploy/apps/www_wmap/public;
-  access_log /home/deploy/apps/www_wmap/shared/log/nginx.access.log;
-  error_log /home/deploy/apps/www_wmap/shared/log/nginx.error.log info;
+## 11. Setup Ubuntu Firewall:
+How to [Setup a Firewall with UFW](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-18-04) on Ubuntu:
 
-  location @www_wmap {
 
-    proxy_set_header X-Forwarded-Proto https;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header Host $http_host;
-    proxy_redirect off;
-    proxy_pass http://www_wmap;
-    add_header Cache-Control no-cache;
-  }
-
-  #location ^~ /assets/ {
-  location ^~ "^/assets/.+-[0-9a-f]{32}.*" {
-    gzip_static on;
-    expires 1y;
-    add_header Cache-Control public;
-  }
-
-  try_files $uri/index.html $uri @www_wmap;
-
-  error_page 500 502 503 504 /500.html;
-  client_max_body_size 30M;
-  keepalive_timeout 10;
-}
-```
-
-## 11. Setup RHEL Firewall-D:
-11.1.  Intro: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-using_firewalls
-
-11.2. Quick start: https://www.certdepot.net/rhel7-get-started-firewalld/
-
-## 12. Setup RHEL Postfix Send Only, Open Relay (smtp mail)
-12.1. Intro: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/s1-email-mta
-
-12.2. Configuration: https://benjaminrojas.net/configuring-postfix-to-send-mail-from-mac-os-x-mountain-lion/
+## 12. Setup Postfix as Send Only SMTP Server
+The App would need to send out notification email of async jobs. Such as upon successful asset discovery job. In order to do that, you would need to setup a SMTP send out only server.
+Refer to [this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-debian-10) for detail explanations and instructions.
