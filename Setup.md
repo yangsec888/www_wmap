@@ -110,10 +110,53 @@ We'll use Nginx web server for the web server layer. It's perfect server to rend
   sudo apt-get install nginx
 ```
 
-10.1. Create a self-sign cert: https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes
+10.1. Create a self-sign cert. Refer to this [link](https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes) for reference.
 
 10.2. Configure the web server:
-refer to /etc/nginx/sites-available/www_wmap; Make sure it's tight up with your Puma application configuration.
+Make sure it's tight up with your Puma application configuration. Refer to this file '/etc/nginx/sites-available/www_wmap'
+```
+upstream www_wmap {
+  server unix:///home/deploy/apps/www_wmap/shared/sockets/puma.sock;
+}
+
+server {
+  listen 80;
+  listen 443 ssl;
+  server_name wmstools04.us.randomhouse.com;
+  ssl_certificate /etc/ssl/certs/www_wmap.crt;
+  ssl_certificate_key /etc/ssl/private/www_wmap.key;
+  ssl_protocols TLSv1.1 TLSv1.2;
+  ssl_prefer_server_ciphers on;
+  ssl_ciphers AES256+EECDH:AES256+EDH:!aNULL;
+
+  root /home/deploy/apps/www_wmap/public;
+  access_log /home/deploy/apps/www_wmap/shared/log/nginx.access.log;
+  error_log /home/deploy/apps/www_wmap/shared/log/nginx.error.log info;
+
+  location @www_wmap {
+
+    proxy_set_header X-Forwarded-Proto https;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+    proxy_pass http://www_wmap;
+    add_header Cache-Control no-cache;
+  }
+
+  #location ^~ /assets/ {
+  location ^~ "^/assets/.+-[0-9a-f]{32}.*" {
+    gzip_static on;
+    expires 1y;
+    add_header Cache-Control public;
+  }
+
+  try_files $uri/index.html $uri @www_wmap;
+
+  error_page 500 502 503 504 /500.html;
+  client_max_body_size 30M;
+  keepalive_timeout 10;
+}
+```
 
 ## 11. Setup RHEL Firewall-D:
 11.1.  Intro: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-using_firewalls
