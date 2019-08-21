@@ -57,5 +57,5 @@ ssh -q deploy@wmap.io 'source ~/.bash_profile; sudo systemctl start nginx'
 echo "Done"
 
 echo "Starting Sidekiq service ..."
-ssh -q deploy@wmap.io 'source ~/.bash_profile; sudo systemctl start sidekiq'
+ssh -q deploy@wmap.io 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec sidekiq -d'
 echo "Done"
