@@ -51,7 +51,7 @@ Rails.application.routes.draw do
   delete 'domains/destroy'
   get 'domains/load_file'
   post 'domains/save_file'
-  #get 'domains/import'
+  get 'domains/import'
   get 'domains/search'
   get 'domains/search_list'
   post 'domains/search_list'

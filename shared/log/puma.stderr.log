@@ -38,3 +38,4 @@
 	from /Users/sli/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1.1/lib/rails/commands.rb:18:in `<top (required)>'
 	from bin/rails:4:in `require'
 	from bin/rails:4:in `<main>'
+=== puma startup: 2019-08-26 11:06:40 -0400 ===

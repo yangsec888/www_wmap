@@ -68,7 +68,7 @@ gem 'devise'
 gem "devise_ldap_authenticatable"
 gem 'server-generated-popups'
 gem 'responders'
-gem 'wmap', '= 2.5.4'
+gem 'wmap', '>= 2.5.5'
 gem 'netaddr'
 gem 'parallel'
 gem 'whois'

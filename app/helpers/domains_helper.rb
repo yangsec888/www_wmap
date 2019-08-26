@@ -133,6 +133,23 @@ module DomainsHelper
     return [nil,nil]
   end
 
+  # Reload domain table based on the WMAP domains data file
+  def domain_table_reload()
+    puts "Update the domain table ..."
+    db = Sequel.connect(YAML.load(File.read(File.join(::Rails.root, 'config', 'database.yml')))[::Rails.env] || 'development')
+    puts "Database connection success. "
+    domain_table = db[:domains]
+    domain_table.truncate
+    puts "Domain table truncate success."
+    tracker=Wmap::DomainTracker.instance
+    tracker.known_internet_domains.each do |key, val|
+      domain_table.insert(name: key,  transferable: val, user_id: current_user.id, created_at: Time.now, updated_at: Time.now)
+    end
+    tracker=nil
+    db = nil
+    puts "Update complete. "
+  end
+
 
 
 end

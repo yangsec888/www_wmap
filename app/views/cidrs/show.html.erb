@@ -14,11 +14,11 @@
    </thead>
 
    <tbody>
-      <% @cidrs.each do |key,cidr| %>
+      <% @cidrs.map do |cidr| %>
          <tr>
-            <td><%= cidr[0] %></td>
-            <td><%= cidr[1] %></td>
-            <td><%= cidr[2] %></td>
+            <td><%= cidr['owed_cidr'] %></td>
+            <td><%= cidr['ref'] %></td>
+            <td><%= cidr['netname'] %></td>
          </tr>
       <% end %>
    </tbody>

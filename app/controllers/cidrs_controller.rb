@@ -9,6 +9,7 @@
 
 class CidrsController < ApplicationController
   before_action :authenticate_user!
+  include CidrsHelper
 
     def edit
       @dir = Rails.root.join('shared', 'data')
@@ -17,6 +18,7 @@ class CidrsController < ApplicationController
     end
 
     def show
+=begin
       @file = Rails.root.join('shared', 'data', 'cidrs')
       File.new(@file, File::CREAT|File::TRUNC|File::RDWR, 0644) unless File.exist?(@file)
       @cidrs = Hash.new
@@ -28,6 +30,8 @@ class CidrsController < ApplicationController
         entry=line.split(',')
         @cidrs[row]=entry
       end
+=end
+      @cidrs=Cidr.all
     end
 
     def load_file
@@ -49,10 +53,11 @@ class CidrsController < ApplicationController
         file = File.open(@file, 'w+')
         file.write(params[:file_content])
         file.close
-        YAML.load_file(@file)
+        cidr_table_reload
+        #YAML.load_file(@file)
         render json: { message: 'Saving successed.' }
       else
-          render json: { message: 'Access deined. ' }
+        render json: { message: 'Access deined. ' }
       end
     rescue Psych::SyntaxError
       file = File.open(@file, 'w+')
