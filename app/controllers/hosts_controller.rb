@@ -9,7 +9,9 @@
 
 class HostsController < ApplicationController
   before_action :authenticate_user!
+  include HostsHelper
 
+=begin
     def index
       file = Rails.root.join('shared', 'data', 'hosts')
       File.new(file, File::CREAT|File::TRUNC|File::RDWR, 0644) unless File.exist?(file)
@@ -23,6 +25,12 @@ class HostsController < ApplicationController
         @hosts[row]=entry
       end
       @uid = current_user.id
+    end
+=end
+
+    def index
+      @hosts=Host.all.order(sort_column + " " + sort_direction).page(params[:page]).per_page(25)
+      #@chart_data=Hash.new
     end
 
     def edit
@@ -55,7 +63,8 @@ class HostsController < ApplicationController
       file = File.open(@file, 'w+')
       file.write(params[:file_content])
       file.close
-      YAML.load_file(@file)
+      host_table_reload
+      #YAML.load_file(@file)
       render json: { message: 'Saving successed.' }
     rescue Psych::SyntaxError
       file = File.open(@file, 'w+')
@@ -64,5 +73,14 @@ class HostsController < ApplicationController
       render json: { message: 'Saving failed, please check your file again.' }
     end
 
+    private
+
+    def sort_column
+      Host.column_names.include?(params[:sort]) ? params[:sort] : "host_name"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    end
 
 end

@@ -13964,3 +13964,479 @@ Processing by CidrsController#load_file as TEXT
 Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:21:50 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Reading hosts file: /Users/sli/www_wmap/shared/data/hosts
+  Rendering hosts/index.html.erb within layouts/application
+  Rendered hosts/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 157ms (Views: 147.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:21:52 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"V3v2S1Ddg2hj3AuAHE0TVvdWKhYw3ROguS74LpWcLMvj6dbk5eXma8S5MukCRT/ooO4fRPmHOvA3kfPqIl7Pcw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 165ms (Views: 151.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:21:52 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:21:53 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:23:22 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"V3v2S1Ddg2hj3AuAHE0TVvdWKhYw3ROguS74LpWcLMvj6dbk5eXma8S5MukCRT/ooO4fRPmHOvA3kfPqIl7Pcw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 142ms (Views: 133.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:23:23 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:23:24 -0400
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:23:24 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Reading hosts file: /Users/sli/www_wmap/shared/data/hosts
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+  Rendering hosts/index.html.erb within layouts/application
+  Rendered hosts/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 157ms (Views: 146.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:23:36 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"UkZrJHfzsrjnp760mgCdA2i9IQPHoXcC2L7kiQvhoBXm1EuLwsvXu0DCh92ECLG9PwUUUQ77XlJWAe9NvCNDrQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 188ms (Views: 178.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:23:37 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:23:37 -0400
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:23:38 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Reading hosts file: /Users/sli/www_wmap/shared/data/hosts
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+  Rendering hosts/index.html.erb within layouts/application
+  Rendered hosts/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 160ms (Views: 150.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:24:14 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"xDt+AFo/nF4LQ7fTKZaq6JsRtsLMcvPg/XzKoVSBKItwqV6v7wf5Xawmjro3noZWzKmDkAUo2rBzw8Fl40PLMw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 152ms (Views: 145.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:24:14 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:24:16 -0400
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:24:16 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Reading hosts file: /Users/sli/www_wmap/shared/data/hosts
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+  Rendering hosts/index.html.erb within layouts/application
+  Rendered hosts/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 158ms (Views: 144.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:24:18 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"HK2eY+AhFC1NqOfy9on5yf7OnaMGHtW1hNlrEDjeE0ioP77MVRlxLurN3pvogdV3qXao8c9E/OUKZmDUjxzw8A=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 145ms (Views: 136.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:24:19 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:24:25 -0400
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:24:25 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Reading hosts file: /Users/sli/www_wmap/shared/data/hosts
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+  Rendering hosts/index.html.erb within layouts/application
+  Rendered hosts/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 162ms (Views: 150.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:29:12 -0400
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 376ms (ActiveRecord: 29.7ms)
+
+
+  
+NameError (undefined local variable or method `sort_column' for #<HostsController:0x00007fe23a845ed0>):
+  
+app/controllers/hosts_controller.rb:32:in `index'
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:31:09 -0400
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.3ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 230ms (Views: 167.1ms | ActiveRecord: 33.1ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:31:11 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"bqBsDBZ+PhTQQaD8GAM0PLMgSaV0UPbpg9buC+ALe0raMkyjo0ZbF3ckmZUGCxiC5Jh8970K37kNaeXPV8mY8g=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 199ms (Views: 190.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:31:12 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:31:16 -0400
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:31:16 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.4ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 155ms (Views: 146.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:35:30 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"CjUEuSA1v34TSQX51eioUvClljDnagqnLOtwLtzKV+S+pyQWlQ3afbQsPJDL4ITspx2jYi4wI/eiVHvqawi0XA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 204ms (Views: 172.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:35:30 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:35:34 -0400
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:35:34 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by HostsController#index as HTML
+Update the host table ...
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Database connection success. 
+host table truncate success.
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.4ms)
+
+
+  
+Sequel::DatabaseError (Mysql2::Error: Unknown column 'user_id' in 'field list'):
+  
+app/helpers/hosts_helper.rb:21:in `block in host_table_reload'
+app/helpers/hosts_helper.rb:20:in `each'
+app/helpers/hosts_helper.rb:20:in `host_table_reload'
+app/controllers/hosts_controller.rb:66:in `save_file'
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.3ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 436ms (Views: 137.7ms | ActiveRecord: 16.6ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:37:00 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"kf9xrmO7EyRcK/3MWer4i6LizVurq8lGJICb9r8xAAwlbVEB1oN2J/tOxKVH4tQ19Vr4CWLx4BaqP5AyCPPjtA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 183ms (Views: 152.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:37:00 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:37:01 -0400
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:37:01 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by HostsController#index as HTML
+Update the host table ...
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Database connection success. 
+host table truncate success.
+Update complete. 
+Completed 200 OK in 57ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.3ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 252ms (Views: 180.9ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:38:33 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"gpk5m5to3ULr9DLA/+OWxOxh8xMpftY5Ly+ijlpdePk2Cxk0LlC4QUyRC6nh67p6u9nGQeAk/2mhkKlK7Z+bQQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 174ms (Views: 145.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:38:34 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:38:35 -0400
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:38:35 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Update the host table ...
+Database connection success. 
+host table truncate success.
+Update complete. 
+Completed 200 OK in 62ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.4ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 236ms (Views: 161.5ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:38:40 -0400
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.5ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 153ms (Views: 145.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:41:23 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"HsJSfg/B0Nv2tIWlF+eno74G+jclMctE5XJSuIC9TRuqUHLRuvm12FHRvMwJ74sd6b7PZexr4hRrzVl8N3+uow=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 177ms (Views: 140.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:41:23 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:41:24 -0400
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:41:24 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Update the host table ...
+Database connection success. 
+host table truncate success.
+Update complete. 
+Completed 200 OK in 62ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.4ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 245ms (Views: 169.9ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:45:21 -0400
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"AI7nmTRK7fukDIQnRviqB07jn60G0o0NtDXBlQgoNe20HMc2gXKI+ANpvU5Y8Ia5GVuq/8+IpF06ispRv+rWVQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 191ms (Views: 160.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:45:22 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/hosts/save_file" for 127.0.0.1 at 2019-08-27 16:45:23 -0400
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 16:45:23 -0400
+Processing by HostsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# local hosts file created by the Wmap::HostTracker class save_known_hosts_to_file! method at: 2019-08-27 10:28:24 -0400\ncloud.google.com\t172.217.10.46\ntranslate.google.com\t172.217.12.142\nwww.google.com\t172.217.12.196\n"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 19:39:05", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by HostsController#index as HTML
+Update the host table ...
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Database connection success. 
+host table truncate success.
+Update complete. 
+Completed 200 OK in 57ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.3ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 248ms (Views: 178.4ms | ActiveRecord: 16.9ms)
+
+

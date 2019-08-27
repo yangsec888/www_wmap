@@ -12,10 +12,10 @@
    </thead>
 
    <tbody>
-      <% @hosts.each do |key,host| %>
+      <% @hosts.map do |host| %>
          <tr>
-            <td><%= host[0] %></td>
-            <td><%= host[1] %></td>
+            <td><%= host.host_name %></td>
+            <td><%= host.ip %></td>
          </tr>
       <% end %>
    </tbody>
