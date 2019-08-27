@@ -20,7 +20,7 @@
 /shared/log/
 
 # Ignore softlink to wmap data
-shared/data
+/shared/data
 
 # Ignore database yml
 /config/database.yml
