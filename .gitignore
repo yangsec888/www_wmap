@@ -16,8 +16,10 @@
 /config/master.key
 
 # Ignore server log 
-/shared
-/shared/data
+/shared/log
+
+# Ignore softlink to wmap data
+shared/data
 
 # Ignore database yml
 /config/database.yml
