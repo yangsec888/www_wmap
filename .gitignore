@@ -17,6 +17,7 @@
 
 # Ignore server log 
 /shared/
+/shared/log/
 
 # Ignore softlink to wmap data
 shared/data
