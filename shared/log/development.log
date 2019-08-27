@@ -5839,3 +5839,28 @@ Sent data DomainPortfolio-All-08272019.xlsx (0.7ms)
 Completed 200 OK in 74ms (Views: 0.5ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/hosts/index" for 127.0.0.1 at 2019-08-27 09:59:42 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Reading hosts file: /Users/sli/www_wmap/shared/data/hosts
+  Rendering hosts/index.html.erb within layouts/application
+  Rendered hosts/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 160ms (Views: 146.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/show_all" for 127.0.0.1 at 2019-08-27 10:17:03 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by DomainsController#show_all as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/show_all.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/show_all.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 141ms (Views: 132.7ms | ActiveRecord: 1.4ms)
+
+
