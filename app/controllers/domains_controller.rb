@@ -43,6 +43,7 @@ class DomainsController < ApplicationController
       end
     end
 
+=begin
     def index
       domains=Hash.new
       @file = Rails.root.join('shared', 'data', 'domains')
@@ -56,6 +57,7 @@ class DomainsController < ApplicationController
       end
       @domains = domains
     end
+=end
 
     def edit
       @dir = Rails.root.join('shared', 'data')
@@ -98,20 +100,14 @@ class DomainsController < ApplicationController
       end
     end
 
-    # show divisional domain portfolio
+    # show domain info
     def show
-      @division=params[:division]
-      @domains = Domain.where("division = ?", params[:division]).order(sort_column + " " + sort_direction).page(params[:page]).per_page(25)
-      @chart_data = pie_by_keep(params[:division]).to_json.html_safe
-      #render plain: @chart_data.inspect
-      respond_to do |format|
-        format.html #show.html.erb
-        format.json { render json: @chart_data }
-      end
+      @domain = Domain.find_by("name = ?", params[:name])
     end
 
     # show all domains
-    def show_all
+    #def show_all
+    def index
       @domains = Domain.all.order(sort_column + " " + sort_direction).page(params[:page]).per_page(25)
       @chart_data = pie_by_keep("all").to_json.html_safe
       respond_to do |format|

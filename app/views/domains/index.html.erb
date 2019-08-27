@@ -1,21 +1,50 @@
-<h4>  Domain Registration </h4>
+<script>
+  // reload once after Ajax call
+  $(document).ready(function() {
+      if (window.location.href.indexOf('reload')==-1) {
+           window.location.replace(window.location.href+'?reload');
+      }
+  });
+</script>
+
+<h4> Domain Portfolio </h4>
 <br />
 
 <%= button_to "Edit", domains_edit_path, class: "btn btn-primary" %>
-<br />
+
+<b>Pages: </b><%= will_paginate @domains, previous_label: h("<"), next_label: h(">") %>
+(25 entries per page)
+<span class="text-center">
+  &nbsp &nbsp &nbsp &nbsp <b>Total</b>:  <%= @domains.count %>
+</span> &nbsp &nbsp &nbsp &nbsp
+<span class="text-center">
+  <%= link_to image_tag("excel.png", size: "35x35", class: "clickable-img", alt: "Download"), reports_download_all_path(:division => "all") %>
+</span>
 <table class="table table-bordered table-striped">
    <thead>
       <tr>
-         <th>Domain Name </th>
-         <th>Free Zone Transferable? </th>
+         <th><%= sortable "name", "Domain" %></th>
+         <th>Free Zone Transferable?</th>
+         <th>Last Update</th>
       </tr>
    </thead>
 
    <tbody>
-      <% @domains.each do |key,domain| %>
+      <% @domains.each do |domain| %>
          <tr>
-            <td><%= domain[0] %></td>
-            <td><%= domain[1] %></td>
+            <td>
+              <% unless domain.name.nil? %>
+                  <%= link_to domain.name, domains_search_path(keyword: domain.name), method: "get"  %>
+              <% end %>
+            </td>
+            <td><%if domain.transferable %>
+                  <%= "yes" %>
+                <% else %>
+                  <%= "no" %>
+                <% end %>
+            </td>
+            <td><%= domain.updated_at %></td>
+
          </tr>
       <% end %>
    </tbody>

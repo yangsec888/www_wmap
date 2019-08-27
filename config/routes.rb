@@ -42,7 +42,7 @@ Rails.application.routes.draw do
 
   get 'domains/index'
   get 'domains/show'
-  get 'domains/show_all'
+  #get 'domains/show_all'
   get 'domains/edit'
   post 'domains/edit_domain'
   post 'domains/save_domain'
@@ -59,7 +59,7 @@ Rails.application.routes.draw do
 
  ################################
 
-  get 'cidrs/show'
+  get 'cidrs/index'
   post 'cidrs/edit'
   get 'cidrs/load_file'
   post 'cidrs/save_file'

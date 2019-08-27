@@ -17,7 +17,7 @@ class CidrsController < ApplicationController
       @uid = current_user.id
     end
 
-    def show
+    def index
 =begin
       @file = Rails.root.join('shared', 'data', 'cidrs')
       File.new(@file, File::CREAT|File::TRUNC|File::RDWR, 0644) unless File.exist?(@file)

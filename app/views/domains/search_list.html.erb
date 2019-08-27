@@ -5,7 +5,7 @@
 <div class="list-group">
     <ul>
     <% index=0; for domain in @domains; next if domain.nil?; index+=1 %>
-        <%= index %>. &nbsp<u><%= link_to domain.name, domains_search_path(keyword: domain.name), method: "get", target: "_blank" %></u>
+        <%= index %>. &nbsp<u><%= link_to domain.name, domains_show_path(name: domain.name), method: "get", target: "_blank" %></u>
         <br />
     <% end %>
     </ul>
