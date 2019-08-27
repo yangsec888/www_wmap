@@ -14440,3 +14440,24 @@ Completed 200 OK in 57ms (Views: 0.2ms | ActiveRecord: 0.6ms)
 Completed 200 OK in 248ms (Views: 178.4ms | ActiveRecord: 16.9ms)
 
 
+Started POST "/hosts/edit" for 127.0.0.1 at 2019-08-27 16:53:59 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"Npe4NlaZqIcYdDYKxo9JGIRcMufy0RLJSt412LVT02KCBZiZ46HNhL8RD2PYh2Wm0+QHtTuLO5nEYT4cApEw2g=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /Users/sli/www_wmap/shared/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 158ms (Views: 149.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hosts/load_file?path=" for 127.0.0.1 at 2019-08-27 16:53:59 -0400
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
