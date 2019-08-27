@@ -16,7 +16,7 @@
 /config/master.key
 
 # Ignore server log 
-/shared/log
+/shared/
 
 # Ignore softlink to wmap data
 shared/data
