@@ -1,0 +1,76 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    var sites_editor = CodeMirror(document.getElementById("sitesTextArea"), {
+      mode: "null",
+      lineNumbers: true,
+      extraKeys: {
+        "Ctrl-Space": "autocomplete"
+      },
+      value: ""
+    });
+    var sites_value =  $.ajax({
+      url: "load_file",
+      type: "GET",
+      dataType: 'text',
+      data: {
+        "path": ""
+      },
+      success: function(response) {
+        //console.log(response);
+        //alert("Success: " + response['message'])
+        sites_editor.getDoc().setValue(response);
+      },
+      error: function(response) {
+        //console.log(response);
+        alert("Error: " + response['message'])
+      }
+    });
+    $('#save_sites_button').click(function() {
+      $.ajax({
+        url: "save_file",
+        type: "POST",
+        dataType: 'json',
+        data: {
+          "file_path": "",
+          "file_content": sites_editor.getDoc().getValue()
+        },
+        success: function(response) {
+          //console.log(response);
+          if  (response['message']=="Access Denied.") {
+            alert("Access Denied.")
+          } else {
+            alert("Success: " + response['message'])
+          }
+        },
+        error: function(response) {
+          //console.log(response);
+          alert("Error:" + response['message'])
+        }
+      });
+      $(location).attr('href', "/sites/index");  // redirect after the Save
+    });
+  });
+</script>
+
+<h4>  Discovered Websites </h4>
+<br />
+
+<div class=" col-md-9 col-lg-9">
+  <% data = String.new %>
+  <p>
+  </br>
+  <button class="btn btn-primary" id="save_sites_button" type="submit">Save</button>
+  <button type="button" class="pull-right btn btn-default" title="Website Edit Format"
+    data-container="body" data-toggle="popover" data-placement="right"
+    data-content="site Format: <br>
+    <ul><li> One entry per line  </li>
+        <li> Comment out line start with special char # </li>
+        <li> Website record in Comma Separated Value (CSV) file format in general </li>
+    </ul>
+        "><span class="glyphicon glyphicon-question-sign"></span>Website Edit Format</button>
+  <div class ="CodeMirror" id="sitesTextArea">
+  </div>
+
+</div>
+
+<div class="row"></div>

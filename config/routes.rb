@@ -85,7 +85,9 @@ Rails.application.routes.draw do
 
   get 'sites/index'
   get 'sites/show'
-  #get 'sites/search'
+  post 'sites/edit'
+  get 'sites/load_file'
+  post 'sites/save_file'
   get 'sites/import'
   post 'sites/search'
   post 'sites/save'
