@@ -1,3 +1,18 @@
+<script>
+  // reload once after Ajax redirect
+  $(document).ready(function() {
+    if (window.location.href.includes("?")) {
+      if (window.location.href.indexOf('reload')==-1) {
+           window.location.replace(window.location.href+'&?reload');
+      }
+    } else {
+      if (window.location.href.indexOf('reload')==-1) {
+           window.location.replace(window.location.href+'?reload');
+      }
+    }
+  });
+</script>
+
 <h4>  Host Records </h4>
 <br />
 
