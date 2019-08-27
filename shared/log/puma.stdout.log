@@ -5361,3 +5361,468 @@ Processing by DomainsController#show_all as HTML
 Completed 200 OK in 153ms (Views: 143.9ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/cidrs/show" for 127.0.0.1 at 2019-08-26 16:28:01 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by CidrsController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/cidrs/show" for 127.0.0.1 at 2019-08-26 16:28:01 -0400
+Processing by CidrsController#show as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-08-26 16:28:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 167ms (Views: 165.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-08-26 16:28:03 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PMU92mHdQJtyroGjoaYd1cNyP7NMov+8ZSaJX/hUL6JcGfbNRZP8PhkvLnZ/wnLu8ndPSv47dZm8obCA60ebSA==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-08-26 20:28:03', `last_sign_in_at` = '2019-08-26 19:57:08', `sign_in_count` = 15, `updated_at` = '2019-08-26 20:28:03' WHERE `users`.`id` = 2[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/cidrs/show
+Completed 302 Found in 53ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/cidrs/show" for 127.0.0.1 at 2019-08-26 16:28:03 -0400
+Processing by CidrsController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/show.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 151ms (Views: 144.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/cidrs/edit" for 127.0.0.1 at 2019-08-26 16:28:05 -0400
+Processing by CidrsController#edit as HTML
+  Parameters: {"authenticity_token"=>"2tQ7GUpKAAGDqcAtoEYfS9epiSGLbr0cmv1/eO/gcqq4621XaCTdWFakbSUybJYZPd048LgdcIAc1ByHqjnxeQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 160ms (Views: 152.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cidrs/load_file?path=" for 127.0.0.1 at 2019-08-26 16:28:05 -0400
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/show_all" for 127.0.0.1 at 2019-08-26 16:28:48 -0400
+Processing by DomainsController#show_all as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/show_all.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/show_all.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 158ms (Views: 148.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/domains/edit" for 127.0.0.1 at 2019-08-26 16:28:50 -0400
+Processing by DomainsController#edit as HTML
+  Parameters: {"authenticity_token"=>"WUIM5SIkRFIjwcOg8WZTxWWsHTvZCmzULJA8uXxkoJc7fVqrAEqZC/bMbqhjTNqXj9is6up5oUiquV9GOb0jRA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 171ms (Views: 157.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2019-08-26 16:28:50 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+[16526] ! Terminating timed out worker: 16588
+[16526] ! Out-of-sync worker list, no 16588 worker
+[16526] - Worker 0 (pid: 48014) booted, phase: 0
+[16526] ! Terminating timed out worker: 48014
+[16526] - Worker 0 (pid: 48022) booted, phase: 0
+[16526] ! Terminating timed out worker: 48022
+[16526] ! Out-of-sync worker list, no 48022 worker
+[16526] - Worker 0 (pid: 48037) booted, phase: 0
+[16526] ! Terminating timed out worker: 48037
+[16526] ! Out-of-sync worker list, no 48037 worker
+[16526] - Worker 0 (pid: 48056) booted, phase: 0
+[16526] ! Terminating timed out worker: 48056
+[16526] ! Out-of-sync worker list, no 48056 worker
+[16526] - Worker 0 (pid: 48070) booted, phase: 0
+[16526] ! Terminating timed out worker: 48070
+[16526] ! Out-of-sync worker list, no 48070 worker
+[16526] - Worker 0 (pid: 48085) booted, phase: 0
+[16526] ! Terminating timed out worker: 48085
+[16526] ! Out-of-sync worker list, no 48085 worker
+[16526] - Worker 0 (pid: 48134) booted, phase: 0
+[16526] ! Terminating timed out worker: 48134
+[16526] ! Out-of-sync worker list, no 48134 worker
+[16526] - Worker 0 (pid: 48157) booted, phase: 0
+Started GET "/domains/show_all" for 127.0.0.1 at 2019-08-27 09:36:41 -0400
+Started POST "/domains/save_file" for 127.0.0.1 at 2019-08-27 09:36:41 -0400
+  [1m[35m (29.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (29.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DomainsController#save_file as JSON
+Processing by DomainsController#show_all as HTML
+  Parameters: {"file_path"=>"", "file_content"=>"# Local domains file created by class Wmap::DomainTracker method save_domains_to_file! at: 2019-08-21 17:20:07 -0400\n# domain name, free zone transfer detected?\ngoogle.com, no\n"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 105ms (ActiveRecord: 66.7ms)
+
+
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 118ms (ActiveRecord: 23.2ms)
+
+
+Started GET "/domains/edit" for 127.0.0.1 at 2019-08-27 09:36:41 -0400
+Started GET "/domains/show_all" for 127.0.0.1 at 2019-08-27 09:36:41 -0400
+Processing by DomainsController#show_all as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by DomainsController#edit as JSON
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-08-27 09:36:41 -0400
+Started GET "/users/login.json" for 127.0.0.1 at 2019-08-27 09:36:41 -0400
+Processing by Devise::SessionsController#new as HTML
+Processing by Devise::SessionsController#new as JSON
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.0) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.7.0) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (5.2.1.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (27.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 910ms (Views: 903.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-08-27 09:36:45 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N/wpd5i6jijkwXGX0DTkCgvfPcDqjOuIq3WZfhetG/VbCO8jeI6T8es0RzH/n5wphyqaNQftBfscW2DS4wCsMw==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (13.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-08-27 13:36:45', `last_sign_in_at` = '2019-08-26 20:28:03', `sign_in_count` = 16, `updated_at` = '2019-08-27 13:36:45' WHERE `users`.`id` = 2[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/domains/edit
+Completed 302 Found in 53ms (ActiveRecord: 15.5ms)
+
+
+Started GET "/domains/edit" for 127.0.0.1 at 2019-08-27 09:36:45 -0400
+Processing by DomainsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 155ms (Views: 148.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2019-08-27 09:36:45 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/domains/save_file" for 127.0.0.1 at 2019-08-27 09:36:48 -0400
+Started GET "/domains/show_all" for 127.0.0.1 at 2019-08-27 09:36:48 -0400
+Processing by DomainsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local domains file created by class Wmap::DomainTracker method save_domains_to_file! at: 2019-08-21 17:20:07 -0400\n# domain name, free zone transfer detected?\ngoogle.com, no\n"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 13:36:45", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by DomainsController#show_all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+Completed 200 OK in 99ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mDomain Load (1.1ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/show_all.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/show_all.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 282ms (Views: 144.4ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/domains/show_all" for 127.0.0.1 at 2019-08-27 09:38:57 -0400
+Processing by DomainsController#show_all as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/show_all.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/show_all.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 147ms (Views: 137.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/domains/edit" for 127.0.0.1 at 2019-08-27 09:39:10 -0400
+Processing by DomainsController#edit as HTML
+  Parameters: {"authenticity_token"=>"kx9WhHtfnmBIvHyH0HXdv1okP1pBUVt7eaQOGaO4Cj/0CGsxA63oNVo51z9rmbQhJ5P7ef3z3MRNnaQBLAeesQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 144ms (Views: 135.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2019-08-27 09:39:11 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/domains/save_file" for 127.0.0.1 at 2019-08-27 09:40:53 -0400
+Started GET "/domains/show_all" for 127.0.0.1 at 2019-08-27 09:40:53 -0400
+Processing by DomainsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local domains file created by class Wmap::DomainTracker method save_domains_to_file! at: 2019-08-21 17:20:07 -0400\n# domain name, free zone transfer detected?\ngoogle.com, no\n"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 13:36:45", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by DomainsController#show_all as HTML
+Update the domain table ...
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.8ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+Database connection success. 
+  Rendering domains/show_all.html.erb within layouts/application
+Domain table truncate success.
+  [1m[35m (26.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+Update complete. 
+Completed 200 OK in 56ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/show_all.html.erb within layouts/application (33.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 197ms (Views: 161.2ms | ActiveRecord: 27.9ms)
+
+
+Started POST "/domains/edit" for 127.0.0.1 at 2019-08-27 09:40:57 -0400
+Processing by DomainsController#edit as HTML
+  Parameters: {"authenticity_token"=>"v9/hzk7/hCrWlDrp3GdS/AfbxQTl69EjuRhE4y2yIkLYyNx7Ng3yf8QRkVFniztiemwBJ1lJVpyNIe77og22zA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 117ms (Views: 110.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2019-08-27 09:40:57 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/domains/save_file" for 127.0.0.1 at 2019-08-27 09:41:07 -0400
+Started GET "/domains/show_all" for 127.0.0.1 at 2019-08-27 09:41:07 -0400
+Processing by DomainsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local domains file created by class Wmap::DomainTracker method save_domains_to_file! at: 2019-08-21 17:20:07 -0400\n# domain name, free zone transfer detected?\ngoogle.com, no\n"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 13:36:45", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by DomainsController#show_all as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Update the domain table ...
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+Database connection success. 
+  Rendering domains/show_all.html.erb within layouts/application
+Domain table truncate success.
+  [1m[35m (25.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+Update complete. 
+Completed 200 OK in 59ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/show_all.html.erb within layouts/application (33.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 179ms (Views: 144.5ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/reports/download_all?division=all" for 127.0.0.1 at 2019-08-27 09:41:39 -0400
+Processing by ReportsController#download_all as HTML
+  Parameters: {"division"=>"all"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 13:36:45", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT `domains`.* FROM `domains` WHERE (name is not null)[0m
+Writing record into the spreadsheet: ["google.com", false]
+Write to cell [1,0]: google.com
+Write to cell [1,1]: false
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data DomainPortfolio-All-08272019.xlsx (0.9ms)
+Completed 200 OK in 124ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/domains/edit" for 127.0.0.1 at 2019-08-27 09:42:08 -0400
+Processing by DomainsController#edit as HTML
+  Parameters: {"authenticity_token"=>"nYgOPHyHzdNeruOfo7hn4aoiEm5yLfEGl8V1yub+PHf6nzOJBHW7hkwrSCcYVA5/15XWTc6Pdrmj/N/SaUGo+Q=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 144ms (Views: 136.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2019-08-27 09:42:08 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/domains/save_file" for 127.0.0.1 at 2019-08-27 09:44:23 -0400
+Started GET "/domains/show_all" for 127.0.0.1 at 2019-08-27 09:44:23 -0400
+Processing by DomainsController#show_all as HTML
+Processing by DomainsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local domains file created by class Wmap::DomainTracker method save_domains_to_file! at: 2019-08-21 17:20:07 -0400\n# domain name, free zone transfer detected?\ngoogle.com, no\n"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 13:36:45", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+Completed 200 OK in 85ms (Views: 0.2ms | ActiveRecord: 19.4ms)
+
+
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/show_all.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/show_all.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 268ms (Views: 149.4ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/reports/download_all?division=all" for 127.0.0.1 at 2019-08-27 09:44:26 -0400
+Processing by ReportsController#download_all as HTML
+  Parameters: {"division"=>"all"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-08-27 13:36:45", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT `domains`.* FROM `domains` WHERE (name is not null)[0m
+Writing record into the spreadsheet: ["google.com", "no"]
+Write to cell [1,0]: google.com
+Write to cell [1,1]: no
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data DomainPortfolio-All-08272019.xlsx (0.7ms)
+Completed 200 OK in 74ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+

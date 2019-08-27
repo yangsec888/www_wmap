@@ -15,7 +15,7 @@
    <thead>
       <tr>
          <th><%= sortable "name", "Domain" %></th>
-         <th>Redirect</th>
+         <th>Free Zone Transferable?</th>
          <th>Last Update</th>
       </tr>
    </thead>
@@ -28,7 +28,12 @@
                   <%= link_to domain.name, domains_search_path(keyword: domain.name), method: "get"  %>
               <% end %>
             </td>
-            <td><%= domain.current_redirect %></td>
+            <td><%if domain.transferable %>
+                  <%= "yes" %>
+                <% else %>
+                  <%= "no" %>
+                <% end %>
+            </td>
             <td><%= domain.updated_at %></td>
 
          </tr>

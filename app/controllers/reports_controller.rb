@@ -101,7 +101,11 @@ class ReportsController < ApplicationController
         next if domain.name.nil?
         next if domain.name.empty?
         index += 1
-        my_row = [domain.name, domain.transferable]
+        if domain.transferable
+          my_row = [domain.name, "yes"]
+        else
+          my_row = [domain.name, "no"]
+        end
         worksheet_write_row(worksheet,index, my_row)
       end
       file = "DomainPortfolio-All-" + Time.now.strftime('%m%d%Y') + ".xlsx"
