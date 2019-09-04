@@ -8,7 +8,7 @@
 staging:
   :concurrency: 5
 production:
-  :verbose: false
+  :verbose: true
   :concurrency: 5
 :queues:
   - critical
