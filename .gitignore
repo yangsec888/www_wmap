@@ -17,7 +17,8 @@
 
 # Ignore server log 
 shared
-shared/data/.*
+shared/data
+shared/data/*
 shared/log/.*
 shared/temp/.*
 
