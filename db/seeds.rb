@@ -21,30 +21,6 @@ Report.create!([
   published: true
 },
 {
-  title: "Domain Portfolio - Division 1",
-  description: "Divisional workbooks - Divison 1 Portfolio.",
-  department: "IT",
-  division: "division_1",
-  category: "domain",
-  published: true
-},
-{
-  title: "Domain Portfolio - Division 2",
-  description: "Divisional workbooks - Divison 2 Portfolio.",
-  department: "IT",
-  division: "division_2",
-  category: "domain",
-  published: true
-},
-{
-  title: "Domain Portfolio - Division 3",
-  description: "Divisional workbooks - Divison3 Portfolio.",
-  department: "IT",
-  division: "division_3",
-  category: "domain",
-  published: true
-},
-{
   title: "All Hosts",
   description: "All hosts belong to us, that's stored within our system",
   department: "IT",

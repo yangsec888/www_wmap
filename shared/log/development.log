@@ -15854,3 +15854,805 @@ Processing by SitesController#index as HTML
 Completed 200 OK in 185ms (Views: 175.3ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-09-04 11:10:02 -0400
+  [1m[35m (32.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 802ms (ActiveRecord: 51.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-04 11:10:03 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 121ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/uploads/new" for 127.0.0.1 at 2019-09-04 11:10:11 -0400
+Processing by UploadsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-04 11:10:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (24.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 149ms (Views: 145.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-04 11:10:13 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X3fPL5QmGqPxVGLixw6jdrfdri8aNUHKg1r6Nmh+za1bVtO4+5MvoEbefIvBxEmzVM4As0/TyhammGihDfrhdw==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (17.8ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-04 15:10:13', `last_sign_in_at` = '2019-09-04 02:56:04', `sign_in_count` = 22, `updated_at` = '2019-09-04 15:10:13' WHERE `users`.`id` = 2[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/uploads/new
+Completed 302 Found in 59ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/uploads/new" for 127.0.0.1 at 2019-09-04 11:10:13 -0400
+Processing by UploadsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering uploads/new.html.erb within layouts/application
+  Rendered uploads/_division_list.html.erb (0.2ms)
+  Rendered uploads/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 165ms (Views: 122.1ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/uploads/division_1" for 127.0.0.1 at 2019-09-04 11:10:16 -0400
+Processing by UploadsController#division_1 as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-04 15:10:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  Rendering uploads/division_1.html.erb within layouts/application
+  Rendered uploads/_division_list.html.erb (0.2ms)
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered uploads/_form.html.erb (20.2ms)
+  Rendered uploads/division_1.html.erb within layouts/application (25.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 153ms (Views: 142.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sites/import" for 127.0.0.1 at 2019-09-04 11:10:28 -0400
+Processing by SitesController#import as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/import.html.erb within layouts/application
+  Rendered sites/import.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 132ms (Views: 124.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reports/division" for 127.0.0.1 at 2019-09-04 11:12:13 -0400
+Processing by ReportsController#division as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/division.html.erb within layouts/application
+  [1m[36mReport Load (6.6ms)[0m  [1m[34mSELECT `reports`.* FROM `reports` WHERE NOT ((`reports`.`division` = '' OR `reports`.`division` IS NULL)) AND `reports`.`category` = 'domain' ORDER BY `reports`.`division` ASC[0m
+  Rendered reports/_mini_edit.html.erb (0.8ms)
+  Rendered reports/_mini_edit.html.erb (0.3ms)
+  Rendered reports/_mini_edit.html.erb (0.2ms)
+  Rendered reports/division.html.erb within layouts/application (35.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 190ms (Views: 146.6ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/domains/show?division=division_1" for 127.0.0.1 at 2019-09-04 11:12:21 -0400
+Processing by DomainsController#show as HTML
+  Parameters: {"division"=>"division_1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` WHERE (name = NULL) LIMIT 1[0m
+  Rendering domains/show.html.erb within layouts/application
+  Rendered domains/show.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 21.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    15:      </thead>
+    16:      <tbody>
+    17:            <tr>
+    18:               <td><%= @domain.name %></td>
+    19:               <td>
+    20:                 <% if @domain.transferable %>
+    21:                   <%= "yes" %>
+  
+app/views/domains/show.html.erb:18:in `_app_views_domains_show_html_erb__296745595563258209_70130330907080'
+Started GET "/sites/import" for 127.0.0.1 at 2019-09-04 11:13:07 -0400
+Processing by SitesController#import as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/import.html.erb within layouts/application
+  Rendered sites/import.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 109ms (Views: 102.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sites/save" for 127.0.0.1 at 2019-09-04 11:13:41 -0400
+Processing by SitesController#save as JSON
+  Parameters: {"file_path"=>"", "file_content"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-04 15:10:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (private method `new' called for Wmap::SiteTracker:Class):
+  
+app/controllers/sites_controller.rb:87:in `save'
+Started POST "/sites/save" for 127.0.0.1 at 2019-09-04 11:15:17 -0400
+Processing by SitesController#save as JSON
+  Parameters: {"file_path"=>"", "file_content"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-04 15:10:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 57ms (Views: 0.2ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/sites/show" for 127.0.0.1 at 2019-09-04 11:15:18 -0400
+Processing by SitesController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 404 Not Found in 30ms (ActiveRecord: 20.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  
+app/controllers/sites_controller.rb:61:in `show'
+Started POST "/sites/save" for 127.0.0.1 at 2019-09-04 11:16:23 -0400
+Processing by SitesController#save as JSON
+  Parameters: {"file_path"=>"", "file_content"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-04 15:10:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sites/show" for 127.0.0.1 at 2019-09-04 11:16:24 -0400
+Processing by SitesController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  
+app/controllers/sites_controller.rb:61:in `show'
+Started GET "/sites/import" for 127.0.0.1 at 2019-09-04 11:16:43 -0400
+Processing by SitesController#import as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/import.html.erb within layouts/application
+  Rendered sites/import.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 142ms (Views: 134.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sites/import" for 127.0.0.1 at 2019-09-04 11:16:44 -0400
+Processing by SitesController#import as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/import.html.erb within layouts/application
+  Rendered sites/import.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 139ms (Views: 131.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sites/save" for 127.0.0.1 at 2019-09-04 11:16:45 -0400
+Processing by SitesController#save as JSON
+  Parameters: {"file_path"=>"", "file_content"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-04 15:10:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sites/index" for 127.0.0.1 at 2019-09-04 11:16:47 -0400
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (12.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.7ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (67.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 222ms (Views: 200.2ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/sites/index?reload" for 127.0.0.1 at 2019-09-04 11:16:47 -0400
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.3ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (40.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 179ms (Views: 171.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/sites/index?reload" for 127.0.0.1 at 2019-09-04 11:18:55 -0400
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.4ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (46.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 265ms (Views: 197.4ms | ActiveRecord: 33.8ms)
+
+
+Started GET "/reports/index" for 127.0.0.1 at 2019-09-04 11:19:06 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  Rendered reports/index.html.erb within layouts/application (37.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 192ms (Views: 160.4ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/reports/2" for 127.0.0.1 at 2019-09-04 11:19:20 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/sites/show
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/sites/show" for 127.0.0.1 at 2019-09-04 11:19:20 -0400
+Processing by SitesController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  
+app/controllers/sites_controller.rb:61:in `show'
+Started GET "/reports/7" for 127.0.0.1 at 2019-09-04 11:20:01 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 7 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/hosts/index
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/hosts/index" for 127.0.0.1 at 2019-09-04 11:20:01 -0400
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.3ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 148ms (Views: 118.4ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/hosts/index?reload" for 127.0.0.1 at 2019-09-04 11:20:02 -0400
+Processing by HostsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.3ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 118ms (Views: 111.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/reports/8" for 127.0.0.1 at 2019-09-04 11:20:06 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 8 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 8 LIMIT 1[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (undefined local variable or method `cidrs_show_path' for #<ReportsController:0x00007f90fca11780>
+Did you mean?  cidrs_edit_path
+               logs_show_path):
+  
+app/controllers/reports_controller.rb:45:in `show'
+Started GET "/reports/index" for 127.0.0.1 at 2019-09-04 11:20:28 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  Rendered reports/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 133ms (Views: 125.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reports/" for 127.0.0.1 at 2019-09-04 11:20:43 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  Rendered reports/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 152ms (Views: 144.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reports/index" for 127.0.0.1 at 2019-09-04 11:21:26 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  Rendered reports/index.html.erb within layouts/application (31.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 233ms (Views: 166.7ms | ActiveRecord: 34.4ms)
+
+
+Started GET "/reports/index" for 127.0.0.1 at 2019-09-04 11:21:29 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  Rendered reports/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 145ms (Views: 137.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reports/index" for 127.0.0.1 at 2019-09-04 11:21:32 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  Rendered reports/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 149ms (Views: 140.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reports/index" for 127.0.0.1 at 2019-09-04 11:32:14 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ReportsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  Rendered reports/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 180ms (Views: 172.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-04 11:32:22 -0400
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 163ms (Views: 155.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-09-04 11:33:20 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-04 15:10:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY username asc[0m
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_sub_menu.html.erb (0.3ms)
+  Rendered users/_user.html.erb (2.6ms)
+  Rendered users/index.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 182ms (Views: 163.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2019-09-04 11:34:23 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 143ms (Views: 139.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/support/faq" for 127.0.0.1 at 2019-09-04 11:34:34 -0400
+Processing by SupportController#faq as HTML
+  Rendering support/faq.html.erb within layouts/application
+  Rendered support/faq.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 156ms (Views: 151.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/domains/search_list" for 127.0.0.1 at 2019-09-04 11:34:41 -0400
+Processing by DomainsController#search_list as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eBfYSTWLuSGtaLeDOi5BvFm8mqoHHIGcxReRiyDSxCp03wy71uq53owEfrK08/QaL6Ooq8PtlEsUYEAUSW0ZgQ==", "keyword"=>"google.com"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/search_list.html.erb within layouts/application
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` WHERE (name like '%google.com%') LIMIT 10[0m
+  Rendered domains/search_list.html.erb within layouts/application (36.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 207ms (Views: 176.3ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/domains/show?name=google.com" for 127.0.0.1 at 2019-09-04 11:34:44 -0400
+Processing by DomainsController#show as HTML
+  Parameters: {"authenticity_token"=>"pHV5h+FkBzJNahKlttPfE/VJI53kwFey+6CtAc8swzyova11AgUHzWwG25Q4Dmq1g1YRnCAxQmUq13yeppMelw==", "name"=>"google.com"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` WHERE (name = 'google.com') LIMIT 1[0m
+  Rendering domains/show.html.erb within layouts/application
+  Rendered domains/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 168ms (Views: 159.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2019-09-04 11:35:01 -0400
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 137ms (Views: 132.9ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReport Create (0.8ms)[0m  [1m[32mINSERT INTO `reports` (`title`, `description`, `department`, `published`, `created_at`, `updated_at`) VALUES ('All Websites', 'All live websites that are stored within our system.', 'IT', TRUE, '2019-09-04 15:43:30', '2019-09-04 15:43:30')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReport Create (0.2ms)[0m  [1m[32mINSERT INTO `reports` (`title`, `description`, `department`, `published`, `created_at`, `updated_at`) VALUES ('All Domains', 'All registrated domains belong to us, that\'s stored within our system.', 'IT', TRUE, '2019-09-04 15:43:30', '2019-09-04 15:43:30')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReport Create (0.2ms)[0m  [1m[32mINSERT INTO `reports` (`title`, `description`, `department`, `published`, `created_at`, `updated_at`) VALUES ('All Hosts', 'All hosts belong to us, that\'s stored within our system', 'IT', TRUE, '2019-09-04 15:43:30', '2019-09-04 15:43:30')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReport Create (0.3ms)[0m  [1m[32mINSERT INTO `reports` (`title`, `description`, `department`, `published`, `created_at`, `updated_at`) VALUES ('All Networks', 'All registrated networks belong to us, in CIDR format, that\'s stored within our system.', 'IT', TRUE, '2019-09-04 15:43:30', '2019-09-04 15:43:30')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `reports`[0m
+Started GET "/reports/index" for 127.0.0.1 at 2019-09-04 11:44:07 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ReportsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  Rendered reports/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 168ms (Views: 159.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reports/4" for 127.0.0.1 at 2019-09-04 11:44:15 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 4 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 300ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `cidrs_show_path' for #<ReportsController:0x00007f90f4f31790>
+Did you mean?  cidrs_edit_path
+               logs_show_path):
+  
+app/controllers/reports_controller.rb:45:in `show'
+Started GET "/reports/3" for 127.0.0.1 at 2019-09-04 11:44:19 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 3 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/hosts/index
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/hosts/index" for 127.0.0.1 at 2019-09-04 11:44:19 -0400
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.4ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 174ms (Views: 141.8ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/hosts/index?reload" for 127.0.0.1 at 2019-09-04 11:44:19 -0400
+Processing by HostsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.3ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 260ms (Views: 251.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reports/2" for 127.0.0.1 at 2019-09-04 11:44:24 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `domains_show_all_path' for #<ReportsController:0x00007f90fcc0def8>
+Did you mean?  domains_show_path
+               domains_save_file_path):
+  
+app/controllers/reports_controller.rb:43:in `show'
+Started GET "/reports/2" for 127.0.0.1 at 2019-09-04 11:45:18 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/domains/index
+Completed 302 Found in 87ms (ActiveRecord: 35.1ms)
+
+
+Started GET "/domains/index" for 127.0.0.1 at 2019-09-04 11:45:19 -0400
+Processing by DomainsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.6ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 248ms (Views: 197.4ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/domains/index?reload" for 127.0.0.1 at 2019-09-04 11:45:19 -0400
+Processing by DomainsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 208ms (Views: 198.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reports/1" for 127.0.0.1 at 2019-09-04 11:45:28 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/sites/show
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/sites/show" for 127.0.0.1 at 2019-09-04 11:45:28 -0400
+Processing by SitesController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 404 Not Found in 30ms (ActiveRecord: 20.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Site without an ID):
+  
+app/controllers/sites_controller.rb:61:in `show'
+Started GET "/reports/index" for 127.0.0.1 at 2019-09-04 11:45:53 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  Rendered reports/index.html.erb within layouts/application (34.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 279ms (Views: 196.4ms | ActiveRecord: 38.5ms)
+
+
+Started GET "/reports/1" for 127.0.0.1 at 2019-09-04 11:45:55 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/sites/index
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/sites/index" for 127.0.0.1 at 2019-09-04 11:45:55 -0400
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.6ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (80.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 255ms (Views: 221.6ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/sites/index?reload" for 127.0.0.1 at 2019-09-04 11:45:56 -0400
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.5ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (36.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 181ms (Views: 172.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/reports/3" for 127.0.0.1 at 2019-09-04 11:45:59 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 3 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/hosts/index
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/hosts/index" for 127.0.0.1 at 2019-09-04 11:45:59 -0400
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.3ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 188ms (Views: 154.1ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/hosts/index?reload" for 127.0.0.1 at 2019-09-04 11:45:59 -0400
+Processing by HostsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.5ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 161ms (Views: 153.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reports/4" for 127.0.0.1 at 2019-09-04 11:46:02 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 4 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/cidrs/index
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/cidrs/index" for 127.0.0.1 at 2019-09-04 11:46:02 -0400
+Processing by CidrsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.4ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (27.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 184ms (Views: 156.8ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/cidrs/index?reload" for 127.0.0.1 at 2019-09-04 11:46:03 -0400
+Processing by CidrsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.4ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 150ms (Views: 141.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reports/1/edit" for 127.0.0.1 at 2019-09-04 11:46:36 -0400
+Processing by ReportsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.3ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 1 LIMIT 1[0m
+  Rendering reports/edit.html.erb within layouts/application
+  Rendered reports/_form.html.erb (31.0ms)
+  Rendered reports/edit.html.erb within layouts/application (34.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 180ms (Views: 169.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2019-09-04 11:47:41 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 138ms (Views: 133.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-09-04 11:47:42 -0400
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LitI94aTvCAJjbBzIBhmZd85VrqDYKSrQf6/VqsZQ9Ai45wFZfK83yjheUKuxdPDqSZku0eRsXyQiW7Jwqaeew==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 127ms (Views: 119.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seed/load_file?path=" for 127.0.0.1 at 2019-09-04 11:47:43 -0400
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/save_file" for 127.0.0.1 at 2019-09-04 11:47:45 -0400
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-04 15:10:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/edit" for 127.0.0.1 at 2019-09-04 11:47:46 -0400
+Processing by DomainsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 141ms (Views: 133.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2019-09-04 11:47:47 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/domains/save_file" for 127.0.0.1 at 2019-09-04 11:47:49 -0400
+Started GET "/cidrs/edit" for 127.0.0.1 at 2019-09-04 11:47:49 -0400
+Processing by DomainsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local domains file created by class Wmap::DomainTracker method save_domains_to_file! at: 2019-08-21 17:20:07 -0400\n# domain name, free zone transfer detected?\ngoogle.com, no\n"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-04 15:10:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by CidrsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 107ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 185ms (Views: 174.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cidrs/load_file?path=" for 127.0.0.1 at 2019-09-04 11:47:51 -0400
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/save_file" for 127.0.0.1 at 2019-09-04 11:47:54 -0400
+Processing by CidrsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local cidrs file created by Wmap::CidrTracker.save method at: 2018-11-20 21:25:32 -0500\nNetwork CIDR, CIDR RIPE Reference Text, CIDR NETNAME\n10.0.0.0/8,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n192.168.0.0/16,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.16.0.0/12, Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.217.0.0/16, https://rdap.arin.net/registry/ip/172.217.0.0, GOOGLE\n"}
+Started GET "/seed/distest" for 127.0.0.1 at 2019-09-04 11:47:54 -0400
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-04 15:10:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 64ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 140ms (Views: 132.0ms | ActiveRecord: 0.3ms)
+
+

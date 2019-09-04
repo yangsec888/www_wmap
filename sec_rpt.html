@@ -1,0 +1,1901 @@
+<!DOCTYPE HTML SYSTEM>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Brakeman Report</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript">
+    function toggle(context) {
+      var elem = document.getElementById(context);
+
+      if (elem.style.display != "block")
+        elem.style.display = "block";
+      else
+        elem.style.display = "none";
+
+      elem.parentNode.scrollIntoView();
+    }
+
+    $(document).ready(function() {
+      $('table').DataTable({
+        searching: false,
+        paging:    false,
+        info:      false
+      });
+    });
+  </script>
+  <style>
+    /* CSS style used for HTML reports */
+
+body {
+  font-family: sans-serif;
+  color: #161616;
+}
+
+a {
+  color: #161616;
+}
+
+p {
+  font-weight: bold;
+  font-size: 11pt;
+  color: #2D0200;
+ }
+
+ th {
+   background-color: #980905;
+   border-bottom: 5px solid #530200;
+   color: white;
+   font-size: 11pt;
+   padding: 1px 8px 1px 8px;
+ }
+
+ td {
+   border-bottom: 2px solid white;
+   font-family: monospace;
+   padding: 5px 8px 1px 8px;
+ }
+
+ table {
+   background-color: #FCF4D4;
+   border-collapse: collapse;
+ }
+
+ h1 {
+   color: #2D0200;
+   font-size: 14pt;
+ }
+
+ h2 {
+   color: #2D0200;
+   font-size: 12pt;
+ }
+
+ span.high-confidence {
+   font-weight:bold;
+   color: red;
+ }
+
+ span.med-confidence {
+ }
+
+ span.weak-confidence {
+   color:gray;
+ }
+
+ div.warning_message {
+   cursor: pointer;
+ }
+
+ div.warning_message:hover {
+   background-color: white;
+ }
+
+ table caption {
+   background-color: #FFE;
+   padding: 2px;
+ }
+
+ table.context {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   border-left: 1px solid #90e960;
+   color: #212121;
+ }
+
+ tr.context {
+   background-color: white;
+ }
+
+ tr.first {
+   border-top: 1px solid #7ecc54;
+   padding-top: 2px;
+ }
+
+ tr.error {
+  background-color: #f4c1c1 !important
+ }
+
+ tr.near_error {
+  background-color: #f4d4d4 !important
+ }
+
+ tr.alt {
+   background-color: #e8f4d4;
+ }
+
+ td.context {
+   padding: 2px 10px 0px 6px;
+   border-bottom: none;
+ }
+
+ td.context_line {
+   padding: 2px 8px 0px 7px;
+   border-right: 1px solid #b3bda4;
+   border-bottom: none;
+   color: #6e7465;
+ }
+
+ pre.context {
+   margin-bottom: 1px;
+ }
+
+ .user_input {
+   background-color: #fcecab;
+ }
+
+ div.render_path {
+   display: none;
+   background-color: #ffe;
+   padding: 5px;
+   margin: 2px 0px 2px 0px;
+ }
+
+ div.template_name {
+   cursor: pointer;
+ }
+
+ div.template_name:hover {
+   background-color: white;
+ }
+
+ span.code {
+   font-family: monospace;
+ }
+
+ span.filename {
+   font-family: monospace;
+ }
+
+  </style>
+</head>
+<body>
+
+<h1>Brakeman Report</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Application Path</th>
+      <th>Rails Version</th>
+      <th>Brakeman Version</th>
+      <th>Report Time</th>
+      <th>Checks Performed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/Users/sli/www_wmap</td>
+      <td>5.2.1.1</td>
+      <td>4.4.0
+      <td>
+        2019-09-04 10:22:17 -0400<br><br>
+        1.003953 seconds
+      </td>
+      <td>BasicAuth, BasicAuthTimingAttack, ContentTag, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, DynamicFinders, EscapeFunction, Evaluation, Execute, FileAccess, FileDisclosure, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONEncoding, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, MimeTypeDoS, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NestedAttributesBypass, NumberToCurrency, PermitAttributes, QuoteTableName, Redirect, RegexDoS, Render, RenderDoS, RenderInline, ResponseSplitting, RouteDoS, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionManipulation, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, SprocketsPathTraversal, StripTags, SymbolDoSCVE, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, XMLDoS, YAMLParsing</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h2 id='summary'>Summary</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Scanned/Reported</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Controllers</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>Models</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>Templates</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td>Errors</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Security Warnings</td>
+      <td>17 <span class='high-confidence'>(6)</span></td>
+    </tr>
+  
+    <tr>
+      <td>Ignored Warnings</td>
+      <td>0</td>
+    </tr>
+  
+  </tbody>
+</table>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Warning Type</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td>Cross-Site Scripting</td>
+      <td>1</td>
+    </tr>
+  
+    <tr>
+      <td>File Access</td>
+      <td>10</td>
+    </tr>
+  
+    <tr>
+      <td>Mass Assignment</td>
+      <td>2</td>
+    </tr>
+  
+    <tr>
+      <td>SQL Injection</td>
+      <td>4</td>
+    </tr>
+  
+  </tbody>
+</table>
+<br>
+<h2>Security Warnings</h2>  
+<table>
+  <thead>
+    <tr>
+      <th>Confidence</th>
+      <th>Class</th>
+      <th>Method</th>
+      <th>Warning Type</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td><span class='high-confidence'>High</span></td>
+      <td>DomainsController</td>
+      <td>save_import</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/file_access/">File Access</a></td>
+      <td><div class='warning_message' onClick="toggle('context1');toggle('message1');toggle('full_message1')" >Parameter value used in file name near line 191: <span class="code">File.open(<span class="user_input">params[:file_path]</span>, &quot;w+&quot;)</span><table id='context1' class='context' style='display:none'><caption>app/controllers/domains_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>186</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>        render json: { message: &#39;Saving failed, please check your file again.&#39; }</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>187</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      end</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>188</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    rescue ImportLimitError =&gt; e</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>189</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      render json: { message: e.message }</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>190</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    rescue Psych::SyntaxError</pre>
+            </td>
+          </tr>
+          <tr class='context alt error'>
+            <td class='context_line'>
+              <pre class='context'>191</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file = File.open(params[:file_path], &#39;w+&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>192</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.write(@restore)</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>193</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.close</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>194</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      render json: { message: &#39;Saving failed, please check your file again or contact the site administrator.&#39; }</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>195</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    end</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='high-confidence'>High</span></td>
+      <td>YmlSettingsController</td>
+      <td>load_file</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/file_access/">File Access</a></td>
+      <td><div class='warning_message' onClick="toggle('context4');toggle('message4');toggle('full_message4')" >Parameter value used in file name near line 37: <span class="code">File.open(<span class="user_input">params[:path]</span>, &quot;r&quot;)</span><table id='context4' class='context' style='display:none'><caption>app/controllers/yml_settings_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>33</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>  def load_file</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>34</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    white_list = Dir.glob(Rails.root.join(&#39;config&#39;) + &#39;*.yml&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>35</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    data = &#39;&#39;</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>36</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    if white_list.include?(params[:path])</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>37</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file = File.open(params[:path], &#39;r&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>38</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.each_line { |line| data += line }</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>39</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.close</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>40</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      render plain: data</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>41</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    else</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>42</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      render plain: &quot;Error loading file: #{params[:path]}&quot;</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='high-confidence'>High</span></td>
+      <td>YmlSettingsController</td>
+      <td>save_file</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/file_access/">File Access</a></td>
+      <td><div class='warning_message' onClick="toggle('context5');toggle('message5');toggle('full_message5')" >Parameter value used in file name near line 49: <span class="code">File.open(<span class="user_input">params[:file_path]</span>, &quot;r&quot;)</span><table id='context5' class='context' style='display:none'><caption>app/controllers/yml_settings_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>44</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>  end</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>46</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  def save_file</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>47</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    white_list = Dir.glob(Rails.root.join(&#39;config&#39;) + &#39;*.yml&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>48</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    if white_list.include?(params[:file_path])</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>49</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file = File.open(params[:file_path], &#39;r&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>50</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      @restore = &#39;&#39;</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>51</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.each_line { |line| @restore += line }</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>52</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.close</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>53</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file = File.open(params[:file_path], &#39;w+&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>54</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.write(params[:file_content])</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='high-confidence'>High</span></td>
+      <td>YmlSettingsController</td>
+      <td>save_file</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/file_access/">File Access</a></td>
+      <td><div class='warning_message' onClick="toggle('context6');toggle('message6');toggle('full_message6')" >Parameter value used in file name near line 53: <span class="code">File.open(<span class="user_input">params[:file_path]</span>, &quot;w+&quot;)</span><table id='context6' class='context' style='display:none'><caption>app/controllers/yml_settings_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>48</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>    if white_list.include?(params[:file_path])</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>49</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file = File.open(params[:file_path], &#39;r&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>50</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      @restore = &#39;&#39;</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>51</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.each_line { |line| @restore += line }</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>52</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.close</pre>
+            </td>
+          </tr>
+          <tr class='context alt error'>
+            <td class='context_line'>
+              <pre class='context'>53</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file = File.open(params[:file_path], &#39;w+&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>54</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.write(params[:file_content])</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>55</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.close</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>56</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      YAML.load_file(params[:file_path])</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>57</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      render json: { message: &#39;Saving successed.&#39; }</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>58</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    else</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='high-confidence'>High</span></td>
+      <td>YmlSettingsController</td>
+      <td>save_file</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/file_access/">File Access</a></td>
+      <td><div class='warning_message' onClick="toggle('context7');toggle('message7');toggle('full_message7')" >Parameter value used in file name near line 62: <span class="code">File.open(<span class="user_input">params[:file_path]</span>, &quot;w+&quot;)</span><table id='context7' class='context' style='display:none'><caption>app/controllers/yml_settings_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>57</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>      render json: { message: &#39;Saving successed.&#39; }</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>58</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    else</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>59</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      render json: { message: &#39;Problem loading file. &#39; }</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>60</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    end</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>61</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  rescue Psych::SyntaxError</pre>
+            </td>
+          </tr>
+          <tr class='context alt error'>
+            <td class='context_line'>
+              <pre class='context'>62</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    file = File.open(params[:file_path], &#39;w+&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>63</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    file.write(@restore)</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>64</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    file.close</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>65</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    render json: { message: &#39;Saving failed, please check YAML file format again.&#39; }</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>66</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  end</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='high-confidence'>High</span></td>
+      <td>YmlSettingsController</td>
+      <td>save_file</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/file_access/">File Access</a></td>
+      <td><div class='warning_message' onClick="toggle('context8');toggle('message8');toggle('full_message8')" >Parameter value used in file name near line 56: <span class="code">YAML.load_file(<span class="user_input">params[:file_path]</span>)</span><table id='context8' class='context' style='display:none'><caption>app/controllers/yml_settings_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>51</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>      file.each_line { |line| @restore += line }</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>52</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.close</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>53</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file = File.open(params[:file_path], &#39;w+&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>54</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.write(params[:file_content])</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>55</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file.close</pre>
+            </td>
+          </tr>
+          <tr class='context alt error'>
+            <td class='context_line'>
+              <pre class='context'>56</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      YAML.load_file(params[:file_path])</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>57</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      render json: { message: &#39;Saving successed.&#39; }</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>58</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    else</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>59</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      render json: { message: &#39;Problem loading file. &#39; }</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>60</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    end</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>61</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  rescue Psych::SyntaxError</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='med-confidence'>Medium</span></td>
+      <td>ApplicationController</td>
+      <td>secure_params</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/mass_assignment/">Mass Assignment</a></td>
+      <td><div class='warning_message' onClick="toggle('context9');toggle('message9');toggle('full_message9')" >Potentially dangerous key allowed for mass assignment near line 83: <span class="code">params.require(:user).permit(<span class="user_input">:role</span>)</span><table id='context9' class='context' style='display:none'><caption>app/controllers/application_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>78</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>  rescue ActionController::RedirectBackError</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>79</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    redirect_to root_path, :alert =&gt; &quot;Access denied.&quot;</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>80</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  end</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>82</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  def secure_params</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>83</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    params.require(:user).permit(:role)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>84</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  end</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>88</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>end</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='med-confidence'>Medium</span></td>
+      <td>UsersController</td>
+      <td>secure_params</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/mass_assignment/">Mass Assignment</a></td>
+      <td><div class='warning_message' onClick="toggle('context10');toggle('message10');toggle('full_message10')" >Potentially dangerous key allowed for mass assignment near line 89: <span class="code">params.require(:user).permit(<span class="user_input">:role</span>)</span><table id='context10' class='context' style='display:none'><caption>app/controllers/users_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>84</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>  def filtering_params(params)</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>85</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    params.slice(:department)</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>86</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  end</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>88</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  def secure_params</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>89</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    params.require(:user).permit(:role)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>90</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    #[&#39;role&#39;, &#39;admin&#39;]</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>91</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  end</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>93</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  def sort_column</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>94</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    User.column_names.include?(params[:sort]) ? params[:sort] : &quot;username&quot;</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='med-confidence'>Medium</span></td>
+      <td>DomainsController</td>
+      <td>index</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/sql_injection/">SQL Injection</a></td>
+      <td><div class='warning_message' onClick="toggle('context13');toggle('message13');toggle('full_message13')" >Possible SQL injection near line 111: <span class="code">Domain.all.order(((<span class="user_input">sort_column</span> + &quot; &quot;) + sort_direction))</span><table id='context13' class='context' style='display:none'><caption>app/controllers/domains_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>106</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>    end</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>108</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    # show all domains</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>109</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    #def show_all</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>110</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    def index</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>111</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      @domains = Domain.all.order(sort_column + &quot; &quot; + sort_direction).page(params[:page]).per_page(25)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>112</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      @chart_data = pie_by_keep(&quot;all&quot;).to_json.html_safe</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>113</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      respond_to do |format|</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>114</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>        format.html #show.html.erb</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>115</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>        format.json { render json: @chart_data }</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>116</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      end</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='med-confidence'>Medium</span></td>
+      <td>HostsController</td>
+      <td>index</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/sql_injection/">SQL Injection</a></td>
+      <td><div class='warning_message' onClick="toggle('context14');toggle('message14');toggle('full_message14')" >Possible SQL injection near line 32: <span class="code">Host.all.order(((<span class="user_input">sort_column</span> + &quot; &quot;) + sort_direction))</span><table id='context14' class='context' style='display:none'><caption>app/controllers/hosts_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>27</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>      @uid = current_user.id</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>28</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    end</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>29</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>=end</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>31</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    def index</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>32</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      @hosts=Host.all.order(sort_column + &quot; &quot; + sort_direction).page(params[:page]).per_page(25)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>33</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      #@chart_data=Hash.new</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>34</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    end</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>36</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    def edit</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>37</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      @dir =  Rails.root.join(&#39;shared&#39;, &#39;data&#39;)</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='med-confidence'>Medium</span></td>
+      <td>SitesController</td>
+      <td>index</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/sql_injection/">SQL Injection</a></td>
+      <td><div class='warning_message' onClick="toggle('context15');toggle('message15');toggle('full_message15')" >Possible SQL injection near line 56: <span class="code">Site.all.order(((<span class="user_input">sort_column</span> + &quot; &quot;) + sort_direction))</span><table id='context15' class='context' style='display:none'><caption>app/controllers/sites_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>51</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>    file.close</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>52</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    render json: { message: &#39;Saving failed, please check your file again.&#39; }</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>53</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  end</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>55</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  def index</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>56</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    @sites=Site.all.order(sort_column + &quot; &quot; + sort_direction).page(params[:page]).per_page(25)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>57</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    #@chart_data=Hash.new</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>58</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  end</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>60</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  def show</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>61</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    @site = Site.find(params[:id])</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='med-confidence'>Medium</span></td>
+      <td>UsersController</td>
+      <td>index</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/sql_injection/">SQL Injection</a></td>
+      <td><div class='warning_message' onClick="toggle('context16');toggle('message16');toggle('full_message16')" >Possible SQL injection near line 17: <span class="code">User.order(((<span class="user_input">sort_column</span> + &quot; &quot;) + sort_direction))</span><table id='context16' class='context' style='display:none'><caption>app/controllers/users_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>12</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>  before_action :authenticate_user!</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>13</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  before_action :admin_only</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>14</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  #helper_method :sort_column, :sort_direction</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>16</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  def index</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>17</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    @users = User.order(sort_column + &quot; &quot; + sort_direction)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>18</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    dept=Hash.new; @users.map {|a| dept[a.department]=true unless dept.key?(a.department) }</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>19</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    @department_list=Array.new; dept.each {|key,val| @department_list.push(key) unless key.nil? }</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>20</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    @department_list.sort!</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>21</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    filtering_params(params).each do |key, value|</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>22</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      next if value.nil?</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='weak-confidence'>Weak</span></td>
+      <td>LogsController</td>
+      <td>show</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/file_access/">File Access</a></td>
+      <td><div class='warning_message' onClick="toggle('context2');toggle('message2');toggle('full_message2')" >Parameter value used in file name near line 21: <span class="code">File.open(Rails.root.join(&quot;shared&quot;, &quot;log&quot;, &quot;wmap_logs&quot;, <span class="user_input">params[:id]</span>), &quot;r&quot;)</span><table id='context2' class='context' style='display:none'><caption>app/controllers/logs_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>16</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>  end</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>18</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  def show</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>19</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    @file = Rails.root.join(&#39;shared&#39;, &#39;log&#39;, &#39;wmap_logs&#39;, params[:id])</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>20</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    @file_name = params[:id]</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>21</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    f = File.open(@file, &#39;r&#39;)</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>22</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    @file_contents = Array.new</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>23</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    f.each_line do |line|</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>24</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      @file_contents &lt;&lt; line</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>25</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    end</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>26</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  end</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='weak-confidence'>Weak</span></td>
+      <td>LogsController</td>
+      <td>download</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/file_access/">File Access</a></td>
+      <td><div class='warning_message' onClick="toggle('context11');toggle('message11');toggle('full_message11')" >Parameter value used in file name near line 30: <span class="code">send_file(Rails.root.join(&quot;shared&quot;, &quot;log&quot;, &quot;wmap_logs&quot;, <span class="user_input">params[:file_name]</span>))</span><table id='context11' class='context' style='display:none'><caption>app/controllers/logs_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>25</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>    end</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>26</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  end</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>28</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  def download</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>29</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    if current_user.admin?</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>30</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      send_file Rails.root.join(&#39;shared&#39;, &#39;log&#39;, &#39;wmap_logs&#39;, params[:file_name])</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>31</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    else</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>32</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      logger.debug &quot;Current_user attributes: #{current_user.inspect}&quot;</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>33</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      redirect_back :fallback_location =&gt; root_path, :alert =&gt; &quot;Access denied.&quot;</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>34</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>    end</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>35</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>  end</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='weak-confidence'>Weak</span></td>
+      <td>ReportsController</td>
+      <td>destroy</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/file_access/">File Access</a></td>
+      <td><div class='warning_message' onClick="toggle('context3');toggle('message3');toggle('full_message3')" >Model attribute used in file name near line 178: <span class="code">File.unlink(Rails.root.join(&quot;downloads&quot;, output(<span class="user_input">Report.find(params[:id]).division</span>)))</span><table id='context3' class='context' style='display:none'><caption>app/controllers/reports_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>173</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>      file_name = output(@report.division)</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>174</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file = Rails.root.join(&quot;downloads&quot;, file_name)</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>175</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      respond_to do |format|</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>176</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>        format.html {</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>177</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>          if File.exist?(file)</pre>
+            </td>
+          </tr>
+          <tr class='context alt error'>
+            <td class='context_line'>
+              <pre class='context'>178</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>            File.unlink(file)</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>179</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>          end</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>180</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>          @report.destroy</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>181</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>          redirect_to reports_division_path, notice: &#39;Report &#39;+ file_name + &#39; was successfully destroyed.&#39;</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>182</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>        }</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>183</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>        format.json { head :no_content }</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+    <tr>
+      <td><span class='weak-confidence'>Weak</span></td>
+      <td>ReportsController</td>
+      <td>download</td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/file_access/">File Access</a></td>
+      <td><div class='warning_message' onClick="toggle('context12');toggle('message12');toggle('full_message12')" >Parameter value used in file name near line 78: <span class="code">send_file(Rails.root.join(&quot;downloads&quot;, output(<span class="user_input">params[:division]</span>)), :filename =&gt; output(<span class="user_input">params[:division]</span>), :type =&gt; &quot;application/xlsx&quot;, :disposition =&gt; &quot;attachment&quot;)</span><table id='context12' class='context' style='display:none'><caption>app/controllers/reports_controller.rb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>73</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>    if platinum_user_and_above?</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>74</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file_name = output(params[:division])</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>75</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      file = Rails.root.join(&quot;downloads&quot;, file_name)</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>76</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      if File.exist?(file)</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>77</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>        send_file(</pre>
+            </td>
+          </tr>
+          <tr class='context alt error'>
+            <td class='context_line'>
+              <pre class='context'>78</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>          file,</pre>
+            </td>
+          </tr>
+          <tr class='context near_error'>
+            <td class='context_line'>
+              <pre class='context'>79</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>          filename: file_name,</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>80</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>          type: &quot;application/xlsx&quot;,</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>81</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>          disposition: &quot;attachment&quot;</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>82</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>        )</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>83</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      else</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+  </tbody>
+</table>
+<p>View Warnings</p>
+<table>
+  <thead>
+    <tr>
+      <th>Confidence</th>
+      <th>Template</th>
+      <th>Warning Type</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td><span class='weak-confidence'>Weak</span></td>
+      <td>
+        
+          sites/index (SitesController#index)
+        
+      </td>
+      <td><a rel="noreferrer" href="https://brakemanscanner.org/docs/warning_types/link_to_href">Cross-Site Scripting</a></td>
+      <td><div class='warning_message' onClick="toggle('context17');toggle('message17');toggle('full_message17')" >Potentially unsafe model attribute in <span class="code">link_to</span> href near line 57: <span class="code">link_to(<span class="user_input">(Unresolved Model).new.site</span>, <span class="user_input">(Unresolved Model).new.site</span>, :target =&gt; &quot;_blank&quot;)</span><table id='context17' class='context' style='display:none'><caption>app/views/sites/index.html.erb</caption>      <thead style='display:none'>
+        <tr>
+          <th>line number</th>
+          <th>line content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='context first'>
+          <td class='context_line'>
+            <pre class='context'>52</pre>
+          </td>
+          <td class='context'>
+            <pre class='context'>   &lt;/thead&gt;</pre>
+          </td>
+        </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>54</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>   &lt;tbody&gt;</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>55</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>      &lt;% @sites.each do |site| %&gt;</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>56</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>         &lt;tr&gt;</pre>
+            </td>
+          </tr>
+          <tr class='context error'>
+            <td class='context_line'>
+              <pre class='context'>57</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>            &lt;td&gt;&lt;%= link_to site.site, site.site, target: &quot;_blank&quot; %&gt;&lt;/td&gt;</pre>
+            </td>
+          </tr>
+          <tr class='context alt near_error'>
+            <td class='context_line'>
+              <pre class='context'>58</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>            &lt;td&gt;&lt;%= site.ip %&gt;&lt;/td&gt;</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>59</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>            &lt;td&gt;&lt;%= site.server %&gt;&lt;/td&gt;</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>60</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>            &lt;td&gt;&lt;%= site.code %&gt;&lt;/td&gt;</pre>
+            </td>
+          </tr>
+          <tr class='context'>
+            <td class='context_line'>
+              <pre class='context'>61</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>            &lt;td&gt;&lt;%= site.redirection %&gt;&lt;/td&gt;</pre>
+            </td>
+          </tr>
+          <tr class='context alt'>
+            <td class='context_line'>
+              <pre class='context'>62</pre>
+            </td>
+            <td class='context'>
+              <pre class='context'>            &lt;td&gt;&lt;%= site.md5 %&gt;&lt;/td&gt;</pre>
+            </td>
+          </tr>
+</tbody></table></div></td>
+    </tr>
+  
+  </tbody>
+</table>
+</body></html>

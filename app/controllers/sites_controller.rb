@@ -71,6 +71,7 @@ class SitesController < ApplicationController
       @sites = Site.where('site like ?', keyword).limit(10)
   end
 
+=begin
   def import
     @dir = Rails.root.join('shared', 'data')
     @file = @dir.join('sites')
@@ -84,8 +85,8 @@ class SitesController < ApplicationController
       @restore = ''
       file.each_line { |line| @restore += line }
       file.close
-      site_tracker=Wmap::SiteTracker.new
-      host_tracker=Wmap::HostTracker.new
+      site_tracker=Wmap::SiteTracker.instance
+      host_tracker=Wmap::HostTracker.instance
       params[:file_content].split("\n").map do |entry|
         logger.debug "Processing entry: #{entry}"
         next unless site_tracker.is_url?(entry)
@@ -108,6 +109,7 @@ class SitesController < ApplicationController
     file.close
     render json: { message: 'Saving failed, please check your file again or contact the site administrator.' }
   end
+=end
 
   def download
     if platinum_user_and_above?

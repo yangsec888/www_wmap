@@ -89,9 +89,9 @@ Rails.application.routes.draw do
   post 'sites/edit'
   get 'sites/load_file'
   post 'sites/save_file'
-  get 'sites/import'
+  #get 'sites/import'
   post 'sites/search'
-  post 'sites/save'
+  #post 'sites/save'
   post 'sites/download'
 
   ################################
@@ -110,7 +110,7 @@ Rails.application.routes.draw do
 ################################
   get 'reports/index'
   get 'reports/new'
-  get 'reports/division'
+  #get 'reports/division'
   get 'reports/download'
   get 'reports/download_all'
   resources :reports

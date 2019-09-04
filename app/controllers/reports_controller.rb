@@ -40,13 +40,13 @@ class ReportsController < ApplicationController
     if report.division.nil? or report.division.empty?
       case report.title
       when "All Domains"
-        redirect_to domains_show_all_path
+        redirect_to domains_index_path
       when "All Networks"
-        redirect_to cidrs_show_path
+        redirect_to cidrs_index_path
       when "All Hosts"
         redirect_to hosts_index_path
       when "All Websites"
-        redirect_to sites_show_path
+        redirect_to sites_index_path
       when "All Adware Tags"
         redirect_to tags_index_path
       else

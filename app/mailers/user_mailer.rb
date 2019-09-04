@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
     bcc='yang.li@owasp.org'
     @start_time=start_time.to_s
     @end_time=end_time.to_s
-    @my_url="https://wmap.io/sites/show"
+    @my_url="https://wmap.io/sites/index"
     sbj="Your WMAP Discovery is Complete"
     mail(to:receiver, bcc: bcc, subject:sbj)
   end
