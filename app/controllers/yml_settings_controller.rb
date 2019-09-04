@@ -59,9 +59,11 @@ class YmlSettingsController < ApplicationController
       render json: { message: 'Problem loading file. ' }
     end
   rescue Psych::SyntaxError
-    file = File.open(params[:file_path], 'w+')
-    file.write(@restore)
-    file.close
+    if white_list.include?(params[:file_path])
+      file = File.open(params[:file_path], 'w+')
+      file.write(@restore)
+      file.close
+    end
     render json: { message: 'Saving failed, please check YAML file format again.' }
   end
 

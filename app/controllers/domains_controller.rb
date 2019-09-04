@@ -148,7 +148,7 @@ class DomainsController < ApplicationController
       render json: { message: 'Saving failed, please check your file again.' }
     end
 
-
+=begin
     def import
       @dir = Rails.root.join('shared', 'data')
       @file = @dir.join('domains')
@@ -193,6 +193,7 @@ class DomainsController < ApplicationController
       file.close
       render json: { message: 'Saving failed, please check your file again or contact the site administrator.' }
     end
+=end
 
     private
 
