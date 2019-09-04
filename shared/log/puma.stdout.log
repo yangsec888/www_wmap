@@ -17313,3 +17313,10 @@ Completed 200 OK in 64ms (Views: 0.1ms | ActiveRecord: 1.0ms)
 Completed 200 OK in 140ms (Views: 132.0ms | ActiveRecord: 0.3ms)
 
 
+[72529] - Gracefully shutting down workers...
+[72529] === puma shutdown: 2019-09-04 11:52:53 -0400 ===
+[72529] - Goodbye!
+Exiting
+=== puma startup: 2019-09-04 11:53:38 -0400 ===
+[8173] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1567612418678-8173
+[8173] - Worker 0 (pid: 8176) booted, phase: 0

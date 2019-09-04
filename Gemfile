@@ -7,7 +7,7 @@ git_source(:github) do |repo_name|
 end
 
 # Basic gems for Rails 5.2
-gem 'rails', '~> 5.2.1.1'
+gem 'rails', '~> 5.2.2.1'
 gem 'puma', '~> 3.7'
 # Use mysql as the database for Active Record
 gem 'mysql2'
