@@ -1825,3 +1825,1527 @@ You're hitting mailer controller...
 2019-05-21T13:37:28.004Z 32893 TID-ox4n8y4b1 INFO: Terminating quiet workers
 2019-05-21T13:37:29.895Z 32893 TID-ox4ncz8ip INFO: Scheduler exiting...
 2019-05-21T13:37:29.998Z 32893 TID-ox4n8y4b1 INFO: Bye!
+2019-09-03T19:54:10.621Z 72933 TID-ovnffcf7h INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin17]
+2019-09-03T19:54:10.627Z 72933 TID-ovnffcf7h INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2019-09-03T19:54:10.627Z 72933 TID-ovnffcf7h INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2019-09-03T19:54:10.628Z 72933 TID-ovnffcf7h INFO: Booting Sidekiq 5.2.7 with redis options {:id=>"Sidekiq-server-PID-72933", :url=>nil}
+2019-09-03T19:54:10.658Z 72933 TID-ovnffcf7h DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2019-09-03T19:54:10.658Z 72933 TID-ovnffcf7h DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2019-09-03T19:54:10.659Z 72933 TID-ovnffcf7h DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>"development", :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00007fab570d31f8>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>false, :concurrency=>5}, :daemon=>true, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"nylit057164.us.randomhouse.com:72933:f543b52ce166"}
+2019-09-03T19:55:02.946Z 72933 TID-ovnggnv89 DiscoveryWorker JID-d8b035024dd2936770741533 INFO: start
+2019-09-03T19:55:02.960Z 72933 TID-ovnggnv89 DiscoveryWorker JID-d8b035024dd2936770741533 INFO: Starting background command: wmap /Users/sli/www_wmap/shared/data/seed
+--------------------------------------------------------------------------------
+,--.   ,--.       ,--.       ,--.   ,--.
+|  |   |  | ,---. |  |-.     |   `.'   | ,--,--. ,---.  ,---.  ,---. ,--.--.
+|  |.'.|  || .-. :| .-. '    |  |'.'|  |' ,-.  || .-. || .-. || .-. :|  .--'
+|   ,'.   |   --.| `-' |    |  |   |  | '-'  || '-' '| '-' '   --.|  |
+'--'   '--' `----' `---'     `--'   `--' `--`--'|  |-' |  |-'  `----'`--'
+                                                `--'   `--'                  
+Version: 2.5.5	Release Date: 2019-08-15
+Designed and developed by: Sam (Yang) Li
+Email: yang.li@owasp.org	LinkedIn: http://www.linkedin.com/in/yangli8/
+--------------------------------------------------------------------------------
+Parsing the discovery seed file: "/Users/sli/www_wmap/shared/data/seed" 
+Parsing done. 
+Invoke the HostTracker.
+
+Validate the IP format is valid: www.google.com
+Validate the URL format is valid: www.google.com
+Unknown URL format: www.google.com
+Update the local hosts data repository.
+Add entries to the local host repository: ["www.google.com"]
+Start parallel host update processing on:
+ ["www.google.com"]
+Add entry to the local host repository: www.google.com
+Host is already exist. Skip: www.google.com
+Done loading entries.
+Build up URL list for the web crawler ...
+Start the parallel port scan on the target list:
+ ["www.google.com"]
+Perform web service discovery on host: www.google.com
+Detected web service on host www.google.com: ["http://www.google.com/", "https://www.google.com/"]
+Port scanning done successfully with the found web services: ["http://www.google.com/", "https://www.google.com/"]
+Fire up the crawler.
+Start the parallel engine on the normalized crawling list:
+ ["http://www.google.com/", "https://www.google.com/"] 
+Maximum number of web crawling sessions allowed: 40
+Start web crawling on https://www.google.com/
+Start web crawling on http://www.google.com/
+Please be aware that it may take a while to crawl http://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: http://www.google.com/
+Please be aware that it may take a while to crawl https://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: https://www.google.com/
+Discovered sites: 
+http://www.google.com/
+http://maps.google.com/
+https://play.google.com/
+http://www.youtube.com/
+http://news.google.com/
+https://mail.google.com/
+https://drive.google.com/
+https://www.google.com/
+https://accounts.google.com/
+https://maps.google.com/
+https://www.youtube.com/
+https://news.google.com/
+https://support.google.com/
+https://policies.google.com/
+http://developer.android.com/
+https://payments.google.com/
+https://tv.youtube.com/
+https://myaccount.google.com/
+https://contacts.google.com/
+https://translate.google.com/
+https://photos.google.com/
+https://docs.google.com/
+https://books.google.com/
+https://www.blogger.com/
+https://duo.google.com/
+https://hangouts.google.com/
+https://keep.google.com/
+https://jamboard.google.com/
+https://itunes.apple.com/
+http://www.weather.com/
+https://about.google/
+https://www.blog.google/
+https://chrome.google.com/
+https://music.youtube.com/
+https://chromecast.com/
+https://store.google.com/
+https://www.android.com/
+https://wearos.google.com/
+https://www.gmail.com/
+https://gmail.com/
+https://messages.google.com/
+https://gsuite.google.com/
+https://chat.google.com/
+https://ads.google.com/
+https://analytics.google.com/
+https://business.google.com/
+https://classroom.google.com/
+https://www.google.co.in/
+https://fi.google.com/
+https://groups.google.com/
+https://one.google.com/
+https://pay.google.com/
+https://scholar.google.com/
+https://sites.google.com/
+https://www.tiltbrush.com/
+https://voice.google.com/
+https://www.waze.com/
+https://youtube-global.blogspot.com/
+https://enterprise.google.com/
+https://assistant.google.com/
+https://cloud.google.com/
+https://learndigital.withgoogle.com/
+https://domains.google.com/
+https://hire.google.com/
+https://biz.waze.com/
+https://developers.google.com/
+https://instagram.com/
+https://twitter.com/
+https://www.facebook.com/
+https://www.linkedin.com/
+https://abc.xyz/
+https://careers.google.com/
+https://www.thinkwithgoogle.com/
+https://services.google.com/
+https://www.google.org/
+https://sustainability.google/
+https://transparencyreport.google.com/
+https://wellbeing.google/
+https://safety.google/
+Automatically save the discovery results into the site tracking data repository: 
+Start the SiteTracker. 
+Add entries to the local site store from list:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "http://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://news.google.com/", "https://support.google.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://tv.youtube.com/", "https://myaccount.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://duo.google.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://itunes.apple.com/", "http://www.weather.com/", "https://about.google/", "https://www.blog.google/", "https://chrome.google.com/", "https://music.youtube.com/", "https://chromecast.com/", "https://store.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "https://gmail.com/", "https://messages.google.com/", "https://gsuite.google.com/", "https://chat.google.com/", "https://ads.google.com/", "https://analytics.google.com/", "https://business.google.com/", "https://classroom.google.com/", "https://www.google.co.in/", "https://fi.google.com/", "https://groups.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://enterprise.google.com/", "https://assistant.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://hire.google.com/", "https://biz.waze.com/", "https://developers.google.com/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/"]
+Start parallel adding on the sites:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "http://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://news.google.com/", "https://support.google.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://tv.youtube.com/", "https://myaccount.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://duo.google.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://itunes.apple.com/", "http://www.weather.com/", "https://about.google/", "https://www.blog.google/", "https://chrome.google.com/", "https://music.youtube.com/", "https://chromecast.com/", "https://store.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "https://gmail.com/", "https://messages.google.com/", "https://gsuite.google.com/", "https://chat.google.com/", "https://ads.google.com/", "https://analytics.google.com/", "https://business.google.com/", "https://classroom.google.com/", "https://www.google.co.in/", "https://fi.google.com/", "https://groups.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://enterprise.google.com/", "https://assistant.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://hire.google.com/", "https://biz.waze.com/", "https://developers.google.com/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/"]
+Add entry to the site store: http://maps.google.com/
+Site already exists. Skip it: http://maps.google.com/
+Add entry to the site store: https://chromecast.com/
+Problem found: untrusted Internet domain or IP. Skip https://chromecast.com/
+Add entry to the site store: https://contacts.google.com/
+Site already exists. Skip it: https://contacts.google.com/
+Add entry to the site store: https://enterprise.google.com/
+Site already exists. Skip it: https://enterprise.google.com/
+Add entry to the site store: https://assistant.google.com/
+Site already exists. Skip it: https://assistant.google.com/
+Add entry to the site store: https://domains.google.com/
+Site already exists. Skip it: https://domains.google.com/
+Add entry to the site store: https://developers.google.com/
+Site already exists. Skip it: https://developers.google.com/
+Add entry to the site store: https://instagram.com/
+Problem found: untrusted Internet domain or IP. Skip https://instagram.com/
+Add entry to the site store: http://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip http://developer.android.com/
+Add entry to the site store: https://abc.xyz/
+Problem found: untrusted Internet domain or IP. Skip https://abc.xyz/
+Add entry to the site store: https://translate.google.com/
+Site already exists. Skip it: https://translate.google.com/
+Add entry to the site store: https://policies.google.com/
+Site already exists. Skip it: https://policies.google.com/
+Add entry to the site store: http://news.google.com/
+Site already exists. Skip it: http://news.google.com/
+Add entry to the site store: https://gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://gmail.com/
+Add entry to the site store: https://www.thinkwithgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.thinkwithgoogle.com/
+Add entry to the site store: https://hangouts.google.com/
+Site already exists. Skip it: https://hangouts.google.com/
+Add entry to the site store: https://payments.google.com/
+Site already exists. Skip it: https://payments.google.com/
+Add entry to the site store: https://maps.google.com/
+Site already exists. Skip it: https://maps.google.com/
+Add entry to the site store: https://about.google/
+Problem found: untrusted Internet domain or IP. Skip https://about.google/
+Add entry to the site store: https://twitter.com/
+Problem found: untrusted Internet domain or IP. Skip https://twitter.com/
+Add entry to the site store: https://careers.google.com/
+Site already exists. Skip it: https://careers.google.com/
+Add entry to the site store: https://services.google.com/
+Site already exists. Skip it: https://services.google.com/
+Add entry to the site store: https://www.google.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.org/
+Add entry to the site store: https://docs.google.com/
+Site already exists. Skip it: https://docs.google.com/
+Add entry to the site store: https://itunes.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://itunes.apple.com/
+Add entry to the site store: https://jamboard.google.com/
+Site already exists. Skip it: https://jamboard.google.com/
+Add entry to the site store: https://keep.google.com/
+Site already exists. Skip it: https://keep.google.com/
+Add entry to the site store: https://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.youtube.com/
+Add entry to the site store: https://support.google.com/
+Site already exists. Skip it: https://support.google.com/
+Add entry to the site store: https://gsuite.google.com/
+Site already exists. Skip it: https://gsuite.google.com/
+Add entry to the site store: https://ads.google.com/
+Site already exists. Skip it: https://ads.google.com/
+Add entry to the site store: https://analytics.google.com/
+Site already exists. Skip it: https://analytics.google.com/
+Add entry to the site store: https://www.google.co.in/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.co.in/
+Add entry to the site store: http://www.google.com/
+Site already exists. Skip it: http://www.google.com/
+Add entry to the site store: https://www.blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://www.blog.google/
+Add entry to the site store: https://news.google.com/
+Site already exists. Skip it: https://news.google.com/
+Add entry to the site store: https://messages.google.com/
+Site already exists. Skip it: https://messages.google.com/
+Add entry to the site store: https://chat.google.com/
+Site already exists. Skip it: https://chat.google.com/
+Add entry to the site store: https://business.google.com/
+Site already exists. Skip it: https://business.google.com/
+Add entry to the site store: https://groups.google.com/
+Site already exists. Skip it: https://groups.google.com/
+Add entry to the site store: https://one.google.com/
+Site already exists. Skip it: https://one.google.com/
+Add entry to the site store: https://scholar.google.com/
+Site already exists. Skip it: https://scholar.google.com/
+Add entry to the site store: https://sites.google.com/
+Site already exists. Skip it: https://sites.google.com/
+Add entry to the site store: https://voice.google.com/
+Site already exists. Skip it: https://voice.google.com/
+Add entry to the site store: https://www.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.waze.com/
+Add entry to the site store: https://accounts.google.com/
+Site already exists. Skip it: https://accounts.google.com/
+Add entry to the site store: https://music.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://music.youtube.com/
+Add entry to the site store: https://photos.google.com/
+Site already exists. Skip it: https://photos.google.com/
+Add entry to the site store: https://chrome.google.com/
+Site already exists. Skip it: https://chrome.google.com/
+Add entry to the site store: https://store.google.com/
+Site already exists. Skip it: https://store.google.com/
+Add entry to the site store: https://www.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.android.com/
+Add entry to the site store: https://www.facebook.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.facebook.com/
+Add entry to the site store: https://sustainability.google/
+Problem found: untrusted Internet domain or IP. Skip https://sustainability.google/
+Add entry to the site store: https://play.google.com/
+Site already exists. Skip it: https://play.google.com/
+Add entry to the site store: https://cloud.google.com/
+Site already exists. Skip it: https://cloud.google.com/
+Add entry to the site store: https://hire.google.com/
+Site already exists. Skip it: https://hire.google.com/
+Add entry to the site store: https://biz.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://biz.waze.com/
+Add entry to the site store: https://www.google.com/
+Site already exists. Skip it: https://www.google.com/
+Add entry to the site store: https://learndigital.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://learndigital.withgoogle.com/
+Add entry to the site store: https://tv.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://tv.youtube.com/
+Add entry to the site store: https://drive.google.com/
+Site already exists. Skip it: https://drive.google.com/
+Add entry to the site store: https://youtube-global.blogspot.com/
+Problem found: untrusted Internet domain or IP. Skip https://youtube-global.blogspot.com/
+Add entry to the site store: http://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.youtube.com/
+Add entry to the site store: https://safety.google/
+Problem found: untrusted Internet domain or IP. Skip https://safety.google/
+Add entry to the site store: https://mail.google.com/
+Site already exists. Skip it: https://mail.google.com/
+Add entry to the site store: https://wearos.google.com/
+Site already exists. Skip it: https://wearos.google.com/
+Add entry to the site store: https://www.gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.gmail.com/
+Add entry to the site store: https://www.linkedin.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.linkedin.com/
+Add entry to the site store: https://transparencyreport.google.com/
+Site already exists. Skip it: https://transparencyreport.google.com/
+Add entry to the site store: https://wellbeing.google/
+Problem found: untrusted Internet domain or IP. Skip https://wellbeing.google/
+Add entry to the site store: https://myaccount.google.com/
+Site already exists. Skip it: https://myaccount.google.com/
+Add entry to the site store: https://classroom.google.com/
+Site already exists. Skip it: https://classroom.google.com/
+Add entry to the site store: https://fi.google.com/
+Site already exists. Skip it: https://fi.google.com/
+Add entry to the site store: https://pay.google.com/
+Site already exists. Skip it: https://pay.google.com/
+Add entry to the site store: https://www.tiltbrush.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.tiltbrush.com/
+Add entry to the site store: https://duo.google.com/
+Site already exists. Skip it: https://duo.google.com/
+Add entry to the site store: https://books.google.com/
+Site already exists. Skip it: https://books.google.com/
+Add entry to the site store: https://www.blogger.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.blogger.com/
+Add entry to the site store: http://www.weather.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.weather.com/
+Done adding site entries.
+No new entry added. 
+2019-09-03T19:55:26.259Z 72933 TID-ovnggnv89 DiscoveryWorker JID-d8b035024dd2936770741533 INFO: Discovery successful!
+2019-09-03T19:55:26.340Z 72933 TID-ovnggnv89 DiscoveryWorker JID-d8b035024dd2936770741533 INFO: Sending out email notice to: yang.li@owasp.org
+2019-09-03T19:55:27.820Z 72933 TID-ovnggnv89 DiscoveryWorker JID-d8b035024dd2936770741533 INFO: done: 24.874 sec
+You're hitting mailer controller...
+2019-09-04T02:56:06.483Z 72933 TID-ovnfgvl7h DiscoveryWorker JID-46ce88f7bef59b144549cdf0 INFO: start
+2019-09-04T02:56:06.651Z 72933 TID-ovnfgvl7h DiscoveryWorker JID-46ce88f7bef59b144549cdf0 INFO: Starting background command: wmap /Users/sli/www_wmap/shared/data/seed
+--------------------------------------------------------------------------------
+,--.   ,--.       ,--.       ,--.   ,--.
+|  |   |  | ,---. |  |-.     |   `.'   | ,--,--. ,---.  ,---.  ,---. ,--.--.
+|  |.'.|  || .-. :| .-. '    |  |'.'|  |' ,-.  || .-. || .-. || .-. :|  .--'
+|   ,'.   |   --.| `-' |    |  |   |  | '-'  || '-' '| '-' '   --.|  |
+'--'   '--' `----' `---'     `--'   `--' `--`--'|  |-' |  |-'  `----'`--'
+                                                `--'   `--'                  
+Version: 2.5.5	Release Date: 2019-08-15
+Designed and developed by: Sam (Yang) Li
+Email: yang.li@owasp.org	LinkedIn: http://www.linkedin.com/in/yangli8/
+--------------------------------------------------------------------------------
+Parsing the discovery seed file: "/Users/sli/www_wmap/shared/data/seed" 
+Parsing done. 
+Invoke the HostTracker.
+
+Validate the IP format is valid: www.google.com
+Validate the URL format is valid: www.google.com
+Unknown URL format: www.google.com
+Update the local hosts data repository.
+Add entries to the local host repository: ["www.google.com"]
+Start parallel host update processing on:
+ ["www.google.com"]
+Add entry to the local host repository: www.google.com
+Host is already exist. Skip: www.google.com
+Done loading entries.
+Build up URL list for the web crawler ...
+Start the parallel port scan on the target list:
+ ["www.google.com"]
+Perform web service discovery on host: www.google.com
+ping: cannot resolve www.google.com: Unknown host
+No web service detected. 
+Port scanning done successfully with the found web services: []
+Fire up the crawler.
+Discovered sites: 
+No web site is discovered. 
+No new site found. There is no change to the site tracking data repository. 
+2019-09-04T02:56:09.354Z 72933 TID-ovnfgvl7h DiscoveryWorker JID-46ce88f7bef59b144549cdf0 INFO: Discovery successful!
+2019-09-04T02:56:09.354Z 72933 TID-ovnfgvl7h DiscoveryWorker JID-46ce88f7bef59b144549cdf0 INFO: fail: 2.872 sec
+2019-09-04T02:56:09.355Z 72933 TID-ovnfgvl7h WARN: {"context":"Job raised exception","job":{"class":"DiscoveryWorker","args":[2],"retry":false,"queue":"default","jid":"46ce88f7bef59b144549cdf0","created_at":1567565766.474509,"enqueued_at":1567565766.474752},"jobstr":"{\"class\":\"DiscoveryWorker\",\"args\":[2],\"retry\":false,\"queue\":\"default\",\"jid\":\"46ce88f7bef59b144549cdf0\",\"created_at\":1567565766.474509,\"enqueued_at\":1567565766.474752}"}
+2019-09-04T02:56:09.358Z 72933 TID-ovnfgvl7h WARN: NameError: undefined local variable or method `receiver' for #<DiscoveryWorker:0x00007fab576353f8>
+2019-09-04T02:56:09.358Z 72933 TID-ovnfgvl7h WARN: /Users/sli/www_wmap/app/workers/discovery_worker.rb:19:in `on_complete'
+/Users/sli/www_wmap/app/workers/discovery_worker.rb:34:in `perform'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:192:in `execute_job'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:165:in `block (2 levels) in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:128:in `block in invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-batch-0.1.6/lib/sidekiq/batch/middleware.rb:30:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:130:in `block in invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:164:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:137:in `block (6 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_retry.rb:109:in `local'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:136:in `block (5 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/rails.rb:42:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:132:in `block (4 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:250:in `stats'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:127:in `block (3 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_logger.rb:8:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:126:in `block (2 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_retry.rb:74:in `global'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:125:in `block in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/logging.rb:48:in `with_context'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/logging.rb:42:in `with_job_hash_context'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:124:in `dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:163:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:83:in `process_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:71:in `run'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2019-09-04T02:58:07.866Z 72933 TID-ovnfgvlf5 DiscoveryWorker JID-b8fca56e9e537ad3690b4084 INFO: start
+2019-09-04T02:58:07.932Z 72933 TID-ovnfgvlf5 DiscoveryWorker JID-b8fca56e9e537ad3690b4084 INFO: Starting background command: wmap /Users/sli/www_wmap/shared/data/seed
+--------------------------------------------------------------------------------
+,--.   ,--.       ,--.       ,--.   ,--.
+|  |   |  | ,---. |  |-.     |   `.'   | ,--,--. ,---.  ,---.  ,---. ,--.--.
+|  |.'.|  || .-. :| .-. '    |  |'.'|  |' ,-.  || .-. || .-. || .-. :|  .--'
+|   ,'.   |   --.| `-' |    |  |   |  | '-'  || '-' '| '-' '   --.|  |
+'--'   '--' `----' `---'     `--'   `--' `--`--'|  |-' |  |-'  `----'`--'
+                                                `--'   `--'                  
+Version: 2.5.5	Release Date: 2019-08-15
+Designed and developed by: Sam (Yang) Li
+Email: yang.li@owasp.org	LinkedIn: http://www.linkedin.com/in/yangli8/
+--------------------------------------------------------------------------------
+Parsing the discovery seed file: "/Users/sli/www_wmap/shared/data/seed" 
+Parsing done. 
+Invoke the HostTracker.
+
+Validate the IP format is valid: www.google.com
+Validate the URL format is valid: www.google.com
+Unknown URL format: www.google.com
+Update the local hosts data repository.
+Add entries to the local host repository: ["www.google.com"]
+Start parallel host update processing on:
+ ["www.google.com"]
+Add entry to the local host repository: www.google.com
+Host is already exist. Skip: www.google.com
+Done loading entries.
+Build up URL list for the web crawler ...
+Start the parallel port scan on the target list:
+ ["www.google.com"]
+Perform web service discovery on host: www.google.com
+ping: cannot resolve www.google.com: Unknown host
+No web service detected. 
+Port scanning done successfully with the found web services: []
+Fire up the crawler.
+Discovered sites: 
+No web site is discovered. 
+No new site found. There is no change to the site tracking data repository. 
+2019-09-04T02:58:10.159Z 72933 TID-ovnfgvlf5 DiscoveryWorker JID-b8fca56e9e537ad3690b4084 INFO: Discovery successful!
+2019-09-04T02:58:10.217Z 72933 TID-ovnfgvlf5 DiscoveryWorker JID-b8fca56e9e537ad3690b4084 INFO: Sending out email notice to: yang.li@owasp.org
+Update the site table ...
+Database connection success. 
+site table truncate success.
+2019-09-04T02:58:10.316Z 72933 TID-ovnfgvlf5 DiscoveryWorker JID-b8fca56e9e537ad3690b4084 INFO: fail: 2.45 sec
+2019-09-04T02:58:10.316Z 72933 TID-ovnfgvlf5 WARN: {"context":"Job raised exception","job":{"class":"DiscoveryWorker","args":[2],"retry":false,"queue":"default","jid":"b8fca56e9e537ad3690b4084","created_at":1567565887.865547,"enqueued_at":1567565887.865613},"jobstr":"{\"class\":\"DiscoveryWorker\",\"args\":[2],\"retry\":false,\"queue\":\"default\",\"jid\":\"b8fca56e9e537ad3690b4084\",\"created_at\":1567565887.865547,\"enqueued_at\":1567565887.865613}"}
+2019-09-04T02:58:10.319Z 72933 TID-ovnfgvlf5 WARN: NameError: undefined local variable or method `current_user' for #<DiscoveryWorker:0x00007fab56fd1570>
+2019-09-04T02:58:10.319Z 72933 TID-ovnfgvlf5 WARN: /Users/sli/www_wmap/app/helpers/sites_helper.rb:48:in `block in site_table_reload'
+/Users/sli/www_wmap/app/helpers/sites_helper.rb:45:in `each'
+/Users/sli/www_wmap/app/helpers/sites_helper.rb:45:in `site_table_reload'
+/Users/sli/www_wmap/app/workers/discovery_worker.rb:23:in `on_complete'
+/Users/sli/www_wmap/app/workers/discovery_worker.rb:34:in `perform'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:192:in `execute_job'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:165:in `block (2 levels) in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:128:in `block in invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-batch-0.1.6/lib/sidekiq/batch/middleware.rb:30:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:130:in `block in invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:164:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:137:in `block (6 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_retry.rb:109:in `local'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:136:in `block (5 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/rails.rb:42:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:132:in `block (4 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:250:in `stats'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:127:in `block (3 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_logger.rb:8:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:126:in `block (2 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_retry.rb:74:in `global'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:125:in `block in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/logging.rb:48:in `with_context'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/logging.rb:42:in `with_job_hash_context'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:124:in `dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:163:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:83:in `process_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:71:in `run'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/util.rb:25:in `block in safe_thread'
+You're hitting mailer controller...
+2019-09-04T03:01:49.195Z 72933 TID-ovnggnuyt DiscoveryWorker JID-fc639f28bdccc06a7918b79c INFO: start
+2019-09-04T03:01:49.212Z 72933 TID-ovnggnuyt DiscoveryWorker JID-fc639f28bdccc06a7918b79c INFO: Starting background command: wmap /Users/sli/www_wmap/shared/data/seed
+--------------------------------------------------------------------------------
+,--.   ,--.       ,--.       ,--.   ,--.
+|  |   |  | ,---. |  |-.     |   `.'   | ,--,--. ,---.  ,---.  ,---. ,--.--.
+|  |.'.|  || .-. :| .-. '    |  |'.'|  |' ,-.  || .-. || .-. || .-. :|  .--'
+|   ,'.   |   --.| `-' |    |  |   |  | '-'  || '-' '| '-' '   --.|  |
+'--'   '--' `----' `---'     `--'   `--' `--`--'|  |-' |  |-'  `----'`--'
+                                                `--'   `--'                  
+Version: 2.5.5	Release Date: 2019-08-15
+Designed and developed by: Sam (Yang) Li
+Email: yang.li@owasp.org	LinkedIn: http://www.linkedin.com/in/yangli8/
+--------------------------------------------------------------------------------
+Parsing the discovery seed file: "/Users/sli/www_wmap/shared/data/seed" 
+Parsing done. 
+Invoke the HostTracker.
+
+Validate the IP format is valid: www.google.com
+Validate the URL format is valid: www.google.com
+Unknown URL format: www.google.com
+Update the local hosts data repository.
+Add entries to the local host repository: ["www.google.com"]
+Start parallel host update processing on:
+ ["www.google.com"]
+Add entry to the local host repository: www.google.com
+Host is already exist. Skip: www.google.com
+Done loading entries.
+Build up URL list for the web crawler ...
+Start the parallel port scan on the target list:
+ ["www.google.com"]
+Perform web service discovery on host: www.google.com
+Detected web service on host www.google.com: ["http://www.google.com/", "https://www.google.com/"]
+Port scanning done successfully with the found web services: ["http://www.google.com/", "https://www.google.com/"]
+Fire up the crawler.
+Start the parallel engine on the normalized crawling list:
+ ["http://www.google.com/", "https://www.google.com/"] 
+Maximum number of web crawling sessions allowed: 40
+Start web crawling on https://www.google.com/
+Start web crawling on http://www.google.com/
+Please be aware that it may take a while to crawl https://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: https://www.google.com/
+Please be aware that it may take a while to crawl http://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: http://www.google.com/
+Discovered sites: 
+http://www.google.com/
+http://maps.google.com/
+https://play.google.com/
+http://www.youtube.com/
+http://news.google.com/
+https://mail.google.com/
+https://drive.google.com/
+https://www.google.com/
+https://accounts.google.com/
+https://maps.google.com/
+https://www.youtube.com/
+https://news.google.com/
+https://support.google.com/
+https://policies.google.com/
+http://developer.android.com/
+https://payments.google.com/
+https://tv.youtube.com/
+https://myaccount.google.com/
+https://contacts.google.com/
+https://translate.google.com/
+https://photos.google.com/
+https://docs.google.com/
+https://books.google.com/
+https://www.blogger.com/
+https://duo.google.com/
+https://hangouts.google.com/
+https://keep.google.com/
+https://jamboard.google.com/
+https://itunes.apple.com/
+http://www.weather.com/
+https://about.google/
+https://www.blog.google/
+https://chrome.google.com/
+https://music.youtube.com/
+https://chromecast.com/
+https://store.google.com/
+https://www.android.com/
+https://wearos.google.com/
+https://www.gmail.com/
+https://gmail.com/
+https://messages.google.com/
+https://gsuite.google.com/
+https://chat.google.com/
+https://ads.google.com/
+https://analytics.google.com/
+https://business.google.com/
+https://classroom.google.com/
+https://www.google.co.in/
+https://fi.google.com/
+https://groups.google.com/
+https://one.google.com/
+https://pay.google.com/
+https://scholar.google.com/
+https://sites.google.com/
+https://www.tiltbrush.com/
+https://voice.google.com/
+https://www.waze.com/
+https://youtube-global.blogspot.com/
+https://enterprise.google.com/
+https://assistant.google.com/
+https://cloud.google.com/
+https://learndigital.withgoogle.com/
+https://domains.google.com/
+https://hire.google.com/
+https://biz.waze.com/
+https://developers.google.com/
+https://instagram.com/
+https://twitter.com/
+https://www.facebook.com/
+https://www.linkedin.com/
+https://abc.xyz/
+https://careers.google.com/
+https://www.thinkwithgoogle.com/
+https://services.google.com/
+https://www.google.org/
+https://sustainability.google/
+https://transparencyreport.google.com/
+https://wellbeing.google/
+https://safety.google/
+Automatically save the discovery results into the site tracking data repository: 
+Start the SiteTracker. 
+Add entries to the local site store from list:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "http://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://news.google.com/", "https://support.google.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://tv.youtube.com/", "https://myaccount.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://duo.google.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://itunes.apple.com/", "http://www.weather.com/", "https://about.google/", "https://www.blog.google/", "https://chrome.google.com/", "https://music.youtube.com/", "https://chromecast.com/", "https://store.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "https://gmail.com/", "https://messages.google.com/", "https://gsuite.google.com/", "https://chat.google.com/", "https://ads.google.com/", "https://analytics.google.com/", "https://business.google.com/", "https://classroom.google.com/", "https://www.google.co.in/", "https://fi.google.com/", "https://groups.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://enterprise.google.com/", "https://assistant.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://hire.google.com/", "https://biz.waze.com/", "https://developers.google.com/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/"]
+Start parallel adding on the sites:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "http://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://news.google.com/", "https://support.google.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://tv.youtube.com/", "https://myaccount.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://duo.google.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://itunes.apple.com/", "http://www.weather.com/", "https://about.google/", "https://www.blog.google/", "https://chrome.google.com/", "https://music.youtube.com/", "https://chromecast.com/", "https://store.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "https://gmail.com/", "https://messages.google.com/", "https://gsuite.google.com/", "https://chat.google.com/", "https://ads.google.com/", "https://analytics.google.com/", "https://business.google.com/", "https://classroom.google.com/", "https://www.google.co.in/", "https://fi.google.com/", "https://groups.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://enterprise.google.com/", "https://assistant.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://hire.google.com/", "https://biz.waze.com/", "https://developers.google.com/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/"]
+Add entry to the site store: http://www.weather.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.weather.com/
+Add entry to the site store: https://mail.google.com/
+Site already exists. Skip it: https://mail.google.com/
+Add entry to the site store: https://music.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://music.youtube.com/
+Add entry to the site store: http://maps.google.com/
+Site already exists. Skip it: http://maps.google.com/
+Add entry to the site store: https://www.blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://www.blog.google/
+Add entry to the site store: https://play.google.com/
+Site already exists. Skip it: https://play.google.com/
+Add entry to the site store: https://www.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.android.com/
+Add entry to the site store: https://accounts.google.com/
+Site already exists. Skip it: https://accounts.google.com/
+Add entry to the site store: https://gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://gmail.com/
+Add entry to the site store: https://drive.google.com/
+Site already exists. Skip it: https://drive.google.com/
+Add entry to the site store: https://www.gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.gmail.com/
+Add entry to the site store: https://www.linkedin.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.linkedin.com/
+Add entry to the site store: https://support.google.com/
+Site already exists. Skip it: https://support.google.com/
+Add entry to the site store: https://chromecast.com/
+Problem found: untrusted Internet domain or IP. Skip https://chromecast.com/
+Add entry to the site store: https://tv.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://tv.youtube.com/
+Add entry to the site store: http://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.youtube.com/
+Add entry to the site store: https://www.thinkwithgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.thinkwithgoogle.com/
+Add entry to the site store: https://keep.google.com/
+Site already exists. Skip it: https://keep.google.com/
+Add entry to the site store: https://twitter.com/
+Problem found: untrusted Internet domain or IP. Skip https://twitter.com/
+Add entry to the site store: https://www.google.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.org/
+Add entry to the site store: https://payments.google.com/
+Site already exists. Skip it: https://payments.google.com/
+Add entry to the site store: https://developers.google.com/
+Site already exists. Skip it: https://developers.google.com/
+Add entry to the site store: https://instagram.com/
+Problem found: untrusted Internet domain or IP. Skip https://instagram.com/
+Add entry to the site store: https://abc.xyz/
+Problem found: untrusted Internet domain or IP. Skip https://abc.xyz/
+Add entry to the site store: https://news.google.com/
+Site already exists. Skip it: https://news.google.com/
+Add entry to the site store: https://analytics.google.com/
+Site already exists. Skip it: https://analytics.google.com/
+Add entry to the site store: https://www.google.co.in/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.co.in/
+Add entry to the site store: https://www.blogger.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.blogger.com/
+Add entry to the site store: http://news.google.com/
+Site already exists. Skip it: http://news.google.com/
+Add entry to the site store: https://youtube-global.blogspot.com/
+Problem found: untrusted Internet domain or IP. Skip https://youtube-global.blogspot.com/
+Add entry to the site store: https://books.google.com/
+Site already exists. Skip it: https://books.google.com/
+Add entry to the site store: https://domains.google.com/
+Site already exists. Skip it: https://domains.google.com/
+Add entry to the site store: https://hire.google.com/
+Site already exists. Skip it: https://hire.google.com/
+Add entry to the site store: https://biz.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://biz.waze.com/
+Add entry to the site store: https://hangouts.google.com/
+Site already exists. Skip it: https://hangouts.google.com/
+Add entry to the site store: https://enterprise.google.com/
+Site already exists. Skip it: https://enterprise.google.com/
+Add entry to the site store: https://assistant.google.com/
+Site already exists. Skip it: https://assistant.google.com/
+Add entry to the site store: https://cloud.google.com/
+Site already exists. Skip it: https://cloud.google.com/
+Add entry to the site store: https://learndigital.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://learndigital.withgoogle.com/
+Add entry to the site store: https://jamboard.google.com/
+Site already exists. Skip it: https://jamboard.google.com/
+Add entry to the site store: https://www.facebook.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.facebook.com/
+Add entry to the site store: https://safety.google/
+Problem found: untrusted Internet domain or IP. Skip https://safety.google/
+Add entry to the site store: https://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.youtube.com/
+Add entry to the site store: https://services.google.com/
+Site already exists. Skip it: https://services.google.com/
+Add entry to the site store: https://transparencyreport.google.com/
+Site already exists. Skip it: https://transparencyreport.google.com/
+Add entry to the site store: https://wellbeing.google/
+Problem found: untrusted Internet domain or IP. Skip https://wellbeing.google/
+Add entry to the site store: https://myaccount.google.com/
+Site already exists. Skip it: https://myaccount.google.com/
+Add entry to the site store: https://translate.google.com/
+Site already exists. Skip it: https://translate.google.com/
+Add entry to the site store: https://photos.google.com/
+Site already exists. Skip it: https://photos.google.com/
+Add entry to the site store: https://policies.google.com/
+Site already exists. Skip it: https://policies.google.com/
+Add entry to the site store: https://docs.google.com/
+Site already exists. Skip it: https://docs.google.com/
+Add entry to the site store: https://duo.google.com/
+Site already exists. Skip it: https://duo.google.com/
+Add entry to the site store: https://www.google.com/
+Site already exists. Skip it: https://www.google.com/
+Add entry to the site store: https://about.google/
+Problem found: untrusted Internet domain or IP. Skip https://about.google/
+Add entry to the site store: https://careers.google.com/
+Site already exists. Skip it: https://careers.google.com/
+Add entry to the site store: https://sustainability.google/
+Problem found: untrusted Internet domain or IP. Skip https://sustainability.google/
+Add entry to the site store: http://www.google.com/
+Site already exists. Skip it: http://www.google.com/
+Add entry to the site store: https://chrome.google.com/
+Site already exists. Skip it: https://chrome.google.com/
+Add entry to the site store: https://wearos.google.com/
+Site already exists. Skip it: https://wearos.google.com/
+Add entry to the site store: https://gsuite.google.com/
+Site already exists. Skip it: https://gsuite.google.com/
+Add entry to the site store: https://chat.google.com/
+Site already exists. Skip it: https://chat.google.com/
+Add entry to the site store: https://ads.google.com/
+Site already exists. Skip it: https://ads.google.com/
+Add entry to the site store: https://business.google.com/
+Site already exists. Skip it: https://business.google.com/
+Add entry to the site store: https://fi.google.com/
+Site already exists. Skip it: https://fi.google.com/
+Add entry to the site store: https://groups.google.com/
+Site already exists. Skip it: https://groups.google.com/
+Add entry to the site store: https://pay.google.com/
+Site already exists. Skip it: https://pay.google.com/
+Add entry to the site store: https://sites.google.com/
+Site already exists. Skip it: https://sites.google.com/
+Add entry to the site store: https://voice.google.com/
+Site already exists. Skip it: https://voice.google.com/
+Add entry to the site store: https://www.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.waze.com/
+Add entry to the site store: https://maps.google.com/
+Site already exists. Skip it: https://maps.google.com/
+Add entry to the site store: https://store.google.com/
+Site already exists. Skip it: https://store.google.com/
+Add entry to the site store: https://messages.google.com/
+Site already exists. Skip it: https://messages.google.com/
+Add entry to the site store: https://classroom.google.com/
+Site already exists. Skip it: https://classroom.google.com/
+Add entry to the site store: https://one.google.com/
+Site already exists. Skip it: https://one.google.com/
+Add entry to the site store: https://scholar.google.com/
+Site already exists. Skip it: https://scholar.google.com/
+Add entry to the site store: https://www.tiltbrush.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.tiltbrush.com/
+Add entry to the site store: https://contacts.google.com/
+Site already exists. Skip it: https://contacts.google.com/
+Add entry to the site store: http://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip http://developer.android.com/
+Add entry to the site store: https://itunes.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://itunes.apple.com/
+Done adding site entries.
+No new entry added. 
+2019-09-04T03:02:14.848Z 72933 TID-ovnggnuyt DiscoveryWorker JID-fc639f28bdccc06a7918b79c INFO: Discovery successful!
+2019-09-04T03:02:14.903Z 72933 TID-ovnggnuyt DiscoveryWorker JID-fc639f28bdccc06a7918b79c INFO: Sending out email notice to: yang.li@owasp.org
+Update the site table ...
+Database connection success. 
+You're hitting mailer controller...
+site table truncate success.
+2019-09-04T03:02:14.933Z 72933 TID-ovnggnuyt DiscoveryWorker JID-fc639f28bdccc06a7918b79c INFO: fail: 25.738 sec
+2019-09-04T03:02:14.933Z 72933 TID-ovnggnuyt WARN: {"context":"Job raised exception","job":{"class":"DiscoveryWorker","args":[2],"retry":false,"queue":"default","jid":"fc639f28bdccc06a7918b79c","created_at":1567566109.194998,"enqueued_at":1567566109.195061},"jobstr":"{\"class\":\"DiscoveryWorker\",\"args\":[2],\"retry\":false,\"queue\":\"default\",\"jid\":\"fc639f28bdccc06a7918b79c\",\"created_at\":1567566109.194998,\"enqueued_at\":1567566109.195061}"}
+2019-09-04T03:02:14.936Z 72933 TID-ovnggnuyt WARN: NameError: undefined local variable or method `current_user' for #<DiscoveryWorker:0x00007fab556fc798>
+2019-09-04T03:02:14.936Z 72933 TID-ovnggnuyt WARN: /Users/sli/www_wmap/app/helpers/sites_helper.rb:48:in `block in site_table_reload'
+/Users/sli/www_wmap/app/helpers/sites_helper.rb:45:in `each'
+/Users/sli/www_wmap/app/helpers/sites_helper.rb:45:in `site_table_reload'
+/Users/sli/www_wmap/app/workers/discovery_worker.rb:23:in `on_complete'
+/Users/sli/www_wmap/app/workers/discovery_worker.rb:34:in `perform'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:192:in `execute_job'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:165:in `block (2 levels) in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:128:in `block in invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-batch-0.1.6/lib/sidekiq/batch/middleware.rb:30:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:130:in `block in invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:164:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:137:in `block (6 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_retry.rb:109:in `local'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:136:in `block (5 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/rails.rb:42:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:132:in `block (4 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:250:in `stats'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:127:in `block (3 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_logger.rb:8:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:126:in `block (2 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_retry.rb:74:in `global'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:125:in `block in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/logging.rb:48:in `with_context'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/logging.rb:42:in `with_job_hash_context'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:124:in `dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:163:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:83:in `process_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:71:in `run'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2019-09-04T03:12:32.148Z 72933 TID-ovnggm04x DiscoveryWorker JID-8308c41f4f4dc4976114f9ed INFO: start
+2019-09-04T03:12:32.222Z 72933 TID-ovnggm04x DiscoveryWorker JID-8308c41f4f4dc4976114f9ed INFO: Starting background command: wmap /Users/sli/www_wmap/shared/data/seed
+--------------------------------------------------------------------------------
+,--.   ,--.       ,--.       ,--.   ,--.
+|  |   |  | ,---. |  |-.     |   `.'   | ,--,--. ,---.  ,---.  ,---. ,--.--.
+|  |.'.|  || .-. :| .-. '    |  |'.'|  |' ,-.  || .-. || .-. || .-. :|  .--'
+|   ,'.   |   --.| `-' |    |  |   |  | '-'  || '-' '| '-' '   --.|  |
+'--'   '--' `----' `---'     `--'   `--' `--`--'|  |-' |  |-'  `----'`--'
+                                                `--'   `--'                  
+Version: 2.5.5	Release Date: 2019-08-15
+Designed and developed by: Sam (Yang) Li
+Email: yang.li@owasp.org	LinkedIn: http://www.linkedin.com/in/yangli8/
+--------------------------------------------------------------------------------
+Parsing the discovery seed file: "/Users/sli/www_wmap/shared/data/seed" 
+Parsing done. 
+Invoke the HostTracker.
+
+Validate the IP format is valid: www.google.com
+Validate the URL format is valid: www.google.com
+Unknown URL format: www.google.com
+Update the local hosts data repository.
+Add entries to the local host repository: ["www.google.com"]
+Start parallel host update processing on:
+ ["www.google.com"]
+Add entry to the local host repository: www.google.com
+Host is already exist. Skip: www.google.com
+Done loading entries.
+Build up URL list for the web crawler ...
+Start the parallel port scan on the target list:
+ ["www.google.com"]
+Perform web service discovery on host: www.google.com
+Detected web service on host www.google.com: ["http://www.google.com/", "https://www.google.com/"]
+Port scanning done successfully with the found web services: ["http://www.google.com/", "https://www.google.com/"]
+Fire up the crawler.
+Start the parallel engine on the normalized crawling list:
+ ["http://www.google.com/", "https://www.google.com/"] 
+Maximum number of web crawling sessions allowed: 40
+Start web crawling on https://www.google.com/
+Start web crawling on http://www.google.com/
+Please be aware that it may take a while to crawl http://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: http://www.google.com/
+Please be aware that it may take a while to crawl https://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: https://www.google.com/
+Discovered sites: 
+http://www.google.com/
+http://maps.google.com/
+https://play.google.com/
+http://www.youtube.com/
+http://news.google.com/
+https://mail.google.com/
+https://drive.google.com/
+https://www.google.com/
+https://accounts.google.com/
+https://maps.google.com/
+https://www.youtube.com/
+https://news.google.com/
+https://support.google.com/
+https://policies.google.com/
+http://developer.android.com/
+https://payments.google.com/
+https://tv.youtube.com/
+https://myaccount.google.com/
+https://contacts.google.com/
+https://translate.google.com/
+https://photos.google.com/
+https://docs.google.com/
+https://books.google.com/
+https://www.blogger.com/
+https://duo.google.com/
+https://hangouts.google.com/
+https://keep.google.com/
+https://jamboard.google.com/
+https://itunes.apple.com/
+http://www.weather.com/
+https://about.google/
+https://www.blog.google/
+https://chrome.google.com/
+https://music.youtube.com/
+https://chromecast.com/
+https://store.google.com/
+https://www.android.com/
+https://wearos.google.com/
+https://www.gmail.com/
+https://gmail.com/
+https://messages.google.com/
+https://gsuite.google.com/
+https://chat.google.com/
+https://ads.google.com/
+https://analytics.google.com/
+https://business.google.com/
+https://classroom.google.com/
+https://www.google.co.in/
+https://fi.google.com/
+https://groups.google.com/
+https://one.google.com/
+https://pay.google.com/
+https://scholar.google.com/
+https://sites.google.com/
+https://www.tiltbrush.com/
+https://voice.google.com/
+https://www.waze.com/
+https://youtube-global.blogspot.com/
+https://enterprise.google.com/
+https://assistant.google.com/
+https://cloud.google.com/
+https://learndigital.withgoogle.com/
+https://domains.google.com/
+https://hire.google.com/
+https://biz.waze.com/
+https://developers.google.com/
+https://instagram.com/
+https://twitter.com/
+https://www.facebook.com/
+https://www.linkedin.com/
+https://abc.xyz/
+https://careers.google.com/
+https://www.thinkwithgoogle.com/
+https://services.google.com/
+https://www.google.org/
+https://sustainability.google/
+https://transparencyreport.google.com/
+https://wellbeing.google/
+https://safety.google/
+Automatically save the discovery results into the site tracking data repository: 
+Start the SiteTracker. 
+Add entries to the local site store from list:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "http://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://news.google.com/", "https://support.google.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://tv.youtube.com/", "https://myaccount.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://duo.google.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://itunes.apple.com/", "http://www.weather.com/", "https://about.google/", "https://www.blog.google/", "https://chrome.google.com/", "https://music.youtube.com/", "https://chromecast.com/", "https://store.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "https://gmail.com/", "https://messages.google.com/", "https://gsuite.google.com/", "https://chat.google.com/", "https://ads.google.com/", "https://analytics.google.com/", "https://business.google.com/", "https://classroom.google.com/", "https://www.google.co.in/", "https://fi.google.com/", "https://groups.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://enterprise.google.com/", "https://assistant.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://hire.google.com/", "https://biz.waze.com/", "https://developers.google.com/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/"]
+Start parallel adding on the sites:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "http://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://news.google.com/", "https://support.google.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://tv.youtube.com/", "https://myaccount.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://duo.google.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://itunes.apple.com/", "http://www.weather.com/", "https://about.google/", "https://www.blog.google/", "https://chrome.google.com/", "https://music.youtube.com/", "https://chromecast.com/", "https://store.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "https://gmail.com/", "https://messages.google.com/", "https://gsuite.google.com/", "https://chat.google.com/", "https://ads.google.com/", "https://analytics.google.com/", "https://business.google.com/", "https://classroom.google.com/", "https://www.google.co.in/", "https://fi.google.com/", "https://groups.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://enterprise.google.com/", "https://assistant.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://hire.google.com/", "https://biz.waze.com/", "https://developers.google.com/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/"]
+Add entry to the site store: http://www.google.com/
+Site already exists. Skip it: http://www.google.com/
+Add entry to the site store: https://www.blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://www.blog.google/
+Add entry to the site store: https://drive.google.com/
+Site already exists. Skip it: https://drive.google.com/
+Add entry to the site store: https://chromecast.com/
+Problem found: untrusted Internet domain or IP. Skip https://chromecast.com/
+Add entry to the site store: https://mail.google.com/
+Site already exists. Skip it: https://mail.google.com/
+Add entry to the site store: https://wearos.google.com/
+Site already exists. Skip it: https://wearos.google.com/
+Add entry to the site store: https://gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://gmail.com/
+Add entry to the site store: http://maps.google.com/
+Site already exists. Skip it: http://maps.google.com/
+Add entry to the site store: https://about.google/
+Problem found: untrusted Internet domain or IP. Skip https://about.google/
+Add entry to the site store: https://www.linkedin.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.linkedin.com/
+Add entry to the site store: https://support.google.com/
+Site already exists. Skip it: https://support.google.com/
+Add entry to the site store: https://sites.google.com/
+Site already exists. Skip it: https://sites.google.com/
+Add entry to the site store: https://voice.google.com/
+Site already exists. Skip it: https://voice.google.com/
+Add entry to the site store: https://www.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.waze.com/
+Add entry to the site store: https://play.google.com/
+Site already exists. Skip it: https://play.google.com/
+Add entry to the site store: https://music.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://music.youtube.com/
+Add entry to the site store: https://www.google.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.org/
+Add entry to the site store: http://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.youtube.com/
+Add entry to the site store: https://careers.google.com/
+Site already exists. Skip it: https://careers.google.com/
+Add entry to the site store: https://services.google.com/
+Site already exists. Skip it: https://services.google.com/
+Add entry to the site store: https://sustainability.google/
+Problem found: untrusted Internet domain or IP. Skip https://sustainability.google/
+Add entry to the site store: https://policies.google.com/
+Site already exists. Skip it: https://policies.google.com/
+Add entry to the site store: https://youtube-global.blogspot.com/
+Problem found: untrusted Internet domain or IP. Skip https://youtube-global.blogspot.com/
+Add entry to the site store: https://books.google.com/
+Site already exists. Skip it: https://books.google.com/
+Add entry to the site store: https://enterprise.google.com/
+Site already exists. Skip it: https://enterprise.google.com/
+Add entry to the site store: https://assistant.google.com/
+Site already exists. Skip it: https://assistant.google.com/
+Add entry to the site store: https://cloud.google.com/
+Site already exists. Skip it: https://cloud.google.com/
+Add entry to the site store: https://learndigital.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://learndigital.withgoogle.com/
+Add entry to the site store: http://news.google.com/
+Site already exists. Skip it: http://news.google.com/
+Add entry to the site store: https://chrome.google.com/
+Site already exists. Skip it: https://chrome.google.com/
+Add entry to the site store: https://store.google.com/
+Site already exists. Skip it: https://store.google.com/
+Add entry to the site store: https://www.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.android.com/
+Add entry to the site store: https://www.thinkwithgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.thinkwithgoogle.com/
+Add entry to the site store: https://docs.google.com/
+Site already exists. Skip it: https://docs.google.com/
+Add entry to the site store: https://domains.google.com/
+Site already exists. Skip it: https://domains.google.com/
+Add entry to the site store: https://hire.google.com/
+Site already exists. Skip it: https://hire.google.com/
+Add entry to the site store: https://biz.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://biz.waze.com/
+Add entry to the site store: https://contacts.google.com/
+Site already exists. Skip it: https://contacts.google.com/
+Add entry to the site store: https://news.google.com/
+Site already exists. Skip it: https://news.google.com/
+Add entry to the site store: https://www.gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.gmail.com/
+Add entry to the site store: https://abc.xyz/
+Problem found: untrusted Internet domain or IP. Skip https://abc.xyz/
+Add entry to the site store: https://keep.google.com/
+Site already exists. Skip it: https://keep.google.com/
+Add entry to the site store: https://messages.google.com/
+Site already exists. Skip it: https://messages.google.com/
+Add entry to the site store: https://ads.google.com/
+Site already exists. Skip it: https://ads.google.com/
+Add entry to the site store: https://business.google.com/
+Site already exists. Skip it: https://business.google.com/
+Add entry to the site store: https://www.google.co.in/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.co.in/
+Add entry to the site store: https://jamboard.google.com/
+Site already exists. Skip it: https://jamboard.google.com/
+Add entry to the site store: https://myaccount.google.com/
+Site already exists. Skip it: https://myaccount.google.com/
+Add entry to the site store: https://developers.google.com/
+Site already exists. Skip it: https://developers.google.com/
+Add entry to the site store: https://instagram.com/
+Problem found: untrusted Internet domain or IP. Skip https://instagram.com/
+Add entry to the site store: https://maps.google.com/
+Site already exists. Skip it: https://maps.google.com/
+Add entry to the site store: https://gsuite.google.com/
+Site already exists. Skip it: https://gsuite.google.com/
+Add entry to the site store: https://chat.google.com/
+Site already exists. Skip it: https://chat.google.com/
+Add entry to the site store: https://analytics.google.com/
+Site already exists. Skip it: https://analytics.google.com/
+Add entry to the site store: https://classroom.google.com/
+Site already exists. Skip it: https://classroom.google.com/
+Add entry to the site store: https://fi.google.com/
+Site already exists. Skip it: https://fi.google.com/
+Add entry to the site store: https://groups.google.com/
+Site already exists. Skip it: https://groups.google.com/
+Add entry to the site store: https://one.google.com/
+Site already exists. Skip it: https://one.google.com/
+Add entry to the site store: https://pay.google.com/
+Site already exists. Skip it: https://pay.google.com/
+Add entry to the site store: https://scholar.google.com/
+Site already exists. Skip it: https://scholar.google.com/
+Add entry to the site store: https://www.tiltbrush.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.tiltbrush.com/
+Add entry to the site store: https://transparencyreport.google.com/
+Site already exists. Skip it: https://transparencyreport.google.com/
+Add entry to the site store: https://wellbeing.google/
+Problem found: untrusted Internet domain or IP. Skip https://wellbeing.google/
+Add entry to the site store: https://hangouts.google.com/
+Site already exists. Skip it: https://hangouts.google.com/
+Add entry to the site store: https://www.facebook.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.facebook.com/
+Add entry to the site store: http://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip http://developer.android.com/
+Add entry to the site store: https://duo.google.com/
+Site already exists. Skip it: https://duo.google.com/
+Add entry to the site store: https://twitter.com/
+Problem found: untrusted Internet domain or IP. Skip https://twitter.com/
+Add entry to the site store: https://translate.google.com/
+Site already exists. Skip it: https://translate.google.com/
+Add entry to the site store: https://safety.google/
+Problem found: untrusted Internet domain or IP. Skip https://safety.google/
+Add entry to the site store: https://tv.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://tv.youtube.com/
+Add entry to the site store: https://accounts.google.com/
+Site already exists. Skip it: https://accounts.google.com/
+Add entry to the site store: https://www.google.com/
+Site already exists. Skip it: https://www.google.com/
+Add entry to the site store: https://payments.google.com/
+Site already exists. Skip it: https://payments.google.com/
+Add entry to the site store: https://itunes.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://itunes.apple.com/
+Add entry to the site store: https://photos.google.com/
+Site already exists. Skip it: https://photos.google.com/
+Add entry to the site store: http://www.weather.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.weather.com/
+Add entry to the site store: https://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.youtube.com/
+Add entry to the site store: https://www.blogger.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.blogger.com/
+Done adding site entries.
+No new entry added. 
+2019-09-04T03:12:56.512Z 72933 TID-ovnggm04x DiscoveryWorker JID-8308c41f4f4dc4976114f9ed INFO: Discovery successful!
+2019-09-04T03:12:56.567Z 72933 TID-ovnggm04x DiscoveryWorker JID-8308c41f4f4dc4976114f9ed INFO: Sending out email notice to: yang.li@owasp.org
+Update the site table ...
+Database connection success. 
+site table truncate success.
+Insert record for site: http://maps.google.com/
+Insert record for site: http://news.google.com/
+Insert record for site: http://www.google.com/
+Insert record for site: https://accounts.google.com/
+Insert record for site: https://ads.google.com/
+Insert record for site: https://analytics.google.com/
+Insert record for site: https://assistant.google.com/
+Insert record for site: https://books.google.com/
+Insert record for site: https://business.google.com/
+Insert record for site: https://careers.google.com/
+Insert record for site: https://chat.google.com/
+Insert record for site: https://chrome.google.com/
+Insert record for site: https://classroom.google.com/
+Insert record for site: https://cloud.google.com/
+Insert record for site: https://contacts.google.com/
+Insert record for site: https://developers.google.com/
+Insert record for site: https://docs.google.com/
+Insert record for site: https://domains.google.com/
+Insert record for site: https://drive.google.com/
+Insert record for site: https://duo.google.com/
+Insert record for site: https://enterprise.google.com/
+Insert record for site: https://fi.google.com/
+Insert record for site: https://groups.google.com/
+Insert record for site: https://gsuite.google.com/
+Insert record for site: https://hangouts.google.com/
+Insert record for site: https://hire.google.com/
+Insert record for site: https://jamboard.google.com/
+Insert record for site: https://keep.google.com/
+Insert record for site: https://mail.google.com/
+Insert record for site: https://maps.google.com/
+Insert record for site: https://messages.google.com/
+Insert record for site: https://myaccount.google.com/
+Insert record for site: https://news.google.com/
+Insert record for site: https://one.google.com/
+Insert record for site: https://pay.google.com/
+Insert record for site: https://payments.google.com/
+Insert record for site: https://photos.google.com/
+Insert record for site: https://play.google.com/
+Insert record for site: https://policies.google.com/
+Insert record for site: https://scholar.google.com/
+Insert record for site: https://services.google.com/
+Insert record for site: https://sites.google.com/
+Insert record for site: https://store.google.com/
+Insert record for site: https://support.google.com/
+Insert record for site: https://translate.google.com/
+Insert record for site: https://transparencyreport.google.com/
+Insert record for site: https://voice.google.com/
+Insert record for site: https://wearos.google.com/
+Insert record for site: https://www.google.com/
+Update complete. 
+2019-09-04T03:12:56.659Z 72933 TID-ovnggm04x DiscoveryWorker JID-8308c41f4f4dc4976114f9ed INFO: fail: 24.511 sec
+2019-09-04T03:12:56.659Z 72933 TID-ovnggm04x WARN: {"context":"Job raised exception","job":{"class":"DiscoveryWorker","args":[2],"retry":false,"queue":"default","jid":"8308c41f4f4dc4976114f9ed","created_at":1567566752.148124,"enqueued_at":1567566752.148175},"jobstr":"{\"class\":\"DiscoveryWorker\",\"args\":[2],\"retry\":false,\"queue\":\"default\",\"jid\":\"8308c41f4f4dc4976114f9ed\",\"created_at\":1567566752.148124,\"enqueued_at\":1567566752.148175}"}
+2019-09-04T03:12:56.661Z 72933 TID-ovnggm04x WARN: NameError: undefined local variable or method `current_user' for #<DiscoveryWorker:0x00007fab5e0b2780>
+2019-09-04T03:12:56.662Z 72933 TID-ovnggm04x WARN: /Users/sli/www_wmap/app/helpers/hosts_helper.rb:12:in `host_table_reload'
+/Users/sli/www_wmap/app/workers/discovery_worker.rb:24:in `on_complete'
+/Users/sli/www_wmap/app/workers/discovery_worker.rb:34:in `perform'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:192:in `execute_job'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:165:in `block (2 levels) in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:128:in `block in invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-batch-0.1.6/lib/sidekiq/batch/middleware.rb:30:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:130:in `block in invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:164:in `block in process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:137:in `block (6 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_retry.rb:109:in `local'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:136:in `block (5 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.1.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/rails.rb:42:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:132:in `block (4 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:250:in `stats'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:127:in `block (3 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_logger.rb:8:in `call'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:126:in `block (2 levels) in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/job_retry.rb:74:in `global'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:125:in `block in dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/logging.rb:48:in `with_context'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/logging.rb:42:in `with_job_hash_context'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:124:in `dispatch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:163:in `process'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:83:in `process_one'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/processor.rb:71:in `run'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/util.rb:16:in `watchdog'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/sidekiq-5.2.7/lib/sidekiq/util.rb:25:in `block in safe_thread'
+You're hitting mailer controller...
+2019-09-04T03:13:44.885Z 72933 TID-ovnfoiqqx DiscoveryWorker JID-b48bb08070356f1d35aa1ba1 INFO: start
+2019-09-04T03:13:44.987Z 72933 TID-ovnfoiqqx DiscoveryWorker JID-b48bb08070356f1d35aa1ba1 INFO: Starting background command: wmap /Users/sli/www_wmap/shared/data/seed
+--------------------------------------------------------------------------------
+,--.   ,--.       ,--.       ,--.   ,--.
+|  |   |  | ,---. |  |-.     |   `.'   | ,--,--. ,---.  ,---.  ,---. ,--.--.
+|  |.'.|  || .-. :| .-. '    |  |'.'|  |' ,-.  || .-. || .-. || .-. :|  .--'
+|   ,'.   |   --.| `-' |    |  |   |  | '-'  || '-' '| '-' '   --.|  |
+'--'   '--' `----' `---'     `--'   `--' `--`--'|  |-' |  |-'  `----'`--'
+                                                `--'   `--'                  
+Version: 2.5.5	Release Date: 2019-08-15
+Designed and developed by: Sam (Yang) Li
+Email: yang.li@owasp.org	LinkedIn: http://www.linkedin.com/in/yangli8/
+--------------------------------------------------------------------------------
+Parsing the discovery seed file: "/Users/sli/www_wmap/shared/data/seed" 
+Parsing done. 
+Invoke the HostTracker.
+
+Validate the IP format is valid: www.google.com
+Validate the URL format is valid: www.google.com
+Unknown URL format: www.google.com
+Update the local hosts data repository.
+Add entries to the local host repository: ["www.google.com"]
+Start parallel host update processing on:
+ ["www.google.com"]
+Add entry to the local host repository: www.google.com
+Host is already exist. Skip: www.google.com
+Done loading entries.
+Build up URL list for the web crawler ...
+Start the parallel port scan on the target list:
+ ["www.google.com"]
+Perform web service discovery on host: www.google.com
+Detected web service on host www.google.com: ["http://www.google.com/", "https://www.google.com/"]
+Port scanning done successfully with the found web services: ["http://www.google.com/", "https://www.google.com/"]
+Fire up the crawler.
+Start the parallel engine on the normalized crawling list:
+ ["http://www.google.com/", "https://www.google.com/"] 
+Maximum number of web crawling sessions allowed: 40
+Start web crawling on https://www.google.com/
+Start web crawling on http://www.google.com/
+Please be aware that it may take a while to crawl https://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: https://www.google.com/
+Please be aware that it may take a while to crawl http://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: http://www.google.com/
+Discovered sites: 
+http://www.google.com/
+http://maps.google.com/
+https://play.google.com/
+http://www.youtube.com/
+http://news.google.com/
+https://mail.google.com/
+https://drive.google.com/
+https://www.google.com/
+https://accounts.google.com/
+https://maps.google.com/
+https://www.youtube.com/
+https://news.google.com/
+https://support.google.com/
+https://policies.google.com/
+http://developer.android.com/
+https://payments.google.com/
+https://tv.youtube.com/
+https://myaccount.google.com/
+https://contacts.google.com/
+https://translate.google.com/
+https://photos.google.com/
+https://docs.google.com/
+https://books.google.com/
+https://www.blogger.com/
+https://duo.google.com/
+https://hangouts.google.com/
+https://keep.google.com/
+https://jamboard.google.com/
+https://itunes.apple.com/
+http://www.weather.com/
+https://about.google/
+https://www.blog.google/
+https://chrome.google.com/
+https://music.youtube.com/
+https://chromecast.com/
+https://store.google.com/
+https://www.android.com/
+https://wearos.google.com/
+https://www.gmail.com/
+https://gmail.com/
+https://messages.google.com/
+https://gsuite.google.com/
+https://chat.google.com/
+https://ads.google.com/
+https://analytics.google.com/
+https://business.google.com/
+https://classroom.google.com/
+https://www.google.co.in/
+https://fi.google.com/
+https://groups.google.com/
+https://one.google.com/
+https://pay.google.com/
+https://scholar.google.com/
+https://sites.google.com/
+https://www.tiltbrush.com/
+https://voice.google.com/
+https://www.waze.com/
+https://youtube-global.blogspot.com/
+https://enterprise.google.com/
+https://assistant.google.com/
+https://cloud.google.com/
+https://learndigital.withgoogle.com/
+https://domains.google.com/
+https://hire.google.com/
+https://biz.waze.com/
+https://developers.google.com/
+https://instagram.com/
+https://twitter.com/
+https://www.facebook.com/
+https://www.linkedin.com/
+https://abc.xyz/
+https://careers.google.com/
+https://www.thinkwithgoogle.com/
+https://services.google.com/
+https://www.google.org/
+https://sustainability.google/
+https://transparencyreport.google.com/
+https://wellbeing.google/
+https://safety.google/
+Automatically save the discovery results into the site tracking data repository: 
+Start the SiteTracker. 
+Add entries to the local site store from list:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "http://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://news.google.com/", "https://support.google.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://tv.youtube.com/", "https://myaccount.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://duo.google.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://itunes.apple.com/", "http://www.weather.com/", "https://about.google/", "https://www.blog.google/", "https://chrome.google.com/", "https://music.youtube.com/", "https://chromecast.com/", "https://store.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "https://gmail.com/", "https://messages.google.com/", "https://gsuite.google.com/", "https://chat.google.com/", "https://ads.google.com/", "https://analytics.google.com/", "https://business.google.com/", "https://classroom.google.com/", "https://www.google.co.in/", "https://fi.google.com/", "https://groups.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://enterprise.google.com/", "https://assistant.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://hire.google.com/", "https://biz.waze.com/", "https://developers.google.com/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/"]
+Start parallel adding on the sites:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "http://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://news.google.com/", "https://support.google.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://tv.youtube.com/", "https://myaccount.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://duo.google.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://itunes.apple.com/", "http://www.weather.com/", "https://about.google/", "https://www.blog.google/", "https://chrome.google.com/", "https://music.youtube.com/", "https://chromecast.com/", "https://store.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "https://gmail.com/", "https://messages.google.com/", "https://gsuite.google.com/", "https://chat.google.com/", "https://ads.google.com/", "https://analytics.google.com/", "https://business.google.com/", "https://classroom.google.com/", "https://www.google.co.in/", "https://fi.google.com/", "https://groups.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://enterprise.google.com/", "https://assistant.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://hire.google.com/", "https://biz.waze.com/", "https://developers.google.com/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/"]
+Add entry to the site store: https://maps.google.com/
+Site already exists. Skip it: https://maps.google.com/
+Add entry to the site store: https://analytics.google.com/
+Site already exists. Skip it: https://analytics.google.com/
+Add entry to the site store: https://www.google.co.in/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.co.in/
+Add entry to the site store: http://maps.google.com/
+Site already exists. Skip it: http://maps.google.com/
+Add entry to the site store: https://chrome.google.com/
+Site already exists. Skip it: https://chrome.google.com/
+Add entry to the site store: https://music.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://music.youtube.com/
+Add entry to the site store: https://www.linkedin.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.linkedin.com/
+Add entry to the site store: http://www.google.com/
+Site already exists. Skip it: http://www.google.com/
+Add entry to the site store: https://about.google/
+Problem found: untrusted Internet domain or IP. Skip https://about.google/
+Add entry to the site store: https://www.facebook.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.facebook.com/
+Add entry to the site store: http://news.google.com/
+Site already exists. Skip it: http://news.google.com/
+Add entry to the site store: https://www.blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://www.blog.google/
+Add entry to the site store: https://abc.xyz/
+Problem found: untrusted Internet domain or IP. Skip https://abc.xyz/
+Add entry to the site store: https://play.google.com/
+Site already exists. Skip it: https://play.google.com/
+Add entry to the site store: https://chromecast.com/
+Problem found: untrusted Internet domain or IP. Skip https://chromecast.com/
+Add entry to the site store: https://careers.google.com/
+Site already exists. Skip it: https://careers.google.com/
+Add entry to the site store: https://www.google.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.org/
+Add entry to the site store: https://drive.google.com/
+Site already exists. Skip it: https://drive.google.com/
+Add entry to the site store: https://store.google.com/
+Site already exists. Skip it: https://store.google.com/
+Add entry to the site store: https://www.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.android.com/
+Add entry to the site store: https://www.thinkwithgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.thinkwithgoogle.com/
+Add entry to the site store: https://support.google.com/
+Site already exists. Skip it: https://support.google.com/
+Add entry to the site store: https://wearos.google.com/
+Site already exists. Skip it: https://wearos.google.com/
+Add entry to the site store: https://www.gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.gmail.com/
+Add entry to the site store: http://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.youtube.com/
+Add entry to the site store: https://twitter.com/
+Problem found: untrusted Internet domain or IP. Skip https://twitter.com/
+Add entry to the site store: https://tv.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://tv.youtube.com/
+Add entry to the site store: https://services.google.com/
+Site already exists. Skip it: https://services.google.com/
+Add entry to the site store: https://sustainability.google/
+Problem found: untrusted Internet domain or IP. Skip https://sustainability.google/
+Add entry to the site store: https://policies.google.com/
+Site already exists. Skip it: https://policies.google.com/
+Add entry to the site store: https://chat.google.com/
+Site already exists. Skip it: https://chat.google.com/
+Add entry to the site store: https://classroom.google.com/
+Site already exists. Skip it: https://classroom.google.com/
+Add entry to the site store: https://fi.google.com/
+Site already exists. Skip it: https://fi.google.com/
+Add entry to the site store: https://one.google.com/
+Site already exists. Skip it: https://one.google.com/
+Add entry to the site store: https://scholar.google.com/
+Site already exists. Skip it: https://scholar.google.com/
+Add entry to the site store: https://www.tiltbrush.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.tiltbrush.com/
+Add entry to the site store: http://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip http://developer.android.com/
+Add entry to the site store: https://safety.google/
+Problem found: untrusted Internet domain or IP. Skip https://safety.google/
+Add entry to the site store: https://keep.google.com/
+Site already exists. Skip it: https://keep.google.com/
+Add entry to the site store: https://enterprise.google.com/
+Site already exists. Skip it: https://enterprise.google.com/
+Add entry to the site store: https://assistant.google.com/
+Site already exists. Skip it: https://assistant.google.com/
+Add entry to the site store: https://cloud.google.com/
+Site already exists. Skip it: https://cloud.google.com/
+Add entry to the site store: https://learndigital.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://learndigital.withgoogle.com/
+Add entry to the site store: https://translate.google.com/
+Site already exists. Skip it: https://translate.google.com/
+Add entry to the site store: https://youtube-global.blogspot.com/
+Problem found: untrusted Internet domain or IP. Skip https://youtube-global.blogspot.com/
+Add entry to the site store: https://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.youtube.com/
+Add entry to the site store: https://transparencyreport.google.com/
+Site already exists. Skip it: https://transparencyreport.google.com/
+Add entry to the site store: https://wellbeing.google/
+Problem found: untrusted Internet domain or IP. Skip https://wellbeing.google/
+Add entry to the site store: https://jamboard.google.com/
+Site already exists. Skip it: https://jamboard.google.com/
+Add entry to the site store: https://www.google.com/
+Site already exists. Skip it: https://www.google.com/
+Add entry to the site store: https://messages.google.com/
+Site already exists. Skip it: https://messages.google.com/
+Add entry to the site store: https://gsuite.google.com/
+Site already exists. Skip it: https://gsuite.google.com/
+Add entry to the site store: https://ads.google.com/
+Site already exists. Skip it: https://ads.google.com/
+Add entry to the site store: https://business.google.com/
+Site already exists. Skip it: https://business.google.com/
+Add entry to the site store: https://groups.google.com/
+Site already exists. Skip it: https://groups.google.com/
+Add entry to the site store: https://pay.google.com/
+Site already exists. Skip it: https://pay.google.com/
+Add entry to the site store: https://sites.google.com/
+Site already exists. Skip it: https://sites.google.com/
+Add entry to the site store: https://voice.google.com/
+Site already exists. Skip it: https://voice.google.com/
+Add entry to the site store: https://www.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.waze.com/
+Add entry to the site store: https://mail.google.com/
+Site already exists. Skip it: https://mail.google.com/
+Add entry to the site store: https://accounts.google.com/
+Site already exists. Skip it: https://accounts.google.com/
+Add entry to the site store: https://gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://gmail.com/
+Add entry to the site store: https://news.google.com/
+Site already exists. Skip it: https://news.google.com/
+Add entry to the site store: https://payments.google.com/
+Site already exists. Skip it: https://payments.google.com/
+Add entry to the site store: https://docs.google.com/
+Site already exists. Skip it: https://docs.google.com/
+Add entry to the site store: https://contacts.google.com/
+Site already exists. Skip it: https://contacts.google.com/
+Add entry to the site store: https://myaccount.google.com/
+Site already exists. Skip it: https://myaccount.google.com/
+Add entry to the site store: https://hangouts.google.com/
+Site already exists. Skip it: https://hangouts.google.com/
+Add entry to the site store: https://developers.google.com/
+Site already exists. Skip it: https://developers.google.com/
+Add entry to the site store: https://instagram.com/
+Problem found: untrusted Internet domain or IP. Skip https://instagram.com/
+Add entry to the site store: https://photos.google.com/
+Site already exists. Skip it: https://photos.google.com/
+Add entry to the site store: https://www.blogger.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.blogger.com/
+Add entry to the site store: http://www.weather.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.weather.com/
+Add entry to the site store: https://duo.google.com/
+Site already exists. Skip it: https://duo.google.com/
+Add entry to the site store: https://books.google.com/
+Site already exists. Skip it: https://books.google.com/
+Add entry to the site store: https://domains.google.com/
+Site already exists. Skip it: https://domains.google.com/
+Add entry to the site store: https://hire.google.com/
+Site already exists. Skip it: https://hire.google.com/
+Add entry to the site store: https://biz.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://biz.waze.com/
+Add entry to the site store: https://itunes.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://itunes.apple.com/
+Done adding site entries.
+No new entry added. 
+2019-09-04T03:14:07.987Z 72933 TID-ovnfoiqqx DiscoveryWorker JID-b48bb08070356f1d35aa1ba1 INFO: Discovery successful!
+2019-09-04T03:14:08.056Z 72933 TID-ovnfoiqqx DiscoveryWorker JID-b48bb08070356f1d35aa1ba1 INFO: Sending out email notice to: yang.li@owasp.org
+Update the site table ...
+Database connection success. 
+site table truncate success.
+Insert record for site: http://maps.google.com/
+Insert record for site: http://news.google.com/
+Insert record for site: http://www.google.com/
+Insert record for site: https://accounts.google.com/
+Insert record for site: https://ads.google.com/
+Insert record for site: https://analytics.google.com/
+Insert record for site: https://assistant.google.com/
+Insert record for site: https://books.google.com/
+Insert record for site: https://business.google.com/
+Insert record for site: https://careers.google.com/
+Insert record for site: https://chat.google.com/
+Insert record for site: https://chrome.google.com/
+Insert record for site: https://classroom.google.com/
+Insert record for site: https://cloud.google.com/
+Insert record for site: https://contacts.google.com/
+Insert record for site: https://developers.google.com/
+Insert record for site: https://docs.google.com/
+Insert record for site: https://domains.google.com/
+Insert record for site: https://drive.google.com/
+Insert record for site: https://duo.google.com/
+Insert record for site: https://enterprise.google.com/
+Insert record for site: https://fi.google.com/
+Insert record for site: https://groups.google.com/
+Insert record for site: https://gsuite.google.com/
+Insert record for site: https://hangouts.google.com/
+Insert record for site: https://hire.google.com/
+Insert record for site: https://jamboard.google.com/
+Insert record for site: https://keep.google.com/
+Insert record for site: https://mail.google.com/
+Insert record for site: https://maps.google.com/
+Insert record for site: https://messages.google.com/
+Insert record for site: https://myaccount.google.com/
+Insert record for site: https://news.google.com/
+Insert record for site: https://one.google.com/
+Insert record for site: https://pay.google.com/
+Insert record for site: https://payments.google.com/
+Insert record for site: https://photos.google.com/
+Insert record for site: https://play.google.com/
+Insert record for site: https://policies.google.com/
+Insert record for site: https://scholar.google.com/
+Insert record for site: https://services.google.com/
+Insert record for site: https://sites.google.com/
+Insert record for site: https://store.google.com/
+Insert record for site: https://support.google.com/
+Insert record for site: https://translate.google.com/
+Insert record for site: https://transparencyreport.google.com/
+Insert record for site: https://voice.google.com/
+Insert record for site: https://wearos.google.com/
+Insert record for site: https://www.google.com/
+Update complete. 
+Update the host table ...
+Database connection success. 
+host table truncate success.
+Update complete. 
+2019-09-04T03:14:08.185Z 72933 TID-ovnfoiqqx DiscoveryWorker JID-b48bb08070356f1d35aa1ba1 INFO: done: 23.299 sec
+You're hitting mailer controller...

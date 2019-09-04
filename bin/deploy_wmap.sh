@@ -58,5 +58,5 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl start nginx'
 echo "Done"
 
 echo "Starting Sidekiq service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec sidekiq -d'
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; systemctl restart sidekiq'
 echo "Done"

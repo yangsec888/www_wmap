@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'yang.li@owasp.org'
+  default from: 'deploy@wmap.io'
   layout 'mailer'
 end

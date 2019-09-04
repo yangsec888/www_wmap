@@ -60,6 +60,7 @@ Rails.application.routes.draw do
  ################################
 
   get 'cidrs/index'
+  get 'cidrs/edit'
   post 'cidrs/edit'
   get 'cidrs/load_file'
   post 'cidrs/save_file'

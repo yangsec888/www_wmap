@@ -9,7 +9,7 @@
 
 module HostsHelper
   # Reload host table based on the WMAP host data file
-  def host_table_reload()
+  def host_table_reload(uid=current_user.id)
     puts "Update the host table ..."
     db = Sequel.connect(YAML.load(File.read(File.join(::Rails.root, 'config', 'database.yml')))[::Rails.env] || 'development')
     puts "Database connection success. "
@@ -22,7 +22,7 @@ module HostsHelper
       re = /\A#{block}\.#{block}\.#{block}\.#{block}\z/
       next if re =~ key
       host_table.insert(host_name: key,  ip: val, \
-        uid: current_user.id, created_at: Time.now, updated_at: Time.now)
+        uid: uid, created_at: Time.now, updated_at: Time.now)
     end
     tracker=nil
     db = nil

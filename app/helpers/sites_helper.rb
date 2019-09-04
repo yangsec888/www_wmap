@@ -34,7 +34,7 @@ module SitesHelper
   end
 
   # Reload site table based on the WMAP site data file
-  def site_table_reload()
+  def site_table_reload(uid=current_user.id)
     puts "Update the site table ..."
     db = Sequel.connect(YAML.load(File.read(File.join(::Rails.root, 'config', 'database.yml')))[::Rails.env] || 'development')
     puts "Database connection success. "
@@ -43,9 +43,10 @@ module SitesHelper
     puts "site table truncate success."
     tracker=Wmap::SiteTracker.instance
     tracker.known_sites.each do |key, val|
+      puts "Insert record for site: #{key}"
       site_table.insert(site: key,  ip: val['ip'], port: val['port'], redirection: val['redirection'], \
         md5: val['md5'], server: val['server'], status: val['status'], code: val['code'], \
-        user_id: current_user.id, created_at: Time.now, updated_at: Time.now)
+        user_id: uid, created_at: Time.now, updated_at: Time.now)
     end
     tracker=nil
     db = nil
