@@ -25,7 +25,7 @@ After=syslog.target network.target
 Type=simple
 WorkingDirectory=/home/deploy/apps/www_wmap
 # If you use rbenv or rvm:
-ExecStart=/bin/bash -lc 'bundle exec sidekiq -e production -d'
+ExecStart=/bin/bash -lc 'bundle exec sidekiq -d -e production -C config/sidekiq.yml'
 # If you use the system's ruby:
 # ExecStart=/home/deploy/.rvm/rubies/ruby-2.6.3/bin/bundle exec sidekiq -e production
 # ExecStart=/home/deploy/.rbenv/bin/rbenv exec bundle exec sidekiq -e production -c 3 -q mailers -q default

@@ -28,3 +28,6 @@ shared/temp/.*
 
 # Ignore database yml
 config/database.yml
+
+# Ignore rdoc
+docs/

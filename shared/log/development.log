@@ -17174,3 +17174,102 @@ Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "
 Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/home/page" for 127.0.0.1 at 2019-09-04 15:23:29 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 190ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2019-09-04 15:23:29 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 190ms (Views: 186.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-09-04 15:23:30 -0400
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MxBwnQ31/vLNZ8P601tZFn6TUkx4IvG3ACSnKNY2EojHL9uPmvkjIDHXGz+q5HWut6eHkB/Iw8387LRnG6EPyA==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-04 15:23:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 165ms (Views: 163.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-04 15:23:32 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wm5wzrpjdrDUHMqkWm2mhZhqdg9Dt/w3ThaZASr2zhOuUdvcLW+rYiisEmEj0oo9UV6j0yRdzk2y3opO52HTUw==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-04 19:23:32', `last_sign_in_at` = '2019-09-04 17:34:42', `sign_in_count` = 24, `updated_at` = '2019-09-04 19:23:32' WHERE `users`.`id` = 2[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/home/page
+Completed 302 Found in 48ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2019-09-04 15:23:32 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 138ms (Views: 135.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/reports/index" for 127.0.0.1 at 2019-09-04 15:23:36 -0400
+Processing by ReportsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering reports/index.html.erb within layouts/application
+  [1m[36mReport Load (0.5ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  Rendered reports/index.html.erb within layouts/application (45.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 193ms (Views: 162.2ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/reports/1" for 127.0.0.1 at 2019-09-04 15:23:38 -0400
+Processing by ReportsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Report Load (0.0ms)[0m  [1m[34mSELECT  `reports`.* FROM `reports` WHERE `reports`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/sites/index
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/sites/index" for 127.0.0.1 at 2019-09-04 15:23:38 -0400
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.4ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (49.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 231ms (Views: 197.9ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/sites/index?reload" for 127.0.0.1 at 2019-09-04 15:23:39 -0400
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.6ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (45.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 205ms (Views: 193.6ms | ActiveRecord: 1.9ms)
+
+
