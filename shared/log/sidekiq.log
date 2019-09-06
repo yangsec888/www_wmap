@@ -3349,3 +3349,1704 @@ host table truncate success.
 Update complete. 
 2019-09-04T03:14:08.185Z 72933 TID-ovnfoiqqx DiscoveryWorker JID-b48bb08070356f1d35aa1ba1 INFO: done: 23.299 sec
 You're hitting mailer controller...
+2019-09-06T03:29:35.467Z 72933 TID-ovnggnv89 DiscoveryWorker JID-c48aec626db933f54f5f14d1 INFO: start
+2019-09-06T03:29:35.575Z 72933 TID-ovnggnv89 DiscoveryWorker JID-c48aec626db933f54f5f14d1 INFO: Starting background command: wmap /Users/sli/www_wmap/shared/data/seed
+--------------------------------------------------------------------------------
+,--.   ,--.       ,--.       ,--.   ,--.
+|  |   |  | ,---. |  |-.     |   `.'   | ,--,--. ,---.  ,---.  ,---. ,--.--.
+|  |.'.|  || .-. :| .-. '    |  |'.'|  |' ,-.  || .-. || .-. || .-. :|  .--'
+|   ,'.   |   --.| `-' |    |  |   |  | '-'  || '-' '| '-' '   --.|  |
+'--'   '--' `----' `---'     `--'   `--' `--`--'|  |-' |  |-'  `----'`--'
+                                                `--'   `--'                  
+Version: 2.5.5	Release Date: 2019-08-15
+Designed and developed by: Sam (Yang) Li
+Email: yang.li@owasp.org	LinkedIn: http://www.linkedin.com/in/yangli8/
+--------------------------------------------------------------------------------
+Parsing the discovery seed file: "/Users/sli/www_wmap/shared/data/seed" 
+Parsing done. 
+Invoke the HostTracker.
+
+Validate the IP format is valid: www.google.com
+Validate the URL format is valid: www.google.com
+Unknown URL format: www.google.com
+Update the local hosts data repository.
+Add entries to the local host repository: ["www.google.com"]
+Start parallel host update processing on:
+ ["www.google.com"]
+Add entry to the local host repository: www.google.com
+Perform DNS query on host: www.google.com
+Validate the IP format is valid: www.google.com
+Validate the URL format is valid: www.google.com
+Unknown URL format: www.google.com
+IP found: 172.217.12.196
+Validate the IP format is valid: 172.217.12.196
+Validate the URL format is valid: 172.217.12.196
+Unknown URL format: 172.217.12.196
+Confirmed as a valid IP: 172.217.12.196
+Retrieve the root domain for host: www.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: www.google.com <=> 172.217.12.196
+Retrieve sub-domain from host: www.google.com
+Retrieve the root domain for host: www.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Done loading entries.
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Build up URL list for the web crawler ...
+Start the parallel port scan on the target list:
+ ["www.google.com"]
+Perform web service discovery on host: www.google.com
+Detected web service on host www.google.com: ["http://www.google.com/"]
+Port scanning done successfully with the found web services: ["http://www.google.com/"]
+Fire up the crawler.
+Start the parallel engine on the normalized crawling list:
+ ["http://www.google.com/"] 
+Maximum number of web crawling sessions allowed: 40
+Start web crawling on http://www.google.com/
+Please be aware that it may take a while to crawl http://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: http://www.google.com/
+Discovered sites: 
+http://www.google.com/
+http://maps.google.com/
+https://play.google.com/
+http://www.youtube.com/
+http://news.google.com/
+https://mail.google.com/
+https://drive.google.com/
+https://www.google.com/
+https://accounts.google.com/
+https://maps.google.com/
+https://www.youtube.com/
+https://news.google.com/
+https://support.google.com/
+https://policies.google.com/
+http://developer.android.com/
+https://payments.google.com/
+https://tv.youtube.com/
+https://myaccount.google.com/
+https://contacts.google.com/
+https://translate.google.com/
+https://photos.google.com/
+https://docs.google.com/
+https://books.google.com/
+https://www.blogger.com/
+https://duo.google.com/
+https://hangouts.google.com/
+https://keep.google.com/
+https://jamboard.google.com/
+https://itunes.apple.com/
+http://www.weather.com/
+https://about.google/
+https://www.blog.google/
+https://chrome.google.com/
+https://music.youtube.com/
+https://chromecast.com/
+https://store.google.com/
+https://www.android.com/
+https://wearos.google.com/
+https://www.gmail.com/
+https://gmail.com/
+https://messages.google.com/
+https://gsuite.google.com/
+https://chat.google.com/
+https://ads.google.com/
+https://analytics.google.com/
+https://business.google.com/
+https://classroom.google.com/
+https://www.google.co.in/
+https://fi.google.com/
+https://groups.google.com/
+https://one.google.com/
+https://pay.google.com/
+https://scholar.google.com/
+https://sites.google.com/
+https://www.tiltbrush.com/
+https://voice.google.com/
+https://www.waze.com/
+https://youtube-global.blogspot.com/
+https://enterprise.google.com/
+https://assistant.google.com/
+https://cloud.google.com/
+https://learndigital.withgoogle.com/
+https://domains.google.com/
+https://hire.google.com/
+https://biz.waze.com/
+https://developers.google.com/
+https://instagram.com/
+https://twitter.com/
+https://www.facebook.com/
+https://www.linkedin.com/
+https://abc.xyz/
+https://careers.google.com/
+https://www.thinkwithgoogle.com/
+https://services.google.com/
+https://www.google.org/
+https://sustainability.google/
+https://transparencyreport.google.com/
+https://wellbeing.google/
+https://safety.google/
+Automatically save the discovery results into the site tracking data repository: 
+Start the SiteTracker. 
+Add entries to the local site store from list:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "http://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://news.google.com/", "https://support.google.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://tv.youtube.com/", "https://myaccount.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://duo.google.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://itunes.apple.com/", "http://www.weather.com/", "https://about.google/", "https://www.blog.google/", "https://chrome.google.com/", "https://music.youtube.com/", "https://chromecast.com/", "https://store.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "https://gmail.com/", "https://messages.google.com/", "https://gsuite.google.com/", "https://chat.google.com/", "https://ads.google.com/", "https://analytics.google.com/", "https://business.google.com/", "https://classroom.google.com/", "https://www.google.co.in/", "https://fi.google.com/", "https://groups.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://enterprise.google.com/", "https://assistant.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://hire.google.com/", "https://biz.waze.com/", "https://developers.google.com/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/"]
+Start parallel adding on the sites:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "http://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://news.google.com/", "https://support.google.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://tv.youtube.com/", "https://myaccount.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://duo.google.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://itunes.apple.com/", "http://www.weather.com/", "https://about.google/", "https://www.blog.google/", "https://chrome.google.com/", "https://music.youtube.com/", "https://chromecast.com/", "https://store.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "https://gmail.com/", "https://messages.google.com/", "https://gsuite.google.com/", "https://chat.google.com/", "https://ads.google.com/", "https://analytics.google.com/", "https://business.google.com/", "https://classroom.google.com/", "https://www.google.co.in/", "https://fi.google.com/", "https://groups.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://enterprise.google.com/", "https://assistant.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://hire.google.com/", "https://biz.waze.com/", "https://developers.google.com/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/"]
+Add entry to the site store: http://www.weather.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.weather.com/
+Add entry to the site store: https://ads.google.com/
+Site entry loaded: {"ip"=>"172.217.11.14", "port"=>443, "url"=>"https://ads.google.com/", "code"=>302, "redirection"=>"https://ads.google.com/home/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: ads.google.com
+Add entry to the local host repository: ads.google.com
+Perform DNS query on host: ads.google.com
+Validate the IP format is valid: ads.google.com
+Validate the URL format is valid: ads.google.com
+Unknown URL format: ads.google.com
+IP found: 172.217.11.14
+Validate the IP format is valid: 172.217.11.14
+Validate the URL format is valid: 172.217.11.14
+Unknown URL format: 172.217.11.14
+Confirmed as a valid IP: 172.217.11.14
+Retrieve the root domain for host: ads.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: ads.google.com <=> 172.217.11.14
+Retrieve sub-domain from host: ads.google.com
+Retrieve the root domain for host: ads.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://sustainability.google/
+Problem found: untrusted Internet domain or IP. Skip https://sustainability.google/
+Add entry to the site store: https://docs.google.com/
+Site entry loaded: {"ip"=>"172.217.10.46", "port"=>443, "url"=>"https://docs.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://docs.google.com/&followup=https://docs.google.com/&emr=1", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: docs.google.com
+Add entry to the local host repository: docs.google.com
+Perform DNS query on host: docs.google.com
+Validate the IP format is valid: docs.google.com
+Validate the URL format is valid: docs.google.com
+Unknown URL format: docs.google.com
+IP found: 172.217.10.238
+Validate the IP format is valid: 172.217.10.238
+Validate the URL format is valid: 172.217.10.238
+Unknown URL format: 172.217.10.238
+Confirmed as a valid IP: 172.217.10.238
+Retrieve the root domain for host: docs.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: docs.google.com <=> 172.217.10.238
+Retrieve sub-domain from host: docs.google.com
+Retrieve the root domain for host: docs.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: http://www.google.com/
+Site entry loaded: {"ip"=>"172.217.11.36", "port"=>80, "url"=>"http://www.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"aba83fc4621d94cb0f572b8deeedca19", "server"=>"gws", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: www.google.com
+DNS lookup from the local host repository
+Refresh the local host repository for host: www.google.com 
+Perform DNS query on host: www.google.com
+Validate the IP format is valid: www.google.com
+Validate the URL format is valid: www.google.com
+Unknown URL format: www.google.com
+IP found: 172.217.12.196
+Validate the IP format is valid: 172.217.12.196
+Validate the URL format is valid: 172.217.12.196
+Unknown URL format: 172.217.12.196
+Confirmed as a valid IP: 172.217.12.196
+No change for the host entry: www.google.com	172.217.12.196
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://analytics.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://analytics.google.com/", "code"=>301, "redirection"=>"https://analytics.google.com/analytics/web/", "md5"=>"96e32b8d88fccbfd2fe3f35e27848c53", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: analytics.google.com
+Add entry to the local host repository: analytics.google.com
+Perform DNS query on host: analytics.google.com
+Validate the IP format is valid: analytics.google.com
+Validate the URL format is valid: analytics.google.com
+Unknown URL format: analytics.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: analytics.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: analytics.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: analytics.google.com
+Retrieve the root domain for host: analytics.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://biz.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://biz.waze.com/
+Add entry to the site store: https://twitter.com/
+Problem found: untrusted Internet domain or IP. Skip https://twitter.com/
+Add entry to the site store: https://www.linkedin.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.linkedin.com/
+Add entry to the site store: https://www.thinkwithgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.thinkwithgoogle.com/
+Add entry to the site store: https://wellbeing.google/
+Problem found: untrusted Internet domain or IP. Skip https://wellbeing.google/
+Add entry to the site store: https://accounts.google.com/
+Site entry loaded: {"ip"=>"172.217.10.13", "port"=>443, "url"=>"https://accounts.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2Fmanageaccount&followup=https%3A%2F%2Faccounts.google.com%2Fmanageaccount", "md5"=>"cb093527f464b909a137ee9e554ac25d", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: accounts.google.com
+Add entry to the local host repository: accounts.google.com
+Perform DNS query on host: accounts.google.com
+Validate the IP format is valid: accounts.google.com
+Validate the URL format is valid: accounts.google.com
+Unknown URL format: accounts.google.com
+IP found: 172.217.10.13
+Validate the IP format is valid: 172.217.10.13
+Validate the URL format is valid: 172.217.10.13
+Unknown URL format: 172.217.10.13
+Confirmed as a valid IP: 172.217.10.13
+Retrieve the root domain for host: accounts.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: accounts.google.com <=> 172.217.10.13
+Retrieve sub-domain from host: accounts.google.com
+Retrieve the root domain for host: accounts.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://www.google.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.org/
+Add entry to the site store: https://safety.google/
+Problem found: untrusted Internet domain or IP. Skip https://safety.google/
+Add entry to the site store: https://play.google.com/
+Site entry loaded: {"ip"=>"172.217.10.110", "port"=>443, "url"=>"https://play.google.com/", "code"=>302, "redirection"=>"https://play.google.com/store", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: play.google.com
+Add entry to the local host repository: play.google.com
+Perform DNS query on host: play.google.com
+Validate the IP format is valid: play.google.com
+Validate the URL format is valid: play.google.com
+Unknown URL format: play.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: play.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: play.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: play.google.com
+Retrieve the root domain for host: play.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://books.google.com/
+Site entry loaded: {"ip"=>"172.217.10.46", "port"=>443, "url"=>"https://books.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"08d07e1f6418d799c674ff1523e499f5", "server"=>"OFE/0.1", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: books.google.com
+Add entry to the local host repository: books.google.com
+Perform DNS query on host: books.google.com
+Validate the IP format is valid: books.google.com
+Validate the URL format is valid: books.google.com
+Unknown URL format: books.google.com
+IP found: 172.217.10.46
+Validate the IP format is valid: 172.217.10.46
+Validate the URL format is valid: 172.217.10.46
+Unknown URL format: 172.217.10.46
+Confirmed as a valid IP: 172.217.10.46
+Retrieve the root domain for host: books.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: books.google.com <=> 172.217.10.46
+Retrieve sub-domain from host: books.google.com
+Retrieve the root domain for host: books.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://www.google.co.in/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.co.in/
+Add entry to the site store: https://fi.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://fi.google.com/", "code"=>302, "redirection"=>"https://fi.google.com/about/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: fi.google.com
+Add entry to the local host repository: fi.google.com
+Perform DNS query on host: fi.google.com
+Validate the IP format is valid: fi.google.com
+Validate the URL format is valid: fi.google.com
+Unknown URL format: fi.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: fi.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: fi.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: fi.google.com
+Retrieve the root domain for host: fi.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://news.google.com/
+Site entry loaded: {"ip"=>"172.217.3.110", "port"=>443, "url"=>"https://news.google.com/", "code"=>302, "redirection"=>"https://news.google.com/?hl=en-US&gl=US&ceid=US:en", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: news.google.com
+Add entry to the local host repository: news.google.com
+Perform DNS query on host: news.google.com
+Validate the IP format is valid: news.google.com
+Validate the URL format is valid: news.google.com
+Unknown URL format: news.google.com
+IP found: 172.217.3.110
+Validate the IP format is valid: 172.217.3.110
+Validate the URL format is valid: 172.217.3.110
+Unknown URL format: 172.217.3.110
+Confirmed as a valid IP: 172.217.3.110
+Retrieve the root domain for host: news.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: news.google.com <=> 172.217.3.110
+Retrieve sub-domain from host: news.google.com
+Retrieve the root domain for host: news.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: http://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip http://developer.android.com/
+Add entry to the site store: https://messages.google.com/
+Site entry loaded: {"ip"=>"172.217.10.142", "port"=>443, "url"=>"https://messages.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"52145628b9e549e0460bac09d6cf0e66", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: messages.google.com
+Add entry to the local host repository: messages.google.com
+Perform DNS query on host: messages.google.com
+Validate the IP format is valid: messages.google.com
+Validate the URL format is valid: messages.google.com
+Unknown URL format: messages.google.com
+IP found: 172.217.10.142
+Validate the IP format is valid: 172.217.10.142
+Validate the URL format is valid: 172.217.10.142
+Unknown URL format: 172.217.10.142
+Confirmed as a valid IP: 172.217.10.142
+Retrieve the root domain for host: messages.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: messages.google.com <=> 172.217.10.142
+Retrieve sub-domain from host: messages.google.com
+Retrieve the root domain for host: messages.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://classroom.google.com/
+Site entry loaded: {"ip"=>"172.217.9.238", "port"=>443, "url"=>"https://classroom.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?service=classroom&passive=1209600&continue=https://classroom.google.com/&followup=https://classroom.google.com/&emr=1", "md5"=>"0d78344ef9ce3d46125f74cd6c5d78fd", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: classroom.google.com
+Add entry to the local host repository: classroom.google.com
+Perform DNS query on host: classroom.google.com
+Validate the IP format is valid: classroom.google.com
+Validate the URL format is valid: classroom.google.com
+Unknown URL format: classroom.google.com
+IP found: 172.217.9.238
+Validate the IP format is valid: 172.217.9.238
+Validate the URL format is valid: 172.217.9.238
+Unknown URL format: 172.217.9.238
+Confirmed as a valid IP: 172.217.9.238
+Retrieve the root domain for host: classroom.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: classroom.google.com <=> 172.217.9.238
+Retrieve sub-domain from host: classroom.google.com
+Retrieve the root domain for host: classroom.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://duo.google.com/
+Site entry loaded: {"ip"=>"172.217.6.206", "port"=>443, "url"=>"https://duo.google.com/", "code"=>302, "redirection"=>"https://duo.google.com/about/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: duo.google.com
+Add entry to the local host repository: duo.google.com
+Perform DNS query on host: duo.google.com
+Validate the IP format is valid: duo.google.com
+Validate the URL format is valid: duo.google.com
+Unknown URL format: duo.google.com
+IP found: 172.217.6.206
+Validate the IP format is valid: 172.217.6.206
+Validate the URL format is valid: 172.217.6.206
+Unknown URL format: 172.217.6.206
+Confirmed as a valid IP: 172.217.6.206
+Retrieve the root domain for host: duo.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: duo.google.com <=> 172.217.6.206
+Retrieve sub-domain from host: duo.google.com
+Retrieve the root domain for host: duo.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.youtube.com/
+Add entry to the site store: https://about.google/
+Problem found: untrusted Internet domain or IP. Skip https://about.google/
+Add entry to the site store: https://music.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://music.youtube.com/
+Add entry to the site store: https://store.google.com/
+Site entry loaded: {"ip"=>"172.217.10.14", "port"=>443, "url"=>"https://store.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"2d8ff2f1fa8af28f6c76062f5ec42d75", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: store.google.com
+Add entry to the local host repository: store.google.com
+Perform DNS query on host: store.google.com
+Validate the IP format is valid: store.google.com
+Validate the URL format is valid: store.google.com
+Unknown URL format: store.google.com
+IP found: 172.217.10.14
+Validate the IP format is valid: 172.217.10.14
+Validate the URL format is valid: 172.217.10.14
+Unknown URL format: 172.217.10.14
+Confirmed as a valid IP: 172.217.10.14
+Retrieve the root domain for host: store.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: store.google.com <=> 172.217.10.14
+Retrieve sub-domain from host: store.google.com
+Retrieve the root domain for host: store.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://contacts.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://contacts.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://contacts.google.com/&followup=https://contacts.google.com/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: contacts.google.com
+Add entry to the local host repository: contacts.google.com
+Perform DNS query on host: contacts.google.com
+Validate the IP format is valid: contacts.google.com
+Validate the URL format is valid: contacts.google.com
+Unknown URL format: contacts.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: contacts.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: contacts.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: contacts.google.com
+Retrieve the root domain for host: contacts.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://www.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.waze.com/
+Add entry to the site store: https://youtube-global.blogspot.com/
+Problem found: untrusted Internet domain or IP. Skip https://youtube-global.blogspot.com/
+Add entry to the site store: https://assistant.google.com/
+Site entry loaded: {"ip"=>"172.217.11.46", "port"=>443, "url"=>"https://assistant.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"beacf839922cd23bedfd1b6acdcfd73f", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: assistant.google.com
+Add entry to the local host repository: assistant.google.com
+Perform DNS query on host: assistant.google.com
+Validate the IP format is valid: assistant.google.com
+Validate the URL format is valid: assistant.google.com
+Unknown URL format: assistant.google.com
+IP found: 172.217.11.46
+Validate the IP format is valid: 172.217.11.46
+Validate the URL format is valid: 172.217.11.46
+Unknown URL format: 172.217.11.46
+Confirmed as a valid IP: 172.217.11.46
+Retrieve the root domain for host: assistant.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: assistant.google.com <=> 172.217.11.46
+Retrieve sub-domain from host: assistant.google.com
+Retrieve the root domain for host: assistant.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://photos.google.com/
+Site entry loaded: {"ip"=>"172.217.7.14", "port"=>443, "url"=>"https://photos.google.com/", "code"=>302, "redirection"=>"https://www.google.com/photos/about/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: photos.google.com
+Add entry to the local host repository: photos.google.com
+Perform DNS query on host: photos.google.com
+Validate the IP format is valid: photos.google.com
+Validate the URL format is valid: photos.google.com
+Unknown URL format: photos.google.com
+IP found: 172.217.7.14
+Validate the IP format is valid: 172.217.7.14
+Validate the URL format is valid: 172.217.7.14
+Unknown URL format: 172.217.7.14
+Confirmed as a valid IP: 172.217.7.14
+Retrieve the root domain for host: photos.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: photos.google.com <=> 172.217.7.14
+Retrieve sub-domain from host: photos.google.com
+Retrieve the root domain for host: photos.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://hire.google.com/
+Site entry loaded: {"ip"=>"172.217.9.238", "port"=>443, "url"=>"https://hire.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"bd800651a78517dde6ad4154b548731b", "server"=>"Google Frontend", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: hire.google.com
+Add entry to the local host repository: hire.google.com
+Perform DNS query on host: hire.google.com
+Validate the IP format is valid: hire.google.com
+Validate the URL format is valid: hire.google.com
+Unknown URL format: hire.google.com
+IP found: 172.217.9.238
+Validate the IP format is valid: 172.217.9.238
+Validate the URL format is valid: 172.217.9.238
+Unknown URL format: 172.217.9.238
+Confirmed as a valid IP: 172.217.9.238
+Retrieve the root domain for host: hire.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: hire.google.com <=> 172.217.9.238
+Retrieve sub-domain from host: hire.google.com
+Retrieve the root domain for host: hire.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://translate.google.com/
+Site entry loaded: {"ip"=>"172.217.9.238", "port"=>443, "url"=>"https://translate.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"1e0e2b36c7306f2d2eb209edf194a925", "server"=>"HTTP server (unknown)", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: translate.google.com
+Add entry to the local host repository: translate.google.com
+Perform DNS query on host: translate.google.com
+Validate the IP format is valid: translate.google.com
+Validate the URL format is valid: translate.google.com
+Unknown URL format: translate.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: translate.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: translate.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: translate.google.com
+Retrieve the root domain for host: translate.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://sites.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://sites.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?service=jotspot&passive=1209600&continue=https://sites.google.com/&followup=https://sites.google.com/", "md5"=>"a1db09aa32414965f659f6b7bad9821d", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: sites.google.com
+Add entry to the local host repository: sites.google.com
+Perform DNS query on host: sites.google.com
+Validate the IP format is valid: sites.google.com
+Validate the URL format is valid: sites.google.com
+Unknown URL format: sites.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: sites.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: sites.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: sites.google.com
+Retrieve the root domain for host: sites.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://www.google.com/
+Site entry loaded: {"ip"=>"172.217.11.36", "port"=>443, "url"=>"https://www.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"a7be1f8a37313f23ccef3b5dc55c7fd3", "server"=>"gws", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: www.google.com
+DNS lookup from the local host repository
+Refresh the local host repository for host: www.google.com 
+Perform DNS query on host: www.google.com
+Validate the IP format is valid: www.google.com
+Validate the URL format is valid: www.google.com
+Unknown URL format: www.google.com
+IP found: 172.217.11.36
+Validate the IP format is valid: 172.217.11.36
+Validate the URL format is valid: 172.217.11.36
+Unknown URL format: 172.217.11.36
+Confirmed as a valid IP: 172.217.11.36
+Entry refreshed: www.google.com	172.217.11.36
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://business.google.com/
+Site entry loaded: {"ip"=>"172.217.12.206", "port"=>443, "url"=>"https://business.google.com/", "code"=>302, "redirection"=>"https://support.google.com/business/answer/3420286?p=browser_support&visit_id=637033374056996338-809959997&rd=1", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: business.google.com
+Add entry to the local host repository: business.google.com
+Perform DNS query on host: business.google.com
+Validate the IP format is valid: business.google.com
+Validate the URL format is valid: business.google.com
+Unknown URL format: business.google.com
+IP found: 172.217.12.206
+Validate the IP format is valid: 172.217.12.206
+Validate the URL format is valid: 172.217.12.206
+Unknown URL format: 172.217.12.206
+Confirmed as a valid IP: 172.217.12.206
+Retrieve the root domain for host: business.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: business.google.com <=> 172.217.12.206
+Retrieve sub-domain from host: business.google.com
+Retrieve the root domain for host: business.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: http://news.google.com/
+Site entry loaded: {"ip"=>"172.217.3.110", "port"=>80, "url"=>"http://news.google.com/", "code"=>301, "redirection"=>"https://news.google.com/?hl=en-US&gl=US&ceid=US:en", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: news.google.com
+Add entry to the local host repository: news.google.com
+Perform DNS query on host: news.google.com
+Validate the IP format is valid: news.google.com
+Validate the URL format is valid: news.google.com
+Unknown URL format: news.google.com
+IP found: 172.217.3.110
+Validate the IP format is valid: 172.217.3.110
+Validate the URL format is valid: 172.217.3.110
+Unknown URL format: 172.217.3.110
+Confirmed as a valid IP: 172.217.3.110
+Retrieve the root domain for host: news.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: news.google.com <=> 172.217.3.110
+Retrieve sub-domain from host: news.google.com
+Retrieve the root domain for host: news.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://services.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://services.google.com/", "code"=>301, "redirection"=>"https://www.google.com/", "md5"=>"276bbb20c29087e88db63899fd8f9129", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: services.google.com
+Add entry to the local host repository: services.google.com
+Perform DNS query on host: services.google.com
+Validate the IP format is valid: services.google.com
+Validate the URL format is valid: services.google.com
+Unknown URL format: services.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: services.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: services.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: services.google.com
+Retrieve the root domain for host: services.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://myaccount.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://myaccount.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://myaccount.google.com/general-light&followup=https://myaccount.google.com/general-light&csig=AF-SEna0zwh1L3ilmRXd:1567740606", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: myaccount.google.com
+Add entry to the local host repository: myaccount.google.com
+Perform DNS query on host: myaccount.google.com
+Validate the IP format is valid: myaccount.google.com
+Validate the URL format is valid: myaccount.google.com
+Unknown URL format: myaccount.google.com
+IP found: 172.217.10.46
+Validate the IP format is valid: 172.217.10.46
+Validate the URL format is valid: 172.217.10.46
+Unknown URL format: 172.217.10.46
+Confirmed as a valid IP: 172.217.10.46
+Retrieve the root domain for host: myaccount.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: myaccount.google.com <=> 172.217.10.46
+Retrieve sub-domain from host: myaccount.google.com
+Retrieve the root domain for host: myaccount.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://www.blogger.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.blogger.com/
+Add entry to the site store: https://www.gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.gmail.com/
+Add entry to the site store: https://gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://gmail.com/
+Add entry to the site store: https://chat.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://chat.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://chat.google.com/&followup=https://chat.google.com/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: chat.google.com
+Add entry to the local host repository: chat.google.com
+Perform DNS query on host: chat.google.com
+Validate the IP format is valid: chat.google.com
+Validate the URL format is valid: chat.google.com
+Unknown URL format: chat.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: chat.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: chat.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: chat.google.com
+Retrieve the root domain for host: chat.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://abc.xyz/
+Problem found: untrusted Internet domain or IP. Skip https://abc.xyz/
+Add entry to the site store: https://transparencyreport.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://transparencyreport.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"bfdcee17eda002006afb279f83fd3474", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: transparencyreport.google.com
+Add entry to the local host repository: transparencyreport.google.com
+Perform DNS query on host: transparencyreport.google.com
+Validate the IP format is valid: transparencyreport.google.com
+Validate the URL format is valid: transparencyreport.google.com
+Unknown URL format: transparencyreport.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: transparencyreport.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: transparencyreport.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: transparencyreport.google.com
+Retrieve the root domain for host: transparencyreport.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://hangouts.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://hangouts.google.com/", "code"=>302, "redirection"=>"https://hangouts.google.com/webchat/start", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: hangouts.google.com
+Add entry to the local host repository: hangouts.google.com
+Perform DNS query on host: hangouts.google.com
+Validate the IP format is valid: hangouts.google.com
+Validate the URL format is valid: hangouts.google.com
+Unknown URL format: hangouts.google.com
+IP found: 172.217.7.14
+Validate the IP format is valid: 172.217.7.14
+Validate the URL format is valid: 172.217.7.14
+Unknown URL format: 172.217.7.14
+Confirmed as a valid IP: 172.217.7.14
+Retrieve the root domain for host: hangouts.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: hangouts.google.com <=> 172.217.7.14
+Retrieve sub-domain from host: hangouts.google.com
+Retrieve the root domain for host: hangouts.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://www.tiltbrush.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.tiltbrush.com/
+Add entry to the site store: https://voice.google.com/
+Site entry loaded: {"ip"=>"172.217.12.206", "port"=>443, "url"=>"https://voice.google.com/", "code"=>302, "redirection"=>"https://voice.google.com/about", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: voice.google.com
+Add entry to the local host repository: voice.google.com
+Perform DNS query on host: voice.google.com
+Validate the IP format is valid: voice.google.com
+Validate the URL format is valid: voice.google.com
+Unknown URL format: voice.google.com
+IP found: 172.217.12.206
+Validate the IP format is valid: 172.217.12.206
+Validate the URL format is valid: 172.217.12.206
+Unknown URL format: 172.217.12.206
+Confirmed as a valid IP: 172.217.12.206
+Retrieve the root domain for host: voice.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: voice.google.com <=> 172.217.12.206
+Retrieve sub-domain from host: voice.google.com
+Retrieve the root domain for host: voice.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://jamboard.google.com/
+Site entry loaded: {"ip"=>"172.217.7.14", "port"=>443, "url"=>"https://jamboard.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?service=jamboardcore&passive=1209600&continue=https://jamboard.google.com/&followup=https://jamboard.google.com/", "md5"=>"3c44ac1514316028a1907a637809d8e0", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: jamboard.google.com
+Add entry to the local host repository: jamboard.google.com
+Perform DNS query on host: jamboard.google.com
+Validate the IP format is valid: jamboard.google.com
+Validate the URL format is valid: jamboard.google.com
+Unknown URL format: jamboard.google.com
+IP found: 172.217.7.14
+Validate the IP format is valid: 172.217.7.14
+Validate the URL format is valid: 172.217.7.14
+Unknown URL format: 172.217.7.14
+Confirmed as a valid IP: 172.217.7.14
+Retrieve the root domain for host: jamboard.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: jamboard.google.com <=> 172.217.7.14
+Retrieve sub-domain from host: jamboard.google.com
+Retrieve the root domain for host: jamboard.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://instagram.com/
+Problem found: untrusted Internet domain or IP. Skip https://instagram.com/
+Add entry to the site store: https://www.facebook.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.facebook.com/
+Add entry to the site store: https://careers.google.com/
+Site entry loaded: {"ip"=>"172.217.12.142", "port"=>443, "url"=>"https://careers.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"ae978994e32445ca7ff5761191028d16", "server"=>"Google Frontend", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: careers.google.com
+Add entry to the local host repository: careers.google.com
+Perform DNS query on host: careers.google.com
+Validate the IP format is valid: careers.google.com
+Validate the URL format is valid: careers.google.com
+Unknown URL format: careers.google.com
+IP found: 172.217.12.142
+Validate the IP format is valid: 172.217.12.142
+Validate the URL format is valid: 172.217.12.142
+Unknown URL format: 172.217.12.142
+Confirmed as a valid IP: 172.217.12.142
+Retrieve the root domain for host: careers.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: careers.google.com <=> 172.217.12.142
+Retrieve sub-domain from host: careers.google.com
+Retrieve the root domain for host: careers.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://tv.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://tv.youtube.com/
+Add entry to the site store: https://chrome.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://chrome.google.com/", "code"=>301, "redirection"=>"https://www.google.com/chrome/", "md5"=>"0f8ba3da5ec9c4330a36cefacdac783f", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: chrome.google.com
+Add entry to the local host repository: chrome.google.com
+Perform DNS query on host: chrome.google.com
+Validate the IP format is valid: chrome.google.com
+Validate the URL format is valid: chrome.google.com
+Unknown URL format: chrome.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: chrome.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: chrome.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: chrome.google.com
+Retrieve the root domain for host: chrome.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://groups.google.com/
+Site entry loaded: {"ip"=>"172.217.197.113", "port"=>443, "url"=>"https://groups.google.com/", "code"=>301, "redirection"=>"/forum/#!homeredir", "md5"=>"fd02d725f475d41bf0b14d5663580b11", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: groups.google.com
+Add entry to the local host repository: groups.google.com
+Perform DNS query on host: groups.google.com
+Validate the IP format is valid: groups.google.com
+Validate the URL format is valid: groups.google.com
+Unknown URL format: groups.google.com
+IP found: 172.217.197.139
+Validate the IP format is valid: 172.217.197.139
+Validate the URL format is valid: 172.217.197.139
+Unknown URL format: 172.217.197.139
+Confirmed as a valid IP: 172.217.197.139
+Retrieve the root domain for host: groups.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: groups.google.com <=> 172.217.197.139
+Retrieve sub-domain from host: groups.google.com
+Retrieve the root domain for host: groups.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://mail.google.com/
+Site entry loaded: {"ip"=>"172.217.6.229", "port"=>443, "url"=>"https://mail.google.com/", "code"=>301, "redirection"=>"/mail/", "md5"=>"91dcda9594c4063cf35244240b6fc3b4", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: mail.google.com
+Add entry to the local host repository: mail.google.com
+Perform DNS query on host: mail.google.com
+Validate the IP format is valid: mail.google.com
+Validate the URL format is valid: mail.google.com
+Unknown URL format: mail.google.com
+IP found: 172.217.12.197
+Validate the IP format is valid: 172.217.12.197
+Validate the URL format is valid: 172.217.12.197
+Unknown URL format: 172.217.12.197
+Confirmed as a valid IP: 172.217.12.197
+Retrieve the root domain for host: mail.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: mail.google.com <=> 172.217.12.197
+Retrieve sub-domain from host: mail.google.com
+Retrieve the root domain for host: mail.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://enterprise.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://enterprise.google.com/", "code"=>301, "redirection"=>"https://cloud.google.com/", "md5"=>"f96b88ff4fb0f14097971fb3191aa3e7", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: enterprise.google.com
+Add entry to the local host repository: enterprise.google.com
+Perform DNS query on host: enterprise.google.com
+Validate the IP format is valid: enterprise.google.com
+Validate the URL format is valid: enterprise.google.com
+Unknown URL format: enterprise.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: enterprise.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: enterprise.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: enterprise.google.com
+Retrieve the root domain for host: enterprise.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://payments.google.com/
+Site entry loaded: {"ip"=>"172.217.197.92", "port"=>443, "url"=>"https://payments.google.com/", "code"=>302, "redirection"=>"https://payments.google.com/payments/home", "md5"=>"8e3d4f0d57e723c248e8afb1a01b7f54", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: payments.google.com
+Add entry to the local host repository: payments.google.com
+Perform DNS query on host: payments.google.com
+Validate the IP format is valid: payments.google.com
+Validate the URL format is valid: payments.google.com
+Unknown URL format: payments.google.com
+IP found: 172.217.197.92
+Validate the IP format is valid: 172.217.197.92
+Validate the URL format is valid: 172.217.197.92
+Unknown URL format: 172.217.197.92
+Confirmed as a valid IP: 172.217.197.92
+Retrieve the root domain for host: payments.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: payments.google.com <=> 172.217.197.92
+Retrieve sub-domain from host: payments.google.com
+Retrieve the root domain for host: payments.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: http://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.youtube.com/
+Add entry to the site store: https://www.blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://www.blog.google/
+Add entry to the site store: https://chromecast.com/
+Problem found: untrusted Internet domain or IP. Skip https://chromecast.com/
+Add entry to the site store: https://www.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.android.com/
+Add entry to the site store: https://wearos.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://wearos.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"f32f2fdaecf64f48d2efab64618eb8d2", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: wearos.google.com
+Add entry to the local host repository: wearos.google.com
+Perform DNS query on host: wearos.google.com
+Validate the IP format is valid: wearos.google.com
+Validate the URL format is valid: wearos.google.com
+Unknown URL format: wearos.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: wearos.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: wearos.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: wearos.google.com
+Retrieve the root domain for host: wearos.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://one.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://one.google.com/", "code"=>302, "redirection"=>"https://one.google.com/about", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: one.google.com
+Add entry to the local host repository: one.google.com
+Perform DNS query on host: one.google.com
+Validate the IP format is valid: one.google.com
+Validate the URL format is valid: one.google.com
+Unknown URL format: one.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: one.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: one.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: one.google.com
+Retrieve the root domain for host: one.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://support.google.com/
+Site entry loaded: {"ip"=>"172.217.10.110", "port"=>443, "url"=>"https://support.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"82cc3290d8a00c90f03d67797330068c", "server"=>"support-content-ui", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: support.google.com
+Add entry to the local host repository: support.google.com
+Perform DNS query on host: support.google.com
+Validate the IP format is valid: support.google.com
+Validate the URL format is valid: support.google.com
+Unknown URL format: support.google.com
+IP found: 172.217.10.110
+Validate the IP format is valid: 172.217.10.110
+Validate the URL format is valid: 172.217.10.110
+Unknown URL format: 172.217.10.110
+Confirmed as a valid IP: 172.217.10.110
+Retrieve the root domain for host: support.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: support.google.com <=> 172.217.10.110
+Retrieve sub-domain from host: support.google.com
+Retrieve the root domain for host: support.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://learndigital.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://learndigital.withgoogle.com/
+Add entry to the site store: https://domains.google.com/
+Site entry loaded: {"ip"=>"172.217.10.78", "port"=>443, "url"=>"https://domains.google.com/", "code"=>303, "redirection"=>"https://domains.google/", "md5"=>"760c970803f5c3b1181fa283ae889a72", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: domains.google.com
+Add entry to the local host repository: domains.google.com
+Perform DNS query on host: domains.google.com
+Validate the IP format is valid: domains.google.com
+Validate the URL format is valid: domains.google.com
+Unknown URL format: domains.google.com
+IP found: 172.217.10.78
+Validate the IP format is valid: 172.217.10.78
+Validate the URL format is valid: 172.217.10.78
+Unknown URL format: 172.217.10.78
+Confirmed as a valid IP: 172.217.10.78
+Retrieve the root domain for host: domains.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: domains.google.com <=> 172.217.10.78
+Retrieve sub-domain from host: domains.google.com
+Retrieve the root domain for host: domains.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://drive.google.com/
+Site entry loaded: {"ip"=>"172.217.9.238", "port"=>443, "url"=>"https://drive.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&continue=https://drive.google.com/&followup=https://drive.google.com/&emr=1", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: drive.google.com
+Add entry to the local host repository: drive.google.com
+Perform DNS query on host: drive.google.com
+Validate the IP format is valid: drive.google.com
+Validate the URL format is valid: drive.google.com
+Unknown URL format: drive.google.com
+IP found: 172.217.9.238
+Validate the IP format is valid: 172.217.9.238
+Validate the URL format is valid: 172.217.9.238
+Unknown URL format: 172.217.9.238
+Confirmed as a valid IP: 172.217.9.238
+Retrieve the root domain for host: drive.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: drive.google.com <=> 172.217.9.238
+Retrieve sub-domain from host: drive.google.com
+Retrieve the root domain for host: drive.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://scholar.google.com/
+Site entry loaded: {"ip"=>"172.217.10.132", "port"=>443, "url"=>"https://scholar.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"936591325eea61e8fbfa6bb682555831", "server"=>"scholar", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: scholar.google.com
+Add entry to the local host repository: scholar.google.com
+Perform DNS query on host: scholar.google.com
+Validate the IP format is valid: scholar.google.com
+Validate the URL format is valid: scholar.google.com
+Unknown URL format: scholar.google.com
+IP found: 172.217.10.132
+Validate the IP format is valid: 172.217.10.132
+Validate the URL format is valid: 172.217.10.132
+Unknown URL format: 172.217.10.132
+Confirmed as a valid IP: 172.217.10.132
+Retrieve the root domain for host: scholar.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: scholar.google.com <=> 172.217.10.132
+Retrieve sub-domain from host: scholar.google.com
+Retrieve the root domain for host: scholar.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://itunes.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://itunes.apple.com/
+Add entry to the site store: https://gsuite.google.com/
+Site entry loaded: {"ip"=>"172.217.10.78", "port"=>443, "url"=>"https://gsuite.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"606ef28e6f27c510862870b91eb77dbe", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: gsuite.google.com
+Add entry to the local host repository: gsuite.google.com
+Perform DNS query on host: gsuite.google.com
+Validate the IP format is valid: gsuite.google.com
+Validate the URL format is valid: gsuite.google.com
+Unknown URL format: gsuite.google.com
+IP found: 172.217.10.78
+Validate the IP format is valid: 172.217.10.78
+Validate the URL format is valid: 172.217.10.78
+Unknown URL format: 172.217.10.78
+Confirmed as a valid IP: 172.217.10.78
+Retrieve the root domain for host: gsuite.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: gsuite.google.com <=> 172.217.10.78
+Retrieve sub-domain from host: gsuite.google.com
+Retrieve the root domain for host: gsuite.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://pay.google.com/
+Site entry loaded: {"ip"=>"74.125.192.92", "port"=>443, "url"=>"https://pay.google.com/", "code"=>302, "redirection"=>"https://pay.google.com/payments/home", "md5"=>"0201114647be9d3e744ab8d326b93f41", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"ext_hosted"}
+Update local hosts table for host: pay.google.com
+Add entry to the local host repository: pay.google.com
+Perform DNS query on host: pay.google.com
+Validate the IP format is valid: pay.google.com
+Validate the URL format is valid: pay.google.com
+Unknown URL format: pay.google.com
+IP found: 74.125.192.92
+Validate the IP format is valid: 74.125.192.92
+Validate the URL format is valid: 74.125.192.92
+Unknown URL format: 74.125.192.92
+Confirmed as a valid IP: 74.125.192.92
+Retrieve the root domain for host: pay.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: pay.google.com <=> 74.125.192.92
+Retrieve sub-domain from host: pay.google.com
+Retrieve the root domain for host: pay.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: http://maps.google.com/
+Site entry loaded: {"ip"=>"172.217.10.78", "port"=>80, "url"=>"http://maps.google.com/", "code"=>302, "redirection"=>"https://www.google.com:443/maps", "md5"=>"21005207467b8d6f021790f502ed179e", "server"=>"gws", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: maps.google.com
+Add entry to the local host repository: maps.google.com
+Perform DNS query on host: maps.google.com
+Validate the IP format is valid: maps.google.com
+Validate the URL format is valid: maps.google.com
+Unknown URL format: maps.google.com
+IP found: 172.217.10.78
+Validate the IP format is valid: 172.217.10.78
+Validate the URL format is valid: 172.217.10.78
+Unknown URL format: 172.217.10.78
+Confirmed as a valid IP: 172.217.10.78
+Retrieve the root domain for host: maps.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: maps.google.com <=> 172.217.10.78
+Retrieve sub-domain from host: maps.google.com
+Retrieve the root domain for host: maps.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://maps.google.com/
+Site entry loaded: {"ip"=>"172.217.10.78", "port"=>443, "url"=>"https://maps.google.com/", "code"=>302, "redirection"=>"https://www.google.com/maps", "md5"=>"4676794f237f7c4efe1ec9f6a7ef123b", "server"=>"gws", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: maps.google.com
+Add entry to the local host repository: maps.google.com
+Perform DNS query on host: maps.google.com
+Validate the IP format is valid: maps.google.com
+Validate the URL format is valid: maps.google.com
+Unknown URL format: maps.google.com
+IP found: 172.217.10.78
+Validate the IP format is valid: 172.217.10.78
+Validate the URL format is valid: 172.217.10.78
+Unknown URL format: 172.217.10.78
+Confirmed as a valid IP: 172.217.10.78
+Retrieve the root domain for host: maps.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: maps.google.com <=> 172.217.10.78
+Retrieve sub-domain from host: maps.google.com
+Retrieve the root domain for host: maps.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://keep.google.com/
+Site entry loaded: {"ip"=>"172.217.6.206", "port"=>443, "url"=>"https://keep.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://keep.google.com/&followup=https://keep.google.com/&ltmpl=keep", "md5"=>"a58fa09e74b178236b4a15584fae7c23", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: keep.google.com
+Add entry to the local host repository: keep.google.com
+Perform DNS query on host: keep.google.com
+Validate the IP format is valid: keep.google.com
+Validate the URL format is valid: keep.google.com
+Unknown URL format: keep.google.com
+IP found: 172.217.6.206
+Validate the IP format is valid: 172.217.6.206
+Validate the URL format is valid: 172.217.6.206
+Unknown URL format: 172.217.6.206
+Confirmed as a valid IP: 172.217.6.206
+Retrieve the root domain for host: keep.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: keep.google.com <=> 172.217.6.206
+Retrieve sub-domain from host: keep.google.com
+Retrieve the root domain for host: keep.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://developers.google.com/
+Site entry loaded: {"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://developers.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"2f7ca51b3576bd3ccc890ff994614f15", "server"=>"Google Frontend", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: developers.google.com
+Add entry to the local host repository: developers.google.com
+Perform DNS query on host: developers.google.com
+Validate the IP format is valid: developers.google.com
+Validate the URL format is valid: developers.google.com
+Unknown URL format: developers.google.com
+IP found: 172.217.12.174
+Validate the IP format is valid: 172.217.12.174
+Validate the URL format is valid: 172.217.12.174
+Unknown URL format: 172.217.12.174
+Confirmed as a valid IP: 172.217.12.174
+Retrieve the root domain for host: developers.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: developers.google.com <=> 172.217.12.174
+Retrieve sub-domain from host: developers.google.com
+Retrieve the root domain for host: developers.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://policies.google.com/
+Site entry loaded: {"ip"=>"172.217.3.110", "port"=>443, "url"=>"https://policies.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"69d52b348a4342009e9c939e3f2e1d8a", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: policies.google.com
+Add entry to the local host repository: policies.google.com
+Perform DNS query on host: policies.google.com
+Validate the IP format is valid: policies.google.com
+Validate the URL format is valid: policies.google.com
+Unknown URL format: policies.google.com
+IP found: 172.217.3.110
+Validate the IP format is valid: 172.217.3.110
+Validate the URL format is valid: 172.217.3.110
+Unknown URL format: 172.217.3.110
+Confirmed as a valid IP: 172.217.3.110
+Retrieve the root domain for host: policies.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Loading known country code second level domain list from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/ccsld.txt
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/cctld.txt
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/gtld.txt
+Third order search - domain root lookup by Top Level Domain list ...
+Loading records from file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/utils/../../../dicts/tlds.txt
+Domain root: google.com
+Host data repository entry loaded: policies.google.com <=> 172.217.3.110
+Retrieve sub-domain from host: policies.google.com
+Retrieve the root domain for host: policies.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Add entry to the site store: https://cloud.google.com/
+Site entry loaded: {"ip"=>"172.217.10.238", "port"=>443, "url"=>"https://cloud.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"ff503cac63591b9c52330fe688f42f6c", "server"=>"Google Frontend", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}
+Update local hosts table for host: cloud.google.com
+Add entry to the local host repository: cloud.google.com
+Perform DNS query on host: cloud.google.com
+Validate the IP format is valid: cloud.google.com
+Validate the URL format is valid: cloud.google.com
+Unknown URL format: cloud.google.com
+IP found: 172.217.10.238
+Validate the IP format is valid: 172.217.10.238
+Validate the URL format is valid: 172.217.10.238
+Unknown URL format: 172.217.10.238
+Confirmed as a valid IP: 172.217.10.238
+Retrieve the root domain for host: cloud.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain root: google.com
+Host data repository entry loaded: cloud.google.com <=> 172.217.10.238
+Retrieve sub-domain from host: cloud.google.com
+Retrieve the root domain for host: cloud.google.com
+First order search - domain root lookup by Country Code Second Level Domain list ...
+Second order search - domain root lookup by Country Code Top Level Domain list ...
+Third order search - domain root lookup by Top Level Domain list ...
+Domain cache table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/domain_tracker/../../../data/sub_domains
+Saving the local host repository from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts ...
+local host repository is successfully saved to: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/hosts
+Done adding site entries.
+New entries added: {"http://www.google.com/"=>{"ip"=>"172.217.11.36", "port"=>80, "url"=>"http://www.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"aba83fc4621d94cb0f572b8deeedca19", "server"=>"gws", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "http://maps.google.com/"=>{"ip"=>"172.217.10.78", "port"=>80, "url"=>"http://maps.google.com/", "code"=>302, "redirection"=>"https://www.google.com:443/maps", "md5"=>"21005207467b8d6f021790f502ed179e", "server"=>"gws", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://play.google.com/"=>{"ip"=>"172.217.10.110", "port"=>443, "url"=>"https://play.google.com/", "code"=>302, "redirection"=>"https://play.google.com/store", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "http://news.google.com/"=>{"ip"=>"172.217.3.110", "port"=>80, "url"=>"http://news.google.com/", "code"=>301, "redirection"=>"https://news.google.com/?hl=en-US&gl=US&ceid=US:en", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://mail.google.com/"=>{"ip"=>"172.217.6.229", "port"=>443, "url"=>"https://mail.google.com/", "code"=>301, "redirection"=>"/mail/", "md5"=>"91dcda9594c4063cf35244240b6fc3b4", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://drive.google.com/"=>{"ip"=>"172.217.9.238", "port"=>443, "url"=>"https://drive.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&continue=https://drive.google.com/&followup=https://drive.google.com/&emr=1", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://www.google.com/"=>{"ip"=>"172.217.11.36", "port"=>443, "url"=>"https://www.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"a7be1f8a37313f23ccef3b5dc55c7fd3", "server"=>"gws", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://accounts.google.com/"=>{"ip"=>"172.217.10.13", "port"=>443, "url"=>"https://accounts.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2Fmanageaccount&followup=https%3A%2F%2Faccounts.google.com%2Fmanageaccount", "md5"=>"cb093527f464b909a137ee9e554ac25d", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://maps.google.com/"=>{"ip"=>"172.217.10.78", "port"=>443, "url"=>"https://maps.google.com/", "code"=>302, "redirection"=>"https://www.google.com/maps", "md5"=>"4676794f237f7c4efe1ec9f6a7ef123b", "server"=>"gws", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://news.google.com/"=>{"ip"=>"172.217.3.110", "port"=>443, "url"=>"https://news.google.com/", "code"=>302, "redirection"=>"https://news.google.com/?hl=en-US&gl=US&ceid=US:en", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://support.google.com/"=>{"ip"=>"172.217.10.110", "port"=>443, "url"=>"https://support.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"82cc3290d8a00c90f03d67797330068c", "server"=>"support-content-ui", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://policies.google.com/"=>{"ip"=>"172.217.3.110", "port"=>443, "url"=>"https://policies.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"69d52b348a4342009e9c939e3f2e1d8a", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://payments.google.com/"=>{"ip"=>"172.217.197.92", "port"=>443, "url"=>"https://payments.google.com/", "code"=>302, "redirection"=>"https://payments.google.com/payments/home", "md5"=>"8e3d4f0d57e723c248e8afb1a01b7f54", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://myaccount.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://myaccount.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://myaccount.google.com/general-light&followup=https://myaccount.google.com/general-light&csig=AF-SEna0zwh1L3ilmRXd:1567740606", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://contacts.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://contacts.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://contacts.google.com/&followup=https://contacts.google.com/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://translate.google.com/"=>{"ip"=>"172.217.9.238", "port"=>443, "url"=>"https://translate.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"1e0e2b36c7306f2d2eb209edf194a925", "server"=>"HTTP server (unknown)", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://photos.google.com/"=>{"ip"=>"172.217.7.14", "port"=>443, "url"=>"https://photos.google.com/", "code"=>302, "redirection"=>"https://www.google.com/photos/about/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://docs.google.com/"=>{"ip"=>"172.217.10.46", "port"=>443, "url"=>"https://docs.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://docs.google.com/&followup=https://docs.google.com/&emr=1", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://books.google.com/"=>{"ip"=>"172.217.10.46", "port"=>443, "url"=>"https://books.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"08d07e1f6418d799c674ff1523e499f5", "server"=>"OFE/0.1", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://duo.google.com/"=>{"ip"=>"172.217.6.206", "port"=>443, "url"=>"https://duo.google.com/", "code"=>302, "redirection"=>"https://duo.google.com/about/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://hangouts.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://hangouts.google.com/", "code"=>302, "redirection"=>"https://hangouts.google.com/webchat/start", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://keep.google.com/"=>{"ip"=>"172.217.6.206", "port"=>443, "url"=>"https://keep.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://keep.google.com/&followup=https://keep.google.com/&ltmpl=keep", "md5"=>"a58fa09e74b178236b4a15584fae7c23", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://jamboard.google.com/"=>{"ip"=>"172.217.7.14", "port"=>443, "url"=>"https://jamboard.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?service=jamboardcore&passive=1209600&continue=https://jamboard.google.com/&followup=https://jamboard.google.com/", "md5"=>"3c44ac1514316028a1907a637809d8e0", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://chrome.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://chrome.google.com/", "code"=>301, "redirection"=>"https://www.google.com/chrome/", "md5"=>"0f8ba3da5ec9c4330a36cefacdac783f", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://store.google.com/"=>{"ip"=>"172.217.10.14", "port"=>443, "url"=>"https://store.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"2d8ff2f1fa8af28f6c76062f5ec42d75", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://wearos.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://wearos.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"f32f2fdaecf64f48d2efab64618eb8d2", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://messages.google.com/"=>{"ip"=>"172.217.10.142", "port"=>443, "url"=>"https://messages.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"52145628b9e549e0460bac09d6cf0e66", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://gsuite.google.com/"=>{"ip"=>"172.217.10.78", "port"=>443, "url"=>"https://gsuite.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"606ef28e6f27c510862870b91eb77dbe", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://chat.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://chat.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://chat.google.com/&followup=https://chat.google.com/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://ads.google.com/"=>{"ip"=>"172.217.11.14", "port"=>443, "url"=>"https://ads.google.com/", "code"=>302, "redirection"=>"https://ads.google.com/home/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://analytics.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://analytics.google.com/", "code"=>301, "redirection"=>"https://analytics.google.com/analytics/web/", "md5"=>"96e32b8d88fccbfd2fe3f35e27848c53", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://business.google.com/"=>{"ip"=>"172.217.12.206", "port"=>443, "url"=>"https://business.google.com/", "code"=>302, "redirection"=>"https://support.google.com/business/answer/3420286?p=browser_support&visit_id=637033374056996338-809959997&rd=1", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:04 -0400, "status"=>"int_hosted"}, "https://classroom.google.com/"=>{"ip"=>"172.217.9.238", "port"=>443, "url"=>"https://classroom.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?service=classroom&passive=1209600&continue=https://classroom.google.com/&followup=https://classroom.google.com/&emr=1", "md5"=>"0d78344ef9ce3d46125f74cd6c5d78fd", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://fi.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://fi.google.com/", "code"=>302, "redirection"=>"https://fi.google.com/about/", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://groups.google.com/"=>{"ip"=>"172.217.197.113", "port"=>443, "url"=>"https://groups.google.com/", "code"=>301, "redirection"=>"/forum/#!homeredir", "md5"=>"fd02d725f475d41bf0b14d5663580b11", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://one.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://one.google.com/", "code"=>302, "redirection"=>"https://one.google.com/about", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://pay.google.com/"=>{"ip"=>"74.125.192.92", "port"=>443, "url"=>"https://pay.google.com/", "code"=>302, "redirection"=>"https://pay.google.com/payments/home", "md5"=>"0201114647be9d3e744ab8d326b93f41", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"ext_hosted"}, "https://scholar.google.com/"=>{"ip"=>"172.217.10.132", "port"=>443, "url"=>"https://scholar.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"936591325eea61e8fbfa6bb682555831", "server"=>"scholar", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://sites.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://sites.google.com/", "code"=>302, "redirection"=>"https://accounts.google.com/ServiceLogin?service=jotspot&passive=1209600&continue=https://sites.google.com/&followup=https://sites.google.com/", "md5"=>"a1db09aa32414965f659f6b7bad9821d", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://voice.google.com/"=>{"ip"=>"172.217.12.206", "port"=>443, "url"=>"https://voice.google.com/", "code"=>302, "redirection"=>"https://voice.google.com/about", "md5"=>"d41d8cd98f00b204e9800998ecf8427e", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://enterprise.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://enterprise.google.com/", "code"=>301, "redirection"=>"https://cloud.google.com/", "md5"=>"f96b88ff4fb0f14097971fb3191aa3e7", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://assistant.google.com/"=>{"ip"=>"172.217.11.46", "port"=>443, "url"=>"https://assistant.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"beacf839922cd23bedfd1b6acdcfd73f", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://cloud.google.com/"=>{"ip"=>"172.217.10.238", "port"=>443, "url"=>"https://cloud.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"ff503cac63591b9c52330fe688f42f6c", "server"=>"Google Frontend", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://domains.google.com/"=>{"ip"=>"172.217.10.78", "port"=>443, "url"=>"https://domains.google.com/", "code"=>303, "redirection"=>"https://domains.google/", "md5"=>"760c970803f5c3b1181fa283ae889a72", "server"=>"GSE", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://hire.google.com/"=>{"ip"=>"172.217.9.238", "port"=>443, "url"=>"https://hire.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"bd800651a78517dde6ad4154b548731b", "server"=>"Google Frontend", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://developers.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://developers.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"2f7ca51b3576bd3ccc890ff994614f15", "server"=>"Google Frontend", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://careers.google.com/"=>{"ip"=>"172.217.12.142", "port"=>443, "url"=>"https://careers.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"ae978994e32445ca7ff5761191028d16", "server"=>"Google Frontend", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://services.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://services.google.com/", "code"=>301, "redirection"=>"https://www.google.com/", "md5"=>"276bbb20c29087e88db63899fd8f9129", "server"=>"sffe", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}, "https://transparencyreport.google.com/"=>{"ip"=>"172.217.12.174", "port"=>443, "url"=>"https://transparencyreport.google.com/", "code"=>200, "redirection"=>nil, "md5"=>"bfdcee17eda002006afb279f83fd3474", "server"=>"ESF", "timestamp"=>2019-09-05 23:30:05 -0400, "status"=>"int_hosted"}}
+Saving the current site store table from memory to file: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/sites
+site store table is successfully saved: /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/lib/wmap/../../data/sites
+Done! New found sites are successfully saved. 
+2019-09-06T03:30:11.670Z 72933 TID-ovnggnv89 DiscoveryWorker JID-c48aec626db933f54f5f14d1 INFO: Discovery successful!
+2019-09-06T03:30:11.730Z 72933 TID-ovnggnv89 DiscoveryWorker JID-c48aec626db933f54f5f14d1 INFO: Sending out email notice to: yang.li@owasp.org
+Update the site table ...
+Database connection success. 
+site table truncate success.
+Insert record for site: http://maps.google.com/
+Insert record for site: http://news.google.com/
+Insert record for site: http://www.google.com/
+Insert record for site: https://accounts.google.com/
+Insert record for site: https://ads.google.com/
+Insert record for site: https://analytics.google.com/
+Insert record for site: https://assistant.google.com/
+Insert record for site: https://books.google.com/
+Insert record for site: https://business.google.com/
+Insert record for site: https://careers.google.com/
+Insert record for site: https://chat.google.com/
+Insert record for site: https://chrome.google.com/
+Insert record for site: https://classroom.google.com/
+Insert record for site: https://cloud.google.com/
+Insert record for site: https://contacts.google.com/
+Insert record for site: https://developers.google.com/
+Insert record for site: https://docs.google.com/
+Insert record for site: https://domains.google.com/
+Insert record for site: https://drive.google.com/
+Insert record for site: https://duo.google.com/
+Insert record for site: https://enterprise.google.com/
+Insert record for site: https://fi.google.com/
+Insert record for site: https://groups.google.com/
+Insert record for site: https://gsuite.google.com/
+Insert record for site: https://hangouts.google.com/
+Insert record for site: https://hire.google.com/
+Insert record for site: https://jamboard.google.com/
+Insert record for site: https://keep.google.com/
+Insert record for site: https://mail.google.com/
+Insert record for site: https://maps.google.com/
+Insert record for site: https://messages.google.com/
+Insert record for site: https://myaccount.google.com/
+Insert record for site: https://news.google.com/
+Insert record for site: https://one.google.com/
+Insert record for site: https://pay.google.com/
+Insert record for site: https://payments.google.com/
+Insert record for site: https://photos.google.com/
+Insert record for site: https://play.google.com/
+Insert record for site: https://policies.google.com/
+Insert record for site: https://scholar.google.com/
+Insert record for site: https://services.google.com/
+Insert record for site: https://sites.google.com/
+Insert record for site: https://store.google.com/
+Insert record for site: https://support.google.com/
+Insert record for site: https://translate.google.com/
+Insert record for site: https://transparencyreport.google.com/
+Insert record for site: https://voice.google.com/
+Insert record for site: https://wearos.google.com/
+Insert record for site: https://www.google.com/
+Update complete. 
+Update the host table ...
+Database connection success. 
+host table truncate success.
+Update complete. 
+2019-09-06T03:30:11.839Z 72933 TID-ovnggnv89 DiscoveryWorker JID-c48aec626db933f54f5f14d1 INFO: done: 36.373 sec
+You're hitting mailer controller...

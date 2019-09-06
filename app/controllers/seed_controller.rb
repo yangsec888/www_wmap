@@ -11,22 +11,24 @@ class SeedController < ApplicationController
   before_action :authenticate_user!
 
   def start
-    @dir =  Rails.root.join('shared', 'data')
+    @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
     Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
-    @file = Rails.root.join('shared', 'data', 'seed')
+    @file = @dir.join('seed')
     File.new(@file, 'w+') unless File.exist?(@file)
     @uid = current_user.id
   end
 
   def show
-    @dir =  Rails.root.join('shared', 'data')
-    @file = Rails.root.join('shared', 'data', 'seed')
+    @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+    Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
+    @file = @dir.join('seed')
+    File.new(@file, 'w+') unless File.exist?(@file)
     @uid = current_user.id
   end
 
   def load_file
     data = ''
-    @file = Rails.root.join('shared', 'data', 'seed')
+    @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
     file = File.open(@file, 'r')
     file.each_line { |line| data += line }
     file.close
@@ -35,7 +37,7 @@ class SeedController < ApplicationController
 
   def save_file
     if platinum_user_and_above?
-      @file = Rails.root.join('shared', 'data', 'seed')
+      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
       file = File.open(@file, 'r')
       @restore = ''
       file.each_line { |line| @restore += line }

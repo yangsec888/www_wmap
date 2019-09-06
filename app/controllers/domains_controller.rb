@@ -43,25 +43,10 @@ class DomainsController < ApplicationController
       end
     end
 
-=begin
-    def index
-      domains=Hash.new
-      @file = Rails.root.join('shared', 'data', 'domains')
-      row = 0
-      file = File.open(@file,'r')
-      file.each_line do |line|
-        row += 1
-        next if row <= 2
-        entry = line.split(",")
-        domains[row]=entry
-      end
-      @domains = domains
-    end
-=end
 
     def edit
-      @dir = Rails.root.join('shared', 'data')
-      @file = Rails.root.join('shared', 'data', 'domains')
+      @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+      @file = @dir.join('domains')
       @uid = current_user.id
     end
 
@@ -118,7 +103,7 @@ class DomainsController < ApplicationController
 
     def load_file
       data = ''
-      @file = Rails.root.join('shared', 'data', 'domains')
+      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'domains')
       file = File.open(@file, 'r')
       file.each_line { |line| data += line }
       file.close
@@ -128,7 +113,7 @@ class DomainsController < ApplicationController
     # Ajax call from view to save domain records into both wmap data file and database
     def save_file
       if platinum_user_and_above?
-        @file = Rails.root.join('shared', 'data', 'domains')
+        @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'domains')
         file = File.open(@file, 'r')
         @restore = ''
         file.each_line { |line| @restore += line }
@@ -147,53 +132,6 @@ class DomainsController < ApplicationController
       file.close
       render json: { message: 'Saving failed, please check your file again.' }
     end
-
-=begin
-    def import
-      @dir = Rails.root.join('shared', 'data')
-      @file = @dir.join('domains')
-      @uid = current_user.id
-    end
-
-    def save_import
-      if platinum_user_and_above?
-        file = File.open(Rails.root.join('shared', 'data', 'domains'), 'r')
-        @restore = ''
-        file.each_line { |line| @restore += line }
-        file.close
-        site_tracker=Wmap::SiteTracker.new
-        domain_tracker=Wmap::DomainTracker.new
-        my_domains=params[:file_content].split("\n")
-        raise ImportLimitError if my_domains.size>10
-        my_sites=[]
-        my_domains.map do |entry|
-          next unless site_tracker.is_domain_root?(entry)
-          my_site=domain_2_site(entry)
-          unless my_site.nil?
-            my_sites.push(my_site)
-          end
-        end
-        logger.debug "Processing sites: #{my_sites}"
-        site_tracker.adds(my_sites)
-        site_tracker.save!
-        logger.debug "Processing domains: #{my_domains}"
-        domain_tracker.adds(my_domains)
-        domain_tracker.save!
-        site_tracker=nil
-        domain_tracker=nil
-        render json: { message: 'Saving successed.' }
-      else
-        render json: { message: 'Saving failed, please check your file again.' }
-      end
-    rescue ImportLimitError => e
-      render json: { message: e.message }
-    rescue Psych::SyntaxError
-      file = File.open(params[:file_path], 'w+')
-      file.write(@restore)
-      file.close
-      render json: { message: 'Saving failed, please check your file again or contact the site administrator.' }
-    end
-=end
 
     private
 

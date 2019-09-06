@@ -34,15 +34,20 @@ class HostsController < ApplicationController
     end
 
     def edit
-      @dir =  Rails.root.join('shared', 'data')
+      #@dir =  Rails.root.join('shared', 'data')
+      @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+      Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
       logger.debug "My data dir: #{@dir}"
-      @file = Rails.root.join('shared', 'data', 'hosts')
+      #@file = Rails.root.join('shared', 'data', 'hosts')
+      @file = @dir.join('hosts')
+      File.new(@file, 'w+') unless File.exist?(@file)
       @uid = current_user.id
     end
 
     def load_file
       data = ''
-      @file = Rails.root.join('shared', 'data', 'hosts')
+      #@file = Rails.root.join('shared', 'data', 'hosts')
+      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'hosts')
       file = File.open(@file, 'r')
       file.each_line { |line| data += line }
       file.close
@@ -55,7 +60,8 @@ class HostsController < ApplicationController
         render json: { message: 'Access Denied.' }
         return false
       end
-      @file = Rails.root.join('shared', 'data', 'hosts')
+      #@file = Rails.root.join('shared', 'data', 'hosts')
+      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'hosts')
       file = File.open(@file, 'r')
       @restore = ''
       file.each_line { |line| @restore += line }
