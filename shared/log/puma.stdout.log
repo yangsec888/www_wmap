@@ -18426,3 +18426,88 @@ Processing by CidrsController#index as HTML
 Completed 200 OK in 144ms (Views: 137.1ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/home/page" for 127.0.0.1 at 2019-09-05 23:47:59 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 138ms (Views: 133.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-09-05 23:48:00 -0400
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EGULDIZ0GFggYzDH3uUGbEHZHnl23JqdDnvVzh1APvyIhej4BMz489Uk86Q1HKK17CREI30n86Dc2tjMdau3IQ==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 137ms (Views: 127.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seed/load_file?path=" for 127.0.0.1 at 2019-09-05 23:48:01 -0400
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/save_file" for 127.0.0.1 at 2019-09-05 23:48:02 -0400
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-06 03:17:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/edit" for 127.0.0.1 at 2019-09-05 23:48:03 -0400
+Processing by DomainsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 129ms (Views: 121.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2019-09-05 23:48:03 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/save_file" for 127.0.0.1 at 2019-09-05 23:48:05 -0400
+Started GET "/cidrs/edit" for 127.0.0.1 at 2019-09-05 23:48:05 -0400
+Processing by DomainsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"google.com, no"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-06 03:17:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by CidrsController#edit as HTML
+Update the domain table ...
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Database connection success. 
+Domain table truncate success.
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (0.5ms)
+Update complete. 
+Completed 200 OK in 64ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 178ms (Views: 136.1ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/cidrs/load_file?path=" for 127.0.0.1 at 2019-09-05 23:48:07 -0400
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
