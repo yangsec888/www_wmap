@@ -29,5 +29,8 @@ shared/temp/.*
 # Ignore database yml
 config/database.yml
 
+# Ignore puma configuration
+config/puma.rb
+
 # Ignore rdoc
 docs/

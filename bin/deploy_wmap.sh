@@ -40,9 +40,9 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle e
 
 # Step 5 - Restart the remote services
 echo "Stopping Nginx web service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo service nginx stop'
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl stop nginx'
 echo "Stopping Puma application server service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec pumactl -P /home/deploy/apps/www_wmap/shared/tmp/puma.pid stop' 2> /dev/null
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl stop puma'
 #echo "Stopping Sidekiq service ..."
 #ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo service sidekiq stop'
 sleep 3
@@ -50,7 +50,7 @@ echo "Stopping Sidekiq service ..."
 ssh -q deploy@${prod_host} 'source ~/.bash_profile;  sudo systemctl stop sidekiq'
 ##
 echo "Starting Puma application server service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec puma -e production &' 2> /dev/null
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl start puma'
 sleep 3
 
 echo "Starting Nginx web service ..."
@@ -58,5 +58,5 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl start nginx'
 echo "Done"
 
 echo "Starting Sidekiq service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; systemctl restart sidekiq'
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl start sidekiq'
 echo "Done"

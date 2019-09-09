@@ -18972,3 +18972,27 @@ White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_si
 Completed 200 OK in 166ms (Views: 150.8ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/logs/show?id=url_seeds.log" for 127.0.0.1 at 2019-09-09 13:47:08 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"url_seeds.log"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 38ms (ActiveRecord: 25.4ms)
+
+
+Started GET "/logs/show?id=url_seeds.log" for 127.0.0.1 at 2019-09-09 13:47:08 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"url_seeds.log"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-09 13:47:08 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 163ms (Views: 161.4ms | ActiveRecord: 0.0ms)
+
+
