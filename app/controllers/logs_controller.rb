@@ -11,23 +11,41 @@ class LogsController < ApplicationController
   before_action :authenticate_user!
 
   def list
-    dir = Rails.root.join('shared', 'log', 'wmap_logs')
+    dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('logs')
+    #dir = Rails.root.join('shared', 'log', 'wmap_logs')
     @log_files = Dir.glob("#{dir}/*.log").select{|f| File.file?(f)}
   end
 
   def show
-    @file = Rails.root.join('shared', 'log', 'wmap_logs', params[:id])
+    dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('logs')
+    white_list = Dir.glob(dir + '*.log')
+    logger.debug "White list: #{white_list}"
+    @file = dir.join(params[:id]).to_s
     @file_name = params[:id]
-    f = File.open(@file, 'r')
-    @file_contents = Array.new
-    f.each_line do |line|
-      @file_contents << line
+    if white_list.include?(@file)
+      f = File.open(@file, 'r')
+      @file_contents = Array.new
+      f.each_line do |line|
+        @file_contents << line
+      end
+    else
+      logger.debug "Unauthorized access: #{current_user.inspect}, #{@file}"
+      redirect_to destroy_user_session_path, :method => :delete
     end
+
   end
 
   def download
+    dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('logs')
+    white_list = Dir.glob(dir + '*.log')
+    file = dir.join(params[:file_name]).to_s
     if current_user.admin?
-      send_file Rails.root.join('shared', 'log', 'wmap_logs', params[:file_name])
+      if white_list.include?(file)
+        send_file file
+      else
+        logger.debug "Unauthorized access: #{current_user.inspect}, #{params[:file_name]}"
+        redirect_to destroy_user_session_path, :method => :delete
+      end
     else
       logger.debug "Current_user attributes: #{current_user.inspect}"
       redirect_back :fallback_location => root_path, :alert => "Access denied."

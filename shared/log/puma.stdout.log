@@ -18511,3 +18511,464 @@ Processing by CidrsController#load_file as TEXT
 Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms)
 
 
+[78654] - Gracefully shutting down workers...
+[78654] === puma shutdown: 2019-09-07 16:42:19 -0400 ===
+[78654] - Goodbye!
+Exiting
+=== puma startup: 2019-09-09 08:36:30 -0400 ===
+[1702] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1568032590939-1702
+[1702] - Worker 0 (pid: 1826) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2019-09-09 08:36:56 -0400
+  [1m[35m (32.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 3187ms (Views: 3143.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-09 08:37:25 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (233.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 447ms (Views: 379.1ms | ActiveRecord: 35.1ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-09 08:37:27 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9cBpVfa8ZFX4XUx9ERsdi1vDXX6G5l5daSW048Q4AuVSwA0ByuD104P44iL0GuejK2qvt5MrEt04HbpfqBPcIw==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (3.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-09 12:37:27', `last_sign_in_at` = '2019-09-06 03:17:13', `sign_in_count` = 27, `updated_at` = '2019-09-09 12:37:27' WHERE `users`.`id` = 2[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 93ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-09 08:37:27 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 178ms (Views: 173.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 08:37:30 -0400
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 183ms (Views: 170.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 08:37:37 -0400
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 185ms (Views: 175.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seed/start" for 127.0.0.1 at 2019-09-09 08:37:48 -0400
+Processing by SeedController#start as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 177ms (Views: 154.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seed/load_file?path=" for 127.0.0.1 at 2019-09-09 08:37:48 -0400
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 30ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 08:37:51 -0400
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 138ms (Views: 128.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 08:40:49 -0400
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 213ms (Views: 162.4ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/logs/show?id=wmap.log" for 127.0.0.1 at 2019-09-09 08:40:54 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"wmap.log"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /Users/sli/www_wmap/shared/log/wmap_logs/wmap.log):
+  
+app/controllers/logs_controller.rb:22:in `initialize'
+app/controllers/logs_controller.rb:22:in `open'
+app/controllers/logs_controller.rb:22:in `show'
+Started GET "/logs/show?id=wmap.log" for 127.0.0.1 at 2019-09-09 08:43:43 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"wmap.log"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 199ms (Views: 141.3ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/logs/show?id=url_seeds.log" for 127.0.0.1 at 2019-09-09 08:43:48 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"url_seeds.log"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 151ms (Views: 131.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logs/show?id=discovered_urls.log" for 127.0.0.1 at 2019-09-09 08:43:54 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_urls.log"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 164ms (Views: 146.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logs/show?id=discovered_sites.log" for 127.0.0.1 at 2019-09-09 08:44:03 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_sites.log"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 148ms (Views: 128.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 09:25:29 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 71ms (ActiveRecord: 24.5ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 09:25:29 -0400
+Processing by LogsController#list as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-09 09:25:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 212ms (Views: 209.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-09 09:25:31 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kQipUm0klGFdPzNKYF9vU8qWczxWwOvqcsh2prFO0Zd/5AoXK+BkD03FekzL/7J5r0zUHzMdhWwZdr9Uv9M+SQ==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-09 13:25:31', `last_sign_in_at` = '2019-09-09 12:37:27', `sign_in_count` = 28, `updated_at` = '2019-09-09 13:25:31' WHERE `users`.`id` = 2[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/logs/list
+Completed 302 Found in 45ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 09:25:31 -0400
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 170ms (Views: 163.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logs/show?id=discovered_sites.log" for 127.0.0.1 at 2019-09-09 09:25:33 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_sites.log"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Unauthorized access: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-09 13:25:31", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>, /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log
+Redirected to http://127.0.0.1:3000/users/logout
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2019-09-09 09:25:33 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-09 09:25:33 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 171ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 09:26:55 -0400
+Processing by LogsController#list as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-09 09:26:55 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 180ms (Views: 179.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-09 09:26:56 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LiFxkpquA9JzQmvsFdXjMXlNns+hv43RI+W8LC5pMUOu90XXHGTSJkK7CGm3pis0W7tkafbGATggKaKtWfhT/A==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-09 13:26:56', `last_sign_in_at` = '2019-09-09 13:25:31', `sign_in_count` = 29, `updated_at` = '2019-09-09 13:26:56' WHERE `users`.`id` = 2[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/logs/list
+Completed 302 Found in 52ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 09:26:56 -0400
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 188ms (Views: 180.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logs/show?id=discovered_sites.log" for 127.0.0.1 at 2019-09-09 09:27:16 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_sites.log"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Unauthorized access: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-09 13:26:56", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>, /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log
+Redirected to http://127.0.0.1:3000/users/logout
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2019-09-09 09:27:16 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-09 09:27:16 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 154ms (Views: 151.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 09:32:12 -0400
+Processing by LogsController#list as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-09 09:32:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 188ms (Views: 146.1ms | ActiveRecord: 19.2ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-09 09:32:13 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fj1kNoqB7c0xkg7ZCKgItJm8v4zs8D8flHRjnTRm1rSFAQ80OUZnBPleXOcKileKzpuLnbPNS3SAOSTKoUiOeQ==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-09 13:32:13', `last_sign_in_at` = '2019-09-09 13:26:56', `sign_in_count` = 30, `updated_at` = '2019-09-09 13:32:13' WHERE `users`.`id` = 2[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/logs/list
+Completed 302 Found in 48ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 09:32:13 -0400
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 149ms (Views: 141.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logs/show?id=discovered_sites.log" for 127.0.0.1 at 2019-09-09 09:32:29 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_sites.log"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_urls.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/url_seeds.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/wmap.log"]
+Unauthorized access: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-09 13:32:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>, /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log
+Redirected to http://127.0.0.1:3000/users/logout
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2019-09-09 09:32:29 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-09 09:32:29 -0400
+Processing by HomeController#page as HTML
+Started GET "/logs/show?id=discovered_sites.log" for 127.0.0.1 at 2019-09-09 09:32:29 -0400
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_sites.log"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-09 09:32:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 221ms (Views: 216.5ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 195ms (Views: 193.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-09 09:39:46 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1I/aWeQtDz3rtAbdzQIr/w5kw0nH/R4iOGU9jqhnWJDXRAvrTI8482wAIqNnbpKIjVA0n8DmsNBVVOLTBu6qRA==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-09 13:39:46', `last_sign_in_at` = '2019-09-09 13:32:13', `sign_in_count` = 31, `updated_at` = '2019-09-09 13:39:46' WHERE `users`.`id` = 2[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/logs/show?id=discovered_sites.log
+Completed 302 Found in 88ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/logs/show?id=discovered_sites.log" for 127.0.0.1 at 2019-09-09 09:39:46 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_sites.log"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_urls.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/url_seeds.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/wmap.log"]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `strip!' for #<Pathname:0x00007fc11ff46090>):
+  
+app/controllers/logs_controller.rb:23:in `show'
+Started GET "/users/login" for 127.0.0.1 at 2019-09-09 09:40:51 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 47ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-09 09:40:52 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 156ms (Views: 152.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-09 09:41:05 -0400
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 163ms (Views: 155.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logs/show?id=discovered_sites.log" for 127.0.0.1 at 2019-09-09 09:41:06 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_sites.log"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_urls.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/url_seeds.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 149ms (Views: 130.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/logs/show?id=discovered_urls.log" for 127.0.0.1 at 2019-09-09 09:41:09 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_urls.log"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_urls.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/url_seeds.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 159ms (Views: 144.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/logs/download?method=post" for 127.0.0.1 at 2019-09-09 09:41:28 -0400
+Processing by LogsController#download as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Me6ab5LRlqqqlAaOEFDbe3kZ280sBocNTv9NHscopXsceukuU8ZYzQSfjA/ZocO+wko2DdiYOuKp52alhm+K1g==", "file_name"=>"discovered_sites.log", "commit"=>"Download", "method"=>"post"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 19.3ms)
+
+
+  
+NoMethodError (undefined method `include?' for #<Pathname:/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs>):
+  
+app/controllers/logs_controller.rb:43:in `download'
+Started POST "/logs/download?method=post" for 127.0.0.1 at 2019-09-09 09:41:56 -0400
+Processing by LogsController#download as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Me6ab5LRlqqqlAaOEFDbe3kZ280sBocNTv9NHscopXsceukuU8ZYzQSfjA/ZocO+wko2DdiYOuKp52alhm+K1g==", "file_name"=>"discovered_sites.log", "commit"=>"Download", "method"=>"post"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Sent file /Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log (0.2ms)
+Completed 200 OK in 50ms (ActiveRecord: 20.4ms)
+
+
+Started GET "/logs/show?id=wmap.log" for 127.0.0.1 at 2019-09-09 09:42:27 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"wmap.log"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_urls.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/url_seeds.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 166ms (Views: 150.8ms | ActiveRecord: 0.5ms)
+
+
