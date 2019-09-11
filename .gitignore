@@ -34,3 +34,6 @@ config/puma.rb
 
 # Ignore rdoc
 docs/
+
+# Ignore assets pipeline
+public/assets/
