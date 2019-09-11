@@ -18297,3 +18297,560 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 163ms (Views: 161.4ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/users/login" for 127.0.0.1 at 2019-09-09 15:12:18 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gVLDprwzokUhd1Bwiazfy59JVO0Yva/3DvT7g2hNeSBcLyc3+HwAxFEVm67KZ+V5njHFqkf46w/M6aoy80u7Jg==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-09 19:12:18', `last_sign_in_at` = '2019-09-09 13:39:46', `sign_in_count` = 32, `updated_at` = '2019-09-09 19:12:18' WHERE `users`.`id` = 2[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/logs/show?id=url_seeds.log
+Completed 302 Found in 59ms (ActiveRecord: 20.5ms)
+
+
+Started GET "/logs/show?id=url_seeds.log" for 127.0.0.1 at 2019-09-09 15:12:18 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"url_seeds.log"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_urls.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/url_seeds.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 134ms (Views: 126.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/index" for 127.0.0.1 at 2019-09-09 15:12:28 -0400
+Processing by DomainsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (1.6ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.8ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 189ms (Views: 122.6ms | ActiveRecord: 35.5ms)
+
+
+Started GET "/domains/index?reload" for 127.0.0.1 at 2019-09-09 15:12:29 -0400
+Processing by DomainsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 149ms (Views: 140.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cidrs/index" for 127.0.0.1 at 2019-09-09 15:12:30 -0400
+Processing by CidrsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (5.6ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (27.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 171ms (Views: 132.5ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/cidrs/index?reload" for 127.0.0.1 at 2019-09-09 15:12:30 -0400
+Processing by CidrsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 128ms (Views: 121.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/domains/index" for 127.0.0.1 at 2019-09-09 15:12:33 -0400
+Processing by DomainsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 133ms (Views: 123.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/domains/index?reload" for 127.0.0.1 at 2019-09-09 15:12:33 -0400
+Processing by DomainsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 125ms (Views: 117.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-10 08:50:50 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 869ms (ActiveRecord: 36.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-10 08:50:51 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 123ms (Views: 120.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/domains/index" for 127.0.0.1 at 2019-09-10 08:51:01 -0400
+Processing by DomainsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-10 08:51:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (22.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 143ms (Views: 139.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-10 08:51:02 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOfHo4bequY2u7YyO0LLjKT6w6yku6OXzUUQU0Nz2H0SpStstpiHU5Wz/u7BY6waFu8iB0IOU0hgkorEC+meHA==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-10 12:51:02', `last_sign_in_at` = '2019-09-09 19:12:18', `sign_in_count` = 33, `updated_at` = '2019-09-10 12:51:02' WHERE `users`.`id` = 2[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/domains/index
+Completed 302 Found in 51ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/domains/index" for 127.0.0.1 at 2019-09-10 08:51:02 -0400
+Processing by DomainsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 158ms (Views: 104.7ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/domains/index?reload" for 127.0.0.1 at 2019-09-10 08:51:03 -0400
+Processing by DomainsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 123ms (Views: 114.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/domains/search_list" for 127.0.0.1 at 2019-09-10 08:51:13 -0400
+Processing by DomainsController#search_list as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I8VC29026pTxU8rr3AwbRME98HHgVzTO+rmhUfrMawEy7NauTjaYx2kCs6sb6C+yt/1CDhrHdJGL7V2QhShFng==", "keyword"=>"google"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/search_list.html.erb within layouts/application
+  [1m[36mDomain Load (0.9ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` WHERE (name like '%google%') LIMIT 10[0m
+  Rendered domains/search_list.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 139ms (Views: 119.9ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/logout" for 127.0.0.1 at 2019-09-10 08:51:17 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XW4cLNKJx1/ocsk9RsMf5WVUVRrgWSi9ZRsUvibDbbxMR4hZQYm1DHAjsH2BJysTE5TnZRrJaOIUT+h/WSdDIw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-10 08:51:17 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 116ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/domains/search_list" for 127.0.0.1 at 2019-09-10 08:51:21 -0400
+Processing by DomainsController#search_list as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"obSotdyUoo1ffG/N/YaRQv1mCA6e+uBT05cBB/TY1upcxbWc4HflAQV1cfcMQNo3wKlLWh4TYuRYiOhWaIFUIA==", "keyword"=>"google"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-10 08:51:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 118.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-10 08:51:22 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f3u80rH3L/X+qpVzjWyhVu/jscIzsN/kET4qwMM3GgeCCqH7jRRoeaSji0l8quoj0izylrNZXVOaIcORX26YzQ==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-10 12:51:22', `last_sign_in_at` = '2019-09-10 12:51:02', `sign_in_count` = 34, `updated_at` = '2019-09-10 12:51:22' WHERE `users`.`id` = 2[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 45ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-10 08:51:22 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 109ms (Views: 105.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-09-10 09:24:26 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s2PhwshNHFLmYh+a1kP3ZeA6gZRtgYdBegrvtY65uhXc8FXPgA+xZ2yQImDK+FsHajCiz65FLfZ3v1daR6/jag==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 86ms (ActiveRecord: 27.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-10 09:24:26 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 758ms (Views: 754.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-09-10 13:41:17 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hmaxuUE1YKOjktBmsm2Ulsh89TzL80UIRpW2sXt8XWcEN2gAujIATKo+yYPVNUy5x31H6rYYGuWaJqFkAcwQzg==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-10 13:41:17 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (50.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1012ms (Views: 956.5ms | ActiveRecord: 29.4ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-10 14:09:46 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (56.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 3598ms (Views: 3510.0ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/assets/bootstrap.min.self-723f4ff8f07d8789f750be9d2c92995d8f1b00afccabfedea5a382bbf37c07b8.css?body=1" for 127.0.0.1 at 2019-09-10 14:09:50 -0400
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-e428df4f2491c5e16ea112787a98bce87a09ef0f3e2e7e8ea1eafbdd4d952c56.css?body=1" for 127.0.0.1 at 2019-09-10 14:09:50 -0400
+Started GET "/assets/codemirror.self-4fc3fe9f207458690501ffca79f799333752dff031ce9d2bfffbe67ad65eb23a.css?body=1" for 127.0.0.1 at 2019-09-10 14:09:50 -0400
+Started GET "/assets/popup.self-3c4a3e2a44a139e256c8151e97630733227835b7d12b6f916e2247b427eb5cdc.css?body=1" for 127.0.0.1 at 2019-09-10 14:09:50 -0400
+Started GET "/assets/jstree.self-041a3e66d9165e55d92eecd8cbe09a773faf0382e513bde24f892ee9df8d6932.css?body=1" for 127.0.0.1 at 2019-09-10 14:09:50 -0400
+Started GET "/assets/jstree.min.self-9904f000b38ec8e834e2e237b535e042e14eb62f3eeeebdc1dcd008f17f05e94.css?body=1" for 127.0.0.1 at 2019-09-10 14:09:50 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/application.self-53bd841cefdce44dd7015fdf348c725999dfb8b80400ba8a14ec6e7e42b4b900.css?body=1" for 127.0.0.1 at 2019-09-10 14:09:50 -0400
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started POST "/users/login" for 127.0.0.1 at 2019-09-10 14:09:52 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZTC6m+g+0gcs1USjVcR6/g9ckFEzInxIfRuFLxbZpzjnYWMiEzmy6CV5XUYynKLRAF0ih07JI6WhqJL6bGnqkQ==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-10 18:09:52', `last_sign_in_at` = '2019-09-10 12:51:22', `sign_in_count` = 35, `updated_at` = '2019-09-10 18:09:52' WHERE `users`.`id` = 2[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 103ms (ActiveRecord: 34.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-10 14:09:52 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 154ms (Views: 149.4ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `www_wmap_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE `www_wmap_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `cidrs` CASCADE[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE `cidrs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `owed_cidr` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `ref` varchar(255), `netname` varchar(255)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `documents` CASCADE[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE `documents` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `uid` int, `name` varchar(255), `attachment` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `domains` CASCADE[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE `domains` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `division` varchar(255), `transferable` tinyint(1), `keep` varchar(255), `imprint` varchar(255), `current_redirect` varchar(255), `new_redirect` varchar(255), `pub_team` varchar(255), `contact` varchar(255), `notes` varchar(255)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `hosts` CASCADE[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE `hosts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `host_name` varchar(255), `ip` varchar(255), `uid` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `logs` CASCADE[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE `logs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `file_name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `reports` CASCADE[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE `reports` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `description` text, `division` varchar(255), `department` varchar(255), `published` tinyint(1), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `attachment_url` varchar(255), `category` varchar(255)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `seeds` CASCADE[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE `seeds` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `uid` int, `hosts` text, `ips` text, `cidrs` text, `entity_name` varchar(255), `verified` tinyint(1), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `sites` CASCADE[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE `sites` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `site` varchar(255), `user_id` int, `ip` varchar(255), `port` int, `url` varchar(255), `code` int, `redirection` varchar(255), `md5` varchar(255), `server` varchar(255), `timestamp` datetime, `status` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `tags` CASCADE[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `site` varchar(255), `name` varchar(255), `description` varchar(255), `signature` varchar(255), `sign_desc` mediumtext, `sign_ver` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `redirection` varchar(255), `division` varchar(255)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `uploads` CASCADE[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE `uploads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `attachment` varchar(255), `file_type` varchar(255), `switch_tag` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `failed_attempts` int DEFAULT 0, `unlock_token` varchar(255), `locked_at` datetime, `department` varchar(255), `username` varchar(255), `role` int, `dn` varchar(255), `name` varchar(255), `employee_type` varchar(255), `employee_number` varchar(255), UNIQUE INDEX `index_users_on_confirmation_token`  (`confirmation_token`), UNIQUE INDEX `index_users_on_email`  (`email`), UNIQUE INDEX `index_users_on_reset_password_token`  (`reset_password_token`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20190826183901)[0m
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20170104075306),
+(20170104115736),
+(20170105010828),
+(20171214210037),
+(20171214211509),
+(20171219185151),
+(20171219195527),
+(20171220222058),
+(20180108205506),
+(20180117205603),
+(20181212151804),
+(20181213181525),
+(20190129144905),
+(20190204172800),
+(20190207140802),
+(20190207141242),
+(20190214195016),
+(20190217150636),
+(20190220134957),
+(20190312153942),
+(20190312223117),
+(20190326201126),
+(20190402155225),
+(20190411132001);
+
+[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-09-11 19:08:52', '2019-09-11 19:08:52')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `cidrs` CASCADE[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE `cidrs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `owed_cidr` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `ref` varchar(255), `netname` varchar(255)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `documents` CASCADE[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE `documents` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `uid` int, `name` varchar(255), `attachment` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `domains` CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE `domains` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `division` varchar(255), `transferable` tinyint(1), `keep` varchar(255), `imprint` varchar(255), `current_redirect` varchar(255), `new_redirect` varchar(255), `pub_team` varchar(255), `contact` varchar(255), `notes` varchar(255)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `hosts` CASCADE[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE `hosts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `host_name` varchar(255), `ip` varchar(255), `uid` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `logs` CASCADE[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE `logs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `file_name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `reports` CASCADE[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE `reports` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `description` text, `division` varchar(255), `department` varchar(255), `published` tinyint(1), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `attachment_url` varchar(255), `category` varchar(255)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `seeds` CASCADE[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE `seeds` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `uid` int, `hosts` text, `ips` text, `cidrs` text, `entity_name` varchar(255), `verified` tinyint(1), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `sites` CASCADE[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE `sites` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `site` varchar(255), `user_id` int, `ip` varchar(255), `port` int, `url` varchar(255), `code` int, `redirection` varchar(255), `md5` varchar(255), `server` varchar(255), `timestamp` datetime, `status` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `tags` CASCADE[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `site` varchar(255), `name` varchar(255), `description` varchar(255), `signature` varchar(255), `sign_desc` mediumtext, `sign_ver` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `redirection` varchar(255), `division` varchar(255)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS `uploads` CASCADE[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE `uploads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `attachment` varchar(255), `file_type` varchar(255), `switch_tag` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `failed_attempts` int DEFAULT 0, `unlock_token` varchar(255), `locked_at` datetime, `department` varchar(255), `username` varchar(255), `role` int, `dn` varchar(255), `name` varchar(255), `employee_type` varchar(255), `employee_number` varchar(255), UNIQUE INDEX `index_users_on_confirmation_token`  (`confirmation_token`), UNIQUE INDEX `index_users_on_email`  (`email`), UNIQUE INDEX `index_users_on_reset_password_token`  (`reset_password_token`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20190826183901)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20170104075306),
+(20170104115736),
+(20170105010828),
+(20171214210037),
+(20171214211509),
+(20171219185151),
+(20171219195527),
+(20171220222058),
+(20180108205506),
+(20180117205603),
+(20181212151804),
+(20181213181525),
+(20190129144905),
+(20190204172800),
+(20190207140802),
+(20190207141242),
+(20190214195016),
+(20190217150636),
+(20190220134957),
+(20190312153942),
+(20190312223117),
+(20190326201126),
+(20190402155225),
+(20190411132001);
+
+[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-09-11 19:08:52', '2019-09-11 19:08:52')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.7ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'test' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mReport Load (0.6ms)[0m  [1m[34mSELECT `reports`.* FROM `reports`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReport Create (0.3ms)[0m  [1m[32mINSERT INTO `reports` (`title`, `description`, `department`, `published`, `created_at`, `updated_at`) VALUES ('All Websites', 'All live websites that are stored within our system.', 'IT', TRUE, '2019-09-11 19:08:52', '2019-09-11 19:08:52')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReport Create (0.5ms)[0m  [1m[32mINSERT INTO `reports` (`title`, `description`, `department`, `published`, `created_at`, `updated_at`) VALUES ('All Domains', 'All registrated domains belong to us, that\'s stored within our system.', 'IT', TRUE, '2019-09-11 19:08:52', '2019-09-11 19:08:52')[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReport Create (0.9ms)[0m  [1m[32mINSERT INTO `reports` (`title`, `description`, `department`, `published`, `created_at`, `updated_at`) VALUES ('All Hosts', 'All hosts belong to us, that\'s stored within our system', 'IT', TRUE, '2019-09-11 19:08:52', '2019-09-11 19:08:52')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReport Create (0.5ms)[0m  [1m[32mINSERT INTO `reports` (`title`, `description`, `department`, `published`, `created_at`, `updated_at`) VALUES ('All Networks', 'All registrated networks belong to us, in CIDR format, that\'s stored within our system.', 'IT', TRUE, '2019-09-11 19:08:52', '2019-09-11 19:08:52')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `reports`[0m
+Started GET "/" for 172.19.0.1 at 2019-09-11 19:54:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (10.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 7364ms (Views: 7325.6ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/seed/start" for 172.19.0.1 at 2019-09-11 19:55:13 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VXezd58NL7EZDON0PZQFjBY2YwurXUyFV2EbDtIUDkfWn8MUpcnkx5yfQ9qvPjrHOPIfbnvDCiLLBSkEUe0+Qw==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 172.19.0.1 at 2019-09-11 19:55:13 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (41.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 622ms (Views: 601.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 172.19.0.1 at 2019-09-11 19:55:16 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OOlhDCWlOr1PfVgBHJaexgTWFYSmMIKjLhERJJlnw3W7ARFvH2Hxy8ru+K+OPKGNKhJp4XauxASydSMuGp7zcQ==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'yang.li@owasp.org' LIMIT 1[0m
+  [1m[36mUser Create (7.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `username`, `role`) VALUES ('yang.li@owasp.org', '$2a$11$cBA/WtT/d3Aozll6e4mECOd9fvFk.LbfmdHxijFbpF34D26QeJpeO', '2019-09-11 19:55:17', '2019-09-11 19:55:17', 'admin', 0)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-11 19:55:17', `last_sign_in_at` = '2019-09-11 19:55:17', `current_sign_in_ip` = '172.19.0.1', `last_sign_in_ip` = '172.19.0.1', `sign_in_count` = 1 WHERE `users`.`id` = 1[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 210ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/" for 172.19.0.1 at 2019-09-11 19:55:17 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 542ms (Views: 529.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logs/list" for 172.19.0.1 at 2019-09-11 19:56:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 497ms (Views: 483.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logs/show?id=wmap.log" for 172.19.0.1 at 2019-09-11 19:57:01 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"wmap.log"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/usr/local/bundle/gems/wmap-2.5.5/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 569ms (Views: 550.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 172.19.0.1 at 2019-09-11 19:57:44 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-11 19:55:17", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY username asc[0m
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_sub_menu.html.erb (0.3ms)
+  Rendered users/_user.html.erb (1.7ms)
+  Rendered users/index.html.erb within layouts/application (36.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 626ms (Views: 606.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/home/page" for 172.19.0.1 at 2019-09-11 19:57:48 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 514ms (Views: 502.9ms | ActiveRecord: 0.7ms)
+
+

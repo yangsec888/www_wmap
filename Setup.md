@@ -70,7 +70,7 @@ This [post](https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a) 
 ```sh
 $ sudo vi /lib/systemd/system/sidekiq.service
 ```
-You can also use our deployment [sidekiq.service](/config/sidekiq.service) under Ubuntu 18.0.4 instance for further reference. 
+You can also use our deployment [sidekiq.service](/config/sidekiq.service) under Ubuntu 18.0.4 instance for further reference.
 
 ### 7.2. Enable sidekiq service:
 ```sh
@@ -83,34 +83,38 @@ $ sudo systemctl start sidekiq
 $ ps uax | grep sidekiq
 $ sudo systemctl status sidekiq
 ```
+## 8. Install JS runtime:
+```sh
+$ sudo apt install nodejs
+```
 
-## 8. Install wmap front-end:
+## 9. Install wmap front-end:
 ```sh
 $ git clone https://github.com/yangsec888/www_wmap.git
 ```
 
-### 8.1. Update the rails environment:
+### 9.1. Update the rails environment:
 ```sh
 $ bundle install
 ```
 
-### 8.2. Create the database instance:
+### 9.2. Create the database instance:
 ```sh
 $ rake db:create
 ```
 
-### 8.3. Create the database table:
+### 9.3. Create the database table:
 ```sh
 $ rake db:migrate
 ```
 
-### 8.4. Generate the application encryption key:
+### 9.4. Generate the application encryption key:
 Refer to [this article](https://github.com/rails/rails/blob/master/railties/lib/rails/commands/credentials/USAGE) for details:
 ```sh
 $ rails credentials:help
 ```
 
-### 8.5. Configure the rails environment variables:
+### 9.5. Configure the rails environment variables:
 Here are the environmental variables you might need to add to environment:
 ```sh
 $ vi ~/.bashrc
@@ -125,31 +129,31 @@ export DBUSER=xxxx
 export DBPASS=xxxx
 ```
 
-## 9. Puma Application Server
+## 10. Puma Application Server
 Puma is the build-in application server for Rails 5. You might want to configure it in 'config/puma.rb'
 Refer to [How to Deploy a Rails App with Puma and Nginx](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-puma-and-nginx-on-ubuntu-14-04) for  detail explanations.
 
-### 9.1 Puma Configuration
+### 10.1 Puma Configuration
 Refer to [puma.rb](/config/puma.rb) for detail.
 
-## 10. Install NGINX:
+## 11. Install NGINX:
 We'll use Nginx web server for the web server layer. It's perfect server to render static application asset. In addition, it'll be setup to proxy traffic for Rails service running in the Puma application server layer.
 
 ```sh
 $ sudo apt-get install nginx
 ```
 
-### 10.1. Create a self-sign cert. Refer to this [link](https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes) for reference.
+### 11.1. Create a self-sign cert. Refer to this [link](https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes) for reference.
 
-### 10.2. Configure the web server:
+### 11.2. Configure the web server:
 Make sure it's tight up with your Puma application configuration. Refer to [nginx.conf](/config/nginx.conf) for more details.
 
 
-## 11. Setup Ubuntu Firewall:
+## 12. Setup Ubuntu Firewall:
 How to [Setup a Firewall with UFW](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-18-04) on Ubuntu:
 
 
-## 12. Setup Postfix as Send Only SMTP Server
+## 13. Setup Postfix as Send Only SMTP Server
 The App would need to send out notification email of async jobs. Such as upon successful asset discovery job. In order to do that, you would need to setup a SMTP send out only server.
 Refer to [this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-debian-10) for detail explanations and instructions.
 
