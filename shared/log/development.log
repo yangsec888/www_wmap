@@ -19915,3 +19915,860 @@ White list: ["/usr/local/bundle/gems/wmap-2.5.5/logs/wmap.log", "/usr/local/bund
 Completed 200 OK in 766ms (Views: 741.0ms | ActiveRecord: 0.5ms)
 
 
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('3489165623943321000', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('3489165623943321000')[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('3489165623943321000', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('3489165623943321000')[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 172.19.0.1 at 2019-09-12 14:06:54 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 2794ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 172.19.0.1 at 2019-09-12 14:06:57 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 561ms (Views: 548.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sites/index" for 172.19.0.1 at 2019-09-12 14:07:30 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 172.19.0.1 at 2019-09-12 14:07:30 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (21.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 588ms (Views: 582.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 172.19.0.1 at 2019-09-12 14:07:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/0Qx+3Q3Yyif5VjS+uAbOydUVrHKXg5IVFfklt5Mumtl1R1MeqqrXkJDtcK85TcnBAMH4Rko+HQXhKghxf35Mg==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (3.1ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-12 14:07:33', `last_sign_in_at` = '2019-09-12 03:09:30', `sign_in_count` = 4, `updated_at` = '2019-09-12 14:07:33' WHERE `users`.`id` = 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/sites/index
+Completed 302 Found in 42ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/sites/index" for 172.19.0.1 at 2019-09-12 14:07:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.7ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 702ms (Views: 666.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/sites/index?reload" for 172.19.0.1 at 2019-09-12 14:07:34 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.6ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 732ms (Views: 714.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/sites/edit" for 172.19.0.1 at 2019-09-12 14:07:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#edit as HTML
+  Parameters: {"authenticity_token"=>"Qz/fIy0Rac+xQNgKg2+j0aqVMmGhc42gu3Pw15H8HZ1r/R0oQdNJaR3TfACBXeLxlFl3b1/d76D32zqUF+1inw=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/edit.html.erb within layouts/application
+  Rendered sites/edit.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 585ms (Views: 563.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sites/load_file?path=" for 172.19.0.1 at 2019-09-12 14:07:37 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home/page" for 172.19.0.1 at 2019-09-12 14:07:47 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 646ms (Views: 632.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/seed/start" for 172.19.0.1 at 2019-09-12 14:07:49 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GeJhN863s1+I1Fd4CXvO+B8R+zV8gT1wb7E6LJFtJDkxIKM8onWT+SRH83ILSY/YId2+O4IvX3AjGfBvF3xbOw==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 588ms (Views: 572.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/seed/load_file?path=" for 172.19.0.1 at 2019-09-12 14:07:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/seed/save_file" for 172.19.0.1 at 2019-09-12 14:07:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 14:07:33", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/domains/edit" for 172.19.0.1 at 2019-09-12 14:07:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 628ms (Views: 612.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/domains/load_file?path=" for 172.19.0.1 at 2019-09-12 14:07:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/domains/save_file" for 172.19.0.1 at 2019-09-12 14:08:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cidrs/edit" for 172.19.0.1 at 2019-09-12 14:08:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"google.com, no"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 14:07:33", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Completed 200 OK in 55ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Processing by CidrsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 707ms (Views: 684.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cidrs/load_file?path=" for 172.19.0.1 at 2019-09-12 14:08:01 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cidrs/save_file" for 172.19.0.1 at 2019-09-12 14:08:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/seed/distest" for 172.19.0.1 at 2019-09-12 14:08:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CidrsController#save_file as JSON
+Processing by SeedController#distest as HTML
+  Parameters: {"file_path"=>"", "file_content"=>"# Local cidrs file created by Wmap::CidrTracker.save method at: 2018-11-20 21:25:32 -0500\nNetwork CIDR, CIDR RIPE Reference Text, CIDR NETNAME\n10.0.0.0/8,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n192.168.0.0/16,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.16.0.0/12, Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.217.0.0/16, https://rdap.arin.net/registry/ip/172.217.0.0, GOOGLE"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 14:07:33", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 92ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 839ms (Views: 808.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/seed/discovery" for 172.19.0.1 at 2019-09-12 14:08:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"XjEBBIljWoL3kSB3yBD5j10DKAYGIbdWQPz9WdKbTH1288MP5aF6JFsChH3KIrivY89tCPiP1VYMVDcaVIozfw=="}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 14:07:33", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 759ms (Views: 693.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2019-09-12 10:36:06 -0400
+  
+Mysql2::Error::ConnectionError (Unknown MySQL server host 'mariadb' (8)):
+  
+mysql2 (0.5.2) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.2) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/home/page" for 127.0.0.1 at 2019-09-12 10:53:04 -0400
+  
+Mysql2::Error::ConnectionError (Unknown MySQL server host 'mariadb' (8)):
+  
+mysql2 (0.5.2) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.2) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/home/page" for 127.0.0.1 at 2019-09-12 10:55:07 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (34.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1285ms (Views: 1220.6ms | ActiveRecord: 35.5ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-09-12 10:55:12 -0400
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8s57/iNrgCmAdIOfx2YuUwo7n3Bik18g9d3GXhRNvyLaDLn1T6mgjyznJ5XFVG9zNPfafpw9PSC5dQwdklzAIA==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-12 10:55:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (192.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 368ms (Views: 341.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-12 10:55:13 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ND6Q3uGLr356Ao46NPmnnf7ZX8r9st4uu8Heq3yfasIc/FLVjUmP2NaRKjA2y+a9wBUaxAMcvC73aRTo+o4VwA==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-12 14:55:13', `last_sign_in_at` = '2019-09-10 18:09:52', `sign_in_count` = 36, `updated_at` = '2019-09-12 14:55:13' WHERE `users`.`id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 73ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-09-12 10:55:13 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 180ms (Views: 176.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-09-12 10:55:16 -0400
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Epek3M/gsEKT1HLLcmXu/EFNxkYOLooEGVYE67hR/g9vCX53qFEseXhwOziBTYVNZc+OEAGMEj/A82E77ABrJQ==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 168ms (Views: 159.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/seed/load_file?path=" for 127.0.0.1 at 2019-09-12 10:55:16 -0400
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/seed/save_file" for 127.0.0.1 at 2019-09-12 10:55:53 -0400
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-12 14:55:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/edit" for 127.0.0.1 at 2019-09-12 10:55:54 -0400
+Processing by DomainsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 132.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2019-09-12 10:55:54 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/domains/save_file" for 127.0.0.1 at 2019-09-12 10:56:01 -0400
+Started GET "/cidrs/edit" for 127.0.0.1 at 2019-09-12 10:56:01 -0400
+Processing by DomainsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"google.com,no"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-12 14:55:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Completed 200 OK in 150ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Processing by CidrsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 158ms (Views: 133.3ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/cidrs/load_file?path=" for 127.0.0.1 at 2019-09-12 10:56:02 -0400
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/cidrs/save_file" for 127.0.0.1 at 2019-09-12 10:56:46 -0400
+Started GET "/seed/distest" for 127.0.0.1 at 2019-09-12 10:56:46 -0400
+Processing by CidrsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local cidrs file created by Wmap::CidrTracker.save method at: 2018-11-20 21:25:32 -0500\nNetwork CIDR, CIDR RIPE Reference Text, CIDR NETNAME\n10.0.0.0/8,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n192.168.0.0/16,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.16.0.0/12, Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.217.0.0/16, https://rdap.arin.net/registry/ip/172.217.0.0, GOOGLE"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-12 14:55:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 151ms (Views: 143.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2019-09-12 10:56:52 -0400
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"uPBm9TDnfGp7/XXPYwvb1FX1sboJROaaHk7jP199lbfFbrxeV1bgUZBZPDyQI7BlcXf57AbmfqHH64bvCywAnQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-12 14:55:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 145ms (Views: 126.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2019-09-12 11:06:09 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"uPBm9TDnfGp7/XXPYwvb1FX1sboJROaaHk7jP199lbfFbrxeV1bgUZBZPDyQI7BlcXf57AbmfqHH64bvCywAnQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-12 14:55:13", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 679ms (Views: 606.8ms | ActiveRecord: 18.9ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2019-09-12 11:43:48 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"uPBm9TDnfGp7/XXPYwvb1FX1sboJROaaHk7jP199lbfFbrxeV1bgUZBZPDyQI7BlcXf57AbmfqHH64bvCywAnQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 71ms (ActiveRecord: 20.3ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-09-12 11:43:48 -0400
+Processing by SeedController#distest as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-12 11:43:48 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (26.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 628ms (Views: 622.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-12 11:51:39 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8OztuWo9wFvoJ2xrokql/gQ3BiQFzwM61zoDsPLzswhaJijI+OaZ7jklTMnPfehggsczmnm4lEhlv+tzvu9krA==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-12 15:51:39', `last_sign_in_at` = '2019-09-12 14:55:13', `sign_in_count` = 37, `updated_at` = '2019-09-12 15:51:39' WHERE `users`.`id` = 2[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/seed/distest
+Completed 302 Found in 71ms (ActiveRecord: 27.0ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-09-12 11:51:39 -0400
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 140.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2019-09-12 11:51:43 -0400
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"d+7rCOmZWI+eEY+0EqZFTdLNF29wKbQRwOhoTO1e/HfPlMjtqrc9uP+DVl79hJGGkeNhZBhnxGxAiDg1U6ltoA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-12 15:51:39", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 220ms (Views: 204.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: aa96ec53-072a-4424-b760-5b682bef9629) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yang.li@owasp.org", "2019-09-12 11:51:43 -0400", "2019-09-12 11:52:31 -0400"
+[ActiveJob] [ActionMailer::DeliveryJob] [aa96ec53-072a-4424-b760-5b682bef9629] Performing ActionMailer::DeliveryJob (Job ID: aa96ec53-072a-4424-b760-5b682bef9629) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yang.li@owasp.org", "2019-09-12 11:51:43 -0400", "2019-09-12 11:52:31 -0400"
+[ActiveJob] [ActionMailer::DeliveryJob] [aa96ec53-072a-4424-b760-5b682bef9629] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [aa96ec53-072a-4424-b760-5b682bef9629]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [aa96ec53-072a-4424-b760-5b682bef9629]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (1.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [aa96ec53-072a-4424-b760-5b682bef9629] UserMailer#discovery_completion_notice: processed outbound mail in 434.2ms
+[ActiveJob] [ActionMailer::DeliveryJob] [aa96ec53-072a-4424-b760-5b682bef9629] Sent mail to yang.li@owasp.org (74.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [aa96ec53-072a-4424-b760-5b682bef9629] Date: Thu, 12 Sep 2019 11:52:33 -0400
+From: deploy@wmap.io
+To: yang.li@owasp.org
+Message-ID: <5d7a69c1a696a_15bb83fca751305a437727@nylit057164.us.randomhouse.com.mail>
+Subject: Your WMAP Discovery is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Start time: 2019-09-12 11:51:43 -0400</li>
+    <li>Completion time: 2019-09-12 11:52:31 -0400</li>
+    <li>My Discovery Result: <a href='https://wmap.io/sites/index'>https://wmap.io/sites/index </a></li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [aa96ec53-072a-4424-b760-5b682bef9629] Error performing ActionMailer::DeliveryJob (Job ID: aa96ec53-072a-4424-b760-5b682bef9629) from Async(mailers) in 528.47ms: Errno::ECONNREFUSED (Connection refused - connect(2) for "127.0.0.1" port 25):
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:539:in `initialize'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:539:in `open'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:539:in `tcp_socket'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:549:in `block in do_start'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/timeout.rb:93:in `block in timeout'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:548:in `do_start'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:518:in `start'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/i18n-1.6.0/lib/i18n.rb:297:in `with_locale'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/execution.rb:22:in `execute'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Started GET "/sites/index" for 127.0.0.1 at 2019-09-12 13:19:57 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 44ms (ActiveRecord: 31.0ms)
+
+
+Started GET "/sites/index" for 127.0.0.1 at 2019-09-12 13:19:57 -0400
+Processing by SitesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-12 13:19:57 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 181ms (Views: 179.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-12 13:19:58 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8z7ziCB/Ajo9IYHVkmDfzl2YMDsMEK/ANBDo7sazin1p/mHpPzVkpw7xEXCZUaltFvWzjHi5NezmDPNQtm6SZA==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-12 17:19:58', `last_sign_in_at` = '2019-09-12 15:51:39', `sign_in_count` = 38, `updated_at` = '2019-09-12 17:19:58' WHERE `users`.`id` = 2[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/sites/index
+Completed 302 Found in 54ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/sites/index" for 127.0.0.1 at 2019-09-12 13:19:58 -0400
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.4ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (49.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 257ms (Views: 205.6ms | ActiveRecord: 36.4ms)
+
+
+Started GET "/sites/index?reload" for 127.0.0.1 at 2019-09-12 13:19:59 -0400
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.7ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (42.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 216ms (Views: 206.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/sites/edit" for 127.0.0.1 at 2019-09-12 13:20:01 -0400
+Processing by SitesController#edit as HTML
+  Parameters: {"authenticity_token"=>"bWrenZlEEh7TwbWXnBywC3n9XkwzmTdoAUmZ+jh3ouQomh73UnOpaDHwUFxnIxYb+xqKOEcQc/DnlO1LMyYFvA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/edit.html.erb within layouts/application
+  Rendered sites/edit.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 133ms (Views: 124.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sites/load_file?path=" for 127.0.0.1 at 2019-09-12 13:20:01 -0400
+Processing by SitesController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sites/edit" for 127.0.0.1 at 2019-09-12 13:24:12 -0400
+Processing by SitesController#edit as HTML
+  Parameters: {"authenticity_token"=>"bWrenZlEEh7TwbWXnBywC3n9XkwzmTdoAUmZ+jh3ouQomh73UnOpaDHwUFxnIxYb+xqKOEcQc/DnlO1LMyYFvA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/edit.html.erb within layouts/application
+  Rendered sites/edit.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 209ms (Views: 151.5ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/sites/load_file?path=" for 127.0.0.1 at 2019-09-12 13:24:12 -0400
+Processing by SitesController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sites/save_file" for 127.0.0.1 at 2019-09-12 13:24:23 -0400
+Started GET "/sites/index" for 127.0.0.1 at 2019-09-12 13:24:23 -0400
+Processing by SitesController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local site store created by class Wmap::SiteTracker method save_sites_to_file! at: 2019-09-12 11:52:31 -0400\n# Website,Primary IP,Port,Hosting Status,Server,Response Code,MD5 Finger-print,Redirection,Timestamp\nhttp://maps.google.com/,172.217.12.174,80,int_hosted,gws,302,21005207467b8d6f021790f502ed179e,https://www.google.com:443/maps,2019-09-12 11:52:21 -0400\nhttp://news.google.com/,172.217.11.46,80,int_hosted,ESF,301,d41d8cd98f00b204e9800998ecf8427e,https://news.google.com/?hl=en-US&gl=US&ceid=US:en,2019-09-12 11:52:21 -0400\nhttp://www.google.com/,172.217.12.196,80,int_hosted,gws,200,ba87d30badfe0fdce760bba18084e139,,2019-09-12 11:52:21 -0400\nhttps://accounts.google.com/,172.217.6.205,443,int_hosted,GSE,302,cb093527f464b909a137ee9e554ac25d,https://accounts.google.com/ServiceLogin?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2Fmanageaccount&followup=https%3A%2F%2Faccounts.google.com%2Fmanageaccount,2019-09-12 11:52:21 -0400\nhttps://admanager.google.com/,172.217.10.142,443,int_hosted,ESF,200,90679c83e8d4bb21b808538908d50344,,2019-09-12 11:52:23 -0400\nhttps://admob.google.com/,172.217.6.238,443,int_hosted,sffe,301,17e3208a09eb5e049a0b66ab01cf23ab,https://admob.google.com/home/,2019-09-12 11:52:23 -0400\nhttps://ads.google.com/,172.217.12.142,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://ads.google.com/home/,2019-09-12 11:52:21 -0400\nhttps://analytics.google.com/,172.217.12.142,443,int_hosted,sffe,301,96e32b8d88fccbfd2fe3f35e27848c53,https://analytics.google.com/analytics/web/,2019-09-12 11:52:22 -0400\nhttps://assistant.google.com/,172.217.10.142,443,int_hosted,sffe,200,beacf839922cd23bedfd1b6acdcfd73f,,2019-09-12 11:52:22 -0400\nhttps://books.google.com/,172.217.12.142,443,int_hosted,OFE/0.1,200,199ff2fa5f12879efb6599c4ce136184,,2019-09-12 11:52:21 -0400\nhttps://business.google.com/,172.217.11.46,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://support.google.com/business/answer/3420286?p=browser_support&visit_id=637039003430164660-3051965568&rd=1,2019-09-12 11:52:22 -0400\nhttps://careers.google.com/,172.217.12.206,443,int_hosted,Google Frontend,200,7ecb18aa9c45544e30b6c4de4731f3d5,,2019-09-12 11:52:22 -0400\nhttps://chat.google.com/,172.217.12.142,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://chat.google.com/&followup=https://chat.google.com/,2019-09-12 11:52:21 -0400\nhttps://chrome.google.com/,172.217.12.142,443,int_hosted,sffe,301,0f8ba3da5ec9c4330a36cefacdac783f,https://www.google.com/chrome/,2019-09-12 11:52:21 -0400\nhttps://classroom.google.com/,172.217.12.142,443,int_hosted,GSE,302,0d78344ef9ce3d46125f74cd6c5d78fd,https://accounts.google.com/ServiceLogin?service=classroom&passive=1209600&continue=https://classroom.google.com/&followup=https://classroom.google.com/&emr=1,2019-09-12 11:52:22 -0400\nhttps://cloud.google.com/,172.217.10.46,443,int_hosted,Google Frontend,200,ab94bcd9e3df92d92ab758ce2b611ecf,,2019-09-12 11:52:22 -0400\nhttps://contacts.google.com/,172.217.9.238,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://contacts.google.com/&followup=https://contacts.google.com/,2019-09-12 11:52:21 -0400\nhttps://developers.google.com/,172.217.12.142,443,int_hosted,Google Frontend,200,b824c24a3805cb7ec0794e63f3fca2fc,,2019-09-12 11:52:22 -0400\nhttps://docs.google.com/,172.217.12.206,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://docs.google.com/&followup=https://docs.google.com/&emr=1,2019-09-12 11:52:21 -0400\nhttps://domains.google.com/,172.217.10.110,443,int_hosted,GSE,303,760c970803f5c3b1181fa283ae889a72,https://domains.google/,2019-09-12 11:52:22 -0400\nhttps://drive.google.com/,172.217.10.110,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&continue=https://drive.google.com/&followup=https://drive.google.com/&emr=1,2019-09-12 11:52:21 -0400\nhttps://duo.google.com/,172.217.10.46,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://duo.google.com/about/,2019-09-12 11:52:21 -0400\nhttps://enterprise.google.com/,172.217.12.142,443,int_hosted,sffe,301,f96b88ff4fb0f14097971fb3191aa3e7,https://cloud.google.com/,2019-09-12 11:52:22 -0400\nhttps://fi.google.com/,172.217.12.142,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://fi.google.com/about/,2019-09-12 11:52:22 -0400\nhttps://google.com/,172.217.12.206,443,int_hosted,gws,301,276bbb20c29087e88db63899fd8f9129,https://www.google.com/,2019-09-12 11:52:23 -0400\nhttps://groups.google.com/,209.85.144.138,443,ext_hosted,GSE,301,fd02d725f475d41bf0b14d5663580b11,/forum/#!homeredir,2019-09-12 11:52:22 -0400\nhttps://gsuite.google.com/,172.217.7.14,443,int_hosted,sffe,200,606ef28e6f27c510862870b91eb77dbe,,2019-09-12 11:52:21 -0400\nhttps://hangouts.google.com/,172.217.12.142,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://hangouts.google.com/webchat/start,2019-09-12 11:52:21 -0400\nhttps://jamboard.google.com/,172.217.7.14,443,int_hosted,GSE,302,3c44ac1514316028a1907a637809d8e0,https://accounts.google.com/ServiceLogin?service=jamboardcore&passive=1209600&continue=https://jamboard.google.com/&followup=https://jamboard.google.com/,2019-09-12 11:52:21 -0400\nhttps://keep.google.com/,172.217.12.206,443,int_hosted,GSE,302,a58fa09e74b178236b4a15584fae7c23,https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://keep.google.com/&followup=https://keep.google.com/&ltmpl=keep,2019-09-12 11:52:21 -0400\nhttps://mail.google.com/,172.217.6.229,443,int_hosted,GSE,301,91dcda9594c4063cf35244240b6fc3b4,/mail/,2019-09-12 11:52:21 -0400\nhttps://maps.google.com/,172.217.12.174,443,int_hosted,gws,302,4676794f237f7c4efe1ec9f6a7ef123b,https://www.google.com/maps,2019-09-12 11:52:21 -0400\nhttps://marketingplatform.google.com/,172.217.10.46,443,int_hosted,sffe,301,24b9ea6b5bd934a9f49f3d5d19d9bab7,https://marketingplatform.google.com/about/,2019-09-12 11:52:23 -0400\nhttps://messages.google.com/,172.217.7.14,443,int_hosted,sffe,200,52145628b9e549e0460bac09d6cf0e66,,2019-09-12 11:52:21 -0400\nhttps://myaccount.google.com/,172.217.12.142,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://myaccount.google.com/general-light&followup=https://myaccount.google.com/general-light&csig=AF-SEnaT284qNTHXaxnn:1568303542,2019-09-12 11:52:21 -0400\nhttps://news.google.com/,172.217.11.46,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://news.google.com/?hl=en-US&gl=US&ceid=US:en,2019-09-12 11:52:21 -0400\nhttps://one.google.com/,172.217.12.142,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://one.google.com/about,2019-09-12 11:52:22 -0400\nhttps://pay.google.com/,172.217.197.92,443,int_hosted,GSE,302,0201114647be9d3e744ab8d326b93f41,https://pay.google.com/payments/home,2019-09-12 11:52:22 -0400\nhttps://payments.google.com/,172.217.197.92,443,int_hosted,GSE,302,8e3d4f0d57e723c248e8afb1a01b7f54,https://payments.google.com/payments/home,2019-09-12 11:52:21 -0400\nhttps://photos.google.com/,172.217.10.46,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://www.google.com/photos/about/,2019-09-12 11:52:21 -0400\nhttps://play.google.com/,172.217.6.206,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://play.google.com/store,2019-09-12 11:52:21 -0400\nhttps://policies.google.com/,172.217.12.142,443,int_hosted,ESF,200,22325761f6f540bad96b555600956f8d,,2019-09-12 11:52:21 -0400\nhttps://scholar.google.com/,172.217.10.68,443,int_hosted,scholar,200,59af60bea37caae5e5c661916983cd18,,2019-09-12 11:52:22 -0400\nhttps://services.google.com/,172.217.12.142,443,int_hosted,sffe,301,276bbb20c29087e88db63899fd8f9129,https://www.google.com/,2019-09-12 11:52:22 -0400\nhttps://sites.google.com/,172.217.10.78,443,int_hosted,GSE,302,a1db09aa32414965f659f6b7bad9821d,https://accounts.google.com/ServiceLogin?service=jotspot&passive=1209600&continue=https://sites.google.com/&followup=https://sites.google.com/,2019-09-12 11:52:22 -0400\nhttps://store.google.com/,172.217.12.206,443,int_hosted,GSE,200,f8863ff3d6ecb79d5478e0e40b553f70,,2019-09-12 11:52:21 -0400\nhttps://support.google.com/,172.217.10.110,443,int_hosted,support-content-ui,200,bc98476fd1e770b3ea21c0085fe65a61,,2019-09-12 11:52:21 -0400\nhttps://translate.google.com/,172.217.12.142,443,int_hosted,HTTP server (unknown),200,4d85772fd40aa7c1c3ae2882cb4fbc4b,,2019-09-12 11:52:21 -0400\nhttps://transparencyreport.google.com/,172.217.12.142,443,int_hosted,ESF,200,92730ced7fb98bd263a4734c8f65e700,,2019-09-12 11:52:22 -0400\nhttps://voice.google.com/,172.217.7.14,443,int_hosted,ESF,302,d41d8cd98f00b204e9800998ecf8427e,https://voice.google.com/about,2019-09-12 11:52:22 -0400\nhttps://wearos.google.com/,172.217.10.14,443,int_hosted,sffe,200,cd3e90f1e77c9f47cdd9abc1cb74d735,,2019-09-12 11:52:21 -0400\nhttps://www.google.com/,172.217.12.196,443,int_hosted,gws,200,2363756a63cf3715a113aad0272eddce,,2019-09-12 11:52:21 -0400\n"}
+  [1m[35m (47.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-12 17:19:58", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[36mUser Load (23.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 161ms (Views: 0.2ms | ActiveRecord: 21.9ms)
+
+
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.8ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (55.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 414ms (Views: 213.3ms | ActiveRecord: 86.2ms)
+
+
+Started GET "/sites/index?reload" for 127.0.0.1 at 2019-09-12 13:24:28 -0400
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.5ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (56.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 222ms (Views: 213.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/seed/start" for 127.0.0.1 at 2019-09-12 13:24:35 -0400
+Processing by SeedController#start as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 162ms (Views: 154.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/seed/load_file?path=" for 127.0.0.1 at 2019-09-12 13:24:35 -0400
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logs/list" for 127.0.0.1 at 2019-09-12 13:24:37 -0400
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 161ms (Views: 153.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logs/show?id=wmap.log" for 127.0.0.1 at 2019-09-12 13:24:40 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"wmap.log"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_urls.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/url_seeds.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 162ms (Views: 138.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logs/show?id=wmap.log" for 127.0.0.1 at 2019-09-12 13:26:50 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"wmap.log"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_urls.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/url_seeds.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 239ms (Views: 178.5ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/logs/show?id=url_seeds.log" for 127.0.0.1 at 2019-09-12 13:26:54 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"url_seeds.log"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_urls.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/url_seeds.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 165ms (Views: 144.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logs/show?id=wmap.log" for 127.0.0.1 at 2019-09-12 13:26:59 -0400
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"wmap.log"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_sites.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/discovered_urls.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/url_seeds.log", "/Users/sli/.rvm/gems/ruby-2.5.1/gems/wmap-2.5.5/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 159ms (Views: 149.9ms | ActiveRecord: 0.5ms)
+
+

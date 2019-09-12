@@ -13,7 +13,7 @@ class SitesController < ApplicationController
 
 
   def edit
-    @dir = Rails.root.join('shared', 'data')
+    @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
     Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
     @file = @dir.join('sites')
     File.new(@file, 'w+') unless File.exist?(@file)
@@ -22,7 +22,7 @@ class SitesController < ApplicationController
 
   def load_file
     data = ''
-    @file = Rails.root.join('shared', 'data', 'sites')
+    @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data','sites')
     file = File.open(@file, 'r')
     file.each_line { |line| data += line }
     file.close
@@ -31,7 +31,7 @@ class SitesController < ApplicationController
 
   def save_file
     if platinum_user_and_above?
-      @file = Rails.root.join('shared', 'data', 'sites')
+      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data','sites')
       file = File.open(@file, 'r')
       @restore = ''
       file.each_line { |line| @restore += line }

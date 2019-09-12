@@ -20507,3 +20507,395 @@ White list: ["/usr/local/bundle/gems/wmap-2.5.5/logs/wmap.log", "/usr/local/bund
 Completed 200 OK in 766ms (Views: 741.0ms | ActiveRecord: 0.5ms)
 
 
+[1] ! Terminating timed out worker: 29
+[1] ! Out-of-sync worker list, no 29 worker
+[1] - Worker 0 (pid: 614) booted, phase: 0
+[1] - Gracefully shutting down workers...
+Exiting
+=== puma startup: 2019-09-12 14:05:35 +0000 ===
+[1] * Starting control server on unix:///tmp/puma-status-1568297135290-1
+[1] - Worker 0 (pid: 25) booted, phase: 0
+Started GET "/" for 172.19.0.1 at 2019-09-12 14:06:54 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 2794ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 172.19.0.1 at 2019-09-12 14:06:57 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 561ms (Views: 548.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sites/index" for 172.19.0.1 at 2019-09-12 14:07:30 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 172.19.0.1 at 2019-09-12 14:07:30 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (21.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 588ms (Views: 582.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 172.19.0.1 at 2019-09-12 14:07:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/0Qx+3Q3Yyif5VjS+uAbOydUVrHKXg5IVFfklt5Mumtl1R1MeqqrXkJDtcK85TcnBAMH4Rko+HQXhKghxf35Mg==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (3.1ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-12 14:07:33', `last_sign_in_at` = '2019-09-12 03:09:30', `sign_in_count` = 4, `updated_at` = '2019-09-12 14:07:33' WHERE `users`.`id` = 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/sites/index
+Completed 302 Found in 42ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/sites/index" for 172.19.0.1 at 2019-09-12 14:07:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.7ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 702ms (Views: 666.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/sites/index?reload" for 172.19.0.1 at 2019-09-12 14:07:34 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.6ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 732ms (Views: 714.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/sites/edit" for 172.19.0.1 at 2019-09-12 14:07:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#edit as HTML
+  Parameters: {"authenticity_token"=>"Qz/fIy0Rac+xQNgKg2+j0aqVMmGhc42gu3Pw15H8HZ1r/R0oQdNJaR3TfACBXeLxlFl3b1/d76D32zqUF+1inw=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/edit.html.erb within layouts/application
+  Rendered sites/edit.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 585ms (Views: 563.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sites/load_file?path=" for 172.19.0.1 at 2019-09-12 14:07:37 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home/page" for 172.19.0.1 at 2019-09-12 14:07:47 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 646ms (Views: 632.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/seed/start" for 172.19.0.1 at 2019-09-12 14:07:49 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GeJhN863s1+I1Fd4CXvO+B8R+zV8gT1wb7E6LJFtJDkxIKM8onWT+SRH83ILSY/YId2+O4IvX3AjGfBvF3xbOw==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 588ms (Views: 572.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/seed/load_file?path=" for 172.19.0.1 at 2019-09-12 14:07:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/seed/save_file" for 172.19.0.1 at 2019-09-12 14:07:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 14:07:33", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/domains/edit" for 172.19.0.1 at 2019-09-12 14:07:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 628ms (Views: 612.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/domains/load_file?path=" for 172.19.0.1 at 2019-09-12 14:07:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/domains/save_file" for 172.19.0.1 at 2019-09-12 14:08:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cidrs/edit" for 172.19.0.1 at 2019-09-12 14:08:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"google.com, no"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 14:07:33", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Update the domain table ...
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+Completed 200 OK in 55ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Processing by CidrsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 707ms (Views: 684.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cidrs/load_file?path=" for 172.19.0.1 at 2019-09-12 14:08:01 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cidrs/save_file" for 172.19.0.1 at 2019-09-12 14:08:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/seed/distest" for 172.19.0.1 at 2019-09-12 14:08:03 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CidrsController#save_file as JSON
+Processing by SeedController#distest as HTML
+  Parameters: {"file_path"=>"", "file_content"=>"# Local cidrs file created by Wmap::CidrTracker.save method at: 2018-11-20 21:25:32 -0500\nNetwork CIDR, CIDR RIPE Reference Text, CIDR NETNAME\n10.0.0.0/8,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n192.168.0.0/16,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.16.0.0/12, Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.217.0.0/16, https://rdap.arin.net/registry/ip/172.217.0.0, GOOGLE"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 14:07:33", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Update the cidr table ...
+Database connection success. 
+cidr table truncate success.
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (1.2ms)
+Update complete. 
+Completed 200 OK in 92ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 839ms (Views: 808.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/seed/discovery" for 172.19.0.1 at 2019-09-12 14:08:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"XjEBBIljWoL3kSB3yBD5j10DKAYGIbdWQPz9WdKbTH1288MP5aF6JFsChH3KIrivY89tCPiP1VYMVDcaVIozfw=="}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 14:07:33", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 759ms (Views: 693.6ms | ActiveRecord: 1.6ms)
+
+
+[25] ! Detected parent died, dying
+=== puma startup: 2019-09-12 10:35:53 -0400 ===
+[87974] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1568298953204-87974
+[87974] - Worker 0 (pid: 87979) booted, phase: 0
+Started GET "/home/page" for 127.0.0.1 at 2019-09-12 10:36:06 -0400
+  
+Mysql2::Error::ConnectionError (Unknown MySQL server host 'mariadb' (8)):
+  
+mysql2 (0.5.2) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.2) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+[87974] - Gracefully shutting down workers...
+[87974] === puma shutdown: 2019-09-12 10:39:41 -0400 ===
+[87974] - Goodbye!
+Exiting
+=== puma startup: 2019-09-12 10:52:07 -0400 ===
+[88344] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1568299927323-88344
+[88344] - Worker 0 (pid: 88346) booted, phase: 0
+[88344] - Gracefully shutting down workers...
+[88344] === puma shutdown: 2019-09-12 10:52:45 -0400 ===
+[88344] - Goodbye!
+=== puma startup: 2019-09-12 10:52:57 -0400 ===
+[88357] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1568299977516-88357
+[88357] - Worker 0 (pid: 88359) booted, phase: 0
+[88357] - Gracefully shutting down workers...
+[88357] === puma shutdown: 2019-09-12 10:54:56 -0400 ===
+[88357] - Goodbye!
+=== puma startup: 2019-09-12 10:55:00 -0400 ===
+[88380] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1568300099998-88380
+[88380] - Worker 0 (pid: 88382) booted, phase: 0
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+You're hitting distest controller
+Update the cidr table ...
+Database connection success. 
+cidr table truncate success.
+Update complete. 
+[88380] - Gracefully shutting down workers...
+[88380] === puma shutdown: 2019-09-12 11:02:40 -0400 ===
+[88380] - Goodbye!
+=== puma startup: 2019-09-12 11:02:45 -0400 ===
+[88511] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1568300565664-88511
+[88511] - Worker 0 (pid: 88513) booted, phase: 0
+[88511] - Gracefully shutting down workers...
+[88511] === puma shutdown: 2019-09-12 11:03:20 -0400 ===
+[88511] - Goodbye!
+=== puma startup: 2019-09-12 11:03:33 -0400 ===
+[88522] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1568300613516-88522
+[88522] - Worker 0 (pid: 88524) booted, phase: 0
+[88522] - Gracefully shutting down workers...
+[88522] === puma shutdown: 2019-09-12 11:43:26 -0400 ===
+[88522] - Goodbye!
+=== puma startup: 2019-09-12 11:43:30 -0400 ===
+[89414] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1568303010849-89414
+[89414] - Worker 0 (pid: 89418) booted, phase: 0
+You're hitting distest controller
+Update the site table ...
+Database connection success. 
+site table truncate success.
+Insert record for site: http://maps.google.com/
+Insert record for site: http://news.google.com/
+Insert record for site: http://www.google.com/
+Insert record for site: https://accounts.google.com/
+Insert record for site: https://admanager.google.com/
+Insert record for site: https://admob.google.com/
+Insert record for site: https://ads.google.com/
+Insert record for site: https://analytics.google.com/
+Insert record for site: https://assistant.google.com/
+Insert record for site: https://books.google.com/
+Insert record for site: https://business.google.com/
+Insert record for site: https://careers.google.com/
+Insert record for site: https://chat.google.com/
+Insert record for site: https://chrome.google.com/
+Insert record for site: https://classroom.google.com/
+Insert record for site: https://cloud.google.com/
+Insert record for site: https://contacts.google.com/
+Insert record for site: https://developers.google.com/
+Insert record for site: https://docs.google.com/
+Insert record for site: https://domains.google.com/
+Insert record for site: https://drive.google.com/
+Insert record for site: https://duo.google.com/
+Insert record for site: https://enterprise.google.com/
+Insert record for site: https://fi.google.com/
+Insert record for site: https://google.com/
+Insert record for site: https://groups.google.com/
+Insert record for site: https://gsuite.google.com/
+Insert record for site: https://hangouts.google.com/
+Insert record for site: https://jamboard.google.com/
+Insert record for site: https://keep.google.com/
+Insert record for site: https://mail.google.com/
+Insert record for site: https://maps.google.com/
+Insert record for site: https://marketingplatform.google.com/
+Insert record for site: https://messages.google.com/
+Insert record for site: https://myaccount.google.com/
+Insert record for site: https://news.google.com/
+Insert record for site: https://one.google.com/
+Insert record for site: https://pay.google.com/
+Insert record for site: https://payments.google.com/
+Insert record for site: https://photos.google.com/
+Insert record for site: https://play.google.com/
+Insert record for site: https://policies.google.com/
+Insert record for site: https://scholar.google.com/
+Insert record for site: https://services.google.com/
+Insert record for site: https://sites.google.com/
+Insert record for site: https://store.google.com/
+Insert record for site: https://support.google.com/
+Insert record for site: https://translate.google.com/
+Insert record for site: https://transparencyreport.google.com/
+Insert record for site: https://voice.google.com/
+Insert record for site: https://wearos.google.com/
+Insert record for site: https://www.google.com/
+Update complete. 

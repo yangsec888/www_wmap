@@ -26,7 +26,8 @@ class DiscoveryWorker
 
   def perform(uid)
     start_time=Time.now.to_s
-    file = Rails.root.join('shared', 'data', 'seed')
+    file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
+    #file = Rails.root.join('shared', 'data', 'seed')
     cmd = "wmap" + " " + file.to_s
     logger.info "Starting background command: #{cmd}"
     if system(cmd)

@@ -17,6 +17,8 @@ class LogsController < ApplicationController
   end
 
   def show
+    # Restrict log access to admin users only 
+    redirect_back :fallback_location => root_path, :alert => "Access denied." unless current_user.admin?
     dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('logs')
     white_list = Dir.glob(dir + '*.log')
     logger.debug "White list: #{white_list}"

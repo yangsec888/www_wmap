@@ -79,7 +79,7 @@ gem 'dnsruby'
 gem 'geoip'
 gem 'sidekiq' #move discovery job to background
 gem 'sidekiq-batch'
-gem 'sidekiq-status'
+#gem 'sidekiq-status'
 gem 'sinatra', '= 2.0.4' #require for sidekiq web
 ###############################################################################
 
