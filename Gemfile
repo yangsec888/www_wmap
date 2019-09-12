@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-#ruby "2.5.1" 
+#ruby "2.5.1"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -79,6 +79,7 @@ gem 'dnsruby'
 gem 'geoip'
 gem 'sidekiq' #move discovery job to background
 gem 'sidekiq-batch'
+gem 'sidekiq-status'
 gem 'sinatra', '= 2.0.4' #require for sidekiq web
 ###############################################################################
 

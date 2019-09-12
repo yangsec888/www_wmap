@@ -73,6 +73,8 @@ GEM
     character_set (1.4.0)
     childprocess (1.0.1)
       rake (< 13.0)
+    chronic_duration (0.10.6)
+      numerizer (~> 0.1.1)
     client_side_validations (16.0.1)
       jquery-rails (~> 4.3)
       js_regex (~> 3.1)
@@ -161,6 +163,7 @@ GEM
     nio4r (2.5.1)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
+    numerizer (0.1.1)
     open_uri_redirections (0.2.1)
     openssl (2.1.2)
     orm_adapter (0.5.0)
@@ -247,6 +250,9 @@ GEM
       redis (>= 4.1.0)
     sidekiq-batch (0.1.6)
       sidekiq (>= 3)
+    sidekiq-status (1.1.4)
+      chronic_duration
+      sidekiq (>= 3.0)
     sinatra (2.0.4)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -348,6 +354,7 @@ DEPENDENCIES
   server-generated-popups
   sidekiq
   sidekiq-batch
+  sidekiq-status
   sinatra (= 2.0.4)
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -359,9 +366,6 @@ DEPENDENCIES
   whois
   will_paginate
   wmap (>= 2.5.5)
-
-RUBY VERSION
-   ruby 2.5.1p57
 
 BUNDLED WITH
    1.17.3

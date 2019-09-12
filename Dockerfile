@@ -15,7 +15,8 @@ RUN apt-get install -y mariadb-client
 RUN apt-get install -y libxml2-dev libxslt1-dev
 
 # for Redis
-RUN apt-get install -y redis-server
+RUN apt-get install -y redis-server redis-tools
+ADD config/redis.conf /usr/local/etc/redis/redis.conf
 
 # for a JS runtime
 RUN apt-get install -y nodejs
@@ -37,11 +38,12 @@ ADD Gemfile* $APP_HOME/
 ADD . $APP_HOME
 RUN bundle install
 
+# for sidekiq
+ADD .env $APP_HOME/
+
 # Add a script to be executed every time the container starts.
-COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["sh","./config/docker/entrypoint.sh"]
 EXPOSE 3000
 
 # Start the main process.
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD config/docker/start.sh
