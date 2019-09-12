@@ -2,7 +2,7 @@
 set -e
 
 # Remove a potentially pre-existing server.pid for Rails.
-#rm -f /www_wmap/shared/tmp/puma.pid
+rm -f /www_wmap/tmp/pids/server.pid
 
 # Prepare DB (Migrate - If not? Create db & Migrate)
 sh ./config/docker/prepare-db.sh

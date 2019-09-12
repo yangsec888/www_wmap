@@ -20055,3 +20055,455 @@ starting the sidekiq worker for the discovery job
 Completed 200 OK in 499ms (Views: 460.7ms | ActiveRecord: 1.2ms)
 
 
+=== puma startup: 2019-09-12 03:36:16 +0000 ===
+[1] * Starting control server on unix:///tmp/puma-status-1568259376757-1
+[1] - Worker 0 (pid: 29) booted, phase: 0
+Started POST "/seed/discovery" for 172.19.0.1 at 2019-09-12 03:36:32 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"lMre1j1LcnAwkDAdwy8bH5XzJUwCCd+/hFt4XX6H3JSpHhwl3nYr1fWE5+CqVBBLL/lPbJ3xw1Nmn8lVRvnbTg=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 03:09:30", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 2809ms (Views: 2672.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/logs/list" for 172.19.0.1 at 2019-09-12 03:38:41 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 614ms (Views: 596.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/logs/show?id=wmap.log" for 172.19.0.1 at 2019-09-12 03:38:46 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"wmap.log"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/usr/local/bundle/gems/wmap-2.5.5/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 581ms (Views: 559.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home/page" for 172.19.0.1 at 2019-09-12 03:39:24 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 695ms (Views: 678.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/seed/start" for 172.19.0.1 at 2019-09-12 03:39:26 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nox2liXUz64whbYYIQvXc6x7N6NVQ7byWj8WudtsamWjWLRlxumWC/WRYeVIcNwnFnFdg8q7qh64+6ex4xJtvw==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 712ms (Views: 686.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/seed/load_file?path=" for 172.19.0.1 at 2019-09-12 03:39:27 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/seed/save_file" for 172.19.0.1 at 2019-09-12 03:39:34 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 03:09:30", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/edit" for 172.19.0.1 at 2019-09-12 03:39:35 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 542ms (Views: 528.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/domains/load_file?path=" for 172.19.0.1 at 2019-09-12 03:39:36 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/domains/save_file" for 172.19.0.1 at 2019-09-12 03:39:43 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cidrs/edit" for 172.19.0.1 at 2019-09-12 03:39:43 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by DomainsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"google.com, no"}
+Processing by CidrsController#edit as HTML
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 03:09:30", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Update the domain table ...
+  Rendering cidrs/edit.html.erb within layouts/application
+Database connection success. 
+  Rendered cidrs/edit.html.erb within layouts/application (1.1ms)
+Domain table truncate success.
+Update complete. 
+Completed 200 OK in 94ms (Views: 0.5ms | ActiveRecord: 18.8ms)
+
+
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 629ms (Views: 612.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cidrs/load_file?path=" for 172.19.0.1 at 2019-09-12 03:39:44 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/cidrs/save_file" for 172.19.0.1 at 2019-09-12 03:40:19 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/seed/distest" for 172.19.0.1 at 2019-09-12 03:40:19 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#distest as HTML
+Processing by CidrsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local cidrs file created by Wmap::CidrTracker.save method at: 2018-11-20 21:25:32 -0500\nNetwork CIDR, CIDR RIPE Reference Text, CIDR NETNAME\n10.0.0.0/8,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n192.168.0.0/16,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.16.0.0/12, Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.217.0.0/16, https://rdap.arin.net/registry/ip/172.217.0.0, GOOGLE"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 03:09:30", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Update the cidr table ...
+Database connection success. 
+cidr table truncate success.
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.8ms)
+Update complete. 
+Completed 200 OK in 66ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 614ms (Views: 586.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/seed/discovery" for 172.19.0.1 at 2019-09-12 03:40:24 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"k+IihGsJR7NaoWoFmZgKBKrIa4t8jiasIaZkHrphT2CuNuB3iDQeFp+1vfjw4wFQEMIBq+N2OkDDYtUWgh9Iug=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 03:09:30", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 659ms (Views: 637.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home/page" for 172.19.0.1 at 2019-09-12 03:40:49 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 627ms (Views: 612.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/seed/start" for 172.19.0.1 at 2019-09-12 03:40:51 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pefFWqBpbU7vMs7nZE/seGcBQU9Dobu3j7u6MyiKZ/GYMwepQ1Q06yomGRoNNOcs3Qsrb9xZp1ttfws7EPRgKw==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 453ms (Views: 443.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/seed/load_file?path=" for 172.19.0.1 at 2019-09-12 03:40:52 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/seed/save_file" for 172.19.0.1 at 2019-09-12 03:40:55 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 03:09:30", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/domains/edit" for 172.19.0.1 at 2019-09-12 03:40:56 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 488ms (Views: 478.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/load_file?path=" for 172.19.0.1 at 2019-09-12 03:40:57 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/domains/save_file" for 172.19.0.1 at 2019-09-12 03:40:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cidrs/edit" for 172.19.0.1 at 2019-09-12 03:40:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CidrsController#edit as HTML
+Processing by DomainsController#save_file as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Parameters: {"file_path"=>"", "file_content"=>"google.com, no"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 03:09:30", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Update the domain table ...
+Database connection success. 
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (0.5ms)
+Domain table truncate success.
+Update complete. 
+Completed 200 OK in 66ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 665ms (Views: 648.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cidrs/load_file?path=" for 172.19.0.1 at 2019-09-12 03:41:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/cidrs/save_file" for 172.19.0.1 at 2019-09-12 03:41:10 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/seed/distest" for 172.19.0.1 at 2019-09-12 03:41:10 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#distest as HTML
+Processing by CidrsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local cidrs file created by Wmap::CidrTracker.save method at: 2018-11-20 21:25:32 -0500\nNetwork CIDR, CIDR RIPE Reference Text, CIDR NETNAME\n10.0.0.0/8,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n192.168.0.0/16,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.16.0.0/12, Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.217.0.0/16, https://rdap.arin.net/registry/ip/172.217.0.0, GOOGLE"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-09-11 19:55:17", updated_at: "2019-09-12 03:09:30", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Update the cidr table ...
+Database connection success. 
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.7ms)
+cidr table truncate success.
+Update complete. 
+Completed 200 OK in 86ms (Views: 0.4ms | ActiveRecord: 1.9ms)
+
+
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 648ms (Views: 629.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/hosts/index" for 172.19.0.1 at 2019-09-12 03:55:52 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.6ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 775ms (Views: 731.7ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/hosts/index?reload" for 172.19.0.1 at 2019-09-12 03:55:53 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HostsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering hosts/index.html.erb within layouts/application
+  [1m[36mHost Load (0.6ms)[0m  [1m[34mSELECT  `hosts`.* FROM `hosts` ORDER BY host_name asc LIMIT 25 OFFSET 0[0m
+  Rendered hosts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 629ms (Views: 616.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/hosts/edit" for 172.19.0.1 at 2019-09-12 03:55:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HostsController#edit as HTML
+  Parameters: {"authenticity_token"=>"V0bHLmEPKy11IjpzzIQTzagre9oMkfiRV8VfiqqwkdlqkgXdgjJyiLA27Y6l/xiZEiER+pNp5H21Ae6Cks6WAw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+My data dir: /usr/local/bundle/gems/wmap-2.5.5/data
+  Rendering hosts/edit.html.erb within layouts/application
+  Rendered hosts/edit.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 652ms (Views: 626.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hosts/load_file?path=" for 172.19.0.1 at 2019-09-12 03:55:58 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HostsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sites/index" for 172.19.0.1 at 2019-09-12 03:56:05 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.6ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (36.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 780ms (Views: 739.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/sites/index?reload" for 172.19.0.1 at 2019-09-12 03:56:06 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.5ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 705ms (Views: 687.3ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/sites/edit" for 172.19.0.1 at 2019-09-12 03:56:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#edit as HTML
+  Parameters: {"authenticity_token"=>"tP9mlCwhL3otc+i+h1b+ADmNR1IPBy4/wK4/G+kk3cWJK6Rnzxx23+hnP0PuLfVUg4ctcpD/MtMiao4T0VraHw=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/edit.html.erb within layouts/application
+  Rendered sites/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 698ms (Views: 673.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sites/load_file?path=" for 172.19.0.1 at 2019-09-12 03:56:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sites/index" for 172.19.0.1 at 2019-09-12 03:56:52 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.5ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (19.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 703ms (Views: 685.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/sites/index?reload" for 172.19.0.1 at 2019-09-12 03:56:53 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.5ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (19.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 753ms (Views: 723.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/sites/edit" for 172.19.0.1 at 2019-09-12 03:56:54 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#edit as HTML
+  Parameters: {"authenticity_token"=>"u64WEcO6SLc/9Fpuu+X+LcWr98kdVF3S2aT+TlN+LsaGetTiIIcREvrgjZPSnvV5f6Gd6YKsQT47YE9GawApHA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/edit.html.erb within layouts/application
+  Rendered sites/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 637ms (Views: 618.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sites/load_file?path=" for 172.19.0.1 at 2019-09-12 03:56:55 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 9ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logs/list" for 172.19.0.1 at 2019-09-12 03:57:04 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 668ms (Views: 644.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logs/show?id=discovered_sites.log" for 172.19.0.1 at 2019-09-12 03:57:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_sites.log"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/usr/local/bundle/gems/wmap-2.5.5/logs/wmap.log", "/usr/local/bundle/gems/wmap-2.5.5/logs/url_seeds.log", "/usr/local/bundle/gems/wmap-2.5.5/logs/discovered_urls.log", "/usr/local/bundle/gems/wmap-2.5.5/logs/discovered_sites.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 766ms (Views: 741.0ms | ActiveRecord: 0.5ms)
+
+
