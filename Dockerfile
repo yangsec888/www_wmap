@@ -10,6 +10,7 @@ RUN apt-get update -qq && apt-get install -y build-essential
 # for mysql
 # RUN apt-get install -y mariadb-server mariadb-client
 RUN apt-get install -y mariadb-client
+ADD config/docker/database.yml config/database.yml
 
 # for nokogiri
 RUN apt-get install -y libxml2-dev libxslt1-dev
@@ -22,7 +23,7 @@ ADD config/redis.conf /usr/local/etc/redis/redis.conf
 RUN apt-get install -y nodejs
 
 # for nginx
-RUN apt-get install -y nginx
+# RUN apt-get install -y nginx
 
 # for postfix
 ENV DEBIAN_FRONTEND noninteractive
@@ -40,6 +41,7 @@ RUN bundle install
 
 # for sidekiq
 ADD .env $APP_HOME/
+ADD config/docker/sidekiq.rb config/initializers/
 
 # Add a script to be executed every time the container starts.
 ENTRYPOINT ["sh","./config/docker/entrypoint.sh"]
