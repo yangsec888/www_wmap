@@ -3,6 +3,7 @@
 
 - [Wmap Web Portal](#wmap-web-portal)
 - [Technology Stacks](#technology-stacks)
+- [Build and Run in Docker](#build-and-run-in-docker)
 - [Local Installation](#local-installation)
 - [Demo Instance](#demo-instance)
 - [Usage](#usage)
@@ -27,6 +28,36 @@ WMAP Web Portal depends on a number of open source projects to work properly:
 * [jstree](https://www.jstree.com/) -  jsTree is a JavaScript based tree UI implementation.
 * [wmap](https://github.com/yangsec888/wmap) - Backend Web Mapper gem for the heavy lifting.
 
+### Build and Run in Docker
+
+If you have [docker engine](https://docs.docker.com/install/) ready, you can have the app build and run in no time.
+The docker technology may help deploy your customize app into your favorite cloud infrastructure later on.
+
+#### Build in Docker   
+```sh
+$ git clone https://github.com/yangsec888/www_wmap.git
+$ cd www_wmap
+$ docker-compose build
+```
+'docker-compose build' will build the containers for the app.
+
+#### Run In Docker
+
+'docker-compose up' would run the app from the containers.
+It should produce the output similar to below:
+```sh
+$ docker-compose up
+Starting wmap_db ... done
+Starting redis   ... done
+Recreating www_wmap_sidekiq_1 ... done
+Recreating www_wmap           ... done
+Attaching to wmap_db, redis, www_wmap, www_wmap_sidekiq_1
+...
+```
+Open a local browser and point it at http://localhost:3000/. You will see the app in action.
+
+Depend on the cloud infrastructure you use, you might need to customize the containers further before the deployment.
+Please feel free to contact me if you need the help.
 
 ### Local Installation
 
@@ -53,7 +84,7 @@ $ rake db:migration
 $ rails server
 ```
 
-### Demo Instance 
+### Demo Instance
 The application is deployed into a demo instance at [www.wmap.io](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
 
 
@@ -66,7 +97,7 @@ Under the home page, click on "Start" button to start. Follow the on-screen inst
 
 ### To Dos
 
- - Package this up into a docker container
+ - Package this up into a docker containers
  - Write (integration, deployment) tests
  - Enhance performance (squeeze the next bit out of cpu / network IO )
  - Upgrade to Rails 6.x

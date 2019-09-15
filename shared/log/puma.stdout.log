@@ -25465,3 +25465,8 @@ Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 0.8ms)
 [33849] === puma shutdown: 2019-09-15 08:52:21 -0400 ===
 [33849] - Goodbye!
 Exiting
+=== puma startup: 2019-09-15 14:01:47 +0000 ===
+[1] * Starting control server on unix:///tmp/puma-status-1568556107404-1
+[1] - Worker 0 (pid: 25) booted, phase: 0
+[1] - Gracefully shutting down workers...
+Exiting
