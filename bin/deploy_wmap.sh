@@ -42,7 +42,7 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle e
 echo "Stopping Nginx web service ..."
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl stop nginx'
 echo "Stopping Puma application server service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl stop puma'
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; bundle exec pumactl -P /home/deploy/apps/www_wmap/shared/tmp/puma.pid stop'
 #echo "Stopping Sidekiq service ..."
 #ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo service sidekiq stop'
 sleep 3
