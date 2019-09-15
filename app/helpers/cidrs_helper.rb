@@ -12,7 +12,7 @@ module CidrsHelper
   # Reload CIDR table based on the WMAP CIDR data file
   def cidr_table_reload()
     puts "Update the cidr table ..."
-    db = Sequel.connect(YAML.load(File.read(File.join(::Rails.root, 'config', 'database.yml')))[::Rails.env] || 'development')
+    db = Sequel.connect(ENV['DATABASE_URL'])
     puts "Database connection success. "
     cidr_table = db[:cidrs]
     cidr_table.truncate

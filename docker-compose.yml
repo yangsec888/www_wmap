@@ -1,15 +1,11 @@
-version: '3.7'
-volumes:
-  mariadb_data:
-    driver: local
+version: '2'
 services:
   redis:
     container_name: "redis"
     image: redis:alpine
     restart: always
-    command: redis-server
-    ports:
-      - "6379:6379"
+    volumes:
+      - 'redis:/data'
 
   mariadb:
     container_name: "wmap_db"
@@ -17,10 +13,9 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - 'mariadb_data:/bitnami/mariadb'
-    environment:
-      # ALLOW_EMPTY_PASSWORD is recommended only for development.
-      - ALLOW_EMPTY_PASSWORD=yes
+      - my-db:/usr/local/var/mysql
+    env_file:
+      - .env
 
   web:
     container_name: "www_wmap"
@@ -28,23 +23,25 @@ services:
     command: bin/rails server --port 3000 --binding 0.0.0.0
     ports:
       - "3000:3000"
-    links:
-      - mariadb
-      - redis
-      - sidekiq
     volumes:
       - .:/www_wmap
     depends_on:
       - mariadb
-    environment:
-      REDIS_URL: redis://redis:6379/0
+      - redis
+    env_file:
+      - .env
 
   sidekiq:
     build: .
-    command: bundle exec sidekiq -C config/sidekiq.yml
+    command: bundle exec sidekiq
     depends_on:
+      - mariadb
       - redis
     volumes:
       - .:/www_wmap
     env_file:
       - .env
+
+volumes:
+  redis:
+  my-db:

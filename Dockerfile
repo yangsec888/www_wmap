@@ -4,26 +4,13 @@
 # Docker on parallels tutorial: https://zitseng.com/archives/10861
 # Docker on MariaDB: https://hub.docker.com/r/bitnami/mariadb/
 # Compose and Rails: https://docs.docker.com/compose/rails/
+# Dockerize a Rails 5 project example: https://nickjanetakis.com/blog/dockerize-a-rails-5-postgres-redis-sidekiq-action-cable-app-with-docker-compose
 FROM ruby:2.5.1
-RUN apt-get update -qq && apt-get install -y build-essential
-
-# for mysql
-# RUN apt-get install -y mariadb-server mariadb-client
-RUN apt-get install -y mariadb-client
-COPY config/docker/database.yml config/database.yml
-
-# for nokogiri
-RUN apt-get install -y libxml2-dev libxslt1-dev
-
-# for Redis
-RUN apt-get install -y redis-server redis-tools
-COPY config/redis.conf /usr/local/etc/redis/redis.conf
-
-# for a JS runtime
-RUN apt-get install -y nodejs
-
-# for nginx
-# RUN apt-get install -y nginx
+RUN apt-get update -qq && apt-get install -y build-essential \
+  && apt-get install -y mariadb-client \
+  && apt-get install -y libxml2-dev libxslt1-dev \
+  && apt-get install -y redis-tools \
+  && apt-get install -y nodejs
 
 # for postfix
 ENV DEBIAN_FRONTEND noninteractive
@@ -41,7 +28,6 @@ RUN bundle install
 
 # for sidekiq
 ADD .env $APP_HOME/
-COPY config/docker/sidekiq.rb config/initializers/sidekiq.rb
 
 # Add a script to be executed every time the container starts.
 ENTRYPOINT ["sh","./config/docker/entrypoint.sh"]

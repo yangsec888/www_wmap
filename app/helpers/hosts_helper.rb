@@ -11,7 +11,7 @@ module HostsHelper
   # Reload host table based on the WMAP host data file
   def host_table_reload(uid=current_user.id)
     puts "Update the host table ..."
-    db = Sequel.connect(YAML.load(File.read(File.join(::Rails.root, 'config', 'database.yml')))[::Rails.env] || 'development')
+    db = Sequel.connect(ENV['DATABASE_URL'])
     puts "Database connection success. "
     host_table = db[:hosts]
     host_table.truncate

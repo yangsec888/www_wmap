@@ -36,7 +36,7 @@ module SitesHelper
   # Reload site table based on the WMAP site data file
   def site_table_reload(uid=current_user.id)
     puts "Update the site table ..."
-    db = Sequel.connect(YAML.load(File.read(File.join(::Rails.root, 'config', 'database.yml')))[::Rails.env] || 'development')
+    db = Sequel.connect(ENV['DATABASE_URL'])
     puts "Database connection success. "
     site_table = db[:sites]
     site_table.truncate

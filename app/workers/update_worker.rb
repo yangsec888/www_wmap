@@ -86,7 +86,7 @@ class UpdateWorker
   # update domain table based on the upload
   def db_update_domain(portfolio,file_type,uid)
     puts "Update domain table ..."
-    db = Sequel.connect(YAML.load(File.read(File.join(::Rails.root, 'config', 'database.yml')))[::Rails.env] || 'development')
+    db = Sequel.connect(ENV['DATABASE_URL'])
     domains = db[:domains]
     portfolio.each do |index, record|
       my_domain = record["Domain Name"]
@@ -120,7 +120,7 @@ class UpdateWorker
   # update domain zone file transferable value into db
   def db_update_zone_transferable(portfolio)
     puts "Upate the zone transferable flag in the domain table. "
-    db = Sequel.connect(YAML.load(File.read(File.join(::Rails.root, 'config', 'database.yml')))[::Rails.env] || 'development')
+    db = Sequel.connect(ENV['DATABASE_URL'])
     domains = db[:domains]
     tracker=Wmap::DomainTracker.instance
     portfolio.each do |index, record|
@@ -144,7 +144,7 @@ class UpdateWorker
   # update domain report download file name into db
   def db_update_report(file,file_type)
     puts "Upate the report table: #{file}, #{file_type} "
-    db = Sequel.connect(YAML.load(File.read(File.join(::Rails.root, 'config', 'database.yml')))[::Rails.env] || 'development')
+    db = Sequel.connect(ENV['DATABASE_URL'])
     reports = db[:reports]
     my_title = "Domain Portfolio - " + file_type
     desc = "Divisional workbooks - " + file_type + " Domain Portfolio. "

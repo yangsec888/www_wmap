@@ -4,6 +4,8 @@
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
 # and maximum; this matches the default thread size of Active Record.
 #
+require 'erb'
+
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads 1, 6
 
@@ -53,7 +55,6 @@ workers ENV.fetch("WEB_CONCURRENCY") { 1 }
 #   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
 # end
 #
-
 # Allow puma to be restarted by `rails restart` command.
 #plugin :tmp_restart
 
@@ -75,5 +76,5 @@ rails_env = ENV.fetch("RAILS_ENV")
 #on_worker_boot do
 #  require "active_record"
 #  ActiveRecord::Base.connection.disconnect! rescue ActiveRecord::ConnectionNotEstablished
-#  ActiveRecord::Base.establish_connection(YAML.load_file("#{app_dir}/config/database.yml")[rails_env])
+#  ActiveRecord::Base.establish_connection(YAML.load_file("#{app_dir}/config/database.yml")[RAILS_ENV])
 #end

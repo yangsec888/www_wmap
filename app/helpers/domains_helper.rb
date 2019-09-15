@@ -6,6 +6,7 @@
 # Developed by Sam (Yang) Li, <yang.li@owasp.org>.
 #
 #++
+require 'erb'
 
 module DomainsHelper
   # make view sortable
@@ -136,7 +137,7 @@ module DomainsHelper
   # Reload domain table based on the WMAP domains data file
   def domain_table_reload()
     puts "Update the domain table ..."
-    db = Sequel.connect(YAML.load(File.read(File.join(::Rails.root, 'config', 'database.yml')))[::Rails.env] || 'development')
+    db = Sequel.connect(ENV['DATABASE_URL'])
     puts "Database connection success. "
     domain_table = db[:domains]
     domain_table.truncate
