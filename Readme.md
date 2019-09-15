@@ -1,4 +1,4 @@
-[<img src='/wmap_logo.jpg' width='350' height='350'>](https://github.com/yangsec888/wmap)
+[<img src='/wmap_logo.jpg' width='350' height='350'>](https://github.com/yangsec888/www_wmap)
 =====================
 
 - [Wmap Web Portal](#wmap-web-portal)
@@ -26,6 +26,7 @@ WMAP Web Portal depends on a number of open source projects to work properly:
 * [jQuery](https://jquery.com/) - Great JavaScript library for JavaScript integration.
 * [CodeMirror](https://codemirror.net/) - CodeMirror is a versatile text editor implemented in JavaScript.
 * [jstree](https://www.jstree.com/) -  jsTree is a JavaScript based tree UI implementation.
+* [Sidekiq](https://github.com/mperham/sidekiq) - A background processing manager (asynchronous and non-blocking IO) for RoR.
 * [wmap](https://github.com/yangsec888/wmap) - Backend Web Mapper gem for the heavy lifting.
 
 ### Build and Run in Docker
