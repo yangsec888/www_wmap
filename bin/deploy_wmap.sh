@@ -50,7 +50,7 @@ echo "Stopping Sidekiq service ..."
 ssh -q deploy@${prod_host} 'source ~/.bash_profile;  sudo systemctl stop sidekiq'
 ##
 echo "Starting Puma application server service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl start puma'
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; bundle exec puma -e production &'
 sleep 3
 
 echo "Starting Nginx web service ..."
