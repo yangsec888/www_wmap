@@ -13,7 +13,9 @@
 
 ### Wmap Web Portal
 
-The web app is based on the OWASP Wmap App. It's developed to help keep track of web application asset. To further explore the full power of OWASP Wmap library, please refer to the <a href="https://github.com/yangsec888/wmap" target="_blank"> WMAP </a> Git repository.
+The web app is part of the OWASP Wmap Project. It's developed to help discover and keep track of web application asset with scale.
+
+To further explore the full power of OWASP Wmap library, please refer to the <a href="https://github.com/yangsec888/wmap" target="_blank"> WMAP </a> Git repository.
 
 
 ### Technology Stacks
