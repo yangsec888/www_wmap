@@ -21,5 +21,9 @@ module WmapPortal
     #config.log_tags  = [:subdomain, :uuid]
     #config.logger    = ActiveSupport::TaggedLogging.new(logger)
 
+    # Load .env file
+    Bundler.require(*Rails.groups)
+    Dotenv::Railtie.load
+
   end
 end
