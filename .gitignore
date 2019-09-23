@@ -39,4 +39,4 @@ docs/
 public/assets/
 
 # Ignore .env file which should be local
-/.env
+!/.env

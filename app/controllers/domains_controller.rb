@@ -115,7 +115,9 @@ class DomainsController < ApplicationController
     # Ajax call from view to save domain records into both wmap data file and database
     def save_file
       if platinum_user_and_above?
-        @file = Rails.root.join('shared','data','domains')
+        uid = current_user.id
+        data_dir = Rails.root.join('shared','data')
+        @file = data_dir.join('domains')
         file = File.open(@file, 'r')
         @restore = ''
         file.each_line { |line| @restore += line }
@@ -123,7 +125,7 @@ class DomainsController < ApplicationController
         file = File.open(@file, 'w+')
         file.write(params[:file_content])
         file.close
-        domain_table_reload
+        domain_table_reload(uid,data_dir.to_s)
         render json: { message: 'Saving successful.' }
       else
         render json: { message: 'Saving failed, please check your file again.' }
