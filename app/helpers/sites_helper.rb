@@ -34,7 +34,7 @@ module SitesHelper
   end
 
   # Reload site table based on the WMAP site data file
-  def site_table_reload(uid=current_user.id,data_dir)
+  def site_table_reload(uid,data_dir)
     puts "Update the site table ..."
     db = Sequel.connect(ENV['DATABASE_URL'])
     puts "Database connection success. "
