@@ -29275,3 +29275,224 @@ Processing by DomainsController#index as HTML
 Completed 200 OK in 121ms (Views: 112.9ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/cidrs/index" for 127.0.0.1 at 2019-09-22 22:17:09 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by CidrsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 61ms (ActiveRecord: 29.3ms)
+
+
+Started GET "/cidrs/index" for 127.0.0.1 at 2019-09-22 22:17:09 -0400
+Processing by CidrsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-09-22 22:17:09 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 140ms (Views: 138.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-09-22 22:17:10 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hk3y6YXZzxOgmR/luYC1nQ0K8MTU9Mdbm9eUT+i7WkhI3jjdrtkBq5JxtVXb64WY0DMrecs3qr+HD3zLi8g3aw==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-09-23 02:17:10', `last_sign_in_at` = '2019-09-23 01:30:50', `sign_in_count` = 46, `updated_at` = '2019-09-23 02:17:10' WHERE `users`.`id` = 2[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/cidrs/index
+Completed 302 Found in 46ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/cidrs/index" for 127.0.0.1 at 2019-09-22 22:17:10 -0400
+Processing by CidrsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (16.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 141ms (Views: 117.8ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/cidrs/index?reload" for 127.0.0.1 at 2019-09-22 22:17:10 -0400
+Processing by CidrsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 136ms (Views: 128.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/cidrs/edit" for 127.0.0.1 at 2019-09-22 22:17:12 -0400
+Processing by CidrsController#edit as HTML
+  Parameters: {"authenticity_token"=>"un7oN72bmOvtU2zI8DKm5NH1CA5O7DbOl0jpxa/ALVktNhHBxfwPunCQ2MfwQT3tpfUTedVMmRW7NxJJvz7ARg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 112.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cidrs/load_file?path=" for 127.0.0.1 at 2019-09-22 22:17:12 -0400
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/save_file" for 127.0.0.1 at 2019-09-22 22:17:13 -0400
+Started GET "/seed/distest" for 127.0.0.1 at 2019-09-22 22:17:13 -0400
+Processing by CidrsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local cidrs file created by Wmap::CidrTracker.save method at: 2018-11-20 21:25:32 -0500\nNetwork CIDR, CIDR RIPE Reference Text, CIDR NETNAME\n10.0.0.0/8,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n192.168.0.0/16,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.16.0.0/12, Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.217.0.0/16, https://rdap.arin.net/registry/ip/172.217.0.0, GOOGLE"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-23 02:17:10", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Update the cidr table ...
+Database connection success. 
+cidr table truncate success.
+Update complete. 
+Completed 200 OK in 68ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 149ms (Views: 120.5ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/cidrs/index" for 127.0.0.1 at 2019-09-22 22:17:18 -0400
+Processing by CidrsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 137ms (Views: 110.1ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/cidrs/index?reload" for 127.0.0.1 at 2019-09-22 22:17:19 -0400
+Processing by CidrsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 111.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/cidrs/edit" for 127.0.0.1 at 2019-09-22 22:17:52 -0400
+Processing by CidrsController#edit as HTML
+  Parameters: {"authenticity_token"=>"i9xBdjljhJ2iz12CwtLtyPFoQ5hZoiyRKi0RzawUsbQclLiAQQQTzD8M6Y3CoXbBhWhY78ICg0oGUupBvOpcqw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 118ms (Views: 111.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cidrs/load_file?path=" for 127.0.0.1 at 2019-09-22 22:17:53 -0400
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cidrs/save_file" for 127.0.0.1 at 2019-09-22 22:18:14 -0400
+Started GET "/seed/distest" for 127.0.0.1 at 2019-09-22 22:18:14 -0400
+Processing by CidrsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local cidrs file created by Wmap::CidrTracker.save method at: 2018-11-20 21:25:32 -0500\nNetwork CIDR, CIDR RIPE Reference Text, CIDR NETNAME\n10.0.0.0/8,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n192.168.0.0/16,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.16.0.0/12, Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.217.0.0/16, https://rdap.arin.net/registry/ip/172.217.0.0, GOOGLE"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-23 02:17:10", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+Update the cidr table ...
+Database connection success. 
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.7ms)
+cidr table truncate success.
+Update complete. 
+Completed 200 OK in 55ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 149ms (Views: 142.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cidrs/index" for 127.0.0.1 at 2019-09-22 22:23:40 -0400
+Processing by CidrsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 137ms (Views: 110.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cidrs/index?reload" for 127.0.0.1 at 2019-09-22 22:23:40 -0400
+Processing by CidrsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 143ms (Views: 135.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/cidrs/edit" for 127.0.0.1 at 2019-09-22 22:23:42 -0400
+Processing by CidrsController#edit as HTML
+  Parameters: {"authenticity_token"=>"gCdFkuWOZwiwWicFgcV6gdnsQfvX/CXMeU3bFdVgA3AXb7xknenwWS2ZkwqBtuGIrexajExcihdVMiCZxZ7ubw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 118ms (Views: 112.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cidrs/load_file?path=" for 127.0.0.1 at 2019-09-22 22:23:42 -0400
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/cidrs/save_file" for 127.0.0.1 at 2019-09-22 22:23:50 -0400
+Started GET "/seed/distest" for 127.0.0.1 at 2019-09-22 22:23:50 -0400
+Processing by CidrsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local cidrs file created by Wmap::CidrTracker.save method at: 2018-11-20 21:25:32 -0500\nNetwork CIDR, CIDR RIPE Reference Text, CIDR NETNAME\n10.0.0.0/8,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n192.168.0.0/16,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.16.0.0/12, Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.217.0.0/16, https://rdap.arin.net/registry/ip/172.217.0.0, GOOGLE"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-23 02:17:10", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Update the cidr table ...
+Database connection success. 
+cidr table truncate success.
+Update complete. 
+Completed 200 OK in 87ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 178ms (Views: 133.4ms | ActiveRecord: 37.8ms)
+
+
