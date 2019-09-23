@@ -35,15 +35,15 @@ class CidrsController < ApplicationController
     def save_file
       if platinum_user_and_above?
         uid = current_user.id
-        data_dir = @file = Rails.root.join('shared','data')
+        data_dir = Rails.root.join('shared','data')
         @file = data_dir.join('cidrs')
         file = File.open(@file, 'r')
         @restore = ''
         file.each_line { |line| @restore += line }
         file.close
-        file = File.open(@file, 'w+')
-        file.write(params[:file_content])
-        file.close
+        f = File.open(@file, 'w+')
+        f.write(params[:file_content])
+        f.close
         cidr_table_reload(uid,data_dir.to_s)
         render json: { message: 'Saving successed.' }
       else
