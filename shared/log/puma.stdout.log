@@ -29496,3 +29496,145 @@ You're hitting distest controller
 Completed 200 OK in 178ms (Views: 133.4ms | ActiveRecord: 37.8ms)
 
 
+[46129] - Gracefully shutting down workers...
+[46129] === puma shutdown: 2019-09-22 22:49:51 -0400 ===
+[46129] - Goodbye!
+Exiting
+=== puma startup: 2019-09-22 22:50:07 -0400 ===
+[50717] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1569207007847-50717
+[50717] - Worker 0 (pid: 50722) booted, phase: 0
+Started GET "/cidrs/index" for 127.0.0.1 at 2019-09-22 22:50:29 -0400
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CidrsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.4ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (30.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 827ms (Views: 723.7ms | ActiveRecord: 49.0ms)
+
+
+Started GET "/cidrs/index?reload" for 127.0.0.1 at 2019-09-22 22:50:30 -0400
+Processing by CidrsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 167ms (Views: 157.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/cidrs/edit" for 127.0.0.1 at 2019-09-22 22:50:34 -0400
+Processing by CidrsController#edit as HTML
+  Parameters: {"authenticity_token"=>"QHuaMlWPmUG8a5Rts+9KXqwibp12A+TUP8UNdDFDf5rXM2PELegOECGoIGKznNFX2CJ16u2jSw8Tuvb4Ib2ShQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/edit.html.erb within layouts/application
+  Rendered cidrs/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 147ms (Views: 138.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cidrs/load_file?path=" for 127.0.0.1 at 2019-09-22 22:50:34 -0400
+Processing by CidrsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/cidrs/save_file" for 127.0.0.1 at 2019-09-22 22:50:35 -0400
+Started GET "/seed/distest" for 127.0.0.1 at 2019-09-22 22:50:35 -0400
+Processing by CidrsController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"# Local cidrs file created by Wmap::CidrTracker.save method at: 2018-11-20 21:25:32 -0500\nNetwork CIDR, CIDR RIPE Reference Text, CIDR NETNAME\n10.0.0.0/8,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n192.168.0.0/16,Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.16.0.0/12, Internet Assigned Numbers Authority,PRIVATE-ADDRESS-ABLK-RFC1918-IANA-RESERVED\n172.217.0.0/16, https://rdap.arin.net/registry/ip/172.217.0.0, GOOGLE"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-23 02:17:10", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Update the cidr table ...
+Database connection success. 
+cidr table truncate success.
+Update complete. 
+Completed 200 OK in 73ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+You're hitting distest controller
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 197ms (Views: 169.9ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/cidrs/index" for 127.0.0.1 at 2019-09-22 22:50:39 -0400
+Processing by CidrsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (36.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 184ms (Views: 153.0ms | ActiveRecord: 24.7ms)
+
+
+Started GET "/cidrs/index?reload" for 127.0.0.1 at 2019-09-22 22:50:39 -0400
+Processing by CidrsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/index.html.erb within layouts/application
+  [1m[36mCidr Load (0.3ms)[0m  [1m[34mSELECT `cidrs`.* FROM `cidrs`[0m
+  Rendered cidrs/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 121.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sites/index" for 127.0.0.1 at 2019-09-22 23:02:21 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.3ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (41.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 219ms (Views: 174.8ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/sites/index?reload" for 127.0.0.1 at 2019-09-22 23:02:21 -0400
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.3ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (30.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 189ms (Views: 182.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/sites/edit" for 127.0.0.1 at 2019-09-22 23:02:39 -0400
+Processing by SitesController#edit as HTML
+  Parameters: {"authenticity_token"=>"WlNMqPQzwEEBako3FP3MqNyTKSrrxww7xsQr/icQ7jDNG7VejFRXEJyp/jgUjlehqJMyXXBno+Dqu9ByN+4DLw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/edit.html.erb within layouts/application
+  Rendered sites/edit.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 116ms (Views: 110.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sites/load_file?path=" for 127.0.0.1 at 2019-09-22 23:02:39 -0400
+Processing by SitesController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+[50717] - Gracefully shutting down workers...
+[50717] === puma shutdown: 2019-09-22 23:44:24 -0400 ===
+[50717] - Goodbye!
+Exiting
