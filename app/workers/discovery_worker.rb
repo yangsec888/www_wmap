@@ -26,12 +26,15 @@ class DiscoveryWorker
 
   def perform(uid)
     start_time=Time.now.to_s
-    file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
-    #file = Rails.root.join('shared', 'data', 'seed')
-    cmd = "wmap" + " " + file.to_s
+    #file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
+    dir = Rails.root.join('shared', 'data')
+    file = dir.join('seed')
+    cmd = "wmap" + " " + file.to_s + " " + dir.to_s + "/"
     logger.info "Starting background command: #{cmd}"
     if system(cmd)
       logger.info "Discovery successful!"
+      site_table_reload(uid, dir.to_s)
+      host_table_reload(uid, dir.to_s)
       on_complete(uid,start_time)
       #end_time=Time.now.to_s
       #receiver=User.find(uid).email

@@ -24,7 +24,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/www_wmap
+      - .:/www_wmap:cached
     depends_on:
       - mariadb
       - redis
@@ -45,3 +45,4 @@ services:
 volumes:
   redis:
   my-db:
+    external: false

@@ -11,31 +11,14 @@ class HostsController < ApplicationController
   before_action :authenticate_user!
   include HostsHelper
 
-=begin
-    def index
-      file = Rails.root.join('shared', 'data', 'hosts')
-      File.new(file, File::CREAT|File::TRUNC|File::RDWR, 0644) unless File.exist?(file)
-      logger.debug "Reading hosts file: #{file}"
-      @hosts = Hash.new
-      row = 0
-      File.open(file,'r').each_line do |line|
-        row += 1
-        next if row <= 1
-        entry = line.split(' ')
-        @hosts[row]=entry
-      end
-      @uid = current_user.id
-    end
-=end
-
     def index
       @hosts=Host.all.order(sort_column + " " + sort_direction).page(params[:page]).per_page(25)
       #@chart_data=Hash.new
     end
 
     def edit
-      #@dir =  Rails.root.join('shared', 'data')
-      @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+      @dir =  Rails.root.join('shared', 'data')
+      #@dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
       Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
       logger.debug "My data dir: #{@dir}"
       #@file = Rails.root.join('shared', 'data', 'hosts')
@@ -46,8 +29,8 @@ class HostsController < ApplicationController
 
     def load_file
       data = ''
-      #@file = Rails.root.join('shared', 'data', 'hosts')
-      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'hosts')
+      @file = Rails.root.join('shared', 'data', 'hosts')
+      #@file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'hosts')
       file = File.open(@file, 'r')
       file.each_line { |line| data += line }
       file.close
@@ -60,8 +43,9 @@ class HostsController < ApplicationController
         render json: { message: 'Access Denied.' }
         return false
       end
-      #@file = Rails.root.join('shared', 'data', 'hosts')
-      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'hosts')
+      data_dir = Rails.root.join('shared', 'data')
+      @file = data_dir.join('hosts')
+      #@file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'hosts')
       file = File.open(@file, 'r')
       @restore = ''
       file.each_line { |line| @restore += line }
@@ -69,7 +53,7 @@ class HostsController < ApplicationController
       file = File.open(@file, 'w+')
       file.write(params[:file_content])
       file.close
-      host_table_reload
+      host_table_reload(current_user.id,data_dir.to_s)
       #YAML.load_file(@file)
       render json: { message: 'Saving successed.' }
     rescue Psych::SyntaxError

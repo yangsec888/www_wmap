@@ -45,7 +45,8 @@ class DomainsController < ApplicationController
 
 
     def edit
-      @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+      #@dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+      @dir = Rails.root.join('shared','data')
       @file = @dir.join('domains')
       @uid = current_user.id
     end
@@ -103,7 +104,8 @@ class DomainsController < ApplicationController
 
     def load_file
       data = ''
-      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'domains')
+      #@file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'domains')
+      @file = Rails.root.join('shared','data','domains')
       file = File.open(@file, 'r')
       file.each_line { |line| data += line }
       file.close
@@ -113,7 +115,7 @@ class DomainsController < ApplicationController
     # Ajax call from view to save domain records into both wmap data file and database
     def save_file
       if platinum_user_and_above?
-        @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'domains')
+        @file = Rails.root.join('shared','data','domains')
         file = File.open(@file, 'r')
         @restore = ''
         file.each_line { |line| @restore += line }

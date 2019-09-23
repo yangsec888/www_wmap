@@ -12,7 +12,8 @@ class CidrsController < ApplicationController
   include CidrsHelper
 
     def edit
-      @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+      #@dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+      @dir = Rails.root.join('shared','data')
       @file = @dir.join('cidrs')
       @uid = current_user.id
     end
@@ -23,7 +24,8 @@ class CidrsController < ApplicationController
 
     def load_file
       data = ''
-      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'cidrs')
+      #@file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'cidrs')
+      @file = Rails.root.join('shared','data','cidrs')
       file = File.open(@file, 'r')
       file.each_line { |line| data += line }
       file.close
@@ -32,7 +34,7 @@ class CidrsController < ApplicationController
 
     def save_file
       if platinum_user_and_above?
-        @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'cidrs')
+        @file = Rails.root.join('shared','data','cidrs')
         file = File.open(@file, 'r')
         @restore = ''
         file.each_line { |line| @restore += line }

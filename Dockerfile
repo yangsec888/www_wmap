@@ -6,7 +6,7 @@
 # Compose and Rails: https://docs.docker.com/compose/rails/
 # Dockerize a Rails 5 project example: https://nickjanetakis.com/blog/dockerize-a-rails-5-postgres-redis-sidekiq-action-cable-app-with-docker-compose
 FROM ruby:2.5.1
-RUN apt-get update -qq && apt-get install -y build-essential \
+RUN apt-get update -yqq && apt-get install -y build-essential \
   && apt-get install -y mariadb-client \
   && apt-get install -y libxml2-dev libxslt1-dev \
   && apt-get install -y redis-tools \

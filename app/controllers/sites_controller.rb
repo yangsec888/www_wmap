@@ -13,7 +13,8 @@ class SitesController < ApplicationController
 
 
   def edit
-    @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+    #@dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+    @dir =  Rails.root.join('shared', 'data')
     Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
     @file = @dir.join('sites')
     File.new(@file, 'w+') unless File.exist?(@file)
@@ -22,7 +23,8 @@ class SitesController < ApplicationController
 
   def load_file
     data = ''
-    @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data','sites')
+    data_dir =  Rails.root.join('shared', 'data')
+    @file = data_dir.join('sites')
     file = File.open(@file, 'r')
     file.each_line { |line| data += line }
     file.close
@@ -31,7 +33,8 @@ class SitesController < ApplicationController
 
   def save_file
     if platinum_user_and_above?
-      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data','sites')
+      data_dir =  Rails.root.join('shared', 'data')
+      @file = data_dir.join('sites')
       file = File.open(@file, 'r')
       @restore = ''
       file.each_line { |line| @restore += line }
@@ -39,7 +42,7 @@ class SitesController < ApplicationController
       file = File.open(@file, 'w+')
       file.write(params[:file_content])
       file.close
-      site_table_reload
+      site_table_reload(current_user.id,data_dir.to_s)
       #YAML.load_file(@file)
       render json: { message: 'Saving successed.' }
     else
@@ -70,46 +73,6 @@ class SitesController < ApplicationController
       end
       @sites = Site.where('site like ?', keyword).limit(10)
   end
-
-=begin
-  def import
-    @dir = Rails.root.join('shared', 'data')
-    @file = @dir.join('sites')
-    @uid = current_user.id
-  end
-
-  def save
-    if platinum_user_and_above?
-      @file = Rails.root.join('shared', 'data', 'sites')
-      file = File.open(@file, 'r')
-      @restore = ''
-      file.each_line { |line| @restore += line }
-      file.close
-      site_tracker=Wmap::SiteTracker.instance
-      host_tracker=Wmap::HostTracker.instance
-      params[:file_content].split("\n").map do |entry|
-        logger.debug "Processing entry: #{entry}"
-        next unless site_tracker.is_url?(entry)
-        my_site=site_tracker.url_2_site(entry)
-        my_host=site_tracker.url_2_host(my_site)
-        site_tracker.add(my_site)
-        host_tracker.add(my_host)
-      end
-      site_tracker.save!
-      host_tracker.save!
-      site_tracker=nil
-      host_tracker=nil
-      render json: { message: 'Saving successed.' }
-    else
-      render json: { message: 'Access denied. ' }
-    end
-  rescue Psych::SyntaxError
-    file = File.open(@file, 'w+')
-    file.write(@restore)
-    file.close
-    render json: { message: 'Saving failed, please check your file again or contact the site administrator.' }
-  end
-=end
 
   def download
     if platinum_user_and_above?

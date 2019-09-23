@@ -64,6 +64,7 @@ gem 'jquery-turbolinks'
 gem 'bootstrap'
 gem 'bootstrap_form'
 gem 'will_paginate'
+gem 'wmap', '>=2.5.7'
 # logon form input validations
 gem 'client_side_validations'
 ##  Support  LDAP authentication
@@ -71,7 +72,6 @@ gem 'devise'
 gem "devise_ldap_authenticatable"
 gem 'server-generated-popups'
 gem 'responders'
-gem 'wmap', '>= 2.5.5'
 gem 'netaddr'
 gem 'parallel'
 gem 'whois'

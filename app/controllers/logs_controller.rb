@@ -11,15 +11,15 @@ class LogsController < ApplicationController
   before_action :authenticate_user!
 
   def list
-    dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('logs')
-    #dir = Rails.root.join('shared', 'log', 'wmap_logs')
+    #dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('logs')
+    dir = Rails.root.join('shared', 'data', 'logs')
     @log_files = Dir.glob("#{dir}/*.log").select{|f| File.file?(f)}
   end
 
   def show
-    # Restrict log access to admin users only 
+    # Restrict log access to admin users only
     redirect_back :fallback_location => root_path, :alert => "Access denied." unless current_user.admin?
-    dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('logs')
+    dir = Rails.root.join('shared', 'data', 'logs')
     white_list = Dir.glob(dir + '*.log')
     logger.debug "White list: #{white_list}"
     @file = dir.join(params[:id]).to_s
@@ -38,7 +38,7 @@ class LogsController < ApplicationController
   end
 
   def download
-    dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('logs')
+    dir = Rails.root.join('shared', 'data', 'logs')
     white_list = Dir.glob(dir + '*.log')
     file = dir.join(params[:file_name]).to_s
     if current_user.admin?

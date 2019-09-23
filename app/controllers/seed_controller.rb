@@ -11,7 +11,8 @@ class SeedController < ApplicationController
   before_action :authenticate_user!
 
   def start
-    @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+    #@dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+    @dir = Rails.root.join('shared','data')
     Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
     @file = @dir.join('seed')
     File.new(@file, 'w+') unless File.exist?(@file)
@@ -19,7 +20,8 @@ class SeedController < ApplicationController
   end
 
   def show
-    @dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+    #@dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
+    @dir = Rails.root.join('shared','data')
     Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
     @file = @dir.join('seed')
     File.new(@file, 'w+') unless File.exist?(@file)
@@ -28,7 +30,8 @@ class SeedController < ApplicationController
 
   def load_file
     data = ''
-    @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
+    #@file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
+    @file = Rails.root.join('shared','data','seed')
     file = File.open(@file, 'r')
     file.each_line { |line| data += line }
     file.close
@@ -37,7 +40,8 @@ class SeedController < ApplicationController
 
   def save_file
     if platinum_user_and_above?
-      @file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
+      #@file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
+      @file = Rails.root.join('shared','data','seed')
       file = File.open(@file, 'r')
       @restore = ''
       file.each_line { |line| @restore += line }
@@ -63,7 +67,8 @@ class SeedController < ApplicationController
     if platinum_user_and_above?
       flash[:notice] = "Discovery is kicked-off in the background ... "
       logger.info "starting the sidekiq worker for the discovery job"
-      DiscoveryWorker.perform_async(current_user.id)
+      uid = current_user.id
+      DiscoveryWorker.perform_async(uid)
     else
       redirect_back :fallback_location => root_path, :alert => "Access denied."
     end
