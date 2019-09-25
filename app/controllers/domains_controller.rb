@@ -13,7 +13,7 @@ class DomainsController < ApplicationController
 
     class ImportLimitError < StandardError
       def message
-        "Error exceeding import limit of 10 entries."
+        "Error exceeding import limit between 1 - 10 entries."
       end
     end
 
@@ -57,6 +57,47 @@ class DomainsController < ApplicationController
       respond_to do |format|
         format.js
       end
+    end
+
+    def import
+      @dir = Rails.root.join('shared', 'data')
+      @file = @dir.join('domains')
+      @uid = current_user.id
+    end
+
+    def save_import
+      if platinum_user_and_above?
+        uid = current_user.id
+        data_dir = Rails.root.join('shared', 'data')
+        my_domains=params[:file_content].split("\n")
+        raise ImportLimitError if my_domains.size>10 || my_domains.size<1
+        new_domains = Hash.new
+        my_domains.map do |entry|
+          cur_entry = entry.downcase.strip
+          next if ["",nil].include? cur_entry
+          domain = Domain.find_by(name: cur_entry)
+          if domain
+            #domain.update(name: cur_entry, user_id: uid)
+          else
+            #new_domain=Domain.new(name: cur_entry, user_id: uid, created_at: Time.now)
+            #new_domain.save!
+            new_domains[cur_entry] = true
+          end
+        end
+        if new_domains.size > 0
+          DomainCheckWorker.perform_async(uid,data_dir.to_s,new_domains)
+        end
+        render json: { message: 'Saving successed.' }
+      else
+        render json: { message: 'Access Denied.' }
+      end
+    rescue ImportLimitError => e
+      render json: { message: e.message }
+    rescue Psych::SyntaxError
+      file = File.open(params[:file_path], 'w+')
+      file.write(@restore)
+      file.close
+      render json: { message: 'Saving failed, please check your file again or contact the site administrator.' }
     end
 
     def update

@@ -1,6 +1,6 @@
 <script type="text/javascript">
   $(document).ready(function() {
-    var domains_editor = CodeMirror(document.getElementById("domainsImportTextArea"), {
+    var cidrs_editor = CodeMirror(document.getElementById("cidrsImportTextArea"), {
       mode: "null",
       lineNumbers: true,
       extraKeys: {
@@ -9,14 +9,14 @@
       value: ""
     });
 
-    $('#save_domains_button').click(function() {
+    $('#save_cidrs_button').click(function() {
       $.ajax({
         url: "save_import",
         type: "POST",
         dataType: 'json',
         data: {
           "file_path": "",
-          "file_content": domains_editor.getDoc().getValue()
+          "file_content": cidrs_editor.getDoc().getValue()
         },
         success: function(response) {
           //console.log(response);
@@ -43,27 +43,24 @@
 
   <div class=" col-md-9 col-lg-9">
     <% data = String.new %>
-    <% Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir) %>
-    <% File.new(@file, 'w+') unless File.exist?(@file) %>
     <p>
-    <h4>Please enter the domains to be imported below:</h4>
+    <h4>Please enter the network CIDR to be imported below:</h4>
     <button type="button" class="pull-right btn btn-default" title="Import Instructions"
       data-container="body" data-toggle="popover" data-placement="right"
-      data-content="Domains Import Format: <br>
-      <ul><li>  domain only  </li>
-          <li> Maximum 10 domains per import </li>
+      data-content="CIDR Import Format: <br>
+      <ul><li>  CIDR only  </li>
+          <li> Entry in standard x.x.x.x/x format only </li>
           <li> One entry per line </li>
-          <li> The entry can be duplicate </li>
           <li> The entry can be already in system (and will be ignored)  </li>
       </ul>
-          "><span class="glyphicon glyphicon-question-sign"></span>Domains Format</button>
+          "><span class="glyphicon glyphicon-question-sign"></span>cidrs Format</button>
   </div>
 </div>
 
 <div class=" col-md-9 col-lg-9">
-    <div class ="CodeMirror" id="domainsImportTextArea"></div>
+    <div class ="CodeMirror" id="cidrsImportTextArea"></div>
     <p>
-    <button class="btn btn-primary" id="save_domains_button" type="submit">Save</button>
+    <button class="btn btn-primary" id="save_cidrs_button" type="submit">Save</button>
     </br>
 </div>
 <div class="row"></div>

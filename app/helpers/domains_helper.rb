@@ -155,5 +155,4 @@ module DomainsHelper
   end
 
 
-
 end

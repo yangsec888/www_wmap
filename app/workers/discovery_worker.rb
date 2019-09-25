@@ -15,13 +15,13 @@ class DiscoveryWorker
   sidekiq_options retry: false
 
 
-  def on_complete(uid,start_time)
+  def on_complete(uid,start_time,data_dir)
     receiver=User.find(uid).email
     logger.info "Sending out email notice to: #{receiver}"
     end_time=Time.now.to_s
     UserMailer.discovery_completion_notice(receiver, start_time, end_time).deliver_later
-    site_table_reload(uid)
-    host_table_reload(uid)
+    site_table_reload(uid,data_dir)
+    host_table_reload(uid,data_dir)
   end
 
   def perform(uid)
@@ -33,9 +33,7 @@ class DiscoveryWorker
     logger.info "Starting background command: #{cmd}"
     if system(cmd)
       logger.info "Discovery successful!"
-      site_table_reload(uid, dir.to_s)
-      host_table_reload(uid, dir.to_s)
-      on_complete(uid,start_time)
+      on_complete(uid,start_time,dir.to_s)
       #end_time=Time.now.to_s
       #receiver=User.find(uid).email
       #logger.info "Sending out email notice to: #{receiver}"
@@ -45,5 +43,6 @@ class DiscoveryWorker
       logger.debug "Here's some information related to failed discovery: #{self.class.name}, #{__method__}"
     end
   end
+
 
 end
