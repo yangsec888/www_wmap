@@ -13,7 +13,7 @@ class DomainsController < ApplicationController
 
     class ImportLimitError < StandardError
       def message
-        "Error exceeding import limit between 1 - 10 entries."
+        "Error exceeding import limit 10 entries."
       end
     end
 
@@ -70,7 +70,7 @@ class DomainsController < ApplicationController
         uid = current_user.id
         data_dir = Rails.root.join('shared', 'data')
         my_domains=params[:file_content].split("\n")
-        raise ImportLimitError if my_domains.size>10 || my_domains.size<1
+        raise ImportLimitError if my_domains.size>10 
         new_domains = Hash.new
         my_domains.map do |entry|
           cur_entry = entry.downcase.strip

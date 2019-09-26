@@ -32446,3 +32446,344 @@ Processing by SeedController#distest as HTML
 Completed 200 OK in 120ms (Views: 114.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/home/page" for 127.0.0.1 at 2019-09-25 23:43:44 -0400
+  [1m[35m (3.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 693ms (Views: 612.5ms | ActiveRecord: 41.4ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-09-25 23:43:54 -0400
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wTGNKJxgAeDYBvhZ6XDpABLkvqok3HNU95cuFjmayXUUmeVlVFshCYvKMOsoET1mkscRXnolNmS1mfITlf9M1w==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 164ms (Views: 155.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/seed/load_file?path=" for 127.0.0.1 at 2019-09-25 23:43:54 -0400
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/save_file" for 127.0.0.1 at 2019-09-25 23:44:01 -0400
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-26 03:05:16", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/import" for 127.0.0.1 at 2019-09-25 23:44:02 -0400
+Processing by DomainsController#import as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/import.html.erb within layouts/application
+  Rendered domains/import.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (5.6ms)
+Completed 200 OK in 145ms (Views: 138.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/import" for 127.0.0.1 at 2019-09-25 23:46:34 -0400
+Processing by DomainsController#import as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/import.html.erb within layouts/application
+  Rendered domains/import.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 143ms (Views: 136.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/import" for 127.0.0.1 at 2019-09-25 23:47:31 -0400
+Processing by DomainsController#import as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/import.html.erb within layouts/application
+  Rendered domains/import.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 139ms (Views: 132.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/import" for 127.0.0.1 at 2019-09-25 23:48:02 -0400
+Processing by DomainsController#import as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/import.html.erb within layouts/application
+  Rendered domains/import.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 145ms (Views: 136.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/domains/edit" for 127.0.0.1 at 2019-09-25 23:49:09 -0400
+Processing by DomainsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 163ms (Views: 156.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2019-09-25 23:49:09 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/index" for 127.0.0.1 at 2019-09-25 23:49:39 -0400
+Processing by DomainsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.7ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 217ms (Views: 168.1ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/domains/index?reload" for 127.0.0.1 at 2019-09-25 23:49:39 -0400
+Processing by DomainsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 142ms (Views: 132.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2019-09-25 23:49:50 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home/page" for 127.0.0.1 at 2019-09-25 23:49:54 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 117.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-09-25 23:49:55 -0400
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r0Sd+m9IUU6NbO0Q0VNMUIH/7LnZ6GiNrxuBkD/B3B567PW3p3Nxp96gJaIQMpg2AdxDTYcRLb3tFV2Vk6RZvA==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 126ms (Views: 119.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/load_file?path=" for 127.0.0.1 at 2019-09-25 23:49:56 -0400
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/save_file" for 127.0.0.1 at 2019-09-25 23:49:57 -0400
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-26 03:05:16", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/import" for 127.0.0.1 at 2019-09-25 23:49:58 -0400
+Processing by DomainsController#import as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/import.html.erb within layouts/application
+  Rendered domains/import.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 118ms (Views: 112.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/save_import" for 127.0.0.1 at 2019-09-25 23:50:00 -0400
+Processing by DomainsController#save_import as JSON
+  Parameters: {"file_path"=>"", "file_content"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-26 03:05:16", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cidrs/import" for 127.0.0.1 at 2019-09-25 23:52:24 -0400
+Processing by CidrsController#import as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/import.html.erb within layouts/application
+  Rendered cidrs/import.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 168ms (Views: 122.5ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/cidrs/import" for 127.0.0.1 at 2019-09-25 23:52:27 -0400
+Processing by CidrsController#import as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/import.html.erb within layouts/application
+  Rendered cidrs/import.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 113.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/save_import" for 127.0.0.1 at 2019-09-25 23:52:35 -0400
+Processing by DomainsController#save_import as JSON
+  Parameters: {"file_path"=>"", "file_content"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-26 03:05:16", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cidrs/import" for 127.0.0.1 at 2019-09-25 23:52:36 -0400
+Processing by CidrsController#import as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/import.html.erb within layouts/application
+  Rendered cidrs/import.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 126ms (Views: 120.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-09-25 23:52:55 -0400
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 119ms (Views: 112.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2019-09-25 23:52:59 -0400
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"Jcwjtf6QKuRqlY1tD5wfU+zIqXOR/plJKZ6+sx6VHGXwZEv4NqsKDTlZRd/O/cs1bOsGh88H3HlrkGK2svCZxw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 2, email: "yang.li@owasp.org", created_at: "2019-05-20 18:55:27", updated_at: "2019-09-26 03:05:16", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 142ms (Views: 125.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yang.li@owasp.org", "2019-09-25 23:52:59 -0400", "2019-09-25 23:53:26 -0400"
+[ActiveJob] [ActionMailer::DeliveryJob] [789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7] Performing ActionMailer::DeliveryJob (Job ID: 789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yang.li@owasp.org", "2019-09-25 23:52:59 -0400", "2019-09-25 23:53:26 -0400"
+[ActiveJob] [ActionMailer::DeliveryJob] [789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (2.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7] UserMailer#discovery_completion_notice: processed outbound mail in 215.7ms
+[ActiveJob] [ActionMailer::DeliveryJob] [789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7] Sent mail to yang.li@owasp.org (14.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7] Date: Wed, 25 Sep 2019 23:53:27 -0400
+From: deploy@wmap.io
+To: yang.li@owasp.org
+Message-ID: <5d8c363731e5f_4a7f3fc79d8351e04071@NYMIT056325.local.mail>
+Subject: Your WMAP Discovery is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Start time: 2019-09-25 23:52:59 -0400</li>
+    <li>Completion time: 2019-09-25 23:53:26 -0400</li>
+    <li>My Discovery Result: <a href='https://wmap.io/sites/index'>https://wmap.io/sites/index </a></li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7] Error performing ActionMailer::DeliveryJob (Job ID: 789c1f64-d7bf-40b2-b2e3-5e3d5c8845c7) from Async(mailers) in 249.71ms: Errno::ECONNREFUSED (Connection refused - connect(2) for "127.0.0.1" port 25):
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:539:in `initialize'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:539:in `open'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:539:in `tcp_socket'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:549:in `block in do_start'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/timeout.rb:93:in `block in timeout'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:548:in `do_start'
+/Users/sli/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/net/smtp.rb:518:in `start'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/mail-2.7.1/lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/mail-2.7.1/lib/mail/message.rb:2159:in `do_delivery'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/mail-2.7.1/lib/mail/message.rb:260:in `block in deliver'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/base.rb:560:in `block in deliver_mail'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/base.rb:558:in `deliver_mail'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/mail-2.7.1/lib/mail/message.rb:260:in `deliver'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/actionmailer-5.2.2.1/lib/action_mailer/delivery_job.rb:16:in `perform'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/i18n-1.6.0/lib/i18n.rb:297:in `with_locale'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/logging.rb:46:in `block in tag_logger'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/logging.rb:46:in `tag_logger'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activesupport-5.2.2.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/execution.rb:22:in `execute'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/activejob-5.2.2.1/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
