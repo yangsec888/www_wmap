@@ -26,7 +26,7 @@
             alert("Error Import Limit - please contact the administrator for help!")
           } else {
             alert("Success: " + response['message']);
-            window.location = "/cidrs/import"
+            window.location = "/seed/distest"
           }
 
         },
@@ -36,24 +36,30 @@
         }
       });
     });
+
+    $('#skip_cidrs_button').click(function() {
+      window.location = "/seed/distest"
+    });
+
   });
 </script>
 
 <div class="row">
 
   <div class=" col-md-9 col-lg-9">
-    <% data = String.new %>
     <p>
     <h4>Please enter the network CIDR to be imported below:</h4>
     <button type="button" class="pull-right btn btn-default" title="Import Instructions"
       data-container="body" data-toggle="popover" data-placement="right"
       data-content="CIDR Import Format: <br>
-      <ul><li>  CIDR only  </li>
+      <ul><li> <a href='https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing'>CIDR Notation</a> Only  </li>
           <li> Entry in standard x.x.x.x/x format only </li>
           <li> One entry per line </li>
           <li> The entry can be already in system (and will be ignored)  </li>
+          <li> Ask your network administrator for the information if necessary </li>
+          <li> Alternatively, click the Skip button if you're not sure </li>
       </ul>
-          "><span class="glyphicon glyphicon-question-sign"></span>cidrs Format</button>
+          "><span class="glyphicon glyphicon-question-sign"></span>CIDR Format</button>
   </div>
 </div>
 
@@ -61,6 +67,8 @@
     <div class ="CodeMirror" id="cidrsImportTextArea"></div>
     <p>
     <button class="btn btn-primary" id="save_cidrs_button" type="submit">Save</button>
+    <button class="btn btn-primary" id="skip_cidrs_button" type="submit">Skip</button>
+
     </br>
 </div>
 <div class="row"></div>

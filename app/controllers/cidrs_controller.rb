@@ -11,6 +11,12 @@ class CidrsController < ApplicationController
   before_action :authenticate_user!
   include CidrsHelper
 
+    class ImportLimitError < StandardError
+      def message
+        "Error exceeding import limit between 1 - 10 entries."
+      end
+    end
+
     def edit
       #@dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
       @dir = Rails.root.join('shared','data')
@@ -68,23 +74,21 @@ class CidrsController < ApplicationController
       if platinum_user_and_above?
         uid = current_user.id
         data_dir = Rails.root.join('shared', 'data')
-        my_domains=params[:file_content].split("\n")
-        raise ImportLimitError if my_domains.size>10 || my_domains.size<1
-        new_domains = Hash.new
-        my_domains.map do |entry|
+        my_cidrs=params[:file_content].split("\n")
+        raise ImportLimitError if my_cidrs.size>10 || my_cidrs.size<1
+        new_cidrs = Hash.new
+        my_cidrs.map do |entry|
           cur_entry = entry.downcase.strip
           next if ["",nil].include? cur_entry
-          domain = Domain.find_by(name: cur_entry)
-          if domain
-            #domain.update(name: cur_entry, user_id: uid)
+          cidr = Cidr.find_by(owed_cidr: cur_entry)
+          if cidr
+            #cidr.update(name: cur_entry, user_id: uid)
           else
-            #new_domain=Domain.new(name: cur_entry, user_id: uid, created_at: Time.now)
-            #new_domain.save!
-            new_domains[cur_entry] = true
+            new_cidrs[cur_entry] = true
           end
         end
-        if new_domains.size > 0
-          DomainCheckWorker.perform_async(uid,data_dir.to_s,new_domains)
+        if new_cidrs.size > 0
+          CidrCheckWorker.perform_async(uid,data_dir.to_s,new_cidrs)
         end
         render json: { message: 'Saving successed.' }
       else
