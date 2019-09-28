@@ -154,5 +154,31 @@ module DomainsHelper
     puts "Update complete. "
   end
 
+  # Import domain from seed file
+  def import_domain_from_seed(dir,file)
+    puts "Import domain from seed file: #{file}"
+    tracker=Wmap::DomainTracker.instance
+    tracker.data_dir = dir
+    tracker.domains_file = dir + "/" + "domains"
+    tracker.load_domains_from_file(tracker.domains_file)
+    dis_entries = tracker.file_2_list(file)
+    if dis_entries.size > 0
+      dis_entries.map do |entry|
+        if tracker.is_url?(entry)
+          my_host = tracker.url_2_host(entry)
+          my_domain = tracker.get_domain_root(my_host)
+          tracker.add(my_domain)
+        elsif tracker.is_host?(entry)
+          my_domain = tracker.get_domain_root(entry)
+          tracker.add(my_domain)
+        else
+          # do nothing
+        end
+      end
+      tracker.save!
+    end
+    tracker=nil
+    puts "Import complete."
+  end
 
 end

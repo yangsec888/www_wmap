@@ -11,6 +11,7 @@ class DomainsController < ApplicationController
   before_action :authenticate_user!
   include DomainsHelper
 
+    # Custom user import error message 
     class ImportLimitError < StandardError
       def message
         "Error exceeding import limit 10 entries."
@@ -59,18 +60,21 @@ class DomainsController < ApplicationController
       end
     end
 
+    # Allow user to import domain to wmap data file and database table
     def import
-      @dir = Rails.root.join('shared', 'data')
-      @file = @dir.join('domains')
-      @uid = current_user.id
+      dir = Rails.root.join('shared', 'data')
+      Dir.mkdir(dir, 0750) unless Dir.exist?(dir)
+      file = dir.join('domains')
+      File.new(file, 'w+') unless File.exist?(file)
     end
 
+    # Save user import
     def save_import
       if platinum_user_and_above?
         uid = current_user.id
         data_dir = Rails.root.join('shared', 'data')
         my_domains=params[:file_content].split("\n")
-        raise ImportLimitError if my_domains.size>10 
+        raise ImportLimitError if my_domains.size>10
         new_domains = Hash.new
         my_domains.map do |entry|
           cur_entry = entry.downcase.strip
@@ -133,7 +137,6 @@ class DomainsController < ApplicationController
     end
 
     # show all domains
-    #def show_all
     def index
       @domains = Domain.all.order(sort_column + " " + sort_direction).page(params[:page]).per_page(25)
       @chart_data = pie_by_keep("all").to_json.html_safe
@@ -143,6 +146,7 @@ class DomainsController < ApplicationController
       end
     end
 
+    # Ajax call from view to local domains records from wmap data file
     def load_file
       data = ''
       #@file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'domains')

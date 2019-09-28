@@ -12,6 +12,7 @@ class DiscoveryWorker
   include Sidekiq::Worker
   include SitesHelper
   include HostsHelper
+  include DomainsHelper
   sidekiq_options retry: false
 
 
@@ -22,6 +23,7 @@ class DiscoveryWorker
     UserMailer.discovery_completion_notice(receiver, start_time, end_time).deliver_later
     site_table_reload(uid,data_dir)
     host_table_reload(uid,data_dir)
+    domain_table_reload(uid,data_dir)
   end
 
   def perform(uid)
@@ -29,6 +31,7 @@ class DiscoveryWorker
     #file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
     dir = Rails.root.join('shared', 'data')
     file = dir.join('seed')
+    import_domain_from_seed(dir.to_s,file.to_s)
     cmd = "wmap" + " " + file.to_s + " " + dir.to_s + "/"
     logger.info "Starting background command: #{cmd}"
     if system(cmd)

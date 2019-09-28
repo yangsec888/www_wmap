@@ -36,15 +36,16 @@
         }
       });
     });
+
+    $('#skip_domains_button').click(function() {
+      window.location = "/cidrs/import"
+    });
   });
 </script>
 
 <div class="row">
 
   <div class=" col-md-9 col-lg-9">
-    <% data = String.new %>
-    <% Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir) %>
-    <% File.new(@file, 'w+') unless File.exist?(@file) %>
     <p>
     <h4>Please enter the domains to be imported below:</h4>
     <button type="button" class="pull-right btn btn-default" title="Import Instructions"
@@ -64,6 +65,8 @@
     <div class ="CodeMirror" id="domainsImportTextArea"></div>
     <p>
     <button class="btn btn-primary" id="save_domains_button" type="submit">Save</button>
+    <button class="btn btn-primary" id="skip_domains_button" type="submit">Skip</button>
+
     </br>
 </div>
 <div class="row"></div>
