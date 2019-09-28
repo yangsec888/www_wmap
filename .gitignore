@@ -40,3 +40,6 @@ public/assets/
 
 # Ignore .env file which should be local
 !/.env
+
+# Ignore deploy_wmap.sh
+!/bin/deploy_wmap.sh

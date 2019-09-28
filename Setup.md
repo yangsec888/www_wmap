@@ -51,6 +51,7 @@ $ sudo vi /etc/redis/redis.conf
 ```sh
 $ sudo systemctl restart redis.service
 ```
+You can also use our deployment [redis.service](/config/systemd/redis.service) under Ubuntu 18.0.4 instance for further reference.
 
 ### 6.4. Check the redis service:
 ```sh
@@ -65,20 +66,20 @@ Download sidekiq gem:
 $ gem install sidekiq
 ```
 
-### 7.1. Configure sidekiq as service:
+### 7.1. Configure Sidekiq as service:
 This [post](https://gist.github.com/reabiliti/7204115b433e7bd986343d7709f05c2a) provides detail configuration instructions for running your sidekiq as a service.  
 ```sh
 $ sudo vi /lib/systemd/system/sidekiq.service
 ```
-You can also use our deployment [sidekiq.service](/config/sidekiq.service) under Ubuntu 18.0.4 instance for further reference.
+You can also use our deployment [sidekiq.service](/config/systemd/sidekiq.service) under Ubuntu 18.0.4 instance for further reference.
 
-### 7.2. Enable sidekiq service:
+### 7.2. Enable Sidekiq service:
 ```sh
 $ sudo systemctl daemon-reload
 $ sudo systemctl start sidekiq
 ```
 
-### 7.3. Trouble-shooting sidekiq:
+### 7.3. Trouble-shooting Sidekiq:
 ```sh
 $ ps uax | grep sidekiq
 $ sudo systemctl status sidekiq
@@ -127,6 +128,10 @@ export RAILS_MASTER_KEY=xxxx
 # Add MariaDB Connectivity credential
 export DBUSER=xxxx
 export DBPASS=xxxx
+export DATABASE_URL=mysql2://root:@localhost:3306/www_wmap_development
+
+# Add Redis connection url
+export REDIS_URL=redis://localhost:6379/0
 ```
 
 ## 10. Puma Application Server
@@ -148,6 +153,8 @@ $ sudo apt-get install nginx
 ### 11.2. Configure the web server:
 Make sure it's tight up with your Puma application configuration. Refer to [nginx.conf](/config/nginx.conf) for more details.
 
+### 11.3. Run Nginx as Service
+You can also use our deployment [nginx.service](/config/systemd/nginx.service) under Ubuntu 18.0.4 instance for further reference.
 
 ## 12. Setup Ubuntu Firewall:
 How to [Setup a Firewall with UFW](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-18-04) on Ubuntu:

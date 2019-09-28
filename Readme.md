@@ -29,6 +29,8 @@ WMAP Web Portal depends on a number of open source projects to work properly:
 * [CodeMirror](https://codemirror.net/) - CodeMirror is a versatile text editor implemented in JavaScript.
 * [jstree](https://www.jstree.com/) -  jsTree is a JavaScript based tree UI implementation.
 * [Sidekiq](https://github.com/mperham/sidekiq) - A background processing manager (asynchronous and non-blocking IO) for RoR.
+* [Redis](https://redis.io/) - A high performance in-memory cache data store.
+* [MariaDB](https://mariadb.org/) - A community supported fork of MySQL relational database.
 * [wmap](https://github.com/yangsec888/wmap) - Backend Web Mapper gem for the heavy lifting.
 
 ### Build and Run in Docker
@@ -64,7 +66,7 @@ Please feel free to contact me if you need the help.
 
 ### Local Installation
 
-WMAP App requires [Ruby on Rails](http://rubyonrails.org) v5.2.x and [MariaDB](https://www.mysql.com/) v10.4.x database to run properly.
+WMAP App requires [Ruby on Rails](http://rubyonrails.org) v5.2.x, [MariaDB](https://www.mysql.com/) v10.4.x database, [Redis](https://redis.io/) 5.x in-memory data store, in order to run properly.
 
 Install the environment dependencies, and ensure the database server is running. For example, in our Linux / Mac laptop,
 
@@ -75,6 +77,11 @@ Install the environment dependencies, and ensure the database server is running.
 ```sh
 $ sudo apt-get install libmysqlclient-dev
 $ gem install mysql2 -v '0.5.2' --source 'https://rubygems.org/'
+```
+
+#### Install and Redis v5.x Server
+```sh
+$ sudo apt-get install redis-server redis-tools
 ```
 
 #### Start the Rails Server
@@ -91,8 +98,8 @@ $ rails server
 The application is deployed into a demo instance at [www.wmap.io](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
 
 
-####  Demo Instance Setup  
-The demo instance deployment setup can be found at [Setup.md](Setup.md) for your reference.
+####  Demo Instance Setup Details  
+For more information on local installation, please use my demo instance deployment at [Setup.md](Setup.md) for your reference.
 
 
 ### Usage
