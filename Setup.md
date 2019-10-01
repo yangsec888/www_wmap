@@ -148,7 +148,14 @@ We'll use Nginx web server for the web server layer. It's perfect server to rend
 $ sudo apt-get install nginx
 ```
 
-### 11.1. Create a self-sign cert. Refer to this [link](https://www.humankode.com/ssl/create-a-selfsigned-certificate-for-nginx-in-5-minutes) for reference.
+### 11.1. Create a certificate. [Use Let's Encrypt Certificate Authority](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04) to secure the site.
+```sh
+deploy@www:~$ sudo add-apt-repository ppa:certbot/certbot
+deploy@www:~$ sudo apt install python-certbot-nginx
+deploy@www:~$ sudo certbot --nginx -d wmap.io -d www.wmap.io
+deploy@www:~$ sudo certbot renew --dry-run
+deploy@www:~$ sudo vi /etc/nginx/sites-available/www_wmap
+```
 
 ### 11.2. Configure the web server:
 Make sure it's tight up with your Puma application configuration. Refer to [nginx.conf](/config/nginx.conf) for more details.
