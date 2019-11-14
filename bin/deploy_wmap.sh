@@ -25,8 +25,8 @@ declare -a wmapfs=(Gemfile lib/application_responder.rb)
 # Step 1 - Prepare
 cd $home_dev
 # Step 2 - Deploying the aplication folders
-rsync -avq --exclude-from .exclude_wmap.txt wmap/.git "wmap" deploy@${prod_host}:${wmap_prod}  2>/dev/null
-rsync -avq --exclude-from .exclude_www_wmap.txt "www_wmap" deploy@${prod_host}:${wmap_app_prod} 2>/dev/null
+#rsync -avq --exclude-from .exclude_wmap.txt wmap/.git "wmap" deploy@${prod_host}:${wmap_prod}  2>/dev/null
+rsync -avq --exclude-from ${wmap_app_dev}/.exclude_www_wmap.txt "www_wmap" deploy@${prod_host}:${wmap_app_prod} 2>/dev/null
 
 # Step 4 - Setup remote server environment
 echo "Setup production server rails 5 environment ..."
@@ -39,6 +39,8 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle e
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec rake assets:precompile' 2> /dev/null
 
 # Step 5 - Restart the remote services
+echo "Stopping Postfix mail service ..."
+ssh -q deploy@${prod_host} 'source ~/.bash_profile;  sudo postfix stop'
 echo "Stopping Nginx web service ..."
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl stop nginx'
 echo "Stopping Puma application server service ..."
@@ -48,6 +50,7 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile; bundle exec pumactl -P /home
 sleep 3
 echo "Stopping Sidekiq service ..."
 ssh -q deploy@${prod_host} 'source ~/.bash_profile;  sudo systemctl stop sidekiq'
+
 ##
 echo "Starting Puma application server service ..."
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; bundle exec puma -e production &'
@@ -60,3 +63,6 @@ echo "Done"
 echo "Starting Sidekiq service ..."
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl start sidekiq'
 echo "Done"
+
+echo "Start Postfix service ..."
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo postfix start'

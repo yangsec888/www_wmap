@@ -34838,3 +34838,257 @@ Content-Transfer-Encoding: 7bit
 /Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
 /Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
 /Users/sli/.rvm/gems/ruby-2.5.1/gems/concurrent-ruby-1.1.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Started POST "/seed/discovery" for 127.0.0.1 at 2019-11-14 15:27:16 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"hQuRN2gwGYDPNNscwt8uAy97wqMfkKzio7Tdv3Lr4HthIbmhmVK+teIharE4ku50lNcmSQADi8feYE2RSq23jg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 111ms (ActiveRecord: 35.8ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-14 15:27:16 -0500
+Processing by SeedController#distest as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-11-14 15:27:16 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (28.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 701ms (Views: 696.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-11-14 15:27:18 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"65a6mHatGfKoN4/h4tX+xhC67mlvgskRQ6EgzsEMEB6fDSrp01vtKJu8r4r3hQbE3pVDfCusF3N1J1UOycug7Q==", "user"=>{"username"=>"sli", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'sli' LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'sli' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [36mLDAP:[0m LDAP dn lookup: sAMAccountName=sli
+  [36mLDAP:[0m LDAP search for login: sAMAccountName=sli
+Completed 500 Internal Server Error in 5245ms (ActiveRecord: 0.8ms)
+
+
+  
+Net::LDAP::Error (Operation timed out - user specified timeout):
+  
+net-ldap (0.16.1) lib/net/ldap/connection.rb:72:in `open_connection'
+net-ldap (0.16.1) lib/net/ldap/connection.rb:698:in `socket'
+net-ldap (0.16.1) lib/net/ldap.rb:1321:in `new_connection'
+net-ldap (0.16.1) lib/net/ldap.rb:1300:in `use_connection'
+net-ldap (0.16.1) lib/net/ldap.rb:783:in `block in search'
+net-ldap (0.16.1) lib/net/ldap/instrumentation.rb:19:in `instrument'
+net-ldap (0.16.1) lib/net/ldap.rb:782:in `search'
+net-ldap (0.16.1) lib/net/ldap.rb:1207:in `search_root_dse'
+net-ldap (0.16.1) lib/net/ldap.rb:1273:in `paged_searches_supported?'
+net-ldap (0.16.1) lib/net/ldap.rb:775:in `search'
+devise_ldap_authenticatable (0.8.6) lib/devise_ldap_authenticatable/ldap/connection.rb:239:in `search_for_login'
+devise_ldap_authenticatable (0.8.6) lib/devise_ldap_authenticatable/ldap/connection.rb:51:in `dn'
+devise_ldap_authenticatable (0.8.6) lib/devise_ldap_authenticatable/ldap/connection.rb:97:in `authorized?'
+devise_ldap_authenticatable (0.8.6) lib/devise_ldap_authenticatable/ldap/adapter.rb:15:in `valid_credentials?'
+devise_ldap_authenticatable (0.8.6) lib/devise_ldap_authenticatable/model.rb:48:in `valid_ldap_authentication?'
+devise_ldap_authenticatable (0.8.6) lib/devise_ldap_authenticatable/model.rb:105:in `find_for_ldap_authentication'
+devise_ldap_authenticatable (0.8.6) lib/devise_ldap_authenticatable/strategy.rb:13:in `authenticate!'
+warden (1.2.8) lib/warden/strategies/base.rb:54:in `_run!'
+warden (1.2.8) lib/warden/proxy.rb:369:in `block in _run_strategies_for'
+warden (1.2.8) lib/warden/proxy.rb:365:in `each'
+warden (1.2.8) lib/warden/proxy.rb:365:in `_run_strategies_for'
+warden (1.2.8) lib/warden/proxy.rb:335:in `_perform_authentication'
+warden (1.2.8) lib/warden/proxy.rb:133:in `authenticate!'
+devise (4.7.1) app/controllers/devise/sessions_controller.rb:19:in `create'
+actionpack (5.2.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-11-14 15:27:28 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 134ms (Views: 131.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-11-14 15:27:30 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iUyaj19QiXb7lQrgiPXA737PXsiiTQAOQcyq9Dgb95n91wr++qZ9rMgeKoudpTjtsODz3eZj3mx3St80MNxHag==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-11-14 15:27:30 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 143ms (Views: 141.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-11-14 15:27:37 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xl5l3Q+7CCan4i5M8GT0+PVoGqUqGijL1AE+cI3PXLYqxfWsqk38/JRpDiflNAz6O0e3sG409qnih0uwhQjsRQ==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-11-14 20:27:37', `sign_in_count` = 2, `updated_at` = '2019-11-14 20:27:37' WHERE `users`.`id` = 1[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/seed/distest
+Completed 302 Found in 41ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-14 15:27:37 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 143ms (Views: 133.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2019-11-14 15:27:39 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"l5OyHslkAY04ObzC3Xc1HzVNMBkG6kQ8On2aQSc6GWeH7++6qruPAA74g9t7cEfK8AetMgUhC/b6J3Ht53THJA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-14 16:33:18", updated_at: "2019-11-14 20:27:37", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 149ms (Views: 135.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: facb453e-ac35-45c5-b77e-1e559175bba0) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yang.li@owasp.org", "2019-11-14 15:27:39 -0500", "2019-11-14 15:28:03 -0500"
+[ActiveJob] [ActionMailer::DeliveryJob] [facb453e-ac35-45c5-b77e-1e559175bba0] Performing ActionMailer::DeliveryJob (Job ID: facb453e-ac35-45c5-b77e-1e559175bba0) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "yang.li@owasp.org", "2019-11-14 15:27:39 -0500", "2019-11-14 15:28:03 -0500"
+[ActiveJob] [ActionMailer::DeliveryJob] [facb453e-ac35-45c5-b77e-1e559175bba0] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [facb453e-ac35-45c5-b77e-1e559175bba0]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [facb453e-ac35-45c5-b77e-1e559175bba0]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (2.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [facb453e-ac35-45c5-b77e-1e559175bba0] UserMailer#discovery_completion_notice: processed outbound mail in 238.4ms
+[ActiveJob] [ActionMailer::DeliveryJob] [facb453e-ac35-45c5-b77e-1e559175bba0] Sent mail to yang.li@owasp.org (190.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [facb453e-ac35-45c5-b77e-1e559175bba0] Date: Thu, 14 Nov 2019 15:28:03 -0500
+From: deploy@wmap.io
+To: yang.li@owasp.org
+Message-ID: <5dcdb8d3ed73f_a97f3fd1decde89067855@nylit057164.us.randomhouse.com.mail>
+Subject: Your WMAP Discovery is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Start time: 2019-11-14 15:27:39 -0500</li>
+    <li>Completion time: 2019-11-14 15:28:03 -0500</li>
+    <li>My Discovery Result: <a href='https://wmap.io/sites/index'>https://wmap.io/sites/index </a></li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [facb453e-ac35-45c5-b77e-1e559175bba0] Performed ActionMailer::DeliveryJob (Job ID: facb453e-ac35-45c5-b77e-1e559175bba0) from Async(mailers) in 445.99ms
+Started GET "/home/page" for 127.0.0.1 at 2019-11-14 15:28:38 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 124.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-11-14 15:28:39 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dd4HuQrew4t6OG8/QD98b45+DNIU2wND5CngYKKhCJ9lolodaQFNBkz5UCbmOA66SzSR+RcQTIkkcwvMYu/W3A==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 134ms (Views: 121.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seed/load_file?path=" for 127.0.0.1 at 2019-11-14 15:28:39 -0500
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
