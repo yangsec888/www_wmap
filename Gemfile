@@ -64,7 +64,7 @@ gem 'jquery-turbolinks'
 gem 'bootstrap'
 gem 'bootstrap_form'
 gem 'will_paginate'
-gem 'wmap', '>=2.6.1'
+gem 'wmap', '>=2.6.6'
 # logon form input validations
 gem 'client_side_validations'
 ##  Support  LDAP authentication
