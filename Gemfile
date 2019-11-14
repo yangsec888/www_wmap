@@ -80,7 +80,7 @@ gem 'net-ping'
 gem 'open_uri_redirections'
 gem 'dnsruby'
 gem 'geoip'
-gem 'sidekiq', '=5.2.3' #move discovery job to background
+gem 'sidekiq', '=5.2.7' #move discovery job to background
 gem 'sidekiq-batch'
 #gem 'sidekiq-status'
 gem 'sinatra', '= 2.0.4' #require for sidekiq web
