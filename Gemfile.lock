@@ -244,11 +244,10 @@ GEM
       rubyzip (~> 1.2, >= 1.2.2)
     sequel (5.26.0)
     server-generated-popups (1.4.8)
-    sidekiq (6.0.3)
-      connection_pool (>= 2.2.2)
-      rack (>= 2.0.0)
-      rack-protection (>= 2.0.0)
-      redis (>= 4.1.0)
+    sidekiq (5.2.3)
+      connection_pool (~> 2.2, >= 2.2.2)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     sidekiq-batch (0.1.6)
       sidekiq (>= 3)
     sinatra (2.0.4)
@@ -351,7 +350,7 @@ DEPENDENCIES
   selenium-webdriver
   sequel
   server-generated-popups
-  sidekiq
+  sidekiq (= 5.2.3)
   sidekiq-batch
   sinatra (= 2.0.4)
   spring

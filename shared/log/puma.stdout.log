@@ -34426,3 +34426,10 @@ starting the sidekiq worker for the discovery job
 Completed 200 OK in 167ms (Views: 145.7ms | ActiveRecord: 0.4ms)
 
 
+[40815] - Gracefully shutting down workers...
+[40815] === puma shutdown: 2019-11-14 14:22:50 -0500 ===
+[40815] - Goodbye!
+Exiting
+=== puma startup: 2019-11-14 14:26:55 -0500 ===
+[41941] * Starting control server on unix:///var/folders/hh/gj72z99901d_17766gsv2jrr21y4wb/T/puma-status-1573759615712-41941
+[41941] - Worker 0 (pid: 41943) booted, phase: 0
