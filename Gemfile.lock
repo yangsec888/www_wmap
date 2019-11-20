@@ -244,7 +244,7 @@ GEM
       rubyzip (~> 1.2, >= 1.2.2)
     sequel (5.26.0)
     server-generated-popups (1.4.8)
-    sidekiq (5.2.7)
+    sidekiq (5.2.5)
       connection_pool (~> 2.2, >= 2.2.2)
       rack (>= 1.5.0)
       rack-protection (>= 1.5.0)
@@ -297,7 +297,7 @@ GEM
     websocket-extensions (0.1.4)
     whois (5.0.0)
     will_paginate (3.2.1)
-    wmap (2.6.6)
+    wmap (2.6.7)
       css_parser (>= 1.6)
       dnsruby (>= 1.52)
       geoip (>= 1.0)
@@ -344,6 +344,7 @@ DEPENDENCIES
   parallel
   puma (~> 3.7)
   rails (~> 5.2.2.1)
+  rake (= 12.3.3)
   responders
   rubyXL (= 3.3.33)
   sass-rails (~> 5.0)
@@ -351,19 +352,18 @@ DEPENDENCIES
   selenium-webdriver
   sequel
   server-generated-popups
-  sidekiq (= 5.2.7)
+  sidekiq (= 5.2.5)
   sidekiq-batch
   sinatra (= 2.0.4)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   twitter-bootstrap-rails
-  tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
   whois
   will_paginate
-  wmap (>= 2.6.6)
+  wmap (>= 2.6.7)
 
 BUNDLED WITH
    1.17.3

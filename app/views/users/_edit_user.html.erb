@@ -1,0 +1,41 @@
+<!-- Implementation based on this technie: https://github.com/colorfulfool/rails-popup -->
+<% remote = request.xhr? %>
+<h4>&nbsp;&nbsp;Update User Information
+</h4>
+
+<%= form_tag(controller: "users", action: "edit_save", remote: remote, method: "post") do  %>
+  <table class="table table-striped" style="border: 1">
+      <tr>
+          <td>ID:
+          </td>
+          <td><%= @user.username %>
+          </td>
+          <td><%= text_field_tag :username, nil, class: 'form-control', value: @user.username%></td>
+      </tr>
+      <tr>
+          <td>Name:
+          </td>
+          <td><%= @user.name %>
+          </td>
+          <td><%= text_field_tag :name, nil, class: 'form-control', value: @user.name%></td>
+      </tr>
+      <tr>
+          <td>Department:
+          </td>
+          <td><%= @user.department %>
+          </td>
+          <td><%= text_field_tag :department, nil, class: 'form-control', value: @user.department%></td>
+      </tr>
+      <tr>
+          <td>Email:
+          </td>
+          <td><%= @user.email %>
+          </td>
+          <td><%= text_field_tag :email, nil, class: 'form-control', value: @user.email%></td>
+      </tr>
+      <%= hidden_field_tag :id, @user.id %>
+  </table>
+  <p>&nbsp;&nbsp;<button class="btn btn-default btn-sm" type="submit" data-disable-with="Please wait...">Submit</button>
+      &nbsp;&nbsp;<input type="button" onclick="window.parent.location = window.parent.location.href;" value="Back" class="btn btn-default btn-sm">
+  </p>
+<% end %>

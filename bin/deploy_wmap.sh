@@ -37,6 +37,7 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle i
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; RAILS_ENV=production bundle exec rake db:migrate' 2> /dev/null
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec rake assets:clean' 2> /dev/null
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec rake assets:precompile' 2> /dev/null
+sleep 5
 
 # Step 5 - Restart the remote services
 echo "Stopping Postfix mail service ..."

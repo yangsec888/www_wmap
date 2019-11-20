@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     get 'users/:id' => 'users#show'
     delete '/users/logout' => 'devise/sessions#destroy'
   end
+  get 'users/edit'
+  post 'users/edit_save'
   resources :users
   ###############################
   require 'sidekiq/web'

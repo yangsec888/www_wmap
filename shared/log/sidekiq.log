@@ -5259,3 +5259,60 @@ You're hitting mailer controller...
 2019-11-14T20:28:03.221Z 43391 TID-ovfxsqmyz DiscoveryWorker JID-657e3609e76c658242acfdca INFO: Discovery successful!
 2019-11-14T20:28:03.330Z 43391 TID-ovfxsqmyz DiscoveryWorker JID-657e3609e76c658242acfdca INFO: Sending out email notice to: yang.li@owasp.org
 2019-11-14T20:28:04.286Z 43391 TID-ovfxsqmyz DiscoveryWorker JID-657e3609e76c658242acfdca INFO: done: 24.336 sec
+2019-11-15T23:19:48.027Z 43391 TID-ovfwma6vz DEBUG: Got TERM signal
+2019-11-15T23:19:48.028Z 43391 TID-ovfwma6vz INFO: Shutting down
+2019-11-15T23:19:48.028Z 43391 TID-ovfwma6vz INFO: Terminating quiet workers
+2019-11-18T14:10:38.115Z 2603 TID-ouwg3ad6j INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://localhost:6379/0", :id=>"Sidekiq-server-PID-2603"}
+2019-11-18T14:10:38.498Z 2603 TID-ouwg3ad6j INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin17]
+2019-11-18T14:10:38.498Z 2603 TID-ouwg3ad6j INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2019-11-18T14:10:38.498Z 2603 TID-ouwg3ad6j INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2019-11-18T14:10:38.519Z 2603 TID-ouwg3ad6j DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2019-11-18T14:10:38.519Z 2603 TID-ouwg3ad6j DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2019-11-18T14:10:38.519Z 2603 TID-ouwg3ad6j INFO: Starting processing, hit Ctrl-C to stop
+2019-11-18T14:10:38.519Z 2603 TID-ouwg3ad6j DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>"development", :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00007f8ffc1fd478>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"NYMIT056325.local:2603:dce36aa9b829"}
+2019-11-18T14:11:24.962Z 2603 TID-ouwh7f9mn DiscoveryWorker JID-71eb9c79a867a2f29c80126b INFO: start
+2019-11-18T14:11:25.501Z 2603 TID-ouwh7f9mn DiscoveryWorker JID-71eb9c79a867a2f29c80126b INFO: Starting background command: wmap -t /Users/sli/www_wmap/shared/data/seed -d /Users/sli/www_wmap/shared/data/
+2019-11-18T14:12:00.388Z 2603 TID-ouwh7f9mn DiscoveryWorker JID-71eb9c79a867a2f29c80126b INFO: Discovery successful!
+2019-11-18T14:12:00.493Z 2603 TID-ouwh7f9mn DiscoveryWorker JID-71eb9c79a867a2f29c80126b INFO: Sending out email notice to: yang.li@owasp.org
+2019-11-18T14:12:02.802Z 2603 TID-ouwh7f9mn DiscoveryWorker JID-71eb9c79a867a2f29c80126b INFO: done: 37.841 sec
+2019-11-18T14:12:39.630Z 2603 TID-ouwh7f9mn DiscoveryWorker JID-c358cf058bfcdca29e4ea5ce INFO: start
+2019-11-18T14:12:40.089Z 2603 TID-ouwh7f9mn DiscoveryWorker JID-c358cf058bfcdca29e4ea5ce INFO: Starting background command: wmap -t /Users/sli/www_wmap/shared/data/seed -d /Users/sli/www_wmap/shared/data/
+2019-11-18T14:16:45.180Z 2603 TID-ouwh7f9mn DiscoveryWorker JID-c358cf058bfcdca29e4ea5ce INFO: Discovery successful!
+2019-11-18T14:16:45.188Z 2603 TID-ouwh7f9mn DiscoveryWorker JID-c358cf058bfcdca29e4ea5ce INFO: Sending out email notice to: yang.li@owasp.org
+2019-11-18T14:16:45.338Z 2603 TID-ouwh7f9mn DiscoveryWorker JID-c358cf058bfcdca29e4ea5ce INFO: done: 245.708 sec
+2019-11-18T15:21:19.997Z 2603 TID-ouwh7f9mn DomainCheckWorker JID-1e20502f49caab1ebf5086e3 INFO: start
+2019-11-18T15:21:20.193Z 2603 TID-ouwh7f9mn DomainCheckWorker JID-1e20502f49caab1ebf5086e3 INFO: done: 0.196 sec
+2019-11-18T22:54:04.964Z 2603 TID-ouwg3ad6j DEBUG: Got INT signal
+2019-11-18T22:54:04.970Z 2603 TID-ouwg3ad6j INFO: Shutting down
+2019-11-18T22:54:04.970Z 2603 TID-ouwg3ad6j INFO: Terminating quiet workers
+2019-11-18T22:54:04.970Z 2603 TID-ouwg73q0v INFO: Scheduler exiting...
+2019-11-18T22:54:05.074Z 2603 TID-ouwg3ad6j INFO: Pausing to allow workers to finish...
+2019-11-18T22:54:06.933Z 2603 TID-ouwg3ad6j INFO: Bye!
+2019-11-18T23:31:53.682Z 11706 TID-ovf4nyb2y INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://localhost:6379/0", :id=>"Sidekiq-server-PID-11706"}
+2019-11-18T23:31:54.079Z 11706 TID-ovf4nyb2y INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin17]
+2019-11-18T23:31:54.079Z 11706 TID-ovf4nyb2y INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2019-11-18T23:31:54.079Z 11706 TID-ovf4nyb2y INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2019-11-18T23:31:54.082Z 11706 TID-ovf4nyb2y DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2019-11-18T23:31:54.083Z 11706 TID-ovf4nyb2y DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2019-11-18T23:31:54.083Z 11706 TID-ovf4nyb2y INFO: Starting processing, hit Ctrl-C to stop
+2019-11-18T23:31:54.083Z 11706 TID-ovf4nyb2y DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>"development", :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00007fa2ee175078>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"NYMIT056325.local:11706:5140f6c97310"}
+2019-11-19T12:53:25.505Z 11706 TID-ovf4nyb2y DEBUG: Got INT signal
+2019-11-19T12:53:25.512Z 11706 TID-ovf4nyb2y INFO: Shutting down
+2019-11-19T12:53:25.512Z 11706 TID-ovf4nyb2y INFO: Terminating quiet workers
+2019-11-19T12:53:25.512Z 11706 TID-ovf5n8q1i INFO: Scheduler exiting...
+2019-11-19T12:53:25.613Z 11706 TID-ovf4nyb2y INFO: Pausing to allow workers to finish...
+2019-11-19T12:53:27.480Z 11706 TID-ovf4nyb2y INFO: Bye!
+2019-11-19T12:55:00.442Z 16157 TID-ox32kqjgt INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://localhost:6379/0", :id=>"Sidekiq-server-PID-16157"}
+2019-11-19T12:55:00.913Z 16157 TID-ox32kqjgt INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin17]
+2019-11-19T12:55:00.913Z 16157 TID-ox32kqjgt INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2019-11-19T12:55:00.913Z 16157 TID-ox32kqjgt INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2019-11-19T12:55:00.917Z 16157 TID-ox32kqjgt DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2019-11-19T12:55:00.917Z 16157 TID-ox32kqjgt DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2019-11-19T12:55:00.917Z 16157 TID-ox32kqjgt INFO: Starting processing, hit Ctrl-C to stop
+2019-11-19T12:55:00.917Z 16157 TID-ox32kqjgt DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>"development", :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00007fdfb1973180>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"NYMIT056325.local:16157:0cdd606f752b"}
+2019-11-19T15:09:54.422Z 16157 TID-ox32kqjgt DEBUG: Got INT signal
+2019-11-19T15:09:54.422Z 16157 TID-ox32kqjgt INFO: Shutting down
+2019-11-19T15:09:54.422Z 16157 TID-ox32kqjgt INFO: Terminating quiet workers
+2019-11-19T15:09:54.422Z 16157 TID-ox32u4ah5 INFO: Scheduler exiting...
+2019-11-19T15:09:54.527Z 16157 TID-ox32kqjgt INFO: Pausing to allow workers to finish...
+2019-11-19T15:09:55.873Z 16157 TID-ox32kqjgt INFO: Bye!

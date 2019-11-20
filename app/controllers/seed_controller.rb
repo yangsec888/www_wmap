@@ -63,6 +63,7 @@ class SeedController < ApplicationController
 
   def discovery
     #UserMailer.discovery_completion_notice("yli8@yahoo.com", "yesterday", "today").deliver_later
+    @user= User.find(current_user.id)
     if platinum_user_and_above?
       flash[:notice] = "Discovery is kicked-off in the background ... "
       logger.info "starting the sidekiq worker for the discovery job"
@@ -74,7 +75,7 @@ class SeedController < ApplicationController
   end
 
   def distest
-    @uid = 'data'
+    @user= User.find(current_user.id)
     puts "You're hitting distest controller"
   end
 

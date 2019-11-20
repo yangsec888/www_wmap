@@ -46,7 +46,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+#gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 ################################################################################
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -64,7 +64,7 @@ gem 'jquery-turbolinks'
 gem 'bootstrap'
 gem 'bootstrap_form'
 gem 'will_paginate'
-gem 'wmap', '>=2.6.6'
+gem 'wmap', '>=2.6.7'
 # logon form input validations
 gem 'client_side_validations'
 ##  Support  LDAP authentication
@@ -80,7 +80,8 @@ gem 'net-ping'
 gem 'open_uri_redirections'
 gem 'dnsruby'
 gem 'geoip'
-gem 'sidekiq', '=5.2.7' #move discovery job to background
+gem 'sidekiq', '=5.2.5' #move discovery job to background
+gem 'rake', '=12.3.3'
 gem 'sidekiq-batch'
 #gem 'sidekiq-status'
 gem 'sinatra', '= 2.0.4' #require for sidekiq web

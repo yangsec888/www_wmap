@@ -13,6 +13,27 @@ class UsersController < ApplicationController
   before_action :admin_only
   #helper_method :sort_column, :sort_direction
 
+  def edit
+    @user = User.find(params[:id])
+    respond_to do |format|
+        format.js
+    end
+  end
+
+  def edit_save
+    @user = User.find(params[:id])
+    # add the following line to bypass password validations in Rails 4.2
+    @user.password = "!@#$%^&*----"
+    @user.name = params[:name]
+    @user.email = params[:email]
+    @user.department = params[:department]
+    if @user.save!
+      redirect_to users_path, :alert => "User save successfully."
+    else
+      flash.now[:error] = "User save error. "
+    end
+  end
+
   def index
     @users = User.order(sort_column + " " + sort_direction)
     dept=Hash.new; @users.map {|a| dept[a.department]=true unless dept.key?(a.department) }
@@ -86,7 +107,7 @@ private
   end
 
   def secure_params
-    params.require(:user).permit(:role)
+    params.require(:user).permit(:role,:email,:username)
     #['role', 'admin']
   end
 

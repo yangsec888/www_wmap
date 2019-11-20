@@ -1,4 +1,4 @@
-<h3>IDM User</h3>
+<h3>Web Mapper User</h3>
 <br>
 
 <div class="container">
@@ -6,8 +6,10 @@
     <div class="column">
       <table class="table">
         <tbody>
-          <tr><td>Name:</td><td> <%= @user.username if @user.username %></td></tr>
+          <tr><td>ID:</td><td> <%= @user.username if @user.username %></td></tr>
+          <tr><td>Name:</td><td> <%= @user.name if @user.name %></td></tr>
           <tr><td>Email:</td><td> <%= @user.email if @user.email %></td></tr>
+          <tr><td>Department:</td><td> <%= @user.department if @user.department %></td></tr>
           <tr><td>Created:</td><td> <%= @user.created_at if @user.created_at %></td></tr>
           <tr><td>Last Sign In:</td><td> <%= @user.last_sign_in_at if @user.last_sign_in_at %></td></tr>
           <tr><td>Sign In Count:</td><td> <%= @user.sign_in_count if @user.sign_in_count %></td></tr>
@@ -15,5 +17,6 @@
         </tbody>
       </table>
     </div>
+    <%= link_to('Update',edit_user_path(:format => :js, :id => @user.id), :remote => true) %>
   </div>
 </div>
