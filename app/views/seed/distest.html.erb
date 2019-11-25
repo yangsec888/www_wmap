@@ -5,7 +5,7 @@
   <div class=" col-md-9 col-lg-9">
     <b>Disclaimer: </b>
     <div class="row"> </div>
-    <i>By click on the Discover button below, you confirm your email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+    <i>By click on the Discover button below, you <b><u> <%= link_to "confirm your user", user_path(@user) %> </b></u> email as <u><%= @user.email %></u>. And you have the exclusive permission to perform such discovery.
       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
   </div>
 </div>

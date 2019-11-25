@@ -24,11 +24,8 @@ Rails.application.routes.draw do
   ###############################
 
   root 'home#page'
-
   get 'home/page'
-
   get 'home/support_contact'
-
   get 'home/about'
 
   ################################

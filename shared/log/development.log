@@ -38586,3 +38586,618 @@ Processing by SeedController#distest as HTML
 Completed 200 OK in 129ms (Views: 121.0ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-11-25 08:32:04 -0500
+  [1m[35m (42.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (89.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (39.1ms)
+Started GET "/" for 127.0.0.1 at 2019-11-25 08:32:08 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 3720ms (Views: 3717.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 6814ms (Views: 6720.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-11-25 08:33:32 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"31mtrMunim97GPU05CfNMiJqq2xjmwMjK0nv8K6Ht2aDz5Z3MXlGH3GjhOVEbcvNFXo++BJc7KkNzgViousaLg==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-11-25 08:33:32 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (256.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 611ms (Views: 458.1ms | ActiveRecord: 86.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-11-25 08:33:34 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUFlLSHoSLY89NOESs1fniDsVGwHEGAiCBEtHvjFN3dh11722zaExjZPolXqh1lhF/zB+HbXj6gulseM9KmaPw==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2019-11-25 13:33:34', `last_sign_in_at` = '2019-11-19 12:55:19', `sign_in_count` = 16, `updated_at` = '2019-11-25 13:33:34' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 97ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-11-25 08:33:34 -0500
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 169ms (Views: 163.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2019-11-25 08:33:36 -0500
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rzv8RN9+RCYu0yAEwt5kxRipGzQSpsFt/8EGBByynXvH6sns1G6DCF6v/d7XrGkl2kfwAyFstulP1yDtnkp+pw==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 186ms (Views: 168.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/load_file?path=" for 127.0.0.1 at 2019-11-25 08:33:36 -0500
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 36ms (Views: 19.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/seed/save_file" for 127.0.0.1 at 2019-11-25 08:34:20 -0500
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-18 23:41:36", updated_at: "2019-11-25 13:33:34", department: "IT", username: "admin", role: "admin", dn: nil, name: "Sam (Yang) Li", employee_type: nil, employee_number: nil>
+Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/import" for 127.0.0.1 at 2019-11-25 08:34:22 -0500
+Processing by DomainsController#import as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/import.html.erb within layouts/application
+  Rendered domains/import.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 222ms (Views: 191.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cidrs/import" for 127.0.0.1 at 2019-11-25 08:34:24 -0500
+Processing by CidrsController#import as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/import.html.erb within layouts/application
+  Rendered cidrs/import.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 218ms (Views: 187.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:34:25 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user",user_path %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162427954800'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:34:35 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 152ms (Views: 142.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-25 08:34:39 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-18 23:41:36", updated_at: "2019-11-25 13:33:34", department: "IT", username: "admin", role: "admin", dn: nil, name: "Sam (Yang) Li", employee_type: nil, employee_number: nil>
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY username asc[0m
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_sub_menu.html.erb (0.5ms)
+  Rendered users/_user.html.erb (2.1ms)
+  Rendered users/index.html.erb within layouts/application (33.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 268ms (Views: 190.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:35:22 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into String):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user",users_path+@user.id %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `+'
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162373352480'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:35:47 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into String):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user","/users/"+@user.id %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `+'
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162416046880'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:37:26 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (433.6ms)
+Completed 500 Internal Server Error in 449ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_show_path' for #<#<Class:0x00007f9fed142690>:0x00007f9feb983220>
+Did you mean?  sites_show_path
+               users_list_path
+               users_edit_path):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user", users_show_path %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162414588360'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:37:38 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (505.2ms)
+Completed 500 Internal Server Error in 524ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_show_path' for #<#<Class:0x00007f9fed142690>:0x00007f9fec05a468>
+Did you mean?  users_path
+               sites_show_path):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user", user_show_path %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162418163420'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:38:11 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (410.1ms)
+Completed 500 Internal Server Error in 427ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_show_path' for #<#<Class:0x00007f9fed142690>:0x00007f9feba8a1f0>
+Did you mean?  sites_show_path
+               users_list_path
+               users_edit_path):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user", users_show_path %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162415113640'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:38:29 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 146ms (Views: 138.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:39:56 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (368.6ms)
+Completed 500 Internal Server Error in 386ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_show_path' for #<#<Class:0x00007f9fed142690>:0x00007f9fe6a6b8e0>
+Did you mean?  sites_show_path
+               users_list_path
+               users_edit_path):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user", users_show_path %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162366580800'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:40:08 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (467.4ms)
+Completed 500 Internal Server Error in 486ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_id_path' for #<#<Class:0x00007f9fed142690>:0x00007f9fed419148>
+Did you mean?  users_path
+               user_path
+               users_edit_path
+               users_list_path):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user", users_id_path %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162428513620'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:40:53 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 125ms (Views: 115.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-11-25 08:40:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-18 23:41:36", updated_at: "2019-11-25 13:33:34", department: "IT", username: "admin", role: "admin", dn: nil, name: "Sam (Yang) Li", employee_type: nil, employee_number: nil>
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=edit):
+  
+app/controllers/users_controller.rb:49:in `show'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:43:50 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (263.4ms)
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `users_show_path' for #<#<Class:0x00007f9fed142690>:0x00007f9fe4f8b3e0>
+Did you mean?  sites_show_path
+               users_list_path
+               users_edit_path):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user", users_show_path(@user) %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162346591880'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:44:14 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (178.9ms)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `show_path' for #<#<Class:0x00007f9fed142690>:0x00007f9feb447a68>):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user", show_path(@user) %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162416599580'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:46:34 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user", user_path %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162411151740'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:47:16 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (368.2ms)
+Completed 500 Internal Server Error in 386ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_show_path' for #<#<Class:0x00007f9fed142690>:0x00007f9feb1d7bc0>
+Did you mean?  sites_show_path
+               users_list_path
+               users_edit_path):
+     5:   <div class=" col-md-9 col-lg-9">
+     6:     <b>Disclaimer: </b>
+     7:     <div class="row"> </div>
+     8:     <i>By click on the Discover button below. You can <%= link_to "confirm your user", users_show_path %> email as <u><b><%= @user.email %></b></u>. And you have the exclusive permission to perform such discovery.
+     9:       You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    10:   </div>
+    11: </div>
+  
+app/views/seed/distest.html.erb:8:in `_app_views_seed_distest_html_erb___996914537687725545_70162410554040'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:47:42 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 192ms (Views: 127.2ms | ActiveRecord: 37.4ms)
+
+
+Started GET "/users/show" for 127.0.0.1 at 2019-11-25 08:47:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-18 23:41:36", updated_at: "2019-11-25 13:33:34", department: "IT", username: "admin", role: "admin", dn: nil, name: "Sam (Yang) Li", employee_type: nil, employee_number: nil>
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 8ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=show):
+  
+app/controllers/users_controller.rb:49:in `show'
+Started GET "/users/show" for 127.0.0.1 at 2019-11-25 08:48:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-18 23:41:36", updated_at: "2019-11-25 13:33:34", department: "IT", username: "admin", role: "admin", dn: nil, name: "Sam (Yang) Li", employee_type: nil, employee_number: nil>
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 6ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=show):
+  
+app/controllers/users_controller.rb:49:in `show'
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:51:42 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 130ms (Views: 120.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:51:45 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 130ms (Views: 122.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-11-25 08:51:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-18 23:41:36", updated_at: "2019-11-25 13:33:34", department: "IT", username: "admin", role: "admin", dn: nil, name: "Sam (Yang) Li", employee_type: nil, employee_number: nil>
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 136ms (Views: 116.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:52:32 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 139ms (Views: 127.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-11-25 08:52:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-18 23:41:36", updated_at: "2019-11-25 13:33:34", department: "IT", username: "admin", role: "admin", dn: nil, name: "Sam (Yang) Li", employee_type: nil, employee_number: nil>
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 131ms (Views: 122.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:53:45 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 145ms (Views: 134.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:54:18 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 143ms (Views: 132.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:54:56 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 134ms (Views: 126.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/seed/discovery" for 127.0.0.1 at 2019-11-25 08:55:42 -0500
+Processing by SeedController#discovery as HTML
+  Parameters: {"authenticity_token"=>"U8ExHhbR2sb9TdlA9fppkzCiTptIxPYxgfnXgtQ/BHM7EAS2HcEd6I0xBJrgiGRz8kylrHsOgbUx7/FrVsfnrw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-18 23:41:36", updated_at: "2019-11-25 13:33:34", department: "IT", username: "admin", role: "admin", dn: nil, name: "Sam (Yang) Li", employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 173ms (Views: 122.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: e3c64a56-9b34-4519-9907-a3c89501ccce) to Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "itsecurity@penguinrandomhouse.com", "2019-11-25 08:55:42 -0500", "2019-11-25 08:56:04 -0500"
+[ActiveJob] [ActionMailer::DeliveryJob] [e3c64a56-9b34-4519-9907-a3c89501ccce] Performing ActionMailer::DeliveryJob (Job ID: e3c64a56-9b34-4519-9907-a3c89501ccce) from Async(mailers) with arguments: "UserMailer", "discovery_completion_notice", "deliver_now", "itsecurity@penguinrandomhouse.com", "2019-11-25 08:55:42 -0500", "2019-11-25 08:56:04 -0500"
+[ActiveJob] [ActionMailer::DeliveryJob] [e3c64a56-9b34-4519-9907-a3c89501ccce] You're hitting mailer controller...
+[ActiveJob] [ActionMailer::DeliveryJob] [e3c64a56-9b34-4519-9907-a3c89501ccce]   Rendering user_mailer/discovery_completion_notice.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [e3c64a56-9b34-4519-9907-a3c89501ccce]   Rendered user_mailer/discovery_completion_notice.html.erb within layouts/mailer (3.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [e3c64a56-9b34-4519-9907-a3c89501ccce] UserMailer#discovery_completion_notice: processed outbound mail in 548.9ms
+[ActiveJob] [ActionMailer::DeliveryJob] [e3c64a56-9b34-4519-9907-a3c89501ccce] Sent mail to itsecurity@penguinrandomhouse.com (233.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [e3c64a56-9b34-4519-9907-a3c89501ccce] Date: Mon, 25 Nov 2019 08:56:06 -0500
+From: deploy@wmap.io
+To: itsecurity@penguinrandomhouse.com
+Message-ID: <5ddbdd76d74af_1a223fe6f2b81aa04759c@nylit057164.us.randomhouse.com.mail>
+Subject: Your WMAP Discovery is Complete
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+  <ul> Your discovery job is complete:
+    <li>Start time: 2019-11-25 08:55:42 -0500</li>
+    <li>Completion time: 2019-11-25 08:56:04 -0500</li>
+    <li>My Discovery Result: <a href='https://wmap.io/sites/index'>https://wmap.io/sites/index </a></li>
+
+  </ul>
+</div>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [e3c64a56-9b34-4519-9907-a3c89501ccce] Performed ActionMailer::DeliveryJob (Job ID: e3c64a56-9b34-4519-9907-a3c89501ccce) from Async(mailers) in 805.4ms
+Started GET "/seed/distest" for 127.0.0.1 at 2019-11-25 08:56:27 -0500
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 190ms (Views: 138.6ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-11-25 08:56:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-18 23:41:36", updated_at: "2019-11-25 13:33:34", department: "IT", username: "admin", role: "admin", dn: nil, name: "Sam (Yang) Li", employee_type: nil, employee_number: nil>
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 125ms (Views: 115.5ms | ActiveRecord: 0.9ms)
+
+
