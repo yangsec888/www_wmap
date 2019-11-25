@@ -13,7 +13,7 @@
 
 ### Wmap Web Portal
 
-The web app is part of the OWASP Wmap Project. It's developed to help discover and keep track of web application asset with scale.
+The web app is part of the [OWASP Web Mapper Project](https://www.owasp.org/index.php/OWASP_Web_Mapper_Project). It's developed to help discover and keep track of web application asset with scale.
 
 To further explore the full power of OWASP Wmap library, please refer to the <a href="https://github.com/yangsec888/wmap" target="_blank"> WMAP </a> Git repository.
 
@@ -29,9 +29,10 @@ WMAP Web Portal depends on a number of open source projects to work properly:
 * [CodeMirror](https://codemirror.net/) - CodeMirror is a versatile text editor implemented in JavaScript.
 * [jstree](https://www.jstree.com/) -  jsTree is a JavaScript based tree UI implementation.
 * [Sidekiq](https://github.com/mperham/sidekiq) - A background processing manager (asynchronous and non-blocking IO) for RoR.
-* [Redis](https://redis.io/) - A high performance in-memory cache data store.
+* [Redis](https://redis.io/) - A high performance in-memory key value pair data store.
 * [MariaDB](https://mariadb.org/) - A community supported fork of MySQL relational database.
 * [wmap](https://github.com/yangsec888/wmap) - Backend Web Mapper gem for the heavy lifting.
+* [Postfix](http://www.postfix.org/) - Background email notification service.
 
 ### Build and Run in Docker
 

@@ -24,10 +24,14 @@ After=syslog.target network.target
 [Service]
 Type=simple
 WorkingDirectory=/home/deploy/apps/www_wmap
+Environment="PATH=/home/deploy/.rvm/gems/ruby-2.6.3/bin:/home/deploy/.rvm/gems/ruby-2.6.3@global/bin:/home/deploy/.rvm/rubies/ruby-2.6.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/deploy/.rvm/bin:/home/deploy/.rvm/bin"
+Environment="GEM_HOME=/home/deploy/.rvm/gems/ruby-2.6.3"
+Environment="GEM_PATH=/home/deploy/.rvm/gems/ruby-2.6.3:/home/deploy/.rvm/gems/ruby-2.6.3@global"
 # If you use rbenv or rvm:
-ExecStart=/bin/bash -lc 'bundle exec sidekiq -d -e production -C config/sidekiq.yml'
+ExecStart=/bin/bash -lc 'bundle exec sidekiq -e production >> /home/deploy/apps/www_wmap/shared/log/sidekiq.log 2>&1'
+# ExecStart=/home/deploy/.rvm/gems/ruby-2.6.3/bin/bundler exec sidekiq -e production
 # If you use the system's ruby:
-# ExecStart=/home/deploy/.rvm/rubies/ruby-2.6.3/bin/bundle exec sidekiq -e production
+# ExecStart=/home/deploy/.rvm/rubies/ruby-2.6.3/bin/bundle exec sidekiq -e production -C config/sidekiq.yml -L
 # ExecStart=/home/deploy/.rbenv/bin/rbenv exec bundle exec sidekiq -e production -c 3 -q mailers -q default
 User=deploy
 Group=deploy
@@ -38,8 +42,8 @@ RestartSec=1
 Restart=on-failure
 
 # output goes to /var/log/syslog
-StandardOutput=syslog
-StandardError=syslog
+StandardOutput=append:/home/deploy/apps/www_wmap/shared/log/sidekiq.log
+StandardError=append:/home/deploy/apps/www_wmap/shared/log/sidekiq.log
 
 # This will default to "bundler" if we don't specify it
 SyslogIdentifier=sidekiq
