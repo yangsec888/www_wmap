@@ -59,6 +59,8 @@ Recreating www_wmap_sidekiq_1 ... done
 Recreating www_wmap           ... done
 Attaching to wmap_db, redis, www_wmap, www_wmap_sidekiq_1
 ...
+$ docker-compose run web db:create
+$ docker-compose run web db:migrate
 ```
 Open a local browser and point it at http://localhost:3000/. You will see the app in action.
 

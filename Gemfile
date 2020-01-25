@@ -11,7 +11,7 @@ gem 'rails', '~> 5.2.2.1'
 # Support .env file  loadinging
 gem 'dotenv-rails',groups: [:development, :test, :production]
 # Use puma applicaton server
-gem 'puma', '~> 3.7'
+gem 'puma', '>= 3.12.2'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 # Use SCSS for stylesheets
