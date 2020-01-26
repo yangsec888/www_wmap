@@ -39266,3 +39266,64 @@ Exiting
 === puma startup: 2020-01-26 02:35:59 +0100 ===
 [1] * Starting control server on unix:///tmp/puma-status-1580002559901-1
 [1] - Worker 0 (pid: 32) booted, phase: 0
+[1] - Gracefully shutting down workers...
+Exiting
+=== puma startup: 2020-01-26 02:42:21 +0100 ===
+[1] * Starting control server on unix:///tmp/puma-status-1580002941218-1
+[1] - Worker 0 (pid: 25) booted, phase: 0
+Started GET "/" for 172.19.0.1 at 2020-01-26 02:42:47 +0100
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1870ms (Views: 1828.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 172.19.0.1 at 2020-01-26 02:43:38 +0100
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BEBgk0U8e6nD6oI1DhyGybmSRwwPdOGN/1ZJxJxLOAQPwu5s2oiphGZ0FsF9sl+gRhDJ6IvOsOoyOkBxzVBbVg==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 172.19.0.1 at 2020-01-26 02:43:38 +0100
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (38.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 335ms (Views: 312.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/login" for 172.19.0.1 at 2020-01-26 02:43:40 +0100
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AooC9PjAWGwHvr2SxFAei/ZIN1i+Y7rZHOBQPhmJkhwJCIwLZ3SKQaIgKWa3/sfiCcq5vDrZ677RjFmLSJLxTg==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'yang.li@owasp.org' LIMIT 1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `username`, `role`) VALUES ('yang.li@owasp.org', '$2a$11$COnv6fwss.b104K9PzJ8M.u1PxPAU2MYoWQilGRpdVIZ16AKfbYuC', '2020-01-26 01:43:40', '2020-01-26 01:43:40', 'admin', 0)[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2020-01-26 01:43:40', `last_sign_in_at` = '2020-01-26 01:43:40', `current_sign_in_ip` = '172.19.0.1', `last_sign_in_ip` = '172.19.0.1', `sign_in_count` = 1 WHERE `users`.`id` = 1[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 195ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 172.19.0.1 at 2020-01-26 02:43:40 +0100
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 342ms (Views: 334.3ms | ActiveRecord: 1.1ms)
+
+
+[1] - Gracefully shutting down workers...
+Exiting

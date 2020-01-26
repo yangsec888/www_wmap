@@ -35,8 +35,8 @@ services:
     build: .
     command: bundle exec sidekiq
     depends_on:
-      - mariadb
       - redis
+      - postfix_587
     volumes:
       - .:/www_wmap
     env_file:

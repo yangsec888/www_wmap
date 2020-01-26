@@ -53,14 +53,13 @@ $ docker-compose build
 It should produce the output similar to below:
 ```sh
 $ docker-compose up
-Starting wmap_db ... done
-Starting redis   ... done
-Recreating www_wmap_sidekiq_1 ... done
-Recreating www_wmap           ... done
-Attaching to wmap_db, redis, www_wmap, www_wmap_sidekiq_1
+Starting redis                    ... done
+Starting wmap_db                  ... done
+Recreating www_wmap_postfix_587_1 ... done
+Recreating www_wmap_sidekiq_1     ... done
+Recreating www_wmap               ... done
+Attaching to redis, wmap_db, www_wmap_postfix_587_1, www_wmap_sidekiq_1, www_wmap
 ...
-$ docker-compose run web db:create
-$ docker-compose run web db:migrate
 ```
 Open a local browser and point it at http://localhost:3000/. You will see the app in action.
 
