@@ -42,6 +42,17 @@ services:
     env_file:
       - .env
 
+  postfix_587:
+    hostname: "postfix"
+    image: "boky/postfix"
+    restart: always
+    ports:
+      - "1587:587"
+    volumes:
+      - "./test-keys:/etc/opendkim/keys"
+    env_file:
+      - .env
+
 volumes:
   redis:
   my-db:
