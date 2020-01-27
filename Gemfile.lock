@@ -240,6 +240,7 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    secure_headers (6.3.0)
     selenium-webdriver (3.141.5926)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -350,6 +351,7 @@ DEPENDENCIES
   rubyXL (= 3.3.33)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  secure_headers
   selenium-webdriver
   sequel
   server-generated-popups

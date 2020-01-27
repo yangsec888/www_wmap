@@ -54,7 +54,7 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile;  sudo systemctl stop sidekiq
 
 ##
 echo "Starting Puma application server service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; bundle exec puma -e production &'
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; bundle exec pumactl -P /home/deploy/apps/www_wmap/shared/tmp/puma.pid start &'
 sleep 3
 
 echo "Starting Nginx web service ..."

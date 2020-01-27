@@ -86,7 +86,7 @@ gem 'sidekiq-batch'
 #gem 'sidekiq-status'
 gem 'sinatra', '= 2.0.4' #require for sidekiq web
 ###############################################################################
-
+gem "secure_headers", require: 'secure_headers'
 
 
 #source 'https://rails-assets.org' do

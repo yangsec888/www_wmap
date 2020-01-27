@@ -12,7 +12,6 @@ require "application_responder"
 class ApplicationController < ActionController::Base
   self.responder = ApplicationResponder
   respond_to :html
-
   rescue_from DeviseLdapAuthenticatable::LdapException do |exception|
     render :text => exception, :status => 500
   end
