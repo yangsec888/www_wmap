@@ -11,7 +11,7 @@ class DomainsController < ApplicationController
   before_action :authenticate_user!
   include DomainsHelper
 
-    # Custom user import error message 
+    # Custom user import error message
     class ImportLimitError < StandardError
       def message
         "Error exceeding import limit 10 entries."
@@ -68,6 +68,7 @@ class DomainsController < ApplicationController
       File.new(file, 'w+') unless File.exist?(file)
     end
 
+=begin
     # Save user import
     def save_import
       if platinum_user_and_above?
@@ -103,7 +104,7 @@ class DomainsController < ApplicationController
       file.close
       render json: { message: 'Saving failed, please check your file again or contact the site administrator.' }
     end
-
+=end
     def update
       if platinum_user_and_above?
         logger.debug "Current_user attributes: #{current_user.inspect}"

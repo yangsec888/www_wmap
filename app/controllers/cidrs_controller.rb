@@ -70,6 +70,7 @@ class CidrsController < ApplicationController
       @uid = current_user.id
     end
 
+=begin
     def save_import
       if platinum_user_and_above?
         uid = current_user.id
@@ -102,5 +103,6 @@ class CidrsController < ApplicationController
       file.close
       render json: { message: 'Saving failed, please check your file again or contact the site administrator.' }
     end
+=end
 
 end
