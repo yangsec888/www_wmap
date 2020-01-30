@@ -4,7 +4,14 @@
 - [Wmap Web Portal](#wmap-web-portal)
 - [Technology Stacks](#technology-stacks)
 - [Build and Run in Docker](#build-and-run-in-docker)
+  - [Why Docker](#why-docker)
+  - [Setting Up Shell Environment](setting-up-shell-environment)
+  - [Build In Docker](build-in-docker)
+  - [Run In Docker](run-in-docker)
 - [Local Installation](#local-installation)
+  - [Install MariaDB v10.4.x](#install-mariadb-v10-4-x)
+  - [Install Redis v5.x Server](#install-redis-v5-x-server)
+  - [Start the Rails Server](#start-the-rails-server)
 - [Demo Instance](#demo-instance)
 - [Usage](#usage)
 - [To Dos](#to-dos)
@@ -37,7 +44,21 @@ WMAP Web Portal depends on a number of open source projects to work properly:
 ### Build and Run in Docker
 
 If you have [docker engine](https://docs.docker.com/install/) ready, you can have the app build and run in no time.
-The docker technology may help deploy your customize app into your favorite cloud infrastructure later on.
+
+#### Why Docker
+The docker is becoming popular in the development community. Because it can standadize the developing, building for everyone. The technology may also help deploy your customize app into your favorite cloud infrastructure later on.
+
+#### Setting Up Shell Environment
+The app depends on a few shell environment variables, in order to run correctly. You can change the environment variables to match yours below:
+```sh
+$ bash
+$ export RAILS_ENV=development
+$ export REDIS_URL=redis://localhost:6379/0
+$ export DATABASE_URL=mysql2://root:@localhost:3306/www_wmap_development
+$ export DBUSER=root
+$ export DBPASS=
+```
+Refer to the [article](https://opensource.com/article/19/8/what-are-environment-variables) if you have difficulty setting up the environmental variables.
 
 #### Build in Docker   
 ```sh
@@ -81,7 +102,7 @@ $ sudo apt-get install libmysqlclient-dev
 $ gem install mysql2 -v '0.5.2' --source 'https://rubygems.org/'
 ```
 
-#### Install and Redis v5.x Server
+#### Install Redis v5.x Server
 ```sh
 $ sudo apt-get install redis-server redis-tools
 ```
