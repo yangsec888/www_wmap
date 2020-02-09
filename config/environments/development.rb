@@ -17,12 +17,12 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
 
-  config.action_mailer.default_url_options = { :host => "postfix:3000" }
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
   config.action_mailer.delivery_method = :smtp
   # ActionMailer Config
   config.action_mailer.smtp_settings = {
-     address:              'postfix',
-     port:                 587,
+     address:              'localhost',
+     port:                 25,
      domain:        'owasp.org',
      enable_starttls_auto: false
   }

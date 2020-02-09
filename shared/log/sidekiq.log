@@ -6017,3 +6017,208 @@ Update complete.
 2020-01-26T14:33:12.003Z 1 TID-gnturmcnt DiscoveryWorker JID-2ddc90670b6b6618135e22b4 INFO: Discovery successful!
 2020-01-26T14:33:12.067Z 1 TID-gnturmcnt DiscoveryWorker JID-2ddc90670b6b6618135e22b4 INFO: Sending out email notice to: yang.li@owasp.org
 2020-01-26T14:33:12.994Z 1 TID-gnturmcnt DiscoveryWorker JID-2ddc90670b6b6618135e22b4 INFO: done: 16.488 sec
+2020-02-09T15:55:24.437Z 1 TID-gnytp0hkh INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T15:55:25.103Z 1 TID-gnytp0hkh INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T15:55:25.103Z 1 TID-gnytp0hkh INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T15:55:25.103Z 1 TID-gnytp0hkh INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T15:55:25.118Z 1 TID-gnytp0hkh DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T15:55:25.118Z 1 TID-gnytp0hkh DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T15:55:25.119Z 1 TID-gnytp0hkh INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T15:55:25.119Z 1 TID-gnytp0hkh DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00005585818bd768>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"45ebe3295142:1:60e5a0073aab"}
+2020-02-09T15:58:07.320Z 1 TID-gnytp0hkh DEBUG: Got TERM signal
+2020-02-09T15:58:07.321Z 1 TID-gnytp0hkh INFO: Shutting down
+2020-02-09T15:58:07.322Z 1 TID-gnytp0hkh INFO: Terminating quiet workers
+2020-02-09T15:58:07.322Z 1 TID-gnyucp8dp INFO: Scheduler exiting...
+2020-02-09T15:58:07.824Z 1 TID-gnytp0hkh INFO: Pausing to allow workers to finish...
+2020-02-09T15:58:08.327Z 1 TID-gnytp0hkh INFO: Bye!
+2020-02-09T15:58:49.487Z 1 TID-gmxqvlbsx INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T15:58:50.328Z 1 TID-gmxqvlbsx INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T15:58:50.328Z 1 TID-gmxqvlbsx INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T15:58:50.329Z 1 TID-gmxqvlbsx INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T15:58:50.332Z 1 TID-gmxqvlbsx DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T15:58:50.332Z 1 TID-gmxqvlbsx DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T15:58:50.332Z 1 TID-gmxqvlbsx INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T15:58:50.333Z 1 TID-gmxqvlbsx DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x0000555febbbdf28>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"3c5dddd9392b:1:55aaff325683"}
+2020-02-09T16:03:14.683Z 1 TID-gmxqvlbsx DEBUG: Got TERM signal
+2020-02-09T16:03:14.684Z 1 TID-gmxqvlbsx INFO: Shutting down
+2020-02-09T16:03:14.686Z 1 TID-gmxqvlbsx INFO: Terminating quiet workers
+2020-02-09T16:03:14.687Z 1 TID-gmxrjk11h INFO: Scheduler exiting...
+2020-02-09T16:03:15.193Z 1 TID-gmxqvlbsx INFO: Pausing to allow workers to finish...
+2020-02-09T16:03:15.696Z 1 TID-gmxqvlbsx INFO: Bye!
+2020-02-09T16:03:53.274Z 1 TID-gqufsbhml INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T16:03:53.892Z 1 TID-gqufsbhml INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T16:03:53.892Z 1 TID-gqufsbhml INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T16:03:53.893Z 1 TID-gqufsbhml INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T16:03:53.897Z 1 TID-gqufsbhml DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T16:03:53.897Z 1 TID-gqufsbhml DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T16:03:53.898Z 1 TID-gqufsbhml INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T16:03:53.898Z 1 TID-gqufsbhml DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055ee884150b0>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"e07ff3282911:1:c42cf99ccb76"}
+2020-02-09T16:14:31.700Z 1 TID-gqugge5zd DiscoveryWorker JID-769387f3de9bec12c9a864ac INFO: start
+2020-02-09T16:14:31.908Z 1 TID-gqugge5zd DiscoveryWorker JID-769387f3de9bec12c9a864ac INFO: Starting background command: wmap -t /www_wmap/shared/data/seed -d /www_wmap/shared/data/
+2020-02-09T16:14:47.305Z 1 TID-gqugge5zd DiscoveryWorker JID-769387f3de9bec12c9a864ac INFO: Discovery successful!
+2020-02-09T16:14:47.389Z 1 TID-gqugge5zd DiscoveryWorker JID-769387f3de9bec12c9a864ac INFO: Sending out email notice to: yang.li@owasp.org
+2020-02-09T16:14:48.034Z 1 TID-gqugge5zd DiscoveryWorker JID-769387f3de9bec12c9a864ac INFO: done: 16.333 sec
+2020-02-09T16:25:31.735Z 1 TID-gqufsbhml DEBUG: Got TERM signal
+2020-02-09T16:25:31.736Z 1 TID-gqufsbhml INFO: Shutting down
+2020-02-09T16:25:31.737Z 1 TID-gqufsbhml INFO: Terminating quiet workers
+2020-02-09T16:25:31.737Z 1 TID-gquggemz1 INFO: Scheduler exiting...
+2020-02-09T16:25:32.238Z 1 TID-gqufsbhml INFO: Pausing to allow workers to finish...
+2020-02-09T16:25:33.769Z 1 TID-gqufsbhml INFO: Bye!
+2020-02-09T16:26:18.188Z 1 TID-gtj1nqu4d INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T16:26:18.671Z 1 TID-gtj1nqu4d INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T16:26:18.671Z 1 TID-gtj1nqu4d INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T16:26:18.672Z 1 TID-gtj1nqu4d INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T16:26:18.675Z 1 TID-gtj1nqu4d DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T16:26:18.675Z 1 TID-gtj1nqu4d DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T16:26:18.676Z 1 TID-gtj1nqu4d INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T16:26:18.676Z 1 TID-gtj1nqu4d DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00005650753710b0>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"68e089f25dae:1:dbfd7b1f9769"}
+2020-02-09T16:28:00.587Z 1 TID-gtj2btiit DiscoveryWorker JID-271af8cca5a2990dec202cb9 INFO: start
+2020-02-09T16:28:00.791Z 1 TID-gtj2btiit DiscoveryWorker JID-271af8cca5a2990dec202cb9 INFO: Starting background command: wmap -t /www_wmap/shared/data/seed -d /www_wmap/shared/data/
+2020-02-09T16:28:18.013Z 1 TID-gtj2btiit DiscoveryWorker JID-271af8cca5a2990dec202cb9 INFO: Discovery successful!
+2020-02-09T16:28:18.078Z 1 TID-gtj2btiit DiscoveryWorker JID-271af8cca5a2990dec202cb9 INFO: Sending out email notice to: yang.li@owasp.org
+2020-02-09T16:28:18.814Z 1 TID-gtj2btiit DiscoveryWorker JID-271af8cca5a2990dec202cb9 INFO: done: 18.228 sec
+2020-02-09T16:51:12.713Z 1 TID-gtj1nqu4d DEBUG: Got TERM signal
+2020-02-09T16:51:12.714Z 1 TID-gtj1nqu4d INFO: Shutting down
+2020-02-09T16:51:12.715Z 1 TID-gtj1nqu4d INFO: Terminating quiet workers
+2020-02-09T16:51:12.716Z 1 TID-gtj2btzel INFO: Scheduler exiting...
+2020-02-09T16:51:13.218Z 1 TID-gtj1nqu4d INFO: Pausing to allow workers to finish...
+2020-02-09T16:51:14.747Z 1 TID-gtj1nqu4d INFO: Bye!
+2020-02-09T16:51:54.490Z 1 TID-gra2pak8x INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T16:51:54.985Z 1 TID-gra2pak8x INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T16:51:54.986Z 1 TID-gra2pak8x INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T16:51:54.986Z 1 TID-gra2pak8x INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T16:51:54.990Z 1 TID-gra2pak8x DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T16:51:54.990Z 1 TID-gra2pak8x DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T16:51:54.990Z 1 TID-gra2pak8x INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T16:51:54.991Z 1 TID-gra2pak8x DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055fe621a8f18>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"f43fde2da069:1:b2c9b9ca33e5"}
+2020-02-09T17:11:12.969Z 1 TID-gra2pak8x DEBUG: Got TERM signal
+2020-02-09T17:11:12.970Z 1 TID-gra2pak8x INFO: Shutting down
+2020-02-09T17:11:12.970Z 1 TID-gra2pak8x INFO: Terminating quiet workers
+2020-02-09T17:11:12.971Z 1 TID-gra3d12f9 INFO: Scheduler exiting...
+2020-02-09T17:11:13.477Z 1 TID-gra2pak8x INFO: Pausing to allow workers to finish...
+2020-02-09T17:11:14.979Z 1 TID-gra2pak8x INFO: Bye!
+2020-02-09T17:11:53.154Z 1 TID-gt1ce8dtt INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T17:11:53.750Z 1 TID-gt1ce8dtt INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T17:11:53.751Z 1 TID-gt1ce8dtt INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T17:11:53.751Z 1 TID-gt1ce8dtt INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T17:11:53.756Z 1 TID-gt1ce8dtt DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T17:11:53.756Z 1 TID-gt1ce8dtt DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T17:11:53.757Z 1 TID-gt1ce8dtt INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T17:11:53.757Z 1 TID-gt1ce8dtt DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x0000563e83bbac70>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"98a6c190d77f:1:9733c88370dd"}
+2020-02-09T17:35:12.602Z 1 TID-gt1ce8dtt DEBUG: Got TERM signal
+2020-02-09T17:35:12.603Z 1 TID-gt1ce8dtt INFO: Shutting down
+2020-02-09T17:35:12.604Z 1 TID-gt1ce8dtt INFO: Terminating quiet workers
+2020-02-09T17:35:12.604Z 1 TID-gt1d27iy1 INFO: Scheduler exiting...
+2020-02-09T17:35:13.105Z 1 TID-gt1ce8dtt INFO: Pausing to allow workers to finish...
+2020-02-09T17:35:14.613Z 1 TID-gt1ce8dtt INFO: Bye!
+2020-02-09T17:36:30.140Z 1 TID-gmwhn49vh INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T17:36:30.769Z 1 TID-gmwhn49vh INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T17:36:30.770Z 1 TID-gmwhn49vh INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T17:36:30.770Z 1 TID-gmwhn49vh INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T17:36:30.775Z 1 TID-gmwhn49vh DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T17:36:30.776Z 1 TID-gmwhn49vh DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T17:36:30.776Z 1 TID-gmwhn49vh INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T17:36:30.777Z 1 TID-gmwhn49vh DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x0000555ea5abd840>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"f048b0199a9c:1:4179c19a795f"}
+2020-02-09T17:43:57.743Z 1 TID-gmwhn49vh DEBUG: Got TERM signal
+2020-02-09T17:43:57.744Z 1 TID-gmwhn49vh INFO: Shutting down
+2020-02-09T17:43:57.745Z 1 TID-gmwhn49vh INFO: Terminating quiet workers
+2020-02-09T17:43:57.745Z 1 TID-gmwib2yz1 INFO: Scheduler exiting...
+2020-02-09T17:43:58.247Z 1 TID-gmwhn49vh INFO: Bye!
+2020-02-09T17:44:30.007Z 1 TID-go30ts1z5 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T17:44:30.598Z 1 TID-go30ts1z5 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T17:44:30.599Z 1 TID-go30ts1z5 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T17:44:30.599Z 1 TID-go30ts1z5 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T17:44:30.604Z 1 TID-go30ts1z5 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T17:44:30.605Z 1 TID-go30ts1z5 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T17:44:30.605Z 1 TID-go30ts1z5 INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T17:44:30.606Z 1 TID-go30ts1z5 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00005589c2a6dbb8>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"e181e6854ecb:1:c0ddaf8d5460"}
+2020-02-09T17:46:17.639Z 1 TID-go30ts1z5 DEBUG: Got TERM signal
+2020-02-09T17:46:17.640Z 1 TID-go30ts1z5 INFO: Shutting down
+2020-02-09T17:46:17.641Z 1 TID-go30ts1z5 INFO: Terminating quiet workers
+2020-02-09T17:46:17.642Z 1 TID-go31hr7bp INFO: Scheduler exiting...
+2020-02-09T17:46:18.147Z 1 TID-go30ts1z5 INFO: Pausing to allow workers to finish...
+2020-02-09T17:46:19.151Z 1 TID-go30ts1z5 INFO: Bye!
+2020-02-09T17:46:41.905Z 1 TID-gojo2ub5p INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T17:46:42.385Z 1 TID-gojo2ub5p INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T17:46:42.386Z 1 TID-gojo2ub5p INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T17:46:42.387Z 1 TID-gojo2ub5p INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T17:46:42.391Z 1 TID-gojo2ub5p DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T17:46:42.392Z 1 TID-gojo2ub5p DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T17:46:42.392Z 1 TID-gojo2ub5p INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T17:46:42.393Z 1 TID-gojo2ub5p DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x0000559aa25155f8>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"b804a182189a:1:3bf84d9ae2c6"}
+2020-02-09T17:48:08.645Z 1 TID-gojo2ub5p DEBUG: Got TERM signal
+2020-02-09T17:48:08.648Z 1 TID-gojo2ub5p INFO: Shutting down
+2020-02-09T17:48:08.648Z 1 TID-gojo2ub5p INFO: Terminating quiet workers
+2020-02-09T17:48:08.649Z 1 TID-gojor5agp INFO: Scheduler exiting...
+2020-02-09T17:48:09.152Z 1 TID-gojo2ub5p INFO: Pausing to allow workers to finish...
+2020-02-09T17:48:10.657Z 1 TID-gojo2ub5p INFO: Bye!
+2020-02-09T17:48:44.654Z 1 TID-gos03juv5 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T17:48:45.310Z 1 TID-gos03juv5 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T17:48:45.310Z 1 TID-gos03juv5 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T17:48:45.311Z 1 TID-gos03juv5 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T17:48:45.314Z 1 TID-gos03juv5 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T17:48:45.315Z 1 TID-gos03juv5 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T17:48:45.315Z 1 TID-gos03juv5 INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T17:48:45.316Z 1 TID-gos03juv5 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055a314b7ac70>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"dff35cebaf79:1:3aae9a7838e2"}
+2020-02-09T18:55:52.976Z 1 TID-gos03juv5 DEBUG: Got TERM signal
+2020-02-09T18:55:52.977Z 1 TID-gos03juv5 INFO: Shutting down
+2020-02-09T18:55:52.978Z 1 TID-gos03juv5 INFO: Terminating quiet workers
+2020-02-09T18:55:52.979Z 1 TID-gos0rj06l INFO: Scheduler exiting...
+2020-02-09T18:55:53.483Z 1 TID-gos03juv5 INFO: Pausing to allow workers to finish...
+2020-02-09T18:55:54.488Z 1 TID-gos03juv5 INFO: Bye!
+2020-02-09T18:56:53.124Z 1 TID-gsf14bu9h INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T18:56:53.651Z 1 TID-gsf14bu9h INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T18:56:53.652Z 1 TID-gsf14bu9h INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T18:56:53.652Z 1 TID-gsf14bu9h INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T18:56:53.655Z 1 TID-gsf14bu9h DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T18:56:53.655Z 1 TID-gsf14bu9h DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T18:56:53.656Z 1 TID-gsf14bu9h INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T18:56:53.656Z 1 TID-gsf14bu9h DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00005627e5a30ad0>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"4160af3c74f3:1:2c070a1f62ee"}
+2020-02-09T18:57:27.610Z 1 TID-gsf14bu9h DEBUG: Got TERM signal
+2020-02-09T18:57:27.611Z 1 TID-gsf14bu9h INFO: Shutting down
+2020-02-09T18:57:27.613Z 1 TID-gsf14bu9h INFO: Terminating quiet workers
+2020-02-09T18:57:27.613Z 1 TID-gsf1snb5t INFO: Scheduler exiting...
+2020-02-09T18:57:28.114Z 1 TID-gsf14bu9h INFO: Pausing to allow workers to finish...
+2020-02-09T18:57:28.616Z 1 TID-gsf14bu9h INFO: Bye!
+2020-02-09T19:07:17.033Z 1 TID-gp2kxbpbx INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T19:07:17.474Z 1 TID-gp2kxbpbx INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T19:07:17.474Z 1 TID-gp2kxbpbx INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T19:07:17.475Z 1 TID-gp2kxbpbx INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T19:07:17.478Z 1 TID-gp2kxbpbx DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T19:07:17.478Z 1 TID-gp2kxbpbx DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T19:07:17.479Z 1 TID-gp2kxbpbx INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T19:07:17.479Z 1 TID-gp2kxbpbx DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055adcdc450b0>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"a0063f92d5f8:1:81ceab06b617"}
+2020-02-09T19:08:29.057Z 1 TID-gp2kxbpbx DEBUG: Got TERM signal
+2020-02-09T19:08:29.060Z 1 TID-gp2kxbpbx INFO: Shutting down
+2020-02-09T19:08:29.061Z 1 TID-gp2kxbpbx INFO: Terminating quiet workers
+2020-02-09T19:08:29.062Z 1 TID-gp2lleujd INFO: Scheduler exiting...
+2020-02-09T19:08:29.563Z 1 TID-gp2kxbpbx INFO: Pausing to allow workers to finish...
+2020-02-09T19:08:30.565Z 1 TID-gp2kxbpbx INFO: Bye!
+2020-02-09T19:09:10.605Z 1 TID-gt8vg87w9 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T19:09:11.188Z 1 TID-gt8vg87w9 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T19:09:11.189Z 1 TID-gt8vg87w9 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T19:09:11.189Z 1 TID-gt8vg87w9 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T19:09:11.193Z 1 TID-gt8vg87w9 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T19:09:11.193Z 1 TID-gt8vg87w9 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T19:09:11.194Z 1 TID-gt8vg87w9 INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T19:09:11.194Z 1 TID-gt8vg87w9 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x0000564625eca3f8>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"82398be29f6e:1:62259cfd0051"}
+2020-02-09T19:09:42.794Z 1 TID-gt8vg87w9 DEBUG: Got TERM signal
+2020-02-09T19:09:42.795Z 1 TID-gt8vg87w9 INFO: Shutting down
+2020-02-09T19:09:42.796Z 1 TID-gt8vg87w9 INFO: Terminating quiet workers
+2020-02-09T19:09:42.797Z 1 TID-gt8vxvo59 INFO: Scheduler exiting...
+2020-02-09T19:09:43.298Z 1 TID-gt8vg87w9 INFO: Pausing to allow workers to finish...
+2020-02-09T19:09:43.799Z 1 TID-gt8vg87w9 INFO: Bye!
+2020-02-09T19:10:38.628Z 1 TID-grza37fn5 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2020-02-09T19:10:39.123Z 1 TID-grza37fn5 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2020-02-09T19:10:39.124Z 1 TID-grza37fn5 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2020-02-09T19:10:39.124Z 1 TID-grza37fn5 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2020-02-09T19:10:39.128Z 1 TID-grza37fn5 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2020-02-09T19:10:39.128Z 1 TID-grza37fn5 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2020-02-09T19:10:39.129Z 1 TID-grza37fn5 INFO: Starting processing, hit Ctrl-C to stop
+2020-02-09T19:10:39.129Z 1 TID-grza37fn5 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00005617ee632750>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"e2199163fc41:1:f374ca1ce0ba"}
+2020-02-09T19:11:13.355Z 1 TID-grza37fn5 DEBUG: Got TERM signal
+2020-02-09T19:11:13.356Z 1 TID-grza37fn5 INFO: Shutting down
+2020-02-09T19:11:13.356Z 1 TID-grza37fn5 INFO: Terminating quiet workers
+2020-02-09T19:11:13.357Z 1 TID-grzar62j9 INFO: Scheduler exiting...
+2020-02-09T19:11:13.858Z 1 TID-grza37fn5 INFO: Pausing to allow workers to finish...
+2020-02-09T19:11:14.360Z 1 TID-grza37fn5 INFO: Bye!

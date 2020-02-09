@@ -8,6 +8,7 @@
   - [Setting Up Shell Environment](#setting-up-shell-environment)
   - [Build In Docker](#build-in-docker)
   - [Run In Docker](#run-in-docker)
+  - [Docker Trouble-shooting](#docker-trouble-shooting)
 - [Local Installation](#local-installation)
   - [Install MariaDB v10.4.x](#install-mariadb-v10-4-x)
   - [Install Redis v5.x Server](#install-redis-v5-x-server)
@@ -86,6 +87,18 @@ Open a local browser and point it at http://localhost:3000/. You will see the ap
 
 Depend on the cloud infrastructure you use, you might need to customize the containers further before the deployment.
 Please feel free to contact me if you need the help.
+
+#### Docker Trouble-shooting
+Following the onscreen error log when you bring up the containers. You can use the following docker command to verify the containers are running in your host
+```
+$ docker ps
+CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                    NAMES
+6430a6fcac1e        www_wmap_web           "sh ./config/docker/…"   10 seconds ago      Up 9 seconds        0.0.0.0:3000->3000/tcp   www_wmap
+f048b0199a9c        www_wmap_sidekiq       "sh ./config/docker/…"   10 seconds ago      Up 9 seconds        3000/tcp                 www_wmap_sidekiq_1
+fd303f7dd992        redis:alpine           "docker-entrypoint.s…"   10 seconds ago      Up 9 seconds        6379/tcp                 redis
+faa0ebb3b861        bitnami/mariadb:10.3   "/entrypoint.sh /run…"   10 seconds ago      Up 9 seconds        0.0.0.0:3306->3306/tcp   wmap_db
+```
+If you running into problem, you can refer to the [docker online document](https://docs.docker.com) for further assistance.
 
 ### Local Installation
 

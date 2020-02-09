@@ -20,11 +20,12 @@ services:
   web:
     container_name: "www_wmap"
     build: .
-    command: bin/rails server --port 3000 --binding 0.0.0.0
+    command: bash -c "bin/rails db:migrate; bin/rails server --port 3000 --binding 0.0.0.0"
     ports:
       - "3000:3000"
     volumes:
       - .:/www_wmap:cached
+    restart: always
     depends_on:
       - mariadb
       - redis
@@ -36,20 +37,8 @@ services:
     command: bundle exec sidekiq
     depends_on:
       - redis
-      - postfix_587
     volumes:
       - .:/www_wmap
-    env_file:
-      - .env
-
-  postfix_587:
-    hostname: "postfix"
-    image: "boky/postfix"
-    restart: always
-    ports:
-      - "1587:587"
-    volumes:
-      - "./test-keys:/etc/opendkim/keys"
     env_file:
       - .env
 
