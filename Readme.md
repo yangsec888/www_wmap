@@ -12,6 +12,7 @@
   - [Install MariaDB v10.4.x](#install-mariadb-v10-4-x)
   - [Install Redis v5.x Server](#install-redis-v5-x-server)
   - [Start the Rails Server](#start-the-rails-server)
+  - [More Setup Details](#more-setup-details)
 - [Demo Instance](#demo-instance)
 - [Usage](#usage)
 - [To Dos](#to-dos)
@@ -117,16 +118,17 @@ $ rake db:migration
 $ rails server
 ```
 
+####  More Setup Details  
+For more information on local installation, please use my demo instance deployment at [Setup.md](Setup.md) for your reference.
+
+
 ### Demo Instance
 The application is deployed into a demo instance at [www.wmap.io](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
 
 
-####  Demo Instance Setup Details  
-For more information on local installation, please use my demo instance deployment at [Setup.md](Setup.md) for your reference.
-
-
 ### Usage
 Under the home page, click on "Start" button to start. Follow the on-screen instructions, in order to launch a successfully WMAP discovery. The discovery result should be tracked under the "Discovery" menu tab.
+
 
 ### To Dos
 
