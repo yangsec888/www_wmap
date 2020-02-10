@@ -42022,3 +42022,140 @@ Processing by HomeController#page as HTML
 Completed 200 OK in 1463ms (Views: 1433.8ms | ActiveRecord: 1.9ms)
 
 
+=== puma startup: 2020-02-10 00:03:31 +0000 ===
+[29] * Starting control server on unix:///tmp/puma-status-1581293011254-29
+[29] - Worker 0 (pid: 37) booted, phase: 0
+Started GET "/" for 172.18.0.1 at 2020-02-10 00:03:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 3196ms (Views: 3152.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 172.18.0.1 at 2020-02-10 00:03:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xtQoYuFy5hvHjsES5hg8zpctf+jc6qkfVL9b4GjjIwnipTWTQq3zPtV9kFPdVpIWFrmfZDGsQ1kl5GJm8HCbdg==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 172.18.0.1 at 2020-02-10 00:03:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (70.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 467ms (Views: 438.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users/login" for 172.18.0.1 at 2020-02-10 00:03:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ew4tz8l8Z1uyBzO2lQh002YYZhGeGlGARYu7UL/Tr1s3fzA+aqNyfqD0YveuRtoL54yGnXNcu8Y00ILWJ0AXJA==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'yang.li@owasp.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `username`, `role`) VALUES ('yang.li@owasp.org', '$2a$11$ZlECq8fQ3gYFpRsrf2VCUex3XLshtfYo6urg7OzObodollfgScNRC', '2020-02-10 00:03:44', '2020-02-10 00:03:44', 'admin', 0)[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2020-02-10 00:03:44', `last_sign_in_at` = '2020-02-10 00:03:44', `current_sign_in_ip` = '172.18.0.1', `last_sign_in_ip` = '172.18.0.1', `sign_in_count` = 1 WHERE `users`.`id` = 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 221ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/" for 172.18.0.1 at 2020-02-10 00:03:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 357ms (Views: 344.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home/page" for 172.18.0.1 at 2020-02-10 00:03:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 369ms (Views: 358.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/seed/start" for 172.18.0.1 at 2020-02-10 00:03:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GFN1wO1PJOOR2v/5SDkP2jAkyjDjzCLeFzxTOEH7NaMem2Nu6dGBlntpz0Z5Yfc9qIqwiZWZ2QOZp06863Pv1g==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 378ms (Views: 353.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/seed/load_file?path=" for 172.18.0.1 at 2020-02-10 00:03:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 18ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sites/index" for 172.18.0.1 at 2020-02-10 00:04:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.4ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 303ms (Views: 271.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/sites/index?reload" for 172.18.0.1 at 2020-02-10 00:04:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.6ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 319ms (Views: 306.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/logs/list" for 172.18.0.1 at 2020-02-10 00:04:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 335ms (Views: 305.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logs/show?id=discovered_sites.log" for 172.18.0.1 at 2020-02-10 00:04:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_sites.log"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/www_wmap/shared/data/logs/discovered_sites.log", "/www_wmap/shared/data/logs/discovered_urls.log", "/www_wmap/shared/data/logs/url_seeds.log", "/www_wmap/shared/data/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 302ms (Views: 254.1ms | ActiveRecord: 0.6ms)
+
+

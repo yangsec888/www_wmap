@@ -50330,3 +50330,299 @@ Processing by HomeController#page as HTML
 Completed 200 OK in 1463ms (Views: 1433.8ms | ActiveRecord: 1.9ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE `www_wmap_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `www_wmap_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3489165623943321000', 0)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseCreateUsers (20170104075306)
+  [1m[35m (18.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170104075306')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddConfirmableToDeviseV1 (20170104115736)
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE `users` ADD `confirmation_token` varchar(255)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE `users` ADD `confirmed_at` datetime[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE `users` ADD `confirmation_sent_at` datetime[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_confirmation_token`  ON `users` (`confirmation_token`) [0m
+  [1m[35m (0.4ms)[0m  [1m[33mUPDATE users SET confirmed_at = NOW()[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170104115736')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLockableToDevise (20170105010828)
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE `users` ADD `failed_attempts` int DEFAULT 0[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE `users` ADD `unlock_token` varchar(255)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE `users` ADD `locked_at` datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170105010828')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSeeds (20171214210037)
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE `seeds` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `uid` int, `hosts` text, `ips` text, `cidrs` text, `entity_name` varchar(255), `verified` tinyint(1), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171214210037')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDocuments (20171214211509)
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE `documents` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `uid` int, `name` varchar(255), `attachment` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171214211509')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDomains (20171219185151)
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE `domains` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `owed_domain` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171219185151')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCidrs (20171219195527)
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE `cidrs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `owed_cidr` varchar(255), `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171219195527')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateHosts (20171220222058)
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE `hosts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `host_name` varchar(255), `ip` varchar(255), `uid` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171220222058')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSites (20180108205506)
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE `sites` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `site` varchar(255), `user_id` int, `ip` varchar(255), `port` int, `url` varchar(255), `code` int, `redirection` varchar(255), `md5` varchar(255), `server` varchar(255), `timestamp` datetime, `status` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180108205506')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLogs (20180117205603)
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE `logs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `file_name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180117205603')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUsersTable (20181212151804)
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE `users` ADD `department` varchar(255)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE `users` ADD `username` varchar(255)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE `users` ADD `role` int[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE `users` ADD `dn` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20181212151804')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20181213181525)
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE `users` ADD `name` varchar(255)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE `users` ADD `employee_type` varchar(255)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE `users` ADD `employee_number` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20181213181525')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReports (20190129144905)
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE `reports` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `description` text, `division` varchar(255), `department` varchar(255), `published` tinyint(1), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190129144905')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUploads (20190204172800)
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE `uploads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `attachment` varchar(255), `file_type` varchar(255), `switch_tag` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190204172800')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUrlToReports (20190207140802)
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE `reports` ADD `attachment_url` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190207140802')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDivisionToDomains (20190207141242)
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE `domains` ADD `division` varchar(255)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE `domains` ADD `transferable` tinyint(1)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190207141242')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeDomainsName (20190214195016)
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE `domains` CHANGE `owed_domain` `name` varchar(255) DEFAULT NULL[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE `domains` ADD `keep` tinyint(1)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190214195016')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeDomainsKeepType (20190217150636)
+  [1m[35m (27.8ms)[0m  [1m[35mALTER TABLE `domains` CHANGE `keep` `keep` varchar(255) DEFAULT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190217150636')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddFieldsToDomains (20190220134957)
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE `domains` ADD `imprint` varchar(255)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE `domains` ADD `current_redirect` varchar(255)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE `domains` ADD `new_redirect` varchar(255)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE `domains` ADD `pub_team` varchar(255)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE `domains` ADD `contact` varchar(255)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE `domains` ADD `notes` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190220134957')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTags (20190312153942)
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE `tags` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `site_url` varchar(255), `name` varchar(255), `description` varchar(255), `signature` varchar(255), `sign_desc` text, `sign_ver` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190312153942')[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRedirectionToTags (20190312223117)
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE `tags` ADD `redirection` varchar(255)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE `tags` CHANGE `site_url` `site` varchar(255) DEFAULT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190312223117')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDivisionToTags (20190326201126)
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE `tags` ADD `division` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190326201126')[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCategoryToReports (20190402155225)
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE `reports` ADD `category` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190402155225')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeTagsSignDescSize (20190411132001)
+  [1m[35m (27.3ms)[0m  [1m[35mALTER TABLE `tags` CHANGE `sign_desc` `sign_desc` mediumtext DEFAULT NULL[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190411132001')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNetnameToCidrs (20190826183901)
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE `cidrs` ADD `ref` varchar(255)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE `cidrs` ADD `netname` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190826183901')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-02-10 00:03:27', '2020-02-10 00:03:27')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('3489165623943321000')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-02-10 00:03:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 3196ms (Views: 3152.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 172.18.0.1 at 2020-02-10 00:03:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xtQoYuFy5hvHjsES5hg8zpctf+jc6qkfVL9b4GjjIwnipTWTQq3zPtV9kFPdVpIWFrmfZDGsQ1kl5GJm8HCbdg==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 172.18.0.1 at 2020-02-10 00:03:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (70.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 467ms (Views: 438.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users/login" for 172.18.0.1 at 2020-02-10 00:03:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ew4tz8l8Z1uyBzO2lQh002YYZhGeGlGARYu7UL/Tr1s3fzA+aqNyfqD0YveuRtoL54yGnXNcu8Y00ILWJ0AXJA==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'yang.li@owasp.org' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `username`, `role`) VALUES ('yang.li@owasp.org', '$2a$11$ZlECq8fQ3gYFpRsrf2VCUex3XLshtfYo6urg7OzObodollfgScNRC', '2020-02-10 00:03:44', '2020-02-10 00:03:44', 'admin', 0)[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2020-02-10 00:03:44', `last_sign_in_at` = '2020-02-10 00:03:44', `current_sign_in_ip` = '172.18.0.1', `last_sign_in_ip` = '172.18.0.1', `sign_in_count` = 1 WHERE `users`.`id` = 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 221ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/" for 172.18.0.1 at 2020-02-10 00:03:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 357ms (Views: 344.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home/page" for 172.18.0.1 at 2020-02-10 00:03:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 369ms (Views: 358.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/seed/start" for 172.18.0.1 at 2020-02-10 00:03:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GFN1wO1PJOOR2v/5SDkP2jAkyjDjzCLeFzxTOEH7NaMem2Nu6dGBlntpz0Z5Yfc9qIqwiZWZ2QOZp06863Pv1g==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 378ms (Views: 353.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/seed/load_file?path=" for 172.18.0.1 at 2020-02-10 00:03:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 18ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sites/index" for 172.18.0.1 at 2020-02-10 00:04:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.4ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 303ms (Views: 271.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/sites/index?reload" for 172.18.0.1 at 2020-02-10 00:04:00 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SitesController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sites/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `sites`[0m
+  [1m[36mSite Load (0.6ms)[0m  [1m[34mSELECT  `sites`.* FROM `sites` ORDER BY site asc LIMIT 25 OFFSET 0[0m
+  Rendered sites/index.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 319ms (Views: 306.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/logs/list" for 172.18.0.1 at 2020-02-10 00:04:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LogsController#list as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering logs/list.html.erb within layouts/application
+  Rendered logs/list.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 335ms (Views: 305.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logs/show?id=discovered_sites.log" for 172.18.0.1 at 2020-02-10 00:04:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"discovered_sites.log"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+White list: ["/www_wmap/shared/data/logs/discovered_sites.log", "/www_wmap/shared/data/logs/discovered_urls.log", "/www_wmap/shared/data/logs/url_seeds.log", "/www_wmap/shared/data/logs/wmap.log"]
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 302ms (Views: 254.1ms | ActiveRecord: 0.6ms)
+
+
