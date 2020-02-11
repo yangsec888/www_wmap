@@ -55,7 +55,7 @@ production:
   host:  dc1.test.com
   port: 389
   attribute: sAMAccountName
-  base: DC=us, DC=randomhouse, DC=com
+  base: DC=us, DC=Test, DC=com
   admin_user: <%= ENV['LDAP_SEEVICE_ACCT'] %>
   admin_password: <%= ENV['LDAP_SEEVICE_PASS'] %>
   ssl: false
