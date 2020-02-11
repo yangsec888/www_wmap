@@ -34,9 +34,6 @@ development:
   #group_base: ou=role,dc=domain,dc=com
   required_groups:
     - ou=groups,dc=test,dc=com
-  #require_attribute:
-  #  memberOf: CN=CMBGroup,OU=New York Branch,DC=ny,DC=cmbchina,DC=com
-    #memberOf: CN=Group_IT,OU=IT,OU=New York Branch,DC=ny,DC=cmbchina,DC=com
 
 
 test:
