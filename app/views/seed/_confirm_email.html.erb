@@ -1,0 +1,20 @@
+<!-- Implementation based on this technie: https://github.com/colorfulfool/rails-popup -->
+<% remote = request.xhr? %>
+<h4>&nbsp;&nbsp;Update Notification Email
+</h4>
+
+<%= form_tag(controller: "seed", action: "distest", remote: remote, method: "post") do  %>
+  <table class="table table-striped" style="border: 1">
+      <tr>
+          <td>Notification Email:
+          </td>
+          <td><%= @email %>
+          </td>
+          <td><%= text_field_tag :email, nil, class: 'form-control', value: @user.email%></td>
+      </tr>
+      <%= hidden_field_tag :id, @user.id %>
+  </table>
+  <p>&nbsp;&nbsp;<button class="btn btn-default btn-sm" type="submit" data-disable-with="Please wait...">Confirm</button>
+      &nbsp;&nbsp;<input type="button" onclick="window.parent.location = window.parent.location.href;" value="Back" class="btn btn-default btn-sm">
+  </p>
+<% end %>

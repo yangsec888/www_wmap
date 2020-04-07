@@ -64,11 +64,12 @@ class SeedController < ApplicationController
   def discovery
     #UserMailer.discovery_completion_notice("yli8@yahoo.com", "yesterday", "today").deliver_later
     @user= User.find(current_user.id)
+    @email= params[:email]? params[:email] : @user.email
     if platinum_user_and_above?
       flash[:notice] = "Discovery is kicked-off in the background ... "
       logger.info "starting the sidekiq worker for the discovery job"
       uid = current_user.id
-      DiscoveryWorker.perform_async(uid)
+      DiscoveryWorker.perform_async(uid,params[:email])
     else
       redirect_back :fallback_location => root_path, :alert => "Access denied."
     end
@@ -76,9 +77,15 @@ class SeedController < ApplicationController
 
   def distest
     @user= User.find(current_user.id)
-    puts "You're hitting distest controller"
+    @email= params[:email]? params[:email] : @user.email
+    #puts "You're hitting distest controller"
   end
 
-
+  def confirm_email
+    @user = User.find(params[:id])
+    respond_to do |format|
+        format.js
+    end
+  end
 
 end

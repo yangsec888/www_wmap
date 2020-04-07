@@ -5,13 +5,20 @@
   <div class=" col-md-9 col-lg-9">
     <b>Disclaimer: </b>
     <div class="row"> </div>
-    <i>By click on the Discover button below, you <b><u> <%= link_to "confirm your user", user_path(@user) %> </b></u> email as <u><%= @user.email %></u>. And you have the exclusive permission to perform such discovery.
-      You also agree to waive all your rights on the appliation programmer, and the site hosting provider.</i>
+    <i>By click on the Discover button below, you
+      <u>
+        <%= link_to('confirm your email', action: 'confirm_email', id: @user.id, remote: true) %>
+        as <b><%= @email %></b>.
+      </u>
+        Or <%= link_to('click here to change', action: 'confirm_email', id: @user.id, remote: true) %> your notification email.
+        <p><p>And you have the exclusive permission to perform such discovery.
+        You also agree to waive all your rights on the appliation programmer, and the site hosting provider.
+    </i>
   </div>
 </div>
 <div class="col-md-9 col-lg-9"> </div>
     <div> </div>
     <p>
-    <%= button_to("Discover", seed_discovery_path, class: "btn btn-primary") %>
+    <%= button_to("Discover", seed_discovery_path(:email => @email), class: "btn btn-primary") %>
     </br>
 <div class="row"> </div>

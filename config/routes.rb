@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   post 'seed/save_file'
   post 'seed/discovery'
   get 'seed/distest'
+  post 'seed/distest'
+  get 'seed/confirm_email'
 
   ################################
 

@@ -16,8 +16,8 @@ class DiscoveryWorker
   sidekiq_options retry: false
 
 
-  def on_complete(uid,start_time,data_dir)
-    receiver=User.find(uid).email
+  def on_complete(uid,start_time,data_dir,email)
+    receiver=email
     logger.info "Sending out email notice to: #{receiver}"
     end_time=Time.now.to_s
     UserMailer.discovery_completion_notice(receiver, start_time, end_time).deliver_later
@@ -26,7 +26,7 @@ class DiscoveryWorker
     domain_table_reload(uid,data_dir)
   end
 
-  def perform(uid)
+  def perform(uid,email)
     start_time=Time.now.to_s
     #file = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data', 'seed')
     dir = Rails.root.join('shared', 'data')
@@ -36,7 +36,7 @@ class DiscoveryWorker
     logger.info "Starting background command: #{cmd}"
     if system(cmd)
       logger.info "Discovery successful!"
-      on_complete(uid,start_time,dir.to_s)
+      on_complete(uid,start_time,dir.to_s,email)
       #end_time=Time.now.to_s
       #receiver=User.find(uid).email
       #logger.info "Sending out email notice to: #{receiver}"
