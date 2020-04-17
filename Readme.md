@@ -29,7 +29,7 @@ To further explore the full power of OWASP Wmap library, please refer to the <a 
 
 ### Demo
 
-The Youtube video below shows a successful application asset discovery:
+Click to watch the Youtube video below to see how to perform a successful application asset discovery:
 [![Web Mapper Demo](https://img.youtube.com/vi/TL1occsk3Fc/0.jpg)](https://www.youtube.com/watch?v=TL1occsk3Fc "Web Mapper Demo")
 
 #### Demo Instance
