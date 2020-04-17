@@ -29,10 +29,10 @@ To further explore the full power of OWASP Wmap library, please refer to the <a 
 
 ### Demo
 
-The screen cast below shows a successful discovery using the app:
-![Web Mapper Demo](wmap_demo.gif)
+The Youtube video below shows a successful application asset discovery:
+[![Web Mapper Demo](https://img.youtube.com/vi/TL1occsk3Fc/0.jpg)](https://www.youtube.com/watch?v=TL1occsk3Fc "Web Mapper Demo")
 
-### Demo Instance
+#### Demo Instance
 The application is deployed into a demo instance at [www.wmap.io](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
 
 
