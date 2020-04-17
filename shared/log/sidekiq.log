@@ -6266,3 +6266,11 @@ Update complete.
 2020-04-07T17:18:41.765Z 4275 TID-oxmfh9c97 DiscoveryWorker JID-96145edc308f1bed751dd2d5 INFO: Discovery successful!
 2020-04-07T17:18:41.765Z 4275 TID-oxmfh9c97 DiscoveryWorker JID-96145edc308f1bed751dd2d5 INFO: Sending out email notice to: yangsec888@gmail.com
 2020-04-07T17:18:41.878Z 4275 TID-oxmfh9c97 DiscoveryWorker JID-96145edc308f1bed751dd2d5 INFO: done: 23.783 sec
+2020-04-17T01:00:08.989Z 4275 TID-oxmfcws6b DEBUG: Got TERM signal
+2020-04-17T01:00:08.990Z 4275 TID-oxmfcws6b INFO: Shutting down
+2020-04-17T01:00:08.990Z 4275 TID-oxmfcws6b INFO: Terminating quiet workers
+2020-04-17T01:00:08.991Z 4263 TID-ovfvxcdyf DEBUG: Got TERM signal
+2020-04-17T01:00:08.994Z 4263 TID-ovfvxcdyf INFO: Shutting down
+2020-04-17T01:00:08.995Z 4263 TID-ovfvxcdyf INFO: Terminating quiet workers
+2020-04-17T01:00:08.995Z 4263 TID-ovfx6cvdr INFO: Scheduler exiting...
+2020-04-17T01:00:09.097Z 4263 TID-ovfvxcdyf INFO: Pausing to allow workers to finish...

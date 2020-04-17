@@ -2,6 +2,8 @@
 =====================
 
 - [Wmap Web Portal](#wmap-web-portal)
+- [Demo](#demo)
+  - [Demo Instance](#demo-instance)
 - [Technology Stacks](#technology-stacks)
 - [Build and Run in Docker](#build-and-run-in-docker)
   - [Why Docker](#why-docker)
@@ -13,7 +15,6 @@
   - [Install Redis v5.x Server](#install-redis-v5-x-server)
   - [Start the Rails Server](#start-the-rails-server)
   - [More Setup Details](#more-setup-details)
-- [Demo Instance](#demo-instance)
 - [Usage](#usage)
 - [To Dos](#to-dos)
 
@@ -24,6 +25,15 @@
 The web app is part of the [OWASP Web Mapper Project](https://www.owasp.org/index.php/OWASP_Web_Mapper_Project). It's developed to help discover and keep track of web application asset with scale.
 
 To further explore the full power of OWASP Wmap library, please refer to the <a href="https://github.com/yangsec888/wmap" target="_blank"> WMAP </a> Git repository.
+
+
+### Demo
+
+The screen cast below shows a successful discovery using the app:
+![Web Mapper Demo](wmap_demo.gif)
+
+### Demo Instance
+The application is deployed into a demo instance at [www.wmap.io](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
 
 
 ### Technology Stacks
@@ -119,11 +129,7 @@ $ rails server
 ```
 
 ####  More Setup Details  
-For more information on local installation, please use my demo instance deployment at [Setup.md](Setup.md) for your reference.
-
-
-### Demo Instance
-The application is deployed into a demo instance at [www.wmap.io](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
+For more information on local installation, please use my instance deployment example at [Setup.md](Setup.md) for your reference.
 
 
 ### Usage

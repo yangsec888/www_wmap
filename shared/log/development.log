@@ -52547,3 +52547,140 @@ Content-Transfer-Encoding: 7bit
 </html>
 
 [ActiveJob] [ActionMailer::DeliveryJob] [c1bcd24c-dccc-483d-94b8-f0274fcc9af3] Performed ActionMailer::DeliveryJob (Job ID: c1bcd24c-dccc-483d-94b8-f0274fcc9af3) from Async(mailers) in 35.18ms
+Started GET "/" for 127.0.0.1 at 2020-04-07 13:48:55 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 627ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-07 13:48:55 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 127ms (Views: 124.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2020-04-07 13:48:58 -0400
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fmmMtlUweV3PgJpKvYaqDaJHWVod8aMr6kxbuZFxpaEvt9RUjbTn8WKrLwWDnQ3G7IpbLL/j39Whd1R7jTyTBw==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2020-04-07 13:48:58 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (30.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 205ms (Views: 200.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2020-04-07 13:49:00 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7CFjKTtjerbIjWoFDUdoYaLTtLqiX2FKDWRGlBGFsOC9/zvL4+fkGmWm30ozXM+q7B62zABNHbRGX0lWDciGRg==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2020-04-07 17:49:00', `last_sign_in_at` = '2020-04-07 17:06:40', `sign_in_count` = 23, `updated_at` = '2020-04-07 17:49:00' WHERE `users`.`id` = 1[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 49ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-07 13:49:00 -0400
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 117ms (Views: 114.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/seed/start" for 127.0.0.1 at 2020-04-07 13:49:01 -0400
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vpy4agOXW05JvaRzJNzQxwa5+KfLPzxA2Qidjwo2+tcTEMIfSWMqvFr1ZObe1XZF5rvbTVpm4pO8s/VeNbnDBg==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 138ms (Views: 131.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/seed/load_file?path=" for 127.0.0.1 at 2020-04-07 13:49:01 -0400
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/seed/save_file" for 127.0.0.1 at 2020-04-07 13:49:02 -0400
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2019-11-18 23:41:36", updated_at: "2020-04-07 17:49:00", department: "IT", username: "admin", role: "admin", dn: nil, name: "Sam (Yang) Li", employee_type: nil, employee_number: nil>
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/import" for 127.0.0.1 at 2020-04-07 13:49:04 -0400
+Processing by DomainsController#import as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/import.html.erb within layouts/application
+  Rendered domains/import.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 136ms (Views: 130.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/domains/index" for 127.0.0.1 at 2020-04-07 13:49:05 -0400
+Processing by DomainsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 188ms (Views: 113.4ms | ActiveRecord: 48.0ms)
+
+
+Started GET "/domains/index?reload" for 127.0.0.1 at 2020-04-07 13:49:05 -0400
+Processing by DomainsController#index as HTML
+  Parameters: {"reload"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT id,keep, COUNT(*) AS total FROM `domains` GROUP BY id, keep[0m
+  Rendering domains/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `domains`[0m
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  `domains`.* FROM `domains` ORDER BY name asc LIMIT 25 OFFSET 0[0m
+  Rendered domains/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 116ms (Views: 107.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/domains/edit" for 127.0.0.1 at 2020-04-07 13:49:07 -0400
+Processing by DomainsController#edit as HTML
+  Parameters: {"authenticity_token"=>"DbJP5ANtZC1pzh2v1y1oJ3u4EQhR+Ph5PD0k71dipg5IPjWRSZkV33qG3TotJM6lm7oy4sChJqpZhkw+aO2f3w=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/edit.html.erb within layouts/application
+  Rendered domains/edit.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 108.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/load_file?path=" for 127.0.0.1 at 2020-04-07 13:49:07 -0400
+Processing by DomainsController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
