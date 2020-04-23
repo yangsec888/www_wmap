@@ -207,7 +207,7 @@
 
           
           <div class="method-source-code" id="cidr_2_ips-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 317</span>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 315</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cidr_2_ips</span> (<span class="ruby-identifier">cidr</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Method to convert a CIDR block into a list of IPs: #{cidr}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-keyword">begin</span>
@@ -350,7 +350,7 @@ the host / subdomain / domain</p>
 
           
           <div class="method-source-code" id="get_nameserver-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 283</span>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 281</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_nameserver</span> (<span class="ruby-identifier">host</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Retrieve the first authoritative name server for: #{host}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-keyword">begin</span>
@@ -402,7 +402,7 @@ data repository for the host / subdomain / domain</p>
 
           
           <div class="method-source-code" id="get_nameservers-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 264</span>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 262</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_nameservers</span> (<span class="ruby-identifier">host</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Retrieve a list of authoritative name server for: #{host}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-keyword">begin</span>
@@ -477,7 +477,7 @@ data repository for the host / subdomain / domain</p>
 
           
           <div class="method-source-code" id="host_2_ip-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 240</span>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 238</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">host_2_ip</span> (<span class="ruby-identifier">hostname</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Perform DNS query on host: #{hostname}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-keyword">begin</span>
@@ -530,7 +530,7 @@ IP(s) in an array</p>
 
           
           <div class="method-source-code" id="host_2_ips-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 217</span>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 215</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">host_2_ips</span> (<span class="ruby-identifier">hostname</span>)
         <span class="ruby-keyword">begin</span>
                 <span class="ruby-identifier">ips</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
@@ -612,7 +612,7 @@ IP(s) in an array</p>
 
           
           <div class="method-source-code" id="is_cidr-3F-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 180</span>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 178</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">is_cidr?</span>(<span class="ruby-identifier">cidr</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Validate if the entry is valid CIDR format: #{cidr}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-keyword">begin</span>
@@ -671,9 +671,8 @@ the DNS server for a resolvable internet host.</p>
           
           <div class="method-source-code" id="is_fqdn-3F-source">
             <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 160</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">is_fqdn?</span> (<span class="ruby-identifier">host</span>)
-        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Validate the host-name format is valid: #{host}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-        <span class="ruby-keyword">begin</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">is_fqdn?</span> (<span class="ruby-identifier">host</span>)
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Validate the host-name format is valid: #{host}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
                 <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_ip?</span>(<span class="ruby-identifier">host</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">host</span>)
                 <span class="ruby-identifier">domain</span>=<span class="ruby-identifier">get_domain_root</span>(<span class="ruby-identifier">host</span>)
                 <span class="ruby-keyword">if</span> <span class="ruby-identifier">domain</span>.<span class="ruby-identifier">nil?</span>
@@ -683,11 +682,10 @@ the DNS server for a resolvable internet host.</p>
                 <span class="ruby-keyword">else</span>
                         <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
                 <span class="ruby-keyword">end</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method is_fqdn? for #{host}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
+<span class="ruby-comment">#       rescue =&gt; ee</span>
+<span class="ruby-comment">#               puts &quot;Exception on method is_fqdn? for #{host}: #{ee}&quot; if @verbose</span>
+<span class="ruby-comment">#               return false</span>
+        <span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>
@@ -932,7 +930,7 @@ if found, or the original IP if not</p>
 
           
           <div class="method-source-code" id="reverse_dns_lookup-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 303</span>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 301</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">reverse_dns_lookup</span> (<span class="ruby-identifier">ip</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Retrieve the hostname by the reverse DNS lookup on IP: #{ip}&quot;</span>
         <span class="ruby-identifier">hostname</span> = <span class="ruby-identifier">ip</span>
@@ -977,7 +975,7 @@ if found, or the original IP if not</p>
 
           
           <div class="method-source-code" id="sort_ips-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 207</span>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/utils.rb, line 205</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sort_ips</span> (<span class="ruby-identifier">ips</span>)
         <span class="ruby-keyword">begin</span>
                 <span class="ruby-node">&quot;Sort the list of IP address in the ascendant order: #{ips}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>

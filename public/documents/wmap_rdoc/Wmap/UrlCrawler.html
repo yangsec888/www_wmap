@@ -231,19 +231,6 @@ performance penalty for certain &#39;weird&#39; site(s)</p>
         </div>
       </div>
       
-      <div id="attribute-i-data_store" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">data_store</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
       <div id="attribute-i-discovered_urls_by_crawler" class="method-detail">
         <div class="method-heading attribute-method-heading">
           <span class="method-name">discovered_urls_by_crawler</span><span
@@ -404,7 +391,7 @@ performance penalty for certain &#39;weird&#39; site(s)</p>
         <span class="ruby-ivar">@crawl_start</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
         <span class="ruby-ivar">@crawl_done</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
         <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
-        <span class="ruby-ivar">@log_file</span>=<span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;crawler.log&quot;</span>
+        <span class="ruby-ivar">@log_file</span>=<span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/../logs/crawler.log&quot;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -448,23 +435,21 @@ href="http://www.yahoo.com">www.yahoo.com</a>/&#39; it could discover
           <div class="method-source-code" id="crawl-source">
             <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 68</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">crawl</span>(<span class="ruby-identifier">url</span>)
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start web crawling on #{url}&quot;</span>
-                <span class="ruby-identifier">result</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">chomp</span>.<span class="ruby-identifier">strip</span>
-                <span class="ruby-identifier">result</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>))
-                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Error! Invalid url format: #{urls}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-comment"># Add logic to profile the web server before crawling; this is used to optimize the crawling speed</span>
-                <span class="ruby-identifier">pre_crawl</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">status</span> = <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-identifier">timeout</span>(<span class="ruby-constant">Crawl_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000</span>) {
-                        <span class="ruby-identifier">result</span><span class="ruby-operator">+=</span><span class="ruby-identifier">crawl_worker</span>(<span class="ruby-identifier">url</span>).<span class="ruby-identifier">keys</span>
-                }
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Web crawling time-out on #{url}: #{status}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for URL #{url}: #{ee}&quot;</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
-        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start web crawling on #{url}&quot;</span>
+        <span class="ruby-identifier">result</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">chomp</span>.<span class="ruby-identifier">strip</span>
+        <span class="ruby-identifier">result</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>))
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Error! Invalid url format: #{urls}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-comment"># Add logic to profile the web server before crawling; this is used to optimize the crawling speed</span>
+        <span class="ruby-identifier">pre_crawl</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">status</span> = <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-identifier">timeout</span>(<span class="ruby-constant">Crawl_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000</span>) {
+                <span class="ruby-identifier">result</span><span class="ruby-operator">+=</span><span class="ruby-identifier">crawl_worker</span>(<span class="ruby-identifier">url</span>).<span class="ruby-identifier">keys</span>
+        }
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Web crawling time-out on #{url}: #{status}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for URL #{url}: #{ee}&quot;</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -527,70 +512,68 @@ href="http://www.yahoo.com">www.yahoo.com</a>/&#39; it could discover
 
           
           <div class="method-source-code" id="crawl_worker-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 90</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 88</span>
         <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">crawl_worker</span>(<span class="ruby-identifier">url0</span>)
-                <span class="ruby-keyword">begin</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Please be aware that it may take a while to crawl #{url0}, depending on the site&#39;s responsiveness and the amount of contents.&quot;</span>
-                        <span class="ruby-comment"># Input URL sanity check first</span>
-                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url0</span>)
-                                <span class="ruby-identifier">host</span>=<span class="ruby-identifier">url_2_host</span>(<span class="ruby-identifier">url0</span>)
-                                <span class="ruby-identifier">ip</span>=<span class="ruby-identifier">host_2_ip</span>(<span class="ruby-identifier">host</span>).<span class="ruby-identifier">to_s</span>
-                                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid IP address: #{url0}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">nil?</span>
-                                <span class="ruby-identifier">port</span>=<span class="ruby-identifier">url_2_port</span>(<span class="ruby-identifier">url0</span>).<span class="ruby-identifier">to_s</span>
-                                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid port number: #{url0}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">port</span>.<span class="ruby-identifier">nil?</span>
-                        <span class="ruby-keyword">else</span>
-                                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid URL: #{url0}. Please check it out with your browser again.&quot;</span>
-                        <span class="ruby-keyword">end</span>
-                        <span class="ruby-identifier">log_info</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-                        <span class="ruby-identifier">log_info</span>[<span class="ruby-value">1</span>]=<span class="ruby-node">&quot;Start working on #{url0}&quot;</span>
-                        <span class="ruby-identifier">url_stores</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-                        <span class="ruby-identifier">url_stores</span>[<span class="ruby-identifier">url0</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">url_stores</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url0</span>)
-                        <span class="ruby-ivar">@discovered_urls_by_crawler</span>[<span class="ruby-identifier">url0</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url0</span>)
-                        <span class="ruby-ivar">@crawl_start</span>[<span class="ruby-identifier">url0</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@crawl_start</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url0</span>)
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Please be aware that it may take a while to crawl #{url0}, depending on the site&#39;s responsiveness and the amount of contents.&quot;</span>
+                <span class="ruby-comment"># Input URL sanity check first</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url0</span>)
+                        <span class="ruby-identifier">host</span>=<span class="ruby-identifier">url_2_host</span>(<span class="ruby-identifier">url0</span>)
+                        <span class="ruby-identifier">ip</span>=<span class="ruby-identifier">host_2_ip</span>(<span class="ruby-identifier">host</span>).<span class="ruby-identifier">to_s</span>
+                        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid IP address: #{url0}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">nil?</span>
+                        <span class="ruby-identifier">port</span>=<span class="ruby-identifier">url_2_port</span>(<span class="ruby-identifier">url0</span>).<span class="ruby-identifier">to_s</span>
+                        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid port number: #{url0}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">port</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid URL: #{url0}. Please check it out with your browser again.&quot;</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">log_info</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+                <span class="ruby-identifier">log_info</span>[<span class="ruby-value">1</span>]=<span class="ruby-node">&quot;Start working on #{url0}&quot;</span>
+                <span class="ruby-identifier">url_stores</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+                <span class="ruby-identifier">url_stores</span>[<span class="ruby-identifier">url0</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">url_stores</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url0</span>)
+                <span class="ruby-ivar">@discovered_urls_by_crawler</span>[<span class="ruby-identifier">url0</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url0</span>)
+                <span class="ruby-ivar">@crawl_start</span>[<span class="ruby-identifier">url0</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@crawl_start</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url0</span>)
 <span class="ruby-comment">#                       $discovered_urls[url0]=true unless $discovered_urls.key?(url0)</span>
-                        <span class="ruby-ivar">@crawl_depth</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
-                                <span class="ruby-identifier">url_stores</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
-                                        <span class="ruby-comment"># 10/01/2013 add logic to avoid unnecessary crawling within the same child instance</span>
-                                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@visited_urls_by_crawler</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
-                                        <span class="ruby-identifier">url_object</span> = <span class="ruby-identifier">open_url</span>(<span class="ruby-identifier">url</span>)
-                                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">url_object</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
-                                        <span class="ruby-identifier">url</span> = <span class="ruby-identifier">update_url_if_redirected</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">url_object</span>)
-                                        <span class="ruby-identifier">url_body</span> = <span class="ruby-identifier">read_url</span>(<span class="ruby-identifier">url</span>)
-                                        <span class="ruby-comment"># Protection code - to avoid parsing failure on the empty or nil object</span>
-                                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">url_body</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">url_body</span>.<span class="ruby-identifier">empty?</span>
-                                        <span class="ruby-identifier">url_stores</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">url_stores</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
-                                        <span class="ruby-ivar">@discovered_urls_by_crawler</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
+                <span class="ruby-ivar">@crawl_depth</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+                        <span class="ruby-identifier">url_stores</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
+                                <span class="ruby-comment"># 10/01/2013 add logic to avoid unnecessary crawling within the same child instance</span>
+                                <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@visited_urls_by_crawler</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
+                                <span class="ruby-identifier">url_object</span> = <span class="ruby-identifier">open_url</span>(<span class="ruby-identifier">url</span>)
+                                <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">url_object</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+                                <span class="ruby-identifier">url</span> = <span class="ruby-identifier">update_url_if_redirected</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">url_object</span>)
+                                <span class="ruby-identifier">url_body</span> = <span class="ruby-identifier">read_url</span>(<span class="ruby-identifier">url</span>)
+                                <span class="ruby-comment"># Protection code - to avoid parsing failure on the empty or nil object</span>
+                                <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">url_body</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">url_body</span>.<span class="ruby-identifier">empty?</span>
+                                <span class="ruby-identifier">url_stores</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">url_stores</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
+                                <span class="ruby-ivar">@discovered_urls_by_crawler</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
 <span class="ruby-comment">#                                       $discovered_urls[url]=true unless $discovered_urls.key?(url)</span>
-                                        <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">url_body</span>)
-                                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">doc</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
-                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">url_stores</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@crawl_page_limit</span>
-                                                <span class="ruby-comment">#@visited_urls_by_crawler.merge!(url_stores)</span>
-                                                <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">url_stores</span>)
+                                <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">url_body</span>)
+                                <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">doc</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">url_stores</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@crawl_page_limit</span>
+                                        <span class="ruby-comment">#@visited_urls_by_crawler.merge!(url_stores)</span>
+                                        <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">url_stores</span>)
 <span class="ruby-comment">#                                               $discovered_urls.merge!(url_stores)</span>
-                                                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Finish web crawling the url: #{url0}&quot;</span>
-                                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">url_stores</span>
-                                        <span class="ruby-keyword">end</span>
-                                        <span class="ruby-identifier">page_urls</span> = <span class="ruby-identifier">find_urls_on_page</span>(<span class="ruby-identifier">doc</span>, <span class="ruby-identifier">url</span>)
-                                        <span class="ruby-identifier">page_urls</span>.<span class="ruby-identifier">uniq!</span>
-                                        <span class="ruby-identifier">page_urls</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
-                                                <span class="ruby-identifier">y</span>=<span class="ruby-identifier">normalize_url</span>(<span class="ruby-identifier">y</span>)
-                                                <span class="ruby-identifier">url_stores</span>[<span class="ruby-identifier">y</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">url_stores</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">y</span>)
-                                                <span class="ruby-ivar">@discovered_urls_by_crawler</span>[<span class="ruby-identifier">y</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">y</span>)
+                                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Finish web crawling the url: #{url0}&quot;</span>
+                                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">url_stores</span>
+                                <span class="ruby-keyword">end</span>
+                                <span class="ruby-identifier">page_urls</span> = <span class="ruby-identifier">find_urls_on_page</span>(<span class="ruby-identifier">doc</span>, <span class="ruby-identifier">url</span>)
+                                <span class="ruby-identifier">page_urls</span>.<span class="ruby-identifier">uniq!</span>
+                                <span class="ruby-identifier">page_urls</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+                                        <span class="ruby-identifier">y</span>=<span class="ruby-identifier">normalize_url</span>(<span class="ruby-identifier">y</span>)
+                                        <span class="ruby-identifier">url_stores</span>[<span class="ruby-identifier">y</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">url_stores</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">y</span>)
+                                        <span class="ruby-ivar">@discovered_urls_by_crawler</span>[<span class="ruby-identifier">y</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">y</span>)
 <span class="ruby-comment">#                                               $discovered_urls[y]=true unless $discovered_urls.key?(y)</span>
-                                        <span class="ruby-keyword">end</span>
                                 <span class="ruby-keyword">end</span>
                         <span class="ruby-keyword">end</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Finish web crawling on: #{url0}&quot;</span>
-                        <span class="ruby-identifier">log_info</span>[<span class="ruby-value">2</span>]=<span class="ruby-node">&quot;Finish working on: #{url0}&quot;</span>
-                        <span class="ruby-identifier">wlog</span>(<span class="ruby-identifier">log_info</span>, <span class="ruby-string">&quot;UrlCrawler&quot;</span>, <span class="ruby-ivar">@log_file</span>)
-                        <span class="ruby-ivar">@crawl_done</span>[<span class="ruby-identifier">url0</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@crawl_done</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url0</span>)
-                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">url_stores</span>
-                <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for URL #{url0}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                        <span class="ruby-identifier">log_info</span>[<span class="ruby-value">3</span>]=<span class="ruby-node">&quot;Exception on #{url0}&quot;</span>
-                        <span class="ruby-identifier">wlog</span>(<span class="ruby-identifier">log_info</span>,<span class="ruby-string">&quot;UrlCrawler&quot;</span>,<span class="ruby-ivar">@log_file</span>)
-                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">url_stores</span>
                 <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Finish web crawling on: #{url0}&quot;</span>
+                <span class="ruby-identifier">log_info</span>[<span class="ruby-value">2</span>]=<span class="ruby-node">&quot;Finish working on: #{url0}&quot;</span>
+                <span class="ruby-identifier">wlog</span>(<span class="ruby-identifier">log_info</span>, <span class="ruby-string">&quot;UrlCrawler&quot;</span>, <span class="ruby-ivar">@log_file</span>)
+                <span class="ruby-ivar">@crawl_done</span>[<span class="ruby-identifier">url0</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@crawl_done</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url0</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">url_stores</span>
+        <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for URL #{url0}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                <span class="ruby-identifier">log_info</span>[<span class="ruby-value">3</span>]=<span class="ruby-node">&quot;Exception on #{url0}&quot;</span>
+                <span class="ruby-identifier">wlog</span>(<span class="ruby-identifier">log_info</span>,<span class="ruby-string">&quot;UrlCrawler&quot;</span>,<span class="ruby-ivar">@log_file</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">url_stores</span>
         <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -623,58 +606,56 @@ target pool until all the works are done</p>
 
           
           <div class="method-source-code" id="crawl_workers-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 157</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 153</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">crawl_workers</span> (<span class="ruby-identifier">targets</span>,<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>)
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Input error - expecting targets in an array format: #{targets}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Array</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Sanitize the URL seeds to eliminate the unnecessary duplication(s) ...&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-comment">#puts &quot;This could be awhile depending on the list size. Please be patient ...&quot;</span>
-                <span class="ruby-comment"># 09/30/2013 Add additional logic to eliminate the duplicate target site(s) before the crawlers are invoked.</span>
-                <span class="ruby-identifier">targets</span> <span class="ruby-operator">-=</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">nil</span>]
-                <span class="ruby-identifier">uniq_sites</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
-                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">target</span>)
-                                <span class="ruby-identifier">host</span>=<span class="ruby-identifier">url_2_host</span>(<span class="ruby-identifier">target</span>)
-                                <span class="ruby-identifier">ip</span>=<span class="ruby-identifier">host_2_ip</span>(<span class="ruby-identifier">host</span>).<span class="ruby-identifier">to_s</span>
-                                <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">nil?</span>
-                                <span class="ruby-identifier">port</span>=<span class="ruby-identifier">url_2_port</span>(<span class="ruby-identifier">target</span>).<span class="ruby-identifier">to_s</span>
-                                <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">port</span>.<span class="ruby-identifier">nil?</span>
-                                <span class="ruby-identifier">site_key</span>=<span class="ruby-identifier">ip</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;:&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">port</span>
-                                <span class="ruby-keyword">unless</span> <span class="ruby-identifier">uniq_sites</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">site_key</span>)
-                                        <span class="ruby-identifier">uniq_sites</span>[<span class="ruby-identifier">site_key</span>]=<span class="ruby-identifier">target</span>
-                                <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Input error - expecting targets in an array format: #{targets}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Array</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Sanitize the URL seeds to eliminate the unnecessary duplication(s) ...&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-comment">#puts &quot;This could be awhile depending on the list size. Please be patient ...&quot;</span>
+        <span class="ruby-comment"># 09/30/2013 Add additional logic to eliminate the duplicate target site(s) before the crawlers are invoked.</span>
+        <span class="ruby-identifier">targets</span> <span class="ruby-operator">-=</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">nil</span>]
+        <span class="ruby-identifier">uniq_sites</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">target</span>)
+                        <span class="ruby-identifier">host</span>=<span class="ruby-identifier">url_2_host</span>(<span class="ruby-identifier">target</span>)
+                        <span class="ruby-identifier">ip</span>=<span class="ruby-identifier">host_2_ip</span>(<span class="ruby-identifier">host</span>).<span class="ruby-identifier">to_s</span>
+                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">nil?</span>
+                        <span class="ruby-identifier">port</span>=<span class="ruby-identifier">url_2_port</span>(<span class="ruby-identifier">target</span>).<span class="ruby-identifier">to_s</span>
+                        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">port</span>.<span class="ruby-identifier">nil?</span>
+                        <span class="ruby-identifier">site_key</span>=<span class="ruby-identifier">ip</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;:&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">port</span>
+                        <span class="ruby-keyword">unless</span> <span class="ruby-identifier">uniq_sites</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">site_key</span>)
+                                <span class="ruby-identifier">uniq_sites</span>[<span class="ruby-identifier">site_key</span>]=<span class="ruby-identifier">target</span>
                         <span class="ruby-keyword">end</span>
                 <span class="ruby-keyword">end</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Sanitization done! &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the parallel engine on the normalized crawling list:\n #{targets} &quot;</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Maximum number of web crawling sessions allowed: #{num}&quot;</span> <span class="ruby-comment">#if @verbose</span>
-                <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Error: target list is empty!&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span>
-                <span class="ruby-constant">Parallel</span>.<span class="ruby-identifier">map</span>(<span class="ruby-identifier">uniq_sites</span>.<span class="ruby-identifier">values</span>, <span class="ruby-value">:in_processes</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">num</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Working on #{target} ...&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                        <span class="ruby-identifier">crawl</span>(<span class="ruby-identifier">target</span>)
-                }.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">process</span><span class="ruby-operator">|</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;process.inspect: #{process}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                        <span class="ruby-identifier">urls</span>=<span class="ruby-identifier">process</span>
-                        <span class="ruby-identifier">urls</span><span class="ruby-operator">-=</span>[<span class="ruby-string">&quot;&quot;</span>,<span class="ruby-keyword">nil</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">nil?</span>
-                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">nil?</span>
-                                <span class="ruby-keyword">next</span>
-                        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">empty?</span>
-                                <span class="ruby-keyword">next</span>
-                                <span class="ruby-comment">#do nothing</span>
-                        <span class="ruby-keyword">else</span>
-                                <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
-                                        <span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip!</span>
-                                        <span class="ruby-ivar">@discovered_urls_by_crawler</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
-                                        <span class="ruby-comment">#$discovered_urls[url]=true unless $discovered_urls.key?(url)</span>
-                                <span class="ruby-keyword">end</span>
-                        <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-comment">#return sites</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">keys</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
         <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Sanitization done! &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the parallel engine on the normalized crawling list:\n #{targets} &quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Maximum number of web crawling sessions allowed: #{num}&quot;</span> <span class="ruby-comment">#if @verbose</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Error: target list is empty!&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span>
+        <span class="ruby-constant">Parallel</span>.<span class="ruby-identifier">map</span>(<span class="ruby-identifier">uniq_sites</span>.<span class="ruby-identifier">values</span>, <span class="ruby-value">:in_processes</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">num</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Working on #{target} ...&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                <span class="ruby-identifier">crawl</span>(<span class="ruby-identifier">target</span>)
+        }.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">process</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;process.inspect: #{process}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                <span class="ruby-identifier">urls</span>=<span class="ruby-identifier">process</span>
+                <span class="ruby-identifier">urls</span><span class="ruby-operator">-=</span>[<span class="ruby-string">&quot;&quot;</span>,<span class="ruby-keyword">nil</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">nil?</span>
+                        <span class="ruby-keyword">next</span>
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">empty?</span>
+                        <span class="ruby-keyword">next</span>
+                        <span class="ruby-comment">#do nothing</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
+                                <span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip!</span>
+                                <span class="ruby-ivar">@discovered_urls_by_crawler</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
+                                <span class="ruby-comment">#$discovered_urls[url]=true unless $discovered_urls.key?(url)</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-comment">#return sites</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">keys</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -709,18 +690,16 @@ target pool until all the works are done</p>
 
           
           <div class="method-source-code" id="crawl_workers_on_file-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 212</span>
-  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">crawl_workers_on_file</span> (<span class="ruby-identifier">file</span>)
-          <span class="ruby-keyword">begin</span>
-                  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Web crawl the list of targets from file: #{file}&quot;</span>
-                  <span class="ruby-identifier">targets</span>=<span class="ruby-identifier">file_2_list</span>(<span class="ruby-identifier">file</span>)
-                  <span class="ruby-identifier">sites</span>=<span class="ruby-identifier">crawl_workers</span>(<span class="ruby-identifier">targets</span>,<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>)
-                  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sites</span>
-          <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 206</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">crawl_workers_on_file</span> (<span class="ruby-identifier">file</span>)
+            <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Web crawl the list of targets from file: #{file}&quot;</span>
+            <span class="ruby-identifier">targets</span>=<span class="ruby-identifier">file_2_list</span>(<span class="ruby-identifier">file</span>)
+            <span class="ruby-identifier">sites</span>=<span class="ruby-identifier">crawl_workers</span>(<span class="ruby-identifier">targets</span>,<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>)
+            <span class="ruby-keyword">return</span> <span class="ruby-identifier">sites</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
 <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
 <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
-          <span class="ruby-keyword">end</span>
-  <span class="ruby-keyword">end</span></pre>
+    <span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>
@@ -782,25 +761,23 @@ target pool until all the works are done</p>
 
           
           <div class="method-source-code" id="get_discovered_sites_by_crawler-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 360</span>
-    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_discovered_sites_by_crawler</span>
-            <span class="ruby-keyword">begin</span>
-                    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Print summary report of discovered sites. &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\nSummary Report of Discovered Sites from the Crawler:&quot;</span>
-                    <span class="ruby-identifier">sites</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-                    <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
-                            <span class="ruby-identifier">site</span>=<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>)
-                            <span class="ruby-identifier">sites</span>[<span class="ruby-identifier">site</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">sites</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">site</span>)
-                    <span class="ruby-keyword">end</span>
-                    <span class="ruby-identifier">sites</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">site</span><span class="ruby-operator">|</span> <span class="ruby-identifier">puts</span> <span class="ruby-identifier">site</span> }
-                    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Total: #{sites.size}&quot;</span>
-                    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;End of the summary&quot;</span>
-                    <span class="ruby-keyword">return</span> <span class="ruby-identifier">sites</span>.<span class="ruby-identifier">keys</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 340</span>
+      <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_discovered_sites_by_crawler</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Print summary report of discovered sites. &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\nSummary Report of Discovered Sites from the Crawler:&quot;</span>
+              <span class="ruby-identifier">sites</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+              <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
+                      <span class="ruby-identifier">site</span>=<span class="ruby-identifier">url_2_site</span>(<span class="ruby-identifier">url</span>)
+                      <span class="ruby-identifier">sites</span>[<span class="ruby-identifier">site</span>]=<span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">sites</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">site</span>)
+              <span class="ruby-keyword">end</span>
+              <span class="ruby-identifier">sites</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">site</span><span class="ruby-operator">|</span> <span class="ruby-identifier">puts</span> <span class="ruby-identifier">site</span> }
+              <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Total: #{sites.size}&quot;</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;End of the summary&quot;</span>
+              <span class="ruby-keyword">return</span> <span class="ruby-identifier">sites</span>.<span class="ruby-identifier">keys</span>
 <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
-<span class="ruby-keyword">end</span>
-    <span class="ruby-keyword">end</span></pre>
+      <span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>
@@ -938,21 +915,19 @@ performance.</p>
 
           
           <div class="method-source-code" id="print_discovered_urls_by_crawler-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 330</span>
-    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_discovered_urls_by_crawler</span>
-            <span class="ruby-keyword">begin</span>
-                    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Print discovered url by the crawler. &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\nSummary Report of Discovered URLs from the Crawler:&quot;</span>
-                    <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
-                            <span class="ruby-identifier">puts</span> <span class="ruby-identifier">url</span>
-                    <span class="ruby-keyword">end</span>
-                    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Total: #{@discovered_urls_by_crawler.keys.size}&quot;</span>
-                    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;End of the summary&quot;</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 314</span>
+      <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_discovered_urls_by_crawler</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Print discovered url by the crawler. &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\nSummary Report of Discovered URLs from the Crawler:&quot;</span>
+              <span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
+                      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">url</span>
+              <span class="ruby-keyword">end</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Total: #{@discovered_urls_by_crawler.keys.size}&quot;</span>
+              <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;End of the summary&quot;</span>
 <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
   <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
-<span class="ruby-keyword">end</span>
-    <span class="ruby-keyword">end</span></pre>
+      <span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>
@@ -1070,17 +1045,15 @@ performance.</p>
 
           
           <div class="method-source-code" id="save_discovered_urls-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 347</span>
-    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">save_discovered_urls</span> (<span class="ruby-identifier">file</span>)
-            <span class="ruby-keyword">begin</span>
-                    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Save discovered urls by the crawler to file: #{file} &quot;</span>
-                    <span class="ruby-identifier">list_2_file</span>(<span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">keys</span>, <span class="ruby-identifier">file</span>)
-                    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Done!&quot;</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_crawler.rb, line 329</span>
+      <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">save_discovered_urls</span> (<span class="ruby-identifier">file</span>)
+              <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Save discovered urls by the crawler to file: #{file} &quot;</span>
+              <span class="ruby-identifier">list_2_file</span>(<span class="ruby-ivar">@discovered_urls_by_crawler</span>.<span class="ruby-identifier">keys</span>, <span class="ruby-identifier">file</span>)
+              <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Done!&quot;</span>
 <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
   <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
-<span class="ruby-keyword">end</span>
-    <span class="ruby-keyword">end</span></pre>
+      <span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>

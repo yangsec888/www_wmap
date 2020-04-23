@@ -98,19 +98,9 @@
     
     <li ><a href="#method-i-get_server_header">#get_server_header</a>
     
-    <li ><a href="#method-i-landing_location">#landing_location</a>
-    
-    <li ><a href="#method-i-location">#location</a>
-    
     <li ><a href="#method-i-md5">#md5</a>
     
-    <li ><a href="#method-i-query">#query</a>
-    
-    <li ><a href="#method-i-redirect_location">#redirect_location</a>
-    
     <li ><a href="#method-i-response_body_md5">#response_body_md5</a>
-    
-    <li ><a href="#method-i-response_code">#response_code</a>
     
     <li ><a href="#method-i-url_worker">#url_worker</a>
     
@@ -234,6 +224,7 @@
         <span class="ruby-comment"># Set default instance variables</span>
         <span class="ruby-ivar">@verbose</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:verbose</span>, <span class="ruby-keyword">false</span>)
         <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../data/&#39;</span>)
+        <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
         <span class="ruby-ivar">@http_timeout</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:http_timeout</span>, <span class="ruby-value">5000</span>)
         <span class="ruby-ivar">@max_parallel</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:max_parallel</span>, <span class="ruby-value">40</span>)
         <span class="ruby-ivar">@ssl_version</span>=<span class="ruby-keyword">nil</span>
@@ -364,22 +355,20 @@ extract and return the common name field within the cert</p>
 
           
           <div class="method-source-code" id="get_cert_cn-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 316</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 197</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_cert_cn</span> (<span class="ruby-identifier">url</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Extract the common name field from a X509 cert: #{cert}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">cert</span>=<span class="ruby-identifier">get_certificate</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">subject</span>, <span class="ruby-identifier">cn</span> = <span class="ruby-string">&quot;&quot;</span>
-                <span class="ruby-keyword">if</span> <span class="ruby-identifier">cert</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\n(.+)Subject\:(.+)\n/i</span>
-                        <span class="ruby-identifier">subject</span>=<span class="ruby-node">$2</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">if</span> <span class="ruby-identifier">subject</span> <span class="ruby-operator">=~</span><span class="ruby-regexp">/CN\=(.+)/i</span>
-                        <span class="ruby-identifier">cn</span>=<span class="ruby-node">$1</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">cn</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Error on method #{__method__} from #{cert}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-identifier">cert</span>=<span class="ruby-identifier">get_certificate</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">subject</span>, <span class="ruby-identifier">cn</span> = <span class="ruby-string">&quot;&quot;</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">cert</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\n(.+)Subject\:(.+)\n/i</span>
+                <span class="ruby-identifier">subject</span>=<span class="ruby-node">$2</span>
         <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">subject</span> <span class="ruby-operator">=~</span><span class="ruby-regexp">/CN\=(.+)/i</span>
+                <span class="ruby-identifier">cn</span>=<span class="ruby-node">$1</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">cn</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Error on method #{__method__} from #{url}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -416,21 +405,19 @@ content as a string</p>
 
           
           <div class="method-source-code" id="get_certificate-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 297</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 180</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_certificate</span> (<span class="ruby-identifier">url</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Retrieve the remote web server SSL certificate in clear text: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip</span>
-                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid URL string: #{url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_ssl?</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">client</span> = <span class="ruby-constant">HTTPClient</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-identifier">client</span>.<span class="ruby-identifier">ssl_config</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>
-                <span class="ruby-identifier">response</span> = <span class="ruby-identifier">client</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">cert</span> = <span class="ruby-identifier">response</span>.<span class="ruby-identifier">peer_cert</span>
-                <span class="ruby-identifier">cer</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">X509</span><span class="ruby-operator">::</span><span class="ruby-constant">Certificate</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cert</span>)
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">cer</span>.<span class="ruby-identifier">to_text</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} from #{url}: #{ee}&quot;</span>
-        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid URL string: #{url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_ssl?</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">client</span> = <span class="ruby-constant">HTTPClient</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">client</span>.<span class="ruby-identifier">ssl_config</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>
+        <span class="ruby-identifier">response</span> = <span class="ruby-identifier">client</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">cert</span> = <span class="ruby-identifier">response</span>.<span class="ruby-identifier">peer_cert</span>
+        <span class="ruby-identifier">cer</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">X509</span><span class="ruby-operator">::</span><span class="ruby-constant">Certificate</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cert</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">cer</span>.<span class="ruby-identifier">to_text</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} from #{url}: #{ee}&quot;</span>
         <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -495,35 +482,33 @@ content as a string</p>
 
           
           <div class="method-source-code" id="get_server_header-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 236</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 123</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_server_header</span> (<span class="ruby-identifier">url</span>)
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Retrieve the server header field from the url: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-identifier">server</span>=<span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid url: #{url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
-                <span class="ruby-identifier">timeo</span> = <span class="ruby-ivar">@http_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000.0</span>
-                <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">code</span> = <span class="ruby-identifier">response_code</span> (<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>)
-                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">open_timeout</span> = <span class="ruby-identifier">timeo</span>
-                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">read_timeout</span> = <span class="ruby-identifier">timeo</span>
-                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/https\:/i</span>)
-                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">use_ssl</span> = <span class="ruby-keyword">true</span>
-                        <span class="ruby-comment"># Bypass the remote web server cert validation test</span>
-                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>
-                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">ssl_version</span> = <span class="ruby-ivar">@ssl_version</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-identifier">request</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Get</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>)
-                <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">request</span>)
-                <span class="ruby-identifier">server</span>=<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;server&quot;</span>]
-                <span class="ruby-identifier">server</span>=<span class="ruby-identifier">server</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\,/</span>,<span class="ruby-string">&#39; &#39;</span>)
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">server</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method get_server_header for URL #{url}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-ivar">@url_server</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-identifier">server</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">server</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Retrieve the server header field from the url: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-identifier">server</span>=<span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid url: #{url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
+        <span class="ruby-identifier">timeo</span> = <span class="ruby-ivar">@http_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000.0</span>
+        <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">code</span> = <span class="ruby-identifier">response_code</span> (<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>)
+        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">open_timeout</span> = <span class="ruby-identifier">timeo</span>
+        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">read_timeout</span> = <span class="ruby-identifier">timeo</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/https\:/i</span>)
+                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">use_ssl</span> = <span class="ruby-keyword">true</span>
+                <span class="ruby-comment"># Bypass the remote web server cert validation test</span>
+                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>
+                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">ssl_version</span> = <span class="ruby-ivar">@ssl_version</span>
         <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">request</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Get</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>)
+        <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">request</span>)
+        <span class="ruby-identifier">server</span>=<span class="ruby-identifier">response</span>[<span class="ruby-string">&quot;server&quot;</span>]
+        <span class="ruby-identifier">server</span>=<span class="ruby-identifier">server</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\,/</span>,<span class="ruby-string">&#39; &#39;</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">server</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method get_server_header for URL #{url}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-ivar">@url_server</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-identifier">server</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">server</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -531,83 +516,6 @@ content as a string</p>
 
         
 
-        
-      </div>
-
-    
-      <div id="method-i-landing_location" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">landing_location</span><span
-            class="method-args">(depth=4, url)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Test the URL / Site and return the landing url location (recursive with the
-depth = 4 )</p>
-          
-          
-
-          
-          <div class="method-source-code" id="landing_location-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 216</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">landing_location</span> (<span class="ruby-identifier">depth</span>=<span class="ruby-value">4</span>, <span class="ruby-identifier">url</span>)
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">depth</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">url</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">depth</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span>
-                <span class="ruby-identifier">timeo</span> = <span class="ruby-ivar">@http_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000.0</span>
-                <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">code</span> = <span class="ruby-identifier">response_code</span> (<span class="ruby-identifier">url</span>)
-                <span class="ruby-keyword">if</span> <span class="ruby-identifier">code</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">300</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">400</span>
-                        <span class="ruby-identifier">url</span> = <span class="ruby-identifier">redirect_location</span> (<span class="ruby-identifier">url</span>)
-                        <span class="ruby-identifier">url</span> = <span class="ruby-identifier">landing_location</span>(<span class="ruby-identifier">depth</span>,<span class="ruby-identifier">url</span>)
-                <span class="ruby-keyword">else</span>
-                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">url</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">url</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} on URL #{url}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-location" class="method-detail method-alias">
-        
-        <div class="method-heading">
-          <span class="method-name">location</span><span
-            class="method-args">(url)</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-        </div>
-
-        
-
-        
-        <div class="aliases">
-          Alias for: <a href="UrlChecker.html#method-i-redirect_location">redirect_location</a>
-        </div>
         
       </div>
 
@@ -640,104 +548,6 @@ depth = 4 )</p>
       </div>
 
     
-      <div id="method-i-query" class="method-detail method-alias">
-        
-        <div class="method-heading">
-          <span class="method-name">query</span><span
-            class="method-args">(url)</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-        </div>
-
-        
-
-        
-        <div class="aliases">
-          Alias for: <a href="UrlChecker.html#method-i-response_code">response_code</a>
-        </div>
-        
-      </div>
-
-    
-      <div id="method-i-redirect_location" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">redirect_location</span><span
-            class="method-args">(url)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Test the URL / site and return the redirection location (3xx response code
-only)</p>
-          
-          
-
-          
-          <div class="method-source-code" id="redirect_location-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 178</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">redirect_location</span> (<span class="ruby-identifier">url</span>)
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Test the redirection location for the url: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-identifier">location</span>=<span class="ruby-string">&quot;&quot;</span>
-                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid url: #{url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
-                <span class="ruby-identifier">timeo</span> = <span class="ruby-ivar">@http_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000.0</span>
-                <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">code</span> = <span class="ruby-identifier">response_code</span> (<span class="ruby-identifier">url</span>)
-                <span class="ruby-keyword">if</span> <span class="ruby-identifier">code</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">300</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">400</span>
-                        <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>)
-                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">open_timeout</span> = <span class="ruby-identifier">timeo</span>
-                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">read_timeout</span> = <span class="ruby-identifier">timeo</span>
-                        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/https\:/i</span>)
-                                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">use_ssl</span> = <span class="ruby-keyword">true</span>
-                                <span class="ruby-comment"># Bypass the remote web server cert validation test</span>
-                                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>
-                                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">ssl_version</span> = <span class="ruby-ivar">@ssl_version</span>
-                        <span class="ruby-keyword">end</span>
-                        <span class="ruby-identifier">request</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Get</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>)
-                        <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">request</span>)
-                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Response: #{response}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                        <span class="ruby-keyword">case</span> <span class="ruby-identifier">response</span>
-                        <span class="ruby-keyword">when</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPRedirection</span> <span class="ruby-keyword">then</span>
-                                <span class="ruby-identifier">location</span> = <span class="ruby-identifier">response</span>[<span class="ruby-string">&#39;location&#39;</span>]
-                        <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-ivar">@url_redirection</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-identifier">location</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">location</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method redirect_location for URL #{url}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-ivar">@url_redirection</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-identifier">location</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">location</span>
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-        <div class="aliases">
-          Also aliased as: <a href="UrlChecker.html#method-i-location">location</a>
-        </div>
-        
-
-        
-      </div>
-
-    
       <div id="method-i-response_body_md5" class="method-detail ">
         
         <div class="method-heading">
@@ -758,33 +568,31 @@ content)</p>
 
           
           <div class="method-source-code" id="response_body_md5-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 267</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 152</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">response_body_md5</span>(<span class="ruby-identifier">url</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;MD5 finger print page body content: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid url: #{url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
-                <span class="ruby-identifier">timeo</span> = <span class="ruby-ivar">@http_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000.0</span>
-                <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">fp</span>=<span class="ruby-string">&quot;&quot;</span>
-                <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>)
-                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">open_timeout</span> = <span class="ruby-identifier">timeo</span>
-                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">read_timeout</span> = <span class="ruby-identifier">timeo</span>
-                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/https\:/i</span>)
-                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">use_ssl</span> = <span class="ruby-keyword">true</span>
-                        <span class="ruby-comment"># Bypass the remote web server cert validation test</span>
-                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>
-                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">ssl_version</span> = <span class="ruby-ivar">@ssl_version</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-identifier">request</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Get</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>)
-                <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">request</span>)
-                <span class="ruby-identifier">response_body</span> = <span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">to_s</span>
-                <span class="ruby-identifier">fp</span>=<span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">response_body</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">response_body</span>.<span class="ruby-identifier">nil?</span>
-                <span class="ruby-ivar">@url_finger_print</span>[<span class="ruby-identifier">url</span>] = <span class="ruby-identifier">fp</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">fp</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid url: #{url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
+        <span class="ruby-identifier">timeo</span> = <span class="ruby-ivar">@http_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000.0</span>
+        <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">fp</span>=<span class="ruby-string">&quot;&quot;</span>
+        <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>)
+        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">open_timeout</span> = <span class="ruby-identifier">timeo</span>
+        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">read_timeout</span> = <span class="ruby-identifier">timeo</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/https\:/i</span>)
+                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">use_ssl</span> = <span class="ruby-keyword">true</span>
+                <span class="ruby-comment"># Bypass the remote web server cert validation test</span>
+                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>
+                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">ssl_version</span> = <span class="ruby-ivar">@ssl_version</span>
         <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">request</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Get</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>)
+        <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">request</span>)
+        <span class="ruby-identifier">response_body</span> = <span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">to_s</span>
+        <span class="ruby-identifier">fp</span>=<span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">response_body</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">response_body</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-ivar">@url_finger_print</span>[<span class="ruby-identifier">url</span>] = <span class="ruby-identifier">fp</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">fp</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -793,89 +601,6 @@ content)</p>
         
         <div class="aliases">
           Also aliased as: <a href="UrlChecker.html#method-i-md5">md5</a>
-        </div>
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-response_code" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">response_code</span><span
-            class="method-args">(url)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Test the URL and return the response code</p>
-          
-          
-
-          
-          <div class="method-source-code" id="response_code-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 126</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">response_code</span> (<span class="ruby-identifier">url</span>)
-        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Check the http response code on the url: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-        <span class="ruby-identifier">response_code</span> = <span class="ruby-value">10000</span> <span class="ruby-comment"># All unknown url connection exceptions go here</span>
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid url: #{url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
-                <span class="ruby-identifier">timeo</span> = <span class="ruby-ivar">@http_timeout</span><span class="ruby-operator">/</span><span class="ruby-value">1000.0</span>
-                <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>)
-                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">open_timeout</span> = <span class="ruby-identifier">timeo</span>
-                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">read_timeout</span> = <span class="ruby-identifier">timeo</span>
-                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/https\:/i</span>)
-                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">use_ssl</span> = <span class="ruby-keyword">true</span>
-                        <span class="ruby-comment">#http.ssl_version = :SSLv3</span>
-                        <span class="ruby-comment"># Bypass the remote web server cert validation test</span>
-                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-identifier">request</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Get</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>)
-                <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">request</span>)
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Server response the following: #{response}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-identifier">response_code</span> = <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_i</span>
-                <span class="ruby-comment">#response.finish if response.started?()</span>
-                <span class="ruby-ivar">@url_code</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-identifier">response_code</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Response code on #{url}: #{response_code}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">response_code</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for #{url}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-keyword">case</span> <span class="ruby-identifier">ee</span>
-                        <span class="ruby-comment"># rescue &quot;Connection reset by peer&quot; error type</span>
-                        <span class="ruby-keyword">when</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECONNRESET</span>
-                                <span class="ruby-identifier">response_code</span>=<span class="ruby-value">104</span>
-                        <span class="ruby-keyword">when</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECONNABORTED</span>,<span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ETIMEDOUT</span>
-                                <span class="ruby-comment">#response_code=10000</span>
-                        <span class="ruby-keyword">when</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>                         <span class="ruby-comment"># Quick fix</span>
-                                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/https\:/i</span>)             <span class="ruby-comment"># try again for ssl timeout session, in case of default :TLSv1 failure</span>
-                                        <span class="ruby-identifier">http</span>.<span class="ruby-identifier">ssl_version</span> = <span class="ruby-value">:SSLv3</span>
-                                        <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">request</span>)
-                                        <span class="ruby-identifier">response_code</span> = <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_i</span>
-                                        <span class="ruby-keyword">unless</span> <span class="ruby-identifier">response_code</span>.<span class="ruby-identifier">nil?</span>
-                                                <span class="ruby-ivar">@ssl_version</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">ssl_version</span>
-                                        <span class="ruby-keyword">end</span>
-                                <span class="ruby-keyword">end</span>
-                        <span class="ruby-keyword">else</span>
-                                <span class="ruby-comment">#response_code=10000</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-ivar">@url_code</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-identifier">response_code</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">response_code</span>
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-        <div class="aliases">
-          Also aliased as: <a href="UrlChecker.html#method-i-query">query</a>
         </div>
         
 
@@ -902,68 +627,66 @@ content)</p>
 
           
           <div class="method-source-code" id="url_worker-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 34</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">url_worker</span> (<span class="ruby-identifier">url</span>)
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Checking out an unknown URL: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
-                <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid URL format: #{url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">timestamp</span>=<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
-                <span class="ruby-identifier">host</span>=<span class="ruby-identifier">url_2_host</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">ip</span>=<span class="ruby-identifier">host_2_ip</span>(<span class="ruby-identifier">host</span>)
-                <span class="ruby-identifier">port</span>=<span class="ruby-identifier">url_2_port</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-identifier">code</span>=<span class="ruby-value">10000</span>
-                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@url_code</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
-                        <span class="ruby-identifier">code</span>=<span class="ruby-ivar">@url_code</span>[<span class="ruby-identifier">url</span>]
-                <span class="ruby-keyword">else</span>
-                        <span class="ruby-identifier">code</span>=<span class="ruby-identifier">response_code</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">if</span> <span class="ruby-identifier">code</span><span class="ruby-operator">&gt;=</span><span class="ruby-value">300</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">400</span>
-                        <span class="ruby-identifier">loc</span>=<span class="ruby-identifier">landing_location</span>(<span class="ruby-value">4</span>,<span class="ruby-identifier">url</span>)
-                <span class="ruby-keyword">else</span>
-                        <span class="ruby-identifier">loc</span>=<span class="ruby-keyword">nil</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@url_finger_print</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
-                        <span class="ruby-identifier">fp</span>=<span class="ruby-ivar">@url_finger_print</span>[<span class="ruby-identifier">url</span>]
-                <span class="ruby-keyword">else</span>
-                        <span class="ruby-identifier">fp</span>=<span class="ruby-identifier">response_body_md5</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@url_server</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
-                        <span class="ruby-identifier">server</span>=<span class="ruby-ivar">@url_server</span>[<span class="ruby-identifier">url</span>]
-                <span class="ruby-keyword">else</span>
-                        <span class="ruby-identifier">server</span>=<span class="ruby-identifier">get_server_header</span>(<span class="ruby-identifier">url</span>)
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-comment"># save the data</span>
-                <span class="ruby-identifier">checker</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;ip&#39;</span>]=<span class="ruby-identifier">ip</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;port&#39;</span>]=<span class="ruby-identifier">port</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;url&#39;</span>]=<span class="ruby-identifier">url</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;code&#39;</span>]=<span class="ruby-identifier">code</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;redirection&#39;</span>]=<span class="ruby-identifier">loc</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;md5&#39;</span>]=<span class="ruby-identifier">fp</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;server&#39;</span>]=<span class="ruby-identifier">server</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;timestamp&#39;</span>]=<span class="ruby-identifier">timestamp</span>
-                <span class="ruby-keyword">if</span> <span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">CidrTracker</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:data_dir</span><span class="ruby-operator">=&gt;</span><span class="ruby-ivar">@data_dir</span>).<span class="ruby-identifier">ip_trusted?</span>(<span class="ruby-identifier">ip</span>)
-                        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;status&#39;</span>]=<span class="ruby-string">&quot;int_hosted&quot;</span>
-                <span class="ruby-keyword">else</span>
-                        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;status&#39;</span>]=<span class="ruby-string">&quot;ext_hosted&quot;</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">checker</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSLError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">es</span>  <span class="ruby-comment"># handler to temporally hold the openssl bug in bay:  SSL_set_session: unable to find ssl method</span>
-                <span class="ruby-identifier">checker</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;ip&#39;</span>]=<span class="ruby-identifier">ip</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;port&#39;</span>]=<span class="ruby-identifier">port</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;url&#39;</span>]=<span class="ruby-identifier">url</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;code&#39;</span>]=<span class="ruby-value">20000</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;server&#39;</span>]=<span class="ruby-node">&quot;Unknown SSL error: #{es}&quot;</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;md&#39;</span>]=<span class="ruby-keyword">nil</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;redirection&#39;</span>]=<span class="ruby-keyword">nil</span>
-                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;timestamp&#39;</span>]=<span class="ruby-identifier">timestamp</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">checker</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for #{url}: #{ee}&quot;</span> <span class="ruby-comment"># if @verbose</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Checking out an unknown URL: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-identifier">url</span>=<span class="ruby-identifier">url</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid URL format: #{url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">timestamp</span>=<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+        <span class="ruby-identifier">host</span>=<span class="ruby-identifier">url_2_host</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">ip</span>=<span class="ruby-identifier">host_2_ip</span>(<span class="ruby-identifier">host</span>)
+        <span class="ruby-identifier">port</span>=<span class="ruby-identifier">url_2_port</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">code</span>=<span class="ruby-value">10000</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@url_code</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
+                <span class="ruby-identifier">code</span>=<span class="ruby-ivar">@url_code</span>[<span class="ruby-identifier">url</span>]
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">code</span>=<span class="ruby-identifier">response_code</span>(<span class="ruby-identifier">url</span>)
         <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">code</span><span class="ruby-operator">&gt;=</span><span class="ruby-value">300</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">code</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">400</span>
+                <span class="ruby-identifier">loc</span>=<span class="ruby-identifier">landing_location</span>(<span class="ruby-value">4</span>,<span class="ruby-identifier">url</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">loc</span>=<span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@url_finger_print</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
+                <span class="ruby-identifier">fp</span>=<span class="ruby-ivar">@url_finger_print</span>[<span class="ruby-identifier">url</span>]
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">fp</span>=<span class="ruby-identifier">response_body_md5</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@url_server</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
+                <span class="ruby-identifier">server</span>=<span class="ruby-ivar">@url_server</span>[<span class="ruby-identifier">url</span>]
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">server</span>=<span class="ruby-identifier">get_server_header</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-comment"># save the data</span>
+        <span class="ruby-identifier">checker</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;ip&#39;</span>]=<span class="ruby-identifier">ip</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;port&#39;</span>]=<span class="ruby-identifier">port</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;url&#39;</span>]=<span class="ruby-identifier">url</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;code&#39;</span>]=<span class="ruby-identifier">code</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;redirection&#39;</span>]=<span class="ruby-identifier">loc</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;md5&#39;</span>]=<span class="ruby-identifier">fp</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;server&#39;</span>]=<span class="ruby-identifier">server</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;timestamp&#39;</span>]=<span class="ruby-identifier">timestamp</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">CidrTracker</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:data_dir</span><span class="ruby-operator">=&gt;</span><span class="ruby-ivar">@data_dir</span>).<span class="ruby-identifier">ip_trusted?</span>(<span class="ruby-identifier">ip</span>)
+                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;status&#39;</span>]=<span class="ruby-string">&quot;int_hosted&quot;</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;status&#39;</span>]=<span class="ruby-string">&quot;ext_hosted&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">checker</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSLError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">es</span>  <span class="ruby-comment"># handler to temporally hold the openssl bug in bay:  SSL_set_session: unable to find ssl method</span>
+        <span class="ruby-identifier">checker</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;ip&#39;</span>]=<span class="ruby-identifier">ip</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;port&#39;</span>]=<span class="ruby-identifier">port</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;url&#39;</span>]=<span class="ruby-identifier">url</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;code&#39;</span>]=<span class="ruby-value">20000</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;server&#39;</span>]=<span class="ruby-node">&quot;Unknown SSL error: #{es}&quot;</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;md&#39;</span>]=<span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;redirection&#39;</span>]=<span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;timestamp&#39;</span>]=<span class="ruby-identifier">timestamp</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">checker</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for #{url}: #{ee}&quot;</span> <span class="ruby-comment"># if @verbose</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -999,30 +722,28 @@ numbers of child processes on multiple urls simultaneously</p>
 
           
           <div class="method-source-code" id="url_workers-source">
-            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 99</span>
+            <pre><span class="ruby-comment"># File lib/wmap/url_checker.rb, line 98</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">url_workers</span> (<span class="ruby-identifier">targets</span>,<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>)
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">results</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-identifier">targets</span> <span class="ruby-operator">-=</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">nil</span>]
-                <span class="ruby-keyword">if</span> <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the url checker on the targets:\n #{targets}&quot;</span>
-                        <span class="ruby-constant">Parallel</span>.<span class="ruby-identifier">map</span>(<span class="ruby-identifier">targets</span>, <span class="ruby-value">:in_processes</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">num</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
-                                <span class="ruby-identifier">url_worker</span>(<span class="ruby-identifier">target</span>)
-                        }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">process</span><span class="ruby-operator">|</span>
-                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">process</span>.<span class="ruby-identifier">nil?</span>
-                                        <span class="ruby-keyword">next</span>
-                                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">process</span>.<span class="ruby-identifier">empty?</span>
-                                        <span class="ruby-comment">#do nothing</span>
-                                <span class="ruby-keyword">else</span>
-                                        <span class="ruby-identifier">results</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">process</span>
-                                <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">results</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">targets</span> <span class="ruby-operator">-=</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">nil</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the url checker on the targets:\n #{targets}&quot;</span>
+                <span class="ruby-constant">Parallel</span>.<span class="ruby-identifier">map</span>(<span class="ruby-identifier">targets</span>, <span class="ruby-value">:in_processes</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">num</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">url_worker</span>(<span class="ruby-identifier">target</span>)
+                }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">process</span><span class="ruby-operator">|</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">process</span>.<span class="ruby-identifier">nil?</span>
+                                <span class="ruby-keyword">next</span>
+                        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">process</span>.<span class="ruby-identifier">empty?</span>
+                                <span class="ruby-comment">#do nothing</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">results</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">process</span>
                         <span class="ruby-keyword">end</span>
                 <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">results</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
         <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">results</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           

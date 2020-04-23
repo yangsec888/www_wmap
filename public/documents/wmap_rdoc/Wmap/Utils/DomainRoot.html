@@ -68,6 +68,12 @@
     
     <li ><a href="#method-i-get_domain_root">#get_domain_root</a>
     
+    <li ><a href="#method-i-get_domain_root_by_ccsld">#get_domain_root_by_ccsld</a>
+    
+    <li ><a href="#method-i-get_domain_root_by_cctld">#get_domain_root_by_cctld</a>
+    
+    <li ><a href="#method-i-get_domain_root_by_tlds">#get_domain_root_by_tlds</a>
+    
     <li ><a href="#method-i-get_root_domain">#get_root_domain</a>
     
     <li ><a href="#method-i-get_sub_domain">#get_sub_domain</a>
@@ -206,83 +212,39 @@ href="www.telegraph.co.uk">www.telegraph.co.uk</a>” -&gt; “telegraph.co.uk�
           
           <div class="method-source-code" id="get_domain_root-source">
             <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 22</span>
-  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_domain_root</span> (<span class="ruby-identifier">host</span>)
-          <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Retrieve the root domain for host: #{host}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-          <span class="ruby-keyword">begin</span>
-<span class="ruby-comment"># Comnplete Top Level Domain List - loading once</span>
-<span class="ruby-ivar">@tlds</span>=<span class="ruby-identifier">file_2_hash</span>(<span class="ruby-constant">File_tld</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tlds</span>.<span class="ruby-identifier">nil?</span>
-                  <span class="ruby-comment"># Generic Top Level Domain List - loading once</span>
-                  <span class="ruby-ivar">@gtld</span>=<span class="ruby-identifier">file_2_hash</span>(<span class="ruby-constant">File_gtld</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@gtld</span>.<span class="ruby-identifier">nil?</span>
-                  <span class="ruby-comment"># Country code top-level domain list - loading once</span>
-                  <span class="ruby-ivar">@cctld</span>=<span class="ruby-identifier">file_2_hash</span>(<span class="ruby-constant">File_cctld</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cctld</span>.<span class="ruby-identifier">nil?</span>
-                  <span class="ruby-comment"># Country code second level domain - loading once</span>
-                  <span class="ruby-ivar">@ccsld</span>=<span class="ruby-identifier">load_ccsld_from_file</span>(<span class="ruby-constant">File_ccsld</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ccsld</span>.<span class="ruby-identifier">nil?</span>
-
-                  <span class="ruby-keyword">if</span> <span class="ruby-identifier">host</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">nil?</span>
-                          <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Error: empty record found. Please check your input and remove any empty line.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                          <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
-                  <span class="ruby-keyword">else</span>
-                          <span class="ruby-identifier">host</span>=<span class="ruby-identifier">host</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">strip</span>
-                  <span class="ruby-keyword">end</span>
-                  <span class="ruby-identifier">found_tld</span>=<span class="ruby-keyword">false</span>
-                  <span class="ruby-identifier">found_cctld</span>=<span class="ruby-keyword">false</span>
-                  <span class="ruby-comment"># search the  top level domain list first</span>
-                  <span class="ruby-identifier">root_domain</span>=<span class="ruby-string">&quot;&quot;</span>
-                  <span class="ruby-identifier">dn</span>=<span class="ruby-identifier">host</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
-                  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tlds</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>)
-                          <span class="ruby-identifier">cc_found</span>=<span class="ruby-keyword">false</span>
-                          <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cctld</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>])
-                                  <span class="ruby-identifier">cc_found</span>=<span class="ruby-keyword">true</span>
-                          <span class="ruby-keyword">end</span>
-                          <span class="ruby-keyword">if</span> <span class="ruby-identifier">cc_found</span>
-                                  <span class="ruby-identifier">root_domain</span>=<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-3</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>
-                          <span class="ruby-keyword">else</span>
-                                  <span class="ruby-identifier">root_domain</span>=<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>
-                          <span class="ruby-keyword">end</span>
-                          <span class="ruby-identifier">found_tld</span>=<span class="ruby-keyword">true</span>
-                  <span class="ruby-keyword">end</span>
-                  <span class="ruby-comment"># search the country code top level domain list secondly</span>
-                  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cctld</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>)
-                          <span class="ruby-identifier">found</span>=<span class="ruby-keyword">false</span>
-                          <span class="ruby-comment"># reverse search of general top level domain</span>
-                          <span class="ruby-keyword">if</span> <span class="ruby-ivar">@gtld</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>])
-                                  <span class="ruby-identifier">found</span>=<span class="ruby-keyword">true</span>
-                          <span class="ruby-keyword">end</span>
-                          <span class="ruby-comment"># search country code second level domain list</span>
-                          <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ccsld</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>)
-                                  <span class="ruby-ivar">@ccsld</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
-                                          <span class="ruby-keyword">if</span> ( <span class="ruby-identifier">v</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/#{dn[dn.length-2]}/i</span> )
-                                                  <span class="ruby-identifier">found</span>=<span class="ruby-keyword">true</span>
-                                                  <span class="ruby-keyword">break</span>
-                                          <span class="ruby-keyword">end</span>
-                                  <span class="ruby-keyword">end</span>
-                                  <span class="ruby-comment"># 1/8/2015: additional logic to handle invalid ccsld string: reserved gtld string</span>
-                                  <span class="ruby-comment">#unless found</span>
-                                  <span class="ruby-comment">#  if @gtld.key?(dn[dn.length-2])</span>
-                                  <span class="ruby-comment">#          puts &quot;Invalid ccsld: #{dn[dn.length-2]} for host: #{host}&quot;</span>
-                                  <span class="ruby-comment">#          return nil</span>
-                                  <span class="ruby-comment">#  end</span>
-                                  <span class="ruby-comment">#end</span>
-                          <span class="ruby-keyword">end</span>
-                          <span class="ruby-keyword">if</span> <span class="ruby-identifier">found</span>
-                                  <span class="ruby-identifier">root_domain</span>=<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-3</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>
-                          <span class="ruby-keyword">else</span>
-                                  <span class="ruby-identifier">root_domain</span>=<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>
-                          <span class="ruby-keyword">end</span>
-                          <span class="ruby-identifier">found_cctld</span>=<span class="ruby-keyword">true</span>
-                  <span class="ruby-keyword">end</span>
-                  <span class="ruby-keyword">unless</span> (<span class="ruby-identifier">found_tld</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">found_cctld</span>)
-                          <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{host} - the top level domain is unknown. Please check out your record #{root_domain} &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                          <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
-                  <span class="ruby-keyword">else</span>
-                          <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Domain root found: #{root_domain}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                          <span class="ruby-keyword">return</span> <span class="ruby-identifier">root_domain</span>
-                  <span class="ruby-keyword">end</span>
-          <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
-          <span class="ruby-keyword">end</span>
-  <span class="ruby-keyword">end</span></pre>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_domain_root</span> (<span class="ruby-identifier">host</span>)
+            <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Retrieve the root domain for host: #{host}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">host</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">nil?</span>
+                    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Error: empty record found. Please check your input and remove any empty line.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+            <span class="ruby-keyword">else</span>
+                    <span class="ruby-identifier">host</span>=<span class="ruby-identifier">host</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">strip</span>
+            <span class="ruby-keyword">end</span>
+<span class="ruby-comment"># First order - search country code second level domain list</span>
+<span class="ruby-identifier">root_domain</span> = <span class="ruby-identifier">get_domain_root_by_ccsld</span>(<span class="ruby-identifier">host</span>)
+<span class="ruby-keyword">if</span> <span class="ruby-identifier">root_domain</span>.<span class="ruby-identifier">nil?</span>
+            <span class="ruby-comment"># Second order - search the country code top level domain list</span>
+  <span class="ruby-identifier">root_domain</span> = <span class="ruby-identifier">get_domain_root_by_cctld</span>(<span class="ruby-identifier">host</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">root_domain</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-comment"># Third order - search top level domain list</span>
+    <span class="ruby-identifier">root_domain</span> = <span class="ruby-identifier">get_domain_root_by_tlds</span>(<span class="ruby-identifier">host</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">root_domain</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-comment"># do nothing - no further search</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">root_domain</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">root_domain</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">else</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">root_domain</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{host} - the top level domain is unknown. Please check out your record #{root_domain} &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+<span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-comment">#rescue =&gt; ee</span>
+    <span class="ruby-comment">#      puts &quot;Exception on method #{__method__}: #{ee}&quot; if @verbose</span>
+    <span class="ruby-comment">#      return nil</span>
+    <span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>
@@ -291,6 +253,163 @@ href="www.telegraph.co.uk">www.telegraph.co.uk</a>” -&gt; “telegraph.co.uk�
         <div class="aliases">
           Also aliased as: <a href="DomainRoot.html#method-i-get_root_domain">get_root_domain</a>, <a href="DomainRoot.html#method-i-root_domain">root_domain</a>, <a href="DomainRoot.html#method-i-domain_root">domain_root</a>, <a href="DomainRoot.html#method-i-host_2_domain">host_2_domain</a>
         </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_domain_root_by_ccsld" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_domain_root_by_ccsld</span><span
+            class="method-args">(host)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>get domain root by lookup Country Code Second Level Domain list</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_domain_root_by_ccsld-source">
+            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_domain_root_by_ccsld</span>(<span class="ruby-identifier">host</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;First order search - domain root lookup by Country Code Second Level Domain list ...&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+  <span class="ruby-identifier">root_domain</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">dn</span> = <span class="ruby-identifier">host</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
+  <span class="ruby-comment"># Country code second level domain - loading once</span>
+              <span class="ruby-ivar">@ccsld</span>=<span class="ruby-identifier">load_ccsld_from_file</span>(<span class="ruby-constant">File_ccsld</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ccsld</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># search country code second level domain list</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ccsld</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>)
+    <span class="ruby-ivar">@ccsld</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> ( <span class="ruby-identifier">v</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/#{dn[dn.length-2]}/i</span> )
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-3</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">root_domain</span>
+<span class="ruby-comment">#rescue =&gt; ee</span>
+      <span class="ruby-comment">#      puts &quot;Exception on method #{__method__}: #{ee}&quot; if @verbose</span>
+      <span class="ruby-comment">#      return nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_domain_root_by_cctld" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_domain_root_by_cctld</span><span
+            class="method-args">(host)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>get domain root by lookup Country Code Top Level Domain list</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_domain_root_by_cctld-source">
+            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_domain_root_by_cctld</span>(<span class="ruby-identifier">host</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Second order search - domain root lookup by Country Code Top Level Domain list ...&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+  <span class="ruby-identifier">root_domain</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">dn</span> = <span class="ruby-identifier">host</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
+  <span class="ruby-comment"># Country code top-level domain list - loading once</span>
+  <span class="ruby-ivar">@cctld</span>=<span class="ruby-identifier">file_2_hash</span>(<span class="ruby-constant">File_cctld</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cctld</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># Generic Top Level Domain List - loading once</span>
+  <span class="ruby-ivar">@gtld</span>=<span class="ruby-identifier">file_2_hash</span>(<span class="ruby-constant">File_gtld</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@gtld</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># Country code second level domain - loading once</span>
+              <span class="ruby-ivar">@ccsld</span>=<span class="ruby-identifier">load_ccsld_from_file</span>(<span class="ruby-constant">File_ccsld</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ccsld</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># search the country code top level domain list</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cctld</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>)
+    <span class="ruby-comment"># reverse search of general top level domain</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@gtld</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>])
+      <span class="ruby-identifier">root_domain</span>=<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-3</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">root_domain</span>=<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">root_domain</span>
+<span class="ruby-comment">#rescue =&gt; ee</span>
+      <span class="ruby-comment">#      puts &quot;Exception on method #{__method__}: #{ee}&quot; if @verbose</span>
+      <span class="ruby-comment">#      return nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_domain_root_by_tlds" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_domain_root_by_tlds</span><span
+            class="method-args">(host)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>get domain root by lookup Top Level Domain list</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_domain_root_by_tlds-source">
+            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_domain_root_by_tlds</span>(<span class="ruby-identifier">host</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Third order search - domain root lookup by Top Level Domain list ...&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+  <span class="ruby-identifier">root_domain</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">dn</span> = <span class="ruby-identifier">host</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
+  <span class="ruby-comment"># Comnplete Top Level Domain List - loading once</span>
+  <span class="ruby-ivar">@tlds</span>=<span class="ruby-identifier">file_2_hash</span>(<span class="ruby-constant">File_tld</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tlds</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># Country code top-level domain list - loading once</span>
+  <span class="ruby-ivar">@cctld</span>=<span class="ruby-identifier">file_2_hash</span>(<span class="ruby-constant">File_cctld</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cctld</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">cc_found</span>=<span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tlds</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cctld</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>])
+      <span class="ruby-identifier">cc_found</span>=<span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cc_found</span>
+      <span class="ruby-identifier">root_domain</span>=<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-3</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">root_domain</span>=<span class="ruby-identifier">dn</span>[<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-2</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dn</span>.<span class="ruby-identifier">last</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">root_domain</span>
+  <span class="ruby-comment">#rescue =&gt; ee</span>
+      <span class="ruby-comment">#    puts &quot;Exception on method #{__method__}: #{ee}&quot; if @verbose</span>
+      <span class="ruby-comment">#    return nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
         
 
         
@@ -347,26 +466,24 @@ href="www.secure.telegraph.co.uk">www.secure.telegraph.co.uk</a>” -&gt;
 
           
           <div class="method-source-code" id="get_sub_domain-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 147</span>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 172</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_sub_domain</span> (<span class="ruby-identifier">host</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Retrieve sub-domain from host: #{host}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">subdomain</span>=<span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-identifier">host</span>=<span class="ruby-identifier">host</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
-                <span class="ruby-identifier">domain</span>=<span class="ruby-identifier">get_domain_root</span>(<span class="ruby-identifier">host</span>)
-                <span class="ruby-identifier">record_h</span>=<span class="ruby-identifier">host</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
-                <span class="ruby-identifier">record_d</span>=<span class="ruby-identifier">domain</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
-                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">record_h</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">record_d</span>.<span class="ruby-identifier">length</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
-                        <span class="ruby-identifier">subdomain</span>=<span class="ruby-identifier">record_h</span>[<span class="ruby-identifier">record_h</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-identifier">record_d</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-1</span>]<span class="ruby-operator">+</span><span class="ruby-string">&quot;.&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">domain</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Sub domain found: #{subdomain}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">subdomain</span>
-                <span class="ruby-keyword">else</span>
-                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
-                <span class="ruby-keyword">end</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for #{host}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-identifier">subdomain</span>=<span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">host</span>=<span class="ruby-identifier">host</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
+        <span class="ruby-identifier">domain</span>=<span class="ruby-identifier">get_domain_root</span>(<span class="ruby-identifier">host</span>)
+        <span class="ruby-identifier">record_h</span>=<span class="ruby-identifier">host</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
+        <span class="ruby-identifier">record_d</span>=<span class="ruby-identifier">domain</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">record_h</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">record_d</span>.<span class="ruby-identifier">length</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span>
+                <span class="ruby-identifier">subdomain</span>=<span class="ruby-identifier">record_h</span>[<span class="ruby-identifier">record_h</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-identifier">record_d</span>.<span class="ruby-identifier">length</span><span class="ruby-value">-1</span>]<span class="ruby-operator">+</span><span class="ruby-string">&quot;.&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">domain</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Sub domain found: #{subdomain}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">subdomain</span>
+        <span class="ruby-keyword">else</span>
                 <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
         <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for #{host}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -485,16 +602,14 @@ href="www.secure.telegraph.co.uk">www.secure.telegraph.co.uk</a>” -&gt;
 
           
           <div class="method-source-code" id="is_domain_root-3F-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 132</span>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 159</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">is_domain_root?</span> (<span class="ruby-identifier">domain</span>)
-        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Validate the domain name is valid: #{domain}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">domain</span>=<span class="ruby-identifier">domain</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">domain</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">get_domain_root</span>(<span class="ruby-identifier">domain</span>)
-        <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for #{domain}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
-        <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Validate the domain name is valid: #{domain}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-identifier">domain</span>=<span class="ruby-identifier">domain</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">domain</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">get_domain_root</span>(<span class="ruby-identifier">domain</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for #{domain}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -585,10 +700,11 @@ href="www.secure.telegraph.co.uk">www.secure.telegraph.co.uk</a>” -&gt;
 
           
           <div class="method-source-code" id="print_ccsld-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 180</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_ccsld</span>
-        <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@ccsld</span>
-<span class="ruby-keyword">end</span></pre>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 205</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_ccsld</span>
+            <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@ccsld</span>
+<span class="ruby-keyword">return</span> <span class="ruby-ivar">@ccsld</span>
+    <span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>
@@ -618,10 +734,11 @@ href="www.secure.telegraph.co.uk">www.secure.telegraph.co.uk</a>” -&gt;
 
           
           <div class="method-source-code" id="print_cctld-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 175</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_cctld</span>
-        <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@cctld</span>
-<span class="ruby-keyword">end</span></pre>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 199</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_cctld</span>
+            <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@cctld</span>
+<span class="ruby-keyword">return</span> <span class="ruby-ivar">@cctld</span>
+    <span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>
@@ -651,10 +768,11 @@ href="www.secure.telegraph.co.uk">www.secure.telegraph.co.uk</a>” -&gt;
 
           
           <div class="method-source-code" id="print_gtld-source">
-            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 170</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_gtld</span>
-        <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@gtld</span>
-<span class="ruby-keyword">end</span></pre>
+            <pre><span class="ruby-comment"># File lib/wmap/utils/domain_root.rb, line 193</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_gtld</span>
+            <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@gtld</span>
+<span class="ruby-keyword">return</span> <span class="ruby-ivar">@gtld</span>
+    <span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>

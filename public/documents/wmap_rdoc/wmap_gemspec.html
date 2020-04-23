@@ -65,11 +65,33 @@
   
     <li><a href="./LICENSE_txt.html">LICENSE</a>
   
-    <li><a href="./README_rdoc.html">README</a>
+    <li><a href="./README_md.html">README</a>
   
     <li><a href="./TODO.html">TODO</a>
   
+    <li><a href="./data/cidrs.html">cidrs</a>
+  
+    <li><a href="./data/deactivated_sites.html">deactivated_sites</a>
+  
+    <li><a href="./data/domains.html">domains</a>
+  
+    <li><a href="./data/hosts.html">hosts</a>
+  
+    <li><a href="./data/prime_hosts.html">prime_hosts</a>
+  
+    <li><a href="./data/seed.html">seed</a>
+  
+    <li><a href="./data/sites.html">sites</a>
+  
+    <li><a href="./data/sub_domains.html">sub_domains</a>
+  
+    <li><a href="./data/tag_sites.html">tag_sites</a>
+  
+    <li><a href="./data/wp_sites.html">wp_sites</a>
+  
     <li><a href="./demos/nmap_parser_pl.html">nmap_parser.pl</a>
+  
+    <li><a href="./dicts/ccsld_txt.html">ccsld</a>
   
     <li><a href="./dicts/cctld_txt.html">cctld</a>
   
@@ -80,6 +102,44 @@
     <li><a href="./dicts/hostnames-dict_txt.html">hostnames-dict</a>
   
     <li><a href="./dicts/tlds_txt.html">tlds</a>
+  
+    <li><a href="./logs/discovered_sites_log.html">discovered_sites.log</a>
+  
+    <li><a href="./logs/discovered_urls_log.html">discovered_urls.log</a>
+  
+    <li><a href="./logs/url_seeds_log.html">url_seeds.log</a>
+  
+    <li><a href="./logs/wmap_log.html">wmap.log</a>
+  
+    <li><a href="./prh_data/cidrs.html">cidrs</a>
+  
+    <li><a href="./prh_data/crawler_log.html">crawler.log</a>
+  
+    <li><a href="./prh_data/deactivated_sites.html">deactivated_sites</a>
+  
+    <li><a href="./prh_data/domains.html">domains</a>
+  
+    <li><a href="./prh_data/hosts.html">hosts</a>
+  
+    <li><a href="./prh_data/prime_hosts.html">prime_hosts</a>
+  
+    <li><a href="./prh_data/seed.html">seed</a>
+  
+    <li><a href="./prh_data/sites.html">sites</a>
+  
+    <li><a href="./prh_data/sub_domains.html">sub_domains</a>
+  
+    <li><a href="./prh_data/tag_sites.html">tag_sites</a>
+  
+    <li><a href="./prh_data/wp_sites.html">wp_sites</a>
+  
+    <li><a href="./prh_data/~sites.html">~sites</a>
+  
+    <li><a href="./prh_data/~tag_sites.html">~tag_sites</a>
+  
+    <li><a href="./prh_data/~wp_sites.html">~wp_sites</a>
+  
+    <li><a href="./rebuild_sh.html">rebuild.sh</a>
   
     <li><a href="./settings/discovery_ports.html">discovery_ports</a>
   
@@ -132,12 +192,12 @@ end</pre>
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">date</span> = <span class="ruby-identifier">info</span>[<span class="ruby-string">&quot;date&quot;</span>]
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">description</span> = <span class="ruby-string">&quot;wmap is written to perform Internet web application / service discovery. The discovery results are designed to be automatically tracked by the software.&quot;</span>
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">email</span> = <span class="ruby-identifier">info</span>[<span class="ruby-string">&quot;email&quot;</span>]
-<span class="ruby-identifier">s</span>.<span class="ruby-identifier">executables</span> = [<span class="ruby-string">&quot;wmap&quot;</span>,<span class="ruby-string">&quot;wscan&quot;</span>,<span class="ruby-string">&quot;wadd&quot;</span>,<span class="ruby-string">&quot;wadds&quot;</span>,<span class="ruby-string">&quot;wdel&quot;</span>,<span class="ruby-string">&quot;wcheck&quot;</span>,<span class="ruby-string">&quot;wdump&quot;</span>,<span class="ruby-string">&quot;spiderBot&quot;</span>,<span class="ruby-string">&quot;googleBot&quot;</span>,<span class="ruby-string">&quot;updateAll&quot;</span>,<span class="ruby-string">&quot;prime&quot;</span>,<span class="ruby-string">&quot;deprime&quot;</span>,<span class="ruby-string">&quot;refresh&quot;</span>,<span class="ruby-string">&quot;trust&quot;</span>,<span class="ruby-string">&quot;distrust&quot;</span>,<span class="ruby-string">&quot;run_tests&quot;</span>]
+<span class="ruby-identifier">s</span>.<span class="ruby-identifier">executables</span> = [<span class="ruby-string">&quot;wmap&quot;</span>,<span class="ruby-string">&quot;wscan&quot;</span>,<span class="ruby-string">&quot;wadd&quot;</span>,<span class="ruby-string">&quot;wadds&quot;</span>,<span class="ruby-string">&quot;wdel&quot;</span>,<span class="ruby-string">&quot;wcheck&quot;</span>,<span class="ruby-string">&quot;wdump&quot;</span>,<span class="ruby-string">&quot;spiderBot&quot;</span>,<span class="ruby-string">&quot;googleBot&quot;</span>,<span class="ruby-string">&quot;updateAll&quot;</span>,<span class="ruby-string">&quot;prime&quot;</span>,<span class="ruby-string">&quot;deprime&quot;</span>,<span class="ruby-string">&quot;refresh&quot;</span>,<span class="ruby-string">&quot;trust&quot;</span>,<span class="ruby-string">&quot;trusts&quot;</span>,<span class="ruby-string">&quot;distrust&quot;</span>,<span class="ruby-string">&quot;run_tests&quot;</span>]
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span> = [<span class="ruby-string">&quot;CHANGELOG.md&quot;</span>, <span class="ruby-string">&quot;TODO&quot;</span>, <span class="ruby-string">&quot;settings/discovery_ports&quot;</span>,<span class="ruby-string">&quot;data/&quot;</span>,<span class="ruby-string">&quot;LICENSE.txt&quot;</span>,
-                                                      <span class="ruby-string">&quot;version.txt&quot;</span>,<span class="ruby-string">&quot;README.rdoc&quot;</span>, <span class="ruby-string">&quot;wmap.gemspec&quot;</span>]
-<span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;lib  .rb&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;lib/wmap/*.rb&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;lib/wmap/   *&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;bin/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;settings/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;demos/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;test/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;ruby_whois_patches/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;dicts/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;logs/wmap.log&#39;</span>]
+                                                      <span class="ruby-string">&quot;version.txt&quot;</span>,<span class="ruby-string">&quot;README.md&quot;</span>, <span class="ruby-string">&quot;wmap.gemspec&quot;</span>]
+<span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;lib  .rb&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;lib/wmap/*.rb&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;lib/wmap/   *&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;bin/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;settings/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;demos/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;test/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;dicts/*&#39;</span>]
 <span class="ruby-comment">#s.homepage = &quot;none&quot;</span>
-<span class="ruby-identifier">s</span>.<span class="ruby-identifier">post_install_message</span> = <span class="ruby-string">&quot;*&quot;</span><span class="ruby-operator">*</span><span class="ruby-value">80</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n\nThank you for installing the wmap gem - a pure Ruby library for Internet web application discovery and tracking. Please refer to the README.rdoc for more information of using this gem.  \n\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;*&quot;</span><span class="ruby-operator">*</span><span class="ruby-value">80</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+<span class="ruby-identifier">s</span>.<span class="ruby-identifier">post_install_message</span> = <span class="ruby-string">&quot;*&quot;</span><span class="ruby-operator">*</span><span class="ruby-value">80</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n\nThank you for installing the wmap gem - a pure Ruby library for Internet web \napplication discovery and tracking. Please refer to the README.md for more \ninformation of using this gem.  \n\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;*&quot;</span><span class="ruby-operator">*</span><span class="ruby-value">80</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">require_paths</span> = [<span class="ruby-string">&quot;lib&quot;</span>]
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">required_ruby_version</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Requirement</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;&gt;= 2.1&quot;</span>)
 
@@ -153,6 +213,9 @@ end</pre>
       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">add_dependency</span> <span class="ruby-string">&#39;httpclient&#39;</span>, <span class="ruby-string">&#39;~&gt; 2.0&#39;</span>
       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">add_dependency</span> <span class="ruby-string">&#39;open_uri_redirections&#39;</span>, <span class="ruby-string">&#39;&gt;= 0.2&#39;</span>
       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">add_dependency</span> <span class="ruby-string">&#39;netaddr&#39;</span>, <span class="ruby-string">&#39;~&gt; 1.5&#39;</span>
+      <span class="ruby-identifier">s</span>.<span class="ruby-identifier">add_dependency</span> <span class="ruby-string">&#39;watir&#39;</span>, <span class="ruby-string">&#39;~&gt; 6.16.5&#39;</span> <span class="ruby-comment"># Handle JS generated DOM</span>
+      <span class="ruby-identifier">s</span>.<span class="ruby-identifier">add_dependency</span> <span class="ruby-string">&#39;selenium-webdriver&#39;</span>, <span class="ruby-string">&#39;~&gt; 3.141.0&#39;</span> <span class="ruby-comment">#Ruby bindings for WebDriver; http://watir.com/guides/drivers/</span>
+      <span class="ruby-comment">#Note by default you would need headless chrome binary, from http://chromedriver.storage.googleapis.com/index.html, then put it under the PATH for webdriver</span>
 
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">rubyforge_project</span> = <span class="ruby-string">&quot;wmap&quot;</span>
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">rubygems_version</span> = <span class="ruby-string">&quot;1.8.24&quot;</span>

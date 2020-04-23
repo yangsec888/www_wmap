@@ -311,7 +311,7 @@
 
           
           <div class="method-source-code" id="count-source">
-            <pre><span class="ruby-comment"># File lib/wmap/port_scanner.rb, line 202</span>
+            <pre><span class="ruby-comment"># File lib/wmap/port_scanner.rb, line 189</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">count</span>
         <span class="ruby-keyword">return</span> <span class="ruby-ivar">@discovered_urls</span>.<span class="ruby-identifier">size</span>
 <span class="ruby-keyword">end</span></pre>
@@ -475,7 +475,7 @@ performance, for instance.</p>
 
           
           <div class="method-source-code" id="print_discovered_urls-source">
-            <pre><span class="ruby-comment"># File lib/wmap/port_scanner.rb, line 193</span>
+            <pre><span class="ruby-comment"># File lib/wmap/port_scanner.rb, line 180</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_discovered_urls</span>
         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Print out port discovery results.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Summary of Discovered Sites:&quot;</span>
@@ -607,7 +607,7 @@ as the website construct within an array</p>
 
           
           <div class="method-source-code" id="scan_file-source">
-            <pre><span class="ruby-comment"># File lib/wmap/port_scanner.rb, line 127</span>
+            <pre><span class="ruby-comment"># File lib/wmap/port_scanner.rb, line 114</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">scan_file</span>(<span class="ruby-identifier">file</span>,<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the parallel scans on the target file: #{file}&quot;</span>
         <span class="ruby-keyword">begin</span>
@@ -655,46 +655,33 @@ numbers of child processes on multiple hosts/IPs simultaneously</p>
           <div class="method-source-code" id="scans-source">
             <pre><span class="ruby-comment"># File lib/wmap/port_scanner.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">scans</span> (<span class="ruby-identifier">targets</span>,<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>)
-        <span class="ruby-keyword">begin</span>
-                <span class="ruby-identifier">urls</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-comment"># 10/5/2013 add additional logic to eliminate invalid /duplicate target(s)</span>
-                <span class="ruby-identifier">targets</span> <span class="ruby-operator">-=</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">nil</span>]
-                <span class="ruby-identifier">uniq_hosts</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
-                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_fqdn?</span>(<span class="ruby-identifier">target</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">is_ip?</span>(<span class="ruby-identifier">target</span>)
-                                <span class="ruby-identifier">ip</span>=<span class="ruby-identifier">host_2_ip</span>(<span class="ruby-identifier">target</span>).<span class="ruby-identifier">to_s</span>
-                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">uniq_hosts</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">ip</span>)
-                                        <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">target</span>)
-                                <span class="ruby-keyword">else</span>
-                                        <span class="ruby-identifier">uniq_hosts</span>[<span class="ruby-identifier">ip</span>]=<span class="ruby-keyword">true</span>
-                                <span class="ruby-keyword">end</span>
-                        <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">if</span> <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the parallel port scan on the target list:\n #{targets}&quot;</span>
-                        <span class="ruby-constant">Parallel</span>.<span class="ruby-identifier">map</span>(<span class="ruby-identifier">targets</span>.<span class="ruby-identifier">shuffle</span>, <span class="ruby-value">:in_processes</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">num</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
-                                <span class="ruby-identifier">scan</span>(<span class="ruby-identifier">target</span>)
-                        }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">process</span><span class="ruby-operator">|</span>
-                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">process</span>.<span class="ruby-identifier">nil?</span>
-                                        <span class="ruby-keyword">next</span>
-                                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">process</span>.<span class="ruby-identifier">empty?</span>
-                                        <span class="ruby-comment">#do nothing</span>
-                                <span class="ruby-keyword">else</span>
-                                        <span class="ruby-identifier">process</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
-                                                <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@discovered_urls</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
-                                                        <span class="ruby-ivar">@discovered_urls</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-keyword">true</span>
-                                                <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">all_urls</span>=<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-comment"># 10/5/2013 add additional logic to eliminate invalid /duplicate target(s)</span>
+        <span class="ruby-identifier">targets</span> = <span class="ruby-identifier">targets</span> <span class="ruby-operator">-</span> [<span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">nil</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the parallel port scan on the target list:\n #{targets}&quot;</span>
+                <span class="ruby-constant">Parallel</span>.<span class="ruby-identifier">map</span>(<span class="ruby-identifier">targets</span>.<span class="ruby-identifier">shuffle</span>, <span class="ruby-value">:in_processes</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">num</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">scan</span>(<span class="ruby-identifier">target</span>)
+                }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">process</span><span class="ruby-operator">|</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">process</span>.<span class="ruby-identifier">nil?</span>
+                                <span class="ruby-keyword">next</span>
+                        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">process</span>.<span class="ruby-identifier">empty?</span>
+                                <span class="ruby-comment">#do nothing</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">process</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
+                                        <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@discovered_urls</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">url</span>)
+                                                <span class="ruby-ivar">@discovered_urls</span>[<span class="ruby-identifier">url</span>]=<span class="ruby-keyword">true</span>
                                         <span class="ruby-keyword">end</span>
-                                        <span class="ruby-identifier">urls</span><span class="ruby-operator">+=</span><span class="ruby-identifier">process</span>
                                 <span class="ruby-keyword">end</span>
+                                <span class="ruby-identifier">all_urls</span><span class="ruby-operator">+=</span><span class="ruby-identifier">process</span>
                         <span class="ruby-keyword">end</span>
                 <span class="ruby-keyword">end</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Port scanning done successfully with the found web services: #{urls}&quot;</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">urls</span>
-        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
         <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Port scanning done successfully with the found web services: #{all_urls}&quot;</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">all_urls</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__}: #{ee}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -727,7 +714,7 @@ Notice the default time-out is set by the default instance variable
 
           
           <div class="method-source-code" id="tcp_port_open-3F-source">
-            <pre><span class="ruby-comment"># File lib/wmap/port_scanner.rb, line 174</span>
+            <pre><span class="ruby-comment"># File lib/wmap/port_scanner.rb, line 161</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">tcp_port_open?</span> (<span class="ruby-identifier">host</span>,<span class="ruby-identifier">port</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Perform open port detection on: #{host}:#{port}, time-out: #{@socket_timeout} ms&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-comment">#@socket_timeout = socket_timeout</span>

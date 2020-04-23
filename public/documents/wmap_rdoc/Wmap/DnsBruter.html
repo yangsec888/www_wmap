@@ -188,6 +188,19 @@ brute-force methods</p>
         </div>
       </div>
       
+      <div id="attribute-i-file_hosts" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">file_hosts</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
       <div id="attribute-i-hosts_dict" class="method-detail">
         <div class="method-heading attribute-method-heading">
           <span class="method-name">hosts_dict</span><span
@@ -262,11 +275,9 @@ brute-force methods</p>
         <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../data/&#39;</span>)
         <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
         <span class="ruby-ivar">@file_hosts</span> = <span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;hosts&#39;</span>
-        <span class="ruby-ivar">@file_hosts_dict</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../dicts/hostnames-dict.txt&#39;</span>
-
         <span class="ruby-ivar">@verbose</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:verbose</span>, <span class="ruby-keyword">false</span>)
         <span class="ruby-ivar">@discovered_hosts_from_dns_bruter</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-        <span class="ruby-ivar">@hosts_dict</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:hosts_dict</span>, <span class="ruby-ivar">@file_hosts_dict</span>)
+        <span class="ruby-ivar">@hosts_dict</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:hosts_dict</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../dicts/hostnames-dict.txt&#39;</span>)
         <span class="ruby-ivar">@max_parallel</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:max_parallel</span>, <span class="ruby-value">30</span>)
         <span class="ruby-ivar">@fail_domain_cnt</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
@@ -335,7 +346,7 @@ brute-force methods</p>
 
           
           <div class="method-source-code" id="brute_all-source">
-            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 247</span>
+            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 245</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">brute_all</span>(<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the parallel brute-forcing all domains with maximum child processes: #{num}&quot;</span>
         <span class="ruby-keyword">begin</span>
@@ -381,7 +392,7 @@ brute-force methods</p>
 
           
           <div class="method-source-code" id="brute_force_dns-source">
-            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 161</span>
+            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 159</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">brute_force_dns</span> (<span class="ruby-identifier">host</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start dictionary attacks on the DNS server for: #{host}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-keyword">begin</span>
@@ -506,7 +517,7 @@ domains from the local hosts table simultaneously</p>
 
           
           <div class="method-source-code" id="dns_brute_domains-source">
-            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 228</span>
+            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 226</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">dns_brute_domains</span>(<span class="ruby-identifier">targets</span>,<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the parallel brute-forcing with multiple child processes: #{num}&quot;</span>
         <span class="ruby-keyword">begin</span>
@@ -555,7 +566,7 @@ simultaneously</p>
 
           
           <div class="method-source-code" id="dns_brute_file-source">
-            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 89</span>
+            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 87</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">dns_brute_file</span>(<span class="ruby-identifier">file_target</span>,<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the parallel brute-forcing with multiple child processes on target file #{file_target}: #{num}&quot;</span>
         <span class="ruby-keyword">begin</span>
@@ -597,7 +608,7 @@ simultaneously</p>
 
           
           <div class="method-source-code" id="dns_brute_worker-source">
-            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 35</span>
+            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 33</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">dns_brute_worker</span>(<span class="ruby-identifier">host</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start DNS brute forcer on: #{host}&quot;</span>
         <span class="ruby-identifier">results</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
@@ -655,7 +666,7 @@ simultaneously</p>
 
           
           <div class="method-source-code" id="dns_brute_workers-source">
-            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 61</span>
+            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 59</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">dns_brute_workers</span>(<span class="ruby-identifier">list</span>,<span class="ruby-identifier">num</span>=<span class="ruby-ivar">@max_parallel</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start the parallel engine one the domain list: #{list} \nMaximum brute-forcing session: #{num} &quot;</span>
         <span class="ruby-keyword">begin</span>
@@ -714,7 +725,7 @@ hosts into the class variable.</p>
 
           
           <div class="method-source-code" id="get_vulnerable_ns-source">
-            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 140</span>
+            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 138</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_vulnerable_ns</span>(<span class="ruby-identifier">domain</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Identify the vulnerable DNS servers if zone transfer is allowed.&quot;</span>
         <span class="ruby-identifier">domain</span>=<span class="ruby-identifier">domain</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
@@ -764,7 +775,7 @@ hosts into the class variable.</p>
 
           
           <div class="method-source-code" id="hostname_mutation-source">
-            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 265</span>
+            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 263</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">hostname_mutation</span>(<span class="ruby-identifier">host</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Start host mutation emulation on: #{host}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-keyword">begin</span>
@@ -887,7 +898,7 @@ hosts into the class variable.</p>
 
           
           <div class="method-source-code" id="print_discovered_hosts_from_bruter-source">
-            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 301</span>
+            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 299</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print_discovered_hosts_from_bruter</span>
         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\nSummary Report of the Discovered Hosts:&quot;</span>
         <span class="ruby-ivar">@discovered_hosts_from_dns_bruter</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">domain</span>,<span class="ruby-identifier">hosts</span><span class="ruby-operator">|</span>
@@ -986,7 +997,7 @@ hosts into the class variable.</p>
 
           
           <div class="method-source-code" id="zone_transfer-source">
-            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 103</span>
+            <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 101</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">zone_transfer</span>(<span class="ruby-identifier">domain</span>)
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Perform zone transfer on zone: #{domain}&quot;</span>
         <span class="ruby-identifier">domain</span>=<span class="ruby-identifier">domain</span>.<span class="ruby-identifier">downcase</span>

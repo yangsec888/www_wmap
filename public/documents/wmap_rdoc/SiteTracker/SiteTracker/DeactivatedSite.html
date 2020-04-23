@@ -211,12 +211,12 @@
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">params</span> = {})
         <span class="ruby-comment"># Initialize the instance variables</span>
         <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../../data/&#39;</span>)
-        <span class="ruby-ivar">@f_sites</span>=<span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;deactivated_sites&#39;</span>
-        <span class="ruby-ivar">@file_stores</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:sites_file</span>, <span class="ruby-ivar">@f_sites</span>)
+        <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
+        <span class="ruby-ivar">@sites_file</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:sites_file</span>, <span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;deactivated_sites&#39;</span>)
         <span class="ruby-ivar">@verbose</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:verbose</span>, <span class="ruby-keyword">false</span>)
         <span class="ruby-comment"># Hash table to hold the site store</span>
-        <span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@file_stores</span>, <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@file_stores</span>)
-        <span class="ruby-ivar">@known_sites</span>=<span class="ruby-identifier">load_site_stores_from_file</span>(<span class="ruby-ivar">@file_stores</span>)
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@sites_file</span>, <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@sites_file</span>)
+        <span class="ruby-ivar">@known_sites</span>=<span class="ruby-identifier">load_site_stores_from_file</span>(<span class="ruby-ivar">@sites_file</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           

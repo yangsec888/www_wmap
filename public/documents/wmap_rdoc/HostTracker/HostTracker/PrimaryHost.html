@@ -165,7 +165,7 @@ primary url of a website.</p>
       <div id="attribute-i-known_hosts" class="method-detail">
         <div class="method-heading attribute-method-heading">
           <span class="method-name">known_hosts</span><span
-            class="attribute-access-type">[R]</span>
+            class="attribute-access-type">[RW]</span>
         </div>
 
         <div class="method-description">
@@ -178,7 +178,7 @@ primary url of a website.</p>
       <div id="attribute-i-known_ips" class="method-detail">
         <div class="method-heading attribute-method-heading">
           <span class="method-name">known_ips</span><span
-            class="attribute-access-type">[R]</span>
+            class="attribute-access-type">[RW]</span>
         </div>
 
         <div class="method-description">
@@ -230,16 +230,15 @@ primary url of a website.</p>
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/wmap/host_tracker/primary_host.rb, line 23</span>
+            <pre><span class="ruby-comment"># File lib/wmap/host_tracker/primary_host.rb, line 22</span>
           <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">params</span> = {})
                   <span class="ruby-ivar">@verbose</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:verbose</span>, <span class="ruby-keyword">false</span>)
 <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../../data/&#39;</span>)
                   <span class="ruby-comment"># Set default instance variables</span>
-                  <span class="ruby-ivar">@file_hosts</span>=<span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;prime_hosts&#39;</span>
-                  <span class="ruby-identifier">file</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:hosts_file</span>, <span class="ruby-ivar">@file_hosts</span>)
+                  <span class="ruby-ivar">@hosts_file</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:hosts_file</span>, <span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;prime_hosts&#39;</span>)
                   <span class="ruby-comment"># Initialize the instance variables</span>
-<span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@file_hosts</span>, <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@file_hosts</span>)
-                  <span class="ruby-ivar">@known_hosts</span>=<span class="ruby-identifier">load_known_hosts_from_file</span>(<span class="ruby-identifier">file</span>)
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@hosts_file</span>, <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@hosts_file</span>)
+                  <span class="ruby-ivar">@known_hosts</span>=<span class="ruby-identifier">load_known_hosts_from_file</span>(<span class="ruby-ivar">@hosts_file</span>)
                   <span class="ruby-ivar">@known_ips</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
                   <span class="ruby-identifier">de_duplicate</span>
           <span class="ruby-keyword">end</span></pre>
@@ -427,14 +426,15 @@ the well known primary site.</p>
 
           
           <div class="method-source-code" id="update_from_site_redirections-21-source">
-            <pre><span class="ruby-comment"># File lib/wmap/host_tracker/primary_host.rb, line 76</span>
+            <pre><span class="ruby-comment"># File lib/wmap/host_tracker/primary_host.rb, line 75</span>
         <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_from_site_redirections!</span>
                 <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Invoke internal procedures to update the primary host-name table from the site store.&quot;</span>
                 <span class="ruby-keyword">begin</span>
                         <span class="ruby-identifier">my_tracker</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">SiteTracker</span>.<span class="ruby-identifier">instance</span>
-<span class="ruby-identifier">my_tracker</span>.<span class="ruby-identifier">data_dir</span>=<span class="ruby-ivar">@data_dir</span>
+<span class="ruby-identifier">my_tracker</span>.<span class="ruby-identifier">sites_file</span>=<span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;sites&quot;</span>
+<span class="ruby-identifier">my_tracker</span>.<span class="ruby-identifier">load_site_stores_from_file</span>
 <span class="ruby-identifier">urls</span> = <span class="ruby-identifier">my_tracker</span>.<span class="ruby-identifier">get_redirection_urls</span>
-<span class="ruby-identifier">my_tracker</span> = <span class="ruby-keyword">nil</span> 
+<span class="ruby-identifier">my_tracker</span> = <span class="ruby-keyword">nil</span>
                         <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
                                 <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_url?</span>(<span class="ruby-identifier">url</span>)
                                         <span class="ruby-identifier">host</span>=<span class="ruby-identifier">url_2_host</span>(<span class="ruby-identifier">url</span>)
@@ -484,7 +484,7 @@ must be primary hostname and used by the users.</p>
 
           
           <div class="method-source-code" id="update_from_site_store-21-source">
-            <pre><span class="ruby-comment"># File lib/wmap/host_tracker/primary_host.rb, line 37</span>
+            <pre><span class="ruby-comment"># File lib/wmap/host_tracker/primary_host.rb, line 35</span>
           <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_from_site_store!</span>
                   <span class="ruby-comment">#begin</span>
   <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Invoke internal procedures to update the primary host-name table from the site store.&quot;</span>
@@ -492,7 +492,8 @@ must be primary hostname and used by the users.</p>
                           <span class="ruby-identifier">cns</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
                           <span class="ruby-identifier">checker</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">UrlChecker</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:data_dir</span><span class="ruby-operator">=&gt;</span><span class="ruby-ivar">@data_dir</span>)
   <span class="ruby-identifier">my_tracker</span> = <span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">SiteTracker</span>.<span class="ruby-identifier">instance</span>
-  <span class="ruby-identifier">my_tracker</span>.<span class="ruby-identifier">data_dir</span> = <span class="ruby-ivar">@data_dir</span>
+  <span class="ruby-identifier">my_tracker</span>.<span class="ruby-identifier">sites_file</span> = <span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;sites&quot;</span>
+  <span class="ruby-identifier">my_tracker</span>.<span class="ruby-identifier">load_site_stores_from_file</span>
                           <span class="ruby-identifier">my_tracker</span>.<span class="ruby-identifier">get_ssl_sites</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">site</span><span class="ruby-operator">|</span>
                                   <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exam SSL enabled site entry #{site} ...&quot;</span>
                                   <span class="ruby-identifier">my_host</span>=<span class="ruby-identifier">url_2_host</span>(<span class="ruby-identifier">site</span>)

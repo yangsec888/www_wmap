@@ -94,11 +94,11 @@
     
     <li ><a href="#method-i-print_usage">#print_usage</a>
     
-    <li ><a href="#method-i-site_lookup">#site_lookup</a>
+    <li ><a href="#method-i-site_tracker_lookup">#site_tracker_lookup</a>
     
     <li ><a href="#method-i-wmap_worker">#wmap_worker</a>
     
-    <li ><a href="#method-i-wp_site_lookup">#wp_site_lookup</a>
+    <li ><a href="#method-i-wp_tracker_lookup">#wp_tracker_lookup</a>
     
     <li ><a href="#method-i-wpscan">#wpscan</a>
     
@@ -132,7 +132,7 @@
       
         <dt id="Log_dir">Log_dir
         
-        <dd><p>Log the command entry</p>
+        <dd><p>Log to the instance running directory</p>
         
       
       </dl>
@@ -440,10 +440,10 @@ quarter</p>
       </div>
 
     
-      <div id="method-i-site_lookup" class="method-detail ">
+      <div id="method-i-site_tracker_lookup" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">site_lookup</span><span
+          <span class="method-name">site_tracker_lookup</span><span
             class="method-args">(domain)</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -459,9 +459,9 @@ the site</p>
           
 
           
-          <div class="method-source-code" id="site_lookup-source">
+          <div class="method-source-code" id="site_tracker_lookup-source">
             <pre><span class="ruby-comment"># File bin/RHPG, line 14</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">site_lookup</span>(<span class="ruby-identifier">domain</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">site_tracker_lookup</span>(<span class="ruby-identifier">domain</span>)
   <span class="ruby-identifier">tracker</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">SiteTracker</span>.<span class="ruby-identifier">instance</span>
         <span class="ruby-identifier">tracker</span>.<span class="ruby-identifier">verbose</span>=<span class="ruby-keyword">false</span>
   <span class="ruby-comment">#first order search</span>
@@ -526,10 +526,10 @@ the site</p>
       </div>
 
     
-      <div id="method-i-wp_site_lookup" class="method-detail ">
+      <div id="method-i-wp_tracker_lookup" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">wp_site_lookup</span><span
+          <span class="method-name">wp_tracker_lookup</span><span
             class="method-args">(domain)</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -545,9 +545,9 @@ print info: [is_wp?,wp_ver]</p>
           
 
           
-          <div class="method-source-code" id="wp_site_lookup-source">
+          <div class="method-source-code" id="wp_tracker_lookup-source">
             <pre><span class="ruby-comment"># File bin/RHPG, line 36</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_site_lookup</span>(<span class="ruby-identifier">domain</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wp_tracker_lookup</span>(<span class="ruby-identifier">domain</span>)
   <span class="ruby-identifier">tracker</span>=<span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">WpTracker</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:verbose</span><span class="ruby-operator">=&gt;</span><span class="ruby-keyword">false</span>)
         <span class="ruby-comment"># first order</span>
         <span class="ruby-identifier">tracker</span>.<span class="ruby-identifier">known_wp_sites</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
@@ -605,7 +605,7 @@ print info: [is_wp?,wp_ver]</p>
           <div class="method-source-code" id="wpscan-source">
             <pre><span class="ruby-comment"># File bin/RHPG, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wpscan</span>(<span class="ruby-identifier">domain</span>)
-        <span class="ruby-identifier">url</span>=<span class="ruby-identifier">site_lookup</span>(<span class="ruby-identifier">domain</span>)[<span class="ruby-value">0</span>]
+        <span class="ruby-identifier">url</span>=<span class="ruby-identifier">site_tracker_lookup</span>(<span class="ruby-identifier">domain</span>)[<span class="ruby-value">0</span>]
         <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">nil?</span>
         <span class="ruby-keyword">if</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;https&quot;</span>)
                 <span class="ruby-identifier">command</span>=<span class="ruby-string">&quot;wpscan --disable-tls-checks --ignore-main-redirect --url=&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">url</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; -o &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">domain</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.wpscan&quot;</span>
