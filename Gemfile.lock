@@ -296,7 +296,7 @@ GEM
       railties (>= 5.0)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
+    websocket-extensions (0.1.5)
     whois (5.0.0)
     will_paginate (3.2.1)
     wmap (2.7.9)
