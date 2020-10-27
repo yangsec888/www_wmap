@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class CidrTrackerTest - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">MiniTest::Unit::TestCase
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="Wmap/Utils.html">Wmap::Utils</a>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-test_cidr_add">#test_cidr_add</a>
+    
+    <li ><a href="#method-i-test_cidr_delete">#test_cidr_delete</a>
+    
+    <li ><a href="#method-i-test_ip_trusted-3F">#test_ip_trusted?</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-CidrTrackerTest">
+  <h1 id="class-CidrTrackerTest" class="class">
+    class CidrTrackerTest
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-test_cidr_add" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_cidr_add</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_cidr_add-source">
+            <pre><span class="ruby-comment"># File test/cidr_tracker_test.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_cidr_add</span>
+        <span class="ruby-identifier">w</span> = <span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">CidrTracker</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">w</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">&quot;192.168.1.0/24&quot;</span>)
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">w</span>.<span class="ruby-identifier">known_cidr_blks</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&quot;192.168.1.0/24&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_cidr_delete" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_cidr_delete</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_cidr_delete-source">
+            <pre><span class="ruby-comment"># File test/cidr_tracker_test.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_cidr_delete</span>
+        <span class="ruby-identifier">w</span> = <span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">CidrTracker</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">w</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">&quot;10.0.0.0/8&quot;</span>)
+        <span class="ruby-identifier">w</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;10.0.0.0/8&quot;</span>)
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">false</span>, <span class="ruby-identifier">w</span>.<span class="ruby-identifier">known_cidr_blks</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&quot;10.0.0.0/8&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_ip_trusted-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_ip_trusted?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_ip_trusted-3F-source">
+            <pre><span class="ruby-comment"># File test/cidr_tracker_test.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_ip_trusted?</span>
+        <span class="ruby-identifier">w</span> = <span class="ruby-constant">Wmap</span><span class="ruby-operator">::</span><span class="ruby-constant">CidrTracker</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">w</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">&quot;192.168.1.0/24&quot;</span>)
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">w</span>.<span class="ruby-identifier">ip_trusted?</span>(<span class="ruby-string">&quot;192.168.1.1&quot;</span>)
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">w</span>.<span class="ruby-identifier">ip_trusted?</span>(<span class="ruby-string">&quot;192.168.1.255&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

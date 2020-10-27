@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class SitesController - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="SitesHelper.html">SitesHelper</a>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-download">#download</a>
+    
+    <li ><a href="#method-i-edit">#edit</a>
+    
+    <li ><a href="#method-i-index">#index</a>
+    
+    <li ><a href="#method-i-load_file">#load_file</a>
+    
+    <li ><a href="#method-i-save_file">#save_file</a>
+    
+    <li ><a href="#method-i-search">#search</a>
+    
+    <li ><a href="#method-i-show">#show</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-SitesController">
+  <h1 id="class-SitesController" class="class">
+    class SitesController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-download" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">download</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="download-source">
+            <pre><span class="ruby-comment"># File app/controllers/sites_controller.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">download</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">platinum_user_and_above?</span>
+    <span class="ruby-identifier">sites</span>=<span class="ruby-constant">Site</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;site is not null&quot;</span>)
+    <span class="ruby-identifier">workbook</span> = <span class="ruby-constant">RubyXL</span><span class="ruby-operator">::</span><span class="ruby-constant">Workbook</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">worksheet</span> = <span class="ruby-identifier">workbook</span>.<span class="ruby-identifier">worksheets</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-identifier">worksheet</span>.<span class="ruby-identifier">sheet_name</span> = <span class="ruby-string">&#39;_Sites&#39;</span>
+    <span class="ruby-identifier">header</span> = [<span class="ruby-string">&quot;Website&quot;</span>,<span class="ruby-string">&quot;Primary IP&quot;</span>,<span class="ruby-string">&quot;Port&quot;</span>,<span class="ruby-string">&quot;Hosting Status&quot;</span>,<span class="ruby-string">&quot;Server&quot;</span>,<span class="ruby-string">&quot;Response Code&quot;</span>,<span class="ruby-string">&quot;MD5 Finger-print&quot;</span>,<span class="ruby-string">&quot;Redirection&quot;</span>,<span class="ruby-string">&quot;Last Update&quot;</span>]
+    <span class="ruby-identifier">index</span> = <span class="ruby-value">0</span>
+    <span class="ruby-identifier">worksheet_write_row</span>(<span class="ruby-identifier">worksheet</span>,<span class="ruby-identifier">index</span>,<span class="ruby-identifier">header</span>)
+    <span class="ruby-identifier">sites</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">site</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">site</span>.<span class="ruby-identifier">site</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">site</span>.<span class="ruby-identifier">site</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">my_row</span> = [<span class="ruby-identifier">site</span>.<span class="ruby-identifier">site</span>, <span class="ruby-identifier">site</span>.<span class="ruby-identifier">ip</span>, <span class="ruby-identifier">site</span>.<span class="ruby-identifier">port</span>, <span class="ruby-identifier">site</span>.<span class="ruby-identifier">status</span>, <span class="ruby-identifier">site</span>.<span class="ruby-identifier">server</span>, <span class="ruby-identifier">site</span>.<span class="ruby-identifier">code</span>, <span class="ruby-identifier">site</span>.<span class="ruby-identifier">md5</span>,<span class="ruby-identifier">site</span>.<span class="ruby-identifier">redirection</span>, <span class="ruby-identifier">site</span>.<span class="ruby-identifier">updated_at</span>]
+      <span class="ruby-identifier">worksheet_write_row</span>(<span class="ruby-identifier">worksheet</span>,<span class="ruby-identifier">index</span>, <span class="ruby-identifier">my_row</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">file</span> = <span class="ruby-string">&quot;_Websites_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&#39;%m%d%Y&#39;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.xlsx&quot;</span>
+    <span class="ruby-identifier">send_data</span> <span class="ruby-identifier">workbook</span>.<span class="ruby-identifier">stream</span>.<span class="ruby-identifier">string</span>, <span class="ruby-identifier">filename</span><span class="ruby-operator">:</span> <span class="ruby-identifier">file</span>, <span class="ruby-identifier">disposition</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;attachment&#39;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">redirect_back</span> <span class="ruby-value">:fallback_location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root_path</span>, <span class="ruby-value">:alert</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Access denied.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/sites_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+  <span class="ruby-comment">#@dir = Pathname.new(Gem.loaded_specs[&#39;wmap&#39;].full_gem_path).join(&#39;data&#39;)</span>
+  <span class="ruby-ivar">@dir</span> =  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;shared&#39;</span>, <span class="ruby-string">&#39;data&#39;</span>)
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@dir</span>, <span class="ruby-value">0750</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@dir</span>)
+  <span class="ruby-ivar">@file</span> = <span class="ruby-ivar">@dir</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;sites&#39;</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@file</span>, <span class="ruby-string">&#39;w+&#39;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@file</span>)
+  <span class="ruby-ivar">@uid</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/sites_controller.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@sites</span>=<span class="ruby-constant">Site</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">order</span>(<span class="ruby-identifier">sort_column</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sort_direction</span>).<span class="ruby-identifier">page</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>]).<span class="ruby-identifier">per_page</span>(<span class="ruby-value">25</span>)
+  <span class="ruby-comment">#@chart_data=Hash.new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-load_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_file</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="load_file-source">
+            <pre><span class="ruby-comment"># File app/controllers/sites_controller.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_file</span>
+  <span class="ruby-identifier">data</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-identifier">data_dir</span> =  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;shared&#39;</span>, <span class="ruby-string">&#39;data&#39;</span>)
+  <span class="ruby-ivar">@file</span> = <span class="ruby-identifier">data_dir</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;sites&#39;</span>)
+  <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@file</span>, <span class="ruby-string">&#39;r&#39;</span>)
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">each_line</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">data</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">line</span> }
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">plain</span><span class="ruby-operator">:</span> <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-save_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_file</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="save_file-source">
+            <pre><span class="ruby-comment"># File app/controllers/sites_controller.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_file</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">platinum_user_and_above?</span>
+    <span class="ruby-identifier">data_dir</span> =  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;shared&#39;</span>, <span class="ruby-string">&#39;data&#39;</span>)
+    <span class="ruby-ivar">@file</span> = <span class="ruby-identifier">data_dir</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;sites&#39;</span>)
+    <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@file</span>, <span class="ruby-string">&#39;r&#39;</span>)
+    <span class="ruby-ivar">@restore</span> = <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-identifier">file</span>.<span class="ruby-identifier">each_line</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@restore</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">line</span> }
+    <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@file</span>, <span class="ruby-string">&#39;w+&#39;</span>)
+    <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:file_content</span>])
+    <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-identifier">site_table_reload</span>(<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span>,<span class="ruby-identifier">data_dir</span>.<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-comment">#YAML.load_file(@file)</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Saving successed.&#39;</span> }
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Access deined. &#39;</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Psych</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>
+  <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@file</span>, <span class="ruby-string">&#39;w+&#39;</span>)
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@restore</span>)
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Saving failed, please check your file again.&#39;</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-search" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>for tag site search function</p>
+          
+          
+
+          
+          <div class="method-source-code" id="search-source">
+            <pre><span class="ruby-comment"># File app/controllers/sites_controller.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword</span>].<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">redirect_back</span> <span class="ruby-value">:fallback_location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root_path</span>, <span class="ruby-value">:alert</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Unrecognized user input. &quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">keyword</span> = <span class="ruby-string">&quot;%&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword</span>].<span class="ruby-identifier">strip</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;%&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@sites</span> = <span class="ruby-constant">Site</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;site like ?&#39;</span>, <span class="ruby-identifier">keyword</span>).<span class="ruby-identifier">limit</span>(<span class="ruby-value">10</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/sites_controller.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@site</span> = <span class="ruby-constant">Site</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

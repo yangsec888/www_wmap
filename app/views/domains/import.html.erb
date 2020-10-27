@@ -1,12 +1,13 @@
 <script type="text/javascript">
   $(document).ready(function() {
+    var restore=$('#domains').val();
     var domains_editor = CodeMirror(document.getElementById("domainsImportTextArea"), {
       mode: "null",
       lineNumbers: true,
       extraKeys: {
         "Ctrl-Space": "autocomplete"
       },
-      value: ""
+      value: restore
     });
 
     $('#save_domains_button').click(function() {
@@ -47,7 +48,7 @@
 
   <div class=" col-md-9 col-lg-9">
     <p>
-    <h4>Please enter the domains to be imported below:</h4>
+    <h4>Please modify / or add your domains below:</h4>
     <button type="button" class="pull-right btn btn-default" title="Import Instructions"
       data-container="body" data-toggle="popover" data-placement="right"
       data-content="Domains Import Format: <br>
@@ -60,6 +61,8 @@
           "><span class="glyphicon glyphicon-question-sign"></span>Domains Format</button>
   </div>
 </div>
+
+<input id="domains" type="hidden" value="<%= @restore %>" >
 
 <div class=" col-md-9 col-lg-9">
     <div class ="CodeMirror" id="domainsImportTextArea"></div>

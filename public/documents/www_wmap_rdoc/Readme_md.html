@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Readme - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-3Cimg+src-3D-27-2Fwmap_logo.jpg-27+width-3D-27350-27+height-3D-27350-27-3E"><a href="https://github.com/yangsec888/www_wmap"><img src='/wmap_logo.jpg' width='350' height='350'></a></a>
+    <li><a href="#label-Wmap+Web+Portal">Wmap Web Portal</a>
+    <li><a href="#label-Demo">Demo</a>
+    <li><a href="#label-Demo+Instance">Demo Instance</a>
+    <li><a href="#label-Technology+Stacks">Technology Stacks</a>
+    <li><a href="#label-Build+and+Run+in+Docker">Build and Run in Docker</a>
+    <li><a href="#label-Why+Docker">Why Docker</a>
+    <li><a href="#label-Build+in+Docker">Build in Docker</a>
+    <li><a href="#label-Run+In+Docker">Run In Docker</a>
+    <li><a href="#label-Docker+Trouble-shooting">Docker Trouble-shooting</a>
+    <li><a href="#label-Local+Installation">Local Installation</a>
+    <li><a href="#label-Install+MariaDB+v10.4.x">Install MariaDB v10.4.x</a>
+    <li><a href="#label-Install+Redis+v5.x+Server">Install Redis v5.x Server</a>
+    <li><a href="#label-Start+the+Rails+Server">Start the Rails Server</a>
+    <li><a href="#label-More+Setup+Details">More Setup Details</a>
+    <li><a href="#label-Usage">Usage</a>
+    <li><a href="#label-To+Dos">To Dos</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Dockerfile.html">Dockerfile</a>
+  
+    <li><a href="./Gemfile.html">Gemfile</a>
+  
+    <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="./Rakefile.html">Rakefile</a>
+  
+    <li><a href="./Readme_md.html">Readme</a>
+  
+    <li><a href="./Setup_md.html">Setup</a>
+  
+    <li><a href="./app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="./app/assets/javascripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="./app/assets/javascripts/cidrs_coffee.html">cidrs.coffee</a>
+  
+    <li><a href="./app/assets/javascripts/codemirror_js.html">codemirror.js</a>
+  
+    <li><a href="./app/assets/javascripts/domain_map_js.html">domain_map.js</a>
+  
+    <li><a href="./app/assets/javascripts/domains_coffee.html">domains.coffee</a>
+  
+    <li><a href="./app/assets/javascripts/hosts_coffee.html">hosts.coffee</a>
+  
+    <li><a href="./app/assets/javascripts/jstree_js.html">jstree.js</a>
+  
+    <li><a href="./app/assets/javascripts/jstree_min_js.html">jstree.min.js</a>
+  
+    <li><a href="./app/assets/javascripts/logs_coffee.html">logs.coffee</a>
+  
+    <li><a href="./app/assets/javascripts/popper_js.html">popper.js</a>
+  
+    <li><a href="./app/assets/javascripts/popup_js.html">popup.js</a>
+  
+    <li><a href="./app/assets/javascripts/rails_validations_js.html">rails.validations.js</a>
+  
+    <li><a href="./app/assets/javascripts/reports_coffee.html">reports.coffee</a>
+  
+    <li><a href="./app/assets/javascripts/sites_coffee.html">sites.coffee</a>
+  
+    <li><a href="./app/assets/javascripts/tags_coffee.html">tags.coffee</a>
+  
+    <li><a href="./app/assets/javascripts/yaml_js.html">yaml.js</a>
+  
+    <li><a href="./app/assets/javascripts/yml_settings_js.html">yml_settings.js</a>
+  
+    <li><a href="./app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="./app/assets/stylesheets/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="./app/assets/stylesheets/bootstrap_and_overrides_css.html">bootstrap_and_overrides.css</a>
+  
+    <li><a href="./app/assets/stylesheets/cidrs_scss.html">cidrs.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/codemirror_css.html">codemirror.css</a>
+  
+    <li><a href="./app/assets/stylesheets/domains_scss.html">domains.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/hosts_scss.html">hosts.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/jstree_css.html">jstree.css</a>
+  
+    <li><a href="./app/assets/stylesheets/jstree_min_css.html">jstree.min.css</a>
+  
+    <li><a href="./app/assets/stylesheets/logs_scss.html">logs.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/popup_css.html">popup.css</a>
+  
+    <li><a href="./app/assets/stylesheets/reports_scss.html">reports.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/sites_scss.html">sites.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/tags_scss.html">tags.scss</a>
+  
+    <li><a href="./app/assets/stylesheets/yml_settings_scss.html">yml_settings.scss</a>
+  
+    <li><a href="./app/views/reports/_report_json_jbuilder.html">_report.json.jbuilder</a>
+  
+    <li><a href="./app/views/reports/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="./app/views/reports/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="./app/views/sites/show_html_erb_old.html">show.html.erb.old</a>
+  
+    <li><a href="./bin/deploy_wmap_sh.html">deploy_wmap.sh</a>
+  
+    <li><a href="./config_ru.html">config.ru</a>
+  
+    <li><a href="./config/credentials_yml_enc.html">credentials.yml.enc</a>
+  
+    <li><a href="./config/docker/asset-pre-compile_sh.html">asset-pre-compile.sh</a>
+  
+    <li><a href="./config/docker/entrypoint_sh.html">entrypoint.sh</a>
+  
+    <li><a href="./config/docker/prepare-db_sh.html">prepare-db.sh</a>
+  
+    <li><a href="./config/docker/start_sh.html">start.sh</a>
+  
+    <li><a href="./config/master_key.html">master.key</a>
+  
+    <li><a href="./config/nginx_conf.html">nginx.conf</a>
+  
+    <li><a href="./config/redis_conf.html">redis.conf</a>
+  
+    <li><a href="./config/systemd/main_cf.html">main.cf</a>
+  
+    <li><a href="./config/systemd/nginx_service.html">nginx.service</a>
+  
+    <li><a href="./config/systemd/redis_service.html">redis.service</a>
+  
+    <li><a href="./config/systemd/sidekiq_service.html">sidekiq.service</a>
+  
+    <li><a href="./lib/tasks/rdoc_rake.html">rdoc.rake</a>
+  
+    <li><a href="./lib/tasks/sync_rake.html">sync.rake</a>
+  
+    <li><a href="./lib/tasks/wmap_rake.html">wmap.rake</a>
+  
+    <li><a href="./log/development_log.html">development.log</a>
+  
+    <li><a href="./log/puma_stderr_log.html">puma.stderr.log</a>
+  
+    <li><a href="./log/puma_stdout_log.html">puma.stdout.log</a>
+  
+    <li><a href="./log/sidekiq_log.html">sidekiq.log</a>
+  
+    <li><a href="./package-lock_json.html">package-lock.json</a>
+  
+    <li><a href="./public/404_html.html">404.html</a>
+  
+    <li><a href="./public/422_html.html">422.html</a>
+  
+    <li><a href="./public/500_html.html">500.html</a>
+  
+    <li><a href="./public/assets/application-063a6bd4ee6aa5f787fd83f38089b08e2b9a7262c6e4f749c4c21c22ba99c83f_css.html">application-063a6bd4ee6aa5f787fd83f38089b08e2b9a7262c6e4f749c4c21c22ba99c83f.css</a>
+  
+    <li><a href="./public/assets/application-de86c8163994c5a9d66f66d7b3c93aa3decbabea330334d4fdf164e1a3b6d616_js.html">application-de86c8163994c5a9d66f66d7b3c93aa3decbabea330334d4fdf164e1a3b6d616.js</a>
+  
+    <li><a href="./public/assets/application-fbc0ca1b5b1b4d1dd3d8f9626710f527f7e154f13661ef9f721262b0421ab9f9_css.html">application-fbc0ca1b5b1b4d1dd3d8f9626710f527f7e154f13661ef9f721262b0421ab9f9.css</a>
+  
+    <li><a href="./public/assets/codemirror-4fc3fe9f207458690501ffca79f799333752dff031ce9d2bfffbe67ad65eb23a_css.html">codemirror-4fc3fe9f207458690501ffca79f799333752dff031ce9d2bfffbe67ad65eb23a.css</a>
+  
+    <li><a href="./public/assets/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5_svg.html">glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg</a>
+  
+    <li><a href="./public/assets/hosts-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05_js.html">hosts-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js</a>
+  
+    <li><a href="./public/assets/jstree_min-487bd81b69d667265667f45bdab0ff83f0a108b3570da4380eda70486b9e2db3_css.html">jstree.min-487bd81b69d667265667f45bdab0ff83f0a108b3570da4380eda70486b9e2db3.css</a>
+  
+    <li><a href="./public/assets/jstree_min-9904f000b38ec8e834e2e237b535e042e14eb62f3eeeebdc1dcd008f17f05e94_css.html">jstree.min-9904f000b38ec8e834e2e237b535e042e14eb62f3eeeebdc1dcd008f17f05e94.css</a>
+  
+    <li><a href="./public/assets/jstree_min-e38f0421e4cc9b47a3cd68c8a2552e1a898942b5bd5ea57910e194932a378760_js.html">jstree.min-e38f0421e4cc9b47a3cd68c8a2552e1a898942b5bd5ea57910e194932a378760.js</a>
+  
+    <li><a href="./public/assets/popup-2b9450ea834a6181296800bf1b75997c73b4eac5495fbdc5239fc0512d31c182_js.html">popup-2b9450ea834a6181296800bf1b75997c73b4eac5495fbdc5239fc0512d31c182.js</a>
+  
+    <li><a href="./public/assets/yaml-813a4722938752a1eb3c02f6cf883b30094d6f12e141c51bda411c5164c3d4aa_js.html">yaml-813a4722938752a1eb3c02f6cf883b30094d6f12e141c51bda411c5164c3d4aa.js</a>
+  
+    <li><a href="./public/assets/yml_settings-52928a9d045e6bbfae71495c925605341684f629d8764dbae387e91e00110fa7_js.html">yml_settings-52928a9d045e6bbfae71495c925605341684f629d8764dbae387e91e00110fa7.js</a>
+  
+    <li><a href="./public/robots_txt.html">robots</a>
+  
+    <li><a href="./shared/data/cidrs.html">cidrs</a>
+  
+    <li><a href="./shared/data/deactivated_sites.html">deactivated_sites</a>
+  
+    <li><a href="./shared/data/domains.html">domains</a>
+  
+    <li><a href="./shared/data/hosts.html">hosts</a>
+  
+    <li><a href="./shared/data/logs/discovered_sites_log.html">discovered_sites.log</a>
+  
+    <li><a href="./shared/data/logs/discovered_urls_log.html">discovered_urls.log</a>
+  
+    <li><a href="./shared/data/logs/url_seeds_log.html">url_seeds.log</a>
+  
+    <li><a href="./shared/data/logs/wmap_log.html">wmap.log</a>
+  
+    <li><a href="./shared/data/seed.html">seed</a>
+  
+    <li><a href="./shared/data/sites.html">sites</a>
+  
+    <li><a href="./shared/log/development_log.html">development.log</a>
+  
+    <li><a href="./shared/log/puma_stderr_log.html">puma.stderr.log</a>
+  
+    <li><a href="./shared/log/puma_stdout_log.html">puma.stdout.log</a>
+  
+    <li><a href="./shared/log/sidekiq_log.html">sidekiq.log</a>
+  
+    <li><a href="./shared/tmp/puma_state.html">puma.state</a>
+  
+    <li><a href="./tmp/pids/sidekiq_pid.html">sidekiq.pid</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page Readme.md">
+
+<h1 id="label-3Cimg+src-3D-27-2Fwmap_logo.jpg-27+width-3D-27350-27+height-3D-27350-27-3E"><a href="https://github.com/yangsec888/www_wmap"><img src='/wmap_logo.jpg' width='350' height='350'></a><span><a href="#label-3Cimg+src-3D-27-2Fwmap_logo.jpg-27+width-3D-27350-27+height-3D-27350-27-3E">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<ul><li>
+<p><a href="#wmap-web-portal">Wmap Web Portal</a></p>
+</li><li>
+<p><a href="#demo">Demo</a></p>
+</li><li>
+<p><a href="#demo-instance">Demo Instance</a></p>
+</li><li>
+<p><a href="#technology-stacks">Technology Stacks</a></p>
+</li><li>
+<p><a href="#build-and-run-in-docker">Build and Run in Docker</a></p>
+</li><li>
+<p><a href="#why-docker">Why Docker</a></p>
+</li><li>
+<p><a href="#build-in-docker">Build In Docker</a></p>
+</li><li>
+<p><a href="#run-in-docker">Run In Docker</a></p>
+</li><li>
+<p><a href="#docker-trouble-shooting">Docker Trouble-shooting</a></p>
+</li><li>
+<p><a href="#local-installation">Local Installation</a></p>
+</li><li>
+<p><a href="#install-mariadb-v10-4-x">Install MariaDB v10.4.x</a></p>
+</li><li>
+<p><a href="#install-redis-v5-x-server">Install Redis v5.x Server</a></p>
+</li><li>
+<p><a href="#start-the-rails-server">Start the Rails Server</a></p>
+</li><li>
+<p><a href="#more-setup-details">More Setup Details</a></p>
+</li><li>
+<p><a href="#usage">Usage</a></p>
+</li><li>
+<p><a href="#to-dos">To Dos</a></p>
+</li></ul>
+<hr>
+
+<h3 id="label-Wmap+Web+Portal">Wmap Web Portal<span><a href="#label-Wmap+Web+Portal">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>The web app is part of the <a
+href="https://www.owasp.org/index.php/OWASP_Web_Mapper_Project">OWASP Web
+Mapper Project</a>. It&#39;s developed to help discover and keep track of
+web application asset with scale.</p>
+
+<p>To further explore the full power of OWASP Wmap library, please refer to
+the &lt;a href=“<a
+href="https://github.com/yangsec888/wmap">github.com/yangsec888/wmap</a>”
+target=“_blank”&gt; WMAP &lt;/a&gt; Git repository.</p>
+
+<h3 id="label-Demo">Demo<span><a href="#label-Demo">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Click to watch the Youtube video below to see how to perform a successful
+application asset discovery: <a
+href="https://www.youtube.com/watch?v=TL1occsk3Fc"><img
+src="https://img.youtube.com/vi/TL1occsk3Fc/0.jpg"></a></p>
+
+<h4 id="label-Demo+Instance">Demo Instance<span><a href="#label-Demo+Instance">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>The application is deployed into a demo instance at <a
+href="https://www.wmap.io/">www.wmap.io</a>. You can logon to it by using
+demo user &#39;admin&#39; and password &#39;admin123&#39;.</p>
+
+<h3 id="label-Technology+Stacks">Technology Stacks<span><a href="#label-Technology+Stacks">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>WMAP Web Portal depends on a number of open source projects to work
+properly:</p>
+<ul><li>
+<p><a href="https://rubyonrails.org/">Ruby on Rails 5.x</a> - A
+web-application framework that includes everything.</p>
+</li><li>
+<p><a href="https://github.com/plataformatec/devise/wiki">Devise</a> - Rails
+authentication and user session management solution.</p>
+</li><li>
+<p><a href="https://getbootstrap.com/">Twitter Bootstrap</a> - A great UI
+boilerplate for modern web apps.</p>
+</li><li>
+<p><a href="https://jquery.com/">jQuery</a> - Great JavaScript library for
+JavaScript integration.</p>
+</li><li>
+<p><a href="https://codemirror.net/">CodeMirror</a> - CodeMirror is a
+versatile text editor implemented in JavaScript.</p>
+</li><li>
+<p><a href="https://www.jstree.com/">jstree</a> - jsTree is a JavaScript based
+tree UI implementation.</p>
+</li><li>
+<p><a href="https://github.com/mperham/sidekiq">Sidekiq</a> - A background
+processing manager (asynchronous and non-blocking IO) for RoR.</p>
+</li><li>
+<p><a href="https://redis.io/">Redis</a> - A high performance in-memory key
+value pair data store.</p>
+</li><li>
+<p><a href="https://mariadb.org/">MariaDB</a> - A community supported fork of
+MySQL relational database.</p>
+</li><li>
+<p><a href="https://github.com/yangsec888/wmap">wmap</a> - Backend Web Mapper
+gem for the heavy lifting.</p>
+</li><li>
+<p><a href="http://www.postfix.org/">Postfix</a> - Background email
+notification service.</p>
+</li></ul>
+
+<h3 id="label-Build+and+Run+in+Docker">Build and Run in Docker<span><a href="#label-Build+and+Run+in+Docker">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>If you have <a href="https://docs.docker.com/install/">docker engine</a>
+ready, you can have the app build and run in no time.</p>
+
+<h4 id="label-Why+Docker">Why Docker<span><a href="#label-Why+Docker">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>The docker is becoming popular in the development community. Because it can
+standadize the developing, building for everyone. The technology may also
+help deploy your customize app into your favorite cloud infrastructure
+later on.</p>
+
+<h4 id="label-Build+in+Docker">Build in Docker<span><a href="#label-Build+in+Docker">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<pre>$ git clone https://github.com/yangsec888/www_wmap.git
+$ cd www_wmap
+$ docker-compose build</pre>
+
+<p>&#39;docker-compose build&#39; will build the containers for the app.</p>
+
+<h4 id="label-Run+In+Docker">Run In Docker<span><a href="#label-Run+In+Docker">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>&#39;docker-compose up&#39; would run the app from the containers. It
+should produce the output similar to below: <code>sh $ docker-compose up
+Starting redis                    ... done Starting wmap_db                
+... done Recreating www_wmap_postfix_587_1 ... done Recreating
+www_wmap_sidekiq_1     ... done Recreating www_wmap               ... done
+Attaching to redis, wmap_db, www_wmap_postfix_587_1, www_wmap_sidekiq_1,
+www_wmap ... </code> Open a local browser and point it at <a
+href="http://localhost:3000">localhost:3000</a>/. You will see the app in
+action.</p>
+
+<p>Depend on the cloud infrastructure you use, you might need to customize the
+containers further before the deployment. Please feel free to contact me if
+you need the help.</p>
+
+<h4 id="label-Docker+Trouble-shooting">Docker Trouble-shooting<span><a href="#label-Docker+Trouble-shooting">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>Following the onscreen error log when you bring up the containers. You can
+use the following docker command to verify the containers are running in
+your host <code> $ docker ps CONTAINER ID        IMAGE                 
+COMMAND                  CREATED             STATUS              PORTS     
+NAMES 6430a6fcac1e        www_wmap_web           &quot;sh
+./config/docker/…&quot;   10 seconds ago      Up 9 seconds       
+0.0.0.0:3000-&gt;3000/tcp   www_wmap f048b0199a9c        www_wmap_sidekiq  
+&quot;sh ./config/docker/…&quot;   10 seconds ago      Up 9 seconds       
+3000/tcp                 www_wmap_sidekiq_1 fd303f7dd992       
+redis:alpine           &quot;docker-entrypoint.s…&quot;   10 seconds ago   
+Up 9 seconds        6379/tcp                 redis faa0ebb3b861       
+bitnami/mariadb:10.3   &quot;/entrypoint.sh /run…&quot;   10 seconds ago   
+Up 9 seconds        0.0.0.0:3306-&gt;3306/tcp   wmap_db </code> If you
+running into problem, you can refer to the <a
+href="https://docs.docker.com">docker online document</a> for further
+assistance.</p>
+
+<h3 id="label-Local+Installation">Local Installation<span><a href="#label-Local+Installation">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>WMAP App requires <a href="http://rubyonrails.org">Ruby on Rails</a>
+v5.2.x, <a href="https://www.mysql.com/">MariaDB</a> v10.4.x database, <a
+href="https://redis.io/">Redis</a> 5.x in-memory data store, in order to
+run properly.</p>
+
+<p>Install the environment dependencies, and ensure the database server is
+running. For example, in our Linux / Mac laptop,</p>
+
+<h4 id="label-Install+MariaDB+v10.4.x">Install MariaDB v10.4.x<span><a href="#label-Install+MariaDB+v10.4.x">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><a
+href="https://linuxize.com/post/how-to-install-mariadb-on-ubuntu-18-04/">How
+to Install MariaDB in Ubuntu 18.0.4</a></p>
+</li><li>
+<p>Instal the mysql client support <code>sh $ sudo apt-get install
+libmysqlclient-dev $ gem install mysql2 -v &#39;0.5.2&#39; --source
+&#39;https://rubygems.org/&#39; </code></p>
+</li></ul>
+
+<h4 id="label-Install+Redis+v5.x+Server">Install Redis v5.x Server<span><a href="#label-Install+Redis+v5.x+Server">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<pre>$ sudo apt-get install redis-server redis-tools</pre>
+
+<h4 id="label-Start+the+Rails+Server">Start the Rails Server<span><a href="#label-Start+the+Rails+Server">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<pre>$ cd www_wmap
+$ bundle install
+$ rake db:create
+$ rake db:migration
+$ rails server</pre>
+
+<h4 id="label-More+Setup+Details">More <a href="Setup_md.html">Setup</a> Details<span><a href="#label-More+Setup+Details">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>For more information on local installation, please use my instance
+deployment example at <a href="Setup.md">Setup.md</a> for your reference.</p>
+
+<h3 id="label-Usage">Usage<span><a href="#label-Usage">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Under the home page, click on “Start” button to start. Follow the on-screen
+instructions, in order to launch a successfully WMAP discovery. The
+discovery result should be tracked under the “Discovery” menu tab.</p>
+
+<h3 id="label-To+Dos">To Dos<span><a href="#label-To+Dos">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Package this up into a docker containers</p>
+</li><li>
+<p>Write (integration, deployment) tests</p>
+</li><li>
+<p>Enhance performance (squeeze the next bit out of cpu / network IO )</p>
+</li><li>
+<p>Upgrade to Rails 6.x</p>
+</li><li>
+<p>Fix bugs!</p>
+</li></ul>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

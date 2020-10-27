@@ -82,7 +82,7 @@ class SeedController < ApplicationController
   end
 
   def confirm_email
-    @user = User.find(params[:id])
+    @user = User.find(params[:id].to_i)
     respond_to do |format|
         format.js
     end

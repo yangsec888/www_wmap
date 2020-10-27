@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>crawler.log - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li><a href="../CREDIT_txt.html">CREDIT</a>
+  
+    <li><a href="../LICENSE_txt.html">LICENSE</a>
+  
+    <li><a href="../README_md.html">README</a>
+  
+    <li><a href="../TODO.html">TODO</a>
+  
+    <li><a href="../data/cidrs.html">cidrs</a>
+  
+    <li><a href="../data/deactivated_sites.html">deactivated_sites</a>
+  
+    <li><a href="../data/domains.html">domains</a>
+  
+    <li><a href="../data/hosts.html">hosts</a>
+  
+    <li><a href="../data/prime_hosts.html">prime_hosts</a>
+  
+    <li><a href="../data/seed.html">seed</a>
+  
+    <li><a href="../data/sites.html">sites</a>
+  
+    <li><a href="../data/sub_domains.html">sub_domains</a>
+  
+    <li><a href="../data/tag_sites.html">tag_sites</a>
+  
+    <li><a href="../data/wp_sites.html">wp_sites</a>
+  
+    <li><a href="../demos/nmap_parser_pl.html">nmap_parser.pl</a>
+  
+    <li><a href="../dicts/ccsld_txt.html">ccsld</a>
+  
+    <li><a href="../dicts/cctld_txt.html">cctld</a>
+  
+    <li><a href="../dicts/gtld_txt.html">gtld</a>
+  
+    <li><a href="../dicts/hostnames-dict_big.html">hostnames-dict.big</a>
+  
+    <li><a href="../dicts/hostnames-dict_txt.html">hostnames-dict</a>
+  
+    <li><a href="../dicts/tlds_txt.html">tlds</a>
+  
+    <li><a href="../logs/discovered_sites_log.html">discovered_sites.log</a>
+  
+    <li><a href="../logs/discovered_urls_log.html">discovered_urls.log</a>
+  
+    <li><a href="../logs/url_seeds_log.html">url_seeds.log</a>
+  
+    <li><a href="../logs/wmap_log.html">wmap.log</a>
+  
+    <li><a href="../prh_data/cidrs.html">cidrs</a>
+  
+    <li><a href="../prh_data/crawler_log.html">crawler.log</a>
+  
+    <li><a href="../prh_data/deactivated_sites.html">deactivated_sites</a>
+  
+    <li><a href="../prh_data/domains.html">domains</a>
+  
+    <li><a href="../prh_data/hosts.html">hosts</a>
+  
+    <li><a href="../prh_data/prime_hosts.html">prime_hosts</a>
+  
+    <li><a href="../prh_data/seed.html">seed</a>
+  
+    <li><a href="../prh_data/sites.html">sites</a>
+  
+    <li><a href="../prh_data/sub_domains.html">sub_domains</a>
+  
+    <li><a href="../prh_data/tag_sites.html">tag_sites</a>
+  
+    <li><a href="../prh_data/wp_sites.html">wp_sites</a>
+  
+    <li><a href="../prh_data/~sites.html">~sites</a>
+  
+    <li><a href="../prh_data/~tag_sites.html">~tag_sites</a>
+  
+    <li><a href="../prh_data/~wp_sites.html">~wp_sites</a>
+  
+    <li><a href="../rebuild_sh.html">rebuild.sh</a>
+  
+    <li><a href="../settings/discovery_ports.html">discovery_ports</a>
+  
+    <li><a href="../settings/google_keywords_txt.html">google_keywords</a>
+  
+    <li><a href="../settings/google_locator_txt.html">google_locator</a>
+  
+    <li><a href="../settings/tag_signatures.html">tag_signatures</a>
+  
+    <li><a href="../version_txt.html">version</a>
+  
+    <li><a href="../wmap_gemspec.html">wmap.gemspec</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page prh_data/crawler.log">
+
+<p>2018-12-13 09:25:10 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://getintoprep.com:81/
+Finish working on: http://getintoprep.com:81/</pre>
+
+<p>2018-12-13 09:25:10 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://atlantalistens.com/
+Finish working on: https://atlantalistens.com/</pre>
+
+<p>2018-12-13 09:25:11 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ashleybell.info/
+Finish working on: http://ashleybell.info/</pre>
+
+<p>2018-12-13 09:25:11 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://nalauthors.com:8443/
+Finish working on: http://nalauthors.com:8443/</pre>
+
+<p>2018-12-13 09:25:11 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://77shadowstreet.com/
+Finish working on: https://77shadowstreet.com/</pre>
+
+<p>2018-12-13 09:25:11 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://youwillnothavemyhate.com/
+Finish working on: http://youwillnothavemyhate.com/</pre>
+
+<p>2018-12-13 09:25:11 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://atlantalistens.com/
+Finish working on: http://atlantalistens.com/</pre>
+
+<p>2018-12-13 09:25:11 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://mail.williamgibsonbooks.com/
+Finish working on: http://mail.williamgibsonbooks.com/</pre>
+
+<p>2018-12-13 09:25:11 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://nalauthors.com/
+Finish working on: http://nalauthors.com/</pre>
+
+<p>2018-12-13 09:25:11 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://ashleybell.info/
+Finish working on: https://ashleybell.info/</pre>
+
+<p>2018-12-13 09:25:12 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://77shadowstreet.com/
+Finish working on: http://77shadowstreet.com/</pre>
+
+<p>2018-12-13 09:25:12 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.arianafranklinbooks.com/
+Finish working on: http://www.arianafranklinbooks.com/</pre>
+
+<p>2018-12-13 09:25:12 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://youwillnothavemyhate.com/
+Finish working on: https://youwillnothavemyhate.com/</pre>
+
+<p>2018-12-13 09:25:12 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://mail.williamgibsonbooks.com/
+Finish working on: https://mail.williamgibsonbooks.com/</pre>
+
+<p>2018-12-13 09:25:12 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://williamgibsonboard.com/
+Finish working on: https://williamgibsonboard.com/</pre>
+
+<p>2018-12-13 09:25:15 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.zadiesmith.com/
+Finish working on: http://www.zadiesmith.com/</pre>
+
+<p>2018-12-13 09:25:16 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.zadiesmith.com/
+Finish working on: https://www.zadiesmith.com/</pre>
+
+<p>2018-12-13 09:25:16 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://amyeinhorn.com/
+Finish working on: http://amyeinhorn.com/</pre>
+
+<p>2018-12-13 09:25:17 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://amyeinhorn.com/
+Finish working on: https://amyeinhorn.com/</pre>
+
+<p>2018-12-13 09:25:18 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.arianafranklinbooks.com:2096/
+Finish working on: http://www.arianafranklinbooks.com:2096/</pre>
+
+<p>2018-12-13 09:25:24 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.arianafranklinbooks.com/
+Finish working on: https://www.arianafranklinbooks.com/</pre>
+
+<p>2018-12-13 09:25:27 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.arianafranklinbooks.com:2086/
+Finish working on: http://www.arianafranklinbooks.com:2086/</pre>
+
+<p>2018-12-13 09:25:27 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.arianafranklinbooks.com:2087/
+Finish working on: http://www.arianafranklinbooks.com:2087/</pre>
+
+<p>2018-12-13 09:25:28 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.arianafranklinbooks.com:2095/
+Finish working on: http://www.arianafranklinbooks.com:2095/</pre>
+
+<p>2018-12-13 09:25:29 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://thepenguinpress.com/
+Finish working on: https://thepenguinpress.com/</pre>
+
+<p>2018-12-13 09:25:30 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://sophiestark.com/
+Finish working on: https://sophiestark.com/</pre>
+
+<p>2018-12-13 09:25:31 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://sheehan-book.com/
+Finish working on: https://sheehan-book.com/</pre>
+
+<p>2018-12-13 09:25:31 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://juliaalvarez.net/
+Finish working on: http://juliaalvarez.net/</pre>
+
+<p>2018-12-13 09:25:35 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://mail.figment.com/
+Finish working on: http://mail.figment.com/</pre>
+
+<p>2018-12-13 09:25:40 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.sophiestark.com/
+Finish working on: https://www.sophiestark.com/</pre>
+
+<p>2018-12-13 09:25:42 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://adultmadlibs.net/
+Finish working on: http://adultmadlibs.net/</pre>
+
+<p>2018-12-13 09:25:42 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://patthebunny.net/
+Finish working on: http://patthebunny.net/</pre>
+
+<p>2018-12-13 09:25:43 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.newrulesofliftingforabs.com/
+Finish working on: http://www.newrulesofliftingforabs.com/</pre>
+
+<p>2018-12-13 09:25:43 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://maddentips.com/
+Finish working on: http://maddentips.com/</pre>
+
+<p>2018-12-13 09:25:43 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://maddentips.com:2086/
+Finish working on: http://maddentips.com:2086/</pre>
+
+<p>2018-12-13 09:25:43 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://maddentips.com:2087/
+Finish working on: http://maddentips.com:2087/</pre>
+
+<p>2018-12-13 09:25:45 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://maddentips.com:2095/
+Finish working on: http://maddentips.com:2095/</pre>
+
+<p>2018-12-13 09:25:45 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://maddentips.com:2096/
+Finish working on: http://maddentips.com:2096/</pre>
+
+<p>2018-12-13 09:25:53 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://atrandom.com/
+Finish working on: http://atrandom.com/</pre>
+
+<p>2018-12-13 09:25:56 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ftp.getintoprep.com/
+Finish working on: http://ftp.getintoprep.com/</pre>
+
+<p>2018-12-13 09:25:57 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ftp.getintoprep.com:81/
+Finish working on: http://ftp.getintoprep.com:81/</pre>
+
+<p>2018-12-13 09:25:58 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://user.jerryspinelli.com/
+Finish working on: http://user.jerryspinelli.com/</pre>
+
+<p>2018-12-13 09:25:59 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://user.jerryspinelli.com/
+Finish working on: https://user.jerryspinelli.com/</pre>
+
+<p>2018-12-13 09:26:02 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://penguinradio.us/
+Finish working on: http://penguinradio.us/</pre>
+
+<p>2018-12-13 09:26:03 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.seussbirthdayclub.com/
+Finish working on: http://www.seussbirthdayclub.com/</pre>
+
+<p>2018-12-13 09:26:05 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.seussbirthdayclub.com/
+Finish working on: https://www.seussbirthdayclub.com/</pre>
+
+<p>2018-12-13 09:26:07 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://berkley.xxx/
+Finish working on: http://berkley.xxx/</pre>
+
+<p>2018-12-13 09:26:11 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://kristinhannah.net/
+Finish working on: http://kristinhannah.net/</pre>
+
+<p>2018-12-13 09:26:13 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://llamallamabook.com/
+Finish working on: http://llamallamabook.com/</pre>
+
+<p>2018-12-13 09:26:19 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://monsterbloodtattoo.com:9000/
+Finish working on: http://monsterbloodtattoo.com:9000/</pre>
+
+<p>2018-12-13 09:26:23 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://dashnerarmy.com/
+Finish working on: https://dashnerarmy.com/</pre>
+
+<p>2018-12-13 09:26:31 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://readminecraft.com:81/
+Finish working on: http://readminecraft.com:81/</pre>
+
+<p>2018-12-13 09:26:35 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://outofprintapparel.com/
+Finish working on: http://outofprintapparel.com/</pre>
+
+<p>2018-12-13 09:26:40 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://user.outofprintclothing.com/
+Finish working on: http://user.outofprintclothing.com/</pre>
+
+<p>2018-12-13 09:26:45 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://user.outofprintclothing.com/
+Finish working on: https://user.outofprintclothing.com/</pre>
+
+<p>2018-12-13 09:26:46 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://zadiesmith.com/
+Finish working on: https://zadiesmith.com/</pre>
+
+<p>2018-12-13 09:26:53 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://jamesleeburke.com:2086/
+Finish working on: http://jamesleeburke.com:2086/</pre>
+
+<p>2018-12-13 09:26:56 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://jamesleeburke.com:2096/
+Finish working on: http://jamesleeburke.com:2096/</pre>
+
+<p>2018-12-13 09:27:01 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://jamesleeburke.com:2087/
+Finish working on: http://jamesleeburke.com:2087/</pre>
+
+<p>2018-12-13 09:27:02 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://rosarygirls.com:2086/
+Finish working on: http://rosarygirls.com:2086/</pre>
+
+<p>2018-12-13 09:27:02 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://jamesleeburke.com:2095/
+Finish working on: http://jamesleeburke.com:2095/</pre>
+
+<p>2018-12-13 09:27:08 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://dreamanimalspicturebook.com/
+Finish working on: http://dreamanimalspicturebook.com/</pre>
+
+<p>2018-12-13 09:27:13 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://rosarygirls.com:2095/
+Finish working on: http://rosarygirls.com:2095/</pre>
+
+<p>2018-12-13 09:27:14 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://rosarygirls.com:2096/
+Finish working on: http://rosarygirls.com:2096/</pre>
+
+<p>2018-12-13 09:27:21 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://rosarygirls.com:2087/
+Finish working on: http://rosarygirls.com:2087/</pre>
+
+<p>2018-12-13 09:27:38 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://jerryspinelli.com/
+Finish working on: http://jerryspinelli.com/</pre>
+
+<p>2018-12-13 09:27:43 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://jerryspinelli.com/
+Finish working on: https://jerryspinelli.com/</pre>
+
+<p>2019-02-21 23:15:49 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://admin.firsttoread.co.uk/
+Finish working on: http://admin.firsttoread.co.uk/</pre>
+
+<p>2019-02-21 23:15:49 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.firsttoread.co.uk/
+Finish working on: http://www.firsttoread.co.uk/</pre>
+
+<p>2019-02-21 23:15:49 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.firsttoread.co.uk/
+Finish working on: https://www.firsttoread.co.uk/</pre>
+
+<p>2019-02-21 23:50:26 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://admin.first2read.co.uk/
+Finish working on: http://admin.first2read.co.uk/</pre>
+
+<p>2019-02-21 23:50:26 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://penguinstacks.co.uk/
+Finish working on: http://penguinstacks.co.uk/</pre>
+
+<p>2019-02-21 23:50:26 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://everymanpublishers.co.uk/
+Finish working on: https://everymanpublishers.co.uk/</pre>
+
+<p>2019-02-21 23:50:26 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://first2read.co.uk/
+Finish working on: https://first2read.co.uk/</pre>
+
+<p>2019-02-21 23:50:26 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://first2read.co.uk/
+Finish working on: http://first2read.co.uk/</pre>
+
+<p>2019-02-22 03:35:44 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://penguinrandomhouseeducation.com/
+Finish working on: https://penguinrandomhouseeducation.com/</pre>
+
+<p>2019-02-22 03:35:44 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://first2read.ca/
+Finish working on: https://first2read.ca/</pre>
+
+<p>2019-02-22 03:35:44 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://first2read.ca/
+Finish working on: http://first2read.ca/</pre>
+
+<p>2019-02-22 03:35:45 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://primagamestest.com/
+Finish working on: http://primagamestest.com/</pre>
+
+<p>2019-02-22 03:35:45 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://penguinrandomhouseeducation.com/
+Finish working on: http://penguinrandomhouseeducation.com/</pre>
+
+<p>2019-02-22 03:35:45 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://user.outofprintclothing.com/
+Finish working on: http://user.outofprintclothing.com/</pre>
+
+<p>2019-02-22 03:35:45 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://primagamestest.com/
+Finish working on: https://primagamestest.com/</pre>
+
+<p>2019-02-22 03:35:45 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://youwillnothavemyhate.com/
+Finish working on: http://youwillnothavemyhate.com/</pre>
+
+<p>2019-02-22 03:35:46 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://user.outofprintclothing.com/
+Finish working on: https://user.outofprintclothing.com/</pre>
+
+<p>2019-02-22 03:35:46 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://youwillnothavemyhate.com/
+Finish working on: https://youwillnothavemyhate.com/</pre>
+
+<p>2019-02-22 03:35:47 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://kristinhannah.net/
+Finish working on: http://kristinhannah.net/</pre>
+
+<p>2019-02-22 03:35:48 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://babylontrilogy.ca/
+Finish working on: http://babylontrilogy.ca/</pre>
+
+<p>2019-02-22 03:35:49 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://atrandom.com/
+Finish working on: http://atrandom.com/</pre>
+
+<p>2019-02-22 03:35:50 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://readminecraft.com:81/
+Finish working on: http://readminecraft.com:81/</pre>
+
+<p>2019-02-22 03:35:51 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://maddenseasonpass.com:2086/
+Finish working on: http://maddenseasonpass.com:2086/</pre>
+
+<p>2019-02-22 03:35:52 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://maddenseasonpass.com:2087/
+Finish working on: http://maddenseasonpass.com:2087/</pre>
+
+<p>2019-02-22 03:35:52 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://maddenseasonpass.com:2095/
+Finish working on: http://maddenseasonpass.com:2095/</pre>
+
+<p>2019-02-22 03:35:52 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://maddenseasonpass.com:2096/
+Finish working on: http://maddenseasonpass.com:2096/</pre>
+
+<p>2019-02-22 03:35:53 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://maddenseasonpass.com/
+Finish working on: http://maddenseasonpass.com/</pre>
+
+<p>2019-02-22 03:35:54 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ftp.getintoprep.com/
+Finish working on: http://ftp.getintoprep.com/</pre>
+
+<p>2019-02-22 03:35:55 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ftp.getintoprep.com:81/
+Finish working on: http://ftp.getintoprep.com:81/</pre>
+
+<p>2019-02-22 03:35:55 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://mail.figment.com/
+Finish working on: http://mail.figment.com/</pre>
+
+<p>2019-02-22 03:35:57 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://dreamanimalspicturebook.com/
+Finish working on: http://dreamanimalspicturebook.com/</pre>
+
+<p>2019-02-22 03:35:57 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://mail.davincicode.com/
+Finish working on: http://mail.davincicode.com/</pre>
+
+<p>2019-02-22 03:35:57 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://mail.davincicode.com/
+Finish working on: https://mail.davincicode.com/</pre>
+
+<p>2019-02-22 03:36:01 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://thepenguinpress.com/
+Finish working on: https://thepenguinpress.com/</pre>
+
+<p>2019-02-22 03:36:01 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://dashnerarmy.com/
+Finish working on: https://dashnerarmy.com/</pre>
+
+<p>2019-02-22 03:36:03 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ns2.maddenseasonpass.com/
+Finish working on: http://ns2.maddenseasonpass.com/</pre>
+
+<p>2019-02-22 03:36:04 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://berkleysensation.xxx/
+Finish working on: http://berkleysensation.xxx/</pre>
+
+<p>2019-02-22 03:36:06 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ns2.maddenseasonpass.com:2086/
+Finish working on: http://ns2.maddenseasonpass.com:2086/</pre>
+
+<p>2019-02-22 03:36:06 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ns2.maddenseasonpass.com:2087/
+Finish working on: http://ns2.maddenseasonpass.com:2087/</pre>
+
+<p>2019-02-22 03:36:06 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://user.jerryspinelli.com/
+Finish working on: http://user.jerryspinelli.com/</pre>
+
+<p>2019-02-22 03:36:06 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://user.jerryspinelli.com/
+Finish working on: https://user.jerryspinelli.com/</pre>
+
+<p>2019-02-22 03:36:07 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ns2.maddenseasonpass.com:2095/
+Finish working on: http://ns2.maddenseasonpass.com:2095/</pre>
+
+<p>2019-02-22 03:36:07 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ns2.maddenseasonpass.com:2096/
+Finish working on: http://ns2.maddenseasonpass.com:2096/</pre>
+
+<p>2019-02-22 03:36:08 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://randomhouseacademic.com/
+Finish working on: http://randomhouseacademic.com/</pre>
+
+<p>2019-02-22 03:36:09 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://randomhouseacademic.com/
+Finish working on: https://randomhouseacademic.com/</pre>
+
+<p>2019-02-22 03:36:10 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.sexloveanddharma.com:8443/
+Finish working on: http://www.sexloveanddharma.com:8443/</pre>
+
+<p>2019-02-22 03:36:10 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.sexloveanddharma.com:2095/
+Finish working on: http://www.sexloveanddharma.com:2095/</pre>
+
+<p>2019-02-22 03:36:12 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://eugenepeterson.com:2086/
+Finish working on: http://eugenepeterson.com:2086/</pre>
+
+<p>2019-02-22 03:36:12 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://eugenepeterson.com:2087/
+Finish working on: http://eugenepeterson.com:2087/</pre>
+
+<p>2019-02-22 03:36:12 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://eugenepeterson.com:2095/
+Finish working on: http://eugenepeterson.com:2095/</pre>
+
+<p>2019-02-22 03:36:12 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://eugenepeterson.com:2096/
+Finish working on: http://eugenepeterson.com:2096/</pre>
+
+<p>2019-02-22 03:36:13 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.hamishhamilton.ca/
+Finish working on: http://www.hamishhamilton.ca/</pre>
+
+<p>2019-02-22 03:36:13 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.hamishhamilton.ca/
+Finish working on: https://www.hamishhamilton.ca/</pre>
+
+<p>2019-02-22 03:36:17 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://jgrisham.com/
+Finish working on: http://jgrisham.com/</pre>
+
+<p>2019-02-22 03:36:20 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.sexloveanddharma.com:2087/
+Finish working on: http://www.sexloveanddharma.com:2087/</pre>
+
+<p>2019-02-22 03:36:20 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.sexloveanddharma.com:2096/
+Finish working on: http://www.sexloveanddharma.com:2096/</pre>
+
+<p>2019-02-22 03:36:20 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.sexloveanddharma.com:2086/
+Finish working on: http://www.sexloveanddharma.com:2086/</pre>
+
+<p>2019-02-22 03:36:20 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.sexloveanddharma.com/
+Finish working on: https://www.sexloveanddharma.com/</pre>
+
+<p>2019-02-22 03:36:20 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.sexloveanddharma.com:8080/
+Finish working on: http://www.sexloveanddharma.com:8080/</pre>
+
+<p>2019-02-22 03:36:20 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.sexloveanddharma.com/
+Finish working on: http://www.sexloveanddharma.com/</pre>
+
+<p>2019-02-22 03:36:24 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://admin.first2read.ca/
+Finish working on: http://admin.first2read.ca/</pre>
+
+<p>2019-02-22 03:36:24 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://hamishhamilton.ca/
+Finish working on: http://hamishhamilton.ca/</pre>
+
+<p>2019-02-22 03:36:26 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://rosarygirls.com:2087/
+Finish working on: http://rosarygirls.com:2087/</pre>
+
+<p>2019-02-22 03:36:28 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://rosarygirls.com:2095/
+Finish working on: http://rosarygirls.com:2095/</pre>
+
+<p>2019-02-22 03:36:31 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://42words.com/
+Finish working on: http://42words.com/</pre>
+
+<p>2019-02-22 03:36:34 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://rosarygirls.com:2086/
+Finish working on: http://rosarygirls.com:2086/</pre>
+
+<p>2019-02-22 03:36:36 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.arianafranklinbooks.com/
+Finish working on: http://www.arianafranklinbooks.com/</pre>
+
+<p>2019-02-22 03:36:37 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://rosarygirls.com:2096/
+Finish working on: http://rosarygirls.com:2096/</pre>
+
+<p>2019-02-22 03:36:41 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://hamishhamilton.ca/
+Finish working on: https://hamishhamilton.ca/</pre>
+
+<p>2019-02-22 03:36:49 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.sophiestark.com/
+Finish working on: https://www.sophiestark.com/</pre>
+
+<p>2019-02-22 03:36:53 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.arianafranklinbooks.com/
+Finish working on: https://www.arianafranklinbooks.com/</pre>
+
+<p>2019-02-22 03:36:53 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.caminoisland.com/
+Finish working on: https://www.caminoisland.com/</pre>
+
+<p>2019-02-22 03:36:54 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://americangrown.com/
+Finish working on: https://americangrown.com/</pre>
+
+<p>2019-02-22 03:36:54 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.arianafranklinbooks.com:2087/
+Finish working on: http://www.arianafranklinbooks.com:2087/</pre>
+
+<p>2019-02-22 03:36:54 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.arianafranklinbooks.com:2086/
+Finish working on: http://www.arianafranklinbooks.com:2086/</pre>
+
+<p>2019-02-22 03:36:56 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.arianafranklinbooks.com:2095/
+Finish working on: http://www.arianafranklinbooks.com:2095/</pre>
+
+<p>2019-02-22 03:36:56 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.arianafranklinbooks.com:2096/
+Finish working on: http://www.arianafranklinbooks.com:2096/</pre>
+
+<p>2019-02-22 03:37:05 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://amyeinhorn.com/
+Finish working on: http://amyeinhorn.com/</pre>
+
+<p>2019-02-22 03:37:09 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://penguinstacks.ca/
+Finish working on: http://penguinstacks.ca/</pre>
+
+<p>2019-02-22 03:37:09 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://amyeinhorn.com/
+Finish working on: https://amyeinhorn.com/</pre>
+
+<p>2019-02-22 03:37:09 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://llamallamabook.com/
+Finish working on: http://llamallamabook.com/</pre>
+
+<p>2019-02-22 03:37:25 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.christopherreich.com:8443/
+Finish working on: http://www.christopherreich.com:8443/</pre>
+
+<p>2019-02-22 03:37:25 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.christopherreich.com:2087/
+Finish working on: http://www.christopherreich.com:2087/</pre>
+
+<p>2019-02-22 03:37:25 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.christopherreich.com:2095/
+Finish working on: http://www.christopherreich.com:2095/</pre>
+
+<p>2019-02-22 03:37:29 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.christopherreich.com:2096/
+Finish working on: http://www.christopherreich.com:2096/</pre>
+
+<p>2019-02-22 03:37:29 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.christopherreich.com/
+Finish working on: https://www.christopherreich.com/</pre>
+
+<p>2019-02-22 03:37:29 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.christopherreich.com:2086/
+Finish working on: http://www.christopherreich.com:2086/</pre>
+
+<p>2019-02-22 03:37:29 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://clarksonpotter.biz/
+Finish working on: http://clarksonpotter.biz/</pre>
+
+<p>2019-02-22 03:37:30 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://thewishworksfactory.com/
+Finish working on: https://thewishworksfactory.com/</pre>
+
+<p>2019-02-22 03:37:30 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://thewishworksfactory.com:2086/
+Finish working on: http://thewishworksfactory.com:2086/</pre>
+
+<p>2019-02-22 03:37:32 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://thewishworksfactory.com:2087/
+Finish working on: http://thewishworksfactory.com:2087/</pre>
+
+<p>2019-02-22 03:37:33 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://thewishworksfactory.com:2095/
+Finish working on: http://thewishworksfactory.com:2095/</pre>
+
+<p>2019-02-22 03:37:33 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://thewishworksfactory.com:2096/
+Finish working on: http://thewishworksfactory.com:2096/</pre>
+
+<p>2019-02-22 03:37:34 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.christopherreich.com:8080/
+Finish working on: http://www.christopherreich.com:8080/</pre>
+
+<p>2019-02-22 03:37:38 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.philliptown.com/
+Finish working on: http://www.philliptown.com/</pre>
+
+<p>2019-02-22 03:37:38 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://mail.williamgibsonbooks.com/
+Finish working on: http://mail.williamgibsonbooks.com/</pre>
+
+<p>2019-02-22 03:37:38 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://mail.williamgibsonbooks.com/
+Finish working on: https://mail.williamgibsonbooks.com/</pre>
+
+<p>2019-02-22 03:37:44 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://williamgibsonboard.com/
+Finish working on: https://williamgibsonboard.com/</pre>
+
+<p>2019-02-22 03:37:44 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://williamgibsonboard.com/
+Finish working on: http://williamgibsonboard.com/</pre>
+
+<p>2019-02-22 03:37:47 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.philliptown.com:2086/
+Finish working on: http://www.philliptown.com:2086/</pre>
+
+<p>2019-02-22 03:37:47 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.philliptown.com:2096/
+Finish working on: http://www.philliptown.com:2096/</pre>
+
+<p>2019-02-22 03:37:47 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.philliptown.com:2087/
+Finish working on: http://www.philliptown.com:2087/</pre>
+
+<p>2019-02-22 03:37:48 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.philliptown.com/
+Finish working on: https://www.philliptown.com/</pre>
+
+<p>2019-02-22 03:37:48 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://tastebook.tv/
+Finish working on: http://tastebook.tv/</pre>
+
+<p>2019-02-22 03:37:49 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://tastebook.tv/
+Finish working on: https://tastebook.tv/</pre>
+
+<p>2019-02-22 03:37:49 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://stormoperatives.com/
+Finish working on: http://stormoperatives.com/</pre>
+
+<p>2019-02-22 03:37:50 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://stormoperatives.com/
+Finish working on: https://stormoperatives.com/</pre>
+
+<p>2019-02-22 03:37:50 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.philliptown.com:2095/
+Finish working on: http://www.philliptown.com:2095/</pre>
+
+<p>2019-02-22 03:37:50 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://davidakaplan.com/
+Finish working on: http://davidakaplan.com/</pre>
+
+<p>2019-02-22 03:37:50 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://40minutebiblestudies.com/
+Finish working on: http://40minutebiblestudies.com/</pre>
+
+<p>2019-02-22 03:37:51 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://lastkidsonearth.com/
+Finish working on: http://lastkidsonearth.com/</pre>
+
+<p>2019-02-22 03:37:51 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://talesofthepeculiar.com/
+Finish working on: http://talesofthepeculiar.com/</pre>
+
+<p>2019-02-22 03:37:52 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://monsterbloodtattoo.com:9000/
+Finish working on: http://monsterbloodtattoo.com:9000/</pre>
+
+<p>2019-02-22 03:37:52 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://talesofthepeculiar.com/
+Finish working on: https://talesofthepeculiar.com/</pre>
+
+<p>2019-02-22 03:37:55 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://sheehan-book.com/
+Finish working on: https://sheehan-book.com/</pre>
+
+<p>2019-02-22 03:37:56 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.seussville.com/
+Finish working on: http://www.seussville.com/</pre>
+
+<p>2019-02-22 03:37:56 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://100yearsofanne.ca/
+Finish working on: http://100yearsofanne.ca/</pre>
+
+<p>2019-02-22 03:37:56 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://www.seussville.com/
+Finish working on: https://www.seussville.com/</pre>
+
+<p>2019-02-22 03:37:56 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://8thcontinentbooks.com/
+Finish working on: https://8thcontinentbooks.com/</pre>
+
+<p>2019-02-22 03:37:57 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.philliptown.com:8443/
+Finish working on: http://www.philliptown.com:8443/</pre>
+
+<p>2019-02-22 03:37:57 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://www.philliptown.com:8080/
+Finish working on: http://www.philliptown.com:8080/</pre>
+
+<p>2019-02-22 03:38:04 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://raupopublishing.co.nz/
+Finish working on: http://raupopublishing.co.nz/</pre>
+
+<p>2019-02-22 03:38:06 -0500: UrlCrawler:</p>
+
+<pre>Start working on https://raupopublishing.co.nz/
+Finish working on: https://raupopublishing.co.nz/</pre>
+
+<p>2019-02-22 03:38:13 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://ace.xxx/
+Finish working on: http://ace.xxx/</pre>
+
+<p>2019-02-22 03:43:21 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://alexandrialink.com/
+Finish working on: http://alexandrialink.com/</pre>
+
+<p>2019-02-24 22:09:49 -0500: UrlCrawler:</p>
+
+<pre>Start working on http://user.100yearsofanne.com/
+Finish working on: http://user.100yearsofanne.com/</pre>
+
+<p>2019-04-13 12:04:59 -0400: UrlCrawler:</p>
+
+<pre>Start working on http://www.lcbhome.com/
+Finish working on: http://www.lcbhome.com/</pre>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

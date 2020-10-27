@@ -66,9 +66,12 @@ class DomainsController < ApplicationController
       Dir.mkdir(dir, 0750) unless Dir.exist?(dir)
       file = dir.join('domains')
       File.new(file, 'w+') unless File.exist?(file)
+      f = File.open(file, 'r')
+      @restore = ''
+      f.each_line { |line| @restore += line }
+      f.close
     end
 
-=begin
     # Save user import
     def save_import
       if platinum_user_and_above?
@@ -104,7 +107,7 @@ class DomainsController < ApplicationController
       file.close
       render json: { message: 'Saving failed, please check your file again or contact the site administrator.' }
     end
-=end
+
     def update
       if platinum_user_and_above?
         logger.debug "Current_user attributes: #{current_user.inspect}"

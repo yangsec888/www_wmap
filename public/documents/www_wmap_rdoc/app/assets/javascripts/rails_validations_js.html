@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>rails.validations.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/darkfish.js"></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link href="../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../Dockerfile.html">Dockerfile</a>
+  
+    <li><a href="../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../Readme_md.html">Readme</a>
+  
+    <li><a href="../../../Setup_md.html">Setup</a>
+  
+    <li><a href="../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/cidrs_coffee.html">cidrs.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/codemirror_js.html">codemirror.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/domain_map_js.html">domain_map.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/domains_coffee.html">domains.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/hosts_coffee.html">hosts.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/jstree_js.html">jstree.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/jstree_min_js.html">jstree.min.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/logs_coffee.html">logs.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/popper_js.html">popper.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/popup_js.html">popup.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/rails_validations_js.html">rails.validations.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/reports_coffee.html">reports.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/sites_coffee.html">sites.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/tags_coffee.html">tags.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/yaml_js.html">yaml.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/yml_settings_js.html">yml_settings.js</a>
+  
+    <li><a href="../../../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/bootstrap_and_overrides_css.html">bootstrap_and_overrides.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/cidrs_scss.html">cidrs.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/codemirror_css.html">codemirror.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/domains_scss.html">domains.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/hosts_scss.html">hosts.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/jstree_css.html">jstree.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/jstree_min_css.html">jstree.min.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/logs_scss.html">logs.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/popup_css.html">popup.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/reports_scss.html">reports.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/sites_scss.html">sites.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/tags_scss.html">tags.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/yml_settings_scss.html">yml_settings.scss</a>
+  
+    <li><a href="../../../app/views/reports/_report_json_jbuilder.html">_report.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/reports/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/reports/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/sites/show_html_erb_old.html">show.html.erb.old</a>
+  
+    <li><a href="../../../bin/deploy_wmap_sh.html">deploy_wmap.sh</a>
+  
+    <li><a href="../../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../../config/credentials_yml_enc.html">credentials.yml.enc</a>
+  
+    <li><a href="../../../config/docker/asset-pre-compile_sh.html">asset-pre-compile.sh</a>
+  
+    <li><a href="../../../config/docker/entrypoint_sh.html">entrypoint.sh</a>
+  
+    <li><a href="../../../config/docker/prepare-db_sh.html">prepare-db.sh</a>
+  
+    <li><a href="../../../config/docker/start_sh.html">start.sh</a>
+  
+    <li><a href="../../../config/master_key.html">master.key</a>
+  
+    <li><a href="../../../config/nginx_conf.html">nginx.conf</a>
+  
+    <li><a href="../../../config/redis_conf.html">redis.conf</a>
+  
+    <li><a href="../../../config/systemd/main_cf.html">main.cf</a>
+  
+    <li><a href="../../../config/systemd/nginx_service.html">nginx.service</a>
+  
+    <li><a href="../../../config/systemd/redis_service.html">redis.service</a>
+  
+    <li><a href="../../../config/systemd/sidekiq_service.html">sidekiq.service</a>
+  
+    <li><a href="../../../lib/tasks/rdoc_rake.html">rdoc.rake</a>
+  
+    <li><a href="../../../lib/tasks/sync_rake.html">sync.rake</a>
+  
+    <li><a href="../../../lib/tasks/wmap_rake.html">wmap.rake</a>
+  
+    <li><a href="../../../log/development_log.html">development.log</a>
+  
+    <li><a href="../../../log/puma_stderr_log.html">puma.stderr.log</a>
+  
+    <li><a href="../../../log/puma_stdout_log.html">puma.stdout.log</a>
+  
+    <li><a href="../../../log/sidekiq_log.html">sidekiq.log</a>
+  
+    <li><a href="../../../package-lock_json.html">package-lock.json</a>
+  
+    <li><a href="../../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../../public/assets/application-063a6bd4ee6aa5f787fd83f38089b08e2b9a7262c6e4f749c4c21c22ba99c83f_css.html">application-063a6bd4ee6aa5f787fd83f38089b08e2b9a7262c6e4f749c4c21c22ba99c83f.css</a>
+  
+    <li><a href="../../../public/assets/application-de86c8163994c5a9d66f66d7b3c93aa3decbabea330334d4fdf164e1a3b6d616_js.html">application-de86c8163994c5a9d66f66d7b3c93aa3decbabea330334d4fdf164e1a3b6d616.js</a>
+  
+    <li><a href="../../../public/assets/application-fbc0ca1b5b1b4d1dd3d8f9626710f527f7e154f13661ef9f721262b0421ab9f9_css.html">application-fbc0ca1b5b1b4d1dd3d8f9626710f527f7e154f13661ef9f721262b0421ab9f9.css</a>
+  
+    <li><a href="../../../public/assets/codemirror-4fc3fe9f207458690501ffca79f799333752dff031ce9d2bfffbe67ad65eb23a_css.html">codemirror-4fc3fe9f207458690501ffca79f799333752dff031ce9d2bfffbe67ad65eb23a.css</a>
+  
+    <li><a href="../../../public/assets/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5_svg.html">glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg</a>
+  
+    <li><a href="../../../public/assets/hosts-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05_js.html">hosts-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js</a>
+  
+    <li><a href="../../../public/assets/jstree_min-487bd81b69d667265667f45bdab0ff83f0a108b3570da4380eda70486b9e2db3_css.html">jstree.min-487bd81b69d667265667f45bdab0ff83f0a108b3570da4380eda70486b9e2db3.css</a>
+  
+    <li><a href="../../../public/assets/jstree_min-9904f000b38ec8e834e2e237b535e042e14eb62f3eeeebdc1dcd008f17f05e94_css.html">jstree.min-9904f000b38ec8e834e2e237b535e042e14eb62f3eeeebdc1dcd008f17f05e94.css</a>
+  
+    <li><a href="../../../public/assets/jstree_min-e38f0421e4cc9b47a3cd68c8a2552e1a898942b5bd5ea57910e194932a378760_js.html">jstree.min-e38f0421e4cc9b47a3cd68c8a2552e1a898942b5bd5ea57910e194932a378760.js</a>
+  
+    <li><a href="../../../public/assets/popup-2b9450ea834a6181296800bf1b75997c73b4eac5495fbdc5239fc0512d31c182_js.html">popup-2b9450ea834a6181296800bf1b75997c73b4eac5495fbdc5239fc0512d31c182.js</a>
+  
+    <li><a href="../../../public/assets/yaml-813a4722938752a1eb3c02f6cf883b30094d6f12e141c51bda411c5164c3d4aa_js.html">yaml-813a4722938752a1eb3c02f6cf883b30094d6f12e141c51bda411c5164c3d4aa.js</a>
+  
+    <li><a href="../../../public/assets/yml_settings-52928a9d045e6bbfae71495c925605341684f629d8764dbae387e91e00110fa7_js.html">yml_settings-52928a9d045e6bbfae71495c925605341684f629d8764dbae387e91e00110fa7.js</a>
+  
+    <li><a href="../../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../../shared/data/cidrs.html">cidrs</a>
+  
+    <li><a href="../../../shared/data/deactivated_sites.html">deactivated_sites</a>
+  
+    <li><a href="../../../shared/data/domains.html">domains</a>
+  
+    <li><a href="../../../shared/data/hosts.html">hosts</a>
+  
+    <li><a href="../../../shared/data/logs/discovered_sites_log.html">discovered_sites.log</a>
+  
+    <li><a href="../../../shared/data/logs/discovered_urls_log.html">discovered_urls.log</a>
+  
+    <li><a href="../../../shared/data/logs/url_seeds_log.html">url_seeds.log</a>
+  
+    <li><a href="../../../shared/data/logs/wmap_log.html">wmap.log</a>
+  
+    <li><a href="../../../shared/data/seed.html">seed</a>
+  
+    <li><a href="../../../shared/data/sites.html">sites</a>
+  
+    <li><a href="../../../shared/log/development_log.html">development.log</a>
+  
+    <li><a href="../../../shared/log/puma_stderr_log.html">puma.stderr.log</a>
+  
+    <li><a href="../../../shared/log/puma_stdout_log.html">puma.stdout.log</a>
+  
+    <li><a href="../../../shared/log/sidekiq_log.html">sidekiq.log</a>
+  
+    <li><a href="../../../shared/tmp/puma_state.html">puma.state</a>
+  
+    <li><a href="../../../tmp/pids/sidekiq_pid.html">sidekiq.pid</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page app/assets/javascripts/rails.validations.js">
+
+<pre>!
+ Client Side Validations - v13.0.0 (https://github.com/DavyJonesLocker/client_side_validations)
+ Copyright (c) 2019 Geremia Taglialatela, Brian Cardarella
+ Licensed under MIT (http://opensource.org/licenses/mit-license.php)</pre>
+
+<p>(function() {</p>
+
+<pre>var $, ClientSideValidations, initializeOnEvent, validateElement, validateForm, validatorsFor,
+  indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i &lt; l; i++) { if (i in this &amp;&amp; this[i] === item) return i; } return -1; };
+
+$ = jQuery;
+
+$.fn.disableClientSideValidations = function() {
+  ClientSideValidations.disable(this);
+  return this;
+};
+
+$.fn.enableClientSideValidations = function() {
+  this.filter(ClientSideValidations.selectors.forms).each(function() {
+    return ClientSideValidations.enablers.form(this);
+  });
+  this.filter(ClientSideValidations.selectors.inputs).each(function() {
+    return ClientSideValidations.enablers.input(this);
+  });
+  return this;
+};
+
+$.fn.resetClientSideValidations = function() {
+  this.filter(ClientSideValidations.selectors.forms).each(function() {
+    return ClientSideValidations.reset(this);
+  });
+  return this;
+};
+
+$.fn.validate = function() {
+  this.filter(ClientSideValidations.selectors.forms).each(function() {
+    return $(this).enableClientSideValidations();
+  });
+  return this;
+};
+
+$.fn.isValid = function(validators) {
+  var obj;
+  obj = $(this[0]);
+  if (obj.is(&#39;form&#39;)) {
+    return validateForm(obj, validators);
+  } else {
+    return validateElement(obj, validatorsFor(this[0].name, validators));
+  }
+};
+
+validatorsFor = function(name, validators) {
+  var captures, validator, validator_name;
+  if (validators.hasOwnProperty(name)) {
+    return validators[name];
+  }
+  name = name.replace(/\[(\w+_attributes)\]\[[\da-z_]+\](?=\[(?:\w+_attributes)\])/g, &#39;[$1][]&#39;);
+  if (captures = name.match(/\[(\w+_attributes)\].*\[(\w+)\]$/)) {
+    for (validator_name in validators) {
+      validator = validators[validator_name];
+      if (validator_name.match(&quot;\\[&quot; + captures[1] + &quot;\\].*\\[\\]\\[&quot; + captures[2] + &quot;\\]$&quot;)) {
+        name = name.replace(/\[[\da-z_]+\]\[(\w+)\]$/g, &#39;[][$1]&#39;);
+      }
+    }
+  }
+  return validators[name] || {};
+};
+
+validateForm = function(form, validators) {
+  var valid;
+  form.trigger(&#39;form:validate:before.ClientSideValidations&#39;);
+  valid = true;
+  form.find(ClientSideValidations.selectors.validate_inputs).each(function() {
+    if (!$(this).isValid(validators)) {
+      valid = false;
+    }
+    return true;
+  });
+  if (valid) {
+    form.trigger(&#39;form:validate:pass.ClientSideValidations&#39;);
+  } else {
+    form.trigger(&#39;form:validate:fail.ClientSideValidations&#39;);
+  }
+  form.trigger(&#39;form:validate:after.ClientSideValidations&#39;);
+  return valid;
+};
+
+validateElement = function(element, validators) {
+  var afterValidate, destroyInputName, executeValidators, failElement, local, passElement, remote;
+  element.trigger(&#39;element:validate:before.ClientSideValidations&#39;);
+  passElement = function() {
+    return element.trigger(&#39;element:validate:pass.ClientSideValidations&#39;).data(&#39;valid&#39;, null);
+  };
+  failElement = function(message) {
+    element.trigger(&#39;element:validate:fail.ClientSideValidations&#39;, message).data(&#39;valid&#39;, false);
+    return false;
+  };
+  afterValidate = function() {
+    return element.trigger(&#39;element:validate:after.ClientSideValidations&#39;).data(&#39;valid&#39;) !== false;
+  };
+  executeValidators = function(context) {
+    var fn, i, kind, len, message, ref, valid, validator;
+    valid = true;
+    for (kind in context) {
+      fn = context[kind];
+      if (validators[kind]) {
+        ref = validators[kind];
+        for (i = 0, len = ref.length; i &lt; len; i++) {
+          validator = ref[i];
+          if (message = fn.call(context, element, validator)) {
+            valid = failElement(message);
+            break;
+          }
+        }
+        if (!valid) {
+          break;
+        }
+      }
+    }
+    return valid;
+  };
+  if (element.attr(&#39;name&#39;).search(/\[([^\]]*?)\]$/) &gt;= 0) {
+    destroyInputName = element.attr(&#39;name&#39;).replace(/\[([^\]]*?)\]$/, &#39;[_destroy]&#39;);
+    if ($(&quot;input[name=&#39;&quot; + destroyInputName + &quot;&#39;]&quot;).val() === &#39;1&#39;) {
+      passElement();
+      return afterValidate();
+    }
+  }
+  if (element.data(&#39;changed&#39;) === false) {
+    return afterValidate();
+  }
+  element.data(&#39;changed&#39;, false);
+  local = ClientSideValidations.validators.local;
+  remote = ClientSideValidations.validators.remote;
+  if (executeValidators(local) &amp;&amp; executeValidators(remote)) {
+    passElement();
+  }
+  return afterValidate();
+};
+
+ClientSideValidations = {
+  callbacks: {
+    element: {
+      after: function(element, eventData) {},
+      before: function(element, eventData) {},
+      fail: function(element, message, addError, eventData) {
+        return addError();
+      },
+      pass: function(element, removeError, eventData) {
+        return removeError();
+      }
+    },
+    form: {
+      after: function(form, eventData) {},
+      before: function(form, eventData) {},
+      fail: function(form, eventData) {},
+      pass: function(form, eventData) {}
+    }
+  },
+  enablers: {
+    form: function(form) {
+      var $form, binding, event, ref;
+      $form = $(form);
+      form.ClientSideValidations = {
+        settings: $form.data(&#39;clientSideValidations&#39;),
+        addError: function(element, message) {
+          return ClientSideValidations.formBuilders[form.ClientSideValidations.settings.html_settings.type].add(element, form.ClientSideValidations.settings.html_settings, message);
+        },
+        removeError: function(element) {
+          return ClientSideValidations.formBuilders[form.ClientSideValidations.settings.html_settings.type].remove(element, form.ClientSideValidations.settings.html_settings);
+        }
+      };
+      ref = {
+        &#39;submit.ClientSideValidations&#39;: function(eventData) {
+          if (!$form.isValid(form.ClientSideValidations.settings.validators)) {
+            eventData.preventDefault();
+            eventData.stopImmediatePropagation();
+          }
+        },
+        &#39;ajax:beforeSend.ClientSideValidations&#39;: function(eventData) {
+          if (eventData.target === this) {
+            $form.isValid(form.ClientSideValidations.settings.validators);
+          }
+        },
+        &#39;form:validate:after.ClientSideValidations&#39;: function(eventData) {
+          ClientSideValidations.callbacks.form.after($form, eventData);
+        },
+        &#39;form:validate:before.ClientSideValidations&#39;: function(eventData) {
+          ClientSideValidations.callbacks.form.before($form, eventData);
+        },
+        &#39;form:validate:fail.ClientSideValidations&#39;: function(eventData) {
+          ClientSideValidations.callbacks.form.fail($form, eventData);
+        },
+        &#39;form:validate:pass.ClientSideValidations&#39;: function(eventData) {
+          ClientSideValidations.callbacks.form.pass($form, eventData);
+        }
+      };
+      for (event in ref) {
+        binding = ref[event];
+        $form.on(event, binding);
+      }
+      return $form.find(ClientSideValidations.selectors.inputs).each(function() {
+        return ClientSideValidations.enablers.input(this);
+      });
+    },
+    input: function(input) {
+      var $form, $input, binding, event, form, ref;
+      $input = $(input);
+      form = input.form;
+      $form = $(form);
+      ref = {
+        &#39;focusout.ClientSideValidations&#39;: function() {
+          $(this).isValid(form.ClientSideValidations.settings.validators);
+        },
+        &#39;change.ClientSideValidations&#39;: function() {
+          $(this).data(&#39;changed&#39;, true);
+        },
+        &#39;element:validate:after.ClientSideValidations&#39;: function(eventData) {
+          ClientSideValidations.callbacks.element.after($(this), eventData);
+        },
+        &#39;element:validate:before.ClientSideValidations&#39;: function(eventData) {
+          ClientSideValidations.callbacks.element.before($(this), eventData);
+        },
+        &#39;element:validate:fail.ClientSideValidations&#39;: function(eventData, message) {
+          var element;
+          element = $(this);
+          ClientSideValidations.callbacks.element.fail(element, message, function() {
+            return form.ClientSideValidations.addError(element, message);
+          }, eventData);
+        },
+        &#39;element:validate:pass.ClientSideValidations&#39;: function(eventData) {
+          var element;
+          element = $(this);
+          ClientSideValidations.callbacks.element.pass(element, function() {
+            return form.ClientSideValidations.removeError(element);
+          }, eventData);
+        }
+      };
+      for (event in ref) {
+        binding = ref[event];
+        $input.filter(&#39;:not(:radio):not([id$=_confirmation])&#39;).each(function() {
+          return $(this).attr(&#39;data-validate&#39;, true);
+        }).on(event, binding);
+      }
+      $input.filter(&#39;:checkbox&#39;).on(&#39;change.ClientSideValidations&#39;, function() {
+        $(this).isValid(form.ClientSideValidations.settings.validators);
+      });
+      return $input.filter(&#39;[id$=_confirmation]&#39;).each(function() {
+        var confirmationElement, element, ref1, results;
+        confirmationElement = $(this);
+        element = $form.find(&quot;#&quot; + (this.id.match(/(.+)_confirmation/)[1]) + &quot;:input&quot;);
+        if (element[0]) {
+          ref1 = {
+            &#39;focusout.ClientSideValidations&#39;: function() {
+              element.data(&#39;changed&#39;, true).isValid(form.ClientSideValidations.settings.validators);
+            },
+            &#39;keyup.ClientSideValidations&#39;: function() {
+              element.data(&#39;changed&#39;, true).isValid(form.ClientSideValidations.settings.validators);
+            }
+          };
+          results = [];
+          for (event in ref1) {
+            binding = ref1[event];
+            results.push($(&quot;#&quot; + (confirmationElement.attr(&#39;id&#39;))).on(event, binding));
+          }
+          return results;
+        }
+      });
+    }
+  },
+  formBuilders: {
+    &#39;ActionView::Helpers::FormBuilder&#39;: {
+      add: function(element, settings, message) {
+        var form, inputErrorField, label, labelErrorField;
+        form = $(element[0].form);
+        if (element.data(&#39;valid&#39;) !== false &amp;&amp; (form.find(&quot;label.message[for=&#39;&quot; + (element.attr(&#39;id&#39;)) + &quot;&#39;]&quot;)[0] == null)) {
+          inputErrorField = $(settings.input_tag);
+          labelErrorField = $(settings.label_tag);
+          label = form.find(&quot;label[for=&#39;&quot; + (element.attr(&#39;id&#39;)) + &quot;&#39;]:not(.message)&quot;);
+          if (element.attr(&#39;autofocus&#39;)) {
+            element.attr(&#39;autofocus&#39;, false);
+          }
+          element.before(inputErrorField);
+          inputErrorField.find(&#39;span#input_tag&#39;).replaceWith(element);
+          inputErrorField.find(&#39;label.message&#39;).attr(&#39;for&#39;, element.attr(&#39;id&#39;));
+          labelErrorField.find(&#39;label.message&#39;).attr(&#39;for&#39;, element.attr(&#39;id&#39;));
+          labelErrorField.insertAfter(label);
+          labelErrorField.find(&#39;label#label_tag&#39;).replaceWith(label);
+        }
+        return form.find(&quot;label.message[for=&#39;&quot; + (element.attr(&#39;id&#39;)) + &quot;&#39;]&quot;).text(message);
+      },
+      remove: function(element, settings) {
+        var errorFieldClass, form, inputErrorField, label, labelErrorField;
+        form = $(element[0].form);
+        errorFieldClass = $(settings.input_tag).attr(&#39;class&#39;);
+        inputErrorField = element.closest(&quot;.&quot; + (errorFieldClass.replace(/\ /g, &quot;.&quot;)));
+        label = form.find(&quot;label[for=&#39;&quot; + (element.attr(&#39;id&#39;)) + &quot;&#39;]:not(.message)&quot;);
+        labelErrorField = label.closest(&quot;.&quot; + errorFieldClass);
+        if (inputErrorField[0]) {
+          inputErrorField.find(&quot;#&quot; + (element.attr(&#39;id&#39;))).detach();
+          inputErrorField.replaceWith(element);
+          label.detach();
+          return labelErrorField.replaceWith(label);
+        }
+      }
+    }
+  },
+  patterns: {
+    numericality: {
+      &quot;default&quot;: new RegExp(&#39;^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$&#39;),
+      only_integer: new RegExp(&#39;^[+-]?\\d+$&#39;)
+    }
+  },
+  selectors: {
+    inputs: &#39;:input:not(button):not([type=&quot;submit&quot;])[name]:visible:enabled&#39;,
+    validate_inputs: &#39;:input:enabled:visible[data-validate]&#39;,
+    forms: &#39;form[data-client-side-validations]&#39;
+  },
+  validators: {
+    all: function() {
+      return $.extend({}, local, remote);
+    },
+    local: {
+      absence: function(element, options) {
+        if (!/^\s*$/.test(element.val() || &#39;&#39;)) {
+          return options.message;
+        }
+      },
+      presence: function(element, options) {
+        if (/^\s*$/.test(element.val() || &#39;&#39;)) {
+          return options.message;
+        }
+      },
+      acceptance: function(element, options) {
+        var ref;
+        switch (element.attr(&#39;type&#39;)) {
+          case &#39;checkbox&#39;:
+            if (!element.prop(&#39;checked&#39;)) {
+              return options.message;
+            }
+            break;
+          case &#39;text&#39;:
+            if (element.val() !== (((ref = options.accept) != null ? ref.toString() : void 0) || &#39;1&#39;)) {
+              return options.message;
+            }
+        }
+      },
+      format: function(element, options) {
+        var message;
+        message = this.presence(element, options);
+        if (message) {
+          if (options.allow_blank === true) {
+            return;
+          }
+          return message;
+        }
+        if (options[&quot;with&quot;] &amp;&amp; !new RegExp(options[&quot;with&quot;].source, options[&quot;with&quot;].options).test(element.val())) {
+          return options.message;
+        }
+        if (options.without &amp;&amp; new RegExp(options.without.source, options.without.options).test(element.val())) {
+          return options.message;
+        }
+      },
+      numericality: function(element, options) {
+        var $form, NUMERICALITY_CHECKS, check, checkValue, check_function, number_format, val;
+        if (options.allow_blank === true &amp;&amp; this.presence(element, {
+          message: options.messages.numericality
+        })) {
+          return;
+        }
+        $form = $(element[0].form);
+        number_format = $form[0].ClientSideValidations.settings.number_format;
+        val = $.trim(element.val()).replace(new RegExp(&quot;\\&quot; + number_format.separator, &#39;g&#39;), &#39;.&#39;);
+        if (options.only_integer &amp;&amp; !ClientSideValidations.patterns.numericality.only_integer.test(val)) {
+          return options.messages.only_integer;
+        }
+        if (!ClientSideValidations.patterns.numericality[&quot;default&quot;].test(val)) {
+          return options.messages.numericality;
+        }
+        NUMERICALITY_CHECKS = {
+          greater_than: function(a, b) {
+            return a &gt; b;
+          },
+          greater_than_or_equal_to: function(a, b) {
+            return a &gt;= b;
+          },
+          equal_to: function(a, b) {
+            return a === b;
+          },
+          less_than: function(a, b) {
+            return a &lt; b;
+          },
+          less_than_or_equal_to: function(a, b) {
+            return a &lt;= b;
+          }
+        };
+        for (check in NUMERICALITY_CHECKS) {
+          check_function = NUMERICALITY_CHECKS[check];
+          if (!(options[check] != null)) {
+            continue;
+          }
+          checkValue = !isNaN(parseFloat(options[check])) &amp;&amp; isFinite(options[check]) ? options[check] : $form.find(&quot;[name*=&quot; + options[check] + &quot;]&quot;).length === 1 ? $form.find(&quot;[name*=&quot; + options[check] + &quot;]&quot;).val() : void 0;
+          if ((checkValue == null) || checkValue === &#39;&#39;) {
+            return;
+          }
+          if (!check_function(parseFloat(val), parseFloat(checkValue))) {
+            return options.messages[check];
+          }
+        }
+        if (options.odd &amp;&amp; !(parseInt(val, 10) % 2)) {
+          return options.messages.odd;
+        }
+        if (options.even &amp;&amp; (parseInt(val, 10) % 2)) {
+          return options.messages.even;
+        }
+      },
+      length: function(element, options) {
+        var LENGTH_CHECKS, blankOptions, check, check_function, length, message;
+        length = element.val().length;
+        LENGTH_CHECKS = {
+          is: function(a, b) {
+            return a === b;
+          },
+          minimum: function(a, b) {
+            return a &gt;= b;
+          },
+          maximum: function(a, b) {
+            return a &lt;= b;
+          }
+        };
+        blankOptions = {};
+        blankOptions.message = options.is ? options.messages.is : options.minimum ? options.messages.minimum : void 0;
+        message = this.presence(element, blankOptions);
+        if (message) {
+          if (options.allow_blank === true) {
+            return;
+          }
+          return message;
+        }
+        for (check in LENGTH_CHECKS) {
+          check_function = LENGTH_CHECKS[check];
+          if (options[check]) {
+            if (!check_function(length, parseInt(options[check]))) {
+              return options.messages[check];
+            }
+          }
+        }
+      },
+      exclusion: function(element, options) {
+        var lower, message, option, ref, upper;
+        message = this.presence(element, options);
+        if (message) {
+          if (options.allow_blank === true) {
+            return;
+          }
+          return message;
+        }
+        if (options[&quot;in&quot;]) {
+          if (ref = element.val(), indexOf.call((function() {
+            var i, len, ref1, results;
+            ref1 = options[&quot;in&quot;];
+            results = [];
+            for (i = 0, len = ref1.length; i &lt; len; i++) {
+              option = ref1[i];
+              results.push(option.toString());
+            }
+            return results;
+          })(), ref) &gt;= 0) {
+            return options.message;
+          }
+        }
+        if (options.range) {
+          lower = options.range[0];
+          upper = options.range[1];
+          if (element.val() &gt;= lower &amp;&amp; element.val() &lt;= upper) {
+            return options.message;
+          }
+        }
+      },
+      inclusion: function(element, options) {
+        var lower, message, option, ref, upper;
+        message = this.presence(element, options);
+        if (message) {
+          if (options.allow_blank === true) {
+            return;
+          }
+          return message;
+        }
+        if (options[&quot;in&quot;]) {
+          if (ref = element.val(), indexOf.call((function() {
+            var i, len, ref1, results;
+            ref1 = options[&quot;in&quot;];
+            results = [];
+            for (i = 0, len = ref1.length; i &lt; len; i++) {
+              option = ref1[i];
+              results.push(option.toString());
+            }
+            return results;
+          })(), ref) &gt;= 0) {
+            return;
+          }
+          return options.message;
+        }
+        if (options.range) {
+          lower = options.range[0];
+          upper = options.range[1];
+          if (element.val() &gt;= lower &amp;&amp; element.val() &lt;= upper) {
+            return;
+          }
+          return options.message;
+        }
+      },
+      confirmation: function(element, options) {
+        var confirmation_value, value;
+        value = element.val();
+        confirmation_value = $(&quot;#&quot; + (element.attr(&#39;id&#39;)) + &quot;_confirmation&quot;).val();
+        if (!options.case_sensitive) {
+          value = value.toLowerCase();
+          confirmation_value = confirmation_value.toLowerCase();
+        }
+        if (value !== confirmation_value) {
+          return options.message;
+        }
+      },
+      uniqueness: function(element, options) {
+        var form, matches, name, name_prefix, name_suffix, valid, value;
+        name = element.attr(&#39;name&#39;);
+        if (/_attributes\]\[\d/.test(name)) {
+          matches = name.match(/^(.+_attributes\])\[\d+\](.+)$/);
+          name_prefix = matches[1];
+          name_suffix = matches[2];
+          value = element.val();
+          if (name_prefix &amp;&amp; name_suffix) {
+            form = element.closest(&#39;form&#39;);
+            valid = true;
+            form.find(&quot;:input[name^=\&quot;&quot; + name_prefix + &quot;\&quot;][name$=\&quot;&quot; + name_suffix + &quot;\&quot;]&quot;).each(function() {
+              var other_value;
+              other_value = $(this).val();
+              if (!options.case_sensitive) {
+                value = value.toLowerCase();
+                other_value = other_value.toLowerCase();
+              }
+              if ($(this).attr(&#39;name&#39;) !== name) {
+                if (other_value === value) {
+                  valid = false;
+                  return $(this).data(&#39;notLocallyUnique&#39;, true);
+                } else {
+                  if ($(this).data(&#39;notLocallyUnique&#39;)) {
+                    return $(this).removeData(&#39;notLocallyUnique&#39;).data(&#39;changed&#39;, true);
+                  }
+                }
+              }
+            });
+            if (!valid) {
+              return options.message;
+            }
+          }
+        }
+      }
+    },
+    remote: {}
+  },
+  disable: function(target) {
+    var $target;
+    $target = $(target);
+    $target.off(&#39;.ClientSideValidations&#39;);
+    if ($target.is(&#39;form&#39;)) {
+      return ClientSideValidations.disable($target.find(&#39;:input&#39;));
+    } else {
+      $target.removeData(&#39;valid&#39;);
+      $target.removeData(&#39;changed&#39;);
+      return $target.filter(&#39;:input&#39;).each(function() {
+        return $(this).removeAttr(&#39;data-validate&#39;);
+      });
+    }
+  },
+  reset: function(form) {
+    var $form, key;
+    $form = $(form);
+    ClientSideValidations.disable(form);
+    for (key in form.ClientSideValidations.settings.validators) {
+      form.ClientSideValidations.removeError($form.find(&quot;[name=&#39;&quot; + key + &quot;&#39;]&quot;));
+    }
+    return ClientSideValidations.enablers.form(form);
+  }
+};
+
+if ((window.Turbolinks != null) &amp;&amp; window.Turbolinks.supported) {
+  initializeOnEvent = window.Turbolinks.EVENTS != null ? &#39;page:change&#39; : &#39;turbolinks:load&#39;;
+  $(document).on(initializeOnEvent, function() {
+    return $(ClientSideValidations.selectors.forms).validate();
+  });
+} else {
+  $(function() {
+    return $(ClientSideValidations.selectors.forms).validate();
+  });
+}
+
+window.ClientSideValidations = ClientSideValidations;</pre>
+
+<p>}).call(this);</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

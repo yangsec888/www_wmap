@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class ReportsController - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="ReportsHelper.html">ReportsHelper</a>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-create">#create</a>
+    
+    <li ><a href="#method-i-destroy">#destroy</a>
+    
+    <li ><a href="#method-i-division">#division</a>
+    
+    <li ><a href="#method-i-download">#download</a>
+    
+    <li ><a href="#method-i-download_all">#download_all</a>
+    
+    <li ><a href="#method-i-download_tags">#download_tags</a>
+    
+    <li ><a href="#method-i-edit">#edit</a>
+    
+    <li ><a href="#method-i-index">#index</a>
+    
+    <li ><a href="#method-i-new">#new</a>
+    
+    <li ><a href="#method-i-show">#show</a>
+    
+    <li ><a href="#method-i-tag">#tag</a>
+    
+    <li ><a href="#method-i-update">#update</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-ReportsController">
+  <h1 id="class-ReportsController" class="class">
+    class ReportsController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>POST /reports POST /reports.json</p>
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">admin?</span>
+    <span class="ruby-ivar">@report</span> = <span class="ruby-constant">Report</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">report_params</span>)
+    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@report</span>.<span class="ruby-identifier">save</span>
+        <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@report</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Report was successfully created.&#39;</span> }
+        <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:show</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:created</span>, <span class="ruby-identifier">location</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@report</span> }
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:new</span> }
+        <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@report</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span> }
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">redirect_back</span> <span class="ruby-value">:fallback_location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root_path</span>, <span class="ruby-value">:alert</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Access denied.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>DELETE /reports/1 DELETE /reports/1.json</p>
+          
+          
+
+          
+          <div class="method-source-code" id="destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">platinum_user_and_above?</span>
+    <span class="ruby-ivar">@report</span> = <span class="ruby-constant">Report</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-identifier">file_name</span> = <span class="ruby-identifier">output</span>(<span class="ruby-ivar">@report</span>.<span class="ruby-identifier">division</span>)
+    <span class="ruby-identifier">file</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;downloads&quot;</span>, <span class="ruby-identifier">file_name</span>)
+    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> {
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">file</span>)
+          <span class="ruby-constant">File</span>.<span class="ruby-identifier">unlink</span>(<span class="ruby-identifier">file</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-ivar">@report</span>.<span class="ruby-identifier">destroy</span>
+        <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">reports_division_path</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Report &#39;</span><span class="ruby-operator">+</span> <span class="ruby-identifier">file_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39; was successfully destroyed.&#39;</span>
+      }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">head</span> <span class="ruby-value">:no_content</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> {
+        <span class="ruby-identifier">redirect_back</span> <span class="ruby-value">:fallback_location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root_path</span>, <span class="ruby-value">:alert</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Access denied.&quot;</span>
+      }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> {
+        <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Access denied.&#39;</span> }
+      }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-division" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">division</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Divisional domain portfolio report</p>
+          
+          
+
+          
+          <div class="method-source-code" id="division-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">division</span>
+  <span class="ruby-ivar">@reports</span> = <span class="ruby-constant">Report</span>.<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">division</span><span class="ruby-operator">:</span> [<span class="ruby-keyword">nil</span>,<span class="ruby-string">&quot;&quot;</span>]).
+                    <span class="ruby-identifier">where</span>(<span class="ruby-identifier">category</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;domain&quot;</span>).
+                    <span class="ruby-identifier">order</span>(<span class="ruby-identifier">division</span><span class="ruby-operator">:</span> <span class="ruby-value">:ASC</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-download" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">download</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>provide pre-created divisional domain report in Excel workbook download</p>
+          
+          
+
+          
+          <div class="method-source-code" id="download-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">download</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">platinum_user_and_above?</span>
+    <span class="ruby-identifier">file_name</span> = <span class="ruby-identifier">output</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:division</span>])
+    <span class="ruby-identifier">file</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;downloads&quot;</span>, <span class="ruby-identifier">file_name</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">file</span>)
+      <span class="ruby-identifier">send_file</span>(
+        <span class="ruby-identifier">file</span>,
+        <span class="ruby-identifier">filename</span><span class="ruby-operator">:</span> <span class="ruby-identifier">file_name</span>,
+        <span class="ruby-identifier">type</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;application/xlsx&quot;</span>,
+        <span class="ruby-identifier">disposition</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;attachment&quot;</span>
+      )
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">reports_division_path</span>, <span class="ruby-value">:flash</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;File not found!&quot;</span>}
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">redirect_back</span> <span class="ruby-value">:fallback_location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root_path</span>, <span class="ruby-value">:alert</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Access denied.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-download_all" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">download_all</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>provide all domains report in Excel workbook download</p>
+          
+          
+
+          
+          <div class="method-source-code" id="download_all-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">download_all</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">platinum_user_and_above?</span>
+    <span class="ruby-ivar">@domains</span>=<span class="ruby-constant">Domain</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;name is not null&quot;</span>)
+    <span class="ruby-identifier">template</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;app&quot;</span>,<span class="ruby-string">&quot;views&quot;</span>,<span class="ruby-string">&quot;reports&quot;</span>, <span class="ruby-string">&quot;DomainPortfolio-template.xlsx&quot;</span>)
+    <span class="ruby-identifier">workbook</span> = <span class="ruby-constant">RubyXL</span><span class="ruby-operator">::</span><span class="ruby-constant">Parser</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">template</span>)
+    <span class="ruby-identifier">worksheet</span> = <span class="ruby-identifier">workbook</span>.<span class="ruby-identifier">worksheets</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-identifier">worksheet</span>.<span class="ruby-identifier">sheet_name</span> = <span class="ruby-string">&#39;All&#39;</span>
+    <span class="ruby-identifier">index</span> = <span class="ruby-value">0</span>
+    <span class="ruby-ivar">@domains</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">domain</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">domain</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">domain</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">domain</span>.<span class="ruby-identifier">transferable</span>
+        <span class="ruby-identifier">my_row</span> = [<span class="ruby-identifier">domain</span>.<span class="ruby-identifier">name</span>, <span class="ruby-string">&quot;yes&quot;</span>]
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">my_row</span> = [<span class="ruby-identifier">domain</span>.<span class="ruby-identifier">name</span>, <span class="ruby-string">&quot;no&quot;</span>]
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">worksheet_write_row</span>(<span class="ruby-identifier">worksheet</span>,<span class="ruby-identifier">index</span>, <span class="ruby-identifier">my_row</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">file</span> = <span class="ruby-string">&quot;DomainPortfolio-All-&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&#39;%m%d%Y&#39;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.xlsx&quot;</span>
+    <span class="ruby-identifier">send_data</span> <span class="ruby-identifier">workbook</span>.<span class="ruby-identifier">stream</span>.<span class="ruby-identifier">string</span>, <span class="ruby-identifier">filename</span><span class="ruby-operator">:</span> <span class="ruby-identifier">file</span>, <span class="ruby-identifier">disposition</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;attachment&#39;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">redirect_back</span> <span class="ruby-value">:fallback_location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root_path</span>, <span class="ruby-value">:alert</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Access denied.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-download_tags" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">download_tags</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>provide all adware tag report in Excel workbook download</p>
+          
+          
+
+          
+          <div class="method-source-code" id="download_tags-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">download_tags</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>GET /reports/1/edit</p>
+          
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>GET /reports GET /reports.json</p>
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@reports</span> = <span class="ruby-constant">Report</span>.<span class="ruby-identifier">all</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>GET /reports/new</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">redirect_back</span> <span class="ruby-value">:fallback_location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root_path</span>, <span class="ruby-value">:alert</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Access denied.&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">admin?</span>
+  <span class="ruby-ivar">@report</span> = <span class="ruby-constant">Report</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>GET /reports/1 GET /reports/1.json</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-identifier">report</span>=<span class="ruby-constant">Report</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">report</span>.<span class="ruby-identifier">division</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">report</span>.<span class="ruby-identifier">division</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">report</span>.<span class="ruby-identifier">title</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;All Domains&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">domains_index_path</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;All Networks&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">cidrs_index_path</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;All Hosts&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">hosts_index_path</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;All Websites&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">sites_index_path</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;All Adware Tags&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">tags_index_path</span>
+    <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">report</span>.<span class="ruby-identifier">category</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;domain&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">domains_show_path</span>(<span class="ruby-identifier">division</span><span class="ruby-operator">:</span> <span class="ruby-identifier">report</span>.<span class="ruby-identifier">division</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">report</span>.<span class="ruby-identifier">category</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;adware&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">tags_report_path</span>(<span class="ruby-identifier">division</span><span class="ruby-operator">:</span> <span class="ruby-identifier">report</span>.<span class="ruby-identifier">division</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tag" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tag</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Divisional Adware tag report</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tag-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tag</span>
+  <span class="ruby-ivar">@reports</span> = <span class="ruby-constant">Report</span>.<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">division</span><span class="ruby-operator">:</span> [<span class="ruby-keyword">nil</span>,<span class="ruby-string">&quot;&quot;</span>]).
+                    <span class="ruby-identifier">where</span>(<span class="ruby-identifier">category</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;adware&quot;</span>).
+                    <span class="ruby-identifier">order</span>(<span class="ruby-identifier">division</span><span class="ruby-operator">:</span> <span class="ruby-value">:ASC</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>PATCH/PUT /reports/1 PATCH/PUT /reports/1.json</p>
+          
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/reports_controller.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">if</span>  <span class="ruby-identifier">platinum_user_and_above?</span>
+    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@report</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">report_params</span>)
+        <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@report</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Report was successfully updated.&#39;</span> }
+        <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:show</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>, <span class="ruby-identifier">location</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@report</span> }
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:edit</span> }
+        <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@report</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span> }
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> {
+        <span class="ruby-identifier">redirect_back</span> <span class="ruby-value">:fallback_location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root_path</span>, <span class="ruby-value">:alert</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Access denied.&quot;</span>
+      }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> {
+        <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Access denied.&#39;</span> }
+      }
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

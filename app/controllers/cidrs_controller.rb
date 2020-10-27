@@ -20,7 +20,9 @@ class CidrsController < ApplicationController
     def edit
       #@dir = Pathname.new(Gem.loaded_specs['wmap'].full_gem_path).join('data')
       @dir = Rails.root.join('shared','data')
+      Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
       @file = @dir.join('cidrs')
+      File.new(@file, 'w+') unless File.exist?(@file)
       @uid = current_user.id
     end
 
@@ -63,14 +65,16 @@ class CidrsController < ApplicationController
     end
 
     def import
-      dir = Rails.root.join('shared', 'data')
-      Dir.mkdir(dir, 0750) unless Dir.exist?(dir)
-      file = dir.join('cidrs')
-      File.new(file, 'w+') unless File.exist?(file)
-      @uid = current_user.id
+      @dir = Rails.root.join('shared','data')
+      Dir.mkdir(@dir, 0750) unless Dir.exist?(@dir)
+      @file = @dir.join('cidrs')
+      File.new(@file, 'w+') unless File.exist?(@file)
+      file = File.open(@file, 'r')
+      @restore = ''
+      file.each_line { |line| @restore += line }
+      file.close
     end
 
-=begin
     def save_import
       if platinum_user_and_above?
         uid = current_user.id
@@ -103,6 +107,5 @@ class CidrsController < ApplicationController
       file.close
       render json: { message: 'Saving failed, please check your file again or contact the site administrator.' }
     end
-=end
 
 end

@@ -1,12 +1,13 @@
 <script type="text/javascript">
   $(document).ready(function() {
+    var restore = $('#cidrs').val();
     var cidrs_editor = CodeMirror(document.getElementById("cidrsImportTextArea"), {
       mode: "null",
       lineNumbers: true,
       extraKeys: {
         "Ctrl-Space": "autocomplete"
       },
-      value: ""
+      value: restore
     });
 
     $('#save_cidrs_button').click(function() {
@@ -26,7 +27,7 @@
             alert("Error Import Limit - please contact the administrator for help!")
           } else {
             alert("Success: " + response['message']);
-            window.location = "/seed/distest"
+            window.location = "/seed/distest";
           }
 
         },
@@ -48,7 +49,7 @@
 
   <div class=" col-md-9 col-lg-9">
     <p>
-    <h4>Please enter the network CIDR to be imported below:</h4>
+    <h4>Please modify / or add your network CIDR entries below:</h4>
     <button type="button" class="pull-right btn btn-default" title="Import Instructions"
       data-container="body" data-toggle="popover" data-placement="right"
       data-content="CIDR Import Format: <br>
@@ -62,6 +63,8 @@
           "><span class="glyphicon glyphicon-question-sign"></span>CIDR Format</button>
   </div>
 </div>
+
+<input id="cidrs" type="hidden" value="<%= @restore %>">
 
 <div class=" col-md-9 col-lg-9">
     <div class ="CodeMirror" id="cidrsImportTextArea"></div>

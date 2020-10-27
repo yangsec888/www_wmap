@@ -32,7 +32,7 @@ rsync -avq --exclude-from ${wmap_app_dev}/.exclude_www_wmap.txt "www_wmap" deplo
 echo "Setup production server rails 5 environment ..."
 # ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; rails g bootstrap:install static'
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; export RAILS_ENV=production; bundle exec rake db:migrate' 2> /dev/null
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle update' 2> /dev/null
+#ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle update' 2> /dev/null
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle install' 2> /dev/null
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; RAILS_ENV=production bundle exec rake db:migrate' 2> /dev/null
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec rake assets:clean' 2> /dev/null

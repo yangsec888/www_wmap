@@ -34,10 +34,12 @@ Rails.application.routes.draw do
   post 'seed/start'
   get 'seed/load_file'
   post 'seed/save_file'
+  get 'seed/discovery'
   post 'seed/discovery'
   get 'seed/distest'
   post 'seed/distest'
   get 'seed/confirm_email'
+  post 'seed/confirm_email'
 
   ################################
 

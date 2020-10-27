@@ -1,24 +1,45 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    var email = $('#email').val();
+    var uid = $('#uid').val();
+    alert('Confirm your notification email:  ' + email);
+    $('#update_email_button').click(function() {
+      $.get('confirm_email?id='+uid);
+    });
+
+    $('#discover_button').click(function() {
+      window.location='discovery?email='+email;
+    });
+
+  });
+</script>
+
 <h4>Please read through the disclaimer before proceeding!</h4>
 
-<div class="table"></div>
 <div class="row">
   <div class=" col-md-9 col-lg-9">
     <b>Disclaimer: </b>
     <div class="row"> </div>
-    <i>By click on the Discover button below, you
-      <u>
-        <%= link_to('confirm your email', action: 'confirm_email', id: @user.id, remote: true) %>
-        as <b><%= @email %></b>.
-      </u>
-        Or <%= link_to('click here to change', action: 'confirm_email', id: @user.id, remote: true) %> your notification email.
-        <p><p>And you have the exclusive permission to perform such discovery.
+    <i>By click on the Discover button below, you confirm your notification email as: <u><%= @email %></u>.
+      <b>
+        Or <%= link_to('click here to update it', action: 'confirm_email', id: @user.id, remote: true) %>
+      </b>
+      <p><p>And you have the exclusive permission to perform such discovery.
         You also agree to waive all your rights on the appliation programmer, and the site hosting provider.
     </i>
   </div>
 </div>
-<div class="col-md-9 col-lg-9"> </div>
-    <div> </div>
-    <p>
-    <%= button_to("Discover", seed_discovery_path(:email => @email), class: "btn btn-primary") %>
-    </br>
+
+<input id="email" type="hidden" value="<%= @email %>" >
+<input id="uid" type="hidden" value=<%= @user.id %> >
+
+<div class="col-md-9 col-lg-9" align="left">
+  <div align="left">
+  <p>
+    <button class="btn btn-primary" id="update_email_button" type="submit">Update</button>
+    <button class="btn btn-primary" id="discover_button" type="submit">Discover</button>
+
+  </br>
+  </div>
+</div>
 <div class="row"> </div>
