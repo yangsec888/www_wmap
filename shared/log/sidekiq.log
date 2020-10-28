@@ -9161,3 +9161,2679 @@ Perform web service discovery on host: www.google.com
 2020-10-27T20:58:29.692Z 18208 TID-owk6gydo4 DomainCheckWorker JID-7b2e683f91c7dc2f113edcca INFO: start
 2020-10-27T21:00:18.923Z 18208 TID-owk7acwl8 DomainCheckWorker JID-34747d916232e5fb64e0272f INFO: start
 2020-10-27T21:01:17.338Z 18208 TID-owk7kf914 DiscoveryWorker JID-288eba331f6203796904ec84 INFO: start
+Detected web service on host www.google.com: ["http://www.google.com/", "https://www.google.com/"]
+Port scanning done successfully with the found web services: ["http://www.google.com/", "https://www.google.com/"]
+Fire up the crawler with the optional directory setter.
+Start the parallel engine on the normalized crawling list:
+ ["http://www.google.com/", "https://www.google.com/"] 
+Maximum number of web crawling sessions allowed: 40
+Start web crawling on http://www.google.com/
+Start web crawling on https://www.google.com/
+Please be aware that it may take a while to crawl http://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: http://www.google.com/
+Please be aware that it may take a while to crawl https://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: https://www.google.com/
+Discovered sites: 
+http://www.google.com/
+http://maps.google.com/
+https://play.google.com/
+http://www.youtube.com/
+https://news.google.com/
+https://mail.google.com/
+https://drive.google.com/
+https://www.google.com/
+https://accounts.google.com/
+https://support.google.com/
+https://maps.google.com/
+https://www.youtube.com/
+https://policies.google.com/
+http://developer.android.com/
+https://payments.google.com/
+https://developers.google.com/
+https://myaccount.google.com/
+https://meet.google.com/
+https://contacts.google.com/
+https://translate.google.com/
+https://photos.google.com/
+https://duo.google.com/
+https://docs.google.com/
+https://books.google.com/
+https://www.blogger.com/
+https://hangouts.google.com/
+https://keep.google.com/
+https://jamboard.google.com/
+https://earth.google.com/
+https://artsandculture.google.com/
+https://ads.google.com/
+https://podcasts.google.com/
+https://stadia.google.com/
+https://itunes.apple.com/
+https://about.google/
+https://www.blog.google/
+https://store.google.com/
+https://smallbusiness.withgoogle.com/
+https://teachfromanywhere.google/
+https://edu.google.com/
+https://www.android.com/
+https://wearos.google.com/
+https://www.gmail.com/
+http://messages.google.com/
+https://gsuite.google.com/
+https://chrome.google.com/
+https://assistant.google.com/
+https://www.google.co.in/
+https://families.google.com/
+https://fi.google.com/
+https://files.google.com/
+https://groups.google.com/
+https://lens.google.com/
+https://one.google.com/
+https://pay.google.com/
+https://shopping.google.com/
+https://messages.google.com/
+https://scholar.google.com/
+https://sites.google.com/
+https://www.tiltbrush.com/
+https://voice.google.com/
+https://www.waze.com/
+https://youtube-global.blogspot.com/
+https://tv.youtube.com/
+https://vr.youtube.com/
+https://enterprise.google.com/
+https://businessmessages.google/
+https://remotedesktop.google.com/
+https://cloud.google.com/
+https://learndigital.withgoogle.com/
+https://domains.google.com/
+https://marketingplatform.google.com/
+https://podcastsmanager.google.com/
+https://workspace.google.com/
+https://biz.waze.com/
+https://developer.android.com/
+https://firebase.google.com/
+https://flutter.dev/
+https://www.tensorflow.org/
+https://instagram.com/
+https://twitter.com/
+https://www.facebook.com/
+https://www.linkedin.com/
+https://abc.xyz/
+https://careers.google.com/
+https://www.thinkwithgoogle.com/
+https://services.google.com/
+https://www.google.org/
+https://sustainability.google/
+https://transparencyreport.google.com/
+https://wellbeing.google/
+https://safety.google/
+https://bacillusbulgaricus.com/
+https://en.wikipedia.org/
+https://www.forbes.com/
+https://www.upi.com/
+https://9to5google.com/
+https://www.msn.com/
+https://www.seroundtable.com/
+https://www.newsweek.com/
+https://www.cnet.com/
+https://observer.com/
+https://heavy.com/
+https://www.independent.co.uk/
+http://policies.google.com/
+https://www.usa.gov/
+https://projects.fivethirtyeight.com/
+https://www.businessinsider.com/
+https://www.washingtonpost.com/
+https://www.cbsnews.com/
+https://www.vote.org/
+https://www.usatoday.com/
+https://dos.myflorida.com/
+https://crq8j.app.goo.gl/
+https://blog.google/
+https://apps.apple.com/
+https://www.en.advertisercommunity.com/
+https://www.yourprimer.com/
+https://skillshop.exceedlms.com/
+https://waze.com/
+https://admob.google.com/
+Automatically save the discovery results into the site tracking data repository: 
+Start the SiteTracker with the optional directory setter. 
+Add entries to the local site store from list:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "https://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://support.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://developers.google.com/", "https://myaccount.google.com/", "https://meet.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://duo.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://earth.google.com/", "https://artsandculture.google.com/", "https://ads.google.com/", "https://podcasts.google.com/", "https://stadia.google.com/", "https://itunes.apple.com/", "https://about.google/", "https://www.blog.google/", "https://store.google.com/", "https://smallbusiness.withgoogle.com/", "https://teachfromanywhere.google/", "https://edu.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "http://messages.google.com/", "https://gsuite.google.com/", "https://chrome.google.com/", "https://assistant.google.com/", "https://www.google.co.in/", "https://families.google.com/", "https://fi.google.com/", "https://files.google.com/", "https://groups.google.com/", "https://lens.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://shopping.google.com/", "https://messages.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://tv.youtube.com/", "https://vr.youtube.com/", "https://enterprise.google.com/", "https://businessmessages.google/", "https://remotedesktop.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://marketingplatform.google.com/", "https://podcastsmanager.google.com/", "https://workspace.google.com/", "https://biz.waze.com/", "https://developer.android.com/", "https://firebase.google.com/", "https://flutter.dev/", "https://www.tensorflow.org/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/", "https://bacillusbulgaricus.com/", "https://en.wikipedia.org/", "https://www.forbes.com/", "https://www.upi.com/", "https://9to5google.com/", "https://www.msn.com/", "https://www.seroundtable.com/", "https://www.newsweek.com/", "https://www.cnet.com/", "https://observer.com/", "https://heavy.com/", "https://www.independent.co.uk/", "http://policies.google.com/", "https://www.usa.gov/", "https://projects.fivethirtyeight.com/", "https://www.businessinsider.com/", "https://www.washingtonpost.com/", "https://www.cbsnews.com/", "https://www.vote.org/", "https://www.usatoday.com/", "https://dos.myflorida.com/", "https://crq8j.app.goo.gl/", "https://blog.google/", "https://apps.apple.com/", "https://www.en.advertisercommunity.com/", "https://www.yourprimer.com/", "https://skillshop.exceedlms.com/", "https://waze.com/", "https://admob.google.com/"]
+Start parallel adding on the sites:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "https://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://support.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://developers.google.com/", "https://myaccount.google.com/", "https://meet.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://duo.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://earth.google.com/", "https://artsandculture.google.com/", "https://ads.google.com/", "https://podcasts.google.com/", "https://stadia.google.com/", "https://itunes.apple.com/", "https://about.google/", "https://www.blog.google/", "https://store.google.com/", "https://smallbusiness.withgoogle.com/", "https://teachfromanywhere.google/", "https://edu.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "http://messages.google.com/", "https://gsuite.google.com/", "https://chrome.google.com/", "https://assistant.google.com/", "https://www.google.co.in/", "https://families.google.com/", "https://fi.google.com/", "https://files.google.com/", "https://groups.google.com/", "https://lens.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://shopping.google.com/", "https://messages.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://tv.youtube.com/", "https://vr.youtube.com/", "https://enterprise.google.com/", "https://businessmessages.google/", "https://remotedesktop.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://marketingplatform.google.com/", "https://podcastsmanager.google.com/", "https://workspace.google.com/", "https://biz.waze.com/", "https://developer.android.com/", "https://firebase.google.com/", "https://flutter.dev/", "https://www.tensorflow.org/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/", "https://bacillusbulgaricus.com/", "https://en.wikipedia.org/", "https://www.forbes.com/", "https://www.upi.com/", "https://9to5google.com/", "https://www.msn.com/", "https://www.seroundtable.com/", "https://www.newsweek.com/", "https://www.cnet.com/", "https://observer.com/", "https://heavy.com/", "https://www.independent.co.uk/", "http://policies.google.com/", "https://www.usa.gov/", "https://projects.fivethirtyeight.com/", "https://www.businessinsider.com/", "https://www.washingtonpost.com/", "https://www.cbsnews.com/", "https://www.vote.org/", "https://www.usatoday.com/", "https://dos.myflorida.com/", "https://crq8j.app.goo.gl/", "https://blog.google/", "https://apps.apple.com/", "https://www.en.advertisercommunity.com/", "https://www.yourprimer.com/", "https://skillshop.exceedlms.com/", "https://waze.com/", "https://admob.google.com/"]
+Add entry to the site store: https://payments.google.com/
+Site already exists. Skip it: https://payments.google.com/
+Add entry to the site store: https://vr.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://vr.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://9to5google.com/
+Problem found: untrusted Internet domain or IP. Skip https://9to5google.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://maps.google.com/
+Site already exists. Skip it: https://maps.google.com/
+Add entry to the site store: http://messages.google.com/
+Site already exists. Skip it: http://messages.google.com/
+Add entry to the site store: https://chrome.google.com/
+Site already exists. Skip it: https://chrome.google.com/
+Add entry to the site store: https://www.google.co.in/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.co.in/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.msn.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.msn.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://mail.google.com/
+Site already exists. Skip it: https://mail.google.com/
+Add entry to the site store: https://edu.google.com/
+Site already exists. Skip it: https://edu.google.com/
+Add entry to the site store: https://www.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.android.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.cnet.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.cnet.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://drive.google.com/
+Site already exists. Skip it: https://drive.google.com/
+Add entry to the site store: https://store.google.com/
+Site already exists. Skip it: https://store.google.com/
+Add entry to the site store: https://smallbusiness.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://smallbusiness.withgoogle.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://observer.com/
+Problem found: untrusted Internet domain or IP. Skip https://observer.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://support.google.com/
+Site already exists. Skip it: https://support.google.com/
+Add entry to the site store: https://wearos.google.com/
+Site already exists. Skip it: https://wearos.google.com/
+Add entry to the site store: https://www.gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.gmail.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://bacillusbulgaricus.com/
+Problem found: untrusted Internet domain or IP. Skip https://bacillusbulgaricus.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.upi.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.upi.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://admob.google.com/
+Site already exists. Skip it: https://admob.google.com/
+Add entry to the site store: https://hangouts.google.com/
+Site already exists. Skip it: https://hangouts.google.com/
+Add entry to the site store: https://instagram.com/
+Problem found: untrusted Internet domain or IP. Skip https://instagram.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.newsweek.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.newsweek.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://photos.google.com/
+Site already exists. Skip it: https://photos.google.com/
+Add entry to the site store: https://www.facebook.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.facebook.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://heavy.com/
+Problem found: untrusted Internet domain or IP. Skip https://heavy.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://www.google.com/
+Site already exists. Skip it: http://www.google.com/
+Add entry to the site store: https://ads.google.com/
+Site already exists. Skip it: https://ads.google.com/
+Add entry to the site store: https://podcasts.google.com/
+Site already exists. Skip it: https://podcasts.google.com/
+Add entry to the site store: https://stadia.google.com/
+Site already exists. Skip it: https://stadia.google.com/
+Add entry to the site store: https://itunes.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://itunes.apple.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.forbes.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.forbes.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://myaccount.google.com/
+Site already exists. Skip it: https://myaccount.google.com/
+Add entry to the site store: https://twitter.com/
+Problem found: untrusted Internet domain or IP. Skip https://twitter.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.independent.co.uk/
+Problem found: untrusted Internet domain or IP. Skip https://www.independent.co.uk/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://meet.google.com/
+Site already exists. Skip it: https://meet.google.com/
+Add entry to the site store: https://voice.google.com/
+Site already exists. Skip it: https://voice.google.com/
+Add entry to the site store: https://www.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.waze.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://transparencyreport.google.com/
+Site already exists. Skip it: https://transparencyreport.google.com/
+Add entry to the site store: https://wellbeing.google/
+Problem found: untrusted Internet domain or IP. Skip https://wellbeing.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://contacts.google.com/
+Site already exists. Skip it: https://contacts.google.com/
+Add entry to the site store: https://remotedesktop.google.com/
+Site already exists. Skip it: https://remotedesktop.google.com/
+Add entry to the site store: https://learndigital.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://learndigital.withgoogle.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://policies.google.com/
+Site already exists. Skip it: http://policies.google.com/
+Add entry to the site store: https://projects.fivethirtyeight.com/
+Problem found: untrusted Internet domain or IP. Skip https://projects.fivethirtyeight.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.cbsnews.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.cbsnews.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://play.google.com/
+Site already exists. Skip it: https://play.google.com/
+Add entry to the site store: https://www.blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://www.blog.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.seroundtable.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.seroundtable.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.blogger.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.blogger.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.vote.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.vote.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://translate.google.com/
+Site already exists. Skip it: https://translate.google.com/
+Add entry to the site store: https://tv.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://tv.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.washingtonpost.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.washingtonpost.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://policies.google.com/
+Site already exists. Skip it: https://policies.google.com/
+Add entry to the site store: https://youtube-global.blogspot.com/
+Problem found: untrusted Internet domain or IP. Skip https://youtube-global.blogspot.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.businessinsider.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.businessinsider.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://keep.google.com/
+Site already exists. Skip it: https://keep.google.com/
+Add entry to the site store: https://cloud.google.com/
+Site already exists. Skip it: https://cloud.google.com/
+Add entry to the site store: https://domains.google.com/
+Site already exists. Skip it: https://domains.google.com/
+Add entry to the site store: https://marketingplatform.google.com/
+Site already exists. Skip it: https://marketingplatform.google.com/
+Add entry to the site store: https://podcastsmanager.google.com/
+Site already exists. Skip it: https://podcastsmanager.google.com/
+Add entry to the site store: https://biz.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://biz.waze.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.usatoday.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.usatoday.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://maps.google.com/
+Site already exists. Skip it: http://maps.google.com/
+Add entry to the site store: https://about.google/
+Problem found: untrusted Internet domain or IP. Skip https://about.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://sustainability.google/
+Problem found: untrusted Internet domain or IP. Skip https://sustainability.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://jamboard.google.com/
+Site already exists. Skip it: https://jamboard.google.com/
+Add entry to the site store: https://services.google.com/
+Site already exists. Skip it: https://services.google.com/
+Add entry to the site store: https://www.google.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://apps.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://apps.apple.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://docs.google.com/
+Site already exists. Skip it: https://docs.google.com/
+Add entry to the site store: https://workspace.google.com/
+Site already exists. Skip it: https://workspace.google.com/
+Add entry to the site store: https://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://developer.android.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.usa.gov/
+Problem found: untrusted Internet domain or IP. Skip https://www.usa.gov/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://duo.google.com/
+Site already exists. Skip it: https://duo.google.com/
+Add entry to the site store: https://firebase.google.com/
+Site already exists. Skip it: https://firebase.google.com/
+Add entry to the site store: https://flutter.dev/
+Problem found: untrusted Internet domain or IP. Skip https://flutter.dev/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://safety.google/
+Problem found: untrusted Internet domain or IP. Skip https://safety.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://news.google.com/
+Site already exists. Skip it: https://news.google.com/
+Add entry to the site store: https://gsuite.google.com/
+Site already exists. Skip it: https://gsuite.google.com/
+Add entry to the site store: https://assistant.google.com/
+Site already exists. Skip it: https://assistant.google.com/
+Add entry to the site store: https://families.google.com/
+Site already exists. Skip it: https://families.google.com/
+Add entry to the site store: https://fi.google.com/
+Site already exists. Skip it: https://fi.google.com/
+Add entry to the site store: https://files.google.com/
+Site already exists. Skip it: https://files.google.com/
+Add entry to the site store: https://groups.google.com/
+Site already exists. Skip it: https://groups.google.com/
+Add entry to the site store: https://lens.google.com/
+Site already exists. Skip it: https://lens.google.com/
+Add entry to the site store: https://one.google.com/
+Site already exists. Skip it: https://one.google.com/
+Add entry to the site store: https://pay.google.com/
+Site already exists. Skip it: https://pay.google.com/
+Add entry to the site store: https://shopping.google.com/
+Site already exists. Skip it: https://shopping.google.com/
+Add entry to the site store: https://messages.google.com/
+Site already exists. Skip it: https://messages.google.com/
+Add entry to the site store: https://scholar.google.com/
+Site already exists. Skip it: https://scholar.google.com/
+Add entry to the site store: https://sites.google.com/
+Site already exists. Skip it: https://sites.google.com/
+Add entry to the site store: https://www.tiltbrush.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.tiltbrush.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://crq8j.app.goo.gl/
+Problem found: untrusted Internet domain or IP. Skip https://crq8j.app.goo.gl/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://artsandculture.google.com/
+Site already exists. Skip it: https://artsandculture.google.com/
+Add entry to the site store: https://abc.xyz/
+Problem found: untrusted Internet domain or IP. Skip https://abc.xyz/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.yourprimer.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.yourprimer.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://earth.google.com/
+Site already exists. Skip it: https://earth.google.com/
+Add entry to the site store: https://www.linkedin.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.linkedin.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://blog.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://developers.google.com/
+Site already exists. Skip it: https://developers.google.com/
+Add entry to the site store: https://enterprise.google.com/
+Site already exists. Skip it: https://enterprise.google.com/
+Add entry to the site store: https://businessmessages.google/
+Problem found: untrusted Internet domain or IP. Skip https://businessmessages.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://waze.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.google.com/
+Site already exists. Skip it: https://www.google.com/
+Add entry to the site store: https://careers.google.com/
+Site already exists. Skip it: https://careers.google.com/
+Add entry to the site store: https://www.thinkwithgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.thinkwithgoogle.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://skillshop.exceedlms.com/
+Problem found: untrusted Internet domain or IP. Skip https://skillshop.exceedlms.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip http://developer.android.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://en.wikipedia.org/
+Problem found: untrusted Internet domain or IP. Skip https://en.wikipedia.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://accounts.google.com/
+Site already exists. Skip it: https://accounts.google.com/
+Add entry to the site store: https://teachfromanywhere.google/
+Problem found: untrusted Internet domain or IP. Skip https://teachfromanywhere.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.en.advertisercommunity.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.en.advertisercommunity.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://books.google.com/
+Site already exists. Skip it: https://books.google.com/
+Add entry to the site store: https://www.tensorflow.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.tensorflow.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://dos.myflorida.com/
+Problem found: untrusted Internet domain or IP. Skip https://dos.myflorida.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Done adding site entries.
+No new entry added. 
+Invoke the HostTracker with optional directory setter.
+Update the local hosts data repository with: ["www.google.com", "maps.google.com", "play.google.com", "www.youtube.com", "news.google.com", "mail.google.com", "drive.google.com", "accounts.google.com", "support.google.com", "policies.google.com", "developer.android.com", "payments.google.com", "developers.google.com", "myaccount.google.com", "meet.google.com", "contacts.google.com", "translate.google.com", "photos.google.com", "duo.google.com", "docs.google.com", "books.google.com", "www.blogger.com", "hangouts.google.com", "keep.google.com", "jamboard.google.com", "earth.google.com", "artsandculture.google.com", "ads.google.com", "podcasts.google.com", "stadia.google.com", "itunes.apple.com", "about.google", "www.blog.google", "store.google.com", "smallbusiness.withgoogle.com", "teachfromanywhere.google", "edu.google.com", "www.android.com", "wearos.google.com", "www.gmail.com", "messages.google.com", "gsuite.google.com", "chrome.google.com", "assistant.google.com", "www.google.co.in", "families.google.com", "fi.google.com", "files.google.com", "groups.google.com", "lens.google.com", "one.google.com", "pay.google.com", "shopping.google.com", "scholar.google.com", "sites.google.com", "www.tiltbrush.com", "voice.google.com", "www.waze.com", "youtube-global.blogspot.com", "tv.youtube.com", "vr.youtube.com", "enterprise.google.com", "businessmessages.google", "remotedesktop.google.com", "cloud.google.com", "learndigital.withgoogle.com", "domains.google.com", "marketingplatform.google.com", "podcastsmanager.google.com", "workspace.google.com", "biz.waze.com", "firebase.google.com", "flutter.dev", "www.tensorflow.org", "instagram.com", "twitter.com", "www.facebook.com", "www.linkedin.com", "abc.xyz", "careers.google.com", "www.thinkwithgoogle.com", "services.google.com", "www.google.org", "sustainability.google", "transparencyreport.google.com", "wellbeing.google", "safety.google", "bacillusbulgaricus.com", "en.wikipedia.org", "www.forbes.com", "www.upi.com", "9to5google.com", "www.msn.com", "www.seroundtable.com", "www.newsweek.com", "www.cnet.com", "observer.com", "heavy.com", "www.independent.co.uk", "www.usa.gov", "projects.fivethirtyeight.com", "www.businessinsider.com", "www.washingtonpost.com", "www.cbsnews.com", "www.vote.org", "www.usatoday.com", "dos.myflorida.com", "crq8j.app.goo.gl", "blog.google", "apps.apple.com", "www.en.advertisercommunity.com", "www.yourprimer.com", "skillshop.exceedlms.com", "waze.com", "admob.google.com"]
+Add entries to the local host repository: ["www.google.com", "maps.google.com", "play.google.com", "www.youtube.com", "news.google.com", "mail.google.com", "drive.google.com", "accounts.google.com", "support.google.com", "policies.google.com", "developer.android.com", "payments.google.com", "developers.google.com", "myaccount.google.com", "meet.google.com", "contacts.google.com", "translate.google.com", "photos.google.com", "duo.google.com", "docs.google.com", "books.google.com", "www.blogger.com", "hangouts.google.com", "keep.google.com", "jamboard.google.com", "earth.google.com", "artsandculture.google.com", "ads.google.com", "podcasts.google.com", "stadia.google.com", "itunes.apple.com", "about.google", "www.blog.google", "store.google.com", "smallbusiness.withgoogle.com", "teachfromanywhere.google", "edu.google.com", "www.android.com", "wearos.google.com", "www.gmail.com", "messages.google.com", "gsuite.google.com", "chrome.google.com", "assistant.google.com", "www.google.co.in", "families.google.com", "fi.google.com", "files.google.com", "groups.google.com", "lens.google.com", "one.google.com", "pay.google.com", "shopping.google.com", "scholar.google.com", "sites.google.com", "www.tiltbrush.com", "voice.google.com", "www.waze.com", "youtube-global.blogspot.com", "tv.youtube.com", "vr.youtube.com", "enterprise.google.com", "businessmessages.google", "remotedesktop.google.com", "cloud.google.com", "learndigital.withgoogle.com", "domains.google.com", "marketingplatform.google.com", "podcastsmanager.google.com", "workspace.google.com", "biz.waze.com", "firebase.google.com", "flutter.dev", "www.tensorflow.org", "instagram.com", "twitter.com", "www.facebook.com", "www.linkedin.com", "abc.xyz", "careers.google.com", "www.thinkwithgoogle.com", "services.google.com", "www.google.org", "sustainability.google", "transparencyreport.google.com", "wellbeing.google", "safety.google", "bacillusbulgaricus.com", "en.wikipedia.org", "www.forbes.com", "www.upi.com", "9to5google.com", "www.msn.com", "www.seroundtable.com", "www.newsweek.com", "www.cnet.com", "observer.com", "heavy.com", "www.independent.co.uk", "www.usa.gov", "projects.fivethirtyeight.com", "www.businessinsider.com", "www.washingtonpost.com", "www.cbsnews.com", "www.vote.org", "www.usatoday.com", "dos.myflorida.com", "crq8j.app.goo.gl", "blog.google", "apps.apple.com", "www.en.advertisercommunity.com", "www.yourprimer.com", "skillshop.exceedlms.com", "waze.com", "admob.google.com"]
+Add entry to the local host repository: jamboard.google.com
+Host is already exist. Skip: jamboard.google.com
+Add entry to the local host repository: groups.google.com
+Host is already exist. Skip: groups.google.com
+Add entry to the local host repository: twitter.com
+Error - host twitter.com has an untrusted internet root domain: twitter.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: play.google.com
+Host is already exist. Skip: play.google.com
+Add entry to the local host repository: lens.google.com
+Host is already exist. Skip: lens.google.com
+Add entry to the local host repository: www.facebook.com
+Error - host www.facebook.com has an untrusted internet root domain: facebook.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: duo.google.com
+Host is already exist. Skip: duo.google.com
+Add entry to the local host repository: marketingplatform.google.com
+Host is already exist. Skip: marketingplatform.google.com
+Add entry to the local host repository: www.forbes.com
+Error - host www.forbes.com has an untrusted internet root domain: forbes.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: books.google.com
+Host is already exist. Skip: books.google.com
+Add entry to the local host repository: podcastsmanager.google.com
+Host is already exist. Skip: podcastsmanager.google.com
+Add entry to the local host repository: www.upi.com
+Error - host www.upi.com has an untrusted internet root domain: upi.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.waze.com
+Error - host www.waze.com has an untrusted internet root domain: waze.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.tiltbrush.com
+Error - host www.tiltbrush.com has an untrusted internet root domain: tiltbrush.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: gsuite.google.com
+Host is already exist. Skip: gsuite.google.com
+Add entry to the local host repository: transparencyreport.google.com
+Host is already exist. Skip: transparencyreport.google.com
+Add entry to the local host repository: www.newsweek.com
+Error - host www.newsweek.com has an untrusted internet root domain: newsweek.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: photos.google.com
+Host is already exist. Skip: photos.google.com
+Add entry to the local host repository: assistant.google.com
+Host is already exist. Skip: assistant.google.com
+Add entry to the local host repository: firebase.google.com
+Host is already exist. Skip: firebase.google.com
+Add entry to the local host repository: 9to5google.com
+Error - host 9to5google.com has an untrusted internet root domain: 9to5google.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: translate.google.com
+Host is already exist. Skip: translate.google.com
+Add entry to the local host repository: messages.google.com
+Host is already exist. Skip: messages.google.com
+Add entry to the local host repository: www.google.org
+Error - host www.google.org has an untrusted internet root domain: google.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: businessmessages.google
+Error - host businessmessages.google has an untrusted internet root domain: businessmessages.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: admob.google.com
+Host is already exist. Skip: admob.google.com
+Add entry to the local host repository: mail.google.com
+Host is already exist. Skip: mail.google.com
+Add entry to the local host repository: pay.google.com
+Host is already exist. Skip: pay.google.com
+Add entry to the local host repository: abc.xyz
+Error - host abc.xyz has an untrusted internet root domain: abc.xyz
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: voice.google.com
+Host is already exist. Skip: voice.google.com
+Add entry to the local host repository: services.google.com
+Host is already exist. Skip: services.google.com
+Add entry to the local host repository: www.seroundtable.com
+Error - host www.seroundtable.com has an untrusted internet root domain: seroundtable.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: artsandculture.google.com
+Host is already exist. Skip: artsandculture.google.com
+Add entry to the local host repository: youtube-global.blogspot.com
+Error - host youtube-global.blogspot.com has an untrusted internet root domain: blogspot.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: maps.google.com
+Host is already exist. Skip: maps.google.com
+Add entry to the local host repository: support.google.com
+Host is already exist. Skip: support.google.com
+Add entry to the local host repository: stadia.google.com
+Host is already exist. Skip: stadia.google.com
+Add entry to the local host repository: store.google.com
+Host is already exist. Skip: store.google.com
+Add entry to the local host repository: enterprise.google.com
+Host is already exist. Skip: enterprise.google.com
+Add entry to the local host repository: sustainability.google
+Error - host sustainability.google has an untrusted internet root domain: sustainability.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: scholar.google.com
+Host is already exist. Skip: scholar.google.com
+Add entry to the local host repository: en.wikipedia.org
+Error - host en.wikipedia.org has an untrusted internet root domain: wikipedia.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: accounts.google.com
+Host is already exist. Skip: accounts.google.com
+Add entry to the local host repository: hangouts.google.com
+Host is already exist. Skip: hangouts.google.com
+Add entry to the local host repository: files.google.com
+Host is already exist. Skip: files.google.com
+Add entry to the local host repository: flutter.dev
+Error - host flutter.dev has an untrusted internet root domain: flutter.dev
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: podcasts.google.com
+Host is already exist. Skip: podcasts.google.com
+Add entry to the local host repository: vr.youtube.com
+Error - host vr.youtube.com has an untrusted internet root domain: youtube.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: keep.google.com
+Host is already exist. Skip: keep.google.com
+Add entry to the local host repository: cloud.google.com
+Host is already exist. Skip: cloud.google.com
+Add entry to the local host repository: wellbeing.google
+Error - host wellbeing.google has an untrusted internet root domain: wellbeing.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.blog.google
+Error - host www.blog.google has an untrusted internet root domain: blog.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: teachfromanywhere.google
+Error - host teachfromanywhere.google has an untrusted internet root domain: teachfromanywhere.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: news.google.com
+Host is already exist. Skip: news.google.com
+Add entry to the local host repository: payments.google.com
+Host is already exist. Skip: payments.google.com
+Add entry to the local host repository: contacts.google.com
+Host is already exist. Skip: contacts.google.com
+Add entry to the local host repository: remotedesktop.google.com
+Host is already exist. Skip: remotedesktop.google.com
+Add entry to the local host repository: safety.google
+Error - host safety.google has an untrusted internet root domain: safety.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.blogger.com
+Error - host www.blogger.com has an untrusted internet root domain: blogger.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: docs.google.com
+Host is already exist. Skip: docs.google.com
+Add entry to the local host repository: www.google.co.in
+Error - host www.google.co.in has an untrusted internet root domain: google.co.in
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: observer.com
+Error - host observer.com has an untrusted internet root domain: observer.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.gmail.com
+Error - host www.gmail.com has an untrusted internet root domain: gmail.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: heavy.com
+Error - host heavy.com has an untrusted internet root domain: heavy.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: drive.google.com
+Host is already exist. Skip: drive.google.com
+Add entry to the local host repository: about.google
+Error - host about.google has an untrusted internet root domain: about.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.usa.gov
+Error - host www.usa.gov has an untrusted internet root domain: usa.gov
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: smallbusiness.withgoogle.com
+Error - host smallbusiness.withgoogle.com has an untrusted internet root domain: withgoogle.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: projects.fivethirtyeight.com
+Error - host projects.fivethirtyeight.com has an untrusted internet root domain: fivethirtyeight.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: itunes.apple.com
+Error - host itunes.apple.com has an untrusted internet root domain: apple.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.independent.co.uk
+Error - host www.independent.co.uk has an untrusted internet root domain: independent.co.uk
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: meet.google.com
+Host is already exist. Skip: meet.google.com
+Add entry to the local host repository: families.google.com
+Host is already exist. Skip: families.google.com
+Add entry to the local host repository: www.tensorflow.org
+Error - host www.tensorflow.org has an untrusted internet root domain: tensorflow.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.usatoday.com
+Error - host www.usatoday.com has an untrusted internet root domain: usatoday.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.android.com
+Error - host www.android.com has an untrusted internet root domain: android.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.businessinsider.com
+Error - host www.businessinsider.com has an untrusted internet root domain: businessinsider.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: earth.google.com
+Host is already exist. Skip: earth.google.com
+Add entry to the local host repository: one.google.com
+Host is already exist. Skip: one.google.com
+Add entry to the local host repository: www.linkedin.com
+Error - host www.linkedin.com has an untrusted internet root domain: linkedin.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.washingtonpost.com
+Error - host www.washingtonpost.com has an untrusted internet root domain: washingtonpost.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: developers.google.com
+Host is already exist. Skip: developers.google.com
+Add entry to the local host repository: wearos.google.com
+Host is already exist. Skip: wearos.google.com
+Add entry to the local host repository: fi.google.com
+Host is already exist. Skip: fi.google.com
+Add entry to the local host repository: instagram.com
+Error - host instagram.com has an untrusted internet root domain: instagram.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.cbsnews.com
+Error - host www.cbsnews.com has an untrusted internet root domain: cbsnews.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.google.com
+Host is already exist. Skip: www.google.com
+Add entry to the local host repository: domains.google.com
+Host is already exist. Skip: domains.google.com
+Add entry to the local host repository: bacillusbulgaricus.com
+Error - host bacillusbulgaricus.com has an untrusted internet root domain: bacillusbulgaricus.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.vote.org
+Error - host www.vote.org has an untrusted internet root domain: vote.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: myaccount.google.com
+Host is already exist. Skip: myaccount.google.com
+Add entry to the local host repository: edu.google.com
+Host is already exist. Skip: edu.google.com
+Add entry to the local host repository: chrome.google.com
+Host is already exist. Skip: chrome.google.com
+Add entry to the local host repository: biz.waze.com
+Error - host biz.waze.com has an untrusted internet root domain: waze.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: apps.apple.com
+Error - host apps.apple.com has an untrusted internet root domain: apple.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: policies.google.com
+Host is already exist. Skip: policies.google.com
+Add entry to the local host repository: shopping.google.com
+Host is already exist. Skip: shopping.google.com
+Add entry to the local host repository: careers.google.com
+Host is already exist. Skip: careers.google.com
+Add entry to the local host repository: www.msn.com
+Error - host www.msn.com has an untrusted internet root domain: msn.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: dos.myflorida.com
+Error - host dos.myflorida.com has an untrusted internet root domain: myflorida.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.youtube.com
+Error - host www.youtube.com has an untrusted internet root domain: youtube.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: crq8j.app.goo.gl
+Error - host crq8j.app.goo.gl has an untrusted internet root domain: goo.gl
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: developer.android.com
+Error - host developer.android.com has an untrusted internet root domain: android.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: blog.google
+Error - host blog.google has an untrusted internet root domain: blog.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: sites.google.com
+Host is already exist. Skip: sites.google.com
+Add entry to the local host repository: www.thinkwithgoogle.com
+Error - host www.thinkwithgoogle.com has an untrusted internet root domain: thinkwithgoogle.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.yourprimer.com
+Error - host www.yourprimer.com has an untrusted internet root domain: yourprimer.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: learndigital.withgoogle.com
+Error - host learndigital.withgoogle.com has an untrusted internet root domain: withgoogle.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.en.advertisercommunity.com
+Error - host www.en.advertisercommunity.com has an untrusted internet root domain: advertisercommunity.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: ads.google.com
+Host is already exist. Skip: ads.google.com
+Add entry to the local host repository: tv.youtube.com
+Error - host tv.youtube.com has an untrusted internet root domain: youtube.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: skillshop.exceedlms.com
+Error - host skillshop.exceedlms.com has an untrusted internet root domain: exceedlms.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: workspace.google.com
+Host is already exist. Skip: workspace.google.com
+Add entry to the local host repository: www.cnet.com
+Error - host www.cnet.com has an untrusted internet root domain: cnet.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: waze.com
+Error - host waze.com has an untrusted internet root domain: waze.com
+Please update the trusted domain seeds file first if necessary.
+Done loading entries.
+2020-10-27T21:17:06.541Z 18208 TID-owk7abda4 DiscoveryWorker JID-d9c13674cef221aabade9c14 INFO: Discovery successful!
+2020-10-27T21:17:06.541Z 18208 TID-owk7abda4 DiscoveryWorker JID-d9c13674cef221aabade9c14 INFO: Sending out email notice to: yangsec888@gmail.com
+Update the site table ...
+Database connection success. 
+site table truncate success.
+Insert record for site: http://maps.google.com/
+Insert record for site: http://messages.google.com/
+Insert record for site: http://news.google.com/
+Insert record for site: http://policies.google.com/
+Insert record for site: http://support.google.com/
+Insert record for site: http://www.google.com/
+Insert record for site: https://accounts.google.com/
+Insert record for site: https://admob.google.com/
+Insert record for site: https://ads.google.com/
+Insert record for site: https://analytics.google.com/
+Insert record for site: https://artsandculture.google.com/
+Insert record for site: https://assistant.google.com/
+Insert record for site: https://books.google.com/
+Insert record for site: https://business.google.com/
+Insert record for site: https://careers.google.com/
+Insert record for site: https://chat.google.com/
+Insert record for site: https://chrome.google.com/
+Insert record for site: https://classroom.google.com/
+Insert record for site: https://cloud.google.com/
+Insert record for site: https://contacts.google.com/
+Insert record for site: https://developers.google.com/
+Insert record for site: https://docs.google.com/
+Insert record for site: https://domains.google.com/
+Insert record for site: https://drive.google.com/
+Insert record for site: https://duo.google.com/
+Insert record for site: https://earth.google.com/
+Insert record for site: https://edu.google.com/
+Insert record for site: https://enterprise.google.com/
+Insert record for site: https://families.google.com/
+Insert record for site: https://fi.google.com/
+Insert record for site: https://files.google.com/
+Insert record for site: https://firebase.google.com/
+Insert record for site: https://groups.google.com/
+Insert record for site: https://gsuite.google.com/
+Insert record for site: https://hangouts.google.com/
+Insert record for site: https://jamboard.google.com/
+Insert record for site: https://keep.google.com/
+Insert record for site: https://lens.google.com/
+Insert record for site: https://mail.google.com/
+Insert record for site: https://maps.google.com/
+Insert record for site: https://marketingplatform.google.com/
+Insert record for site: https://meet.google.com/
+Insert record for site: https://messages.google.com/
+Insert record for site: https://myaccount.google.com/
+Insert record for site: https://news.google.com/
+Insert record for site: https://one.google.com/
+Insert record for site: https://pay.google.com/
+Insert record for site: https://payments.google.com/
+Insert record for site: https://photos.google.com/
+Insert record for site: https://play.google.com/
+Insert record for site: https://podcasts.google.com/
+Insert record for site: https://podcastsmanager.google.com/
+Insert record for site: https://policies.google.com/
+Insert record for site: https://remotedesktop.google.com/
+Insert record for site: https://scholar.google.com/
+Insert record for site: https://services.google.com/
+Insert record for site: https://shopping.google.com/
+Insert record for site: https://sites.google.com/
+Insert record for site: https://stadia.google.com/
+Insert record for site: https://store.google.com/
+Insert record for site: https://support.google.com/
+Insert record for site: https://translate.google.com/
+Insert record for site: https://transparencyreport.google.com/
+Insert record for site: https://voice.google.com/
+Insert record for site: https://wearos.google.com/
+Insert record for site: https://workspace.google.com/
+Insert record for site: https://www.google.com/
+Update complete. 
+Update the host table ...
+Database connection success. 
+host table truncate success.
+Update complete. 
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-27T21:17:06.814Z 18208 TID-owk7abda4 DiscoveryWorker JID-d9c13674cef221aabade9c14 INFO: done: 1180.488 sec
+Import domain from seed file: /Users/sli/www_wmap/shared/data/seed
+Start background sanity check on the new domains: {"# local domains file created by class wmap::domaintracker method save_domains_to_file! at: 2020-10-27 16:57:26 -0400"=>true, "# domain name, free zone transfer detected?"=>true, "google.com, no"=>true}
+Start background sanity check on the new domains: {"# local domains file created by class wmap::domaintracker method save_domains_to_file! at: 2020-10-27 16:57:26 -0400"=>true, "# domain name, free zone transfer detected?"=>true, "google.com, no"=>true}
+You're hitting mailer controller...
+Domain is already exist. Skipping: google.com
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Import complete.
+2020-10-27T21:17:06.948Z 18208 TID-owk7kf914 DiscoveryWorker JID-288eba331f6203796904ec84 INFO: Starting background command: wmap -t /Users/sli/www_wmap/shared/data/seed -d /Users/sli/www_wmap/shared/data/
+Done loading entries.
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-27T21:17:07.277Z 18208 TID-owk7acwl8 DomainCheckWorker JID-34747d916232e5fb64e0272f INFO: done: 1008.354 sec
+Done loading entries.
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-27T21:17:07.419Z 18208 TID-owk6gydo4 DomainCheckWorker JID-7b2e683f91c7dc2f113edcca INFO: done: 1117.727 sec
+--------------------------------------------------------------------------------
+,--.   ,--.       ,--.       ,--.   ,--.
+|  |   |  | ,---. |  |-.     |   `.'   | ,--,--. ,---.  ,---.  ,---. ,--.--.
+|  |.'.|  || .-. :| .-. '    |  |'.'|  |' ,-.  || .-. || .-. || .-. :|  .--'
+|   ,'.   |   --.| `-' |    |  |   |  | '-'  || '-' '| '-' '   --.|  |
+'--'   '--' `----' `---'     `--'   `--' `--`--'|  |-' |  |-'  `----'`--'
+                                                `--'   `--'                  
+Version: 2.7.9	Release Date: 2020-03-30
+Designed and developed by: Sam (Yang) Li
+Email: yang.li@owasp.org	LinkedIn: http://www.linkedin.com/in/yangli8/
+--------------------------------------------------------------------------------
+Parsing the discovery seed file: "/Users/sli/www_wmap/shared/data/seed" 
+Parsing done. 
+Build up URL list for the web crawler ...
+Start the parallel port scan on the target list:
+ ["www.google.com"]
+Perform web service discovery on host: www.google.com
+Detected web service on host www.google.com: ["http://www.google.com/", "https://www.google.com/"]
+Port scanning done successfully with the found web services: ["http://www.google.com/", "https://www.google.com/"]
+Fire up the crawler with the optional directory setter.
+Start the parallel engine on the normalized crawling list:
+ ["http://www.google.com/", "https://www.google.com/"] 
+Maximum number of web crawling sessions allowed: 40
+Start web crawling on http://www.google.com/
+Start web crawling on https://www.google.com/
+Please be aware that it may take a while to crawl https://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: https://www.google.com/
+Please be aware that it may take a while to crawl http://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: http://www.google.com/
+Discovered sites: 
+http://www.google.com/
+http://maps.google.com/
+https://play.google.com/
+http://www.youtube.com/
+https://news.google.com/
+https://mail.google.com/
+https://drive.google.com/
+https://www.google.com/
+https://accounts.google.com/
+https://support.google.com/
+https://maps.google.com/
+https://www.youtube.com/
+https://policies.google.com/
+http://developer.android.com/
+https://payments.google.com/
+https://developers.google.com/
+https://myaccount.google.com/
+https://meet.google.com/
+https://contacts.google.com/
+https://translate.google.com/
+https://photos.google.com/
+https://duo.google.com/
+https://docs.google.com/
+https://books.google.com/
+https://www.blogger.com/
+https://hangouts.google.com/
+https://keep.google.com/
+https://jamboard.google.com/
+https://earth.google.com/
+https://artsandculture.google.com/
+https://ads.google.com/
+https://podcasts.google.com/
+https://stadia.google.com/
+https://itunes.apple.com/
+https://about.google/
+https://www.blog.google/
+https://store.google.com/
+https://smallbusiness.withgoogle.com/
+https://teachfromanywhere.google/
+https://edu.google.com/
+https://www.android.com/
+https://wearos.google.com/
+https://www.gmail.com/
+http://messages.google.com/
+https://gsuite.google.com/
+https://chrome.google.com/
+https://assistant.google.com/
+https://www.google.co.in/
+https://families.google.com/
+https://fi.google.com/
+https://files.google.com/
+https://groups.google.com/
+https://lens.google.com/
+https://one.google.com/
+https://pay.google.com/
+https://shopping.google.com/
+https://messages.google.com/
+https://scholar.google.com/
+https://sites.google.com/
+https://www.tiltbrush.com/
+https://voice.google.com/
+https://www.waze.com/
+https://youtube-global.blogspot.com/
+https://tv.youtube.com/
+https://vr.youtube.com/
+https://enterprise.google.com/
+https://businessmessages.google/
+https://remotedesktop.google.com/
+https://cloud.google.com/
+https://learndigital.withgoogle.com/
+https://domains.google.com/
+https://marketingplatform.google.com/
+https://podcastsmanager.google.com/
+https://workspace.google.com/
+https://biz.waze.com/
+https://developer.android.com/
+https://firebase.google.com/
+https://flutter.dev/
+https://www.tensorflow.org/
+https://instagram.com/
+https://twitter.com/
+https://www.facebook.com/
+https://www.linkedin.com/
+https://abc.xyz/
+https://careers.google.com/
+https://www.thinkwithgoogle.com/
+https://services.google.com/
+https://www.google.org/
+https://sustainability.google/
+https://transparencyreport.google.com/
+https://wellbeing.google/
+https://safety.google/
+https://bacillusbulgaricus.com/
+https://upload.wikimedia.org/
+https://tobulgaria.files.wordpress.com/
+https://i.pinimg.com/
+https://en.wikipedia.org/
+https://www.forbes.com/
+https://www.upi.com/
+https://9to5google.com/
+https://www.msn.com/
+https://www.seroundtable.com/
+https://www.newsweek.com/
+https://www.cnet.com/
+https://observer.com/
+https://heavy.com/
+https://www.independent.co.uk/
+http://policies.google.com/
+https://www.usa.gov/
+https://projects.fivethirtyeight.com/
+https://www.businessinsider.com/
+https://www.washingtonpost.com/
+https://www.cbsnews.com/
+https://www.vote.org/
+https://www.usatoday.com/
+https://dos.myflorida.com/
+https://crq8j.app.goo.gl/
+https://blog.google/
+https://apps.apple.com/
+https://www.en.advertisercommunity.com/
+https://www.yourprimer.com/
+https://skillshop.exceedlms.com/
+https://waze.com/
+https://admob.google.com/
+Automatically save the discovery results into the site tracking data repository: 
+Start the SiteTracker with the optional directory setter. 
+Add entries to the local site store from list:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "https://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://support.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://developers.google.com/", "https://myaccount.google.com/", "https://meet.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://duo.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://earth.google.com/", "https://artsandculture.google.com/", "https://ads.google.com/", "https://podcasts.google.com/", "https://stadia.google.com/", "https://itunes.apple.com/", "https://about.google/", "https://www.blog.google/", "https://store.google.com/", "https://smallbusiness.withgoogle.com/", "https://teachfromanywhere.google/", "https://edu.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "http://messages.google.com/", "https://gsuite.google.com/", "https://chrome.google.com/", "https://assistant.google.com/", "https://www.google.co.in/", "https://families.google.com/", "https://fi.google.com/", "https://files.google.com/", "https://groups.google.com/", "https://lens.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://shopping.google.com/", "https://messages.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://tv.youtube.com/", "https://vr.youtube.com/", "https://enterprise.google.com/", "https://businessmessages.google/", "https://remotedesktop.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://marketingplatform.google.com/", "https://podcastsmanager.google.com/", "https://workspace.google.com/", "https://biz.waze.com/", "https://developer.android.com/", "https://firebase.google.com/", "https://flutter.dev/", "https://www.tensorflow.org/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/", "https://bacillusbulgaricus.com/", "https://upload.wikimedia.org/", "https://tobulgaria.files.wordpress.com/", "https://i.pinimg.com/", "https://en.wikipedia.org/", "https://www.forbes.com/", "https://www.upi.com/", "https://9to5google.com/", "https://www.msn.com/", "https://www.seroundtable.com/", "https://www.newsweek.com/", "https://www.cnet.com/", "https://observer.com/", "https://heavy.com/", "https://www.independent.co.uk/", "http://policies.google.com/", "https://www.usa.gov/", "https://projects.fivethirtyeight.com/", "https://www.businessinsider.com/", "https://www.washingtonpost.com/", "https://www.cbsnews.com/", "https://www.vote.org/", "https://www.usatoday.com/", "https://dos.myflorida.com/", "https://crq8j.app.goo.gl/", "https://blog.google/", "https://apps.apple.com/", "https://www.en.advertisercommunity.com/", "https://www.yourprimer.com/", "https://skillshop.exceedlms.com/", "https://waze.com/", "https://admob.google.com/"]
+Start parallel adding on the sites:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "https://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://support.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://developers.google.com/", "https://myaccount.google.com/", "https://meet.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://duo.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://earth.google.com/", "https://artsandculture.google.com/", "https://ads.google.com/", "https://podcasts.google.com/", "https://stadia.google.com/", "https://itunes.apple.com/", "https://about.google/", "https://www.blog.google/", "https://store.google.com/", "https://smallbusiness.withgoogle.com/", "https://teachfromanywhere.google/", "https://edu.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "http://messages.google.com/", "https://gsuite.google.com/", "https://chrome.google.com/", "https://assistant.google.com/", "https://www.google.co.in/", "https://families.google.com/", "https://fi.google.com/", "https://files.google.com/", "https://groups.google.com/", "https://lens.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://shopping.google.com/", "https://messages.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://tv.youtube.com/", "https://vr.youtube.com/", "https://enterprise.google.com/", "https://businessmessages.google/", "https://remotedesktop.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://marketingplatform.google.com/", "https://podcastsmanager.google.com/", "https://workspace.google.com/", "https://biz.waze.com/", "https://developer.android.com/", "https://firebase.google.com/", "https://flutter.dev/", "https://www.tensorflow.org/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/", "https://bacillusbulgaricus.com/", "https://upload.wikimedia.org/", "https://tobulgaria.files.wordpress.com/", "https://i.pinimg.com/", "https://en.wikipedia.org/", "https://www.forbes.com/", "https://www.upi.com/", "https://9to5google.com/", "https://www.msn.com/", "https://www.seroundtable.com/", "https://www.newsweek.com/", "https://www.cnet.com/", "https://observer.com/", "https://heavy.com/", "https://www.independent.co.uk/", "http://policies.google.com/", "https://www.usa.gov/", "https://projects.fivethirtyeight.com/", "https://www.businessinsider.com/", "https://www.washingtonpost.com/", "https://www.cbsnews.com/", "https://www.vote.org/", "https://www.usatoday.com/", "https://dos.myflorida.com/", "https://crq8j.app.goo.gl/", "https://blog.google/", "https://apps.apple.com/", "https://www.en.advertisercommunity.com/", "https://www.yourprimer.com/", "https://skillshop.exceedlms.com/", "https://waze.com/", "https://admob.google.com/"]
+Add entry to the site store: http://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip http://developer.android.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://9to5google.com/
+Problem found: untrusted Internet domain or IP. Skip https://9to5google.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://admob.google.com/
+Site already exists. Skip it: https://admob.google.com/
+Add entry to the site store: https://duo.google.com/
+Site already exists. Skip it: https://duo.google.com/
+Add entry to the site store: https://firebase.google.com/
+Site already exists. Skip it: https://firebase.google.com/
+Add entry to the site store: https://flutter.dev/
+Problem found: untrusted Internet domain or IP. Skip https://flutter.dev/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://observer.com/
+Problem found: untrusted Internet domain or IP. Skip https://observer.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://contacts.google.com/
+Site already exists. Skip it: https://contacts.google.com/
+Add entry to the site store: https://remotedesktop.google.com/
+Site already exists. Skip it: https://remotedesktop.google.com/
+Add entry to the site store: https://cloud.google.com/
+Site already exists. Skip it: https://cloud.google.com/
+Add entry to the site store: https://learndigital.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://learndigital.withgoogle.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.newsweek.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.newsweek.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://photos.google.com/
+Site already exists. Skip it: https://photos.google.com/
+Add entry to the site store: https://vr.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://vr.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.msn.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.msn.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://jamboard.google.com/
+Site already exists. Skip it: https://jamboard.google.com/
+Add entry to the site store: https://twitter.com/
+Problem found: untrusted Internet domain or IP. Skip https://twitter.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://en.wikipedia.org/
+Problem found: untrusted Internet domain or IP. Skip https://en.wikipedia.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://play.google.com/
+Site already exists. Skip it: https://play.google.com/
+Add entry to the site store: https://store.google.com/
+Site already exists. Skip it: https://store.google.com/
+Add entry to the site store: https://smallbusiness.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://smallbusiness.withgoogle.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://transparencyreport.google.com/
+Site already exists. Skip it: https://transparencyreport.google.com/
+Add entry to the site store: https://heavy.com/
+Problem found: untrusted Internet domain or IP. Skip https://heavy.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://developers.google.com/
+Site already exists. Skip it: https://developers.google.com/
+Add entry to the site store: https://gsuite.google.com/
+Site already exists. Skip it: https://gsuite.google.com/
+Add entry to the site store: https://assistant.google.com/
+Site already exists. Skip it: https://assistant.google.com/
+Add entry to the site store: https://fi.google.com/
+Site already exists. Skip it: https://fi.google.com/
+Add entry to the site store: https://groups.google.com/
+Site already exists. Skip it: https://groups.google.com/
+Add entry to the site store: https://one.google.com/
+Site already exists. Skip it: https://one.google.com/
+Add entry to the site store: https://messages.google.com/
+Site already exists. Skip it: https://messages.google.com/
+Add entry to the site store: https://scholar.google.com/
+Site already exists. Skip it: https://scholar.google.com/
+Add entry to the site store: https://www.tiltbrush.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.tiltbrush.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://tobulgaria.files.wordpress.com/
+Problem found: untrusted Internet domain or IP. Skip https://tobulgaria.files.wordpress.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://hangouts.google.com/
+Site already exists. Skip it: https://hangouts.google.com/
+Add entry to the site store: https://www.linkedin.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.linkedin.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.cbsnews.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.cbsnews.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://books.google.com/
+Site already exists. Skip it: https://books.google.com/
+Add entry to the site store: https://instagram.com/
+Problem found: untrusted Internet domain or IP. Skip https://instagram.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.vote.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.vote.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://docs.google.com/
+Site already exists. Skip it: https://docs.google.com/
+Add entry to the site store: https://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://developer.android.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.independent.co.uk/
+Problem found: untrusted Internet domain or IP. Skip https://www.independent.co.uk/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.blogger.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.blogger.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://crq8j.app.goo.gl/
+Problem found: untrusted Internet domain or IP. Skip https://crq8j.app.goo.gl/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://policies.google.com/
+Site already exists. Skip it: https://policies.google.com/
+Add entry to the site store: https://tv.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://tv.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://policies.google.com/
+Site already exists. Skip it: http://policies.google.com/
+Add entry to the site store: https://www.washingtonpost.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.washingtonpost.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://www.google.com/
+Site already exists. Skip it: http://www.google.com/
+Add entry to the site store: https://ads.google.com/
+Site already exists. Skip it: https://ads.google.com/
+Add entry to the site store: https://podcasts.google.com/
+Site already exists. Skip it: https://podcasts.google.com/
+Add entry to the site store: https://stadia.google.com/
+Site already exists. Skip it: https://stadia.google.com/
+Add entry to the site store: https://itunes.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://itunes.apple.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://projects.fivethirtyeight.com/
+Problem found: untrusted Internet domain or IP. Skip https://projects.fivethirtyeight.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://maps.google.com/
+Site already exists. Skip it: http://maps.google.com/
+Add entry to the site store: https://about.google/
+Problem found: untrusted Internet domain or IP. Skip https://about.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.businessinsider.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.businessinsider.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.google.com/
+Site already exists. Skip it: https://www.google.com/
+Add entry to the site store: http://messages.google.com/
+Site already exists. Skip it: http://messages.google.com/
+Add entry to the site store: https://www.google.co.in/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.co.in/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://i.pinimg.com/
+Problem found: untrusted Internet domain or IP. Skip https://i.pinimg.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://news.google.com/
+Site already exists. Skip it: https://news.google.com/
+Add entry to the site store: https://edu.google.com/
+Site already exists. Skip it: https://edu.google.com/
+Add entry to the site store: https://www.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.android.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.forbes.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.forbes.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://artsandculture.google.com/
+Site already exists. Skip it: https://artsandculture.google.com/
+Add entry to the site store: https://abc.xyz/
+Problem found: untrusted Internet domain or IP. Skip https://abc.xyz/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.usatoday.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.usatoday.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://drive.google.com/
+Site already exists. Skip it: https://drive.google.com/
+Add entry to the site store: https://chrome.google.com/
+Site already exists. Skip it: https://chrome.google.com/
+Add entry to the site store: https://families.google.com/
+Site already exists. Skip it: https://families.google.com/
+Add entry to the site store: https://files.google.com/
+Site already exists. Skip it: https://files.google.com/
+Add entry to the site store: https://lens.google.com/
+Site already exists. Skip it: https://lens.google.com/
+Add entry to the site store: https://pay.google.com/
+Site already exists. Skip it: https://pay.google.com/
+Add entry to the site store: https://shopping.google.com/
+Site already exists. Skip it: https://shopping.google.com/
+Add entry to the site store: https://sites.google.com/
+Site already exists. Skip it: https://sites.google.com/
+Add entry to the site store: https://voice.google.com/
+Site already exists. Skip it: https://voice.google.com/
+Add entry to the site store: https://www.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.waze.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.cnet.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.cnet.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://translate.google.com/
+Site already exists. Skip it: https://translate.google.com/
+Add entry to the site store: https://youtube-global.blogspot.com/
+Problem found: untrusted Internet domain or IP. Skip https://youtube-global.blogspot.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.usa.gov/
+Problem found: untrusted Internet domain or IP. Skip https://www.usa.gov/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://support.google.com/
+Site already exists. Skip it: https://support.google.com/
+Add entry to the site store: https://teachfromanywhere.google/
+Problem found: untrusted Internet domain or IP. Skip https://teachfromanywhere.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.seroundtable.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.seroundtable.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://sustainability.google/
+Problem found: untrusted Internet domain or IP. Skip https://sustainability.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://mail.google.com/
+Site already exists. Skip it: https://mail.google.com/
+Add entry to the site store: https://www.blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://www.blog.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://safety.google/
+Problem found: untrusted Internet domain or IP. Skip https://safety.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://maps.google.com/
+Site already exists. Skip it: https://maps.google.com/
+Add entry to the site store: https://wearos.google.com/
+Site already exists. Skip it: https://wearos.google.com/
+Add entry to the site store: https://www.gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.gmail.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://wellbeing.google/
+Problem found: untrusted Internet domain or IP. Skip https://wellbeing.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://accounts.google.com/
+Site already exists. Skip it: https://accounts.google.com/
+Add entry to the site store: https://www.tensorflow.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.tensorflow.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://dos.myflorida.com/
+Problem found: untrusted Internet domain or IP. Skip https://dos.myflorida.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://myaccount.google.com/
+Site already exists. Skip it: https://myaccount.google.com/
+Add entry to the site store: https://services.google.com/
+Site already exists. Skip it: https://services.google.com/
+Add entry to the site store: https://www.google.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://blog.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://meet.google.com/
+Site already exists. Skip it: https://meet.google.com/
+Add entry to the site store: https://enterprise.google.com/
+Site already exists. Skip it: https://enterprise.google.com/
+Add entry to the site store: https://businessmessages.google/
+Problem found: untrusted Internet domain or IP. Skip https://businessmessages.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://apps.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://apps.apple.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://earth.google.com/
+Site already exists. Skip it: https://earth.google.com/
+Add entry to the site store: https://careers.google.com/
+Site already exists. Skip it: https://careers.google.com/
+Add entry to the site store: https://www.thinkwithgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.thinkwithgoogle.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.en.advertisercommunity.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.en.advertisercommunity.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://keep.google.com/
+Site already exists. Skip it: https://keep.google.com/
+Add entry to the site store: https://www.facebook.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.facebook.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.upi.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.upi.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://waze.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://payments.google.com/
+Site already exists. Skip it: https://payments.google.com/
+Add entry to the site store: https://domains.google.com/
+Site already exists. Skip it: https://domains.google.com/
+Add entry to the site store: https://marketingplatform.google.com/
+Site already exists. Skip it: https://marketingplatform.google.com/
+Add entry to the site store: https://podcastsmanager.google.com/
+Site already exists. Skip it: https://podcastsmanager.google.com/
+Add entry to the site store: https://workspace.google.com/
+Site already exists. Skip it: https://workspace.google.com/
+Add entry to the site store: https://biz.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://biz.waze.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://bacillusbulgaricus.com/
+Problem found: untrusted Internet domain or IP. Skip https://bacillusbulgaricus.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.yourprimer.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.yourprimer.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://upload.wikimedia.org/
+Problem found: untrusted Internet domain or IP. Skip https://upload.wikimedia.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://skillshop.exceedlms.com/
+Problem found: untrusted Internet domain or IP. Skip https://skillshop.exceedlms.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Done adding site entries.
+No new entry added. 
+Invoke the HostTracker with optional directory setter.
+Update the local hosts data repository with: ["www.google.com", "maps.google.com", "play.google.com", "www.youtube.com", "news.google.com", "mail.google.com", "drive.google.com", "accounts.google.com", "support.google.com", "policies.google.com", "developer.android.com", "payments.google.com", "developers.google.com", "myaccount.google.com", "meet.google.com", "contacts.google.com", "translate.google.com", "photos.google.com", "duo.google.com", "docs.google.com", "books.google.com", "www.blogger.com", "hangouts.google.com", "keep.google.com", "jamboard.google.com", "earth.google.com", "artsandculture.google.com", "ads.google.com", "podcasts.google.com", "stadia.google.com", "itunes.apple.com", "about.google", "www.blog.google", "store.google.com", "smallbusiness.withgoogle.com", "teachfromanywhere.google", "edu.google.com", "www.android.com", "wearos.google.com", "www.gmail.com", "messages.google.com", "gsuite.google.com", "chrome.google.com", "assistant.google.com", "www.google.co.in", "families.google.com", "fi.google.com", "files.google.com", "groups.google.com", "lens.google.com", "one.google.com", "pay.google.com", "shopping.google.com", "scholar.google.com", "sites.google.com", "www.tiltbrush.com", "voice.google.com", "www.waze.com", "youtube-global.blogspot.com", "tv.youtube.com", "vr.youtube.com", "enterprise.google.com", "businessmessages.google", "remotedesktop.google.com", "cloud.google.com", "learndigital.withgoogle.com", "domains.google.com", "marketingplatform.google.com", "podcastsmanager.google.com", "workspace.google.com", "biz.waze.com", "firebase.google.com", "flutter.dev", "www.tensorflow.org", "instagram.com", "twitter.com", "www.facebook.com", "www.linkedin.com", "abc.xyz", "careers.google.com", "www.thinkwithgoogle.com", "services.google.com", "www.google.org", "sustainability.google", "transparencyreport.google.com", "wellbeing.google", "safety.google", "bacillusbulgaricus.com", "upload.wikimedia.org", "tobulgaria.files.wordpress.com", "i.pinimg.com", "en.wikipedia.org", "www.forbes.com", "www.upi.com", "9to5google.com", "www.msn.com", "www.seroundtable.com", "www.newsweek.com", "www.cnet.com", "observer.com", "heavy.com", "www.independent.co.uk", "www.usa.gov", "projects.fivethirtyeight.com", "www.businessinsider.com", "www.washingtonpost.com", "www.cbsnews.com", "www.vote.org", "www.usatoday.com", "dos.myflorida.com", "crq8j.app.goo.gl", "blog.google", "apps.apple.com", "www.en.advertisercommunity.com", "www.yourprimer.com", "skillshop.exceedlms.com", "waze.com", "admob.google.com"]
+Add entries to the local host repository: ["www.google.com", "maps.google.com", "play.google.com", "www.youtube.com", "news.google.com", "mail.google.com", "drive.google.com", "accounts.google.com", "support.google.com", "policies.google.com", "developer.android.com", "payments.google.com", "developers.google.com", "myaccount.google.com", "meet.google.com", "contacts.google.com", "translate.google.com", "photos.google.com", "duo.google.com", "docs.google.com", "books.google.com", "www.blogger.com", "hangouts.google.com", "keep.google.com", "jamboard.google.com", "earth.google.com", "artsandculture.google.com", "ads.google.com", "podcasts.google.com", "stadia.google.com", "itunes.apple.com", "about.google", "www.blog.google", "store.google.com", "smallbusiness.withgoogle.com", "teachfromanywhere.google", "edu.google.com", "www.android.com", "wearos.google.com", "www.gmail.com", "messages.google.com", "gsuite.google.com", "chrome.google.com", "assistant.google.com", "www.google.co.in", "families.google.com", "fi.google.com", "files.google.com", "groups.google.com", "lens.google.com", "one.google.com", "pay.google.com", "shopping.google.com", "scholar.google.com", "sites.google.com", "www.tiltbrush.com", "voice.google.com", "www.waze.com", "youtube-global.blogspot.com", "tv.youtube.com", "vr.youtube.com", "enterprise.google.com", "businessmessages.google", "remotedesktop.google.com", "cloud.google.com", "learndigital.withgoogle.com", "domains.google.com", "marketingplatform.google.com", "podcastsmanager.google.com", "workspace.google.com", "biz.waze.com", "firebase.google.com", "flutter.dev", "www.tensorflow.org", "instagram.com", "twitter.com", "www.facebook.com", "www.linkedin.com", "abc.xyz", "careers.google.com", "www.thinkwithgoogle.com", "services.google.com", "www.google.org", "sustainability.google", "transparencyreport.google.com", "wellbeing.google", "safety.google", "bacillusbulgaricus.com", "upload.wikimedia.org", "tobulgaria.files.wordpress.com", "i.pinimg.com", "en.wikipedia.org", "www.forbes.com", "www.upi.com", "9to5google.com", "www.msn.com", "www.seroundtable.com", "www.newsweek.com", "www.cnet.com", "observer.com", "heavy.com", "www.independent.co.uk", "www.usa.gov", "projects.fivethirtyeight.com", "www.businessinsider.com", "www.washingtonpost.com", "www.cbsnews.com", "www.vote.org", "www.usatoday.com", "dos.myflorida.com", "crq8j.app.goo.gl", "blog.google", "apps.apple.com", "www.en.advertisercommunity.com", "www.yourprimer.com", "skillshop.exceedlms.com", "waze.com", "admob.google.com"]
+Add entry to the local host repository: gsuite.google.com
+Host is already exist. Skip: gsuite.google.com
+Add entry to the local host repository: tobulgaria.files.wordpress.com
+Error - host tobulgaria.files.wordpress.com has an untrusted internet root domain: wordpress.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: tv.youtube.com
+Error - host tv.youtube.com has an untrusted internet root domain: youtube.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: sustainability.google
+Error - host sustainability.google has an untrusted internet root domain: sustainability.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: support.google.com
+Host is already exist. Skip: support.google.com
+Add entry to the local host repository: enterprise.google.com
+Host is already exist. Skip: enterprise.google.com
+Add entry to the local host repository: www.google.org
+Error - host www.google.org has an untrusted internet root domain: google.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: mail.google.com
+Host is already exist. Skip: mail.google.com
+Add entry to the local host repository: files.google.com
+Host is already exist. Skip: files.google.com
+Add entry to the local host repository: i.pinimg.com
+Error - host i.pinimg.com has an untrusted internet root domain: pinimg.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: duo.google.com
+Host is already exist. Skip: duo.google.com
+Add entry to the local host repository: jamboard.google.com
+Host is already exist. Skip: jamboard.google.com
+Add entry to the local host repository: assistant.google.com
+Host is already exist. Skip: assistant.google.com
+Add entry to the local host repository: groups.google.com
+Host is already exist. Skip: groups.google.com
+Add entry to the local host repository: lens.google.com
+Host is already exist. Skip: lens.google.com
+Add entry to the local host repository: www.forbes.com
+Error - host www.forbes.com has an untrusted internet root domain: forbes.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: ads.google.com
+Host is already exist. Skip: ads.google.com
+Add entry to the local host repository: wearos.google.com
+Host is already exist. Skip: wearos.google.com
+Add entry to the local host repository: workspace.google.com
+Host is already exist. Skip: workspace.google.com
+Add entry to the local host repository: www.facebook.com
+Error - host www.facebook.com has an untrusted internet root domain: facebook.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: admob.google.com
+Host is already exist. Skip: admob.google.com
+Add entry to the local host repository: www.google.com
+Host is already exist. Skip: www.google.com
+Add entry to the local host repository: abc.xyz
+Error - host abc.xyz has an untrusted internet root domain: abc.xyz
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: contacts.google.com
+Host is already exist. Skip: contacts.google.com
+Add entry to the local host repository: hangouts.google.com
+Host is already exist. Skip: hangouts.google.com
+Add entry to the local host repository: www.tensorflow.org
+Error - host www.tensorflow.org has an untrusted internet root domain: tensorflow.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.tiltbrush.com
+Error - host www.tiltbrush.com has an untrusted internet root domain: tiltbrush.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: artsandculture.google.com
+Host is already exist. Skip: artsandculture.google.com
+Add entry to the local host repository: scholar.google.com
+Host is already exist. Skip: scholar.google.com
+Add entry to the local host repository: domains.google.com
+Host is already exist. Skip: domains.google.com
+Add entry to the local host repository: www.thinkwithgoogle.com
+Error - host www.thinkwithgoogle.com has an untrusted internet root domain: thinkwithgoogle.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: youtube-global.blogspot.com
+Error - host youtube-global.blogspot.com has an untrusted internet root domain: blogspot.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: voice.google.com
+Host is already exist. Skip: voice.google.com
+Add entry to the local host repository: firebase.google.com
+Host is already exist. Skip: firebase.google.com
+Add entry to the local host repository: upload.wikimedia.org
+Error - host upload.wikimedia.org has an untrusted internet root domain: wikimedia.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: families.google.com
+Host is already exist. Skip: families.google.com
+Add entry to the local host repository: vr.youtube.com
+Error - host vr.youtube.com has an untrusted internet root domain: youtube.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: photos.google.com
+Host is already exist. Skip: photos.google.com
+Add entry to the local host repository: wellbeing.google
+Error - host wellbeing.google has an untrusted internet root domain: wellbeing.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: policies.google.com
+Host is already exist. Skip: policies.google.com
+Add entry to the local host repository: businessmessages.google
+Error - host businessmessages.google has an untrusted internet root domain: businessmessages.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: maps.google.com
+Host is already exist. Skip: maps.google.com
+Add entry to the local host repository: store.google.com
+Host is already exist. Skip: store.google.com
+Add entry to the local host repository: podcastsmanager.google.com
+Host is already exist. Skip: podcastsmanager.google.com
+Add entry to the local host repository: safety.google
+Error - host safety.google has an untrusted internet root domain: safety.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: edu.google.com
+Host is already exist. Skip: edu.google.com
+Add entry to the local host repository: biz.waze.com
+Error - host biz.waze.com has an untrusted internet root domain: waze.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: drive.google.com
+Host is already exist. Skip: drive.google.com
+Add entry to the local host repository: one.google.com
+Host is already exist. Skip: one.google.com
+Add entry to the local host repository: remotedesktop.google.com
+Host is already exist. Skip: remotedesktop.google.com
+Add entry to the local host repository: flutter.dev
+Error - host flutter.dev has an untrusted internet root domain: flutter.dev
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: books.google.com
+Host is already exist. Skip: books.google.com
+Add entry to the local host repository: www.google.co.in
+Error - host www.google.co.in has an untrusted internet root domain: google.co.in
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.seroundtable.com
+Error - host www.seroundtable.com has an untrusted internet root domain: seroundtable.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: itunes.apple.com
+Error - host itunes.apple.com has an untrusted internet root domain: apple.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.independent.co.uk
+Error - host www.independent.co.uk has an untrusted internet root domain: independent.co.uk
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.youtube.com
+Error - host www.youtube.com has an untrusted internet root domain: youtube.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: projects.fivethirtyeight.com
+Error - host projects.fivethirtyeight.com has an untrusted internet root domain: fivethirtyeight.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.blogger.com
+Error - host www.blogger.com has an untrusted internet root domain: blogger.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.usa.gov
+Error - host www.usa.gov has an untrusted internet root domain: usa.gov
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: myaccount.google.com
+Host is already exist. Skip: myaccount.google.com
+Add entry to the local host repository: www.android.com
+Error - host www.android.com has an untrusted internet root domain: android.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.businessinsider.com
+Error - host www.businessinsider.com has an untrusted internet root domain: businessinsider.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: podcasts.google.com
+Host is already exist. Skip: podcasts.google.com
+Add entry to the local host repository: sites.google.com
+Host is already exist. Skip: sites.google.com
+Add entry to the local host repository: www.waze.com
+Error - host www.waze.com has an untrusted internet root domain: waze.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: heavy.com
+Error - host heavy.com has an untrusted internet root domain: heavy.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: news.google.com
+Host is already exist. Skip: news.google.com
+Add entry to the local host repository: smallbusiness.withgoogle.com
+Error - host smallbusiness.withgoogle.com has an untrusted internet root domain: withgoogle.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.cnet.com
+Error - host www.cnet.com has an untrusted internet root domain: cnet.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: stadia.google.com
+Host is already exist. Skip: stadia.google.com
+Add entry to the local host repository: www.gmail.com
+Error - host www.gmail.com has an untrusted internet root domain: gmail.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: observer.com
+Error - host observer.com has an untrusted internet root domain: observer.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: developer.android.com
+Error - host developer.android.com has an untrusted internet root domain: android.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.newsweek.com
+Error - host www.newsweek.com has an untrusted internet root domain: newsweek.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: translate.google.com
+Host is already exist. Skip: translate.google.com
+Add entry to the local host repository: keep.google.com
+Host is already exist. Skip: keep.google.com
+Add entry to the local host repository: instagram.com
+Error - host instagram.com has an untrusted internet root domain: instagram.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.cbsnews.com
+Error - host www.cbsnews.com has an untrusted internet root domain: cbsnews.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: fi.google.com
+Host is already exist. Skip: fi.google.com
+Add entry to the local host repository: shopping.google.com
+Host is already exist. Skip: shopping.google.com
+Add entry to the local host repository: learndigital.withgoogle.com
+Error - host learndigital.withgoogle.com has an untrusted internet root domain: withgoogle.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.en.advertisercommunity.com
+Error - host www.en.advertisercommunity.com has an untrusted internet root domain: advertisercommunity.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: developers.google.com
+Host is already exist. Skip: developers.google.com
+Add entry to the local host repository: en.wikipedia.org
+Error - host en.wikipedia.org has an untrusted internet root domain: wikipedia.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.vote.org
+Error - host www.vote.org has an untrusted internet root domain: vote.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: play.google.com
+Host is already exist. Skip: play.google.com
+Add entry to the local host repository: accounts.google.com
+Host is already exist. Skip: accounts.google.com
+Add entry to the local host repository: www.blog.google
+Error - host www.blog.google has an untrusted internet root domain: blog.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: waze.com
+Error - host waze.com has an untrusted internet root domain: waze.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: earth.google.com
+Host is already exist. Skip: earth.google.com
+Add entry to the local host repository: twitter.com
+Error - host twitter.com has an untrusted internet root domain: twitter.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.washingtonpost.com
+Error - host www.washingtonpost.com has an untrusted internet root domain: washingtonpost.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: about.google
+Error - host about.google has an untrusted internet root domain: about.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: apps.apple.com
+Error - host apps.apple.com has an untrusted internet root domain: apple.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: meet.google.com
+Host is already exist. Skip: meet.google.com
+Add entry to the local host repository: marketingplatform.google.com
+Host is already exist. Skip: marketingplatform.google.com
+Add entry to the local host repository: transparencyreport.google.com
+Host is already exist. Skip: transparencyreport.google.com
+Add entry to the local host repository: www.msn.com
+Error - host www.msn.com has an untrusted internet root domain: msn.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.usatoday.com
+Error - host www.usatoday.com has an untrusted internet root domain: usatoday.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: pay.google.com
+Host is already exist. Skip: pay.google.com
+Add entry to the local host repository: services.google.com
+Host is already exist. Skip: services.google.com
+Add entry to the local host repository: 9to5google.com
+Error - host 9to5google.com has an untrusted internet root domain: 9to5google.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.yourprimer.com
+Error - host www.yourprimer.com has an untrusted internet root domain: yourprimer.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: docs.google.com
+Host is already exist. Skip: docs.google.com
+Add entry to the local host repository: cloud.google.com
+Host is already exist. Skip: cloud.google.com
+Add entry to the local host repository: bacillusbulgaricus.com
+Error - host bacillusbulgaricus.com has an untrusted internet root domain: bacillusbulgaricus.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: crq8j.app.goo.gl
+Error - host crq8j.app.goo.gl has an untrusted internet root domain: goo.gl
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: messages.google.com
+Host is already exist. Skip: messages.google.com
+Add entry to the local host repository: www.linkedin.com
+Error - host www.linkedin.com has an untrusted internet root domain: linkedin.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: dos.myflorida.com
+Error - host dos.myflorida.com has an untrusted internet root domain: myflorida.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: payments.google.com
+Host is already exist. Skip: payments.google.com
+Add entry to the local host repository: teachfromanywhere.google
+Error - host teachfromanywhere.google has an untrusted internet root domain: teachfromanywhere.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: blog.google
+Error - host blog.google has an untrusted internet root domain: blog.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: chrome.google.com
+Host is already exist. Skip: chrome.google.com
+Add entry to the local host repository: careers.google.com
+Host is already exist. Skip: careers.google.com
+Add entry to the local host repository: www.upi.com
+Error - host www.upi.com has an untrusted internet root domain: upi.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: skillshop.exceedlms.com
+Error - host skillshop.exceedlms.com has an untrusted internet root domain: exceedlms.com
+Please update the trusted domain seeds file first if necessary.
+Done loading entries.
+2020-10-27T21:36:14.963Z 18208 TID-owk7kf914 DiscoveryWorker JID-288eba331f6203796904ec84 INFO: Discovery successful!
+2020-10-27T21:36:14.963Z 18208 TID-owk7kf914 DiscoveryWorker JID-288eba331f6203796904ec84 INFO: Sending out email notice to: yang.li@owasp.org
+Update the site table ...
+Database connection success. 
+You're hitting mailer controller...
+site table truncate success.
+Insert record for site: http://maps.google.com/
+Insert record for site: http://messages.google.com/
+Insert record for site: http://news.google.com/
+Insert record for site: http://policies.google.com/
+Insert record for site: http://support.google.com/
+Insert record for site: http://www.google.com/
+Insert record for site: https://accounts.google.com/
+Insert record for site: https://admob.google.com/
+Insert record for site: https://ads.google.com/
+Insert record for site: https://analytics.google.com/
+Insert record for site: https://artsandculture.google.com/
+Insert record for site: https://assistant.google.com/
+Insert record for site: https://books.google.com/
+Insert record for site: https://business.google.com/
+Insert record for site: https://careers.google.com/
+Insert record for site: https://chat.google.com/
+Insert record for site: https://chrome.google.com/
+Insert record for site: https://classroom.google.com/
+Insert record for site: https://cloud.google.com/
+Insert record for site: https://contacts.google.com/
+Insert record for site: https://developers.google.com/
+Insert record for site: https://docs.google.com/
+Insert record for site: https://domains.google.com/
+Insert record for site: https://drive.google.com/
+Insert record for site: https://duo.google.com/
+Insert record for site: https://earth.google.com/
+Insert record for site: https://edu.google.com/
+Insert record for site: https://enterprise.google.com/
+Insert record for site: https://families.google.com/
+Insert record for site: https://fi.google.com/
+Insert record for site: https://files.google.com/
+Insert record for site: https://firebase.google.com/
+Insert record for site: https://groups.google.com/
+Insert record for site: https://gsuite.google.com/
+Insert record for site: https://hangouts.google.com/
+Insert record for site: https://jamboard.google.com/
+Insert record for site: https://keep.google.com/
+Insert record for site: https://lens.google.com/
+Insert record for site: https://mail.google.com/
+Insert record for site: https://maps.google.com/
+Insert record for site: https://marketingplatform.google.com/
+Insert record for site: https://meet.google.com/
+Insert record for site: https://messages.google.com/
+Insert record for site: https://myaccount.google.com/
+Insert record for site: https://news.google.com/
+Insert record for site: https://one.google.com/
+Insert record for site: https://pay.google.com/
+Insert record for site: https://payments.google.com/
+Insert record for site: https://photos.google.com/
+Insert record for site: https://play.google.com/
+Insert record for site: https://podcasts.google.com/
+Insert record for site: https://podcastsmanager.google.com/
+Insert record for site: https://policies.google.com/
+Insert record for site: https://remotedesktop.google.com/
+Insert record for site: https://scholar.google.com/
+Insert record for site: https://services.google.com/
+Insert record for site: https://shopping.google.com/
+Insert record for site: https://sites.google.com/
+Insert record for site: https://stadia.google.com/
+Insert record for site: https://store.google.com/
+Insert record for site: https://support.google.com/
+Insert record for site: https://translate.google.com/
+Insert record for site: https://transparencyreport.google.com/
+Insert record for site: https://voice.google.com/
+Insert record for site: https://wearos.google.com/
+Insert record for site: https://workspace.google.com/
+Insert record for site: https://www.google.com/
+Update complete. 
+Update the host table ...
+Database connection success. 
+host table truncate success.
+Update complete. 
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-27T21:36:15.221Z 18208 TID-owk7kf914 DiscoveryWorker JID-288eba331f6203796904ec84 INFO: done: 2097.883 sec
+2020-10-27T23:38:46.635Z 18208 TID-owk7abda4 DomainCheckWorker JID-ddac5ebef3a499daecfec36a INFO: start
+Start background sanity check on the new domains: {"# local domains file created by class wmap::domaintracker method save_domains_to_file! at: 2020-10-27 17:17:07 -0400"=>true, "# domain name, free zone transfer detected?"=>true, "cnn.com"=>true}
+Check if the domain allows free zone transfer: cnn.com
+Entry loaded: {"cnn.com"=>false}
+Done loading entries.
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-27T23:38:52.166Z 18208 TID-owk7abda4 DomainCheckWorker JID-ddac5ebef3a499daecfec36a INFO: done: 5.531 sec
+2020-10-27T23:45:03.097Z 18208 TID-owk7abda4 DomainCheckWorker JID-559967c131c7163603a418b1 INFO: start
+Start background sanity check on the new domains: {"# local domains file created by class wmap::domaintracker method save_domains_to_file! at: 2020-10-27 19:38:52 -0400"=>true, "# domain name, free zone transfer detected?"=>true, "prh.com, no"=>true}
+Done loading entries.
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-27T23:45:03.335Z 18208 TID-owk7abda4 DomainCheckWorker JID-559967c131c7163603a418b1 INFO: done: 0.238 sec
+2020-10-27T23:45:48.600Z 18208 TID-owk7kf914 DomainCheckWorker JID-bbc19a833f7db8d75c3ab07e INFO: start
+Start background sanity check on the new domains: {"# local domains file created by class wmap::domaintracker method save_domains_to_file! at: 2020-10-27 19:45:03 -0400"=>true, "# domain name, free zone transfer detected?"=>true, "prh.com, no"=>true}
+Done loading entries.
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-27T23:45:48.843Z 18208 TID-owk7kf914 DomainCheckWorker JID-bbc19a833f7db8d75c3ab07e INFO: done: 0.243 sec
+2020-10-27T23:47:50.527Z 18208 TID-owk7acwl8 DomainCheckWorker JID-bc40dd8464a9cc6f3b2f4970 INFO: start
+Start background sanity check on the new domains: {"# local domains file created by class wmap::domaintracker method save_domains_to_file! at: 2020-10-27 19:45:48 -0400"=>true, "# domain name, free zone transfer detected?"=>true}
+Done loading entries.
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-27T23:47:50.746Z 18208 TID-owk7acwl8 DomainCheckWorker JID-bc40dd8464a9cc6f3b2f4970 INFO: done: 0.219 sec
+2020-10-28T00:41:44.049Z 18208 TID-owk7kf914 DomainCheckWorker JID-cfd00e475a2e5817ed252109 INFO: start
+Start background sanity check on the new domains: {"fhy.net"=>true}
+Check if the domain allows free zone transfer: fhy.net
+Entry loaded: {"fhy.net"=>false}
+Done loading entries.
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-28T00:41:49.224Z 18208 TID-owk7kf914 DomainCheckWorker JID-cfd00e475a2e5817ed252109 INFO: done: 5.175 sec
+2020-10-28T00:50:06.114Z 18208 TID-owk7kf914 DomainCheckWorker JID-a00e4875bc1e1297187c2218 INFO: start
+Start background sanity check on the new domains: {"yahoo.com"=>true}
+Domain is already exist. Skipping: yahoo.com
+Done loading entries.
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-28T00:50:06.380Z 18208 TID-owk7kf914 DomainCheckWorker JID-a00e4875bc1e1297187c2218 INFO: done: 0.267 sec
+2020-10-28T00:50:58.708Z 18208 TID-owk7kf914 DomainCheckWorker JID-fb49fcfff219d5c68c47db02 INFO: start
+Start background sanity check on the new domains: {"fox.com"=>true}
+Domain is already exist. Skipping: fox.com
+Done loading entries.
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-28T00:50:58.932Z 18208 TID-owk7kf914 DomainCheckWorker JID-fb49fcfff219d5c68c47db02 INFO: done: 0.224 sec
+2020-10-28T00:51:47.141Z 18208 TID-owk7acwl8 DiscoveryWorker JID-152f79f06fb2cdd4b03a4d64 INFO: start
+Import domain from seed file: /Users/sli/www_wmap/shared/data/seed
+Domain is already exist. Skipping: google.com
+Domain cache table is successfully saved: /Users/sli/www_wmap/shared/data/domains
+Import complete.
+2020-10-28T00:51:47.159Z 18208 TID-owk7acwl8 DiscoveryWorker JID-152f79f06fb2cdd4b03a4d64 INFO: Starting background command: wmap -t /Users/sli/www_wmap/shared/data/seed -d /Users/sli/www_wmap/shared/data/
+--------------------------------------------------------------------------------
+,--.   ,--.       ,--.       ,--.   ,--.
+|  |   |  | ,---. |  |-.     |   `.'   | ,--,--. ,---.  ,---.  ,---. ,--.--.
+|  |.'.|  || .-. :| .-. '    |  |'.'|  |' ,-.  || .-. || .-. || .-. :|  .--'
+|   ,'.   |   --.| `-' |    |  |   |  | '-'  || '-' '| '-' '   --.|  |
+'--'   '--' `----' `---'     `--'   `--' `--`--'|  |-' |  |-'  `----'`--'
+                                                `--'   `--'                  
+Version: 2.7.9	Release Date: 2020-03-30
+Designed and developed by: Sam (Yang) Li
+Email: yang.li@owasp.org	LinkedIn: http://www.linkedin.com/in/yangli8/
+--------------------------------------------------------------------------------
+Parsing the discovery seed file: "/Users/sli/www_wmap/shared/data/seed" 
+Parsing done. 
+Build up URL list for the web crawler ...
+Start the parallel port scan on the target list:
+ ["www.google.com"]
+Perform web service discovery on host: www.google.com
+2020-10-28T00:53:51.301Z 18208 TID-owk7kf914 CidrCheckWorker JID-9ac9522c7e199667d2996ee2 INFO: start
+Detected web service on host www.google.com: ["http://www.google.com/", "https://www.google.com/"]
+Port scanning done successfully with the found web services: ["http://www.google.com/", "https://www.google.com/"]
+Fire up the crawler with the optional directory setter.
+Start the parallel engine on the normalized crawling list:
+ ["http://www.google.com/", "https://www.google.com/"] 
+Maximum number of web crawling sessions allowed: 40
+Start web crawling on http://www.google.com/
+Start web crawling on https://www.google.com/
+Please be aware that it may take a while to crawl http://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: http://www.google.com/
+Please be aware that it may take a while to crawl https://www.google.com/, depending on the site's responsiveness and the amount of contents.
+Finish web crawling the url: https://www.google.com/
+Discovered sites: 
+http://www.google.com/
+http://maps.google.com/
+https://play.google.com/
+http://www.youtube.com/
+https://news.google.com/
+https://mail.google.com/
+https://drive.google.com/
+https://www.google.com/
+https://accounts.google.com/
+https://support.google.com/
+https://maps.google.com/
+https://www.youtube.com/
+https://policies.google.com/
+http://developer.android.com/
+https://payments.google.com/
+https://developers.google.com/
+https://myaccount.google.com/
+https://meet.google.com/
+https://contacts.google.com/
+https://translate.google.com/
+https://photos.google.com/
+https://duo.google.com/
+https://docs.google.com/
+https://books.google.com/
+https://www.blogger.com/
+https://hangouts.google.com/
+https://keep.google.com/
+https://jamboard.google.com/
+https://earth.google.com/
+https://artsandculture.google.com/
+https://ads.google.com/
+https://podcasts.google.com/
+https://stadia.google.com/
+https://itunes.apple.com/
+https://about.google/
+https://www.blog.google/
+https://store.google.com/
+https://smallbusiness.withgoogle.com/
+https://teachfromanywhere.google/
+https://edu.google.com/
+https://www.android.com/
+https://wearos.google.com/
+https://www.gmail.com/
+http://messages.google.com/
+https://gsuite.google.com/
+https://chrome.google.com/
+https://assistant.google.com/
+https://www.google.co.in/
+https://families.google.com/
+https://fi.google.com/
+https://files.google.com/
+https://groups.google.com/
+https://lens.google.com/
+https://one.google.com/
+https://pay.google.com/
+https://shopping.google.com/
+https://messages.google.com/
+https://scholar.google.com/
+https://sites.google.com/
+https://www.tiltbrush.com/
+https://voice.google.com/
+https://www.waze.com/
+https://youtube-global.blogspot.com/
+https://tv.youtube.com/
+https://vr.youtube.com/
+https://enterprise.google.com/
+https://businessmessages.google/
+https://remotedesktop.google.com/
+https://cloud.google.com/
+https://learndigital.withgoogle.com/
+https://domains.google.com/
+https://marketingplatform.google.com/
+https://podcastsmanager.google.com/
+https://workspace.google.com/
+https://biz.waze.com/
+https://developer.android.com/
+https://firebase.google.com/
+https://flutter.dev/
+https://www.tensorflow.org/
+https://instagram.com/
+https://twitter.com/
+https://www.facebook.com/
+https://www.linkedin.com/
+https://abc.xyz/
+https://careers.google.com/
+https://www.thinkwithgoogle.com/
+https://services.google.com/
+https://www.google.org/
+https://sustainability.google/
+https://transparencyreport.google.com/
+https://wellbeing.google/
+https://safety.google/
+https://bacillusbulgaricus.com/
+https://upload.wikimedia.org/
+https://anillustratedhistoryofslavicmisery.files.wordpress.com/
+https://tobulgaria.files.wordpress.com/
+https://en.wikipedia.org/
+https://www.forbes.com/
+https://www.upi.com/
+https://www.newsweek.com/
+https://9to5google.com/
+https://www.msn.com/
+https://www.seroundtable.com/
+https://heavy.com/
+https://observer.com/
+https://www.independent.co.uk/
+https://www.cnet.com/
+http://policies.google.com/
+https://www.usa.gov/
+https://projects.fivethirtyeight.com/
+https://www.businessinsider.com/
+https://www.washingtonpost.com/
+https://www.cbsnews.com/
+https://www.vote.org/
+https://www.usatoday.com/
+https://www.vox.com/
+https://dos.myflorida.com/
+https://crq8j.app.goo.gl/
+https://blog.google/
+https://apps.apple.com/
+https://www.en.advertisercommunity.com/
+https://www.yourprimer.com/
+https://skillshop.exceedlms.com/
+https://waze.com/
+https://admob.google.com/
+Automatically save the discovery results into the site tracking data repository: 
+Start the SiteTracker with the optional directory setter. 
+Add entries to the local site store from list:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "https://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://support.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://developers.google.com/", "https://myaccount.google.com/", "https://meet.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://duo.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://earth.google.com/", "https://artsandculture.google.com/", "https://ads.google.com/", "https://podcasts.google.com/", "https://stadia.google.com/", "https://itunes.apple.com/", "https://about.google/", "https://www.blog.google/", "https://store.google.com/", "https://smallbusiness.withgoogle.com/", "https://teachfromanywhere.google/", "https://edu.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "http://messages.google.com/", "https://gsuite.google.com/", "https://chrome.google.com/", "https://assistant.google.com/", "https://www.google.co.in/", "https://families.google.com/", "https://fi.google.com/", "https://files.google.com/", "https://groups.google.com/", "https://lens.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://shopping.google.com/", "https://messages.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://tv.youtube.com/", "https://vr.youtube.com/", "https://enterprise.google.com/", "https://businessmessages.google/", "https://remotedesktop.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://marketingplatform.google.com/", "https://podcastsmanager.google.com/", "https://workspace.google.com/", "https://biz.waze.com/", "https://developer.android.com/", "https://firebase.google.com/", "https://flutter.dev/", "https://www.tensorflow.org/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/", "https://bacillusbulgaricus.com/", "https://upload.wikimedia.org/", "https://anillustratedhistoryofslavicmisery.files.wordpress.com/", "https://tobulgaria.files.wordpress.com/", "https://en.wikipedia.org/", "https://www.forbes.com/", "https://www.upi.com/", "https://www.newsweek.com/", "https://9to5google.com/", "https://www.msn.com/", "https://www.seroundtable.com/", "https://heavy.com/", "https://observer.com/", "https://www.independent.co.uk/", "https://www.cnet.com/", "http://policies.google.com/", "https://www.usa.gov/", "https://projects.fivethirtyeight.com/", "https://www.businessinsider.com/", "https://www.washingtonpost.com/", "https://www.cbsnews.com/", "https://www.vote.org/", "https://www.usatoday.com/", "https://www.vox.com/", "https://dos.myflorida.com/", "https://crq8j.app.goo.gl/", "https://blog.google/", "https://apps.apple.com/", "https://www.en.advertisercommunity.com/", "https://www.yourprimer.com/", "https://skillshop.exceedlms.com/", "https://waze.com/", "https://admob.google.com/"]
+Start parallel adding on the sites:
+ ["http://www.google.com/", "http://maps.google.com/", "https://play.google.com/", "http://www.youtube.com/", "https://news.google.com/", "https://mail.google.com/", "https://drive.google.com/", "https://www.google.com/", "https://accounts.google.com/", "https://support.google.com/", "https://maps.google.com/", "https://www.youtube.com/", "https://policies.google.com/", "http://developer.android.com/", "https://payments.google.com/", "https://developers.google.com/", "https://myaccount.google.com/", "https://meet.google.com/", "https://contacts.google.com/", "https://translate.google.com/", "https://photos.google.com/", "https://duo.google.com/", "https://docs.google.com/", "https://books.google.com/", "https://www.blogger.com/", "https://hangouts.google.com/", "https://keep.google.com/", "https://jamboard.google.com/", "https://earth.google.com/", "https://artsandculture.google.com/", "https://ads.google.com/", "https://podcasts.google.com/", "https://stadia.google.com/", "https://itunes.apple.com/", "https://about.google/", "https://www.blog.google/", "https://store.google.com/", "https://smallbusiness.withgoogle.com/", "https://teachfromanywhere.google/", "https://edu.google.com/", "https://www.android.com/", "https://wearos.google.com/", "https://www.gmail.com/", "http://messages.google.com/", "https://gsuite.google.com/", "https://chrome.google.com/", "https://assistant.google.com/", "https://www.google.co.in/", "https://families.google.com/", "https://fi.google.com/", "https://files.google.com/", "https://groups.google.com/", "https://lens.google.com/", "https://one.google.com/", "https://pay.google.com/", "https://shopping.google.com/", "https://messages.google.com/", "https://scholar.google.com/", "https://sites.google.com/", "https://www.tiltbrush.com/", "https://voice.google.com/", "https://www.waze.com/", "https://youtube-global.blogspot.com/", "https://tv.youtube.com/", "https://vr.youtube.com/", "https://enterprise.google.com/", "https://businessmessages.google/", "https://remotedesktop.google.com/", "https://cloud.google.com/", "https://learndigital.withgoogle.com/", "https://domains.google.com/", "https://marketingplatform.google.com/", "https://podcastsmanager.google.com/", "https://workspace.google.com/", "https://biz.waze.com/", "https://developer.android.com/", "https://firebase.google.com/", "https://flutter.dev/", "https://www.tensorflow.org/", "https://instagram.com/", "https://twitter.com/", "https://www.facebook.com/", "https://www.linkedin.com/", "https://abc.xyz/", "https://careers.google.com/", "https://www.thinkwithgoogle.com/", "https://services.google.com/", "https://www.google.org/", "https://sustainability.google/", "https://transparencyreport.google.com/", "https://wellbeing.google/", "https://safety.google/", "https://bacillusbulgaricus.com/", "https://upload.wikimedia.org/", "https://anillustratedhistoryofslavicmisery.files.wordpress.com/", "https://tobulgaria.files.wordpress.com/", "https://en.wikipedia.org/", "https://www.forbes.com/", "https://www.upi.com/", "https://www.newsweek.com/", "https://9to5google.com/", "https://www.msn.com/", "https://www.seroundtable.com/", "https://heavy.com/", "https://observer.com/", "https://www.independent.co.uk/", "https://www.cnet.com/", "http://policies.google.com/", "https://www.usa.gov/", "https://projects.fivethirtyeight.com/", "https://www.businessinsider.com/", "https://www.washingtonpost.com/", "https://www.cbsnews.com/", "https://www.vote.org/", "https://www.usatoday.com/", "https://www.vox.com/", "https://dos.myflorida.com/", "https://crq8j.app.goo.gl/", "https://blog.google/", "https://apps.apple.com/", "https://www.en.advertisercommunity.com/", "https://www.yourprimer.com/", "https://skillshop.exceedlms.com/", "https://waze.com/", "https://admob.google.com/"]
+Add entry to the site store: http://maps.google.com/
+Site already exists. Skip it: http://maps.google.com/
+Add entry to the site store: https://ads.google.com/
+Site already exists. Skip it: https://ads.google.com/
+Add entry to the site store: https://podcasts.google.com/
+Site already exists. Skip it: https://podcasts.google.com/
+Add entry to the site store: https://itunes.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://itunes.apple.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.forbes.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.forbes.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://admob.google.com/
+Site already exists. Skip it: https://admob.google.com/
+Add entry to the site store: https://news.google.com/
+Site already exists. Skip it: https://news.google.com/
+Add entry to the site store: https://edu.google.com/
+Site already exists. Skip it: https://edu.google.com/
+Add entry to the site store: https://www.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.android.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://safety.google/
+Problem found: untrusted Internet domain or IP. Skip https://safety.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip http://www.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://tobulgaria.files.wordpress.com/
+Problem found: untrusted Internet domain or IP. Skip https://tobulgaria.files.wordpress.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://mail.google.com/
+Site already exists. Skip it: https://mail.google.com/
+Add entry to the site store: https://stadia.google.com/
+Site already exists. Skip it: https://stadia.google.com/
+Add entry to the site store: https://store.google.com/
+Site already exists. Skip it: https://store.google.com/
+Add entry to the site store: https://smallbusiness.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://smallbusiness.withgoogle.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://sustainability.google/
+Problem found: untrusted Internet domain or IP. Skip https://sustainability.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://www.google.com/
+Site already exists. Skip it: http://www.google.com/
+Add entry to the site store: https://www.blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://www.blog.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://en.wikipedia.org/
+Problem found: untrusted Internet domain or IP. Skip https://en.wikipedia.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip http://developer.android.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://9to5google.com/
+Problem found: untrusted Internet domain or IP. Skip https://9to5google.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://accounts.google.com/
+Site already exists. Skip it: https://accounts.google.com/
+Add entry to the site store: https://wearos.google.com/
+Site already exists. Skip it: https://wearos.google.com/
+Add entry to the site store: http://messages.google.com/
+Site already exists. Skip it: http://messages.google.com/
+Add entry to the site store: https://gsuite.google.com/
+Site already exists. Skip it: https://gsuite.google.com/
+Add entry to the site store: https://chrome.google.com/
+Site already exists. Skip it: https://chrome.google.com/
+Add entry to the site store: https://assistant.google.com/
+Site already exists. Skip it: https://assistant.google.com/
+Add entry to the site store: https://www.google.co.in/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.co.in/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://wellbeing.google/
+Problem found: untrusted Internet domain or IP. Skip https://wellbeing.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.upi.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.upi.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://myaccount.google.com/
+Site already exists. Skip it: https://myaccount.google.com/
+Add entry to the site store: https://youtube-global.blogspot.com/
+Problem found: untrusted Internet domain or IP. Skip https://youtube-global.blogspot.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.seroundtable.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.seroundtable.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://policies.google.com/
+Site already exists. Skip it: https://policies.google.com/
+Add entry to the site store: https://pay.google.com/
+Site already exists. Skip it: https://pay.google.com/
+Add entry to the site store: https://messages.google.com/
+Site already exists. Skip it: https://messages.google.com/
+Add entry to the site store: https://sites.google.com/
+Site already exists. Skip it: https://sites.google.com/
+Add entry to the site store: https://voice.google.com/
+Site already exists. Skip it: https://voice.google.com/
+Add entry to the site store: https://www.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.waze.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.newsweek.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.newsweek.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://payments.google.com/
+Site already exists. Skip it: https://payments.google.com/
+Add entry to the site store: https://remotedesktop.google.com/
+Site already exists. Skip it: https://remotedesktop.google.com/
+Add entry to the site store: https://learndigital.withgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://learndigital.withgoogle.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://observer.com/
+Problem found: untrusted Internet domain or IP. Skip https://observer.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://support.google.com/
+Site already exists. Skip it: https://support.google.com/
+Add entry to the site store: https://enterprise.google.com/
+Site already exists. Skip it: https://enterprise.google.com/
+Add entry to the site store: https://businessmessages.google/
+Problem found: untrusted Internet domain or IP. Skip https://businessmessages.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.cnet.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.cnet.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://books.google.com/
+Site already exists. Skip it: https://books.google.com/
+Add entry to the site store: https://tv.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://tv.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://heavy.com/
+Problem found: untrusted Internet domain or IP. Skip https://heavy.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://maps.google.com/
+Site already exists. Skip it: https://maps.google.com/
+Add entry to the site store: https://families.google.com/
+Site already exists. Skip it: https://families.google.com/
+Add entry to the site store: https://fi.google.com/
+Site already exists. Skip it: https://fi.google.com/
+Add entry to the site store: https://files.google.com/
+Site already exists. Skip it: https://files.google.com/
+Add entry to the site store: https://groups.google.com/
+Site already exists. Skip it: https://groups.google.com/
+Add entry to the site store: https://lens.google.com/
+Site already exists. Skip it: https://lens.google.com/
+Add entry to the site store: https://one.google.com/
+Site already exists. Skip it: https://one.google.com/
+Add entry to the site store: https://shopping.google.com/
+Site already exists. Skip it: https://shopping.google.com/
+Add entry to the site store: https://scholar.google.com/
+Site already exists. Skip it: https://scholar.google.com/
+Add entry to the site store: https://www.tiltbrush.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.tiltbrush.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.msn.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.msn.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://translate.google.com/
+Site already exists. Skip it: https://translate.google.com/
+Add entry to the site store: https://workspace.google.com/
+Site already exists. Skip it: https://workspace.google.com/
+Add entry to the site store: https://firebase.google.com/
+Site already exists. Skip it: https://firebase.google.com/
+Add entry to the site store: https://flutter.dev/
+Problem found: untrusted Internet domain or IP. Skip https://flutter.dev/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://projects.fivethirtyeight.com/
+Problem found: untrusted Internet domain or IP. Skip https://projects.fivethirtyeight.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://developers.google.com/
+Site already exists. Skip it: https://developers.google.com/
+Add entry to the site store: https://www.tensorflow.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.tensorflow.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.cbsnews.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.cbsnews.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.independent.co.uk/
+Problem found: untrusted Internet domain or IP. Skip https://www.independent.co.uk/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://docs.google.com/
+Site already exists. Skip it: https://docs.google.com/
+Add entry to the site store: https://cloud.google.com/
+Site already exists. Skip it: https://cloud.google.com/
+Add entry to the site store: https://domains.google.com/
+Site already exists. Skip it: https://domains.google.com/
+Add entry to the site store: https://podcastsmanager.google.com/
+Site already exists. Skip it: https://podcastsmanager.google.com/
+Add entry to the site store: https://developer.android.com/
+Problem found: untrusted Internet domain or IP. Skip https://developer.android.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.businessinsider.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.businessinsider.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://play.google.com/
+Site already exists. Skip it: https://play.google.com/
+Add entry to the site store: https://teachfromanywhere.google/
+Problem found: untrusted Internet domain or IP. Skip https://teachfromanywhere.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://bacillusbulgaricus.com/
+Problem found: untrusted Internet domain or IP. Skip https://bacillusbulgaricus.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: http://policies.google.com/
+Site already exists. Skip it: http://policies.google.com/
+Add entry to the site store: https://www.usa.gov/
+Problem found: untrusted Internet domain or IP. Skip https://www.usa.gov/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://meet.google.com/
+Site already exists. Skip it: https://meet.google.com/
+Add entry to the site store: https://vr.youtube.com/
+Problem found: untrusted Internet domain or IP. Skip https://vr.youtube.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.vote.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.vote.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.blogger.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.blogger.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.usatoday.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.usatoday.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://hangouts.google.com/
+Site already exists. Skip it: https://hangouts.google.com/
+Add entry to the site store: https://marketingplatform.google.com/
+Site already exists. Skip it: https://marketingplatform.google.com/
+Add entry to the site store: https://biz.waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://biz.waze.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.washingtonpost.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.washingtonpost.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://earth.google.com/
+Site already exists. Skip it: https://earth.google.com/
+Add entry to the site store: https://twitter.com/
+Problem found: untrusted Internet domain or IP. Skip https://twitter.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.vox.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.vox.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://contacts.google.com/
+Site already exists. Skip it: https://contacts.google.com/
+Add entry to the site store: https://abc.xyz/
+Problem found: untrusted Internet domain or IP. Skip https://abc.xyz/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://dos.myflorida.com/
+Problem found: untrusted Internet domain or IP. Skip https://dos.myflorida.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://jamboard.google.com/
+Site already exists. Skip it: https://jamboard.google.com/
+Add entry to the site store: https://instagram.com/
+Problem found: untrusted Internet domain or IP. Skip https://instagram.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://blog.google/
+Problem found: untrusted Internet domain or IP. Skip https://blog.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://duo.google.com/
+Site already exists. Skip it: https://duo.google.com/
+Add entry to the site store: https://www.linkedin.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.linkedin.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://apps.apple.com/
+Problem found: untrusted Internet domain or IP. Skip https://apps.apple.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://keep.google.com/
+Site already exists. Skip it: https://keep.google.com/
+Add entry to the site store: https://careers.google.com/
+Site already exists. Skip it: https://careers.google.com/
+Add entry to the site store: https://www.thinkwithgoogle.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.thinkwithgoogle.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.en.advertisercommunity.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.en.advertisercommunity.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://photos.google.com/
+Site already exists. Skip it: https://photos.google.com/
+Add entry to the site store: https://services.google.com/
+Site already exists. Skip it: https://services.google.com/
+Add entry to the site store: https://www.google.org/
+Problem found: untrusted Internet domain or IP. Skip https://www.google.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.yourprimer.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.yourprimer.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://drive.google.com/
+Site already exists. Skip it: https://drive.google.com/
+Add entry to the site store: https://www.gmail.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.gmail.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://transparencyreport.google.com/
+Site already exists. Skip it: https://transparencyreport.google.com/
+Add entry to the site store: https://anillustratedhistoryofslavicmisery.files.wordpress.com/
+Problem found: untrusted Internet domain or IP. Skip https://anillustratedhistoryofslavicmisery.files.wordpress.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://waze.com/
+Problem found: untrusted Internet domain or IP. Skip https://waze.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://artsandculture.google.com/
+Site already exists. Skip it: https://artsandculture.google.com/
+Add entry to the site store: https://www.facebook.com/
+Problem found: untrusted Internet domain or IP. Skip https://www.facebook.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://crq8j.app.goo.gl/
+Problem found: untrusted Internet domain or IP. Skip https://crq8j.app.goo.gl/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://www.google.com/
+Site already exists. Skip it: https://www.google.com/
+Add entry to the site store: https://about.google/
+Problem found: untrusted Internet domain or IP. Skip https://about.google/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://upload.wikimedia.org/
+Problem found: untrusted Internet domain or IP. Skip https://upload.wikimedia.org/
+Exception on method add: undefined method `save!' for nil:NilClass
+Add entry to the site store: https://skillshop.exceedlms.com/
+Problem found: untrusted Internet domain or IP. Skip https://skillshop.exceedlms.com/
+Exception on method add: undefined method `save!' for nil:NilClass
+Done adding site entries.
+No new entry added. 
+Invoke the HostTracker with optional directory setter.
+Update the local hosts data repository with: ["www.google.com", "maps.google.com", "play.google.com", "www.youtube.com", "news.google.com", "mail.google.com", "drive.google.com", "accounts.google.com", "support.google.com", "policies.google.com", "developer.android.com", "payments.google.com", "developers.google.com", "myaccount.google.com", "meet.google.com", "contacts.google.com", "translate.google.com", "photos.google.com", "duo.google.com", "docs.google.com", "books.google.com", "www.blogger.com", "hangouts.google.com", "keep.google.com", "jamboard.google.com", "earth.google.com", "artsandculture.google.com", "ads.google.com", "podcasts.google.com", "stadia.google.com", "itunes.apple.com", "about.google", "www.blog.google", "store.google.com", "smallbusiness.withgoogle.com", "teachfromanywhere.google", "edu.google.com", "www.android.com", "wearos.google.com", "www.gmail.com", "messages.google.com", "gsuite.google.com", "chrome.google.com", "assistant.google.com", "www.google.co.in", "families.google.com", "fi.google.com", "files.google.com", "groups.google.com", "lens.google.com", "one.google.com", "pay.google.com", "shopping.google.com", "scholar.google.com", "sites.google.com", "www.tiltbrush.com", "voice.google.com", "www.waze.com", "youtube-global.blogspot.com", "tv.youtube.com", "vr.youtube.com", "enterprise.google.com", "businessmessages.google", "remotedesktop.google.com", "cloud.google.com", "learndigital.withgoogle.com", "domains.google.com", "marketingplatform.google.com", "podcastsmanager.google.com", "workspace.google.com", "biz.waze.com", "firebase.google.com", "flutter.dev", "www.tensorflow.org", "instagram.com", "twitter.com", "www.facebook.com", "www.linkedin.com", "abc.xyz", "careers.google.com", "www.thinkwithgoogle.com", "services.google.com", "www.google.org", "sustainability.google", "transparencyreport.google.com", "wellbeing.google", "safety.google", "bacillusbulgaricus.com", "upload.wikimedia.org", "anillustratedhistoryofslavicmisery.files.wordpress.com", "tobulgaria.files.wordpress.com", "en.wikipedia.org", "www.forbes.com", "www.upi.com", "www.newsweek.com", "9to5google.com", "www.msn.com", "www.seroundtable.com", "heavy.com", "observer.com", "www.independent.co.uk", "www.cnet.com", "www.usa.gov", "projects.fivethirtyeight.com", "www.businessinsider.com", "www.washingtonpost.com", "www.cbsnews.com", "www.vote.org", "www.usatoday.com", "www.vox.com", "dos.myflorida.com", "crq8j.app.goo.gl", "blog.google", "apps.apple.com", "www.en.advertisercommunity.com", "www.yourprimer.com", "skillshop.exceedlms.com", "waze.com", "admob.google.com"]
+Add entries to the local host repository: ["www.google.com", "maps.google.com", "play.google.com", "www.youtube.com", "news.google.com", "mail.google.com", "drive.google.com", "accounts.google.com", "support.google.com", "policies.google.com", "developer.android.com", "payments.google.com", "developers.google.com", "myaccount.google.com", "meet.google.com", "contacts.google.com", "translate.google.com", "photos.google.com", "duo.google.com", "docs.google.com", "books.google.com", "www.blogger.com", "hangouts.google.com", "keep.google.com", "jamboard.google.com", "earth.google.com", "artsandculture.google.com", "ads.google.com", "podcasts.google.com", "stadia.google.com", "itunes.apple.com", "about.google", "www.blog.google", "store.google.com", "smallbusiness.withgoogle.com", "teachfromanywhere.google", "edu.google.com", "www.android.com", "wearos.google.com", "www.gmail.com", "messages.google.com", "gsuite.google.com", "chrome.google.com", "assistant.google.com", "www.google.co.in", "families.google.com", "fi.google.com", "files.google.com", "groups.google.com", "lens.google.com", "one.google.com", "pay.google.com", "shopping.google.com", "scholar.google.com", "sites.google.com", "www.tiltbrush.com", "voice.google.com", "www.waze.com", "youtube-global.blogspot.com", "tv.youtube.com", "vr.youtube.com", "enterprise.google.com", "businessmessages.google", "remotedesktop.google.com", "cloud.google.com", "learndigital.withgoogle.com", "domains.google.com", "marketingplatform.google.com", "podcastsmanager.google.com", "workspace.google.com", "biz.waze.com", "firebase.google.com", "flutter.dev", "www.tensorflow.org", "instagram.com", "twitter.com", "www.facebook.com", "www.linkedin.com", "abc.xyz", "careers.google.com", "www.thinkwithgoogle.com", "services.google.com", "www.google.org", "sustainability.google", "transparencyreport.google.com", "wellbeing.google", "safety.google", "bacillusbulgaricus.com", "upload.wikimedia.org", "anillustratedhistoryofslavicmisery.files.wordpress.com", "tobulgaria.files.wordpress.com", "en.wikipedia.org", "www.forbes.com", "www.upi.com", "www.newsweek.com", "9to5google.com", "www.msn.com", "www.seroundtable.com", "heavy.com", "observer.com", "www.independent.co.uk", "www.cnet.com", "www.usa.gov", "projects.fivethirtyeight.com", "www.businessinsider.com", "www.washingtonpost.com", "www.cbsnews.com", "www.vote.org", "www.usatoday.com", "www.vox.com", "dos.myflorida.com", "crq8j.app.goo.gl", "blog.google", "apps.apple.com", "www.en.advertisercommunity.com", "www.yourprimer.com", "skillshop.exceedlms.com", "waze.com", "admob.google.com"]
+Add entry to the local host repository: lens.google.com
+Host is already exist. Skip: lens.google.com
+Add entry to the local host repository: businessmessages.google
+Error - host businessmessages.google has an untrusted internet root domain: businessmessages.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: admob.google.com
+Host is already exist. Skip: admob.google.com
+Add entry to the local host repository: duo.google.com
+Host is already exist. Skip: duo.google.com
+Add entry to the local host repository: earth.google.com
+Host is already exist. Skip: earth.google.com
+Add entry to the local host repository: twitter.com
+Error - host twitter.com has an untrusted internet root domain: twitter.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: translate.google.com
+Host is already exist. Skip: translate.google.com
+Add entry to the local host repository: families.google.com
+Host is already exist. Skip: families.google.com
+Add entry to the local host repository: www.linkedin.com
+Error - host www.linkedin.com has an untrusted internet root domain: linkedin.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: fi.google.com
+Host is already exist. Skip: fi.google.com
+Add entry to the local host repository: abc.xyz
+Error - host abc.xyz has an untrusted internet root domain: abc.xyz
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: groups.google.com
+Host is already exist. Skip: groups.google.com
+Add entry to the local host repository: workspace.google.com
+Host is already exist. Skip: workspace.google.com
+Add entry to the local host repository: sustainability.google
+Error - host sustainability.google has an untrusted internet root domain: sustainability.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: shopping.google.com
+Host is already exist. Skip: shopping.google.com
+Add entry to the local host repository: firebase.google.com
+Host is already exist. Skip: firebase.google.com
+Add entry to the local host repository: safety.google
+Error - host safety.google has an untrusted internet root domain: safety.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: bacillusbulgaricus.com
+Error - host bacillusbulgaricus.com has an untrusted internet root domain: bacillusbulgaricus.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: hangouts.google.com
+Host is already exist. Skip: hangouts.google.com
+Add entry to the local host repository: pay.google.com
+Host is already exist. Skip: pay.google.com
+Add entry to the local host repository: podcastsmanager.google.com
+Host is already exist. Skip: podcastsmanager.google.com
+Add entry to the local host repository: www.google.org
+Error - host www.google.org has an untrusted internet root domain: google.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: developers.google.com
+Host is already exist. Skip: developers.google.com
+Add entry to the local host repository: chrome.google.com
+Host is already exist. Skip: chrome.google.com
+Add entry to the local host repository: tobulgaria.files.wordpress.com
+Error - host tobulgaria.files.wordpress.com has an untrusted internet root domain: wordpress.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: maps.google.com
+Host is already exist. Skip: maps.google.com
+Add entry to the local host repository: podcasts.google.com
+Host is already exist. Skip: podcasts.google.com
+Add entry to the local host repository: voice.google.com
+Host is already exist. Skip: voice.google.com
+Add entry to the local host repository: www.thinkwithgoogle.com
+Error - host www.thinkwithgoogle.com has an untrusted internet root domain: thinkwithgoogle.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: remotedesktop.google.com
+Host is already exist. Skip: remotedesktop.google.com
+Add entry to the local host repository: anillustratedhistoryofslavicmisery.files.wordpress.com
+Error - host anillustratedhistoryofslavicmisery.files.wordpress.com has an untrusted internet root domain: wordpress.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: ads.google.com
+Host is already exist. Skip: ads.google.com
+Add entry to the local host repository: wellbeing.google
+Error - host wellbeing.google has an untrusted internet root domain: wellbeing.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: myaccount.google.com
+Host is already exist. Skip: myaccount.google.com
+Add entry to the local host repository: assistant.google.com
+Host is already exist. Skip: assistant.google.com
+Add entry to the local host repository: domains.google.com
+Host is already exist. Skip: domains.google.com
+Add entry to the local host repository: www.forbes.com
+Error - host www.forbes.com has an untrusted internet root domain: forbes.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: docs.google.com
+Host is already exist. Skip: docs.google.com
+Add entry to the local host repository: transparencyreport.google.com
+Host is already exist. Skip: transparencyreport.google.com
+Add entry to the local host repository: 9to5google.com
+Error - host 9to5google.com has an untrusted internet root domain: 9to5google.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: scholar.google.com
+Host is already exist. Skip: scholar.google.com
+Add entry to the local host repository: services.google.com
+Host is already exist. Skip: services.google.com
+Add entry to the local host repository: www.newsweek.com
+Error - host www.newsweek.com has an untrusted internet root domain: newsweek.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: photos.google.com
+Host is already exist. Skip: photos.google.com
+Add entry to the local host repository: enterprise.google.com
+Host is already exist. Skip: enterprise.google.com
+Add entry to the local host repository: upload.wikimedia.org
+Error - host upload.wikimedia.org has an untrusted internet root domain: wikimedia.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: one.google.com
+Host is already exist. Skip: one.google.com
+Add entry to the local host repository: careers.google.com
+Host is already exist. Skip: careers.google.com
+Add entry to the local host repository: www.upi.com
+Error - host www.upi.com has an untrusted internet root domain: upi.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: keep.google.com
+Host is already exist. Skip: keep.google.com
+Add entry to the local host repository: en.wikipedia.org
+Error - host en.wikipedia.org has an untrusted internet root domain: wikipedia.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.youtube.com
+Error - host www.youtube.com has an untrusted internet root domain: youtube.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: heavy.com
+Error - host heavy.com has an untrusted internet root domain: heavy.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: books.google.com
+Host is already exist. Skip: books.google.com
+Add entry to the local host repository: www.android.com
+Error - host www.android.com has an untrusted internet root domain: android.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: observer.com
+Error - host observer.com has an untrusted internet root domain: observer.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: about.google
+Error - host about.google has an untrusted internet root domain: about.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: projects.fivethirtyeight.com
+Error - host projects.fivethirtyeight.com has an untrusted internet root domain: fivethirtyeight.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: payments.google.com
+Host is already exist. Skip: payments.google.com
+Add entry to the local host repository: www.blogger.com
+Error - host www.blogger.com has an untrusted internet root domain: blogger.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.seroundtable.com
+Error - host www.seroundtable.com has an untrusted internet root domain: seroundtable.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: support.google.com
+Host is already exist. Skip: support.google.com
+Add entry to the local host repository: smallbusiness.withgoogle.com
+Error - host smallbusiness.withgoogle.com has an untrusted internet root domain: withgoogle.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.cnet.com
+Error - host www.cnet.com has an untrusted internet root domain: cnet.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: developer.android.com
+Error - host developer.android.com has an untrusted internet root domain: android.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.msn.com
+Error - host www.msn.com has an untrusted internet root domain: msn.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: itunes.apple.com
+Error - host itunes.apple.com has an untrusted internet root domain: apple.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.independent.co.uk
+Error - host www.independent.co.uk has an untrusted internet root domain: independent.co.uk
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: policies.google.com
+Host is already exist. Skip: policies.google.com
+Add entry to the local host repository: teachfromanywhere.google
+Error - host teachfromanywhere.google has an untrusted internet root domain: teachfromanywhere.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.usa.gov
+Error - host www.usa.gov has an untrusted internet root domain: usa.gov
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.gmail.com
+Error - host www.gmail.com has an untrusted internet root domain: gmail.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.washingtonpost.com
+Error - host www.washingtonpost.com has an untrusted internet root domain: washingtonpost.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: meet.google.com
+Host is already exist. Skip: meet.google.com
+Add entry to the local host repository: www.tiltbrush.com
+Error - host www.tiltbrush.com has an untrusted internet root domain: tiltbrush.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.vote.org
+Error - host www.vote.org has an untrusted internet root domain: vote.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: gsuite.google.com
+Host is already exist. Skip: gsuite.google.com
+Add entry to the local host repository: tv.youtube.com
+Error - host tv.youtube.com has an untrusted internet root domain: youtube.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.vox.com
+Error - host www.vox.com has an untrusted internet root domain: vox.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: drive.google.com
+Host is already exist. Skip: drive.google.com
+Add entry to the local host repository: www.blog.google
+Error - host www.blog.google has an untrusted internet root domain: blog.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.cbsnews.com
+Error - host www.cbsnews.com has an untrusted internet root domain: cbsnews.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: play.google.com
+Host is already exist. Skip: play.google.com
+Add entry to the local host repository: stadia.google.com
+Host is already exist. Skip: stadia.google.com
+Add entry to the local host repository: www.waze.com
+Error - host www.waze.com has an untrusted internet root domain: waze.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.usatoday.com
+Error - host www.usatoday.com has an untrusted internet root domain: usatoday.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: learndigital.withgoogle.com
+Error - host learndigital.withgoogle.com has an untrusted internet root domain: withgoogle.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: crq8j.app.goo.gl
+Error - host crq8j.app.goo.gl has an untrusted internet root domain: goo.gl
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: artsandculture.google.com
+Host is already exist. Skip: artsandculture.google.com
+Add entry to the local host repository: vr.youtube.com
+Error - host vr.youtube.com has an untrusted internet root domain: youtube.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: dos.myflorida.com
+Error - host dos.myflorida.com has an untrusted internet root domain: myflorida.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.google.co.in
+Error - host www.google.co.in has an untrusted internet root domain: google.co.in
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.businessinsider.com
+Error - host www.businessinsider.com has an untrusted internet root domain: businessinsider.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.google.com
+Host is already exist. Skip: www.google.com
+Add entry to the local host repository: accounts.google.com
+Host is already exist. Skip: accounts.google.com
+Add entry to the local host repository: store.google.com
+Host is already exist. Skip: store.google.com
+Add entry to the local host repository: youtube-global.blogspot.com
+Error - host youtube-global.blogspot.com has an untrusted internet root domain: blogspot.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: blog.google
+Error - host blog.google has an untrusted internet root domain: blog.google
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: instagram.com
+Error - host instagram.com has an untrusted internet root domain: instagram.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: apps.apple.com
+Error - host apps.apple.com has an untrusted internet root domain: apple.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: mail.google.com
+Host is already exist. Skip: mail.google.com
+Add entry to the local host repository: messages.google.com
+Host is already exist. Skip: messages.google.com
+Add entry to the local host repository: files.google.com
+Host is already exist. Skip: files.google.com
+Add entry to the local host repository: marketingplatform.google.com
+Host is already exist. Skip: marketingplatform.google.com
+Add entry to the local host repository: biz.waze.com
+Error - host biz.waze.com has an untrusted internet root domain: waze.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: skillshop.exceedlms.com
+Error - host skillshop.exceedlms.com has an untrusted internet root domain: exceedlms.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: contacts.google.com
+Host is already exist. Skip: contacts.google.com
+Add entry to the local host repository: jamboard.google.com
+Host is already exist. Skip: jamboard.google.com
+Add entry to the local host repository: wearos.google.com
+Host is already exist. Skip: wearos.google.com
+Add entry to the local host repository: cloud.google.com
+Host is already exist. Skip: cloud.google.com
+Add entry to the local host repository: www.facebook.com
+Error - host www.facebook.com has an untrusted internet root domain: facebook.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.en.advertisercommunity.com
+Error - host www.en.advertisercommunity.com has an untrusted internet root domain: advertisercommunity.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: sites.google.com
+Host is already exist. Skip: sites.google.com
+Add entry to the local host repository: flutter.dev
+Error - host flutter.dev has an untrusted internet root domain: flutter.dev
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: waze.com
+Error - host waze.com has an untrusted internet root domain: waze.com
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: news.google.com
+Host is already exist. Skip: news.google.com
+Add entry to the local host repository: edu.google.com
+Host is already exist. Skip: edu.google.com
+Add entry to the local host repository: www.tensorflow.org
+Error - host www.tensorflow.org has an untrusted internet root domain: tensorflow.org
+Please update the trusted domain seeds file first if necessary.
+Add entry to the local host repository: www.yourprimer.com
+Error - host www.yourprimer.com has an untrusted internet root domain: yourprimer.com
+Please update the trusted domain seeds file first if necessary.
+Done loading entries.
+2020-10-28T01:20:17.110Z 18208 TID-owk7acwl8 DiscoveryWorker JID-152f79f06fb2cdd4b03a4d64 INFO: Discovery successful!
+2020-10-28T01:20:17.110Z 18208 TID-owk7acwl8 DiscoveryWorker JID-152f79f06fb2cdd4b03a4d64 INFO: Sending out email notice to: yang.li@owasp.org
+Start background sanity check on the new cidrs: {"# local cidrs file created by wmap::cidrtracker.save method at: 2020-10-27 13:22:18 -0400"=>true, "network cidr, cidr ripe reference text, cidr netname"=>true, "172.16.0.0/12,internet assigned numbers authority,private-address-ablk-rfc1918-iana-reserved"=>true, "192.168.0.0/16,internet assigned numbers authority,private-address-ablk-rfc1918-iana-reserved"=>true, "170.171.1.0/24"=>true}
+Update the site table ...
+Database connection success. 
+Load the entry into the CIDR store: # local cidrs file created by wmap::cidrtracker.save method at: 2020-10-27 13:22:18 -0400
+Exception on method add: Unknown CIDR format: # local cidrs file created by wmap::cidrtracker.save method at: 2020-10-27 13:22:18 -0400
+Load the entry into the CIDR store: network cidr, cidr ripe reference text, cidr netname
+Exception on method add: Unknown CIDR format: network cidr, cidr ripe reference text, cidr netname
+Load the entry into the CIDR store: 172.16.0.0/12,internet assigned numbers authority,private-address-ablk-rfc1918-iana-reserved
+Exception on method add: Unknown CIDR format: 172.16.0.0/12,internet assigned numbers authority,private-address-ablk-rfc1918-iana-reserved
+Load the entry into the CIDR store: 192.168.0.0/16,internet assigned numbers authority,private-address-ablk-rfc1918-iana-reserved
+Exception on method add: Unknown CIDR format: 192.168.0.0/16,internet assigned numbers authority,private-address-ablk-rfc1918-iana-reserved
+Load the entry into the CIDR store: 170.171.1.0/24
+site table truncate success.
+Insert record for site: http://maps.google.com/
+Insert record for site: http://messages.google.com/
+Insert record for site: http://news.google.com/
+Insert record for site: http://policies.google.com/
+Insert record for site: http://support.google.com/
+Insert record for site: http://www.google.com/
+Insert record for site: https://accounts.google.com/
+Insert record for site: https://admob.google.com/
+Insert record for site: https://ads.google.com/
+Insert record for site: https://analytics.google.com/
+Insert record for site: https://artsandculture.google.com/
+Insert record for site: https://assistant.google.com/
+Insert record for site: https://books.google.com/
+Insert record for site: https://business.google.com/
+Insert record for site: https://careers.google.com/
+Insert record for site: https://chat.google.com/
+Insert record for site: https://chrome.google.com/
+Insert record for site: https://classroom.google.com/
+Insert record for site: https://cloud.google.com/
+Insert record for site: https://contacts.google.com/
+Insert record for site: https://developers.google.com/
+Insert record for site: https://docs.google.com/
+Insert record for site: https://domains.google.com/
+Insert record for site: https://drive.google.com/
+Insert record for site: https://duo.google.com/
+Insert record for site: https://earth.google.com/
+Insert record for site: https://edu.google.com/
+Insert record for site: https://enterprise.google.com/
+Insert record for site: https://families.google.com/
+Insert record for site: https://fi.google.com/
+Insert record for site: https://files.google.com/
+Insert record for site: https://firebase.google.com/
+Insert record for site: https://groups.google.com/
+Insert record for site: https://gsuite.google.com/
+Insert record for site: https://hangouts.google.com/
+Insert record for site: https://jamboard.google.com/
+Insert record for site: https://keep.google.com/
+Insert record for site: https://lens.google.com/
+Insert record for site: https://mail.google.com/
+Insert record for site: https://maps.google.com/
+Insert record for site: https://marketingplatform.google.com/
+Insert record for site: https://meet.google.com/
+Insert record for site: https://messages.google.com/
+Insert record for site: https://myaccount.google.com/
+Insert record for site: https://news.google.com/
+Insert record for site: https://one.google.com/
+Insert record for site: https://pay.google.com/
+Insert record for site: https://payments.google.com/
+Insert record for site: https://photos.google.com/
+Insert record for site: https://play.google.com/
+Insert record for site: https://podcasts.google.com/
+Insert record for site: https://podcastsmanager.google.com/
+Insert record for site: https://policies.google.com/
+Insert record for site: https://remotedesktop.google.com/
+Insert record for site: https://scholar.google.com/
+Insert record for site: https://services.google.com/
+Insert record for site: https://shopping.google.com/
+Insert record for site: https://sites.google.com/
+Insert record for site: https://stadia.google.com/
+Insert record for site: https://store.google.com/
+Insert record for site: https://support.google.com/
+Insert record for site: https://translate.google.com/
+Insert record for site: https://transparencyreport.google.com/
+Insert record for site: https://voice.google.com/
+Insert record for site: https://wearos.google.com/
+Insert record for site: https://workspace.google.com/
+Insert record for site: https://www.google.com/
+Update complete. 
+Update the host table ...
+Database connection success. 
+host table truncate success.
+Update complete. 
+Update the domain table ...
+Database connection success. 
+Domain table truncate success.
+Update complete. 
+2020-10-28T01:20:17.339Z 18208 TID-owk7acwl8 DiscoveryWorker JID-152f79f06fb2cdd4b03a4d64 INFO: done: 1710.198 sec
+Entry loaded!
+CIDR cache table is successfully saved: /Users/sli/www_wmap/shared/data/cidrs
+2020-10-28T01:20:23.581Z 18208 TID-owk7kf914 CidrCheckWorker JID-9ac9522c7e199667d2996ee2 DEBUG: Update the cidr table ...
+2020-10-28T01:20:23.582Z 18208 TID-owk7kf914 CidrCheckWorker JID-9ac9522c7e199667d2996ee2 DEBUG: Database connection success. 
+2020-10-28T01:20:23.618Z 18208 TID-owk7kf914 CidrCheckWorker JID-9ac9522c7e199667d2996ee2 DEBUG: cidr table truncate success.
+2020-10-28T01:20:23.625Z 18208 TID-owk7kf914 CidrCheckWorker JID-9ac9522c7e199667d2996ee2 DEBUG: Update complete. 
+2020-10-28T01:20:23.631Z 18208 TID-owk7kf914 CidrCheckWorker JID-9ac9522c7e199667d2996ee2 INFO: done: 1592.324 sec
+You're hitting mailer controller...
+2020-10-28T01:47:40.515Z 18208 TID-owk75h6k8 CidrCheckWorker JID-3befe22bfd694195a807d5a8 INFO: start
+Start background sanity check on the new cidrs: {"Network CIDR"=>true}
+Load the entry into the CIDR store: Network CIDR
+Exception on method add: Unknown CIDR format: Network CIDR
+CIDR cache table is successfully saved: /Users/sli/www_wmap/shared/data/cidrs
+2020-10-28T01:47:40.601Z 18208 TID-owk75h6k8 CidrCheckWorker JID-3befe22bfd694195a807d5a8 DEBUG: Update the cidr table ...
+2020-10-28T01:47:40.602Z 18208 TID-owk75h6k8 CidrCheckWorker JID-3befe22bfd694195a807d5a8 DEBUG: Database connection success. 
+2020-10-28T01:47:40.635Z 18208 TID-owk75h6k8 CidrCheckWorker JID-3befe22bfd694195a807d5a8 DEBUG: cidr table truncate success.
+2020-10-28T01:47:40.638Z 18208 TID-owk75h6k8 CidrCheckWorker JID-3befe22bfd694195a807d5a8 DEBUG: Update complete. 
+2020-10-28T01:47:40.639Z 18208 TID-owk75h6k8 CidrCheckWorker JID-3befe22bfd694195a807d5a8 INFO: done: 0.124 sec
+2020-10-28T01:50:51.140Z 18208 TID-owk7abda4 CidrCheckWorker JID-88ff0cf157809750b4c20c50 INFO: start
+Start background sanity check on the new cidrs: {"Network CIDR"=>true, "10.0.0.0/8"=>true}
+Load the entry into the CIDR store: Network CIDR
+Exception on method add: Unknown CIDR format: Network CIDR
+Load the entry into the CIDR store: 10.0.0.0/8
+Skip! Entry is already exist: 10.0.0.0/8
+CIDR cache table is successfully saved: /Users/sli/www_wmap/shared/data/cidrs
+2020-10-28T01:51:05.889Z 18208 TID-owk7abda4 CidrCheckWorker JID-88ff0cf157809750b4c20c50 DEBUG: Update the cidr table ...
+2020-10-28T01:51:05.891Z 18208 TID-owk7abda4 CidrCheckWorker JID-88ff0cf157809750b4c20c50 DEBUG: Database connection success. 
+2020-10-28T01:51:05.946Z 18208 TID-owk7abda4 CidrCheckWorker JID-88ff0cf157809750b4c20c50 DEBUG: cidr table truncate success.
+2020-10-28T01:51:05.960Z 18208 TID-owk7abda4 CidrCheckWorker JID-88ff0cf157809750b4c20c50 DEBUG: Update complete. 
+2020-10-28T01:51:05.961Z 18208 TID-owk7abda4 CidrCheckWorker JID-88ff0cf157809750b4c20c50 INFO: done: 14.821 sec

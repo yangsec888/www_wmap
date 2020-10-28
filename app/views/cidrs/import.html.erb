@@ -16,7 +16,6 @@
         type: "POST",
         dataType: 'json',
         data: {
-          "file_path": "",
           "file_content": cidrs_editor.getDoc().getValue()
         },
         success: function(response) {
@@ -56,8 +55,8 @@
       <ul><li> <a href='https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing'>CIDR Notation</a> Only  </li>
           <li> Entry in standard x.x.x.x/x format only </li>
           <li> One entry per line </li>
-          <li> The entry can be already in system (and will be ignored)  </li>
           <li> Ask your network administrator for the information if necessary </li>
+          <li> Optional 'CIDR RIPE Reference Text', 'CIDR NETNAME' fields </li>
           <li> Alternatively, click the Skip button if you're not sure </li>
       </ul>
           "><span class="glyphicon glyphicon-question-sign"></span>CIDR Format</button>

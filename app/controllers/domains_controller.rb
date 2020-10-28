@@ -72,26 +72,32 @@ class DomainsController < ApplicationController
       f.close
     end
 
-    # Save user import
+    # Save import from user input
     def save_import
       if platinum_user_and_above?
         uid = current_user.id
+        existing_domains = Domain.pluck(:name)
         data_dir = Rails.root.join('shared', 'data')
-        my_domains=params[:file_content].split("\n")
-        raise ImportLimitError if my_domains.size>10
-        new_domains = Hash.new
-        my_domains.map do |entry|
-          cur_entry = entry.downcase.strip
-          next if ["",nil].include? cur_entry
-          domain = Domain.find_by(name: cur_entry)
-          if domain
-            #domain.update(name: cur_entry, user_id: uid)
-          else
-            #new_domain=Domain.new(name: cur_entry, user_id: uid, created_at: Time.now)
-            #new_domain.save!
-            new_domains[cur_entry] = true
-          end
+        # save import to cache file
+        file = data_dir.join('domains')
+        f = File.open(file, 'w+')
+        f.write(params[:file_content])
+        f.close
+        # calculate the domains from import
+        my_domains = Array.new
+        params[:file_content].split("\n").map do |x|
+          next if x =~ /^\#/
+          next if ["",nil].include? x
+          my_domains.push(x.split(',')[0])
         end
+        raise ImportLimitError if my_domains.size>10
+        # remove user defined obsolete domains from db
+        domains_to_remove = existing_domains - my_domains
+        Domain.where(:name => domains_to_remove).delete_all
+        # add user defined new domains into system
+        domains_to_add = my_domains - existing_domains
+        new_domains = Hash.new
+        domains_to_add.map {|y| new_domains[y] = true}
         if new_domains.size > 0
           DomainCheckWorker.perform_async(uid,data_dir.to_s,new_domains)
         end

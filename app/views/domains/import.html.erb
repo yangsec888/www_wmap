@@ -16,7 +16,6 @@
         type: "POST",
         dataType: 'json',
         data: {
-          "file_path": "",
           "file_content": domains_editor.getDoc().getValue()
         },
         success: function(response) {
@@ -53,10 +52,10 @@
       data-container="body" data-toggle="popover" data-placement="right"
       data-content="Domains Import Format: <br>
       <ul><li> Domain registry example: google.com </li>
+          <li> Optional 'free zone transfer detected' field value </li>
           <li> Maximum 10 entries per import </li>
           <li> One entry per line </li>
-          <li> The entry can be duplicate </li>
-          <li> The entry can be already in system (and will be ignored)  </li>
+          <li> Alternatively, click the Skip button if you're not sure </li>
       </ul>
           "><span class="glyphicon glyphicon-question-sign"></span>Domains Format</button>
   </div>

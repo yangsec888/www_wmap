@@ -75,23 +75,32 @@ class CidrsController < ApplicationController
       file.close
     end
 
+    # Save import from user input
     def save_import
       if platinum_user_and_above?
         uid = current_user.id
+        existing_cidrs = Cidr.pluck(:owed_cidr)
         data_dir = Rails.root.join('shared', 'data')
-        my_cidrs=params[:file_content].split("\n")
-        raise ImportLimitError if my_cidrs.size>10 || my_cidrs.size<1
-        new_cidrs = Hash.new
-        my_cidrs.map do |entry|
-          cur_entry = entry.downcase.strip
-          next if ["",nil].include? cur_entry
-          cidr = Cidr.find_by(owed_cidr: cur_entry)
-          if cidr
-            #cidr.update(name: cur_entry, user_id: uid)
-          else
-            new_cidrs[cur_entry] = true
-          end
+        file = data_dir.join('cidrs')
+        # Save user import to cache file
+        f = File.open(file, 'w+')
+        f.write(params[:file_content])
+        f.close
+        # calculate the cidrs from import
+        my_cidrs=Array.new
+        params[:file_content].split("\n").map do |x|
+          next if x =~ /^\#/
+          next if ["",nil].include? x
+          my_cidrs.push(x.split(',')[0])
         end
+        raise ImportLimitError if my_cidrs.size>10 || my_cidrs.size<1
+        # remove user defined obsolete cidrs from db
+        cidrs_to_remove = existing_cidrs - my_cidrs
+        Cidr.where(:owed_cidr => cidrs_to_remove).delete_all
+        # add user defined new cidrs into system
+        cidrs_to_add = my_cidrs - existing_cidrs
+        new_cidrs = Hash.new
+        cidrs_to_add.map {|y| new_cidrs[y] = true }
         if new_cidrs.size > 0
           CidrCheckWorker.perform_async(uid,data_dir.to_s,new_cidrs)
         end
@@ -102,7 +111,7 @@ class CidrsController < ApplicationController
     rescue ImportLimitError => e
       render json: { message: e.message }
     rescue Psych::SyntaxError
-      file = File.open(params[:file_path], 'w+')
+      file = File.open(@file, 'w+')
       file.write(@restore)
       file.close
       render json: { message: 'Saving failed, please check your file again or contact the site administrator.' }
