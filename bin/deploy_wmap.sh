@@ -45,7 +45,7 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile;  sudo postfix stop'
 echo "Stopping Nginx web service ..."
 ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl stop nginx'
 echo "Stopping Puma application server service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; bundle exec pumactl -P /home/deploy/apps/www_wmap/shared/tmp/puma.pid stop'
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec pumactl -P /home/deploy/apps/www_wmap/shared/tmp/puma.pid stop'
 #echo "Stopping Sidekiq service ..."
 #ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo service sidekiq stop'
 sleep 3
@@ -54,7 +54,7 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile;  sudo systemctl stop sidekiq
 
 ##
 echo "Starting Puma application server service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; bundle exec pumactl -P /home/deploy/apps/www_wmap/shared/tmp/puma.pid start &'
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec pumactl -P /home/deploy/apps/www_wmap/shared/tmp/puma.pid start &'
 sleep 3
 
 echo "Starting Nginx web service ..."
