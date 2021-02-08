@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Excel spreadsheet support
 gem 'rubyXL', '=3.3.33'
 # file upload
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', '~> 1.3.2'
 # report upload
 gem 'sequel'
 group :development, :test do
