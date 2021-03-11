@@ -7,9 +7,9 @@
 - [Technology Stacks](#technology-stacks)
 - [Build and Run in Docker](#build-and-run-in-docker)
   - [Why Docker](#why-docker)
-  - [Build In Docker](#build-in-docker)
   - [Run In Docker](#run-in-docker)
   - [Docker Trouble-shooting](#docker-trouble-shooting)
+  - [Build In Docker (Optional)](#build-in-docker-optional)
 - [Linux Deployment](#linux-deployment)
 - [Usage](#usage)
 - [To Dos](#to-dos)
@@ -55,26 +55,19 @@ If you have [docker engine](https://docs.docker.com/install/) ready, you can hav
 #### Why Docker
 The docker is becoming popular in the development community. Because it can standadize the developing, building for everyone. The technology may also help deploy your customize app into your favorite cloud infrastructure later on.
 
-#### Build in Docker   
-```sh
-$ git clone https://github.com/yangsec888/www_wmap.git
-$ cd www_wmap
-$ docker-compose build
-```
-'docker-compose build' will build the containers for the app.
-
 #### Run In Docker
 
 'docker-compose up' would run the app from the containers.
 It should produce the output similar to below:
 ```sh
 $ docker-compose up
-Starting redis                    ... done
-Starting wmap_db                  ... done
-Recreating www_wmap_postfix_587_1 ... done
-Recreating www_wmap_sidekiq_1     ... done
-Recreating www_wmap               ... done
-Attaching to redis, wmap_db, www_wmap_postfix_587_1, www_wmap_sidekiq_1, www_wmap
+Starting wmap_db    ... done
+Starting wmap_redis ... done
+Starting www_wmap_sidekiq_1 ... done
+Starting wmap_web           ... done
+Starting www_wmap_nginx_1   ... done
+Attaching to wmap_db, wmap_redis, www_wmap_sidekiq_1, wmap_web, www_wmap_nginx_1
+wmap_db    | mariadb 20:25:19.20
 ...
 ```
 Open a local browser and point it at 'http://localhost/'. You will see the app in action.
@@ -85,13 +78,23 @@ Depend on the cloud infrastructure you use, you might need to customize the cont
 Following the onscreen error log when you bring up the containers. You can use the following docker command to verify the containers are running in your host
 ```
 $ docker ps
-CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                    NAMES
-6430a6fcac1e        www_wmap_web           "sh ./config/docker/…"   10 seconds ago      Up 9 seconds        0.0.0.0:3000->3000/tcp   www_wmap
-f048b0199a9c        www_wmap_sidekiq       "sh ./config/docker/…"   10 seconds ago      Up 9 seconds        3000/tcp                 www_wmap_sidekiq_1
-fd303f7dd992        redis:alpine           "docker-entrypoint.s…"   10 seconds ago      Up 9 seconds        6379/tcp                 redis
-faa0ebb3b861        bitnami/mariadb:10.3   "/entrypoint.sh /run…"   10 seconds ago      Up 9 seconds        0.0.0.0:3306->3306/tcp   wmap_db
+CONTAINER ID   IMAGE                                COMMAND                  CREATED          STATUS          PORTS                    NAMES
+8d4681f9dfef   yangsec888/www_wmap_sidekiq:latest   "sh ./config/docker/…"   48 minutes ago   Up 48 minutes   3000/tcp                 www_wmap_sidekiq_1
+59769eec9fbb   nginx:1.16.1                         "nginx -g 'daemon of…"   2 hours ago      Up 48 minutes   0.0.0.0:80->80/tcp       www_wmap_nginx_1
+6845611441b5   yangsec888/www_wmap_web:latest       "sh ./config/docker/…"   2 hours ago      Up 48 minutes   0.0.0.0:3000->3000/tcp   wmap_web
+a1158c1d52e5   redis:alpine                         "docker-entrypoint.s…"   4 hours ago      Up 48 minutes   6379/tcp                 wmap_redis
+293f77c2c5f5   bitnami/mariadb:10.3                 "/opt/bitnami/script…"   4 hours ago      Up 48 minutes   0.0.0.0:3306->3306/tcp   wmap_db
 ```
 If you running into problem, you can refer to the [docker online document](https://docs.docker.com) for further assistance.
+
+
+#### Build in Docker (Optional)   
+```sh
+$ git clone https://github.com/yangsec888/www_wmap.git
+$ cd www_wmap
+$ docker-compose build
+```
+'docker-compose build' will build the containers for the app.
 
 
 ### Linux Deployment   

@@ -2,7 +2,7 @@
 =====================
 
 - [1.0 Setup Hosting Environment]
-  - [Service Account Setup]
+  - [1.1 Service Account Setup]
 - [2.0 Runtime Environment Setup]
   - [2.1 Install MariaDB v10.4.x](#install-mariadb-v10-4-x)
   - [2.2 Install Redis v5.x Server](#install-redis-v5-x-server)

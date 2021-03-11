@@ -48955,3 +48955,6 @@ Processing by HostsController#index as HTML
 Completed 200 OK in 423ms (Views: 395.4ms | ActiveRecord: 1.1ms)
 
 
+=== puma startup: 2021-03-11 20:25:41 +0000 ===
+[27] * Starting control server on unix:///tmp/puma-status-1615494340992-27
+[27] - Worker 0 (pid: 36) booted, phase: 0
