@@ -1,7 +1,7 @@
 version: '2'
 services:
   redis:
-    container_name: "redis"
+    container_name: "wmap_redis"
     image: redis:alpine
     restart: always
     volumes:
@@ -18,7 +18,7 @@ services:
       - .env
 
   web:
-    container_name: "www_wmap"
+    container_name: "wmap_web"
     build: .
     command: bash -c "bin/rails db:migrate; bin/rails server --port 3000 --binding 0.0.0.0"
     ports:
@@ -31,6 +31,19 @@ services:
       - redis
     env_file:
       - .env
+
+  nginx:
+    image: nginx:1.16.1
+    volumes_from:
+      - web
+    depends_on:
+      - web
+    ports:
+      - 80:80
+    links:
+      - web
+    volumes:
+      - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
 
   sidekiq:
     build: .

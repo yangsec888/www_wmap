@@ -48168,3 +48168,100 @@ Completed 200 OK in 69ms (Views: 0.2ms | ActiveRecord: 0.6ms)
 Completed 200 OK in 171ms (Views: 128.8ms | ActiveRecord: 31.5ms)
 
 
+=== puma startup: 2021-03-11 15:53:44 +0000 ===
+[43] * Starting control server on unix:///tmp/puma-status-1615478024192-43
+[43] - Worker 0 (pid: 51) booted, phase: 0
+Started GET "/" for 172.18.0.1 at 2021-03-11 15:53:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 2535ms (Views: 2485.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-7fca34c300875ffd4ca06fc6a4d05cbd32d7090b694c484de8bf11500b8fba80.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-19cfbc52806446e1bf9dd43aab93a8e7733d9120f3a5ec997596cd669cef2c91.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Started GET "/assets/bootstrap_and_overrides.self-8bd5e7bfcb1bb0495d195d24e398780711919bdece4e25a6441fe48abc2e70f5.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Started GET "/assets/cidrs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/hosts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.self-7315d10e20cd6cf7f411454a8b58d4b63619d05cc62d3c238b3d98e9b3fe4392.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.min.self-487bd81b69d667265667f45bdab0ff83f0a108b3570da4380eda70486b9e2db3.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Started GET "/assets/logs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/popup.self-eca596831b292a04d38df0791fec865a8738b44e24553a2ea9889610ec68888c.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/reports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Started GET "/assets/sites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/yml_settings.self-745d929fcb299d44a695e6a56645456932ec1ddc02bccce66a15975572f4d812.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/application.self-203a41ae91c5ae490f17d3aa33b830988cc63474ae87f846ce7c3542dbf22858.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jquery3.self-e200ee796ef24add7054280d843a80de75392557bb4248241e870fac0914c0c1.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Started GET "/assets/twitter/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Started GET "/assets/twitter/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/codemirror.self-85fae1f78c88a1fbd32fac226c237b33820d659d428f2c509c7b7e7175e6d93c.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/cidrs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/domain_map.self-79e119d41a57480dc024879f6e3abe55c7876f96833f63687b3fe44cdca52c2b.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/domains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/hosts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/logs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/sites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Started GET "/assets/reports.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter-bootstrap-static/sprites.self-556e1741ff6d22f63fe0be609679c8f06ffc45eabc31836b6b785475bb283b84.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/domains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Started GET "/assets/application.self-b72377edad9bf59aeb67d0d22d4026c1f27b3099c031402cd5e6a6ca245a1a18.js?body=1" for 172.18.0.1 at 2021-03-11 15:53:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
