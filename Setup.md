@@ -2,7 +2,7 @@
 =====================
 
 - [1 Setup Hosting Environment](#1-setup-hosting-environment)
-  - [1.1 Service Account Setup](#1-1-service-account-setup)
+  - [1.1 Service Account Setup](#1.1-service-account-setup)
 - [2 Runtime Environment Setup](#2-runtime-environment-setup)
   - [2.1 Install MariaDB v10.4.x](#2-1-install-mariadb-v10-4-x)
   - [2.2 Install Redis v5.x Server](#2-2-install-redis-v5-x-server)
@@ -19,7 +19,7 @@
   - [2.13 Configure the Web Server](#2-13-configure-the-web-server)
   - [2.14 Setup Ubuntu Firewall](#2-14-setup-ubuntu-firewall)
   - [2.15 Setup Postfix as Send Only SMTP Server](#2-15-setup-postfix-as-send-only-smtp-server)
-- [3 Start the Rails Server][#3-start-the-rails-server]
+- [3 Start the Rails Server](#3-start-the-rails-server)
 ---
 
 ## 1 Setup Hosting Environment
