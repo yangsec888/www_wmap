@@ -11938,3 +11938,9 @@ CIDR cache table is successfully saved: /Users/sli/www_wmap/shared/data/cidrs
 2021-03-11T20:25:36.496Z 1 TID-gqesnu0op DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
 2021-03-11T20:25:36.497Z 1 TID-gqesnu0op INFO: Starting processing, hit Ctrl-C to stop
 2021-03-11T20:25:36.497Z 1 TID-gqesnu0op DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055dead91f4b0>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"8d4681f9dfef:1:d72447c4a875"}
+2021-03-11T21:16:14.991Z 1 TID-gqesnu0op DEBUG: Got TERM signal
+2021-03-11T21:16:14.992Z 1 TID-gqesnu0op INFO: Shutting down
+2021-03-11T21:16:14.993Z 1 TID-gqesnu0op INFO: Terminating quiet workers
+2021-03-11T21:16:14.994Z 1 TID-gqet5s0rl INFO: Scheduler exiting...
+2021-03-11T21:16:15.496Z 1 TID-gqesnu0op INFO: Pausing to allow workers to finish...
+2021-03-11T21:16:15.999Z 1 TID-gqesnu0op INFO: Bye!
