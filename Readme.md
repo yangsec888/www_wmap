@@ -3,18 +3,14 @@
 
 - [Wmap Web Portal](#wmap-web-portal)
 - [Demo](#demo)
-  - [Demo Instance](#demo-instance)
+  - [Demo Instance Access](#demo-instance-access)
 - [Technology Stacks](#technology-stacks)
 - [Build and Run in Docker](#build-and-run-in-docker)
   - [Why Docker](#why-docker)
   - [Build In Docker](#build-in-docker)
   - [Run In Docker](#run-in-docker)
   - [Docker Trouble-shooting](#docker-trouble-shooting)
-- [Local Installation](#local-installation)
-  - [Install MariaDB v10.4.x](#install-mariadb-v10-4-x)
-  - [Install Redis v5.x Server](#install-redis-v5-x-server)
-  - [Start the Rails Server](#start-the-rails-server)
-  - [More Setup Details](#more-setup-details)
+- [Linux Deployment](#linux-deployment)
 - [Usage](#usage)
 - [To Dos](#to-dos)
 
@@ -32,7 +28,7 @@ To further explore the full power of OWASP Wmap library, please refer to the <a 
 Click to watch the Youtube video below to see how to perform a successful application asset discovery:
 [![Web Mapper Demo](https://img.youtube.com/vi/TL1occsk3Fc/0.jpg)](https://www.youtube.com/watch?v=TL1occsk3Fc "Web Mapper Demo")
 
-#### Demo Instance
+#### Demo Instance Access
 The application is deployed into a demo instance at [www.wmap.io](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
 
 
@@ -81,10 +77,9 @@ Recreating www_wmap               ... done
 Attaching to redis, wmap_db, www_wmap_postfix_587_1, www_wmap_sidekiq_1, www_wmap
 ...
 ```
-Open a local browser and point it at http://localhost:3000/. You will see the app in action.
+Open a local browser and point it at 'http://localhost/'. You will see the app in action.
 
-Depend on the cloud infrastructure you use, you might need to customize the containers further before the deployment.
-Please feel free to contact me if you need the help.
+Depend on the cloud infrastructure you use, you might need to customize the containers further before the deployment. Please feel free to contact me if you need the help.
 
 #### Docker Trouble-shooting
 Following the onscreen error log when you bring up the containers. You can use the following docker command to verify the containers are running in your host
@@ -98,38 +93,9 @@ faa0ebb3b861        bitnami/mariadb:10.3   "/entrypoint.sh /run…"   10 seconds
 ```
 If you running into problem, you can refer to the [docker online document](https://docs.docker.com) for further assistance.
 
-### Local Installation
 
-WMAP App requires [Ruby on Rails](http://rubyonrails.org) v5.2.x, [MariaDB](https://www.mysql.com/) v10.4.x database, [Redis](https://redis.io/) 5.x in-memory data store, in order to run properly.
-
-Install the environment dependencies, and ensure the database server is running. For example, in our Linux / Mac laptop,
-
-#### Install MariaDB v10.4.x
-* [How to Install MariaDB in Ubuntu 18.0.4](https://linuxize.com/post/how-to-install-mariadb-on-ubuntu-18-04/)
-
-* Instal the mysql client support
-```sh
-$ sudo apt-get install libmysqlclient-dev
-$ gem install mysql2 -v '0.5.2' --source 'https://rubygems.org/'
-```
-
-#### Install Redis v5.x Server
-```sh
-$ sudo apt-get install redis-server redis-tools
-```
-
-#### Start the Rails Server
-
-```sh
-$ cd www_wmap
-$ bundle install
-$ rake db:create
-$ rake db:migration
-$ rails server
-```
-
-####  More Setup Details  
-For more information on local installation, please use my instance deployment example at [Setup.md](Setup.md) for your reference.
+### Linux Deployment   
+The project can be built, deployed and run in the linux distribution natively. For more information on local installation, please use the deployment example at [Setup.md](Setup.md) for your reference.
 
 
 ### Usage

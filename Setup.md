@@ -1,7 +1,20 @@
-# Setup Hosting Environment
-Setup the runtime environment in Ubuntu 18.0.4 Linux distrobution
+[<img src='/wmap_logo.jpg' width='350' height='350'>](https://github.com/yangsec888/www_wmap)
+=====================
 
-## 1. Service Account Setup
+- [1.0 Setup Hosting Environment]
+  - [Service Account Setup]
+- [2.0 Runtime Environment Setup]
+  - [2.1 Install MariaDB v10.4.x](#install-mariadb-v10-4-x)
+  - [2.2 Install Redis v5.x Server](#install-redis-v5-x-server)
+  - [2.3 Start the Rails Server](#start-the-rails-server)
+  - [2.4 More Setup Details](#more-setup-details)
+
+---
+
+## 1.0 Setup Hosting Environment
+Setup the runtime environment in Ubuntu 18.0.4 Linux distribution. Make sure the distribution is patched up to the latest.
+
+### 1.1 Service Account Setup
 To start, we'll create a service account "deploy" for the Rails app running environment. We'll add the service account to the special group 'wheel', which is allowed to have 'sudo' access.
 ```sh
 # adduser deploy
@@ -9,10 +22,46 @@ To start, we'll create a service account "deploy" for the Rails app running envi
 # usermod -aG wheel deploy
 ```
 
-## 2. Install RVM environment:
+## 2.0 Runtime Environment Setup
+
+WMAP App requires [Ruby on Rails](http://rubyonrails.org) v5.2.x, [MariaDB](https://www.mysql.com/) v10.4.x database, [Redis](https://redis.io/) 5.x in-memory data store, in order to run properly.
+
+Install the environment dependencies, and ensure the database server is running. For example, in our Linux box
+
+### 2.1 Install MariaDB v10.4.x
+* [How to Install MariaDB in Ubuntu 18.0.4](https://linuxize.com/post/how-to-install-mariadb-on-ubuntu-18-04/)
+
+```sh
+$ sudo apt -y install mariadb-server mariadb-client
+```
+#### Start Maria DB:
+```sh
+$ sudo systemctl start mysql
+```
+
+* Instal the mysql client support
+```sh
+$ sudo apt-get install libmysqlclient-dev
+$ gem install mysql2 -v '0.5.2' --source 'https://rubygems.org/'
+```
+
+### Install Redis v5.x Server
+The app use Redis to handle the async job queue. Refer to [this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04) for detail installation instructions.
+
+```sh
+$ sudo apt-get install redis-server redis-tools
+```
+
+#### Configure Redis Server
+Use the [example file](config/redis.conf) for the reference:
+```sh
+$ sudo vi /etc/redis/redis.conf
+```
+
+### Install RVM environment:
 Refer to https://rvm.io/
 
-## 3. Install Ruby and Ruby on Rails:
+### Install Ruby and Ruby on Rails:
 ```sh
 $ rvm list
 =* ruby-2.6.3 [ x86_64 ]
@@ -20,32 +69,16 @@ $ ruby -v
 ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
 ```
 
-## 4.  Install the wmap Gem:
-Refer to: https://github.com/yangsec888/wmap/blob/master/README.rdoc  
+### Start the Rails Server
 
-## 5.  Install the MariaDB database instance:
-### 5.1 Install DB
-Refer to https://computingforgeeks.com/install-mariadb-10-on-ubuntu-18-04-and-centos-7/
 ```sh
-$ sudo apt -y install mariadb-server mariadb-client
+$ cd www_wmap
+$ bundle install
+$ rake db:create
+$ rake db:migration
+$ rails server
 ```
-### 5.2 Start Maria DB:
-```sh
-$ sudo systemctl start mysql
-```
-
-## 6. Install and Run Redis server:
-The app use Redis to handle the async job queue. Refer to [this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04) for detail installation instructions.
-
-### 6.1. Install Redis server
-```sh
-$ sudo apt install redis-server
-```
-
-### 6.2. Configure redis server:
-```sh
-$ sudo vi /etc/redis/redis.conf
-```
+You should be able to use local browser to test out the above Web GUI running.
 
 ### 6.3. Running the redis server:
 ```sh
