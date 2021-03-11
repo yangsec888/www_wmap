@@ -60,6 +60,8 @@ The docker is becoming popular in the development community. Because it can stan
 'docker-compose up' would run the app from the containers.
 It should produce the output similar to below:
 ```sh
+$ git clone https://github.com/yangsec888/www_wmap.git
+$ cd www_wmap
 $ docker-compose up
 Starting wmap_db    ... done
 Starting wmap_redis ... done
@@ -71,8 +73,6 @@ wmap_db    | mariadb 20:25:19.20
 ...
 ```
 Open a local browser and point it at 'http://localhost/'. You will see the app in action.
-
-Depend on the cloud infrastructure you use, you might need to customize the containers further before the deployment. Please feel free to contact me if you need the help.
 
 #### Docker Trouble-shooting
 Following the onscreen error log when you bring up the containers. You can use the following docker command to verify the containers are running in your host
@@ -89,9 +89,9 @@ If you running into problem, you can refer to the [docker online document](https
 
 
 #### Build in Docker (Optional)   
+You might want to customize the application to your organization need. In that case, you might want to re-build the docker images after the code change. You might also need to modify [docker-compose.yml](docker-compose.yml) file after the change, before proceeding to the rebuild.
+
 ```sh
-$ git clone https://github.com/yangsec888/www_wmap.git
-$ cd www_wmap
 $ docker-compose build
 ```
 'docker-compose build' will build the containers for the app.
