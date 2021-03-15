@@ -42,7 +42,7 @@ services:
     links:
       - web
     volumes:
-      - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ${PWD}/config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
 
   sidekiq:
     image: 'yangsec888/www_wmap_sidekiq:latest'
@@ -53,6 +53,17 @@ services:
       - .:/www_wmap
     env_file:
       - .env
+
+  smtp:
+    image: "catatnight/postfix"
+    ports:
+      - "25:25"
+    volumes:
+      - ${PWD}/config/postfix/main.cf:/etc/postfix/main.cf:ro
+      - ${PWD}/config/postfix/mailname:/etc/mailname:ro
+    environment:
+      - maildomain=wmap.io
+    restart: always
 
 volumes:
   redis:

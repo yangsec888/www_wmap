@@ -11944,3 +11944,1391 @@ CIDR cache table is successfully saved: /Users/sli/www_wmap/shared/data/cidrs
 2021-03-11T21:16:14.994Z 1 TID-gqet5s0rl INFO: Scheduler exiting...
 2021-03-11T21:16:15.496Z 1 TID-gqesnu0op INFO: Pausing to allow workers to finish...
 2021-03-11T21:16:15.999Z 1 TID-gqesnu0op INFO: Bye!
+2021-03-12T00:18:55.227Z 1 TID-gow7k873t INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-12T00:18:56.592Z 1 TID-gow7k873t INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-12T00:18:56.593Z 1 TID-gow7k873t INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-12T00:18:56.594Z 1 TID-gow7k873t INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-12T00:18:56.597Z 1 TID-gow7k873t DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-12T00:18:56.597Z 1 TID-gow7k873t DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-12T00:18:56.598Z 1 TID-gow7k873t INFO: Starting processing, hit Ctrl-C to stop
+2021-03-12T00:18:56.599Z 1 TID-gow7k873t DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055a758df2ff0>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"8d4681f9dfef:1:4a7406adc51e"}
+2021-03-12T00:22:24.982Z 1 TID-gow822ca5 DiscoveryWorker JID-27f1df111c279247e98cecd0 INFO: start
+2021-03-12T00:22:25.119Z 1 TID-gow822ca5 DiscoveryWorker JID-27f1df111c279247e98cecd0 INFO: Starting background command: wmap -t /www_wmap/shared/data/seed -d /www_wmap/shared/data/
+2021-03-12T00:35:56.648Z 1 TID-gow822ca5 DiscoveryWorker JID-27f1df111c279247e98cecd0 INFO: Discovery successful!
+2021-03-12T00:35:56.649Z 1 TID-gow822ca5 DiscoveryWorker JID-27f1df111c279247e98cecd0 INFO: Sending out email notice to: yangsec888@gmail.com
+2021-03-12T00:35:58.492Z 1 TID-gow822ca5 DiscoveryWorker JID-27f1df111c279247e98cecd0 INFO: done: 814.436 sec
+2021-03-12T02:20:55.355Z 1 TID-gow7k873t DEBUG: Got TERM signal
+2021-03-12T02:20:55.357Z 1 TID-gow7k873t INFO: Shutting down
+2021-03-12T02:20:55.357Z 1 TID-gow7k873t INFO: Terminating quiet workers
+2021-03-12T02:20:55.358Z 1 TID-gow823hu9 INFO: Scheduler exiting...
+2021-03-12T02:20:55.861Z 1 TID-gow7k873t INFO: Bye!
+2021-03-12T03:27:05.458Z 1 TID-gt36vvrw1 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-12T03:27:06.882Z 1 TID-gt36vvrw1 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-12T03:27:06.884Z 1 TID-gt36vvrw1 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-12T03:27:06.886Z 1 TID-gt36vvrw1 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-12T03:27:06.889Z 1 TID-gt36vvrw1 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-12T03:27:06.890Z 1 TID-gt36vvrw1 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-12T03:27:06.891Z 1 TID-gt36vvrw1 INFO: Starting processing, hit Ctrl-C to stop
+2021-03-12T03:27:06.891Z 1 TID-gt36vvrw1 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x0000564063642fe0>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"8d4681f9dfef:1:701465931b3f"}
+2021-03-12T03:27:30.759Z 1 TID-gt37cqppd DiscoveryWorker JID-133c9fd33da4a511f3443e62 INFO: start
+2021-03-12T03:27:30.905Z 1 TID-gt37cqppd DiscoveryWorker JID-133c9fd33da4a511f3443e62 INFO: Starting background command: wmap -t /www_wmap/shared/data/seed -d /www_wmap/shared/data/
+2021-03-12T03:40:41.379Z 1 TID-gt37cqppd DiscoveryWorker JID-133c9fd33da4a511f3443e62 INFO: Discovery successful!
+2021-03-12T03:40:41.382Z 1 TID-gt37cqppd DiscoveryWorker JID-133c9fd33da4a511f3443e62 INFO: Sending out email notice to: yangsec888@gmail.com
+2021-03-12T03:40:43.281Z 1 TID-gt37cqppd DiscoveryWorker JID-133c9fd33da4a511f3443e62 INFO: done: 793.454 sec
+2021-03-13T03:46:27.440Z 1 TID-gt36vvrw1 DEBUG: Got TERM signal
+2021-03-13T03:46:27.442Z 1 TID-gt36vvrw1 INFO: Shutting down
+2021-03-13T03:46:27.443Z 1 TID-gt36vvrw1 INFO: Terminating quiet workers
+2021-03-13T03:46:27.444Z 1 TID-gt37ctlil INFO: Scheduler exiting...
+2021-03-13T03:46:27.947Z 1 TID-gt36vvrw1 INFO: Bye!
+2021-03-15T14:10:47.720Z 1 TID-gti3vc9h1 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T14:10:48.927Z 1 TID-gti3vc9h1 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T14:10:48.927Z 1 TID-gti3vc9h1 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T14:10:48.928Z 1 TID-gti3vc9h1 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T14:10:48.930Z 1 TID-gti3vc9h1 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T14:10:48.931Z 1 TID-gti3vc9h1 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T14:10:48.932Z 1 TID-gti3vc9h1 INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T14:10:48.933Z 1 TID-gti3vc9h1 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x0000564f81aea200>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"8d4681f9dfef:1:62481a3ce1bb"}
+2021-03-15T14:10:50.946Z 1 TID-gti4iwjq9 ERROR: Error fetching job: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:50.950Z 1 TID-gti4iwjq9 WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:50.951Z 1 TID-gti4iwjq9 WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:219:in `block in call_with_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:292:in `with_socket_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:218:in `call_with_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1186:in `block in _bpop'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1183:in `_bpop'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1228:in `brpop'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `block in retrieve_work'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `retrieve_work'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:89:in `get_one'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:99:in `fetch'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:82:in `process_one'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:71:in `run'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:10:50.949Z 1 TID-gti4iwk3l ERROR: Error fetching job: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:50.952Z 1 TID-gti4iwk3l WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:50.953Z 1 TID-gti4iwk3l WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:219:in `block in call_with_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:292:in `with_socket_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:218:in `call_with_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1186:in `block in _bpop'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1183:in `_bpop'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1228:in `brpop'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `block in retrieve_work'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `retrieve_work'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:89:in `get_one'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:99:in `fetch'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:82:in `process_one'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:71:in `run'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:10:50.949Z 1 TID-gti4iwj7x ERROR: Error fetching job: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:50.960Z 1 TID-gti4iwj7x WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:50.969Z 1 TID-gti4iwj7x WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:219:in `block in call_with_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:292:in `with_socket_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:218:in `call_with_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1186:in `block in _bpop'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1183:in `_bpop'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1228:in `brpop'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `block in retrieve_work'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `retrieve_work'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:89:in `get_one'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:99:in `fetch'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:82:in `process_one'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:71:in `run'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:10:50.950Z 1 TID-gti4ixcqp ERROR: Error fetching job: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:50.971Z 1 TID-gti4ixcqp WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:50.972Z 1 TID-gti4ixcqp WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:219:in `block in call_with_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:292:in `with_socket_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:218:in `call_with_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1186:in `block in _bpop'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1183:in `_bpop'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1228:in `brpop'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `block in retrieve_work'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `retrieve_work'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:89:in `get_one'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:99:in `fetch'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:82:in `process_one'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:71:in `run'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:10:50.948Z 1 TID-gti4iwjhd ERROR: Error fetching job: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:50.973Z 1 TID-gti4iwjhd WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:50.974Z 1 TID-gti4iwjhd WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:219:in `block in call_with_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:292:in `with_socket_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:218:in `call_with_timeout'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1186:in `block in _bpop'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1183:in `_bpop'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1228:in `brpop'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `block in retrieve_work'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/fetch.rb:36:in `retrieve_work'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:89:in `get_one'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:99:in `fetch'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:82:in `process_one'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/processor.rb:71:in `run'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:10:53.941Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:10:58.945Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:03.913Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:08.917Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:13.923Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:18.926Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:23.930Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:28.897Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:33.901Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:38.904Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:43.909Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:48.912Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:49.319Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:49.320Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:49.321Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:11:53.917Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:54.326Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:54.328Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:54.329Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:11:58.886Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:59.301Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:59.302Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:11:59.304Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:03.888Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:04.308Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:04.309Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:04.310Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:08.891Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:09.314Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:09.315Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:09.316Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:13.896Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:14.322Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:14.323Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:14.324Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:18.900Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:19.330Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:19.331Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:19.332Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:23.904Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:24.338Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:24.339Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:24.341Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:28.869Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:29.308Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:29.310Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:29.311Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:33.873Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:34.319Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:34.321Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:34.322Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:38.877Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:39.327Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:39.328Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:39.329Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:43.881Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:44.335Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:44.337Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:44.338Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:48.885Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:49.343Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:49.344Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:49.345Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:53.892Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:54.351Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:54.352Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:54.354Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:12:58.860Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:59.320Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:59.321Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:12:59.322Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:03.864Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:04.327Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:04.328Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:04.329Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:08.867Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:09.333Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:09.334Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:09.336Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:13.870Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:14.340Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:14.341Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:14.341Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:18.873Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:19.350Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:19.352Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:19.353Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:23.876Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:24.358Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:24.360Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:24.361Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:28.846Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:29.329Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:29.330Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:29.330Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:33.850Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:34.338Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:34.339Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:34.340Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:38.854Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:39.347Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:39.349Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:39.350Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:43.858Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:44.354Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:44.355Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:44.355Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:48.862Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:49.358Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:49.359Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:49.360Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:53.866Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:54.364Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:54.366Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:54.367Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:13:58.835Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:59.337Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:59.338Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:13:59.340Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:03.839Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:04.346Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:04.347Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:04.348Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:08.842Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:09.354Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:09.355Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:09.357Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:13.849Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:14.361Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:14.362Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:14.364Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:18.853Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:19.369Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:19.370Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:19.371Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:23.860Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:24.376Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:24.377Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:24.378Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:28.827Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:29.349Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:29.350Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:29.351Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:33.830Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:34.355Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:34.357Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:34.358Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:38.833Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:39.362Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:39.363Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:39.364Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:43.840Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:44.369Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:44.370Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:44.371Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:48.845Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:49.376Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:49.377Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:49.379Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:53.849Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:54.386Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:54.388Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:54.388Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:14:58.824Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:59.358Z 1 TID-gti4ixd6t ERROR: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:59.359Z 1 TID-gti4ixd6t WARN: Redis::CommandError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:14:59.361Z 1 TID-gti4ixd6t WARN: /usr/local/bundle/gems/redis-4.1.3/lib/redis/client.rb:126:in `call'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1376:in `block in srem'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `block in synchronize'
+/usr/local/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:52:in `synchronize'
+/usr/local/bundle/gems/redis-4.1.3/lib/redis.rb:1375:in `srem'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:759:in `block in cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:97:in `block in redis'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:65:in `block (2 levels) in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:64:in `block in with'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `handle_interrupt'
+/usr/local/bundle/gems/connection_pool-2.2.2/lib/connection_pool.rb:61:in `with'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq.rb:94:in `redis'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:744:in `cleanup'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/api.rb:737:in `initialize'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `new'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:155:in `process_count'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:120:in `random_poll_interval'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:89:in `wait'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/scheduled.rb:69:in `block in start'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:16:in `watchdog'
+/usr/local/bundle/gems/sidekiq-5.2.5/lib/sidekiq/util.rb:25:in `block in safe_thread'
+2021-03-15T14:15:03.827Z 1 TID-gti4ixdcx ERROR: heartbeat: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2021-03-15T14:15:04.082Z 1 TID-gti3vc9h1 DEBUG: Got TERM signal
+2021-03-15T14:15:04.084Z 1 TID-gti3vc9h1 INFO: Shutting down
+2021-03-15T14:15:04.084Z 1 TID-gti3vc9h1 INFO: Terminating quiet workers
+2021-03-15T14:15:04.362Z 1 TID-gti4ixd6t INFO: Scheduler exiting...
+2021-03-15T14:15:04.864Z 1 TID-gti3vc9h1 INFO: Bye!
+2021-03-15T14:41:29.049Z 1 TID-gmw3h552t INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T14:41:30.985Z 1 TID-gmw3h552t INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T14:41:30.986Z 1 TID-gmw3h552t INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T14:41:30.986Z 1 TID-gmw3h552t INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T14:41:30.990Z 1 TID-gmw3h552t DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T14:41:30.991Z 1 TID-gmw3h552t DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T14:41:30.992Z 1 TID-gmw3h552t INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T14:41:30.993Z 1 TID-gmw3h552t DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x0000555e3ff2aab0>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:b49219c3c7b9"}
+2021-03-15T15:02:16.785Z 1 TID-gmw3h552t DEBUG: Got TERM signal
+2021-03-15T15:02:16.788Z 1 TID-gmw3h552t INFO: Shutting down
+2021-03-15T15:02:16.790Z 1 TID-gmw3h552t INFO: Terminating quiet workers
+2021-03-15T15:02:16.791Z 1 TID-gmw3yzbnp INFO: Scheduler exiting...
+2021-03-15T15:02:17.295Z 1 TID-gmw3h552t INFO: Bye!
+2021-03-15T15:02:54.620Z 1 TID-gr38374kx INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T15:02:56.026Z 1 TID-gr38374kx INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T15:02:56.026Z 1 TID-gr38374kx INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T15:02:56.027Z 1 TID-gr38374kx INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T15:02:56.030Z 1 TID-gr38374kx DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T15:02:56.030Z 1 TID-gr38374kx DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T15:02:56.031Z 1 TID-gr38374kx INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T15:02:56.031Z 1 TID-gr38374kx DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055f77033a438>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:3c661a2c788c"}
+2021-03-15T15:06:27.497Z 1 TID-gr38374kx DEBUG: Got TERM signal
+2021-03-15T15:06:27.499Z 1 TID-gr38374kx INFO: Shutting down
+2021-03-15T15:06:27.500Z 1 TID-gr38374kx INFO: Terminating quiet workers
+2021-03-15T15:06:27.501Z 1 TID-gr38qrkop INFO: Scheduler exiting...
+2021-03-15T15:06:28.002Z 1 TID-gr38374kx INFO: Pausing to allow workers to finish...
+2021-03-15T15:06:29.511Z 1 TID-gr38374kx INFO: Bye!
+2021-03-15T15:08:16.611Z 1 TID-gpa5l52ph INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T15:08:17.790Z 1 TID-gpa5l52ph INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T15:08:17.791Z 1 TID-gpa5l52ph INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T15:08:17.791Z 1 TID-gpa5l52ph INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T15:08:17.794Z 1 TID-gpa5l52ph DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T15:08:17.794Z 1 TID-gpa5l52ph DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T15:08:17.795Z 1 TID-gpa5l52ph INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T15:08:17.796Z 1 TID-gpa5l52ph DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055b57b8b41c0>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:bd857137b96d"}
+2021-03-15T17:32:59.050Z 1 TID-gpa5l52ph DEBUG: Got TERM signal
+2021-03-15T17:32:59.052Z 1 TID-gpa5l52ph INFO: Shutting down
+2021-03-15T17:32:59.053Z 1 TID-gpa5l52ph INFO: Terminating quiet workers
+2021-03-15T17:32:59.054Z 1 TID-gpa632pwh INFO: Scheduler exiting...
+2021-03-15T17:32:59.556Z 1 TID-gpa5l52ph INFO: Pausing to allow workers to finish...
+2021-03-15T17:33:01.064Z 1 TID-gpa5l52ph INFO: Bye!
+2021-03-15T17:34:55.336Z 1 TID-gr8xj5vjx INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T17:34:56.546Z 1 TID-gr8xj5vjx INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T17:34:56.547Z 1 TID-gr8xj5vjx INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T17:34:56.547Z 1 TID-gr8xj5vjx INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T17:34:56.550Z 1 TID-gr8xj5vjx DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T17:34:56.551Z 1 TID-gr8xj5vjx DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T17:34:56.551Z 1 TID-gr8xj5vjx INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T17:34:56.552Z 1 TID-gr8xj5vjx DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055fd3974f6a8>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:6a2e3f18b1bb"}
+2021-03-15T17:45:14.851Z 1 TID-gr8xj5vjx DEBUG: Got TERM signal
+2021-03-15T17:45:14.853Z 1 TID-gr8xj5vjx INFO: Shutting down
+2021-03-15T17:45:14.856Z 1 TID-gr8xj5vjx INFO: Terminating quiet workers
+2021-03-15T17:45:14.857Z 1 TID-gr8y11919 INFO: Scheduler exiting...
+2021-03-15T17:45:15.359Z 1 TID-gr8xj5vjx INFO: Pausing to allow workers to finish...
+2021-03-15T17:45:16.363Z 1 TID-gr8xj5vjx INFO: Bye!
+2021-03-15T17:45:49.826Z 1 TID-gonyksxrl INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T17:45:51.266Z 1 TID-gonyksxrl INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T17:45:51.267Z 1 TID-gonyksxrl INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T17:45:51.268Z 1 TID-gonyksxrl INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T17:45:51.272Z 1 TID-gonyksxrl DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T17:45:51.273Z 1 TID-gonyksxrl DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T17:45:51.274Z 1 TID-gonyksxrl INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T17:45:51.275Z 1 TID-gonyksxrl DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x0000559efc2c7338>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:c93ccb1a0690"}
+2021-03-15T17:46:53.597Z 1 TID-gonz2qfv9 DiscoveryWorker JID-65a779bf9ef84c3e12e79394 INFO: start
+2021-03-15T17:46:53.746Z 1 TID-gonz2qfv9 DiscoveryWorker JID-65a779bf9ef84c3e12e79394 INFO: Starting background command: wmap -t /www_wmap/shared/data/seed -d /www_wmap/shared/data/
+2021-03-15T18:09:44.651Z 1 TID-gonz2qfv9 DiscoveryWorker JID-65a779bf9ef84c3e12e79394 INFO: Discovery successful!
+2021-03-15T18:09:44.652Z 1 TID-gonz2qfv9 DiscoveryWorker JID-65a779bf9ef84c3e12e79394 INFO: Sending out email notice to: yang.li@owasp.org
+2021-03-15T18:09:46.612Z 1 TID-gonz2qfv9 DiscoveryWorker JID-65a779bf9ef84c3e12e79394 INFO: done: 1374.624 sec
+2021-03-15T18:43:26.114Z 1 TID-gonyksxrl DEBUG: Got TERM signal
+2021-03-15T18:43:26.115Z 1 TID-gonyksxrl INFO: Shutting down
+2021-03-15T18:43:26.116Z 1 TID-gonyksxrl INFO: Terminating quiet workers
+2021-03-15T18:43:26.117Z 1 TID-gonz2qgjp INFO: Scheduler exiting...
+2021-03-15T18:43:26.623Z 1 TID-gonyksxrl INFO: Bye!
+2021-03-15T18:44:52.037Z 1 TID-gpmbc79x1 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T18:44:53.540Z 1 TID-gpmbc79x1 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T18:44:53.541Z 1 TID-gpmbc79x1 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T18:44:53.542Z 1 TID-gpmbc79x1 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T18:44:53.544Z 1 TID-gpmbc79x1 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T18:44:53.545Z 1 TID-gpmbc79x1 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T18:44:53.545Z 1 TID-gpmbc79x1 INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T18:44:53.546Z 1 TID-gpmbc79x1 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055c1cee86eb8>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:28165ab40fdf"}
+2021-03-15T19:04:58.550Z 1 TID-gpmbc79x1 DEBUG: Got TERM signal
+2021-03-15T19:04:58.553Z 1 TID-gpmbc79x1 INFO: Shutting down
+2021-03-15T19:04:58.554Z 1 TID-gpmbc79x1 INFO: Terminating quiet workers
+2021-03-15T19:04:58.555Z 1 TID-gpmbu36c1 INFO: Scheduler exiting...
+2021-03-15T19:04:59.056Z 1 TID-gpmbc79x1 INFO: Pausing to allow workers to finish...
+2021-03-15T19:05:00.026Z 1 TID-gpmbc79x1 INFO: Bye!
+2021-03-15T19:07:26.177Z 1 TID-gocfsxfr1 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T19:07:27.357Z 1 TID-gocfsxfr1 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T19:07:27.357Z 1 TID-gocfsxfr1 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T19:07:27.358Z 1 TID-gocfsxfr1 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T19:07:27.361Z 1 TID-gocfsxfr1 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T19:07:27.361Z 1 TID-gocfsxfr1 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T19:07:27.362Z 1 TID-gocfsxfr1 INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T19:07:27.363Z 1 TID-gocfsxfr1 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055934e093468>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:a95c6bd878b3"}
+2021-03-15T19:25:14.082Z 1 TID-gocfsxfr1 DEBUG: Got TERM signal
+2021-03-15T19:25:14.084Z 1 TID-gocfsxfr1 INFO: Shutting down
+2021-03-15T19:25:14.086Z 1 TID-gocfsxfr1 INFO: Terminating quiet workers
+2021-03-15T19:25:14.087Z 1 TID-gocggil0d INFO: Scheduler exiting...
+2021-03-15T19:25:14.588Z 1 TID-gocfsxfr1 INFO: Pausing to allow workers to finish...
+2021-03-15T19:25:15.092Z 1 TID-gocfsxfr1 INFO: Bye!
+2021-03-15T19:25:44.069Z 1 TID-gqhrcgo35 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T19:25:45.474Z 1 TID-gqhrcgo35 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T19:25:45.475Z 1 TID-gqhrcgo35 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T19:25:45.476Z 1 TID-gqhrcgo35 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T19:25:45.478Z 1 TID-gqhrcgo35 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T19:25:45.479Z 1 TID-gqhrcgo35 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T19:25:45.479Z 1 TID-gqhrcgo35 INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T19:25:45.480Z 1 TID-gqhrcgo35 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055e1ae901d30>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:c76c2ec13670"}
+2021-03-15T19:30:12.566Z 1 TID-gqhrcgo35 DEBUG: Got TERM signal
+2021-03-15T19:30:12.567Z 1 TID-gqhrcgo35 INFO: Shutting down
+2021-03-15T19:30:12.568Z 1 TID-gqhrcgo35 INFO: Terminating quiet workers
+2021-03-15T19:30:12.569Z 1 TID-gqhruauup INFO: Scheduler exiting...
+2021-03-15T19:30:13.074Z 1 TID-gqhrcgo35 INFO: Bye!
+2021-03-15T19:30:47.942Z 1 TID-gn0qtrkl9 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T19:30:49.155Z 1 TID-gn0qtrkl9 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T19:30:49.156Z 1 TID-gn0qtrkl9 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T19:30:49.156Z 1 TID-gn0qtrkl9 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T19:30:49.159Z 1 TID-gn0qtrkl9 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T19:30:49.160Z 1 TID-gn0qtrkl9 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T19:30:49.163Z 1 TID-gn0qtrkl9 INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T19:30:49.164Z 1 TID-gn0qtrkl9 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x00005562f5d722d0>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:8b435a992f23"}
+2021-03-15T19:40:11.861Z 1 TID-gn0qtrkl9 DEBUG: Got TERM signal
+2021-03-15T19:40:11.863Z 1 TID-gn0qtrkl9 INFO: Shutting down
+2021-03-15T19:40:11.865Z 1 TID-gn0qtrkl9 INFO: Terminating quiet workers
+2021-03-15T19:40:11.867Z 1 TID-gn0rhcv91 INFO: Scheduler exiting...
+2021-03-15T19:40:12.374Z 1 TID-gn0qtrkl9 INFO: Bye!
+2021-03-15T19:40:43.652Z 1 TID-gr29aaho1 INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T19:40:45.115Z 1 TID-gr29aaho1 INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T19:40:45.116Z 1 TID-gr29aaho1 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T19:40:45.117Z 1 TID-gr29aaho1 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T19:40:45.120Z 1 TID-gr29aaho1 DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T19:40:45.121Z 1 TID-gr29aaho1 DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T19:40:45.122Z 1 TID-gr29aaho1 INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T19:40:45.123Z 1 TID-gr29aaho1 DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055f67558c958>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:6bf9fa78e4e7"}
+2021-03-15T19:53:13.908Z 1 TID-gr29aaho1 DEBUG: Got TERM signal
+2021-03-15T19:53:13.911Z 1 TID-gr29aaho1 INFO: Shutting down
+2021-03-15T19:53:13.915Z 1 TID-gr29aaho1 INFO: Terminating quiet workers
+2021-03-15T19:53:13.916Z 1 TID-gr29xxkfl INFO: Scheduler exiting...
+2021-03-15T19:53:14.421Z 1 TID-gr29aaho1 INFO: Bye!
+2021-03-15T19:53:47.727Z 1 TID-gnvwh2b5t INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T19:53:49.206Z 1 TID-gnvwh2b5t INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T19:53:49.207Z 1 TID-gnvwh2b5t INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T19:53:49.210Z 1 TID-gnvwh2b5t INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T19:53:49.215Z 1 TID-gnvwh2b5t DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T19:53:49.216Z 1 TID-gnvwh2b5t DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T19:53:49.217Z 1 TID-gnvwh2b5t INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T19:53:49.217Z 1 TID-gnvwh2b5t DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x000055828ad48a48>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:4b617d16d46e"}
+2021-03-15T20:00:53.077Z 1 TID-gnvx4m2xh DiscoveryWorker JID-8367182f2ceae58f360f32fe INFO: start
+2021-03-15T20:00:53.221Z 1 TID-gnvx4m2xh DiscoveryWorker JID-8367182f2ceae58f360f32fe INFO: Starting background command: wmap -t /www_wmap/shared/data/seed -d /www_wmap/shared/data/
+2021-03-15T20:12:29.598Z 1 TID-gnvx4m2xh DiscoveryWorker JID-8367182f2ceae58f360f32fe INFO: Discovery successful!
+2021-03-15T20:12:29.599Z 1 TID-gnvx4m2xh DiscoveryWorker JID-8367182f2ceae58f360f32fe INFO: Sending out email notice to: yang.li@owasp.org
+2021-03-15T20:12:31.445Z 1 TID-gnvx4m2xh DiscoveryWorker JID-8367182f2ceae58f360f32fe INFO: done: 699.207 sec
+2021-03-15T20:40:31.491Z 1 TID-gnvwh2b5t DEBUG: Got TERM signal
+2021-03-15T20:40:31.495Z 1 TID-gnvwh2b5t INFO: Shutting down
+2021-03-15T20:40:31.496Z 1 TID-gnvwh2b5t INFO: Terminating quiet workers
+2021-03-15T20:40:31.497Z 1 TID-gnvx4myjt INFO: Scheduler exiting...
+2021-03-15T20:40:32.004Z 1 TID-gnvwh2b5t INFO: Pausing to allow workers to finish...
+2021-03-15T20:40:33.518Z 1 TID-gnvwh2b5t INFO: Bye!
+2021-03-15T20:42:21.099Z 1 TID-grpwnv2lt INFO: Booting Sidekiq 5.2.5 with redis options {:url=>"redis://redis:6379/0", :id=>"Sidekiq-server-PID-1"}
+2021-03-15T20:42:22.517Z 1 TID-grpwnv2lt INFO: Running in ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+2021-03-15T20:42:22.518Z 1 TID-grpwnv2lt INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2021-03-15T20:42:22.518Z 1 TID-grpwnv2lt INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2021-03-15T20:42:22.522Z 1 TID-grpwnv2lt DEBUG: Client Middleware: Sidekiq::Batch::Middleware::ClientMiddleware
+2021-03-15T20:42:22.523Z 1 TID-grpwnv2lt DEBUG: Server Middleware: Sidekiq::Batch::Middleware::ServerMiddleware
+2021-03-15T20:42:22.524Z 1 TID-grpwnv2lt INFO: Starting processing, hit Ctrl-C to stop
+2021-03-15T20:42:22.526Z 1 TID-grpwnv2lt DEBUG: {:queues=>["critical", "default", "low", "mailers"], :labels=>[], :concurrency=>5, :require=>".", :environment=>nil, :timeout=>8, :poll_interval_average=>nil, :average_scheduled_poll_interval=>5, :error_handlers=>[#<Sidekiq::ExceptionHandler::Logger:0x0000560e6e2b72a8>], :death_handlers=>[], :lifecycle_events=>{:startup=>[], :quiet=>[], :shutdown=>[], :heartbeat=>[]}, :dead_max_jobs=>10000, :dead_timeout_in_seconds=>15552000, :reloader=>#<Sidekiq::Rails::Reloader @app=WmapPortal::Application>, :verbose=>true, :pidfile=>"./tmp/pids/sidekiq.pid", :logfile=>"./log/sidekiq.log", :staging=>{:concurrency=>5}, :production=>{:verbose=>true, :concurrency=>5}, :config_file=>"./config/sidekiq.yml", :strict=>true, :tag=>"www_wmap", :identity=>"1193fe49268c:1:163f8e99c1c7"}
+2021-03-15T20:45:21.441Z 1 TID-grpxbi4tx DiscoveryWorker JID-11a265b3238a248951346728 INFO: start
+2021-03-15T20:45:21.588Z 1 TID-grpxbi4tx DiscoveryWorker JID-11a265b3238a248951346728 INFO: Starting background command: wmap -t /www_wmap/shared/data/seed -d /www_wmap/shared/data/
+2021-03-15T20:57:19.102Z 1 TID-grpxbi4tx DiscoveryWorker JID-11a265b3238a248951346728 INFO: Discovery successful!
+2021-03-15T20:57:19.104Z 1 TID-grpxbi4tx DiscoveryWorker JID-11a265b3238a248951346728 INFO: Sending out email notice to: yang.li@owasp.org
+2021-03-15T20:57:20.988Z 1 TID-grpxbi4tx DiscoveryWorker JID-11a265b3238a248951346728 INFO: done: 720.369 sec
+2021-03-15T21:01:19.184Z 1 TID-grpwnv2lt DEBUG: Got TERM signal
+2021-03-15T21:01:19.186Z 1 TID-grpwnv2lt INFO: Shutting down
+2021-03-15T21:01:19.187Z 1 TID-grpwnv2lt INFO: Terminating quiet workers
+2021-03-15T21:01:19.188Z 1 TID-grpxbi5dx INFO: Scheduler exiting...
+2021-03-15T21:01:19.690Z 1 TID-grpwnv2lt INFO: Pausing to allow workers to finish...
+2021-03-15T21:01:20.195Z 1 TID-grpwnv2lt INFO: Bye!

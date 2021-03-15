@@ -1,3 +1,13 @@
+#--
+# www_wmap
+#
+# A  Ruby application for enterprise web application asset tracking
+#
+# Developed by Sam (Yang) Li, <yang.li@owasp.org>.
+#
+#++
+
+
 class UserMailer < ApplicationMailer
 
   def discovery_completion_notice(receiver, start_time, end_time)

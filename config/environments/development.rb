@@ -21,9 +21,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   # ActionMailer Config
   config.action_mailer.smtp_settings = {
-     address:              'localhost',
+     address:              'smtp',
      port:                 25,
-     domain:        'owasp.org',
+     domain:        'wmap.io',
+     authentication:      'plain',
      enable_starttls_auto: false
   }
 

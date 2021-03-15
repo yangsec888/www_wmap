@@ -48958,3 +48958,630 @@ Completed 200 OK in 423ms (Views: 395.4ms | ActiveRecord: 1.1ms)
 === puma startup: 2021-03-11 20:25:41 +0000 ===
 [27] * Starting control server on unix:///tmp/puma-status-1615494340992-27
 [27] - Worker 0 (pid: 36) booted, phase: 0
+=== puma startup: 2021-03-12 00:19:00 +0000 ===
+[27] * Starting control server on unix:///tmp/puma-status-1615508340757-27
+[27] - Worker 0 (pid: 36) booted, phase: 0
+Started GET "/" for 172.18.0.6 at 2021-03-12 00:21:28 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 1801ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 172.18.0.6 at 2021-03-12 00:21:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 447ms (Views: 424.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jstree.self-07b824512da7abeee724399bd50e99d769c3406a079d08d48a542af9413afe69.js?body=1" for 172.18.0.6 at 2021-03-12 00:21:30 +0000
+Started GET "/assets/codemirror.self-85fae1f78c88a1fbd32fac226c237b33820d659d428f2c509c7b7e7175e6d93c.js?body=1" for 172.18.0.6 at 2021-03-12 00:21:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started POST "/seed/start" for 172.18.0.6 at 2021-03-12 00:21:32 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XG9vn/f12VGLHohwhZG0n0Fc9joO0eFCbuDq4Fl8Hk82r1vzkQVQin2HBAugahQO5jSbfaaAUe4e1iic7UgZBw==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 172.18.0.6 at 2021-03-12 00:21:32 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (64.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 554ms (Views: 528.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 172.18.0.6 at 2021-03-12 00:21:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bL1shyab9pbG3ZMcez+xeZWMP5OjE1KxlWIZ76n6uiwGfVjrQGt/TTBEH2dexBHoMuRS1AtC4h3lVNuTHc69ZA==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2021-03-12 00:21:34', `last_sign_in_at` = '2021-03-11 19:10:04', `sign_in_count` = 4, `updated_at` = '2021-03-12 00:21:34' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost/
+Completed 302 Found in 105ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 172.18.0.6 at 2021-03-12 00:21:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 453ms (Views: 435.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/seed/start" for 172.18.0.6 at 2021-03-12 00:21:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HB28Gp9TiA2jrAlejxmTg1BPxQPeVJeLBAMS/Ub1d2HMZZL4HKV/7EojMHccXK7Hq+HtKSZVCr5Z6X5JRU2Xdw==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 466ms (Views: 436.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/seed/load_file?path=" for 172.18.0.6 at 2021-03-12 00:21:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.2ms)
+Completed 200 OK in 19ms (Views: 11.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/seed/save_file" for 172.18.0.6 at 2021-03-12 00:21:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"mail.google.com"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2021-03-11 17:06:22", updated_at: "2021-03-12 00:21:34", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/domains/import" for 172.18.0.6 at 2021-03-12 00:21:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#import as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/import.html.erb within layouts/application
+  Rendered domains/import.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 460ms (Views: 427.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cidrs/import" for 172.18.0.6 at 2021-03-12 00:21:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CidrsController#import as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/import.html.erb within layouts/application
+  Rendered cidrs/import.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 442ms (Views: 411.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/seed/distest" for 172.18.0.6 at 2021-03-12 00:22:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 491ms (Views: 455.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/seed/confirm_email?id=1" for 172.18.0.6 at 2021-03-12 00:22:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#confirm_email as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/confirm_email.js.erb
+  Rendered seed/_confirm_email.html.erb (1.2ms)
+  Rendered seed/confirm_email.js.erb (32.7ms)
+Completed 200 OK in 152ms (Views: 114.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/seed/distest?method=post&remote=0" for 172.18.0.6 at 2021-03-12 00:22:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#distest as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jIwhpvlRGXZJQUrYQ8DMK3qMpgMUCrgQz3RnNpzsDaX7/yH7NtcR4EoUaKSi0T9YQ1xXSUcgOyKNEk8QXfOyw==", "email"=>"yangsec888@gmail.com", "id"=>"1", "method"=>"post", "remote"=>"0"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 591ms (Views: 559.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/seed/discovery?email=yangsec888@gmail.com" for 172.18.0.6 at 2021-03-12 00:22:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#discovery as HTML
+  Parameters: {"email"=>"yangsec888@gmail.com"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2021-03-11 17:06:22", updated_at: "2021-03-12 00:21:34", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 615ms (Views: 538.6ms | ActiveRecord: 1.4ms)
+
+
+=== puma startup: 2021-03-12 03:27:12 +0000 ===
+[28] * Starting control server on unix:///tmp/puma-status-1615519632035-28
+[28] - Worker 0 (pid: 37) booted, phase: 0
+Started GET "/seed/discovery?email=yangsec888@gmail.com" for 172.18.0.7 at 2021-03-12 03:27:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#discovery as HTML
+  Parameters: {"email"=>"yangsec888@gmail.com"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 110ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/seed/discovery?email=yangsec888@gmail.com" for 172.18.0.7 at 2021-03-12 03:27:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#discovery as HTML
+  Parameters: {"email"=>"yangsec888@gmail.com"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 172.18.0.7 at 2021-03-12 03:27:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (69.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1554ms (Views: 1544.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 172.18.0.7 at 2021-03-12 03:27:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YT134d+NormUe3C/vXki8Vevz55N+hQiwQFijmPFk/97PmT9QE0XtXPErcAbkD6+qPBBMpoYAmC+vNl5gOqDXg==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2021-03-12 03:27:30', `last_sign_in_at` = '2021-03-12 00:21:34', `current_sign_in_ip` = '172.18.0.7', `sign_in_count` = 5, `updated_at` = '2021-03-12 03:27:30' WHERE `users`.`id` = 1[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost/seed/discovery?email=yangsec888@gmail.com
+Completed 302 Found in 111ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/seed/discovery?email=yangsec888@gmail.com" for 172.18.0.7 at 2021-03-12 03:27:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#discovery as HTML
+  Parameters: {"email"=>"yangsec888@gmail.com"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2021-03-11 17:06:22", updated_at: "2021-03-12 03:27:30", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 526ms (Views: 455.8ms | ActiveRecord: 1.2ms)
+
+
+=== puma startup: 2021-03-13 17:30:43 +0000 ===
+[28] * Starting control server on unix:///tmp/puma-status-1615656643173-28
+[28] - Worker 0 (pid: 37) booted, phase: 0
+[28] ! Terminating timed out worker: 37
+[28] ! Out-of-sync worker list, no 37 worker
+[28] - Worker 0 (pid: 47) booted, phase: 0
+[28] ! Terminating timed out worker: 47
+[28] ! Out-of-sync worker list, no 47 worker
+[28] - Worker 0 (pid: 57) booted, phase: 0
+=== puma startup: 2021-03-15 14:41:32 +0000 ===
+[28] * Starting control server on unix:///tmp/puma-status-1615819292456-28
+[28] - Worker 0 (pid: 37) booted, phase: 0
+=== puma startup: 2021-03-15 15:03:00 +0000 ===
+[26] * Starting control server on unix:///tmp/puma-status-1615820580198-26
+[26] - Worker 0 (pid: 35) booted, phase: 0
+=== puma startup: 2021-03-15 15:07:16 +0000 ===
+[27] * Starting control server on unix:///tmp/puma-status-1615820836406-27
+[27] - Worker 0 (pid: 36) booted, phase: 0
+=== puma startup: 2021-03-15 15:08:14 +0000 ===
+[21] * Starting control server on unix:///tmp/puma-status-1615820894063-21
+[21] - Worker 0 (pid: 30) booted, phase: 0
+=== puma startup: 2021-03-15 17:34:52 +0000 ===
+[20] * Starting control server on unix:///tmp/puma-status-1615829692868-20
+[20] - Worker 0 (pid: 29) booted, phase: 0
+=== puma startup: 2021-03-15 17:45:55 +0000 ===
+[26] * Starting control server on unix:///tmp/puma-status-1615830355921-26
+[26] - Worker 0 (pid: 35) booted, phase: 0
+Started GET "/" for 172.18.0.7 at 2021-03-15 17:46:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1705ms (Views: 1655.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/bootstrap.min.self-7fca34c300875ffd4ca06fc6a4d05cbd32d7090b694c484de8bf11500b8fba80.css?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-19cfbc52806446e1bf9dd43aab93a8e7733d9120f3a5ec997596cd669cef2c91.css?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.self-7315d10e20cd6cf7f411454a8b58d4b63619d05cc62d3c238b3d98e9b3fe4392.css?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Started GET "/assets/jstree.min.self-487bd81b69d667265667f45bdab0ff83f0a108b3570da4380eda70486b9e2db3.css?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jquery3.self-e200ee796ef24add7054280d843a80de75392557bb4248241e870fac0914c0c1.js?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/popper.self-d3bdaf6f80de82f8177ea8f62d15b0a371b4974508aec77f11b84ea39a5cfdf5.js?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/rails.validations.self-26bdedc17f1c2add1ecc352ae2e1991dec86c7e03afa528fd29ee27b6ca8d25b.js?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Started GET "/assets/jstree.self-07b824512da7abeee724399bd50e99d769c3406a079d08d48a542af9413afe69.js?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/codemirror.self-85fae1f78c88a1fbd32fac226c237b33820d659d428f2c509c7b7e7175e6d93c.js?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.min.self-e38f0421e4cc9b47a3cd68c8a2552e1a898942b5bd5ea57910e194932a378760.js?body=1" for 172.18.0.7 at 2021-03-15 17:46:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/users/login" for 172.18.0.7 at 2021-03-15 17:46:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (75.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 554ms (Views: 523.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for 172.18.0.7 at 2021-03-15 17:46:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+bTiwv+sNIpi3cG7GhsKX2gFiX+NIggvobAKZpS2cQGT0jNZ9bLFmbPjXKqBPpszRuf0rK/PcdVal3Sl7ecPog==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'yang.li@owasp.org' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `username`, `role`) VALUES ('yang.li@owasp.org', '$2a$11$SXRV/vGwu1SfDmvR3Edjj.GohGjtXY193RkxpFagEK/IpESPiPOJi', '2021-03-15 17:46:25', '2021-03-15 17:46:25', 'admin', 0)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2021-03-15 17:46:25', `last_sign_in_at` = '2021-03-15 17:46:25', `current_sign_in_ip` = '172.18.0.7', `last_sign_in_ip` = '172.18.0.7', `sign_in_count` = 1 WHERE `users`.`id` = 1[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost/
+Completed 302 Found in 310ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 172.18.0.7 at 2021-03-15 17:46:25 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 467ms (Views: 446.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/seed/start" for 172.18.0.7 at 2021-03-15 17:46:28 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hR9bDQiK3pkeLRWU3JF0NXKnvud7bqi9Zvk/ATbAbwGbwTmQMIFUMgeb7qujFYbt1evB7Tr77GZsNpq2ZgleaQ==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 437ms (Views: 408.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/seed/load_file?path=" for 172.18.0.7 at 2021-03-15 17:46:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/seed/save_file" for 172.18.0.7 at 2021-03-15 17:46:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2021-03-15 17:46:25", updated_at: "2021-03-15 17:46:25", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/domains/import" for 172.18.0.7 at 2021-03-15 17:46:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#import as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/import.html.erb within layouts/application
+  Rendered domains/import.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 492ms (Views: 461.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cidrs/import" for 172.18.0.7 at 2021-03-15 17:46:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CidrsController#import as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/import.html.erb within layouts/application
+  Rendered cidrs/import.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 460ms (Views: 423.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/seed/distest" for 172.18.0.7 at 2021-03-15 17:46:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 447ms (Views: 410.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/seed/discovery?email=yang.li@owasp.org" for 172.18.0.7 at 2021-03-15 17:46:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#discovery as HTML
+  Parameters: {"email"=>"yang.li@owasp.org"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2021-03-15 17:46:25", updated_at: "2021-03-15 17:46:25", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 548ms (Views: 483.0ms | ActiveRecord: 1.2ms)
+
+
+=== puma startup: 2021-03-15 18:44:57 +0000 ===
+[26] * Starting control server on unix:///tmp/puma-status-1615833897963-26
+[26] - Worker 0 (pid: 35) booted, phase: 0
+=== puma startup: 2021-03-15 19:07:23 +0000 ===
+[20] * Starting control server on unix:///tmp/puma-status-1615835243759-20
+[20] - Worker 0 (pid: 29) booted, phase: 0
+=== puma startup: 2021-03-15 19:25:50 +0000 ===
+[27] * Starting control server on unix:///tmp/puma-status-1615836350250-27
+[27] - Worker 0 (pid: 36) booted, phase: 0
+=== puma startup: 2021-03-15 19:30:45 +0000 ===
+[21] * Starting control server on unix:///tmp/puma-status-1615836645374-21
+[21] - Worker 0 (pid: 30) booted, phase: 0
+=== puma startup: 2021-03-15 19:40:49 +0000 ===
+[27] * Starting control server on unix:///tmp/puma-status-1615837249775-27
+[27] - Worker 0 (pid: 36) booted, phase: 0
+=== puma startup: 2021-03-15 19:53:53 +0000 ===
+[26] * Starting control server on unix:///tmp/puma-status-1615838033807-26
+[26] - Worker 0 (pid: 35) booted, phase: 0
+Started GET "/" for 172.18.0.7 at 2021-03-15 20:00:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 1770ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 172.18.0.7 at 2021-03-15 20:00:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 424ms (Views: 404.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seed/start" for 172.18.0.7 at 2021-03-15 20:00:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpNF1i/aagYeK7iCO3tEx89QuTqAl5g9cFY+fpTeUlsOAhS8DN/qkqWmOcqy/LZoyiSLzt5PL3APDSyAa1XuzA==", "commit"=>"Get Started"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 172.18.0.7 at 2021-03-15 20:00:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (62.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 534ms (Views: 524.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 172.18.0.7 at 2021-03-15 20:00:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wjL1YiPU5sEmsFO8VVZUB4g3oX+VxEHxZwvPVcxisLCOo6QIANFmVZ090vTc0aaojUOTi8sc9rwYUN2rM+kMJw==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2021-03-15 20:00:37', `sign_in_count` = 2, `updated_at` = '2021-03-15 20:00:37' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost/
+Completed 302 Found in 108ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 172.18.0.7 at 2021-03-15 20:00:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 418ms (Views: 398.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/seed/start" for 172.18.0.7 at 2021-03-15 20:00:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#start as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nW8JcyGYmp5gq8UTx9I8uO6rtajS7G9RBNI/IuXrT0Vt4r72Fvt1TdR2fdO0A6pq+mOoHvJdfP63ikblTRSHvQ==", "commit"=>"Get Started"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering seed/start.html.erb within layouts/application
+  Rendered seed/start.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 457ms (Views: 427.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/seed/load_file?path=" for 172.18.0.7 at 2021-03-15 20:00:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#load_file as TEXT
+  Parameters: {"path"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 20ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/seed/save_file" for 172.18.0.7 at 2021-03-15 20:00:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#save_file as JSON
+  Parameters: {"file_path"=>"", "file_content"=>"www.google.com"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2021-03-15 17:46:25", updated_at: "2021-03-15 20:00:37", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/domains/import" for 172.18.0.7 at 2021-03-15 20:00:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DomainsController#import as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering domains/import.html.erb within layouts/application
+  Rendered domains/import.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 495ms (Views: 458.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cidrs/import" for 172.18.0.7 at 2021-03-15 20:00:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CidrsController#import as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering cidrs/import.html.erb within layouts/application
+  Rendered cidrs/import.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 423ms (Views: 390.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/seed/distest" for 172.18.0.7 at 2021-03-15 20:00:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 464ms (Views: 430.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/seed/discovery?email=yang.li@owasp.org" for 172.18.0.7 at 2021-03-15 20:00:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#discovery as HTML
+  Parameters: {"email"=>"yang.li@owasp.org"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2021-03-15 17:46:25", updated_at: "2021-03-15 20:00:37", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 569ms (Views: 502.0ms | ActiveRecord: 1.0ms)
+
+
+=== puma startup: 2021-03-15 20:42:23 +0000 ===
+[21] * Starting control server on unix:///tmp/puma-status-1615840943866-21
+[21] - Worker 0 (pid: 30) booted, phase: 0
+Started GET "/seed/distest" for 172.18.0.7 at 2021-03-15 20:45:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 115ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/seed/distest" for 172.18.0.7 at 2021-03-15 20:45:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#distest as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 172.18.0.7 at 2021-03-15 20:45:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (69.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1640ms (Views: 1631.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 172.18.0.7 at 2021-03-15 20:45:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vHryNEB2+gHFWO4mNdJS2D9VloQFdV9zH+fQSMgz8tiHYTn5dnrmgUwWtOIlGrMgA4t1CfLqdHfdpwaoKzguKA==", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Log On"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'admin' LIMIT 1[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2021-03-15 20:45:10', `last_sign_in_at` = '2021-03-15 20:00:37', `sign_in_count` = 3, `updated_at` = '2021-03-15 20:45:10' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost/seed/distest
+Completed 302 Found in 105ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/seed/distest" for 172.18.0.7 at 2021-03-15 20:45:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#distest as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering seed/distest.html.erb within layouts/application
+  Rendered seed/distest.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 445ms (Views: 416.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/seed/discovery?email=yang.li@owasp.org" for 172.18.0.7 at 2021-03-15 20:45:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SeedController#discovery as HTML
+  Parameters: {"email"=>"yang.li@owasp.org"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Current_user attributes: #<User id: 1, email: "yang.li@owasp.org", created_at: "2021-03-15 17:46:25", updated_at: "2021-03-15 20:45:10", department: nil, username: "admin", role: "admin", dn: nil, name: nil, employee_type: nil, employee_number: nil>
+starting the sidekiq worker for the discovery job
+  Rendering seed/discovery.html.erb within layouts/application
+  Rendered seed/discovery.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 563ms (Views: 500.0ms | ActiveRecord: 1.2ms)
+
+
