@@ -65,11 +65,11 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
-    carrierwave (0.10.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
+    carrierwave (1.3.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+      ssrf_filter (~> 1.0)
     character_set (1.4.1)
       sorted_set (~> 1.0)
     childprocess (1.0.1)
@@ -85,7 +85,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     commonjs (0.2.7)
-    concurrent-ruby (1.1.8)
+    concurrent-ruby (1.1.9)
     connection_pool (2.2.3)
     crass (1.0.6)
     css_parser (1.9.0)
@@ -112,7 +112,7 @@ GEM
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     httpclient (2.8.3)
-    i18n (1.8.9)
+    i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
@@ -282,6 +282,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    ssrf_filter (1.0.7)
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -341,7 +342,7 @@ DEPENDENCIES
   bootstrap_form
   byebug
   capybara (~> 2.13)
-  carrierwave (~> 0.10.0)
+  carrierwave (~> 1.3.2)
   client_side_validations
   coffee-rails (~> 4.2)
   devise
