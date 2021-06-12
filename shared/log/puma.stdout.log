@@ -50209,3 +50209,681 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 525ms (Views: 493.6ms | ActiveRecord: 2.1ms)
 
 
+=== puma startup: 2021-06-11 22:25:47 +0000 ===
+[28] * Starting control server on unix:///tmp/puma-status-1623450347600-28
+[28] - Worker 0 (PID: 36) booted, phase: 0
+Started GET "/" for 172.22.0.5 at 2021-06-11 22:26:34 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+secure_headers (6.3.2) lib/secure_headers/middleware.rb:11:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/apple-touch-icon-precomposed.png" for 172.22.0.5 at 2021-06-11 22:26:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+secure_headers (6.3.2) lib/secure_headers/middleware.rb:11:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/apple-touch-icon.png" for 172.22.0.5 at 2021-06-11 22:26:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+secure_headers (6.3.2) lib/secure_headers/middleware.rb:11:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+=== puma startup: 2021-06-12 14:52:45 +0000 ===
+[25] * Starting control server on unix:///tmp/puma-status-1623509565178-25
+[25] - Worker 0 (PID: 33) booted, phase: 0
+=== puma startup: 2021-06-12 10:58:53 -0400 ===
+[2426] * Starting control server on unix:///var/folders/fp/m8s0knjs2q77w3kfr1z819pxttj342/T/puma-status-1623509933274-2426
+[2426] - Worker 0 (PID: 2446) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2021-06-12 10:59:08 -0400
+  
+Mysql2::Error::ConnectionError (Unknown MySQL server host 'mariadb' (8)):
+  
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+secure_headers (6.3.2) lib/secure_headers/middleware.rb:11:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-06-12 10:59:17 -0400
+  
+Mysql2::Error::ConnectionError (Unknown MySQL server host 'mariadb' (8)):
+  
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+secure_headers (6.3.2) lib/secure_headers/middleware.rb:11:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+[2426] - Gracefully shutting down workers...
+[2426] === puma shutdown: 2021-06-12 10:59:53 -0400 ===
+[2426] - Goodbye!
+Exiting
+=== puma startup: 2021-06-12 10:59:58 -0400 ===
+[2810] * Starting control server on unix:///var/folders/fp/m8s0knjs2q77w3kfr1z819pxttj342/T/puma-status-1623509998390-2810
+[2810] - Worker 0 (PID: 2815) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2021-06-12 11:00:05 -0400
+  
+Mysql2::Error::ConnectionError (Unknown MySQL server host 'mariadb' (8)):
+  
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+secure_headers (6.3.2) lib/secure_headers/middleware.rb:11:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-06-12 11:00:21 -0400
+  
+Mysql2::Error::ConnectionError (Unknown MySQL server host 'mariadb' (8)):
+  
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+secure_headers (6.3.2) lib/secure_headers/middleware.rb:11:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+[2810] - Gracefully shutting down workers...
+[2810] === puma shutdown: 2021-06-12 11:00:42 -0400 ===
+[2810] - Goodbye!
+Exiting
+=== puma startup: 2021-06-12 11:01:32 -0400 ===
+[2902] * Starting control server on unix:///var/folders/fp/m8s0knjs2q77w3kfr1z819pxttj342/T/puma-status-1623510092649-2902
+[2902] - Worker 0 (PID: 2904) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2021-06-12 11:01:39 -0400
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (30.5ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 554ms (Views: 544.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-723f4ff8f07d8789f750be9d2c92995d8f1b00afccabfedea5a382bbf37c07b8.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:39 -0400
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-e428df4f2491c5e16ea112787a98bce87a09ef0f3e2e7e8ea1eafbdd4d952c56.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:39 -0400
+Started GET "/assets/codemirror.self-4fc3fe9f207458690501ffca79f799333752dff031ce9d2bfffbe67ad65eb23a.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:39 -0400
+Started GET "/assets/twitter-bootstrap-static/sprites.self-556e1741ff6d22f63fe0be609679c8f06ffc45eabc31836b6b785475bb283b84.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:39 -0400
+Started GET "/assets/bootstrap_and_overrides.self-8bd5e7bfcb1bb0495d195d24e398780711919bdece4e25a6441fe48abc2e70f5.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:39 -0400
+Started GET "/assets/cidrs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:39 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/domains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:39 -0400
+Started GET "/assets/hosts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:39 -0400
+  [1m[35m (3.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/jstree.self-041a3e66d9165e55d92eecd8cbe09a773faf0382e513bde24f892ee9df8d6932.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/jstree.min.self-17f2fa227922aa311fc0ef1cd239053262a773f3f72e3efe7d08db1dd2a73743.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/logs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/popup.self-3c4a3e2a44a139e256c8151e97630733227835b7d12b6f916e2247b427eb5cdc.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/reports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/scaffolds.self-1f94d8b826f5f2864628db7726c3e182ad2dcb7f41e1a951279600b68056bb19.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/sites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/yml_settings.self-745d929fcb299d44a695e6a56645456932ec1ddc02bccce66a15975572f4d812.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/application.self-53bd841cefdce44dd7015fdf348c725999dfb8b80400ba8a14ec6e7e42b4b900.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/rails_bootstrap_forms.self-10cb7d2aef696c4062f219f6678eed1d57c254a6717cea25d021726a4b9a214c.css?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/jquery3.self-2a83d06853bd343c7bfc2e5d4539814cfa934676e2948ed348311435eca862f5.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/popper.self-d3bdaf6f80de82f8177ea8f62d15b0a371b4974508aec77f11b84ea39a5cfdf5.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/rails.validations.self-26bdedc17f1c2add1ecc352ae2e1991dec86c7e03afa528fd29ee27b6ca8d25b.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/jstree.self-07b824512da7abeee724399bd50e99d769c3406a079d08d48a542af9413afe69.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/codemirror.self-85fae1f78c88a1fbd32fac226c237b33820d659d428f2c509c7b7e7175e6d93c.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/yaml.self-813a4722938752a1eb3c02f6cf883b30094d6f12e141c51bda411c5164c3d4aa.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/popup.self-86bff551d1067bb0c65ab8a4655e0c8400f41a4853369938f7dc7469f658fcf4.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/cidrs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/domain_map.self-79e119d41a57480dc024879f6e3abe55c7876f96833f63687b3fe44cdca52c2b.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/domains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/hosts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/jstree.min.self-e38f0421e4cc9b47a3cd68c8a2552e1a898942b5bd5ea57910e194932a378760.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/logs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/reports.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/sites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/yml_settings.self-52928a9d045e6bbfae71495c925605341684f629d8764dbae387e91e00110fa7.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+Started GET "/assets/application.self-b72377edad9bf59aeb67d0d22d4026c1f27b3099c031402cd5e6a6ca245a1a18.js?body=1" for 127.0.0.1 at 2021-06-12 11:01:40 -0400
+[2902] - Gracefully shutting down workers...
+[2902] === puma shutdown: 2021-06-12 11:01:46 -0400 ===
+[2902] - Goodbye!
+Exiting
+=== puma startup: 2021-06-12 15:06:39 +0000 ===
+[21] * Starting control server on unix:///tmp/puma-status-1623510399749-21
+[21] - Worker 0 (PID: 29) booted, phase: 0
+Started GET "/" for 172.22.0.5 at 2021-06-12 15:08:21 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 2540ms (Views: 2503.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-723f4ff8f07d8789f750be9d2c92995d8f1b00afccabfedea5a382bbf37c07b8.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-e428df4f2491c5e16ea112787a98bce87a09ef0f3e2e7e8ea1eafbdd4d952c56.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/bootstrap_and_overrides.self-8bd5e7bfcb1bb0495d195d24e398780711919bdece4e25a6441fe48abc2e70f5.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Started GET "/assets/twitter-bootstrap-static/sprites.self-556e1741ff6d22f63fe0be609679c8f06ffc45eabc31836b6b785475bb283b84.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Started GET "/assets/cidrs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/codemirror.self-4fc3fe9f207458690501ffca79f799333752dff031ce9d2bfffbe67ad65eb23a.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/domains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (10.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/hosts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.self-041a3e66d9165e55d92eecd8cbe09a773faf0382e513bde24f892ee9df8d6932.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.min.self-17f2fa227922aa311fc0ef1cd239053262a773f3f72e3efe7d08db1dd2a73743.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/logs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/popup.self-3c4a3e2a44a139e256c8151e97630733227835b7d12b6f916e2247b427eb5cdc.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/reports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/scaffolds.self-1f94d8b826f5f2864628db7726c3e182ad2dcb7f41e1a951279600b68056bb19.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/sites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/yml_settings.self-745d929fcb299d44a695e6a56645456932ec1ddc02bccce66a15975572f4d812.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Started GET "/assets/application.self-53bd841cefdce44dd7015fdf348c725999dfb8b80400ba8a14ec6e7e42b4b900.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/rails_bootstrap_forms.self-10cb7d2aef696c4062f219f6678eed1d57c254a6717cea25d021726a4b9a214c.css?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jquery3.self-2a83d06853bd343c7bfc2e5d4539814cfa934676e2948ed348311435eca862f5.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/popper.self-d3bdaf6f80de82f8177ea8f62d15b0a371b4974508aec77f11b84ea39a5cfdf5.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Started GET "/assets/twitter/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Started GET "/assets/twitter/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/twitter/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Started GET "/assets/twitter/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/rails.validations.self-26bdedc17f1c2add1ecc352ae2e1991dec86c7e03afa528fd29ee27b6ca8d25b.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.self-07b824512da7abeee724399bd50e99d769c3406a079d08d48a542af9413afe69.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/yaml.self-813a4722938752a1eb3c02f6cf883b30094d6f12e141c51bda411c5164c3d4aa.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/codemirror.self-85fae1f78c88a1fbd32fac226c237b33820d659d428f2c509c7b7e7175e6d93c.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/popup.self-86bff551d1067bb0c65ab8a4655e0c8400f41a4853369938f7dc7469f658fcf4.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/cidrs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/domain_map.self-79e119d41a57480dc024879f6e3abe55c7876f96833f63687b3fe44cdca52c2b.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Started GET "/assets/domains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/hosts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.min.self-e38f0421e4cc9b47a3cd68c8a2552e1a898942b5bd5ea57910e194932a378760.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:25 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/logs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:25 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/reports.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:25 +0000
+Started GET "/assets/sites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:25 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:25 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/yml_settings.self-52928a9d045e6bbfae71495c925605341684f629d8764dbae387e91e00110fa7.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:25 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/application.self-b72377edad9bf59aeb67d0d22d4026c1f27b3099c031402cd5e6a6ca245a1a18.js?body=1" for 172.22.0.5 at 2021-06-12 15:08:25 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+=== puma startup: 2021-06-12 15:21:43 +0000 ===
+[25] * Starting control server on unix:///tmp/puma-status-1623511303241-25
+[25] - Worker 0 (PID: 33) booted, phase: 0
+Started GET "/" for 172.22.0.5 at 2021-06-12 15:21:46 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#page as HTML
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 1304ms (Views: 1268.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-723f4ff8f07d8789f750be9d2c92995d8f1b00afccabfedea5a382bbf37c07b8.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/bootstrap_and_overrides.self-8bd5e7bfcb1bb0495d195d24e398780711919bdece4e25a6441fe48abc2e70f5.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-e428df4f2491c5e16ea112787a98bce87a09ef0f3e2e7e8ea1eafbdd4d952c56.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter-bootstrap-static/sprites.self-556e1741ff6d22f63fe0be609679c8f06ffc45eabc31836b6b785475bb283b84.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/cidrs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/codemirror.self-4fc3fe9f207458690501ffca79f799333752dff031ce9d2bfffbe67ad65eb23a.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/domains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/hosts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.self-041a3e66d9165e55d92eecd8cbe09a773faf0382e513bde24f892ee9df8d6932.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.min.self-17f2fa227922aa311fc0ef1cd239053262a773f3f72e3efe7d08db1dd2a73743.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/logs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Started GET "/assets/popup.self-3c4a3e2a44a139e256c8151e97630733227835b7d12b6f916e2247b427eb5cdc.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/reports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/scaffolds.self-1f94d8b826f5f2864628db7726c3e182ad2dcb7f41e1a951279600b68056bb19.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/sites.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/yml_settings.self-745d929fcb299d44a695e6a56645456932ec1ddc02bccce66a15975572f4d812.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Started GET "/assets/application.self-53bd841cefdce44dd7015fdf348c725999dfb8b80400ba8a14ec6e7e42b4b900.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/rails_bootstrap_forms.self-10cb7d2aef696c4062f219f6678eed1d57c254a6717cea25d021726a4b9a214c.css?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jquery3.self-2a83d06853bd343c7bfc2e5d4539814cfa934676e2948ed348311435eca862f5.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/popper.self-d3bdaf6f80de82f8177ea8f62d15b0a371b4974508aec77f11b84ea39a5cfdf5.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Started GET "/assets/twitter/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/rails.validations.self-26bdedc17f1c2add1ecc352ae2e1991dec86c7e03afa528fd29ee27b6ca8d25b.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.self-07b824512da7abeee724399bd50e99d769c3406a079d08d48a542af9413afe69.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/codemirror.self-85fae1f78c88a1fbd32fac226c237b33820d659d428f2c509c7b7e7175e6d93c.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/yaml.self-813a4722938752a1eb3c02f6cf883b30094d6f12e141c51bda411c5164c3d4aa.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/popup.self-86bff551d1067bb0c65ab8a4655e0c8400f41a4853369938f7dc7469f658fcf4.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/cidrs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Started GET "/assets/domain_map.self-79e119d41a57480dc024879f6e3abe55c7876f96833f63687b3fe44cdca52c2b.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/domains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Started GET "/assets/hosts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jstree.min.self-e38f0421e4cc9b47a3cd68c8a2552e1a898942b5bd5ea57910e194932a378760.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/logs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/reports.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/sites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/yml_settings.self-52928a9d045e6bbfae71495c925605341684f629d8764dbae387e91e00110fa7.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/application.self-b72377edad9bf59aeb67d0d22d4026c1f27b3099c031402cd5e6a6ca245a1a18.js?body=1" for 172.22.0.5 at 2021-06-12 15:21:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255

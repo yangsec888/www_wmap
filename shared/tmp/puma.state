@@ -1,5 +1,5 @@
 ---
-pid: 21
-control_url: unix:///tmp/puma-status-1623444232853-21
-control_auth_token: fdcae0b23f596d77900861cfe86b1914
+pid: 25
+control_url: unix:///tmp/puma-status-1623511303241-25
+control_auth_token: 5d6327ce506529b46335bfa1185471ef
 running_from: "/www_wmap"
