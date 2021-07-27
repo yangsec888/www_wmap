@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Site Urls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Site</th>
+      <th>Url</th>
+      <th>Req method</th>
+      <th>Code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @site_urls.each do |site_url| %>
+      <tr>
+        <td><%= site_url.site %></td>
+        <td><%= site_url.url %></td>
+        <td><%= site_url.req_method %></td>
+        <td><%= site_url.code %></td>
+        <td><%= link_to 'Show', site_url %></td>
+        <td><%= link_to 'Edit', edit_site_url_path(site_url) %></td>
+        <td><%= link_to 'Destroy', site_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Site Url', new_site_url_path %>

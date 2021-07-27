@@ -13,6 +13,7 @@ class DiscoveryWorker
   include SitesHelper
   include HostsHelper
   include DomainsHelper
+  include SiteUrlsHelper
   sidekiq_options retry: false
 
 
@@ -24,6 +25,7 @@ class DiscoveryWorker
     site_table_reload(uid,data_dir)
     host_table_reload(uid,data_dir)
     domain_table_reload(uid,data_dir)
+    site_urls_table_update(uid,data_dir)
   end
 
   def perform(uid,email)

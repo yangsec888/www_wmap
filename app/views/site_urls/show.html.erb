@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @site_url.site %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @site_url.url %>
+</p>
+
+<p>
+  <strong>Req method:</strong>
+  <%= @site_url.req_method %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @site_url.code %>
+</p>
+
+<%= link_to 'Edit', edit_site_url_path(@site_url) %> |
+<%= link_to 'Back', site_urls_path %>

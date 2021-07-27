@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_183901) do
+ActiveRecord::Schema.define(version: 2021_07_26_151306) do
 
   create_table "cidrs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "owed_cidr"
@@ -79,6 +79,16 @@ ActiveRecord::Schema.define(version: 2019_08_26_183901) do
     t.text "cidrs"
     t.string "entity_name"
     t.boolean "verified"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "site_urls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "site"
+    t.string "url"
+    t.string "req_method"
+    t.integer "code"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

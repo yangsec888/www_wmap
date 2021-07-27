@@ -315,7 +315,7 @@ GEM
     websocket-extensions (0.1.5)
     whois (5.0.2)
     will_paginate (3.3.0)
-    wmap (2.8.1)
+    wmap (2.8.3)
       css_parser (>= 1.6)
       dnsruby (>= 1.52)
       geoip (>= 1.0)
@@ -382,7 +382,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   whois
   will_paginate
-  wmap (>= 2.7.9)
+  wmap (>= 2.8.3)
 
 BUNDLED WITH
    1.17.3

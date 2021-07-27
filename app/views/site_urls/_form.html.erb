@@ -1,0 +1,37 @@
+<%= form_with(model: site_url, local: true) do |form| %>
+  <% if site_url.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(site_url.errors.count, "error") %> prohibited this site_url from being saved:</h2>
+
+      <ul>
+      <% site_url.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :site %>
+    <%= form.text_field :site %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :req_method %>
+    <%= form.text_field :req_method %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.number_field :code %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
