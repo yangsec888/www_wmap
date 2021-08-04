@@ -1,0 +1,22 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#jstree_site_urls').jstree({
+      'core': {
+        'data': <%= raw @tree.to_json %>
+      },
+      'plugins' : ["themes", "sort", "changed", "types", "wholerow"]
+    });
+  });
+</script>
+
+
+<h4>  Discovered Urls for Site <%= @site %></h4>
+<br />
+
+
+<div class="row col-md-9 col-lg-9">
+  <div id="jstree_site_urls" >
+    <ul>
+    </ul>
+  </div>
+</div>

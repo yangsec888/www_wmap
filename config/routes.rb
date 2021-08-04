@@ -8,7 +8,6 @@
 #++
 
 Rails.application.routes.draw do
-  resources :site_urls
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   devise_scope :user do
     get 'users/list' => 'users#index'
@@ -138,6 +137,9 @@ Rails.application.routes.draw do
   get 'domain_map/show'
   post 'domain_map/show'
 
+################################
+  get 'site_urls/display'
+  resources :site_urls
 
   #post "uploads/division"
   # The priority is based upon order of creation: first created -> highest priority.

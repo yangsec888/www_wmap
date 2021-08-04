@@ -54,7 +54,7 @@
    <tbody>
       <% @sites.each do |site| %>
          <tr>
-            <td><%= link_to site.site, site.site, target: "_blank" %></td>
+            <td><%= link_to site.site, site_urls_display_path(:site => site.site), target: "_blank" %></td>
             <td><%= site.ip %></td>
             <td><%= site.server %></td>
             <td><%= site.code %></td>

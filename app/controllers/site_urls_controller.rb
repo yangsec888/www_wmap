@@ -8,11 +8,26 @@
 #++
 
 class SiteUrlsController < ApplicationController
-  before_action :set_site_url, only: %i[ show edit update destroy ]
+  before_action :set_site_url, only: %i[ show edit update destroy display]
+  include SiteUrlsHelper
 
   # GET /site_urls or /site_urls.json
   def index
     @site_urls = SiteUrl.all
+  end
+
+  # Render the site urls in the tree structure
+  def display
+    urls = SiteUrl.where(:site => params[:site]).map(&:url) - [nil,""]
+    #render plain: urls
+    @tree = urls.count>0? urls_2_tree(params[:site],urls) : []
+    @site = params[:site]
+    #@tree=[{"id"=>"https://www.google.com/", "text"=>"https://www.google.com/", "children"=>[{"id"=>"images", "text"=>"images", "children"=>[{"id"=>"icon.png", "text"=>"icon.png", "children"=>[], "icon"=>"glyphicon glyphicon-list", "state"=>{"opened"=>true}}], "icon"=>"glyphicon glyphicon-list", "state"=>{"opened"=>true}}], "icon"=>"glyphicon glyphicon-list", "state"=>{"opened"=>true}}]
+    logger.debug("tree: #{@tree}")
+    respond_to do |format|
+      format.html
+      format.json { render json: @tree }
+    end
   end
 
   # GET /site_urls/1 or /site_urls/1.json
@@ -68,7 +83,7 @@ class SiteUrlsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_site_url
-      @site_url = SiteUrl.find(params[:id])
+      @site_url = SiteUrl.find(params[:id]) if params[:id]
     end
 
     # Only allow a list of trusted parameters through.

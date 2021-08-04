@@ -39,10 +39,72 @@ module SiteUrlsHelper
         next
       end
     end
-
     tracker=nil
     db = nil
     puts "Update complete. "
+  end
+
+  # parse the urls list then generate the tree data structure
+  def urls_2_tree (site, urls)
+    $tree = []
+    $tree << { 'text' => site,
+               'children' => [], 'icon' => 'glyphicon glyphicon-list',
+               'state' => { 'opened' => true } }
+    urls.map do |url|
+      u = url.split(site)
+      if u[1].nil?
+        next
+      else
+        nodes = u[1].split('/') - [nil,""]
+        traverse_tree_branch($tree[0], nodes)
+      end
+    end
+    return $tree
+  end
+
+  # traverse the tree branches and build the data structure in json
+  def traverse_tree_branch(branch,nodes)
+    node = nodes.shift
+    cnt = branch['children'].count
+    puts "node: #{node}"
+    if has_node(branch,node)
+      i = get_branch_index(branch,node)
+      if nodes.count <= 0    # end of leaf
+        return
+      else
+        traverse_tree_branch(branch['children'][i], nodes)
+      end
+    else
+      branch['children'] << {
+                  'text' => node,
+                  'children' => [], 'icon' => 'glyphicon glyphicon-list',
+                  'state' => { 'opened' => true }
+      }
+      if nodes.count <= 0    # end of leaf
+        return
+      else
+        traverse_tree_branch(branch['children'][cnt],nodes)
+      end
+    end
+  end
+
+  # check if the node was existing in the tree branch
+  def has_node(branch,node)
+    default = false
+    return false if branch['children'].count==0
+    branch['children'].map do |leaf|
+      if leaf['text'] == node
+        return true
+      end
+    end
+    return default
+  end
+
+  # Given branch is certain of the existing tree, found the index of the branch in the tree
+  def get_branch_index(branch,node)
+    branch['children'].each_with_index.map do |l,i|
+      return i if l['text'] == node
+    end
   end
 
 end

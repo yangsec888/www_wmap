@@ -20,6 +20,7 @@ module WmapPortal
     #logger.formatter = config.log_formatter
     #config.log_tags  = [:subdomain, :uuid]
     #config.logger    = ActiveSupport::TaggedLogging.new(logger)
+    #config.logger = Logger.new(STDOUT)
 
     # Load .env file
     Bundler.require(*Rails.groups)
