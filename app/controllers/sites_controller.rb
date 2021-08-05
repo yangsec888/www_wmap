@@ -74,12 +74,13 @@ class SitesController < ApplicationController
       @sites = Site.where('site like ?', keyword).limit(10)
   end
 
+  # allow user to download site table into Excel file
   def download
     if platinum_user_and_above?
       sites=Site.where("site is not null")
       workbook = RubyXL::Workbook.new
       worksheet = workbook.worksheets[0]
-      worksheet.sheet_name = '_Sites'
+      worksheet.sheet_name = 'Sites'
       header = ["Website","Primary IP","Port","Hosting Status","Server","Response Code","MD5 Finger-print","Redirection","Last Update"]
       index = 0
       worksheet_write_row(worksheet,index,header)
@@ -90,7 +91,7 @@ class SitesController < ApplicationController
         my_row = [site.site, site.ip, site.port, site.status, site.server, site.code, site.md5,site.redirection, site.updated_at]
         worksheet_write_row(worksheet,index, my_row)
       end
-      file = "_Websites_" + Time.now.strftime('%m%d%Y') + ".xlsx"
+      file = "Discovered_Websites_" + Time.now.strftime('%m%d%Y') + ".xlsx"
       send_data workbook.stream.string, filename: file, disposition: 'attachment'
     else
       redirect_back :fallback_location => root_path, :alert => "Access denied."

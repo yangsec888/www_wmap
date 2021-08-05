@@ -1,15 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Site Urls</h1>
+<h1>Discovered Urls</h1>
 
-<table>
+
+<b>Pages: </b><%= will_paginate @site_urls, previous_label: h("<"), next_label: h(">") %>
+(25 entries per page)
+<span class="text-center">
+  &nbsp &nbsp &nbsp &nbsp <b>Total</b>:  <%= @site_urls.count %>
+</span> &nbsp &nbsp &nbsp &nbsp
+<span class="text-center">
+  <%= link_to image_tag("excel.png", size: "35x35", class: "clickable-img", alt: "Download"), site_urls_download_path, method: :post %>
+</span>
+
+
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Site</th>
       <th>Url</th>
-      <th>Req method</th>
-      <th>Code</th>
-      <th colspan="3"></th>
+      <th>Updated</th>
+      <th colspan="3">Action</th>
     </tr>
   </thead>
 
@@ -18,8 +28,7 @@
       <tr>
         <td><%= site_url.site %></td>
         <td><%= site_url.url %></td>
-        <td><%= site_url.req_method %></td>
-        <td><%= site_url.code %></td>
+        <td><%= site_url.updated_at %></td>
         <td><%= link_to 'Show', site_url %></td>
         <td><%= link_to 'Edit', edit_site_url_path(site_url) %></td>
         <td><%= link_to 'Destroy', site_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>

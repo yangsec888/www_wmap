@@ -139,6 +139,7 @@ Rails.application.routes.draw do
 
 ################################
   get 'site_urls/display'
+  post 'site_urls/download'
   resources :site_urls
 
   #post "uploads/division"
