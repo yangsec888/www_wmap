@@ -26,7 +26,7 @@
   <tbody>
     <% @site_urls.each do |site_url| %>
       <tr>
-        <td><%= site_url.site %></td>
+        <td><%= link_to site_url.site, site_urls_display_path(:site => site_url.site), target: "_blank" %></td>
         <td><%= site_url.url %></td>
         <td><%= site_url.updated_at %></td>
         <td><%= link_to 'Show', site_url %></td>
