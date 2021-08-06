@@ -1,5 +1,5 @@
 ---
-pid: 40402
-control_url: unix:///var/folders/fp/m8s0knjs2q77w3kfr1z819pxttj342/T/puma-status-1628278431830-40402
-control_auth_token: 03ad7cb22febce4a7cbe7a2955d9ece9
+pid: 42823
+control_url: unix:///var/folders/fp/m8s0knjs2q77w3kfr1z819pxttj342/T/puma-status-1628286663067-42823
+control_auth_token: 597ed5f858e4b4bd4ae985e76fb42029
 running_from: "/Users/sli/apps/www_wmap"
