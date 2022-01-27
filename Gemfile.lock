@@ -86,7 +86,7 @@ GEM
     coffee-script-source (1.12.2)
     commonjs (0.2.7)
     concurrent-ruby (1.1.8)
-    connection_pool (2.2.3)
+    connection_pool (2.2.5)
     crass (1.0.6)
     css_parser (1.9.0)
       addressable
@@ -213,7 +213,7 @@ GEM
       ffi (~> 1.0)
     rbtree (0.4.4)
     rdoc (4.3.0)
-    redis (4.2.5)
+    redis (4.5.1)
     regexp_parser (1.8.2)
     regexp_property_values (1.0.0)
     responders (3.0.1)
@@ -254,11 +254,10 @@ GEM
     sequel (5.42.0)
     server-generated-popups (1.4.8)
     set (1.0.1)
-    sidekiq (5.2.5)
-      connection_pool (~> 2.2, >= 2.2.2)
-      rack (>= 1.5.0)
-      rack-protection (>= 1.5.0)
-      redis (>= 3.3.5, < 5)
+    sidekiq (6.4.0)
+      connection_pool (>= 2.2.2)
+      rack (~> 2.0)
+      redis (>= 4.2.0)
     sidekiq-batch (0.1.6)
       sidekiq (>= 3)
     simpleidn (0.2.1)
@@ -371,7 +370,7 @@ DEPENDENCIES
   selenium-webdriver
   sequel
   server-generated-popups
-  sidekiq (= 5.2.5)
+  sidekiq (= 6.4.0)
   sidekiq-batch
   sinatra (= 2.0.4)
   spring
