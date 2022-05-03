@@ -179,7 +179,7 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
-    rack-protection (2.0.4)
+    rack-protection (2.2.0)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -219,7 +219,7 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
-    ruby2_keywords (0.0.4)
+    ruby2_keywords (0.0.5)
     rubyXL (3.3.33)
       nokogiri (>= 1.4.4)
       rubyzip (>= 1.1.6)
@@ -263,10 +263,10 @@ GEM
       sidekiq (>= 3)
     simpleidn (0.2.1)
       unf (~> 0.1.4)
-    sinatra (2.0.4)
+    sinatra (2.2.0)
       mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.4)
+      rack (~> 2.2)
+      rack-protection (= 2.2.0)
       tilt (~> 2.0)
     sorted_set (1.0.3)
       rbtree
@@ -373,7 +373,7 @@ DEPENDENCIES
   server-generated-popups
   sidekiq (= 5.2.5)
   sidekiq-batch
-  sinatra (= 2.0.4)
+  sinatra (= 2.2.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
