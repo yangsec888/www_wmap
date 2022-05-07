@@ -11,7 +11,7 @@
 #    $ sh deploy_wmap.sh
 ################################################################################
 # Application home directory in development machine
-home_dev="/Users/sli/"
+home_dev="/Users/sli2/apps"
 wmap_app_dev=${home_dev}/www_wmap/
 # Application home directory in production machines
 prod_host="wmap.io"

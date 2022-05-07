@@ -27,7 +27,7 @@ module HostsHelper
         #puts "Skip host: #{key}"
         next
       else
-        puts "Insert record #{key} => #{val} to host table ..."
+        puts "Insert record #{key} => #{val} to host table"
         host_table.insert(host_name: key,  ip: val, \
           uid: uid, created_at: Time.now, updated_at: Time.now)
       end
