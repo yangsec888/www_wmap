@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>class HostTracker::HostTracker::PrimaryHost - RDoc Documentation</title>
+<title>class Wmap::HostTracker::PrimaryHost - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../";
@@ -16,6 +16,7 @@
 
 <link href="../../css/fonts.css" rel="stylesheet">
 <link href="../../css/rdoc.css" rel="stylesheet">
+
 
 
 
@@ -59,7 +60,7 @@
   <h3>Parent</h3>
 
   
-  <p class="link"><a href="../../HostTracker.html">HostTracker</a>
+  <p class="link"><a href="../HostTracker.html">Wmap::HostTracker</a>
   
 </div>
 
@@ -69,7 +70,7 @@
   <ul class="link-list">
   
   
-    <li><a class="include" href="../../Wmap/Utils.html">Wmap::Utils</a>
+    <li><a class="include" href="../Utils.html">Wmap::Utils</a>
   
   
   
@@ -106,18 +107,14 @@
   </div>
 </nav>
 
-<main role="main" aria-labelledby="class-HostTracker::HostTracker::PrimaryHost">
-  <h1 id="class-HostTracker::HostTracker::PrimaryHost" class="class">
-    class HostTracker::HostTracker::PrimaryHost
+<main role="main" aria-labelledby="class-Wmap::HostTracker::PrimaryHost">
+  <h1 id="class-Wmap::HostTracker::PrimaryHost" class="class">
+    class Wmap::HostTracker::PrimaryHost
   </h1>
 
   <section class="description">
     
-<p>Class to differentiate the primary host-name from the potential aliases.
-This is needed in order to minimize the confusion on our final site
-inventory list, as it contains a large number of duplicates (aliases). More
-specifically, a filter could be built by using this class to track the
-primary url of a website.</p>
+<p>Class to differentiate the primary host-name from the potential aliases. This is needed in order to minimize the confusion on our final site inventory list, as it contains a large number of duplicates (aliases). More specifically, a filter could be built by using this class to track the primary url of a website.</p>
 
   </section>
 
@@ -233,7 +230,7 @@ primary url of a website.</p>
             <pre><span class="ruby-comment"># File lib/wmap/host_tracker/primary_host.rb, line 22</span>
           <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">params</span> = {})
                   <span class="ruby-ivar">@verbose</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:verbose</span>, <span class="ruby-keyword">false</span>)
-<span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../../data/&#39;</span>)
+<span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-string">+&#39;/../../../data/&#39;</span>)
                   <span class="ruby-comment"># Set default instance variables</span>
                   <span class="ruby-ivar">@hosts_file</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:hosts_file</span>, <span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;prime_hosts&#39;</span>)
                   <span class="ruby-comment"># Initialize the instance variables</span>
@@ -273,8 +270,7 @@ primary url of a website.</p>
 
         <div class="method-description">
           
-          <p>Procedures to remove the redundant entries in the primary hosts data
-repository</p>
+          <p>Procedures to remove the redundant entries in the primary hosts data repository</p>
           
           
 
@@ -418,9 +414,7 @@ repository</p>
 
         <div class="method-description">
           
-          <p>Procedures to identify primary host-name from the site store redirection
-URLs. The assumption is that on site redirection, it must be directed to
-the well known primary site.</p>
+          <p>Procedures to identify primary host-name from the site store redirection URLs. The assumption is that on site redirection, it must be directed to the well known primary site.</p>
           
           
 
@@ -476,9 +470,7 @@ the well known primary site.</p>
 
         <div class="method-description">
           
-          <p>Procedures to identify primary host-name from the site store SSL
-certificates. The assumption is that the CN used in the cert application
-must be primary hostname and used by the users.</p>
+          <p>Procedures to identify primary host-name from the site store SSL certificates. The assumption is that the CN used in the cert application must be primary hostname and used by the users.</p>
           
           
 
@@ -539,12 +531,13 @@ must be primary hostname and used by the users.</p>
     </section>
   
   </section>
+
 </main>
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.1.0.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

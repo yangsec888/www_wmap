@@ -19,6 +19,7 @@
 
 
 
+
 <body id="top" role="document" class="class">
 <nav role="navigation">
   <div id="project-navigation">
@@ -223,7 +224,7 @@
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">params</span> = {})
         <span class="ruby-comment"># Set default instance variables</span>
         <span class="ruby-ivar">@verbose</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:verbose</span>, <span class="ruby-keyword">false</span>)
-        <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../data/&#39;</span>)
+        <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-string">+&#39;/../../data/&#39;</span>)
         <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
         <span class="ruby-ivar">@http_timeout</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:http_timeout</span>, <span class="ruby-value">5000</span>)
         <span class="ruby-ivar">@max_parallel</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:max_parallel</span>, <span class="ruby-value">40</span>)
@@ -348,8 +349,7 @@
 
         <div class="method-description">
           
-          <p>Retrieve the X509 cert in the clear text from the remote web server,
-extract and return the common name field within the cert</p>
+          <p>Retrieve the X509 cert in the clear text from the remote web server, extract and return the common name field within the cert</p>
           
           
 
@@ -398,8 +398,7 @@ extract and return the common name field within the cert</p>
 
         <div class="method-description">
           
-          <p>Retrieve the remote web server certification, open it and return the cert
-content as a string</p>
+          <p>Retrieve the remote web server certification, open it and return the cert content as a string</p>
           
           
 
@@ -475,8 +474,7 @@ content as a string</p>
 
         <div class="method-description">
           
-          <p>Test the URL / site and return the web server type from the HTTP header
-“server” field</p>
+          <p>Test the URL / site and return the web server type from the HTTP header “server” field</p>
           
           
 
@@ -561,8 +559,7 @@ content as a string</p>
 
         <div class="method-description">
           
-          <p>Use MD5 algorithm to fingerprint the URL / site response payload (web page
-content)</p>
+          <p>Use MD5 algorithm to fingerprint the URL / site response payload (web page content)</p>
           
           
 
@@ -684,9 +681,9 @@ content)</p>
         <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;redirection&#39;</span>]=<span class="ruby-keyword">nil</span>
         <span class="ruby-identifier">checker</span>[<span class="ruby-string">&#39;timestamp&#39;</span>]=<span class="ruby-identifier">timestamp</span>
         <span class="ruby-keyword">return</span> <span class="ruby-identifier">checker</span>
-<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
-        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Exception on method #{__method__} for #{url}: #{ee}&quot;</span> <span class="ruby-comment"># if @verbose</span>
-        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-comment">#rescue Exception =&gt; ee</span>
+<span class="ruby-comment">#      puts &quot;Exception on method #{__method__} for #{url}: #{ee}&quot; # if @verbose</span>
+<span class="ruby-comment">#      return nil</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -715,8 +712,7 @@ content)</p>
 
         <div class="method-description">
           
-          <p>Parallel scanner - by utilizing fork manager &#39;parallel&#39; to spawn
-numbers of child processes on multiple urls simultaneously</p>
+          <p>Parallel scanner - by utilizing fork manager &#39;parallel&#39; to spawn numbers of child processes on multiple urls simultaneously</p>
           
           
 
@@ -762,12 +758,13 @@ numbers of child processes on multiple urls simultaneously</p>
     </section>
   
   </section>
+
 </main>
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.1.0.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

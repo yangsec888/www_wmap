@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>class SiteTracker::SiteTracker::WpTracker - RDoc Documentation</title>
+<title>class Wmap::SiteTracker::WpTracker - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../";
@@ -16,6 +16,7 @@
 
 <link href="../../css/fonts.css" rel="stylesheet">
 <link href="../../css/rdoc.css" rel="stylesheet">
+
 
 
 
@@ -59,7 +60,7 @@
   <h3>Parent</h3>
 
   
-  <p class="link"><a href="../../SiteTracker.html">SiteTracker</a>
+  <p class="link"><a href="../SiteTracker.html">Wmap::SiteTracker</a>
   
 </div>
 
@@ -69,11 +70,11 @@
   <ul class="link-list">
   
   
-    <li><a class="include" href="../../Wmap/Utils.html">Wmap::Utils</a>
+    <li><a class="include" href="../Utils.html">Wmap::Utils</a>
   
   
   
-    <li><a class="include" href="../../Wmap/Utils/WpDetect.html">Wmap::Utils::WpDetect</a>
+    <li><a class="include" href="../Utils/WpDetect.html">Wmap::Utils::WpDetect</a>
   
   
   </ul>
@@ -110,9 +111,9 @@
   </div>
 </nav>
 
-<main role="main" aria-labelledby="class-SiteTracker::SiteTracker::WpTracker">
-  <h1 id="class-SiteTracker::SiteTracker::WpTracker" class="class">
-    class SiteTracker::SiteTracker::WpTracker
+<main role="main" aria-labelledby="class-Wmap::SiteTracker::WpTracker">
+  <h1 id="class-Wmap::SiteTracker::WpTracker" class="class">
+    class Wmap::SiteTracker::WpTracker
   </h1>
 
   <section class="description">
@@ -244,9 +245,9 @@
             <pre><span class="ruby-comment"># File lib/wmap/site_tracker/wp_tracker.rb, line 24</span>
     <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">params</span> = {})
             <span class="ruby-ivar">@verbose</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:verbose</span>, <span class="ruby-keyword">false</span>)
-            <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../../data/&#39;</span>)
+            <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-string">+&#39;/../../../data/&#39;</span>)
             <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
-<span class="ruby-ivar">@sites_wp</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:sites_wp</span>, <span class="ruby-ivar">@data_dir</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;wp_sites&quot;</span>)
+<span class="ruby-ivar">@sites_wp</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:sites_wp</span>, <span class="ruby-ivar">@data_dir</span><span class="ruby-string">+&quot;wp_sites&quot;</span>)
             <span class="ruby-ivar">@http_timeout</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:http_timeout</span>, <span class="ruby-value">5000</span>)
             <span class="ruby-ivar">@max_parallel</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:max_parallel</span>, <span class="ruby-value">40</span>)
             <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
@@ -440,8 +441,7 @@
 
         <div class="method-description">
           
-          <p>&#39;setter&#39; to load the known wordpress sites into an instance
-variable</p>
+          <p>&#39;setter&#39; to load the known wordpress sites into an instance variable</p>
           
           
 
@@ -558,7 +558,7 @@ variable</p>
                         <span class="ruby-keyword">end</span>
                 <span class="ruby-keyword">end</span>
                 <span class="ruby-ivar">@known_wp_sites</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">results</span>)
-                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Done loading entries.&quot;</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Done loading wp entries.&quot;</span>
                 <span class="ruby-keyword">return</span> <span class="ruby-identifier">results</span>
         <span class="ruby-keyword">else</span>
                 <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Error: no entry is loaded. Please check your list and try again.&quot;</span>
@@ -658,12 +658,13 @@ variable</p>
     </section>
   
   </section>
+
 </main>
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.1.0.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

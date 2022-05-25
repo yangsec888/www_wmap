@@ -19,6 +19,7 @@
 
 
 
+
 <body id="top" role="document" class="file">
 <nav role="navigation">
   <div id="project-navigation">
@@ -69,26 +70,6 @@
   
     <li><a href="../TODO.html">TODO</a>
   
-    <li><a href="../data/cidrs.html">cidrs</a>
-  
-    <li><a href="../data/deactivated_sites.html">deactivated_sites</a>
-  
-    <li><a href="../data/domains.html">domains</a>
-  
-    <li><a href="../data/hosts.html">hosts</a>
-  
-    <li><a href="../data/prime_hosts.html">prime_hosts</a>
-  
-    <li><a href="../data/seed.html">seed</a>
-  
-    <li><a href="../data/sites.html">sites</a>
-  
-    <li><a href="../data/sub_domains.html">sub_domains</a>
-  
-    <li><a href="../data/tag_sites.html">tag_sites</a>
-  
-    <li><a href="../data/wp_sites.html">wp_sites</a>
-  
     <li><a href="../demos/nmap_parser_pl.html">nmap_parser.pl</a>
   
     <li><a href="../dicts/ccsld_txt.html">ccsld</a>
@@ -103,51 +84,11 @@
   
     <li><a href="../dicts/tlds_txt.html">tlds</a>
   
-    <li><a href="../logs/discovered_sites_log.html">discovered_sites.log</a>
-  
-    <li><a href="../logs/discovered_urls_log.html">discovered_urls.log</a>
-  
-    <li><a href="../logs/url_seeds_log.html">url_seeds.log</a>
-  
-    <li><a href="../logs/wmap_log.html">wmap.log</a>
-  
-    <li><a href="../prh_data/cidrs.html">cidrs</a>
-  
-    <li><a href="../prh_data/crawler_log.html">crawler.log</a>
-  
-    <li><a href="../prh_data/deactivated_sites.html">deactivated_sites</a>
-  
-    <li><a href="../prh_data/domains.html">domains</a>
-  
-    <li><a href="../prh_data/hosts.html">hosts</a>
-  
-    <li><a href="../prh_data/prime_hosts.html">prime_hosts</a>
-  
-    <li><a href="../prh_data/seed.html">seed</a>
-  
-    <li><a href="../prh_data/sites.html">sites</a>
-  
-    <li><a href="../prh_data/sub_domains.html">sub_domains</a>
-  
-    <li><a href="../prh_data/tag_sites.html">tag_sites</a>
-  
-    <li><a href="../prh_data/wp_sites.html">wp_sites</a>
-  
-    <li><a href="../prh_data/~sites.html">~sites</a>
-  
-    <li><a href="../prh_data/~tag_sites.html">~tag_sites</a>
-  
-    <li><a href="../prh_data/~wp_sites.html">~wp_sites</a>
-  
-    <li><a href="../rebuild_sh.html">rebuild.sh</a>
-  
     <li><a href="../settings/discovery_ports.html">discovery_ports</a>
   
     <li><a href="../settings/google_keywords_txt.html">google_keywords</a>
   
     <li><a href="../settings/google_locator_txt.html">google_locator</a>
-  
-    <li><a href="../settings/tag_signatures.html">tag_signatures</a>
   
     <li><a href="../version_txt.html">version</a>
   
@@ -161,23 +102,11 @@
 
 <main role="main" aria-label="Page demos/nmap_parser.pl">
 
-<p>#!/usr/bin/perl
-######################################################################## #
-Functional Description:  #</p>
+<p>#!/usr/bin/perl ######################################################################## # Functional Description:  #                                                               </p>
 
-<p># nmap.pl is designed to be a quick nmap port discovery parser for
-web_discovery #         the program input is NMAP discovery result XML
-file, the program output #         is a list of websites that ready for
-wmap modules # #      For usage information, type in the following command:
-#       $ nmap_parser.pl -h # 
-######################################################################## #
-Designed and developed by:            Yang Li # # Change History:  # Last
-modification:    08/21/2013 #       Version         0.1 use Getopt::Long
-qw/:config bundling_override no_ignore_case/; use Nmap::Parser;</p>
+<p># nmap.pl is designed to be a quick nmap port discovery parser for web_discovery #         the program input is NMAP discovery result XML file, the program output #         is a list of websites that ready for wmap modules # #      For usage information, type in the following command: #       $ nmap_parser.pl -h #  ######################################################################## # Designed and developed by:            Yang Li # # Change History:  # Last modification:    08/21/2013 #       Version         0.1 use Getopt::Long qw/:config bundling_override no_ignore_case/; use Nmap::Parser;</p>
 
-<p>my $ver=“0.1”, $author=“Yang Li”;                               # Program
-Version and Author my $verbose;                                            
-# Verbose mode for Maverick my %opts; GetOptions(</p>
+<p>my $ver=“0.1”, $author=“Yang Li”;                               # Program Version and Author my $verbose;                                                    # Verbose mode for Maverick my %opts; GetOptions(</p>
 
 <pre>\%opts,
 &#39;help|h|?&#39; =&gt; sub { &amp;print_help and exit 0; },          # Print help
@@ -187,7 +116,7 @@ Version and Author my $verbose;
 &#39;verbose+&#39; =&gt; \$verbose,                                # Optional, program verbose mode for debugging
 &#39;vv+&#39; =&gt; \$verbose,                                     # Same as &quot;-verbose&quot;, abbreviation &quot;-vv&quot;</pre>
 
-<p>);</p>
+<p>);           </p>
 
 <p>sub parse_nmap_terse () {</p>
 
@@ -289,19 +218,17 @@ print &quot;Version: $ver, Developed by: $author\n&quot;</pre>
 
 <p>}</p>
 
-<p>############################################################ #       Main
-Program start here
-############################################################</p>
+<p>############################################################ #       Main Program start here ############################################################</p>
 
-<p>&amp;print_help; unless ($opts{file}) { print “Error: unknown program
-input. Please check your file again. n”; exit 1; } parse_nmap_terse ();</p>
+<p>&amp;print_help; unless ($opts{file}) { print “Error: unknown program input. Please check your file again. n”; exit 1; } parse_nmap_terse ();</p>
+
 </main>
 
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.1.0.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

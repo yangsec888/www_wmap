@@ -19,6 +19,7 @@
 
 
 
+
 <body id="top" role="document" class="class">
 <nav role="navigation">
   <div id="project-navigation">
@@ -129,8 +130,7 @@
 
   <section class="description">
     
-<p>Class to discover valid hosts through either zone transfer or DNS
-brute-force methods</p>
+<p>Class to discover valid hosts through either zone transfer or DNS brute-force methods</p>
 
   </section>
 
@@ -272,12 +272,12 @@ brute-force methods</p>
             <pre><span class="ruby-comment"># File lib/wmap/dns_bruter.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">params</span> = {})
         <span class="ruby-comment"># Change to your brute-force dictionary file here if necessary</span>
-        <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../data/&#39;</span>)
+        <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-string">+&#39;/../../data/&#39;</span>)
         <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
         <span class="ruby-ivar">@file_hosts</span> = <span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;hosts&#39;</span>
         <span class="ruby-ivar">@verbose</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:verbose</span>, <span class="ruby-keyword">false</span>)
         <span class="ruby-ivar">@discovered_hosts_from_dns_bruter</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-        <span class="ruby-ivar">@hosts_dict</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:hosts_dict</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../dicts/hostnames-dict.txt&#39;</span>)
+        <span class="ruby-ivar">@hosts_dict</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:hosts_dict</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-string">+&#39;/../../dicts/hostnames-dict.txt&#39;</span>)
         <span class="ruby-ivar">@max_parallel</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:max_parallel</span>, <span class="ruby-value">30</span>)
         <span class="ruby-ivar">@fail_domain_cnt</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
@@ -509,9 +509,7 @@ brute-force methods</p>
 
         <div class="method-description">
           
-          <p>Parallel DNS brute-forcer operating on the trusted domains - by utilizing
-fork manager to spawn multiple child processes on multiple sub_domain
-domains from the local hosts table simultaneously</p>
+          <p>Parallel DNS brute-forcer operating on the trusted domains - by utilizing fork manager to spawn multiple child processes on multiple sub_domain domains from the local hosts table simultaneously</p>
           
           
 
@@ -558,9 +556,7 @@ domains from the local hosts table simultaneously</p>
 
         <div class="method-description">
           
-          <p>Parallel DNS brute-forcer operating on target domain file - by utilizing
-fork manager to spawn multiple child processes on multiple domains
-simultaneously</p>
+          <p>Parallel DNS brute-forcer operating on target domain file - by utilizing fork manager to spawn multiple child processes on multiple domains simultaneously</p>
           
           
 
@@ -658,9 +654,7 @@ simultaneously</p>
 
         <div class="method-description">
           
-          <p>Parallel DNS brute-forcer operating on target domain list - by utilizing
-fork manager to spawn multiple child processes on multiple domains
-simultaneously</p>
+          <p>Parallel DNS brute-forcer operating on target domain list - by utilizing fork manager to spawn multiple child processes on multiple domains simultaneously</p>
           
           
 
@@ -718,8 +712,7 @@ simultaneously</p>
 
         <div class="method-description">
           
-          <p>Test the DNS server if zone transfer is allowed. If allowed, save the found
-hosts into the class variable.</p>
+          <p>Test the DNS server if zone transfer is allowed. If allowed, save the found hosts into the class variable.</p>
           
           
 
@@ -768,8 +761,7 @@ hosts into the class variable.</p>
 
         <div class="method-description">
           
-          <p>Return a list of hosts in the mutation form from the original, i.e.
-“ww1.example.com” =&gt; [“ww1,example.com”,“ww2.example.com”,…]</p>
+          <p>Return a list of hosts in the mutation form from the original, i.e. “ww1.example.com” =&gt; [“ww1,example.com”,“ww2.example.com”,…]</p>
           
           
 
@@ -1046,12 +1038,13 @@ hosts into the class variable.</p>
     </section>
   
   </section>
+
 </main>
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.1.0.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

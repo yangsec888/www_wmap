@@ -19,6 +19,7 @@
 
 
 
+
 <body id="top" role="document" class="file">
 <nav role="navigation">
   <div id="project-navigation">
@@ -69,26 +70,6 @@
   
     <li><a href="./TODO.html">TODO</a>
   
-    <li><a href="./data/cidrs.html">cidrs</a>
-  
-    <li><a href="./data/deactivated_sites.html">deactivated_sites</a>
-  
-    <li><a href="./data/domains.html">domains</a>
-  
-    <li><a href="./data/hosts.html">hosts</a>
-  
-    <li><a href="./data/prime_hosts.html">prime_hosts</a>
-  
-    <li><a href="./data/seed.html">seed</a>
-  
-    <li><a href="./data/sites.html">sites</a>
-  
-    <li><a href="./data/sub_domains.html">sub_domains</a>
-  
-    <li><a href="./data/tag_sites.html">tag_sites</a>
-  
-    <li><a href="./data/wp_sites.html">wp_sites</a>
-  
     <li><a href="./demos/nmap_parser_pl.html">nmap_parser.pl</a>
   
     <li><a href="./dicts/ccsld_txt.html">ccsld</a>
@@ -103,51 +84,11 @@
   
     <li><a href="./dicts/tlds_txt.html">tlds</a>
   
-    <li><a href="./logs/discovered_sites_log.html">discovered_sites.log</a>
-  
-    <li><a href="./logs/discovered_urls_log.html">discovered_urls.log</a>
-  
-    <li><a href="./logs/url_seeds_log.html">url_seeds.log</a>
-  
-    <li><a href="./logs/wmap_log.html">wmap.log</a>
-  
-    <li><a href="./prh_data/cidrs.html">cidrs</a>
-  
-    <li><a href="./prh_data/crawler_log.html">crawler.log</a>
-  
-    <li><a href="./prh_data/deactivated_sites.html">deactivated_sites</a>
-  
-    <li><a href="./prh_data/domains.html">domains</a>
-  
-    <li><a href="./prh_data/hosts.html">hosts</a>
-  
-    <li><a href="./prh_data/prime_hosts.html">prime_hosts</a>
-  
-    <li><a href="./prh_data/seed.html">seed</a>
-  
-    <li><a href="./prh_data/sites.html">sites</a>
-  
-    <li><a href="./prh_data/sub_domains.html">sub_domains</a>
-  
-    <li><a href="./prh_data/tag_sites.html">tag_sites</a>
-  
-    <li><a href="./prh_data/wp_sites.html">wp_sites</a>
-  
-    <li><a href="./prh_data/~sites.html">~sites</a>
-  
-    <li><a href="./prh_data/~tag_sites.html">~tag_sites</a>
-  
-    <li><a href="./prh_data/~wp_sites.html">~wp_sites</a>
-  
-    <li><a href="./rebuild_sh.html">rebuild.sh</a>
-  
     <li><a href="./settings/discovery_ports.html">discovery_ports</a>
   
     <li><a href="./settings/google_keywords_txt.html">google_keywords</a>
   
     <li><a href="./settings/google_locator_txt.html">google_locator</a>
-  
-    <li><a href="./settings/tag_signatures.html">tag_signatures</a>
   
     <li><a href="./version_txt.html">version</a>
   
@@ -161,14 +102,11 @@
 
 <main role="main" aria-label="Page wmap.gemspec">
 
-<p>#– # <a href="Wmap.html">Wmap</a> # # A pure Ruby library for Internet web
-application discovery and tracking. # # Copyright © 2012-2015 Sam (Yang) Li
-&lt;yang.li@owasp.org&gt; #++</p>
+<p>– # <a href="Wmap.html"><code>Wmap</code></a> # # A pure Ruby library for Internet web application discovery and tracking. # # Copyright © 2012-2015 Sam (Yang) Li &lt;yang.li@owasp.org&gt; ++</p>
 
 <p># -*- encoding: utf-8 -*- VERSION = File.dirname(__FILE__) + “/version.txt”</p>
 
-<p># Simple parser for the project version file info=Hash.new
-f=File.open(VERSION,&#39;r&#39;) f.each do |line|</p>
+<p># Simple parser for the project version file info=Hash.new f=File.open(VERSION,&#39;r&#39;) f.each do |line|</p>
 
 <pre>line.chomp!
 case line
@@ -193,7 +131,7 @@ end</pre>
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">description</span> = <span class="ruby-string">&quot;wmap is written to perform Internet web application / service discovery. The discovery results are designed to be automatically tracked by the software.&quot;</span>
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">email</span> = <span class="ruby-identifier">info</span>[<span class="ruby-string">&quot;email&quot;</span>]
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">executables</span> = [<span class="ruby-string">&quot;wmap&quot;</span>,<span class="ruby-string">&quot;wscan&quot;</span>,<span class="ruby-string">&quot;wadd&quot;</span>,<span class="ruby-string">&quot;wadds&quot;</span>,<span class="ruby-string">&quot;wdel&quot;</span>,<span class="ruby-string">&quot;wcheck&quot;</span>,<span class="ruby-string">&quot;wdump&quot;</span>,<span class="ruby-string">&quot;spiderBot&quot;</span>,<span class="ruby-string">&quot;googleBot&quot;</span>,<span class="ruby-string">&quot;updateAll&quot;</span>,<span class="ruby-string">&quot;prime&quot;</span>,<span class="ruby-string">&quot;deprime&quot;</span>,<span class="ruby-string">&quot;refresh&quot;</span>,<span class="ruby-string">&quot;trust&quot;</span>,<span class="ruby-string">&quot;trusts&quot;</span>,<span class="ruby-string">&quot;distrust&quot;</span>,<span class="ruby-string">&quot;run_tests&quot;</span>]
-<span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span> = [<span class="ruby-string">&quot;CHANGELOG.md&quot;</span>, <span class="ruby-string">&quot;TODO&quot;</span>, <span class="ruby-string">&quot;settings/discovery_ports&quot;</span>,<span class="ruby-string">&quot;data/&quot;</span>,<span class="ruby-string">&quot;LICENSE.txt&quot;</span>,
+<span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span> = [<span class="ruby-string">&quot;CHANGELOG.md&quot;</span>, <span class="ruby-string">&quot;TODO&quot;</span>, <span class="ruby-string">&quot;settings/discovery_ports&quot;</span>, <span class="ruby-string">&quot;LICENSE.txt&quot;</span>,
                                                       <span class="ruby-string">&quot;version.txt&quot;</span>,<span class="ruby-string">&quot;README.md&quot;</span>, <span class="ruby-string">&quot;wmap.gemspec&quot;</span>]
 <span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;lib  .rb&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;lib/wmap/*.rb&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;lib/wmap/   *&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;bin/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;settings/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;demos/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;test/*&#39;</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Dir</span>[<span class="ruby-string">&#39;dicts/*&#39;</span>]
 <span class="ruby-comment">#s.homepage = &quot;none&quot;</span>
@@ -223,13 +161,14 @@ end</pre>
 </pre>
 
 <p>end</p>
+
 </main>
 
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.1.0.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

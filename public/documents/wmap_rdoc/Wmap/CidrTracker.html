@@ -19,6 +19,7 @@
 
 
 
+
 <body id="top" role="document" class="class">
 <nav role="navigation">
   <div id="project-navigation">
@@ -252,9 +253,9 @@
             <pre><span class="ruby-comment"># File lib/wmap/cidr_tracker.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> (<span class="ruby-identifier">params</span> = {})
         <span class="ruby-ivar">@verbose</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:verbose</span>, <span class="ruby-keyword">false</span>)
-        <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-operator">+</span><span class="ruby-string">&#39;/../../data/&#39;</span>)
+        <span class="ruby-ivar">@data_dir</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:data_dir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>)<span class="ruby-string">+&#39;/../../data/&#39;</span>)
         <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-ivar">@data_dir</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@data_dir</span>)
-        <span class="ruby-ivar">@cidr_seeds</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:cidr_seeds</span>, <span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;cidrs&#39;</span>)
+        <span class="ruby-ivar">@cidr_seeds</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:cidr_seeds</span>, <span class="ruby-ivar">@data_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;cidrs&#39;</span>)
         <span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span>(<span class="ruby-ivar">@cidr_seeds</span>, <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@cidr_seeds</span>)
         <span class="ruby-identifier">load_cidr_blks_from_file</span>(<span class="ruby-ivar">@cidr_seeds</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -360,7 +361,7 @@
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Determine if the CIDR is known: #{cidr}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-identifier">known</span>=<span class="ruby-keyword">false</span>
         <span class="ruby-identifier">cidr</span>=<span class="ruby-identifier">cidr</span>.<span class="ruby-identifier">strip</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">cidr</span>.<span class="ruby-identifier">nil?</span>
-        <span class="ruby-identifier">cidr</span>=<span class="ruby-identifier">cidr</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/32&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_ip?</span>(<span class="ruby-identifier">cidr</span>)
+        <span class="ruby-identifier">cidr</span>=<span class="ruby-identifier">cidr</span><span class="ruby-string">+&quot;/32&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_ip?</span>(<span class="ruby-identifier">cidr</span>)
         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid CIDR format: #{cidr}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_cidr?</span>(<span class="ruby-identifier">cidr</span>)
         <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@known_cidr_blks</span><span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>
         <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@known_cidr_blks</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">cidr</span>)
@@ -411,7 +412,7 @@
                 <span class="ruby-identifier">first_octet_blk</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;.&#39;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_i</span>
                 <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_octet_blk</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">first_octet_ip</span>
                 <span class="ruby-identifier">cidr4</span> = <span class="ruby-constant">NetAddr</span><span class="ruby-operator">::</span><span class="ruby-constant">CIDR</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">line</span>)
-                <span class="ruby-identifier">known</span> = <span class="ruby-identifier">cidr4</span>.<span class="ruby-identifier">contains?</span>(<span class="ruby-identifier">ip</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;/32&#39;</span>)
+                <span class="ruby-identifier">known</span> = <span class="ruby-identifier">cidr4</span>.<span class="ruby-identifier">contains?</span>(<span class="ruby-identifier">ip</span><span class="ruby-string">+&#39;/32&#39;</span>)
                 <span class="ruby-keyword">return</span> <span class="ruby-identifier">line</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">known</span>
         <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ee</span>
@@ -456,7 +457,7 @@
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Determine if the CIDR within our ranges: #{cidr}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
         <span class="ruby-identifier">trusted</span>=<span class="ruby-keyword">false</span>
         <span class="ruby-identifier">cidr</span>=<span class="ruby-identifier">cidr</span>.<span class="ruby-identifier">strip</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">cidr</span>.<span class="ruby-identifier">nil?</span>
-        <span class="ruby-identifier">cidr</span>=<span class="ruby-identifier">cidr</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/32&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_ip?</span>(<span class="ruby-identifier">cidr</span>)
+        <span class="ruby-identifier">cidr</span>=<span class="ruby-identifier">cidr</span><span class="ruby-string">+&quot;/32&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_ip?</span>(<span class="ruby-identifier">cidr</span>)
         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid CIDR format: #{cidr}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_cidr?</span>(<span class="ruby-identifier">cidr</span>)
         <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@known_cidr_blks</span><span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>
         <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@known_cidr_blks</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">cidr</span>)
@@ -713,8 +714,7 @@
 
         <div class="method-description">
           
-          <p>Retrieve the CIDR netname field for tracking purpose, if it&#39;s a known
-CIDR entry</p>
+          <p>Retrieve the CIDR netname field for tracking purpose, if it&#39;s a known CIDR entry</p>
           
           
 
@@ -750,8 +750,7 @@ CIDR entry</p>
 
         <div class="method-description">
           
-          <p>Retrieve the CIDR reference text for tracking purpose, if it&#39;s a known
-CIDR entry</p>
+          <p>Retrieve the CIDR reference text for tracking purpose, if it&#39;s a known CIDR entry</p>
           
           
 
@@ -832,7 +831,7 @@ CIDR entry</p>
                 <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_octet_blk</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">first_octet_ip</span>
                 <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;line: #{line}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
                 <span class="ruby-identifier">cidr4</span> = <span class="ruby-constant">NetAddr</span><span class="ruby-operator">::</span><span class="ruby-constant">CIDR</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">line</span>)
-                <span class="ruby-identifier">known</span> = <span class="ruby-identifier">cidr4</span>.<span class="ruby-identifier">contains?</span>(<span class="ruby-identifier">ip</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;/32&#39;</span>)
+                <span class="ruby-identifier">known</span> = <span class="ruby-identifier">cidr4</span>.<span class="ruby-identifier">contains?</span>(<span class="ruby-identifier">ip</span><span class="ruby-string">+&#39;/32&#39;</span>)
                 <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">known</span>
         <span class="ruby-keyword">end</span>
         <span class="ruby-keyword">return</span> <span class="ruby-identifier">known</span>
@@ -923,8 +922,7 @@ CIDR entry</p>
 
         <div class="method-description">
           
-          <p>&#39;setter&#39; to load the known CIDR blocks into an instance variable
-@known_cidr_blks</p>
+          <p>&#39;setter&#39; to load the known CIDR blocks into an instance variable @known_cidr_blks</p>
           
           
 
@@ -1315,12 +1313,13 @@ CIDR entry</p>
     </section>
   
   </section>
+
 </main>
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.1.0.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 
