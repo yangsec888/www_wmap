@@ -1,5 +1,4 @@
 # Ignore file types
-*.log
 *.lock
 *.json
 
@@ -7,7 +6,6 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-!/log/.keep
 /tmp/
 
 # Ignore upload files which are user specific
@@ -20,8 +18,6 @@
 /config/master.key
 
 # Ignore server log 
-# shared/data
-shared/data/*
 shared/temp/.*
 
 # Ignore softlink to wmap data
