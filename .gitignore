@@ -18,13 +18,10 @@
 /config/master.key
 
 # Ignore server log 
-shared/temp/.*
+shared/tmp/.*
+shared/log/.*
+shared/data/.*
 
-# Ignore softlink to wmap data
-/shared/*
-
-# Ignore database yml
-/config/database.yml
 
 # Ignore puma configuration
 /config/puma.rb
