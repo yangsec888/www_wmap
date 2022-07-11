@@ -7,8 +7,8 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-log
-/log/*
+# log
+# /log/*
 !/log/.keep
 /tmp/
 
@@ -25,7 +25,6 @@ log
 shared
 shared/data
 shared/data/*
-# shared/log/.*
 shared/temp/.*
 
 # Ignore softlink to wmap data
