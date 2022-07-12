@@ -12,6 +12,7 @@
   - [Build In Docker (Optional)](#build-in-docker-optional)
 - [Linux Deployment](#linux-deployment)
 - [Usage](#usage)
+- [LDAP Support](#ldap-support)
 - [To Dos](#to-dos)
 
 ---
@@ -20,7 +21,7 @@
 
 The web app is part of the [OWASP Web Mapper Project](https://www.owasp.org/index.php/OWASP_Web_Mapper_Project). It's developed to help discover and keep track of web application asset with scale.
 
-To further explore the full power of OWASP Wmap library, please refer to the <a href="https://github.com/yangsec888/wmap" target="_blank"> WMAP </a> Git repository.
+To further explore the full power of OWASP Wmap library, please refer to the <a href="https://github.com/yangsec888/wmap" target="_blank"> WMAP </a> backend library Git repository.
 
 
 ### Demo
@@ -57,7 +58,7 @@ The docker is becoming popular in the development community. Because it can stan
 
 #### Run In Docker
 
-'docker-compose up' would run the app from the containers.
+Use docker command 'docker-compose up' - it would run the app from the pre-build container images. (Please ensure your account has sufficient administrator / or sudo privilege to docker daemon and the host OS system resources)
 It should produce the output similar to below:
 ```sh
 $ git clone https://github.com/yangsec888/www_wmap.git
@@ -89,12 +90,13 @@ If you running into problem, you can refer to the [docker online document](https
 
 
 #### Build in Docker (Optional)   
-You might want to customize the application to your organization need. In that case, you might want to re-build the docker images after the code change. You might also need to modify [docker-compose.yml](docker-compose.yml) file after the change, before proceeding to the rebuild.
+You might want to customize the application to your organization need. In that case, you might want to re-build the docker image after the code change. You might also need to modify [docker-compose.yml](docker-compose.yml) file after the change, before proceeding to the rebuild.
 
 ```sh
-$ docker-compose build
+$ cd www_wmap
+$ docker build . -t yangsec888/www_wmap_web:latest
 ```
-'docker-compose build' will build the containers for the app.
+In the above exmaple, docker command 'docker build . -t yangsec888/www_wmap_web:latest' will rebuild the main app image 'www_wmap_web' for me.
 
 
 ### Linux Deployment   
@@ -103,6 +105,10 @@ The project can be built, deployed and run in the linux distribution natively. F
 
 ### Usage
 Under the home page, click on "Start" button to start. Follow the on-screen instructions, in order to launch a successfully WMAP discovery. The discovery result should be tracked under the "Discovery" menu tab.
+
+
+### LDAP Support
+The application use [devise_ldap_authenticatable](https://github.com/cschiewek/devise_ldap_authenticatable) module for Enterprise Single-Sign-On support. You would need to customize the [ldap.yml](config/ldap.yml) file for such integration.
 
 
 ### To Dos
