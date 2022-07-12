@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_12_022254) do
+ActiveRecord::Schema.define(version: 2022_07_12_024304) do
 
   create_table "cidrs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "owed_cidr"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2022_07_12_022254) do
     t.string "division"
     t.boolean "transferable"
     t.string "keep"
-    t.string "imprint"
     t.string "current_redirect"
     t.string "new_redirect"
     t.string "pub_team"

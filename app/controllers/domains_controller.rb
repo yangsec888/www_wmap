@@ -118,7 +118,6 @@ class DomainsController < ApplicationController
       if platinum_user_and_above?
         logger.debug "Current_user attributes: #{current_user.inspect}"
         @domain=Domain.find_by(name: params[:name])
-        @domain.imprint=params[:imprint] unless params[:imprint].nil?
         @domain.division=params[:division][0] unless params[:division].nil?
         @domain.keep=params[:keep] unless params[:keep].nil?
         @domain.current_redirect=params[:current_redirect] unless params[:current_redirect].nil?
