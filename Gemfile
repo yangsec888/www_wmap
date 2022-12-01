@@ -84,7 +84,7 @@ gem 'sidekiq', '=5.2.5' #move discovery job to background
 gem 'rake', '=12.3.3'
 gem 'sidekiq-batch'
 #gem 'sidekiq-status'
-gem 'sinatra', '= 2.0.4' #require for sidekiq web
+gem 'sinatra', '2.2.3' #require for sidekiq web
 ###############################################################################
 gem "secure_headers", require: 'secure_headers'
 
