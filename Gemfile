@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-#ruby "2.5.1"
+ruby "2.6.3"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -11,9 +11,9 @@ gem 'rails', '~> 5.2.2.1'
 # Support .env file  loadinging
 gem 'dotenv-rails',groups: [:development, :test, :production]
 # Use puma applicaton server
-gem 'puma', '>= 3.12.2'
+gem 'puma', '~> 4.3.6'
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'mysql2', '~> 0.5.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

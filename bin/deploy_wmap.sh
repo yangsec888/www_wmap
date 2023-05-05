@@ -14,7 +14,7 @@
 home_dev="/Users/sli2/apps"
 wmap_app_dev=${home_dev}/www_wmap/
 # Application home directory in production machines
-prod_host="wmap.io"
+prod_host="www.wmap.cloud"
 home_prod="/home/deploy/"
 wmap_app_prod=${home_prod}/apps/
 wmap_prod=${home_prod}/wmap/
@@ -54,7 +54,7 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile;  sudo systemctl stop sidekiq
 
 ##
 echo "Starting Puma application server service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec pumactl -P /home/deploy/apps/www_wmap/shared/tmp/puma.pid start &'
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; cd ~/apps/www_wmap; bundle exec pumactl -P /home/deploy/apps/www_wmap/shared/tmp/puma.pid -e proudction start &'
 sleep 3
 
 echo "Starting Nginx web service ..."

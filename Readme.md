@@ -29,7 +29,7 @@ Click to watch the Youtube video below to see how to perform a successful applic
 [![Web Mapper Demo](https://img.youtube.com/vi/TL1occsk3Fc/0.jpg)](https://www.youtube.com/watch?v=TL1occsk3Fc "Web Mapper Demo")
 
 #### Demo Instance Access
-The application is deployed into a demo instance at [www.wmap.io](https://www.wmap.io/). You can logon to it by using demo user 'admin' and password 'admin123'.
+The application is deployed into a demo instance at [www.wmap.cloud](https://www.wmap.cloud/). You can logon to it by using demo user 'admin' and password 'admin123'.
 
 
 ### Technology Stacks
