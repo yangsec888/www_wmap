@@ -1,7 +1,0 @@
-www_wmap/.git
-www_wmap/tmp
-www_wmap/uploads
-www_wmap/shared
-www_wmap/public/assets
-www_wmap/config/database.yml
-www_wmap/config/secrets.yml
