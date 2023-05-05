@@ -1,6 +1,8 @@
 # Ignore file types
 *.lock
 *.json
+.env 
+.exclude_www_wmap.txt 
 
 # Ignore bundler config.
 /.bundle
