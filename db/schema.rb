@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_26_151306) do
+ActiveRecord::Schema.define(version: 2022_07_12_024304) do
 
-  create_table "cidrs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "cidrs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "owed_cidr"
     t.integer "user_id"
     t.datetime "created_at", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.string "netname"
   end
 
-  create_table "documents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "documents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.integer "uid"
     t.string "name"
     t.string "attachment"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "domains", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "domains", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
     t.datetime "created_at", null: false
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.string "division"
     t.boolean "transferable"
     t.string "keep"
-    t.string "imprint"
     t.string "current_redirect"
     t.string "new_redirect"
     t.string "pub_team"
@@ -45,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.string "notes"
   end
 
-  create_table "hosts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "hosts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "host_name"
     t.string "ip"
     t.integer "uid"
@@ -53,14 +52,14 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.integer "user_id"
     t.string "file_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "division"
@@ -72,7 +71,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.string "category"
   end
 
-  create_table "seeds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "seeds", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.integer "uid"
     t.text "hosts"
     t.text "ips"
@@ -83,7 +82,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "site_urls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "site_urls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "site"
     t.string "url"
     t.string "req_method"
@@ -93,14 +92,14 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "sites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "sites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "site"
     t.integer "user_id"
     t.string "ip"
     t.integer "port"
     t.string "url"
     t.integer "code"
-    t.string "redirection"
+    t.text "redirection", limit: 16777215
     t.string "md5"
     t.string "server"
     t.datetime "timestamp"
@@ -109,7 +108,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "site"
     t.string "name"
     t.string "description"
@@ -122,7 +121,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.string "division"
   end
 
-  create_table "uploads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "uploads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "name"
     t.string "attachment"
     t.string "file_type"
@@ -131,7 +130,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_151306) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

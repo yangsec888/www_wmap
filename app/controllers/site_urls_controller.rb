@@ -14,7 +14,7 @@ class SiteUrlsController < ApplicationController
 
   # GET /site_urls or /site_urls.json
   def index
-    @site_urls = SiteUrl.all.all.order(sort_column + " " + sort_direction).page(params[:page]).per_page(25)
+    @site_urls = SiteUrl.all.order(sort_column + " " + sort_direction).page(params[:page]).per_page(25)
   end
 
   # Render the site urls in the tree structure
