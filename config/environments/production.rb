@@ -77,7 +77,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       address:              'smtp',
       port:                 25,
-      domain:        'wmap.io',
+      domain:        'wmap.cloud',
       authentication:      'plain',
       enable_starttls_auto: false
   }

@@ -51,6 +51,7 @@ services:
       - redis
     volumes:
       - .:/www_wmap
+    restart: always
     env_file:
       - .env
 
@@ -62,7 +63,7 @@ services:
       - ${PWD}/config/postfix/main.cf:/etc/postfix/main.cf:ro
       - ${PWD}/config/postfix/mailname:/etc/mailname:ro
     environment:
-      - maildomain=wmap.io
+      - maildomain=wmap.cloud
     restart: always
 
 volumes:

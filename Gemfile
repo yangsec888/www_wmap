@@ -50,7 +50,7 @@ end
 ################################################################################
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'mini_racer', platforms: :ruby
+gem 'mini_racer', '~> 0.3.1', platforms: :ruby
 #gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 
@@ -61,7 +61,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # www_wmap related gem
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.6.0'
 gem 'bootstrap_form'
 gem 'will_paginate'
 gem 'wmap', '>=2.8.3'

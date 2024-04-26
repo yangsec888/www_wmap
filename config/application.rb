@@ -16,7 +16,8 @@ module WmapPortal
     # -- all .rb files in that directory are automatically loaded.
 
     # Logger adjustment for Docker
-    #logger           = ActiveSupport::Logger.new(STDOUT)
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    config.logger = ActiveSupport::Logger.new("shared/log/#{Rails.env}.log")
     #logger.formatter = config.log_formatter
     #config.log_tags  = [:subdomain, :uuid]
     #config.logger    = ActiveSupport::TaggedLogging.new(logger)

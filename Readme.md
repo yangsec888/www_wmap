@@ -63,7 +63,7 @@ It should produce the output similar to below:
 ```sh
 $ git clone https://github.com/yangsec888/www_wmap.git
 $ cd www_wmap
-$ docker-compose up
+$ docker-compose up -d
 Starting wmap_db    ... done
 Starting wmap_redis ... done
 Starting www_wmap_sidekiq_1 ... done

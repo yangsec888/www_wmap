@@ -1,7 +1,7 @@
 #---
 :verbose: true
-:pidfile: ./tmp/pids/sidekiq.pid
-:logfile: ./log/sidekiq.log
+:pidfile: ./shared/tmp/pids/sidekiq.pid
+:logfile: ./shared/log/sidekiq.log
 :concurrency:  40
 #---
 :concurrency: 5
