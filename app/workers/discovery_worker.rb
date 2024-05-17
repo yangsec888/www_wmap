@@ -34,7 +34,7 @@ class DiscoveryWorker
     dir = Rails.root.join('shared', 'data')
     file = dir.join('seed')
     import_domain_from_seed(dir.to_s,file.to_s)
-    cmd = "wmap" + " -t " + file.to_s + " -d " + dir.to_s + "/"
+    cmd = "wmap" + " -t " + file.to_s + " -d " + dir.to_s + "/" + " -v"
     logger.info "Starting background command: #{cmd}"
     if system(cmd)
       logger.info "Discovery successful!"

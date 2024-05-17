@@ -89,7 +89,7 @@ a1158c1d52e5   redis:alpine                         "docker-entrypoint.s…"   4
 If you running into problem, you can refer to the [docker online document](https://docs.docker.com) for further assistance.
 
 
-#### Build in Docker (Optional)   
+#### Build in Docker (Optional for developer)   
 You might want to customize the application to your organization need. In that case, you might want to re-build the docker image after the code change. You might also need to modify [docker-compose.yml](docker-compose.yml) file after the change, before proceeding to the rebuild.
 
 ```sh

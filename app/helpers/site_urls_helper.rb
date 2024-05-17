@@ -25,6 +25,7 @@ module SiteUrlsHelper
     urls = tracker.file_2_list(urls_file)
     sites = tracker.known_sites.keys
     urls.map do |url|
+      next if url.nil? || url.empty?
       site = tracker.url_2_site(url).downcase
       if sites.include?(site)
         url_count = urls_table.where(:url =>url).count

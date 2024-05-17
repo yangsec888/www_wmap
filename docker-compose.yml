@@ -13,7 +13,7 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - my-db:/usr/local/var/mysql
+      - ${PWD}/shared/mysql:/bitnami/mariadb:rw
     env_file:
       - .env
 
@@ -68,5 +68,4 @@ services:
 
 volumes:
   redis:
-  my-db:
-    external: false
+

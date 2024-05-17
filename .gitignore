@@ -22,6 +22,7 @@
 /shared/tmp/*
 /shared/log/*
 /shared/data/*
+/shared/mysql/*
 
 # Ignore rdoc
 docs/
