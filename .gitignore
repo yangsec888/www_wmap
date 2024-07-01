@@ -7,7 +7,8 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/tmp/
+/tmp/*
+/tmp/pids/*
 
 # Ignore upload files which are user specific
 /uploads
