@@ -62,7 +62,7 @@ ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl start nginx'
 echo "Done"
 
 echo "Starting Sidekiq service ..."
-ssh -q deploy@${prod_host} 'source ~/.bash_profile; sudo systemctl start sidekiq'
+ssh -q deploy@${prod_host} 'source ~/.bash_profile; bundle exec sidekiq -e production >> /home/deploy/apps/www_wmap/shared/log/sidekiq.log 2>&1 &'
 echo "Done"
 
 echo "Start Postfix service ..."
