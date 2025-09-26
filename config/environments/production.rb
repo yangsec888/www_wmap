@@ -75,12 +75,22 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address:              'smtp',
-      port:                 25,
-      domain:        'wmap.cloud',
-      authentication:      'plain',
-      enable_starttls_auto: false
+    address: ENV.fetch('SMTP_ADDRESS', 'smtp'),
+    port: ENV.fetch('SMTP_PORT', '25').to_i,
+    domain: ENV.fetch('SMTP_DOMAIN', 'wmap.cloud')
   }
+  auth = ENV['SMTP_AUTHENTICATION'].to_s.downcase
+  if auth.empty? || auth == 'none'
+    # no auth: do not set :authentication, :user_name, :password
+  else
+    config.action_mailer.smtp_settings.merge!(
+      authentication: auth.to_sym,
+      user_name: ENV['SMTP_USER_NAME'],
+      password: ENV['SMTP_PASSWORD']
+    )
+  end
+  config.action_mailer.smtp_settings[:enable_starttls_auto] =
+    ENV.fetch('SMTP_ENABLE_STARTTLS_AUTO', 'false') == 'true'
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

@@ -2,3 +2,5 @@
 *
 # Except this file
 !.gitignore
+# Except the pids directory itself
+!pids/

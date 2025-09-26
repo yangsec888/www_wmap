@@ -328,7 +328,7 @@ GEM
     websocket-extensions (0.1.5)
     whois (5.1.1)
     will_paginate (4.0.0)
-    wmap (2.8.3)
+    wmap (2.8.4)
       css_parser (>= 1.6)
       dnsruby (>= 1.52)
       geoip (>= 1.0)
@@ -395,7 +395,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   whois
   will_paginate
-  wmap (>= 2.8.3)
+  wmap (>= 2.8.4)
 
 RUBY VERSION
    ruby 2.6.3p62

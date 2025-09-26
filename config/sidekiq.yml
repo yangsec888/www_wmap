@@ -2,7 +2,6 @@
 :verbose: true
 :pidfile: ./shared/tmp/pids/sidekiq.pid
 :logfile: ./shared/log/sidekiq.log
-:concurrency:  40
 #---
 :concurrency: 5
 staging:
