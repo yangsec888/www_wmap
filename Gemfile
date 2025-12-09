@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.6.3"
+ruby "2.6.10"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -50,7 +50,9 @@ end
 ################################################################################
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'mini_racer', '~> 0.3.1', platforms: :ruby
+# JavaScript runtime - using Node.js installed in Docker container instead of Ruby gems
+# gem 'mini_racer', '~> 0.3.1', platforms: :ruby  # Commented out due to libv8 build issues  
+# gem 'therubyracer', platforms: :ruby  # Also fails on ARM64 architecture
 #gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 

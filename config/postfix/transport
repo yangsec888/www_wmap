@@ -1,0 +1,3 @@
+# Transport map for standard server-to-server SMTP
+# Use default SMTP transport (port 25) for all domains
+# * smtp:

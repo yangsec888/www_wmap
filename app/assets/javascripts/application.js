@@ -35,6 +35,7 @@ $(document).ready(function(){
   window.setTimeout(fadeAlert,3000);
   window.setTimeout(removeAlert,3000);
 
+
   // Popover Management
   $(function (){
     $("[data-toggle='popover']").popover({html:true});

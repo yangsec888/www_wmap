@@ -16,12 +16,12 @@ default: &default
   pool: 5
   username: root
   password:
+  host: mariadb
+  port: 3306
 
 development:
   <<: *default
   database: www_wmap_development
-  username: <%=ENV['DBUSER']%>
-  password: <%=ENV['DBPASS']%>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

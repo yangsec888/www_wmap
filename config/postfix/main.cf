@@ -1,46 +1,62 @@
-# https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-debian-9
-# See /usr/share/postfix/main.cf.dist for a commented, more complete version
+# Open Relay SMTP server configuration for Docker environment
+# Uses port 587 for outbound delivery to bypass ISP port 25 blocking
 
-
-# Debian specific:  Specifying a file name will cause the first
-# line of that file to be used as the name.  The Debian default
-# is /etc/mailname.
-#myorigin = /etc/mailname
-
-smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu)
+# Basic settings
+smtpd_banner = $myhostname ESMTP $mail_name (Open Relay - Docker Only)
 biff = no
-
-# appending .domain is the MUA's job.
 append_dot_mydomain = no
-
-# Uncomment the next line to generate "delayed mail" warnings
-#delay_warning_time = 4h
-
 readme_directory = no
 
-# See http://www.postfix.org/COMPATIBILITY_README.html -- default to 2 on
-# fresh installs.
-compatibility_level = 2
+# TLS parameters (disabled for internal use)
+# smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+# smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+smtpd_use_tls=no
+# smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+# smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
 
-# TLS parameters
-smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
-smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-smtpd_use_tls=yes
-smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
-smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
-
-# See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
-# information on enabling SSL in the smtp client.
-
-smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
+# Send-only configuration - NO RECEIVING
 myhostname = wmap.io
-alias_maps = hash:/etc/aliases
-alias_database = hash:/etc/aliases
 myorigin = /etc/mailname
-mydestination = $myhostname, wmap.io, ubuntu-s-1vcpu-1gb-nyc3-01, localhost.localdomain, localhost
-relayhost =
-mynetworks = 127.0.0.0/8 172.16.0.0/12 [::ffff:127.0.0.0]/104 [::1]/128 fc00::/7
+mydestination = 
+relayhost = 
+
+# Standard server-to-server SMTP configuration
+# Disable transport maps - use direct delivery
+# transport_maps = hash:/etc/postfix/transport
+
+# Configure SMTP client for standard server-to-server delivery
+smtp_tls_security_level = may
+smtp_sasl_auth_enable = no
+
+# Open relay configuration for Docker networks
+# Allow unrestricted relay from Docker containers
+mynetworks = 127.0.0.0/8 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 [::ffff:127.0.0.0]/104 [::1]/128
+smtpd_relay_restrictions = permit_mynetworks, reject
+inet_interfaces = all
+inet_protocols = ipv4
+
+# Open relay settings - accept mail from Docker network without restrictions
+smtpd_recipient_restrictions = permit_mynetworks, reject
+
+# Use port 587 for outbound SMTP connections (port 25 blocked by ISP)
+# SMTP Relay Configuration for Port 587
+# Replace with your preferred SMTP service
+# Examples:
+#   Gmail: [smtp.gmail.com]:587 (requires auth)
+#   SendGrid: [smtp.sendgrid.net]:587 (requires API key)
+#   Mailgun: [smtp.mailgun.org]:587 (requires auth)
+#   AWS SES: [email-smtp.region.amazonaws.com]:587 (requires auth)
+
+# Disable local delivery completely
+local_transport = error:local delivery disabled
+local_recipient_maps =
+alias_maps = 
+alias_database = 
+
+# Performance settings
 mailbox_size_limit = 0
 recipient_delimiter = +
-inet_interfaces = all
-inet_protocols = all
+message_size_limit = 10240000
+
+# Disable authentication (not needed for internal relay)
+smtpd_sasl_auth_enable = no

@@ -29,6 +29,11 @@ protected
     devise_parameter_sanitizer.permit(:sign_in, keys: [:username])
   end
 
+  # Override Devise's default redirect after sign in
+  def after_sign_in_path_for(resource)
+    root_path
+  end
+
 private
 
   def admin_only

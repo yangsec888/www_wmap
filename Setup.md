@@ -1,8 +1,9 @@
-[<img src='/wmap_logo.jpg' width='350' height='350'>](https://github.com/yangsec888/www_wmap)
+[<img src='./wmap_logo.jpg' width='350' height='350'>](https://github.com/yangsec888/www_wmap)
 =====================
 
 - [1 Setup Hosting Environment](#1-setup-hosting-environment)
-  - [1.1 Service Account Setup](#11-service-account-setup)
+  - [1.1 Docker Prerequisites (Recommended)](#11-docker-prerequisites-recommended)
+  - [1.2 Service Account Setup (Alternative)](#12-service-account-setup-alternative)
 - [2 Runtime Environment Setup](#2-runtime-environment-setup)
   - [2.1 Install MariaDB v10.4.x](#21-install-mariadb-v104x)
   - [2.2 Install Redis v5.x Server](#22-install-redis-v5x-server)
@@ -23,10 +24,33 @@
 ---
 
 ## 1 Setup Hosting Environment
-Setup the runtime environment in Ubuntu 18.0.4 Linux distribution. Make sure the distribution is patched up to the latest.
+The WMAP application can be deployed using either Docker containers (recommended) or traditional Linux installation.
 
-### 1.1 Service Account Setup
-To start, we'll create a service account "deploy" for the Rails app running environment. We'll add the service account to the special group 'wheel', which is allowed to have 'sudo' access.
+### 1.1 Docker Prerequisites (Recommended)
+The easiest way to run WMAP is using Docker and Docker Compose. This approach provides:
+- Consistent environment across development and production
+- Isolated services (web, database, redis, sidekiq, smtp)  
+- Simplified dependency management
+- Easy scaling and maintenance
+
+#### Install Docker and Docker Compose:
+```sh
+# Ubuntu/Debian
+$ sudo apt-get update
+$ sudo apt-get install docker.io docker-compose
+
+# Or follow official Docker installation guide
+# https://docs.docker.com/get-docker/
+```
+
+#### Verify Installation:
+```sh
+$ docker --version
+$ docker-compose --version
+```
+
+### 1.2 Service Account Setup (Alternative)
+For traditional Linux installation, create a service account "deploy" for the Rails app running environment. Add the service account to the special group 'wheel' for sudo access.
 ```sh
 # adduser deploy
 # addgroup wheel
@@ -34,6 +58,8 @@ To start, we'll create a service account "deploy" for the Rails app running envi
 ```
 
 ## 2 Runtime Environment Setup
+
+**Note**: If using Docker (Section 1.1), most of these dependencies are handled automatically by containers. This section covers traditional Linux installation.
 
 WMAP App requires [Ruby on Rails](http://rubyonrails.org) v5.2.x, [MariaDB](https://www.mysql.com/) v10.4.x database, [Redis](https://redis.io/) 5.x in-memory data store, in order to run properly.
 
@@ -190,22 +216,107 @@ You can also use our deployment [nginx.service](/config/systemd/nginx.service) u
 How to [Setup a Firewall with UFW](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-18-04) on Ubuntu:
 
 
-## 2.15 Setup Postfix as Send Only SMTP Server
-The App would need to send out notification email of async jobs. Such as upon successful asset discovery job. In order to do that, you would need to setup a SMTP send out only server.
-Refer to [this article](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-debian-10) for detail explanations and instructions.
+## 2.15 Docker-based SMTP Server Setup
+The App uses a containerized postfix SMTP server for sending notification emails from Sidekiq background jobs. The SMTP container is configured as send-only with no authentication required for internal Docker network relay.
 
-After configuring the postfix main.cf file, don't forget to refresh the postfix system:
-```sh
-$ sudo postfix reload
+### SMTP Container Configuration
+The `docker-compose.yml` includes a dedicated SMTP service using the stable `catatnight/postfix` image:
+
+```yaml
+smtp:
+  image: "catatnight/postfix"
+  container_name: "wmap_smtp"
+  ports:
+    - "25:25"
+  volumes:
+    - ${PWD}/config/postfix/main.cf:/etc/postfix/main.cf:ro
+    - ${PWD}/config/postfix/mailname:/etc/mailname:ro
+  environment:
+    - maildomain=wmap.cloud
+  restart: always
+  networks:
+    - www_wmap_network
 ```
+
+### Postfix Configuration
+The postfix configuration in `config/postfix/main.cf` is optimized for:
+- **Send-only operation**: No mail receiving capabilities
+- **No authentication**: Accepts relay from Docker networks without auth  
+- **Docker network relay**: Permits all container networks (127.0.0.0/8, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16)
+- **Stability**: Uses proven postfix settings for containerized environments
+
+### Environment Variables
+Ensure your `.env` file contains:
+```bash
+SMTP_ADDRESS=smtp
+SMTP_PORT=25
+SMTP_DOMAIN=wmap.cloud
+SMTP_AUTHENTICATION=none
+SMTP_ENABLE_STARTTLS_AUTO=false
+```
+
+### Rails Integration
+The Rails ActionMailer configuration automatically uses these environment variables. No additional Rails configuration is needed - both development and production environments are pre-configured to work with the SMTP container.
+
+### Starting the SMTP Service
+The SMTP container starts automatically with the full Docker stack:
+```sh
+$ docker-compose up -d
+```
+
+### Alternative Images
+For reference, other stable postfix Docker images include:
+- `boky/postfix` - More actively maintained
+- `juanluisbaptiste/postfix` - Popular alternative
 
 
 ## 3 Start the Rails Server
 
+### Docker-based Deployment (Recommended)
+The application is containerized and can be started with Docker Compose:
+
+```sh
+# Create environment file with your configuration
+$ cp .env.example .env
+# Edit .env with your database credentials and SMTP settings
+
+# Start all services (web, database, redis, sidekiq, smtp, nginx)
+$ docker-compose up -d
+
+# Run database migrations
+$ docker-compose exec web rake db:create
+$ docker-compose exec web rake db:migrate
+
+# Check service status
+$ docker-compose ps
+```
+
+The application will be available at:
+- **HTTP**: http://localhost
+- **HTTPS**: https://localhost (if SSL certificates are configured)
+
+### Individual Service Management
+```sh
+# View logs for specific services
+$ docker-compose logs web
+$ docker-compose logs sidekiq
+$ docker-compose logs smtp
+
+# Restart specific services
+$ docker-compose restart web
+$ docker-compose restart sidekiq
+
+# Stop all services
+$ docker-compose down
+```
+
+### Native Installation (Alternative)
+For development or custom deployments without Docker:
+
 ```sh
 $ bundle install
 $ rake db:create
-$ rake db:migration
+$ rake db:migrate
 $ rails server
 ```
 You should be able to use local browser to test out the above Web GUI running.

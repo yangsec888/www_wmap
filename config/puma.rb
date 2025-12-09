@@ -60,17 +60,23 @@ workers ENV.fetch("WEB_CONCURRENCY") { 1 }
 app_dir = File.expand_path("../..", __FILE__)
 shared_dir = "#{app_dir}/shared"
 
-# Set up socket location
-bind "unix://#{shared_dir}/tmp/puma.sock"
+# Set up bind location - use TCP for Docker compatibility
+bind "tcp://0.0.0.0:3000"
 
-# Logging
-stdout_redirect "#{shared_dir}/log/puma.stdout.log", "#{shared_dir}/log/puma.stderr.log", true
+# Logging - conditionally redirect based on environment
+if ENV['DOCKER_ENV'] == 'true' || Rails.env.development?
+  # For Docker/development: log to stdout/stderr for better container logging
+  # stdout_redirect disabled to avoid permission issues
+else
+  # For production: redirect to log files
+  stdout_redirect "#{shared_dir}/log/puma.stdout.log", "#{shared_dir}/log/puma.stderr.log", true
+end
 
-# Set master PID and state locations
-pidfile "#{shared_dir}/tmp/puma.pid"
-state_path "#{shared_dir}/tmp/puma.state"
+# Set master PID and state locations - use container /tmp to avoid permission issues
+pidfile "/tmp/puma.pid"
+state_path "/tmp/puma.state"
 activate_control_app
-rails_env = ENV.fetch("RAILS_ENV")
+rails_env = ENV.fetch("RAILS_ENV") { "development" }
 
 #on_worker_boot do
 #  require "active_record"
